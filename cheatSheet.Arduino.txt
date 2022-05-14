@@ -1,0 +1,138 @@
+Arduino Cheatsheet
+
+Paul McWhorter New Arduino Programming
+    https://www.youtube.com/watch?v=fJWR7dBuc18 -- Tutorial 1 Setup (Done)
+    https://www.youtube.com/watch?v=9uHZB7-T_XA -- Tutorial 2 LED's (Done)
+    https://www.youtube.com/watch?v=CfdaJ4z4u4w -- Tutorial 3 Breadboards (Done)
+    https://www.youtube.com/watch?v=nPOKOi1jIK0 -- Tutorial 4 Variables (Done)
+    https://www.youtube.com/watch?v=rTuKKVcYeMg -- Tutorial 5 Working with binary numbers (Done)
+    https://www.youtube.com/watch?v=Lg39qKrdySU -- Tutorial 06 LED Binary Counter (Done)
+    https://www.youtube.com/watch?v=6CRhpUV92ww -- Tutorial 07 Arduino Analog Write Command (Done)
+    https://www.youtube.com/watch?v=YfV-vYT3yfQ -- Tutorial 08 Understanding PWM (Done)
+    https://www.youtube.com/watch?v=BR0t3oPiWfA -- Tutorial 09 Ohm's Law (Done)
+    https://www.youtube.com/watch?v=5TitZmA66bI -- Tutorial 10 Read Analog Voltage using analogRead() (Done)
+    https://www.youtube.com/watch?v=b5kndEtAKl8 -- Tutorial 11 Serial Port and Print Commands (Done)
+    https://www.youtube.com/watch?v=PUte1cmJ44A -- Tutorial 12 Understanding Potentiometers (Done)
+    https://www.youtube.com/watch?v=ORNted-NgRM -- Tutorial 13 If Statements (Done)
+    https://www.youtube.com/watch?v=7wKdxsvXAFo -- Tutorial 14 Dimmable LED (Done)
+    https://www.youtube.com/watch?v=OdHzRbR0xHQ -- Tutorial 15 FOR loops (Done)
+    https://www.youtube.com/watch?v=5cd_8AmkI04 -- Tutorial 16 Fun with FOR loops (Done)
+    https://www.youtube.com/watch?v=CITZIv3SmvU -- Tutorial 17 WHILE loops (Done)
+    https://www.youtube.com/watch?v=7aP5KL5clWA -- Tutorial 18 Reading Numbers from the Serial Monitor (Done)
+    https://www.youtube.com/watch?v=MAnAc_t0OrM -- Tutorial 19 Reading Strings from the Serial Monitor (Done)
+    https://www.youtube.com/watch?v=r_PexDLIfH8 -- Tutorial 20 RGB LED's (Done)
+    https://www.youtube.com/watch?v=kj2br03bOuk -- Tutorial 21 Mixing Colors with RGB LED (Done)
+    https://www.youtube.com/watch?v=W5AApP9P-b0 -- Tutorial 22 Active Buzzers (Done)
+    https://www.youtube.com/watch?v=W5AApP9P-b0 -- Tutorial 23 Changing the Tone on an Active Buzzer (Done)
+    https://www.youtube.com/watch?v=dHYKRrlPNzM -- Tutorial 24 Passive Buzzers (Done)
+    https://www.youtube.com/watch?v=WMkN-uHd-Xo -- Tutorial 25 Photoresistors (Done)
+    https://www.youtube.com/watch?v=42ahyWUkTiU -- Tutorial 26 More on Photoresistors (Done)
+    https://www.youtube.com/watch?v=AgQW81zzR18 -- Tutorial 27 Pushbuttons and Pullup/Down Resistors (Done)
+    https://www.youtube.com/watch?v=aMato4olzi8 -- Tutorial 28 Pushbutton as a Toggle Switch (Done)
+    https://www.youtube.com/watch?v=XWL6Ydsmi0s -- Tutorial 29 Pushbutton Dimmable LED (Done)
+    https://www.youtube.com/watch?v=aFHu65LiFok -- Tutorial 30 Servo (position) motor (Done)
+    https://www.youtube.com/watch?v=4cdFHZ_Z-_Q -- Tutorial 31 Servo motor in a project (Done)
+    https://www.youtube.com/watch?v=B6YEQj4d5WU -- Tutorial 32 Joysticks (Done)
+    https://www.youtube.com/watch?v=KCdoRDDLWgo -- Tutorial 33 Control Servo with a Joystick
+    https://www.youtube.com/watch?v=ChHNI8yt69g -- Tutorial 34 Simple Pushbutton Usage
+    https://www.youtube.com/watch?v=CEz1EeDlpbs -- Tutorial 35 Stepper Motor
+    https://www.youtube.com/watch?v=SYDuRyweeLA -- Tutorial 36 Tilt Switches
+    https://www.youtube.com/watch?v=fPLEncYrl4Q -- Tutorial 37 DC Motor Control (Done)
+    https://www.youtube.com/watch?v=tXs3Bzf7s9g -- Tutorial 38 Tilt Switch and DC Motor Control
+    https://www.youtube.com/watch?v=tXs3Bzf7s9g -- Tutorial 39 Joystick and DC Motor
+    https://www.youtube.com/watch?v=fxgcnJJlTd4 -- Tutorial 40 Controlling DC Motor with push buttons
+    https://www.youtube.com/watch?v=-RSI0z5zbqI -- Tutorial 41 Hexadecimal Numbers
+    https://www.youtube.com/watch?v=n3qmQHzcgto -- Tutorial 42 Serial to Parallel Shift Register
+    https://www.youtube.com/watch?v=FwiKHHUbuLI -- Tutorial 43 Binary Counter with 74HC595 Shift Register
+    https://www.youtube.com/watch?v=3JDgL9rgVb0 -- Tutorial 44 Logical Shift Left and Right
+    https://www.youtube.com/watch?v=-WDO4mi2I68 -- Tutorial 45 Circular Shift Left and Right
+
+Paul McWhorter Original Arduino Programming
+    https://www.youtube.com/watch?v=QhIm6e5AH44
+
+Derek Banas - Arduino Programming
+        https://www.youtube.com/watch?v=QO_Jlz1qpDw -- Arduino C programming (Done)
+
+Brainy Bits Arduino
+        https://www.youtube.com/channel/UCH2m9XX8jSyVMkZUXwETPTw/videos -- All videos
+        https://www.arduino.cc/reference/en/ -- Language Reference
+
+Variable Declarations
+    float f = 10.4;
+    double d = 12.3  // 
+    int i = 5;
+    char chrMyVal = 'A';
+    unsigned int intMyVal = 200 (range 0 - 65535
+    byte bMyByte = 128 (range 0 - 255)
+    String str = "Hello World";
+    bool bReady = true;
+
+Arrays
+    int myArray2[] = {1, 2, 3, 4, 5,};
+    int myArray2[20];
+    char myArray3[] = "Geoff";
+    char *myStr = "Geoff";
+    String myName = "Geoff"
+
+String Manipulation
+    strName.equals("Fred"); returns true or false
+    strName.equalsIgnoreCase("Fred"); returns true or false
+    strName.remove(0,6) removes a substring
+    strName.replace("eoff", "eo") replaces a substring
+    strName.substring(0, 3) extracts a substring using an offset index
+    strName.toUpperCase(); changes strName to uppercase
+    strName.toLowerCase(); changes strName to lowercase
+    strNumber.toInt(); converts a string to an integer
+
+Number Manipulation
+    int bin1 = 0b1010101 // define a binary number with 0b prefix
+    & binary AND
+    | binary OR
+    ^ binary exclusive OR
+    ~ binary NOT
+    >> intPos // binary shift right intPos times
+    << intPos // binary shift left intPos times
+    fabs(intNum); absolute value
+    fmin(intNum1, intNum2, intNum3); min value
+    fmax(intNum2, intNum2, intNum3); max value
+    round(fltNum1); rounds a float
+    floor(fltNum1); rounds down
+    ciel(fltNum1); rounds up
+    sqrt(fltNum1); square root
+    cbrt(fltNum1); cube root
+    pow(5, 2); returns 5 squared
+    log(fltNum1) returns log base 2
+    log10 (fltNum1) returns log base 10
+    contrain(intNum, intLower, intUpper) - returns intNum if within range, otherwise range limit
+    sin(fltNum), cos(fltNum), tan(fltNum), sinH(fltNum), cosh(fltNum), tanh(fltNum), asin(fltNum), acos(fltNum), atan(fltNum)
+    randomseed(analogRead()) // seed the random generator from an unconnected pin
+    random(intNum1, intNum2) // generate a random number in a range
+
+void setup () {} settings
+    Serial.begin(9600); -- open the serial port at 9600 baud (bits/second)
+    pinMode(intPinNo, INPUT|OUTPUT);
+
+void loop () commands
+    Serial.print();
+    Serial.print("String1" + " " + "String2");
+    Serial.println();
+    delay(iDelayMsec); -- time delay in milliseconds
+    delayMicroseconds(iDelayMicroSec); -- time delay in microseconds
+    analogWrite(iPinNo, iWriteVal);  -- iWriteVal 0 - 255 is 0 - 5 volts PWM
+    digitalWrite(iPinNo, HIGH | LOW); -- HIGH or LOW
+    digitalRead(iPinNo) -- read the state on a pin (0 or 1)
+    fReadVal = analogRead(iPinNo); -- fReadVal will range from 0 - 1023 for 5v, 0-692 for 3.5v
+    while(Serial.available() == 0) {} -- set 'No Line Ending' on the serial monitor
+    iMyNum = Serial.parseint()
+    strInput = Serial.readString();
+
+Functions
+    sprintf(chrBuffer, "Value is %d", intValue);
+
+Servo Motor
+    #include <Servo.h> // servo header file required
+    int intServoPin = 9; // digital pin to control servo position
+    Servo srvMyServo  // define a servo object from the Servo class
+    srvMyServo.attach(intServoPin) - setup to attach the servo to a pin // setup to attach the servo object to a digital pin
+    srvMyServo.write(intServoPos) // issue command to set the servo position (between 30 and 150 to avoid overdriving the motor)
+

@@ -1,0 +1,438 @@
+Linux Cheat Sheet (Debian/Ubuntu)
+
+References
+    https://www.youtube.com/watch?v=rxOTDG1peLw&list=PL_vyuxE-AO-A92UblMm33ENQZPzvAPpGl -- 10 Basic Ways to Secure Ubuntu from Hackers
+    Review Engineer Man Linux videos
+    The Linux Command Line - William Schotts (free pdf download)
+    Look at the Linux Kernal at https://www.youtube.com/watch?v=rTcnTOXf_jM
+    Linux Professional Institute and LPIC certifications
+    Look at Sarah Cooley on WSL: https://www.youtube.com/watch?v=JZCPYWrTLTg
+    Look at WSL on the non_Darling machines
+    https://www.linuxjournal.com/ -- read LinuxJournal
+    Look at Engineer Man on YouTube
+    https://www.computerworld.com/article/2598082/linux/linux-linux-command-line-cheat-sheet.html
+    http://www.panix.com/~elflord/unix/grep.html -- grep tutorial
+    http://www.sanfoundry.com
+    Look at Linux Administration on Youtube https://www.youtube.com/watch?v=qAMWG86sEm8 -- overview of areas, not a tutorial
+    https://www.linuxtrainingacademy.com/vim-cheat-sheet/
+    https://www.youtube.com/watch?v=ZtqBQ68cfJc --  The 50 Most Popular Linux & Terminal Commands - Full Course for Beginners
+    https://www.youtube.com/watch?v=NsK7OPlK94U&t=431s -- Linux Command-Line Tips & Tricks: Over 15 Examples! (Done)
+
+Engineer Man Linux on Youtube
+    https://www.youtube.com/watch?v=UFIoRLqhFpo -- Linux File System
+    https://www.youtube.com/watch?v=TJzltwv7jJs -- processes
+    https://www.youtube.com/watch?v=Zuwa8zlfXSY -- eight linux commands
+
+LearnLinuxTV
+    https://www.learnlinux.tv/ -- homepage
+    https://www.youtube.com/watch?v=wYwGNgsfN3I -- Linux Essentials - The ps Command (Done)
+    https://www.youtube.com/watch?v=zMKacHGuIHI -- Linux Essentials - Data Streams (stdin, stdout & stderr) (Done)
+    https://www.youtube.com/watch?v=NsK7OPlK94U -- Linux Command-Line Tips & Tricks: Over 15 Examples! (Done)
+    https://www.youtube.com/watch?v=5JVBpXiYMKo -- Linux Essentials - systemd: Using the systemctl command (Done)
+    https://www.youtube.com/watch?v=19WOD84JFxA -- Linux Essentials - Managing Users
+    https://www.youtube.com/watch?v=dbVj-xQIJ0I -- Ubuntu 21.10 - Full Review
+    https://www.youtube.com/watch?v=4e669hSjaX8 -- Linux Essentials - Understanding File & Directory Permissions
+    https://www.youtube.com/watch?v=BNL3qBN9pP0 -- Linux Essentials: Navigating the Linux Filesystem
+    https://www.youtube.com/watch?v=skTiK_6DdqU == Linux Essentials - The find command
+    https://www.youtube.com/watch?v=dloByPvLLXU -- How to Homelab Episode 1 - Tips on Getting Started
+    https://www.youtube.com/watch?v=E8lyIO4TVtw -- How to Homelab Episode 2 - Software Considerations
+    https://www.youtube.com/watch?v=19WOD84JFxA -- Linux Essentials - Managing Users
+    https://www.youtube.com/watch?v=GnlgAD8-GhE -- Linux Essentials - Managing Groups
+    https://www.youtube.com/watch?v=zfSa-PEU3h4 -- Linux Essentials - Symbolic Links
+    https://www.youtube.com/watch?v=skTiK_6DdqU -- Linux Essentials - The find command
+    https://www.youtube.com/watch?v=oPEnvuj9QrI -- Linux Essentials - awk
+    https://www.youtube.com/watch?v=1kicKTbK768 -- Linux Essentials - APT
+    https://www.youtube.com/watch?v=Ok_kD_sgNcs -- Linux Essentials - Bash Aliases
+    https://www.youtube.com/watch?v=yxc2ntmH9xY -- Linux Commands for Beginners 11 - Intro to Package Management on Debian-based Distributions
+    https://www.youtube.com/watch?v=YS5Zh7KExvE -- OpenSSH Full Guide - Everything you need to get started!
+    https://www.youtube.com/watch?v=91dNq4C6260 -- Setting the Hostname of your Linux Workstation or Server (Linux Essentials Series)
+    https://www.youtube.com/watch?v=tU9cO9FwDx0 -- Linux Essentials - htop
+    https://www.youtube.com/watch?v=2Z6ouBYfZr8 -- Linux Essentials - Formatting & Mounting Storage Volumes
+
+General
+    store commands in ~/.bashrc
+    option styles: unix style has a leading '-', bsd style omits the '-', gnu style uses '--' and words,  eg ps -aux and ps aux are identical
+
+Linux Commands
+     <command> -- leading space before a command excludes it from history
+    ; -- separator on the command line to separate multiple shell commands
+    || -- separator to execute another command if the first command fails
+    && -- separator to execute another command if the first one succeeds
+    & -- run in the background (appended to command) with space, e.g. './jobname &')
+    > redirect stdout
+    >> redirect stdout and concatenate to the target
+    .<filename> -- run filename as source commands to the shell
+    ./<filename> -- run the filename from the current directory
+    ~ -- home directory
+    ~/.profile -- log in shell script settings
+    ~/.vimrc -- run control file for vim
+    . -- current working directory or prefix for hidden file
+    .. -- parent of current working directory
+    * -- match any characters
+    ? -- match any single character
+    [] -- match any in a set of characters
+    !nnn -- execute line number in bash history
+    !! -- run the previous shell command, sudo !! -- rerun last command as root
+    !$ -- reuse the last item from the previous command
+    -- help -- command option to show help page
+    ; -- separator for multiple commands on a command line
+    / -- root
+    /bin -- essential binaries (common executables) e.g. ls, cat, cp, rmdir, etc
+    /boot -- linux kernel and boot configuration and loaders, should not be altered
+    /boot/grub -- multi-OS bootloader support (Grand Unified Bootloader)
+    /cdrom -- legacy mount point for cdrom
+    /dev -- device nodes as files e.g. sda with partitions sda1, sda2.
+    /dev/null -- the null device or bit bucket
+    /etc -- configuration files, init on boot scripts, host-specific system configuration files
+    /etc/apt/sources.list - list of all sources used by apt
+    /etc/bin -- boot scripts for system configuration
+    /etc/crontab -- scheduled jobs
+    /etc/fstab -- 'File System Table' devices and mountpoints mounted automatically at boot
+    /etc/hostname -- hostname for the system
+    /etc/hosts -- file mapping DNS to IP addresses
+    /etc/init.d -- boot scripts for daemons (see service command)
+    /etc/group -- group accounts and members
+    /etc/passwd -- user accounts: login name, uid, login gid, account name, home directory, login shell
+    /etc/profile -- systemwide environment variables for all users
+    /etc/shadow -- the shadow file for the /etc/passwd file
+    /etc/shells -- list of shells
+    /etc/sudoers -- sudo privileges
+    /etc/sudoers.tmp -- sudo privileges updated by 'sudo visudo'
+    /home -- user files
+    /home/<username>/bin -- bin automatically included in path on startup
+    /lib -- shared system libaries
+    /lost+found -- empty unless file system crash is partially recovered with fsck
+    /media -- automatic mount points for external media hardware such as usb drives
+    /mnt -- mount point for removable devices and other devices mounted manually
+    /opt -- optional software and related configuration files - no specific rules on usage (e.g. games)
+    /proc -- virtual system directory and process psuedo files, directories for processes by PID
+    /root -- home of root user, not reachable by non-root users
+    /run -- temporary runtime info
+    /snap -- snap packages used in Ubuntu
+    /sbin -- system binaries (like /bin) but for the sysadmin user e.g. disk formatters, partitioners etc
+    /srv -- service files used by server
+    /sys -- system folder in RAM
+    /tmp -- temp files used in a session, emptied on reboot automatically
+    /usr -- user programs and supporting files (large)
+    /usr/bin -- linux executables (non-shell built-in commands)
+    /usr/include -- C include header files shipped with compiler gcc
+    /usr/include/g++ -- C++ header files
+    /usr/lib -- shared libraries for /usr/bin
+    /usr/lib/x86_64-linux-gnu/libc.a -- Gnu LIBC library
+    /usr/share/doc -- readme files for installed software
+    /usr/share/man -- man pages
+    /usr/src -- source installed by the distribution
+    /usr/local -- local distribution-dependent extensions
+    /usr/local/src -- source installed by users for sharing across users
+    /user/local/bin -- binaries for locally built software
+    /usr/log -- log files
+    /var -- variable files expected to grow e.g. spools, mail, databases, logs
+    /var/log -- system logs and logfiles and error logs
+    /var/run -- info on system since it was booted
+    /var/spool -- data waiting on printing or processing
+    >/dev/null -- redirect console standard output to /dev/null
+    > <filename> -- redirect stdout to a file
+    >> <filename> -- redirect stdout and append to a file
+    2> <filename> -- redirect stderr to a file
+    2>/dev/null -- redirect console errors to /dev/null
+    $PATH -- the Linux path variable. Modify PATH in ~/.bash_profile
+    $PS1 -- prompt string
+    adduser <username> add a user and set their password and user profile
+    alias <newCommand> = '<string>'; Use unalias <newCommand> to remove. Type alias to see existing. Put in ~/.bashrc
+    apropos <searchTerm> -- finds man pages with text matching the search terms
+    apt -- Advanced Package Tool (Debian packages) upgrade from apt-get
+    apt autoremove -- removes unwanted packages previously installed as dependent packages
+    apt-cache search <searchString>
+    apt dist_upgrade -- installs all updates and dependencies including packages to remove
+    apt install <programName1> {programname2] [programname3] -- Advanced Package Tool for software/package installation (run with sudo)
+    apt list -- list installed packages (run with sudo)
+    apt purge <packageName> -- removes a package and configurations (run with sudo)
+    apt remove <packageName> -- removes a package (run with sudo)
+    apt search <searchstring> -- get a list of package names matching the searchstring
+    apt show <packageName> -- shows package information
+    apt update -- update list of available packages on the local package repository (i.e repositories index)
+    apt upgrade -- upgrades all installed upgradeable packages (run apt update first) excluding those requiringdependencies
+    aptitude -- an installable package and superset of apt applications including: apt-get, apt-mark, and apt-cache
+    as -- assembler
+    ascii -- print the ASCII table (apt install ascii first)
+    aspell -- check and correct misspelling in text files, e.g. aspell check <filename>
+    at -- run a job at a specified time e.g. 'at 20:12 <scriptName>
+    atq -- list jobs in the at queue
+    atrm -- remove jobs from the at queue
+    awk '{print $1}' <filename> -- print the first token in each line of a file
+    awk '{print $NF}' <filename> -- print the last token in each line of a file (NF decodes to 'Number of Fields')
+    awk -F':' '{printf $2}' -- print the second token in each line of a file with ':' as the field delimiter
+    batch -- queue, examine, or delete jobs for later execution
+    bc -- basic calculator (see also dc)
+    bg %n -- sends running job %n (from jobs) to the background
+    cal -- shows the current month calendar with days horizontal and weeks vertical (simlink to ncal)
+    calendar -- shows 2 day listing of current calendar events
+    cat -Ans <filename> -- writes a file to stdout, reads from <stdin> if no file specified, -Ans show all chars, number lines and suppress repeating blank lines
+    cat /etc/passwd
+    cd <path> -- change directory, cd - ,change to previous/prior working directory, cd ~</path> change to home directory path, cd  change to home directory , default is $HOME
+    chgrp -- change a file group
+    chmod -- change mode (security)
+    chown -- change ownership of a file or directory, chown -R to recursively change ownership of subidirectories and contents
+    chsh -- change shell to any listed in /etc/shells e.g. chsh -s /bin/sh
+    clear -- clears the console, -x to keep scroll history, <Ctrl>-l shortcut to clear, see reset
+    cmatrix -- cascading console character screen saver (sudo apt install cmatrix). Use <Ctrl>-c to escape
+    cmp -- compare two files
+    column -- arrange a file in columns with optional delimiters (e.g. mount | column -t)
+    comm -- compare two sorted files line by line< e.g. comm file1name> <file2name>
+    Command Prompt -- user@machine<currentDirectory>$ (# if root), PS1="\h\w$ " to set to host and working directory
+    Command History -- Up arrow (default is 1000 lines), stored in HISTFILE, normally ~/.bash_history/
+    Command-line completion -- use tab character to see completion options
+    Configuration Files: /etc/environment (global), /etc/profile (shell), ~/.bashrc (user shell)
+    cp -- copy files or directories, -u updates onl
+    curl -4 icanhazip -- fetch your external ip address with curl
+    <Ctrl>-+ -- increase terminal font size
+    <Ctrl>-- -- decrease terminal font size
+    <Ctrl>-a -- move cursor to start of line
+    <Ctrl>-c -- SIGINT signal to kill the current foreground process (does not affect background jobs)
+    <Ctrl>-d -- EOF or exit a session
+    <Ctrl>-e -- move cursor to end of the line
+    <Ctrl>-k -- delete from the cursor to the end of the line
+    <Ctlr>-r -- search command history, then enter text to match and Ctrl-r to find next match, <Enter> to run the command and <Ctrl>-c to break out
+    <Ctrl>-u -- Undo/erase the current line
+    <Ctrl>-z -- suspend the process and send to the background. Restore with 'fg'. Same as SIG 20 SIGSTP
+    cut -- print selected part of a file to <stdout>
+    daemon -- a headless process
+    date -- system date and time
+    dc -- RPN calculater (see also bc)a
+    dd -- data duplicator to copy files and disks
+    dig -- alternative to nslookup (apt install nsutils to install)
+    dig -v -- version of dig
+    dig gjarman2020.com -- show the A record of the DNS name (same as 'dig gjarman2020.com A') uses default DNS server in /etc/resolve.conf
+    dig @8.8.8.8 gjarman2020.com -- query Google's DNS server for the A record
+    dig @8.8.8.8 gjarman2020.com ANY -- query all DNS records for a single domain name
+    dig -x 35.209.128.197 -- reverse DNS lookup to fetch the domain attached to an IP address
+    dig gjarman2020.com +trace -- tracert using dig to show the root, domain and domain provider servers
+    dirs -- list the directory stack (see also pushd)
+    disown -a -- disown processes running in the console before shutting down
+    df -- 'disk free' space and used space on mounted file systems, df -h for human readable
+    df - h -- 'disk free' hunab readable space and used space on mounted file systems, df -h for human readable
+    dict <word> -- search online dictionaries for references to <word>
+    dictionary file -- see /usr/share/dict/words file
+    dmesg -- reads the kernel messages
+    dos2unix -- convert dos file format to unix (see also unix2dos)
+    dpkg -- Debian Package Manager, to install locally downloaded packages. e.g dkg -l to list installed packages
+    du -- disk usage, showing sizes of directories and files defaulting to current directory
+    du <directory path> -- disk usage for a specific directory
+    du -h <directory path> -- disk usage with human-readable file sizes
+    du -h | sort -h -- disk usage human readable sorted human readable
+    echo -- display a line of text
+    echo $<ENV VARIABLE> -- display the definition of an environment variable e.g. echo $HOME or echo $PATH or echo $SHELL
+    echo $SHELL -- display the current shell
+    echo $0 -- display the current shell in use
+    env [command] -- (or printenv) shows environment variables including $PATH. Allows running a command in a new environment
+    epoch -- 01 Jan 1970, aka the Unix Epoch
+    exec <command> -- execute a command in the current shell (vs fork and exec for normal commands)
+    exec bash -- create a new bash shell in the current shell
+    export -- marks an environment variable for child shell processes e.g. MYVAR="Geoff", export MYVAR, then echo $MYVAR in a child process (see unset)
+    fc -- builtin 'fix command' to list, edit and re-execute commands from history e.g. fc -e vi nn to use vi to edit command line nn
+    fdisk /dev/<device> -- format a disk
+    fdisk -l -- list devices on a host machine
+    fg -- bring a task to the foreground (previously backgrounded by <Ctrl>-z)
+    fg %n -- n is job ID from jobs, return job %n to the foreground
+    FHS -- Filesystem Hierarchy Standard
+    file <filename> -- file type text
+    file attributes -- trwxrwxrwx where t (type) is: -- regular, d directory, l link, c char stream, b block
+    find <dir> -name '<filename>' -- recursively look for filename starting at <dir>. Default <dir> is . (e.g. find / -name '*mysql*' 2>/dev/null)
+    find . -- find everything recursively in the current directory
+    find . -type d -name '*Open*' -- add a type qualifier to find only directories matching a name pattern
+    find . -type d -iname '*Open*' -- find case-insensitive matches
+    find . -type d -- find all directories within the current directory without a name pattern
+    find . -type f -name '*Open*' -- add a type qualifier to find only files matching a pattern
+    find . -type d '<directoryname> -- search for directories recursively within the current directory
+    find . -type f -size +1000k -- find files larger than 1 meg
+    fmt <filename> -- formats a file into lines of 75 chars and protects indented text
+    findmnt -- show mounted file systems in a readable format (see also mount)
+    fold -w nn -- fold text into multiple lines of length nn, e.g. fold -w 12
+    free -- free RAM and swap space
+    fsck -- file system check
+    gdb -- GNU debug (use info gdb for documentation)
+    gdisk -- disk partition manager similar to fdisk
+    gid -- group id (similar to a uid)
+    gpasswd -a <username> <groupname> -- add a user to a group
+    gpasswd -d <username> <groupname> -- delete a user from a group
+    grep '<pattern>' <files> -- global/regular expression/print -- search for text in <files> where files are in the current <dir> 
+    grep "<pattern>" <files> -- use "" instead of '' on the pattern
+    grep "<pattern>" ./* -- use "" instead of '' on the pattern
+    grep -A n, -B n, -C n "<pattern>" <files> -- -a n lines after, -b  lines before, -c lones before and after (context) 
+    grep -wic <pattern> <files> -i ignore case, only -w whole word, count matches
+    grep '<pattern>' <files> -- use '<pattern>' or "<pattern>" for regular expressions
+    grep -lc <pattern> <files> -- list file names that contain a pattern on any line and the count of matches
+    grep -L <pattern> <files> -- list file names that do not contain a pattern on any line
+    grep '<pattern>' <dir> -- list lines in files containing a pattern in a directory (./* for files in the current directory)
+    groups -- list all groups where the current user is a member
+    groups <username> -- list all groups where the named member is a member
+    glibc -- the GNU C libaries
+    groupadd <groupname> -- add a user group
+    groupdel <groupname> -- delete a group
+    halt -- shutdown the system and do not reboot (see also shutdown)
+    head -- show first 10 lines in a text file, e.g. head -n 3 <filename> shows first 3 lines in <filename>
+    help <command> -- show help page
+    hexdump -C <binaryfile> or hd -C <binaryfile> -- hex dump utiliyt
+    HISTTIMEFORMAT="%Y-%m-%d %T " to display a timestamp in command history (also put in ~/.bashrc)
+    history n -- list n lines of keyboard history, stored in ~/.bash_history
+    host <domainName> -- returns the DNS address of the domain name
+    hostname -- show or set a computer's hostname and domain name (stored in /etc/hostname)
+    hostnamectl -- show the hostname and additional information: operating system, chassis, architecture, kernel
+    hostnamectl set-hostname <newHostName> -- change the hostname (note: update /etc/hosts with any changes)
+    htop -- improved top command
+    id -- current user and associated groups. -un show only user name (see also whoami)
+    info <command> -- shows GNU info pages (with hyperlinks) for a command (see also man)
+    inode -- metadata (excluding filenames) about a file or a directory
+    ip -a -- replacement for ifconfig, shows network configuration of host (see also netstat -ie)
+    ip link show -- show the Mac address for each connection
+    iptables -- 
+    invocation -- /etc/profile > /etc/bash_bashrc > ~/.bash_profile > ~/.bash_login > ~./profile > ~/.bashrc
+    jobs -- list foreground and background jobs spawned within a shell and their status (a shell builtin)
+    join -- join records in two files on a matching field
+    journalctl -fu <unitname> -- follow the log entries on a log file for a unit 
+    kill [signal] pid -- kill process with PID, -l list signals and numbers, e.g.kill -9 1234
+    kill - INT 22 (i.e. kill -2)-- interrupt process 22 with the SIGINT signal
+    kill - TERM 22 (i.e. kill -15)-- terminate process 22 with the SIGTERM signal - superior to SIGINT
+    kill - KILL 22 (i.e. kill -9) -- kill process 22 with the SIGKILL signal - superior to SIGTERM and cannot be blocked
+    kill - TSTP 22 (i.e. kill -20) -- kill process 22 with the SIGTSTP signal - terminal stop or <ctrl>-z
+    ld -- gnu linker
+    ldd -- list libraries used by a binary execcutable
+    less <filename> -- scroll through any text file's contents, e.g. ldd <program binary name>
+    ll -- list directory contents in detail (see also ls -la)
+    ln -s <filepath> [linkhome] -- create symbolic (soft) link (symlink), -s symbolic
+    ln <filepath> [linkhome] -- create hard link
+    locate <filename> -- find files or directories from a database maintained by updatedb
+    ls -- list (files and subdirectories) in the current directory, -a show hidden , -l long format, -h human readable, -i show inode number, --color=never to disable color
+    ls -- does not support -i case insensitive switch so pipe to grep for this filter (e.g. ls -la | grep -i "<filtertext>"
+    ls <path> -- list files in a non-local directory
+    ls -laS * -- list files by filesize large to small in the current directory
+    ls -lia -- list inode numbers
+    ls -la | wc -l -- count the number of entries in a directory
+    lsb_release -a -- 'Linux Standard Base' 'all info' shows release or version of Operating System (Ubuntu linx
+    lsblk -- list all block devices (physical devices) attached to the computer (sda = SCSI drive, sda1 = SCSI Partion, hda = IDE drive, hda1 = IDE partition)
+    lsof -- list open files and the processes using them
+    make -- run make to create object files from C source after ./configure is run in source directory
+    make install -- install a C executable after make is run
+    makeinfo -- translate documents into typesetting format
+    man [page] <command> -- display manual for command (using 'Less' commands to navigate). See also 'info'
+    man 3 printf -- man 3 are the c reference pages
+    man man -- shows documentation on man (to get started)
+    mkdir -- make directories
+    mkdir -p /new/new2/new3 -- make directories including new parent directories
+    mkfifo <pipelame> -- create a pipe (use rm <pipename> to remove it
+    mkfs - make file system
+    mount -- show mounted file systems or mount a file system e.g mount -t iso9660 /dev/sdc /mnt/cdrom see also findmnt
+    mv -- move or rename file or folder/directory
+    ncal -- shows current month calendar with days vertical and weeks horizontal
+    ncdu -- disk usage utility defaulting to the current user home directory tree
+    ncdu / -- disk usage  utility defaulting to the root file system
+    ncdu / -x -- disk usage defaulting to the root file system and excluding temporary mounts
+    netstat -ie -- network configuration located in /etc/xinet, netstat -ntlp
+    nohup -- run a process without interruption if the submitter logs off
+    nslookup -- look up an ip address for a dns name nslookup google.com
+    passwd -- change the password of the current user
+    passwd <username> -- change passwd of any user
+    PID -- process ID
+    ping -cn <hostname> ping <hostname> 4 times
+    popd - pop the last directory off the stack and move to that directory
+    pushd <directory name> push a directory onto the stack and move to that directory. Use dirs command to list the directory stack
+    printenv [option] -- show all or a single environment variable (see env)
+    ps -- 'process status' lists processes and ID's for the terminal session, an external command
+    ps -ax -- show Status of each process
+    ps -aux show additional columns incl owners and user names. 
+    ps -x -- list system-wide processes
+    ps -He -- list processes in a hierarchy across all terminals
+    ps -axjf -- 
+    pstree -- show processes in parent/child tree
+    pwd -- print working directory
+    reboot -- reboot the operating system (requires sudo) reboot --force to force immediate reboot (see shutdown)
+    reset -- restore the linux terminal to it's original state (see clear)
+    rev -- reverse text
+    rm -- remove files and directories, -r recursive (for directories and contents and subdirectories)
+    rm -r <directory> remove a directory and all subdirectories
+    rmdir -- remove directory (must be empty, otherwise use rm -r for recursive delete)
+    rsync -- syncrhonize folders between directories or hosts (e.g. sudo rsync -azvv /home/path/folder1/ /home/path/folder2)
+    script <filename> -- stores bash shell session in a file
+    sed -- stream editor e.g. set 's/old/new/g' <filename> transalates a file to <stdout>, use -i to update in place
+    service -- runs init scripts from /etc/init.d/ directory e.g. service cron status, service apache2 status
+    set -- show and set environment variables and shell variables (see unset)
+    shift -- move command line arguments one position left
+    shopt -- shell options e.g. shopt to show current option settings
+    shutdown -h now -- shutdown the system (see also halt) e.g. shutdown -r 5 shutdown and reboot in 5 mins (see also reboot)
+    signals -- SIGINT, SIGTERM
+    sleep n -- sleep n seconds, e.g. sleep 30, sleep 360 &, 
+    sort <filename> -- sorts lines in a textfile to std output
+    source <filename> -- executes filename as a script, e.g. source ~/.bashrc to load new shell vars into startup config for the current user
+    spell <filename> -- checks spelling in a file and prints misspellings one word per line
+    ssh uses port 22
+    ssh gjarman@192.168.0.13 -- connect to a host via SSH using the host IP address, use <Ctrl>-d to disconnect
+    ssh -v gjarman@192.168.0.13 -- connect verbose
+    ssh -v linuxserver -- connect verbose using profile in ~/.ssh/known_hosts
+    ssh-copy_id -- copy a local key to a remote server
+    ssh-keygen -- generate an SSH key on the client at default location /home/gjarman/.ssh/id_rsa
+    ssh configuration file is /etc/ssh/sshd_config
+    stdin, stdout, stderr -- basic datastreams
+    strings <filename> -- returns a list of continuous character strings from filename
+    su [username] -- switch user, run a shell as another user, -l invoke new user's environment, blank username is root
+    sudo [username] -- run a command as another user in the current shell, blank username is root, -i superuser shell, -l list of privileges, sudo !! -- rerun last command as root
+    sudo -l -- list sudo privileges
+    sudo su -- switch to superuser in Ubuntu (su requires pwd but sudo su does not)
+    sudo !! -- run the previous command as superuser
+    symbolic link -- prefixed 'l' in directory listing, file entry pointing to another file (file synonmym)
+    systemctl -- control script for systemd units (services) -- components started after the kernal
+    systemctl list-unit-files --type=service -- list service files and show their state
+    systemctl status apache2 -- get the status of apache on Ubuntus
+    systemctl enable apache2 -- enable apache on Ubuntu (as root) 
+    systemctl enable --now apache2 -- enable apache on Ubuntu and start the service (as root) 
+    systemctl disable apache2 -- disable apache on Ubuntu so it does not start on reboot (as root) 
+    systemctl start apache2 -- start apache on Ubuntu (as root) 
+    systemctl stop apache2 -- stop apache on Ubuntu (as root) 
+    systemctl restart apache2 -- stop and cold start apache on Ubuntu (as root) 
+    systemctl restart sshd -- restart the ssh listener daemon
+    systemctl reload apache2 -- stop and warm start apache on Ubuntu (as root) 
+    tac -- writes a file to stdout in reverse order
+    tail -- show last 10 lines in a text file, e.g. tail -n 3 <filename> shows last three lines in <filename>, -f follow new entries
+    tail -f <filename> -- follow additons to <filename> in real time
+    tasksel -- task select on Ubuntu to install complex configurations (run as sudo)
+    tee <filename> -- split stdout to console and file, e.g. ls | tee <filename>
+    test <filename> -- use in conditional && commands to execute second command if test is successful
+    time <command> -- runs command and prints elapsed time: real is total elapsed, user is CPU time in user mode and sys is time in kernal mode
+    top -- continuously updated process list sorted by CPU activity. Use h for help and q to quit (see also htop)
+    touch -- creates a new file or changes the timestamp on an existing file
+    tr -- translate characters in a file
+    traceroute -- determine the route of network packets
+    tree -- print the directory tree
+    truncate -s <size> <filename>
+    TTY -- terminal
+    type <command> -- shows the type of command (built-in, executable, script, alias)
+    uid -- user id, starting at 1000 for locally added users, below 1000 for system accounts, see also gid for groups
+    ulimit -c -- find the upper limit for coredump (ulimit -c unlimited -- set as unlimited)
+    umount <mountpoint> -- unmount a file system after clearing pending data writes
+    unalias <aliasname> -- remove an alias created by the alias command
+    uname -a -- prints basic system information like operating system version
+    uniq -- show unique lines or duplicate lines in a sorted file
+    unix2dos -- convert unix file format to dos (see also dos2unix)
+    unset <shellVar> -- delete a shell variable (see set and export)
+    updatedb -- updates the locate database for file name searching
+    uptime -- show uptime and user count
+    useradd <username>-- add a non-system user (also adduser), without creating a home directory. Defaults for new users are at /etc/default/useradd
+    useradd -m <username> -- add a non-system user with a home directory
+    useradd -r <username> -- add a system user
+    userdel <username> (run as sudo) without removing their home directory
+    userdel -r <username> (run as sudo) to remove a user and their home directory
+    usermod -aGk <groupname> <username> -- add a user to a group as a secondary group memeber
+    usermod -g <groupname> <username> -- add a user to a group as the primary group for that user
+    usermod -aG sudo gjarman -- give gjarman sudo access
+    vi [filename] -- run the Visual Editor typically runs vim
+    wait nn -- wait until job nn is complete
+    words -- see /usr/share/dict/words file
+    wc <filename> -- 'Word Count' displays lines, words and bytes in a file, -l linecount only, -w words only, -c bytes/chars only
+    wc -l -- line count e.g. cat /etc/passwd | wc -l to get a count of users on the systesm
+    wget -- download files from the web
+    whatis <command> -- shows summary description of unix command 
+    whereis -- find the directory for a file (e.g. where is cal)
+    which -- show directory of executable if the executable is installed (does not work for built-ins which are part of Bash)
+    who -- show all logged in users and terminal sessions
+    whoami -- show current user, same as id -un.
+    xargs -- run a command multiple time from std input e.g. find /tmp -mtime +14 | xargs rm  to rm all files over 14 days old in /tmp
+    yes -- outputs a stream of 'y' characters or other (e.g. yes charString)

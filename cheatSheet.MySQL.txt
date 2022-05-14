@@ -1,0 +1,191 @@
+MySQL CheatSheet
+
+MySQL and C
+    https://zetcode.com/db/mysqlc/ -- mySQL and C programming tutorial
+    https://www.linuxjournal.com/article/6863 -- linux CGI project using mySQL`
+
+MySQL
+    https://www.youtube.com/watch?v=9ylj9NR0Lcg -- MySQL Intro Traversy Media (Done)
+    https://www.youtube.com/watch?v=X_umYKqKaF0 -- MySQL Workbench Tutorial (Done)
+
+MySQL Artur Spirin
+    https://www.youtube.com/watch?v=HtIDHgIWJlM -- Install MySQL Workbench
+    https://www.youtube.com/watch?v=_NyNmxBdGM8 -- Install MySQL Server on Linux
+    https://www.youtube.com/watch?v=SCpnzaWOb8I -- Create Database and Tables
+    https://www.youtube.com/watch?v=FnN7VakCFqs -- Add Users in MySQL
+    https://www.youtube.com/watch?v=pn2zZgbU0F4 -- Enable Remote Access
+
+MySQL Database Star
+    https://www.youtube.com/watch?v=chezeWdTHbo -- MySQL Workbench Tutorial (Done)
+    https://www.youtube.com/watch?v=log1X_L9IZw -- MySQL Create a New Database (Done)
+
+MySQL Fan Zhang
+    https://www.youtube.com/watch?v=huRbA9n2ctw
+
+MySQL Tutorial
+    https://www.mysqltutorial.org/
+
+C and mySQL
+    https://timmurphy.org/2009/08/20/connecting-to-mysql-in-c/
+    http://zetcode.com/db/mysqlc/
+    https://www.cyberciti.biz/tips/linux-unix-connect-mysql-c-api-program.html#:~:text=MySQL%20database%20does%20support%20C%20program%20API%20just,the%20MySQL%20source%20distribution%20are%20written%20in%20C.
+    http://www.kitebird.com/mysql-book/ch06-3ed.pdf
+    https://qnaplus.com/how-to-access-mysql-database-from-c-program/
+
+Connect Troubleshooting
+    sudo mysql
+    alter user 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Mpa4egu$'
+    exit
+
+Directories( using ... find / -name mysql 2>/dev/null)
+    /usr/share/mysql
+    /usr/bin/mysql
+    /usr/include/mysql
+    /usr/lib/mysql
+    /etc/mysql
+    /etc/mysql/mysql.cnf -- configuration file
+    /var/log/mysql
+    /var/lib/mysql
+
+Connect Local
+    mysql -u root -p and authenticate using mysql password
+    mysql> \q -- exit
+    mysql> exit -- exit
+
+Database Manipulation
+    systemctl stop mysql -- stop the database
+    systemctl status mysql -- check the status of mysql
+    mysql> create database risingfast;
+    mysql> show databases;
+    mysql> use risingfast; -- make the new database the default
+    mysql> use <databasename>; -- make a database active
+    mysql> show tables;
+    mysql> describe <tablename>; e.g. describe `Test Strings`;
+
+Table Manipulation
+    mysql> create table table1 (id int not null auto_increment, primary key (id));
+    mysql> create table test (id INT AUTO_INCREMENT, name VARCHAR(100), PRIMARY KEY(id));
+    mysql> describe <tablename>; - list table columns and datatypes
+    mysql> alter table table1 add column name varchar(64);
+    mysql> drop table <tablename>; -- delete a table
+
+Index Manipulation
+    create index <indexname> on <tablename>(colname); -- create an index
+    drop index <indexname< on <tablename>; -- delete an index
+
+User and User Privileges Manipulation
+    mysql> -u root -p -- login as root with prompted password
+    mysql> -u gjarman -p
+    mysql> create user gjarman@'%' identified by <password>;
+    mysql> grant all privileges on *.* to 'gjarman'; -- grant global privileges
+    mysql> grant select on risingfast.test to 'gjarman'; -- grant select on a table
+    mysql> flush privileges; -- force new privileges to take affect without a db restart - clears the grants table
+    mysql> show grants for 'gjarman';
+    mysql> drop user 'gjarman'@'%' -- drop a user
+
+Configure Remote Access
+    Modify file /etc/mysql/mysql.cnf as sudo
+    Add lines: [mysqld] bind-address=192.168.0.13 port=3306
+    Restart db: etc/init.d/mysql restart
+
+References
+    https://phoenixnap.com/kb/access-denied-for-user-root-localhost
+    https://www.youtube.com/watch?v=HtIDHgIWJlM -- mySQL on Linux tutorials
+    https://www.mysqltutorial.org/
+    https://www.cyberciti.biz/tips/linux-unix-connect-mysql-c-api-program.html#:~:text=MySQL%20database%20does%20support%20C%20program%20API%20just,the%20MySQL%20source%20distribution%20are%20written%20in%20C. -- connect to mySQL and list tables in a db
+    https://dev.mysql.com/doc/workbench/en/ -- workbench docs
+    https://dev.mysql.com/doc/ -- main documentation
+    https://dev.mysql.com/doc/c-api/8.0/en/c-api-data-structures.html -- MySQL Data Types
+    https://dev.mysql.com/doc/c-api/8.0/en/ -- C API reference
+    https://zetcode.com/db/mysqlc/ -- C API tutorial for MySQL
+
+Record Selection and sorting
+    select concat(<col1>, <col2) from <tablename> -- concatenate columns
+    select distinct <col1>, <col2>, <col3> from <tablename> -- select distinct rows
+    select * from <tablename> where <col1> LIKE 'abc%'; -- select using matching expression
+    select * from <tablename> where <col1> NOT LIKE 'abc%'; -- select excluding matching expression
+    select * from <tablename> where <col1> in ('val1', 'val2', val3'); select matching members
+    select * from <tablename> order by  field (<fieldname>, 'value1', 'value4', 'value3', 'value2') for custom ordering
+    select * from <tablename> where <condition> limit [<offset>,] <number>; to limit lines in the result starting at offset (base zero)
+
+Record Manipulation
+    insert into <tablename> (col1, coll2) values ('My First Record', 'First'), ('My Second Record', 'Second'); -- insert multiple rows
+    INSERT INTO table_name(column_list) SELECT select_list FROM another_table WHERE condition; -- insert into table by selecting records from other tables
+    UPDATE employees SET email = 'mary.patterson@classicmodelcars.com' WHERE employeeNumber = 1056; -- update
+    delete from <tablename> where colname = 'value'; -- delete
+    update <tablename> set <colname> = 'colvale' where <recordkey> = <keval>;
+
+Joins
+    SELECT column_list FROM table_1 INNER JOIN table_2 ON join_condition; -- inner join
+    SELECT column_list FROM table_1 LEFT JOIN table_2 ON join_condition; -- left join
+    SELECT column_list FROM table_1 RIGHT JOIN table_2 ON join_condition; -- right join
+    SELECT select_list FROM table_1 CROSS JOIN table_2; -- cross join (cartesian join)
+    INNER JOIN to join a table to itself
+    CROSS JOIN to join on cartesian product
+
+Install C Dev Libraries
+    sudo apt install libmysqlclient-dev
+    sudo apt install mysql-client-core-8.0
+
+Compile C Program
+    gcc -o myProg $(mysql_config --cflags) myProg.c $(mysql_config --libs)
+
+Compile C++ Programs
+    g++-11 -Wall -I/usr/include/cppconn -g -o testSQL testSQL.cpp ../Shared/rf50cpp.cpp -L/usr/lib -lmysqlcppconn
+    testSQL: testSQL.cpp ../Shared/rf50cpp.cpp
+    ^I$(CC) $(SQL1FLAGS) $(CFLAGS) $@ $^ $(SQL2FLAGS)
+    $(CC) Compiler executable
+    $(SQL1FLAGS) include header files
+    $(CFLAGS) Compiler options
+    $@ Target file
+    $^ Dependenent (source) files
+    $(SQL2FLAGS) libraries
+
+Key Tables
+    mysql.user -- user table
+
+Field Types
+    TEXT -- max 65k characters
+
+Dates
+    CAST('2003-01-01' AS DATE) -- create a date value from a text value
+    SELECT DATE(NOW());  -- returns the current date in the format 'YYYY-MM-DD'
+    SELECT NOW(); -- returns the current date and time in the format 'YYYY-MM-DD HH:MM:SS'
+    SELECT CURDATE(); -- returns the current date in the format 'YYYY-MM-DD'
+
+Escape Character
+    Use \ to escape special characters e.g. use '\%10' to match strings containing '%10'
+
+Prepared Statements
+    PREPARE stmt1 FROM 'SELECT * FROM `Book Titles` WHERE `Title ID` = ?';
+    SET @tid = 50;
+    EXECUTE stmt1 USING @tid;
+    DEALLOCATE PREPARE stmt1;
+
+SQL C API
+
+    char *strServer = "192.168.0.13";                                           -- define server IP
+    char *strUser = "gjarman";                                                       -- define user
+    char *strPassword = "Mpa4egu$";                                              -- define password
+    char *strDatabase = "risingfast";                                            -- define database
+    char strSQL[SQL_LEN] = {'\0'};                                       -- define SQL string array
+    char **endptr;                                               -- endptr for conveting str to int
+    MYSQL *conn;                                                   -- connection object (structure)
+    MYSQL_RES *res;                                                    -- result object (structure)
+    MYSQL_ROW row;
+
+    conn = mysql_init(NULL);
+    MYSQL *mysql_real_connnect(con, strServer, strser, strPassword, strDatabase, 0, NULL, 0);
+    char *mysql_error(con))                               -- error message after connection attempt
+    MYSQL_RES = mysql_store_result(conn)                -- stores SQL result in MYSQL_RES structure
+    (void) mysql_data_Seek(res,0)                        -- reset pointer to start of res structure
+    MYSQL_ROW mysql_fetch_row(res)                        -- retrieves the next row of a result set
+    (void) mysql_free_result(res)                            -- free the MYSQL_RES structure memory
+    mysql_close(conn);                                -- free the MYSQL connection structure memory
+    (int) strtol(row[0], endptr, 10);                                  -- convert string to integer
+
+Backup and Restore
+    mysqldump -u gjarman -p risingfast > /tmp/mysql_backup.sql -- from the server (sudo not required)
+     `
+    
+

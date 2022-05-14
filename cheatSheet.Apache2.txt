@@ -1,0 +1,135 @@
+Apache2 Cheatsheet
+
+References
+    https://www.liquidweb.com/kb/install-apache-2-ubuntu-18-04/ -- install Apache
+    https://code-maven.com/set-up-cgi-with-apache -- configure and enable CGI
+    https://help.ubuntu.com/lts/serverguide/httpd.html -- Ubuntu Apache installatin docs
+    http://httpd.apache.org/docs/2.4/ -- Apache docs
+    https://ubuntu.com/tutorials/install-and-configure-apache#1-overview -- Ubuntu installation
+    https://help.ubuntu.com/community/ServerSideIncludes -- Server side includes
+    https://httpd.apache.org/docs/2.4/howto/ssi.html -- Server side includes
+    https://apache.tutorials24x7.com/blog/how-to-use-basic-authentication-with-apache-using-htpasswd-on-ubuntu-20-04-lts -- password protect a website using basic authentication
+    http://www.htaccess-guide.com/ -- description of .htaccess file security for subidrectories of apache2 website
+    https://www.youtube.com/watch?v=00bwCjPp-FU&list=PL_vyuxE-AO-A92UblMm33ENQZPzvAPpGl&index=10 -- How to Password Protect Apache with Basic Authentication (Tony Teaches Tech)
+    https://httpd.apache.org/docs/2.4/
+    https://www.youtube.com/watch?v=rCr3-YlL5S8 -- Basics of Apache Webserver
+    https://computer.howstuffworks.com/web-server.htm
+
+Installation Steps
+    sudo apt update -- collect latest packages
+    sudo apt upgrade -- apply latest packages
+    sudo apt install apache2 -- install apache2
+    sudo apt install apache2-doc -- install apache2 documentation package
+    systemctl start apache2 -- start apache2
+    systemctl enable apache2  -- enable apache2 start on machine boot
+    systemctl status apache2 -- check status of apache2
+    systemctl restart apache2 -- to bounce the server already running
+    sudo service apache2 status -- check status alternative command
+    apache2 -v -- show version
+    sudo /etc/init.d/apache2 stop -- stop apache2
+    sudo /etc/init.d/apache2 start -- start apache2
+    sudo /etc/init.d/apache2 restart -- stop and restart apache2
+    http://192.168.0.18 -- verify default page displayed from remote browser
+    http://127.0.0.1 -- localhost also verifies default page from local browser
+    sudo apache2ctl configtest -- validate configuration
+    sudo apt-get install curl -- install Curl
+    curl http://192.168.0.18:80 -- test the homepage using Curl
+    cd /etc/apache2/mods-enabled -- change to the mods-enabled directory
+    sudo ln -s ../mods-available/cgi.load -- create a symlink
+    sudo service apache2 reload -- reload apache webserver
+    http://192.168.0.18/ -- open the default homepage
+    sudo vim /usr/lib/cgi-bin/hw.sh -- create a simple BASH cgi script
+    http://127.0.0.1/cgi-bin/hw.sh -- run the cgi script
+
+Web Directories (www.risingfast.com)
+    /var/www/html/index.html -- Default document root path
+    /var/www/rf/index.html - Risingfast Virtual host root path
+    /var/www/pl - mod_Perl root path
+    /var/www/py - mod_Python root path
+    /var/www/rf - rf.com virtual host home
+
+cgi Directories (www.risingfast.com/cgi-bin/file_name)
+    /usr/lib/cgi-bin -- default CGI scripts directory for apache2 webserver
+
+Configuration Directories
+    /etc/apache2 -- Server root (set in /etc/apache2/apache2.conf)
+    /etc/apache2/apache2.conf -- Apache global setting file
+    /etc/apache2/ports.conf -- Listening port assignments for http and https
+    /etc/apache2/conf-enabled -- Symlinks to the files in conf-available
+    /etc/apache2/mods-enabled -- Enabled modules
+    /etc/apache2/sites-available/ -- Configuration files directory
+    /etc/apache2/sites-enabled -- vhost file entries for multiple sites on one server
+    /usr/share/doc/apache2/README.Debian.gz -- configuration documents
+    /etc/apache2/sites-enabled/000-default.conf -- default virtual host file
+    /etc/httpd/conf/httpd.conf -- configuration file
+
+Virtual Host Configuration
+    Make a new directory under /var/www
+    Copy /etc/apache2/sites-available/000-default.conf to a new file and name it as the new hostname (eg. rf.com.conf)
+    Update the new conf file: add ServerName rf.com or the new server name and set document root to new directory
+    Enable the  new virtual config ... sudo a2ensite rf.com
+    systemctl reload apache2 -- restart Apache
+    Update the local hosts file to point to the new virtual host
+    Create an index.html file and put in the new home
+    Browse the new host http:rf.com
+
+Simple BASH CGI using sudo vim /usr/lib/cgi-bin/hw.sh ...
+    #!/bin/bash
+    printf "Content-type: text/html\n\n"
+    printf "Hello World!\n
+
+Man Pages
+    man apache2 -- if apache2-doc is installed
+
+Mod Per and Mod Python
+    sudo apt-get -y install libapache2-mod-perl
+    sudo apt-get -y install libapache2-mod-python
+
+Key Files and Logs
+     /etc/apache2/apache2.conf -- configuration file
+     /etc/apache2/mods-enabled -- mods enabled such as perl and python
+     /var/log/apache2/access.log -- access.log file of access history
+     /var/log/apache2/error.log -- error.log file of error history
+     /var/run/apache2/apache2.pid -- process id for apache2
+
+Version
+    Server version: Apache/2.4.29 (Ubuntu) (from apache2 -v on the command line)
+
+Basic HTTP Authentication in Apache2
+    Secure a website or subdirectories of a website
+    htpasswd -c /etc/apache2/.htpasswd gjarman -- as superuser, to create an authenticated apache2 user file and entry
+    htpasswd /etc/apache2/.htpasswd gjarman -- as superuser, to create add authenticated apache2 users to the same file (drop the -c option)
+    Then edit /etc/apache2/sites-available/000-default.conf with new lines to enable .htpasswd as an authentication file
+        <Directory "/var/www/html">
+                AuthType Basic
+                AuthName "iroot area"
+                AuthUserFile /etc/apache2/.htpasswd
+                Require valid-user
+        </Directory>
+    Placing an .htaccess file in a subdirectory allows overriding the security at the subdirectory level
+
+Commands
+    apache2 -v -- show version (e.g.  Apache/2.4.41 (Ubuntu) (e.g. Server built: 2022-03-16T16:52:53)
+    systemctl status apache2 -- show Apache2 status, operating history and references
+    systemctl start/stop/reload/restart apache2
+    netstat -tupan | grep -i apache2 -- check the port Apache2 is listing on (80/443)
+    ps aux | grep -i apache -- get Apache2 processes running
+    apache2 -t -- check the syntax of the Apache2 configuration file for errors before restarting apache2
+    systemctl enable apache2 -- configure apache2 startup when machine starts up
+
+Configuration File Directives (in /etc/apache2/apache2.conf)
+    ServerRoot -- file system root for apache files
+    Include -- list of mod files included on startup
+    User -- user privileges under which Apache2 runs
+    Group -- group privileges under which Apache2 runs
+    ServerAdmin -- email address for the server admin
+    ServerName -- 
+    DocumentRoot -- home directory for serving index.html
+    FilesMatch -- suppress files from serving
+    ErrorLog -- log file for errors
+    LogLevel -- logging level for errorlog lines
+
+Hosting Modes
+    Name-based Virtual Hosting -- supports multiple websites to the same IP address
+    IP-based Virtual Hosting -- single website per IP address
+

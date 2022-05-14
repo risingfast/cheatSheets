@@ -1,0 +1,51 @@
+Yaml Notes
+
+References
+    https://www.youtube.com/watch?v=1uFVr15xDGg -- Yaml Tutorial | Lear  Yaml in 18 minutes
+
+Overview
+    Yaml is a serialization language like XML and Json
+    Yaml = Yaml Ain't Markup Language
+    Extensions  are .yaml and yml -- both are valid
+    Yaml format uses line separation and indentation
+
+Use Cases
+    Configuration files for docker, kubernetes etc
+
+Yaml Use Cases
+    Docker compose files, Ansible, Kubernetes, Prometheus, etc
+
+Syntax
+    Key-value pairs
+    Comments starting with #
+    Objects are used to group key-value pairs as attributes
+    Indentation can be different but must be the same within each object
+    Lists use '-' prefix
+    Boolean: true, false, yes, no, on, off
+    Individual names can have attribute lists using '-'
+    Individual names can have attribute lists enclodes in []
+    Multiline string |
+    Single line string >
+
+Yaml Validators
+    http://www.yamllint.com/ -- validator
+    https://www.json2yaml.com/ -- Json2Yaml converter
+    https://github.com/redhat-developer/vscode-yaml -- vscode plugin
+
+Example (double and single quotes are optional)
+    #example
+    microservice:
+        - app: use-authentication
+          ports: 9000
+          version: 
+          - 1.7
+          - 1.8
+          - 1.9
+        - app: shopping-cart
+          ports: 9002
+          version: [1.8, 1.9]
+    data:
+        mosquitto.conf: |
+            log_dest stdout
+            log_type all
+            log_timestamp true
