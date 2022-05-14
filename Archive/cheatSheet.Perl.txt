@@ -1,0 +1,635 @@
+Perl (and mod_Perl) CGI Cheat Sheet
+
+Tips and Tricks for Perl Programming
+    Always put the shebang line first in a perl console script (not preceded by comments) to force perl interpretation
+    Test for numbers by evaluating if the input variable is equal to zero - strings are treated as zero value numbers
+    If you need to differentiate between a zero entered and a string entered, test if the number is zero and the string is '0'
+    eg If ($in_val = 0 and $in_val != '0' ) { .....} then a string was entered and not the number zero
+    String literals can be in single quotes or double quotes - double quotes allow internal variable substitutions
+    Blank lines in perl have no meaning and are ignored by the interpreter - use them for formatting purposes
+    You can obtain the version of the perl interpreter using the command line option -v (ie "perl -v <enter>")
+    The \n newline character is needed for html output to put the html on new lines in the resulting output html source
+    Using <> defaults input from stdin but does not assign it to $_ unless it is within a loop (use $_ = <> to do this)
+    Chomp input if necessry to get rid of the newline character which perl preserves in the input string
+    EOF is tested with the eof() function and input with Ctrl-D (ie ^D) on the keyboard
+
+Common Errors 
+    "Premature End of Script Headers" occurs when complete and valid headers are not returned to the listener form the script
+        check permissions on the file - the weblistener may not have enough privileges
+        run the perl script from the command line using the perl interpreter and debug and look at the output HTML
+        look for missing content line after shebang - > print "content-type: text/HTML\n\n"
+
+Introduction
+    Used to scan and extract information from text files - sophisticated pattern matching
+
+References and URL's
+    CGI101.com - CGI Programming 101 at http://www.cgi101.com/class (6 free chapters)
+    For Windows - http://perl.com/reference/query.cgi?windows
+    Perl Tutorial - http://www.pageresource.com/cgirec/index2.htm
+    Perl O'Reilly Publishing Site - http://www.perl.com/
+    Comprehensive Perl Archive Network (cpan) - http://www.cpan.org
+    Perl tutorials including dbi - http://www.expertwebinstalls.com/cgi_tutorial/
+    'Reilly Perl in a Nutshell - http://www.unix.org.ua/orelly/perl/perlnut/
+    Student lecture notes on perl - http://www.cs.wisc.edu/~hasti/cs368/Perl/notes/lec01.html
+    Free web building tutorials - http://www.devlearn.com/perl/
+    Perl tutorials - http://www.devlearn.com/perl/
+    O'Reilly complete bookshelf - http://www.unix.org.ua/orelly/
+    Perl CD Bookshelf from O'Reilly - http://www.unix.org.ua/orelly/perl/
+    http://www.rocketaware.com/perl/onepage.htm - single page list of Perl with links to details
+    http://lib.daemon.am/Books/Perl/ - Sams Perl in 21 days
+    http://www.devshed.com/c/a/Perl/Introduction-to-mod-perl-part-6-Even-More-Perl-Basics/ - Devshed Perl Basics and typeglobs
+    http://faq.perl.org - for faq lists and solutions to common problems
+    http://e-p-i-c.sourceforge.net/ - Perl Ecilpse IDE project
+    http://aspn.activestate.com/ASPN/docs/ActivePerl - ActiveState Perl documentation
+    http://jkorpela.fi/perl/intro.html -- Perl Getting Started
+    http://jkorpela.fi/perl/course.html -- Perl lessons
+    http://jkorpela.fi/perl/cgi.html -- CGI and Perl
+
+Documentation
+    Try man perl or perldoc perl at the command line to get the full perl documentation including tutorials
+
+Acronyms
+    PERL - Practical Extraction and Reporting Language
+    CGI - Common Gateway Interface (can be written in any programming language)
+    SSI - Server Side Includes
+
+Installation and Setup of the Perl Interpreter on WinXP
+    The lastest Perl interpreter version is 5.8.6 as of 13 December 2004 available at www.perl.com
+        The version of perl installed on the WindowsXP file system with Oracle 10g is 5.6.1
+        Get the version of perl using the command line option -v (ie "perl -v <enter>")
+    Perl.exe is located on gjarman03 (Win2k Dell) at D:\Oracle_A\perl\5.6.1\bin\MSWin32-x86\perl.exe 
+        and is set in the PATH environment variable (Control Panel -> System > Advanced -> Path)
+        On gjarman01 (WinXP emachines) perl.exe is located at C:\oracle_A\product\10.1.0\db_2\perl\5.6.1\bin\MSWin32-x86
+        On gjarman02 (Linux eMachines), the perl binary is located at /usr/bin 
+    The path to the perl runtime is added to the 'path' environment variable 
+        in System Properties -> Advanced -> Environment Variables.
+    Under the Oracle 10g database tier home, there are a number of perl scripts 
+        in C:\oracle\product\10.1.0\db_1\sysman\admin\scripts
+
+Installation and Setup of Perl on Linux
+    Perl in installed under /usr/bin as 'perl'. 
+    Additional binaries include perldoc, perlcc (compiler) and perlbug (debugger)
+    Apache scripts are at: /srv/www/cgi-bin/perl_HTML_scripts
+    Perl HTML sandbox scripts: /home/gjarman/perl_scripts/perl_HTML_scripts
+    Perl Console sandbox scripts: /home/gjarman/perl_scripts/perl_console_scripts
+    Additional libraries (modules) are installed through YAST using software installation and searching on 'Perl'
+        These modules are installed under /usr/lib/perl5/vendor_perl/5.8.3
+    Perl Modules are under /usr/lib/perl5 and then under site_perl, vendor_perl or 5.8.3
+        All these directories are defined in the @INC environment variable
+        Use perl -e "print join(qq|\n|,@INC).qq|\n|" to list each module search path on a separate line
+        Use perl -e "print @INC" to list the paths in a single stream
+    Typical search paths defined for Perl Libraries are: 
+        /usr/lib/perl5/5.8.3/i586-linux-thread-multi
+        /usr/lib/perl5/5.8.3
+        /usr/lib/perl5/site_perl/5.8.3/i586-linux-thread-multi
+        /usr/lib/perl5/site_perl/5.8.3
+        /usr/lib/perl5/site_perl
+        /usr/lib/perl5/vendor_perl/5.8.3/i586-linux-thread-multi
+        /usr/lib/perl5/vendor_perl/5.8.3
+        /usr/lib/perl5/vendor_perl
+
+Running Perl Scripts Under Linux
+    Type ./<script.pl> from within the directory containing the script to run the perl script
+        Make sure the shebang line is in the script so the perl interpreter can be found
+        i.e. #!/usr/bin/perl
+        Using ./<script.pl> forces the linux shell to look for the script in the current directory
+    You can also run the script by typing <script.pl> but only if you have the current directory in the $PATH variable
+        i.e. do 'PATH="$PATH:." to force the linux shell to look in the current directory
+        If you don't add the current directory to the PATH, the linux shell will not find the script and complain "command not found"
+    You can also give a path to a script to run it, e.g 'scripts/perl_scripts/hello.pl' will find the script and execute it.
+
+Binaries and Locations
+    In mod_perl mode, the binary is loaded as part of the Apache load for the application server. 
+        mod_perl is a persistant perl interpreter that is loaded once by the Apache webserver 
+            It remains resident for additional calls
+        mod_perl provides performance enhancements because it does not to be reloaded each time a perl script is run
+
+Apache Installation and Configuration for Perl Scripts Under Linux
+    For Apache2 configuration of perl is in a separate perl configuration file /etc/apache2/conf.d/mod_perl.conf
+        The main config file for Apache2 /etc/apache2/httpd.conf calls or includes the default config file /etc/apache2/default-server.conf
+        The default-server.conf includes all config files under /etc/apache2/conf.d (including /mod_perl.conf)
+        mod_perl.conf invokes an additional configuration file /etc/apache2/mod_perl_startup.pl
+    The purpose of the different files includes:
+        httpd.conf - simply shows the include file structure, and invokes default-server.conf which implements the default includes
+        default-server.conf - defines the home directories and primary aliases, and includes all low level config files
+        mod_perl.conf - configures the home aliases for perl scripts and script handler options
+        mod_perl-startup.pl
+    The first lines of a mod_perl or perl script must be the shebang line and content_type line
+        The shebang line looks like -> #!/usr/bin/perl (there is no ending semi-colon)
+        The shebang line is the first line on all perl scripts for perl and mod_perl 
+        The shebang line is required only if the httpd.conf file for apache is set to 'script' 
+            meaning the path to the interpreter is in the program script (unix behaviour)
+    The "content-type" line looks like -> print "Content-type: text/html\n\n";
+    mod_perl.cong aliases the /cgi-bin directory to /cgi-perl and /perl
+        perl scripts placed in cgi-bin can be references from any URL path which points to on these three directories    
+    The error log for apache2 is in /var/log/apache2/error_log - for diagnostics
+
+Apache Installation and Configuration for Perl Scripts Under Windows
+        For Linux, it is normally #!/usr/bin/perl 
+        In Windows XP running Apache under the Oracle file system, 
+			it can be like #!D:\oracle\product\10.1.0\db_1\perl\5.6.1\lib\MSWin32-x86
+        For Windows the apache httpd.conf line 'ScriptInterpreterSource' is set to 'registry' 
+            This setting ignores the #!shebang line and the perl binary location is obtained from the registry
+            It is not required because Apache uses Windows file associations to find the executable
+    For the database apache listener on Windows - the following works 
+        http://gjarman.braunconsult.com:5500/examples/perl/post.pl/
+        The db server document root is D:\oracle\product\10.1.0\db_1\oc4j\j2ee\home\default-web-app
+    For the application server the path to the perl code is mapped to the cgi-bin subdirectory although the URL is '../perl/...
+        Perl is aliased to cgi-bin in httpd.conf through the following alias -> Alias /perl/ "D:\Oracle_A\Apache\Apache/cgi-bin/"
+        The following works -> (ie use the /perl/.. URI to reference a script in the browser
+            .....http://gjarman.braunconsult.com:7777/perl/second.pl
+        The application server document root is D:\Oracle_A\Apache\Apache\cgi-bin\ 
+            (ie put the code into the cgi-bin subdirectory on the Apache file system
+
+Placing Perl CGI Scripts on the Filesystem
+    The URL for mod_perl scripts is normally http://host:port/perl/<perlscript.pl> 
+        or http://host:port/cgi-perl/<perlscript.pl>and the actual file is placed under the the apache root in cgi-bin
+        This is the configuration for mod_perl execution
+        To avoid putting all mod_perl scripts in the cgi-bin directory, 
+            mod_perl scripts can be placed in /cgi-bin/perl and referenced in URL's through /perl/perl/<perlscript.pl> 
+            or /cgi-perl/perl/<perlscript.pl>
+    Perl scripts can be run natively (not in mod_perl mode) by placing directly in cgi-bin 
+        and executing from the http://host:port/cgi-bin/<perlscript.pl> URL. 
+        mod_perl is aliased to cgi-bin in httpd.conf through the following alias
+            -> Alias /perl/ "D:\Oracle_A\Apache\Apache/cgi-bin/" which maps to /per/... in the URL
+    Using notepad, save any files in double-quotes to stop notepad adding the .txt default extension
+
+Perl Content Type Headers
+    Content headers in perl scripts dictate how perl instructs the http server to send output
+        If the print "content header" instruction is not included, 
+			the webserver does not know the content type to send with the response
+        The http server will error out without this information.
+    These are required for HTML webpages and must be the following format, immediately after the shebang line
+        print "Content-type: text/html\n\n" 
+        whitespaces are ignored so there can be blank lines between the shebang and content header
+        without a content header in an HTML perl script, the script will throw an "Internal Server Error"
+    For plain text content, use print "Content-type: text/text\n\n" to print text values
+
+Basic Perl Script Structure Guidelines
+    The first line must be the !shebang line 
+    For .pl files run at the command line (not in a browser) the !bash line may not be required 
+        if the .pl extension is associated with the perl binary
+        Use Windows Explorer/Tools/Filetypes to identify the .pl association
+    Comments are identified with the # character at the start of any comment line or along a line
+        Comments cannot be placed ahead of the shebang line - it will disable perl interpretation of the script
+        Comments extend to the end of a line
+        Comments can also be appended to the end of a script line of code (after the ";")
+        There are no multiline comments in Perl - use a # at the beginning of every line
+        Comments are treated the same as whitespace by the Perl parser
+    There is no "main()" procedure in perl as there is in java or "C".
+        Perl executes a script starting on the first line of the target source file
+    The simplest perl script is a shebang line and a print statement
+		This can be run at the console with "perl -e <scriptname>"
+        To stop the script console closing at completion, add a line to pause the script
+        eg add "print "Hit any key to continue; $anykeys = <>;" to prompt for keyboard input to finish the script
+    Whitespace is required between lexical tokens and many whitespaces are treated the same as a single whitespace
+        Whitespace includes newlines, spaces and tabs
+        Comments are treated the same as whitespace for program parsing purposes (i.e. ignored)
+    Filehandles should be UPPERCASE to avoid conflicting with perl reserved words
+
+Perl Documentation Lines - POD or "Plain Old Documentation"
+    Perl documentation lines are delimited by "=pod" and "=cut" in the first position of different lines
+    All text between these two symbols is ignored by Perl as plain old documentation
+    The Perl distribution has programs that can turn POD into HTML documentation
+    A simple POD document would have a =head1 xxxxx followed by lines of text and a =cut line
+    The lines =head1 and =cut must be set apart from other text with blank lines above and below them - otherwise they won't appear
+    podchecker in /usr/bin will verify the syntax of a pod document
+    pod2html in /usr/bin will convert the pod text to html
+    pod2man will convert the pod text to linux man format
+
+Basic Guidelines for Writing HTML with Perl
+    A content header line is required for html perl if there is no 'ScriptInterpreterSource' directive in the apache config file
+    After the !shebang line, include the content header (print "Content-type: text/html\n\n" for html output) 
+        This sets the content for html and web browsing and skip a line
+    HTML can be writtin in Perl using "print" statements and perl logic statements can be interspersed through the code 
+    Within the print statements any characters with special meaning must be escaped using "\" 
+            All characters that are not letters or numbers can be preceded by "\" - if there is no special meaning the "\" is ignored
+            The backslash is the escape or "reverse meaning" character to cancel the default special meaning in perl
+            The most common character to escape in a print statement is the double quote. Others are @, $, *
+        An alternative to escaping special characters is the use a 'blocked' print command with boundary tags and enclosed TAG blocks
+            This implements line oriented quoting in perl (quoting multiple lines as literals regardless of contents)
+            eg -> print <<TAG; .....TAG enclosing html will be interpreted as pure HTML and not perl.
+                There can be no space after the << and before the TAG or that space will be interpreted as the tag
+                This perl print command prints all lines inside the block as HTML
+                The TAG names (eg ENDHTML or HTMLBOUNDARY or whatever) must be identical at the start and end of the block
+                Within the start and end tags (which can be any name you want) you can write normal HTML 
+                    ie without escaping \n new line characters or double quotes
+                other special characters still need to be escaped however - including *, %, $, and @ 
+        Using TAG blocks eliminates having to escape (ie reverse the meaning of) common html characters 
+            like " and @ with the "\" escape or "reverse meaning" character
+    Using standard print statements without TAGS, standard HTML tags can be included in the print statements. 
+        Each print statement should include a newline at the end 
+            so that perl prints HTML source in successive lines rather than as a single stream of data
+    Include the '\n newline escape sequence at the end of each html line since perl writes to stdout 
+        and doesn't automatically insert a newline after each print statement
+        If you do not put a newline escape sequence, the HTML will look fine 
+            but the 'view source' will appear as one continuous line of text
+        So the '\n' is required to format the html source that is printed to stdout. 
+            It does not affect the html formatting since HTML ignores newlines in text
+    When Perl executes a script, it sends any text in print command to stdout, using the newline to break text. 
+        So HTML is sent to stdout and the output is published by Apache
+
+Perl Debugger Commands in Console Mode
+    In the console, use perl - d <program.pl> to start the debugger
+    Perl will show the first line of the program to begin execution.
+    Commands are:
+        h - help
+        h h - help on help
+        h <cmd> - get help on a single command 
+        s - single step through the code and execute the current line
+        n - next line, stepping over subroutines
+        <enter> - repeat last n or s
+        q - quit
+        R - restart the program and debugger at the first line.
+        l - list source
+        H -n - display the last n debugger commands entered
+
+Perl Style Guidelines
+    Type perldoc perstyle at the command line to see standard perl style guidelines
+    Always invoke the "strict" pragma to enforce declaration of variables before they are used (ie "use strict;")
+        All variables must be declared before they are used if the "strict" pragma is envoked.
+    Put left curly brackets on the same line as the if/for/while control statement
+    Put right curly brackets on their own line at the end of a control statement
+    Put an "else { " statement on it's own line and not on the same line as the closing brace for the previous block    
+    Use upper case for file handles to avoid potential conflicts with Perl reserved words
+    Don't put a space before the ";" line end symbol (i.e. don't use ...;)
+
+Compiling Perl Scripts using perlcc
+    Perl supports a compiler "perlcc" in Linux in the /usr/bin directory
+    Perl scripts are compiled using "perlcc -o myscript.plx myscrip.pl
+        (where myscript.plx is an arbitrary name for the executable)
+        Once compiled the perl program can be run directly fom the current directory using ./myscipt.plx
+
+Basic Perl Commands
+    Perl uses sigils (i.e. magical signs) to identify if a variable is scalar ($), array(@) or hash (%)
+    Input is accomplished with $my_input = <STDIN>; which waits on input from the standard input of console
+    Use $my_input = chomp( $my_input ) to delete the last character from the input value
+		chomp cuts the newline off the input string (or whatever the last character may be)
+
+Line Input
+    <> is the line input operator which fetches line oriented input from a file (defined by a file handle)
+    If and only if the <> is used within the control clause of a while() operator, the result is assigned to $_ by default
+        The resulting assignment is implicitly tested to see if it is defined
+    Line input can be used in scalar or list context
+        $file_line = <ANYFILE> - gets the first line from the file handle "ANYFILE"
+        @file_lines = <ANYFILE> - gets the entire contents of the file handle "ANYFILE" into an array
+    The default or null <> will read each line from each file listed in the command line args
+        If there are no arguments, it looks to standard input for lines of text (similar behaviour to sed and awk)
+    If something other than a file handle is given in <>, the value is used as a pattern to match files in the current directory
+        The filenames are returned and not the lines within the files
+
+Basic Perl Variables
+    Perl has three data structures: scalars, arrays of scalars and associative arrays of scalers (aka "hashes")
+        Scalar values are declared using $ (eg $my_value) - $ means 'the'
+        Arrays of scalars are declared using @ (eg. @my_array) - @ means 'these'
+        Associative arrays are declared using % (eg. %my_hashes) - % means 'these'
+    Variables in perl are not typed into ints, floats, chars and strings 
+        The same variable can be assigned a string and later assigned a numeric value - casting is done internally
+    	Variables need not be declared - they can be used without formal declaration (however "use strict" forces declarations)
+    	Uninitialized variables have a numeric value of zero, an empty string value or a 'FALSE' boolean value
+    Every variable type (scalar, array, hash) has its own namespace
+		so $foo can co-exist with @foo - one is a variable and the other is a completely separate array
+		this also means that in strict mode, each must be declared separately
+	Variable Scope and Declarations
+    	Variable scope can be package (using "our") or lexical (using "my"). 
+		Package variables never go out of scope.
+    		Package variable have global scope but require a package name qualifier to reference them
+        	The fully qualified variable name for a "package" scope variable is <sigil><package>::<variable>
+        	The default name for the module that is executed is "main"
+    	Lexical variables declared with 'my' have only local scope within the program or package where they are used. 
+        	They should always be used outside non-main packages
+        	Use the 'my' prefix to declare a lexical variable
+    	Variables should be declared where they are used to utilize perl's inbuilt garbage collection.
+    The variables $!, $_, $#, $" and @_ have special meaning in Perl
+        $! contains the text of the most recent error before a script exist
+			The $! variable can be used in the "or die('Error was -> , $!)" print instruction    
+        $_ is the default input and pattern matching space
+			it is assigned a value in loops and @_ is the equivalent array value
+			it is not assigned from the default input operator "<>" unless in a loop (use "$_ = <>" for this)
+		$#_ is the index of the last value in the default array @_
+			You can get the index to the last entry in any array also (eg $last = $#my_array)
+    	The two default variable names $_ and @_ are related, so $_[1] is a member of @_
+        $"  is the list separator and the default value is a space
+        $\ is the line terminator, which is defaulted to the newline "\n"
+    Case is significant in variable declarations so $Foo is a different variable than $foo
+    Scalar variables are simple variables that can be values, or references to other values
+        Scalars are untyped and converted between strings and numbers based on the context of operations
+        Scalars can also contain pointers to complex values (references in perl)
+        Fixed octals assigned to scalars can be designated with a '0' prefix, eg '03244'
+        Fixed hexidecimals assigned to scalar variables can be designated with a '0x' prefix, eg '0x2A48'
+        String literals can be defined using single or double quotes
+            Strings defined with double quotes allow variable interpolation of scalars and list values
+                Varialbe interpolation provides a simple and implicit method of string concatenation
+                Only variables beginning with $ or @ can be interpolated - entire hashes starting with % are not
+                Curly brackets can be used to help identify interpolated variables in 'subtle' situations
+                    eg. print "This is ${firstname}\'s address"  
+           Strings defined with single quotes allow \' and \\ interpolation only so variables like $tmp become literal
+        Barewords are strings that have no special meaning so they are treated as quoted literals, even w/out quotes
+            e.g print blogspot (this will print the word blogspot because perl determines it is a bareword)
+            declaring 'use strict 'subs' ' will cause barewords to throw a compile time error 
+    Scalar array values are referenced in the scalar context, so $my_var[4] is a member of the array @my_var
+    	The count of values in an array is given by "$#<arrayname>" 
+			(eg "$max_val = $#my_array;" established the number of elements)
+		Square brackets [nn] are used to reference specific elements
+        Ranges of values within an array (array slices) are referenced in the array context, like @my_var[1..10]
+        Array indexes are integers starting with zero (for non-associative or non-hash arrays)
+        Scalar arrays can be declared as lists within parentheses like @my_array = ("Hanna", "Mary" ) 
+            A scalar array returns the number of elements in the array when evaluated in scalar context
+                e.g. $myval = @vals returns the number of elements in the array @vals
+            Scalar array elements can be values that return lists
+                e.g. @vals = ($firstVal, @moreVals, &subReturnVal)
+    Hash arrays are associative arrays of name-value pairs declared within standard parentheses
+		Hash arrays are associative arrays - defined in key/value pairs within standard parentheses
+			eg "%my_hash = ( "car", "Honda", "computer", "eMachines", "hobby", "Programming );"
+			Hash arrays can also be defined using the "=>" notation
+			eg "%my_hash = ( car => "Honda", computer => "eMachines" );"
+        Arrays can be cleared by assigning to a null array e.g. %my_hash = ();
+        Hash arrays are not ordered - they print out as name, value pairs in random order
+            Hashes are physically stored in the key order of the hash algorithm which appears random
+        Evaluating a hash in a scalar context returns the number of used hash buckets vs the number of allocated buckets
+            e.g print "scalar(%myHash) -> prints '4/8' where four of eight allocated buckets are used
+		Hash data values are referenced using the hash key within curly braces "eg $value = $array{ "key1" };"
+		Parentheses used to dereference a hash key will throw a syntax error 
+		In a scalar context a hash array values would be $value = $my_hash{"computer"}
+		    curly braces are used to dereference an array hash, and not square brackets used in scalar arrays
+		The key() function extracts the keys in a hash array and loads them into a scalar array
+		    eg @all_keys = keys( %my_hash_array ) 
+			These keys can be used to iterate a hash array for values
+				eg " foreach $key_val ( @all_keys ) { print $key_val, "->", $my_hash_array{ $key_val } "
+		The value() function extracts the values in a hash array and loads them into a scalar array
+		    eg "@all_values = values( %my_hash_array );" 
+		A predefined associative array %ENV has all values of environment variables from the OS
+        A hash in a list context returns a single dimensioned list of key/value pairs as a continuous list
+            eg @my_array = %hash (returns all the key/value pairs as a single list to @my_array
+    Perl has special tokens with special meanings: __LINE__, __FILE__, and __END__
+        __LINE__ is the current line number at the point in the program where it appears
+        __FILE__ is the current file name
+        __END__ identifies the logical end of a script even through more script may follow - it will be ignored
+
+Context in Perl
+    Context is established by the lvalue of an expression
+    If the lvalue of an expression is a scalar, the rvalue is evaluated in a scalar context 
+    If the lvalue of an expression is a list, the rvalue is evaluated in a list context
+    This means that operators that return a scalar or list value based on context are overloaded in their definitions
+        These operators behave differently based on the context where they are used
+    Context can be forced to scalar using the 'scalar' operator where the normal context would return a list
+        However there is no way to force a scalar context to return a list value 
+    Boolean context occurs wherever an expression is evaluated to true or false
+
+Packages, Global Variable and Lexical Variables
+    Packages are declared using the 'package' declaration (e.g. package mypackagename)
+    The default package name is 'main' which is assigned if no package declaration is made
+    Packages and files are not related - you can have many packages in a single file and many files for one package
+        Normal practice is a one-to-one relationship between packages and files - put one package in one file
+    Package names are identified by double colons in front of subroutines or variables eg mypackage::$myvar
+    Any symbol declared in a package (a variable name or subroutine name) is qualified by the package name
+        Global variables are declared by preceding their package name e.g. mypackage::$myvar
+    Every package has a symbol table and each variable or subroutine declared in a package creates a symbol table entrya
+    A symbol table entry contains one symbol and multiple addresses - one for each datatype in perl (eg scalar, array, hash, filehandle)
+        Symbol table entries are 'typeglobs' - one typeglob holds an entire symbol table entry
+        There is one symbol table for every package containing all the symbols for the package
+    Symbols point to symbol table entries (typeglobs) and typeglobs point to the actual data
+    Each typeglob can hold an entry (pointer or address) for a scalar, array, hash, subroutine, filehandle, format, or directory
+        This allows the same name (symbol) to be used for different types of data and still resolve separately
+        e.g $myvar and @myvar point to different entries in the same typeglob.
+    Since most of the time each name is unique, only one part of a typeglob is used
+        The sigil for a typeglob is * (kleen star) since a typeglob represents all possible data types.
+        Typeglobs can be manipulated directly e.g. *foo = *bar sets all foo symbol table entries to the same as bar entries
+    Variables do not need package:: prefixes if they are referenced from within the package where they are defined
+        This is why the default main:: package need never be referenced in a simple program even though it exists
+    Lexical variabes are declared with the 'my' keyword and no symbol table entry is made for them  
+        Lexical variables do not live outside the block where they are declared
+        Lexical variables can be declared for scalars, arrays and hashes only
+
+Perl Input and Output
+    The "print" command and "printf" command outputs to stdout by default
+        print takes the form "print( File_Handle value, value, value ); " and parentheses are optional
+            This can be modified by specifying an alternate output File_Handle
+    printf is similar to the 'C' version of printf and supports formatted output
+        The basic pattern for printf is printf( "somestring", value, value ); where the string contains substitution values
+            eg printf( "You bought %2d %s\n", $count, $item_name);
+        For number fields, right justification is the default within the field length so specify %4d to get a four wide field
+
+Array Handling in Perl
+    Array names return the count of their items in the scalar context or the actual items in the list context
+        So "print @my_list.items" evaluates to the number of members in the list 
+			This is because the . operator converts to scalar context
+            Similarly, scalar(@my_list) also gives the number of elements in the list
+            However "print @my_list" would print out the contents of the list
+        eg if (@my_list > 10) { print "There are more than ten items in this list\n" };
+    The dot operator (string concatenator) forces scalar context when using list names like @my_list
+    Use the "scalar()" function to force converson to a scalar from a list
+
+Control Statements in Perl
+    "if" statements are in the form "if (bool) { statements } [elsif (bool) { statements } else (bool) { statements } ]" 
+        note the spelling on the elsif has no 'e'
+        the boolean expression evaluates to false if it has a value of zero, '0', undefined, or \000 
+        "if" statements can optionally include "elsif" and "else" clauses after the "if" clause
+        there can be any number of statements within each clause of an "if" statement
+    	Put an "else { " statement on it's own line and not on the same line as the closing brace for the previous block    
+    "unless" is the negative form of an "if" control statement - it executes the control body if the expression is false
+        there is no elsunless phrase in an "unless" control statement however.
+    "while" statements are in the form "while (boo) { statements }
+        "last" in a while loop exits the loop - useful when testing for an exit condition inside the loop
+        "next" in a while loop jumps immediately to the beginning of the next iteration in the while loop
+    "until" is the negative form of the "while" control statement - it executes until a condition is true
+    "for" loops use the structure for (<start>; <limit>; <increment> {}
+        e.g. for ($counter = 0; $counter < 100; $counter++) { .... } 
+
+Numbers and Numeric Operators in Perl
+    All numbers are stored internally as double precision floats
+        Nomenclature for actually initializing a number as a float is "$my_float = 5e-3"
+    Numberic operators are +, -, x, /, * and %. 
+    c-style increment and decrement operators are allowed in perl, such as ++ for increment and -- for decrement
+    Numeric equality operators include: =, +=, -=, *=, /=, %= (modulus), and **=
+    Increment and decrement operators are: ++ and -- and can be prefixed or postfixed to a varialble.
+    Octals and Hexidecimals are supported as escaped sequences
+		\0nn character is octal (eg \033 ) ie leading zero
+        \0xnn character is hexadecimal (eg \x1B ) ie leading zero and 'x'
+        the oct() and hex() functions convert octals and hexidecimals to decimals eg "$decval = oct(\0234);"
+        converting from decimal to octal or hex can be done using the o% and x% sprintf() formats
+
+Command Line Arguments in Perl
+    Command line arguments are stored in the array @ARGV and the maximum offset is stored in $#ARGV
+    The line input operator <> will read each line in the file names specified by the @ARGV list
+        If no @ARGV list exists, <> will read from the STDIN stream from the command line
+    The default or null <> will read each line from each file listed in the command line args
+    This is similar behaviour to sed and awk
+
+Environment Variables in Perl
+	A predefined associative array %ENV has all values of environment variables from the OS
+
+Numeric Functions in Perl
+	...
+
+Strings, Comparisons and Assignment Operations in Perl
+    Strings are scalar variables in Perl and not arrays and they are not NULL terminated like C-strings
+    There is no limit to the length of a string in Perl
+    Strings are single quoted or double quoted in perl, eg 'this is a string' and "so is this"
+        Double quotes are used to allow 'soft' quoting with embedded variables
+			variables can be embedded in these strings and will be substituted.
+    Comparison operators for strings do not use the standard arithmetic comparison operators like '==' or '!='
+        They use 'eq', 'lt', 'ne', 'gt', 'lt', 'ge', and 'le'
+	The "contains" operator is "=~" (eg if $my_string =~ \^[0-9]\ tests if the first char in $my_string is numeric)
+    Assignment operators for strings are the same as for numbers -> '=' is the same for strings and numbers   
+    String concatenation is accomplished with the "." dot operator between quoted strings.
+        Both literals and scalar string variables can be concatenated with the "." dot operator
+    The repitition operator for strings is "x". So if $animal = "cat", then $animal X 3 = "catcatcat"
+    Strings consisting of numbers and letters will be cast to their number portion in a numeric operation
+        So "123cat" x "2dog" will equal 246 (numeric) (note that "cat123" will be treated as null for a numeric value)
+	Control characters in perl (metacharacters) include the standard "c" type values
+		\n newline
+		\s whitespace
+		\t tab
+		\a alarm
+		\e escape
+		. dot or match on any character
+		[...] character class
+		[^...] negated character class
+		\r return
+		\f linefeed
+		\0nn character is octal (eg \033 )
+		\xnn character is hexadecimal (eg \x1B )
+
+Boolean Expressions and Operators
+    The boolean values true and false are scalar variables
+    Scalars evaluate to true if they are not null strings or character zero or numeric zero
+    Perl variables evaluate to true if they are:
+        Non-zero integers, strings of non-zero length, 
+            arrays with at least one value or hashes with at lease one key/value pair
+    || means OR (eg "if ($_ eq ('c') || $_ = ('C')) { statements} " tests a logical OR condition	
+    && means AND (eg "if ($1 eq ( 'happy' ) && $2 = ('days')) { statements} " tests a logical AND condition	
+
+Other Operators
+    The comma operator guarantees sequential execution and is similar to separate statements separated by ";"
+        eg $myvalue = ( 1, 2, 3 ) is equivalent to three separate statements starting $myvalue = 1; $myvalue = 2; etc
+    The grave accent (or backtick) operator is used to delimit command input (ie input to the command shell)
+        e.g. $info = `finger $user` where $user is interpolated to the user name before the system command is called
+
+Strings Functions in Perl
+    String functions include chomp, length, substr rindex
+    chomp - delete the trailing newline from a string - normally used to delete newlines from file or console input
+		chomp does not delete any characters other than newlines (use chomp's cousin 'chop' for this)
+    chop ($string) deletes the last character off the string - regardless of its value
+	length - returns the length of a string (eg $len = length$my_string )
+	Split with no arguments splits $_ into into space-separate values and assigns to the default array @_
+		split used on its own will split the $_ default scalar string into the default array @_
+			    values can subsequently be references using $_[nn]
+				internally a split with no arguments is implemented as "@_ = split( / /, $_ );"
+		split takes the form @result_array = split( /separator_regexp/, $string_of_words, limit ) 
+			the separator_regexp can be a space (eg / / or ' ') or any other regular expression like :, [123] etc 
+		split uses blanks as default separators - simply add a non-default separator (eg split(/:/) uses":")
+        split starts a new word on the separator, so a leading space on a line will count as a word if spaces are the separators
+    subst - returns a substring starting at an index and continuing to the end 
+			(eg $small_str = substr( $big_str, $index ) )
+
+Time Functions in Perl
+    The function time() returns a numeric value representing the time based on a Julian start date
+    The combined functions localtime(time()) or gmtime(time()) return numeric strings representing time in different zones
+        locatime(time()) returns a linear array of eight values that represent different portions of the time
+        these values are ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)
+    The combined functions scalar( localtime( time() ) ) return a time string in an alphanumeric format similar to ctime(3) format
+        This format is easily human readable such as "Wed Jun 30 21:49:08 1993" 
+		
+File IO - Writing Output and Reading Input to a File
+    By default perl will first take input from a file that is specified on the command line as standard input
+        eg. if the input symbol <> is in the code, a file name can be appended as a command line argument 
+		Multiple files can be specified on a command line as arguments, listed one after the other
+    File handle names do not use the $scalar prefix
+    Files must be opened before they are used, and can be opened for reading, writing and appending
+        open( file_handle, "<my_file") opens my_file for reading
+        open( file_handle, ">my_file") opens my_file for writing (over-writing any file that exists)
+        open( file_handle, ">>my_file") opens my_file for appending
+        if no <, > or >> direction is specified, the file is opened by default for reading only.
+    Windows file paths entered through the console can be passed directly without escaping the backslash
+    The "or die('string') clause can be added to the open() command to throw an error if a file cannot be opened 
+
+Calling the Command Shell or System Shell from Perl 
+    Use 'system("<command string>") from inside Perl to execute a shell command
+        'system("<command string>)" runs system commands and returns error status
+    Use backtick format to run a system command and return what was piped to STDOUT
+        eg $sys_command = `ls -l`; $list = print $sys_command
+    Use exec("<command>") to start a new shell instance and execute a command string
+
+Regular Expressions - Matching and Substitutions
+    Reference to additional materials in provided in the perlre manpage on unix/linux
+    Perl supports regular expressions similar to Unix based tools such as grep, awk, sed etc.
+    Pattern strings are enclosed in / / forward slashes and are not quoted
+        By default, perl will match a pattern to $_ if no other variable is specified (e.g. if (/[abc]/) )
+    Pattern matching is line oriented - a match to a pattern is always done on a line by line basis
+    A match to a regular expression returns a non-zero value if true (eg "1") or zero if false
+        e.g $result = $myString =~ /foobar/ will return "1" to $result if $myString contains the work "foobar"
+        The =~ operator is similar to the == (number) or eq (string) conditional operators that also return true or false
+    The opposite of the pattern equality operator is the pattern inequality operator !~
+    Since the pattern equality operator returns true or false, it is most used in conditional expressions
+    A common use of / / patterns is the split e.g @words = split( / /, $line ); will split a line of words into an array    
+        Split returns all non-matching text from the string (i.e. by default, the words between the spaces)
+        A better example of split is split( / +/, $line ) to pick up one or more spaces between words instead of just one
+    Special or "meta" characters in regular expressions include: \ | ( ) [  {  ^ $ * + ? .
+    ? matches zero or one occurances of a value or pattern (eg /ab+c/ will match abc and ac but not abbc
+    * matches zero or many occurances of a value or pattern (eg /ab*c/ will match abc and ac and abbc
+        the Kleen star should only be used when there are multiple characters in the pattern, otherwise it will always match (ie on nothing)
+    [] define a class - they enclose alternatives to match, such as [abc] matches "a" or "b" or "c". 
+        Ranges like [1-5] are also valid as lists of alternatives
+    \b specifies a word boundary like "/\band\b/" which will match on the word "and" if it is a separate word
+    The . operator matches any character except a new line. Using .* will match any number of characters except a newline
+        The .* combination will try to match as much as possible (being greedy) and will cross word boundaries to do so
+        e.g the pattern "/\b.*t\b/" will match "bat" and "because that is that" 
+    The {x,y} qualifier specifies repeating counts of a character or group of characters
+        eg. (ss){2,3} means two or three occurances of "ss"
+        eg. {,7} means between zero and seven occurances of something
+        eg. {4,} means at least 4 occurances
+        eg. {3} means exactly three occurances
+    The $& built-in scalar variable shows the string that was matched
+    ( ) is the pattern memory operator and has the highest precedence. The contents of () are stored in \1, \2, \3 etc for reference
+    m is the pattern matching operator prefix and allows you to redefine the pattern matching operator from / to something else
+        It also undefines the special meaning of / so / does not need to be escaped within a pattern
+        e.g. m!/usr/bin/myfile! defines ! to replace / (equivalent to /\/usr\/bin\.myfile/)
+    Options after the pattern delimiters can modify default behaviour
+        i - ignore case e.g. /mr/i - matches Mr, MR, mR or mr
+        g - globally match all possible pattern on the line
+    Substitutions replace the matched text with the substitution text
+        A substitution is made to the variable being matched (e.g. $my_var =~ s/abc/def/ - this will update the value of $my_var)
+        Substitutions change variable values whereas matches only return a true (1) or false (0) value 
+    Scalars can be used in patterns through interpolation (e.g. $foo = "moo", so /$foo$/ equates to /moo$)
+
+File IO With Databases Using the DBI Package
+    The DBI methods are made available by including them in your script, with "use DBI;"
+    	Include the DBI module with "use DBI" in the script
+            "use" includes other function libraries in the script
+    The DBI interface is the standard perl interface for connections to Oracle, Sybase and others
+    The online site for DBI documentation is http://dbi.perl.org and documentation is at http://dbi.perl.org/docs
+
+Socket Programming with Perl
+	Include the Sockets module with "use Sockets" in the script
+
+Perl Procedures
+    The & sign identifies a procedure or module and can be read as 'do'
+    Include written procedure libraries in a script with "use" (eg "use DBI" includes the DBI module/library)
+
+Perl Pragmas
+    Pragmas (pragmatic instructions to the interpreter) should be specified first in the code after the shebang line
+    "use strict" enforces checking of variable declarations before they are used
+    "use warnings" checks for deprecated syntax and functions used in a perl program
+    "use diagnostics" outputs detailed information about how the interpreter is reading the code
+
+Perl Command Line Switches
+	Command line switches go after the perl executable name and before the script name 
+        Each of these command line switches can be added to the shebang line in a script to enable the feature
+	-w issue warnings such as use of undefined variables (good for debugging)
+	-c check syntax and exit (equivalent to an "exit(0)" statement on the first line)
+	-d debug mode - see debugger commands section for more information
+	-e <"commandline"> to execute a perl script directly on the command line by entering perl commands
+		the commandline string of perl scripting commands must be quoted
+	-n add an implicit loop - eg enclose the "-e option" commandline string in an outer loop "while (<>) { ...}
+		eg "perl -n -e "print $_" myfile.txt" will print each line of myfile.txt
+	-v print the interpreter version
+	-V print the configuration for the compiler including the contents of @INC
+	    @INC is an array of the paths perl will search to execute a "do" or "require" command
+
+Converting Between awk and perl
+    There is a utility written by Larry Wall called atp that converts awk scripts
+    It does not exist in Windows world because awk is a Unix/Linux tool only
+
+Miscellaneous Notes
+    The unary operator 'scalar' returns an array in a scalar context

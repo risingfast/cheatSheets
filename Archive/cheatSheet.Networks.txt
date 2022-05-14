@@ -1,0 +1,116 @@
+Network Cheatsheet
+
+References
+    https://www.youtube.com/watch?v=dl-C6cBoRg4 -- What is DNS? Introduction to Domain Name System. SXSW giveaway! (David Bombal)
+    https://www.youtube.com/watch?v=nyH0nYhMW9M -- What is DNS (Domain Name System)? (IBM Technology)a
+    https://www.youtube.com/watch?v=9J1nJOivdyw -- Web Server Concepts and Examples
+    https://www.youtube.com/watch?v=earzZpX-PiY -- SSL Certificates: Serving secure web content over HTTPS
+
+Network Configuration at Home
+   Permanent IP Address 76.184.87.205 -- Risingfast on Spectrum
+   Router: 192.168.0.1, use admin/Mpa4egu9
+   Reservations: Advanced > Setup > LAN Setup
+   Ubuntu Dell Latitude MAC 00:26:b9:c1:66 :83
+   Ubuntu Nav: Settings > Network > Settings icon
+   Ubuntu Reservation: 192.168.0.11
+
+Abbreviations
+    BGP Border Gateway Protocol
+    CIDI Continuous Integration/Continuous Delivery
+    DNS Domain Name System
+    FTP File Transfer Protocol
+    HTTP Hyper Text Tansfer Protocol
+    MAC Address -- Media Access Control Address -- unique address assigned to a NIC
+    NIC -- Network Interface Controller
+    TCP -- Transmission Control Protocol, transport layer protocol, packets data and guarantees receipt in the correct order
+    TLD -- Top Level Domain
+    TTL -- Time To Live -- cached lifetime on a local host and resolver before refresh from DNS server is forced
+    OSS Open Source Software
+    UDP User Datagram Protocol
+    VPC Virtual Private Cloud (software defined network)
+    VPS virtual Private Server (e.g. Linode, DigitalOcean, Vultr)
+
+IP Addresses
+    IP4 -- 4 groups of octal digits separated by dots
+    IP6 -- 8 groups of hex digits with : separator
+    127.0.0.1 -- loopback address to local host
+
+Telnet
+    https://www.howtoforge.com/how-to-install-and-use-telnet-on-ubuntu-1804/
+
+DNS Role or Primary Function
+    Resolves a domain name to an IP address
+
+DNS Resolution Steps
+    Check local host resolver cache (copies hosts file contents)
+    Check local 'hosts' file at /etc/hosts (Linux) C:\Windows\System32\drivers\etc\hosts (Windows) -- static file of computer names and their IP addresses
+    Check DNS Resolver server (known from  /etc/resolve.conf file on local host) local internet provider address -- refers back the root server IP
+    Check root server for address of TLD servers -- 13 sets of root servers worldwide - refers back the TLD server for the domain to the DNS Resolver
+    Check TLD server for the domain which stores addresses for top level domain (e.g. .com, .net etc) -- refers back the Authoratative Name Server for the URL to the DNS Resolver
+    Check the Authoratative Name Servers for IP address of URL - responds to local host with IP address of URL -- refers back the IP address of the URL to the DNS Resolver
+    DNS Resolver stores the IP in cache and refers back to the local host
+    Local host communicates with the IP address directly
+
+DNS Record Types
+    A -- maps domain name to IP4
+    AAAA -- maps domain name to IP6
+    CNAME -- canonical name maps subdomain to canonical name
+    MX -- mail exchange
+    PTR -- pointer record (reverse of A record)
+    TXT -- text record for email spam rejection and domain name verification
+
+Websites for Network Analysis
+    mxtoolbox.com
+
+Linux Utilities
+    dig
+    ifconfig
+    nslookup
+    ping
+
+HTTP Protocol (Application Layer Protocol)
+    GET URL example: http://api.plos.org/search?q=title:DNA -- includes routing "/search" and single parameter "?q=title:DNA"
+    Routing
+        Static based on file path in request header start line
+        Dynamic to a program that builds a response on the fly using a database query
+    Request Example
+        GET /orders/123 HTTP/1.1 -- start line with routing /orders/123
+        Host: 127.0.0.1:80 -- destination IP and port (header line 1)
+        User-Agent: Manual-Http-Request -- type of browser sending the request (header line 2)
+        <empty line> -- indicates end of http request header
+        <body lines> -- request body can be empty for a GET request
+
+        POST/orders HTTP/1.1 -- start line
+        Host: 127.0.0.1:80 -- destination IP and port (header line 1)
+        User-Agent: Manual-Http-Request -- type of browser sending the request (header line 2)
+        Content-Length: 12 -- length in bytes of content (header line 3)
+        Content-Type: application/x-www... -- tells the webserver how the content is encoded (heaer line 4)
+        <empty line> -- indicates end of http request header
+        order_id=123 -- content body for the request
+    Response
+        HTTP/1.1 200 OK -- HTTP status code and meaning
+        Content-Length: 88 -- chars in response body (header line 1)
+        Content-Type: text/html -- type of body content for browser to handle (header line 2) other are image/jpeg and application/json
+        Connection: Closed -- (header line 4)
+        <empty line> -- indicates end of http response header
+        <!doctype html>
+        <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <title>Title</title>
+          </head>
+            <body>
+              <h1>Hello, World</h1>
+            </body>
+        </html>
+
+HTTPS Protocol
+    https://restapitutorial.com/httpstatuscodes.html
+    https://restapitutorial.com/ -- REST tutorial
+    Encrypted Tramsmission
+    Requires  SSL Certificate purchased from certificate authorities like www.comodo or resellers like www.gogetssl.com (approx $6/year)
+    SHA-2 Encryption protocol is needed (SHA-1 is no longer recognized as of 2014)
+    Wildcard certificates are valid for all subdomains
+    Certificates can be self-signed and these encrypt tranmission but throw a warning in the browser "This connection is untrusted"
+    SSL uses the TLS protocol for encryption with a public (encrypt) and private (decrypt) key
+

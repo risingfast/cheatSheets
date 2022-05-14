@@ -1,0 +1,178 @@
+Google Cloud Platform Cheatsheet
+
+References
+    https://www.youtube.com/watch?v=fmh94mNQHQc -- log onto GCP instance via Putty
+        edit /etc/ssh/sshd_config and set PasswordAuthentication yes
+    http://www.havetheknowhow.com/Configure-the-server/Install-VNC.html port 5901
+    https://github.com/googleapis/google-cloud-cpp -- Google Cloud Platform C++ Libraries
+    https://cloud.google.com/compute/docs/tutorials/basic-webserver-apache?utm_source=gamma&utm_medium=email&utm_campaign=SpreeCompute_Engine&utm_content=Email4 -- Running a basic Apache web server
+        sudo apt update && sudo apt -y install apache2
+        sudo systemctl status apache2
+        type html><html><body><h1>Hello World!</h1></body></html>' | sudo tee /var/www/html/index.html
+    https://cloud.google.com/storage/docs/gsutil/commands/cp -- copy files from a Cloud Bucket to a cloud instance
+    https://www.youtube.com/watch?v=TvB5Bi0qB0s&t=605s -- create, configure and destroy GCP External IP address
+    https://domains.google/ -- domain name setup for gjarman2020.com
+    https://www.youtube.com/watch?v=fmh94mNQHQc -- log onto GCP instance via Putty
+    https://www.youtube.com/watch?v=IFYn4OU9Mks -- Forward WWW to non-WWW Domains With Google Domains
+    https://developers.google.com/drive/api/guides/manage-uploads#http -- HTTP Post Google Drive Upload
+    https://www.youtube.com/watch?v=Z_ePcvnjQb4 -- Managing SSH Keys
+    https://www.youtube.com/watch?v=ZGn5ahF6Bv0&t=58s -- Deploy Hello World application on GCP App Engine | Google Cloud Platform | Tutorial for Beginners
+    https://www.youtube.com/watch?v=ibd96SQ6odM -- Google Cloud - Introduction to Cloud Shell
+    https://www.youtube.com/playlist?list=PLsd39W4KNFfO5uYLB0rRv0nJi4GCPPvi8 -- storagefreak playlist on GCP
+    https://www.youtube.com/watch?v=RdDyF3jVbbE&list=PLrpSjHQj3tT5EDEwehFhG3iftQsT0UbMf&index=2 -- Google Cloud Shell Tutorial for Beginners
+    https://www.youtube.com/playlist?list=PLIivdWyY5sqJOQJCXW_aYEqwfyi6bu1gC -- Introducing Google Cloud Technical Guides for Startups
+    https://www.youtube.com/watch?v=C1sMefyulCQ -- How to connect to Google Cloud SQL from MySQL Workbench
+    https://www.youtube.com/watch?v=q6noaMAnk5s&list=PLIivdWyY5sqJOQJCXW_aYEqwfyi6bu1gC&index=7 -- Database Configurations with Google Cloud SQL
+    https://www.youtube.com/watch?v=BQlQ-BTMR1U -- Getting Started with Cloud SQL for MySQL
+    https://cloud.google.com/storage/docs/quickstart-gsutil -- google shell commands for bucket
+    https://www.youtube.com/watch?v=rPZyJjkVb8k&list=PLIivdWyY5sqJOQJCXW_aYEqwfyi6bu1gC&index=6 -- Networking Configurations on Google Cloud
+    https://cloud.google.com/sdk/gcloud -- Google Cloud CLI Overview
+    https://cloud.google.com/sdk/docs/cheatsheet -- Google Cloud CLI cheatsheet
+    https://cloud.google.com/appengine -- App Engine description
+    https://cloud.google.com/sql/docs/mysql -- Cloud SQL for MySQL documentation
+
+Persistant Storage
+    5 gig (check with df -h)
+
+URLs
+    https://cloud.google.com/ -- Google Cloud
+    http://gjarman2020.com ip 35.209.128.197 Static IP 
+
+Google Abbreviations and Acronyms
+    DKE Docker and Kubernetes Engine
+    GCE Global Compute Engine
+    GCP Google Cloud Platform
+    IAM Identity and Access Management
+    VPC Virtual Private Cloud (software defined network)
+
+Certifications
+    https://www.youtube.com/playlist?list=PLIivdWyY5sqIvA6e-_W2T3iO1-fPdvaYL -- GCP Certification Youtube playlist
+    https://www.youtube.com/user/googlecloudplatform/playlists -- GCP playlists on Youtube
+    https://www.youtube.com/watch?v=cNb7xKyya5c&list=PLIivdWyY5sqJ0oXcnZYqOnuNRsLF9H48u -- GCP Networking End to End including youtube playlist
+
+Create a Domain on GCP
+    https://domains.google.com/
+    https://cloud.google.com/dns/docs/tutorials/create-domain-tutorial -- register domain to IP address
+
+Install Apache on GCP
+    sudo apt update && sudo apt -y install apache2
+    sudo systemctl status apache2
+
+Create a Homepage
+    type html><html><body><h1>Hello World!</h1></body></html>' | sudo tee /var/www/html/index.html
+
+Storage Bucket
+    Bucket Name: www.gjarman2020.com
+    Bucket Location: us-east1 (South Carolina)
+    Upload or Copy Files to GCP via Storage Bucket
+        First upload files to a Google Cloud Bucket "file-transfer-bucket-gjarman2020"
+        via SSH in bash: gsutil cp gs://www.gjarman2020.com/*.html . -- copy all .html files from Cloud Bucket to the current directory
+    Cloudshell commands
+        gsutil ls gs://www.gjarman2020.com -- list the bucket contents
+        gsutil cp gs://www.gjarman2020.com/* . -- copy everything in the bucket to the local directory in the shell
+
+Cloud Run
+    Run applications in containers in any language using docker images
+
+Cloud Functions
+    Event-drive functions as a service
+
+App Engine
+    Run applications in a fully managed environment
+    Natively supports: Node.js, Java, Ruby, C#, Go, Python, or PHP
+    All non-native support languages can be deployed as docker containers in Cloud Run
+
+Configure Network
+    GCP > Navigation > VPC Network > External IP Addresses -- Statis IP address and assignment to VM
+    DNS gjarman2020.com 35.209.128.197 static IP address
+    GCP > Navigation > Network Services > Cloud DNS > check box on Zone > click Zone name
+    https://www.whatsmydns.net/#NS/gjarman2020.com -- check DNS propogation
+    An A record maps an IPv4 address to a domain name. This determines where to direct any requests for a domain name
+
+DNS Name Resolution Troubleshooting
+    https://developers.google.com/speed/public-dns/docs/troubleshooting
+    https://dns.google/
+    https://developers.google.com/speed/public-dns/groups#issues
+    https://intodns.com/
+    https://dnsviz.net/d/gjarman2020.com/analyze/
+    https://developers.google.com/speed/public-dns/cache
+    https://www.youtube.com/watch?v=OKvOvHuOnrw -- Cloud DNS: Build webserver with custom domain in GCP
+    https://domains.google/ -- verify domain is assigned the correct IP address (this fixed it)
+
+Compute Engine Profile
+    Name: risingfast-01
+    Created: Apr 10, 2022, 11:03:43 AM UTC-05:00
+    Region: us-central1-a
+    Machine Type: e2-micro
+    CPU Platform: Intel Broadwell
+
+SSH Keys
+    GCP > Console > Compute Engine > Settings < Metadata > SSH Keys -- to store a public key and propagate to all machines on a project
+
+Cloud Shell (Debian based)
+    Preinstalled applications: gcc (C), git, go, java, node (javascript), PHP, python, ruby, vim
+    gcloud tool
+        gcloud config set project risingfast001 -- set the project in cloud shell
+        gcloud config list -- list configuration for gcloud CLI
+        gcloud config list project -- list the current project
+        gcloud config set project <PROJECT_ID> -- change the current project
+        gcloud -h -- list gcloud invocations
+        gcloud compute --help -- drill down to help on compute engine
+        gcloud app logs --help -- drill down to help on logs within app engine
+    docker --version
+    echo shell
+    gcc --version
+    git --version
+    go --version
+    irb -- version (Ruby)
+    java -version
+    node --version (javascript)
+    python2 --version
+    python3 --version
+    vim and vimtutor
+    Builtin editor: edit <filename>
+    gcloud compute instances list -- list vm instances in compute engine
+    gcloud compute instances delete <instanceName> -- drop a compute instance
+
+Google Cloud CLI (Command Line Interface)
+    Runs on a client machine with the same functions as Google Cloud Shell running on a browser
+    Set of tools to create and manage Google Cloud resources
+    Allows scripting
+    glcoud help -- online help
+
+Help in Cloud Shell
+    builtin help -- help with bash commands (i.e. linux commands)
+    gcloud help or --help -- help with Cloud SDK resources (e.g. create/delete an instance)
+    cloudshell -h or help -- help with the cloud shell
+    cloudshell aliases -- lists aliased commands
+
+Cloud SQL
+    MySQL, PostreSQL SQLServer supported
+    Accesssible via BigQuery
+    Database migration service allows migration from a private SQL instance
+    Automatic replication service for backup and horizontal scaling
+    Automated and on demand backup with point-in-time recovery
+
+Cloud SQL mySQL Instance
+    Instance ID: gjarman2020-sql
+    Type: MySQL 5.7 (Database version)
+    Instance Connection Name: risingfast001:us-central1:gjarman2020-sql
+    Location: us-central1-f
+    Region: us-central1 (Iowa)
+    Public IP 35.188.123.150
+    Private IP 18.69.160.3
+    Connect via cloudshell: gcloud sql connect gjarman2020-sql --user=root --quiet
+    Connect via cloudshell: gcloud sql connect gjarman2020-sql --user=gjarman2020 --quiet
+    root password to db: Mpa4egu9 changed to Mpa4egu$ 17 Apr 2022
+    gjarman2020 password to db: Mpa4egu$
+
+mySQL Commands Common
+    mysql --version .. Ver 8.0.28 for Linux on x86_64 (MySQL Community Server - GPL)
+    use <database>;
+    show tables;
+    select `First Name` from `Ancestry People`;
+    source <filename>; execute a script file
+    source /home/gjarman2020/Documents/Projects/Open/mysql-sandbox/test.sql
+
+Big Query
+    SELECT * FROM EXTERNAL_QUERY("projects/risingfast001/locations/us-central1/connections/risingfast-connection", "SELECT * FROM INFORMATION_SCHEMA.TABLES;");

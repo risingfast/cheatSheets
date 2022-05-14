@@ -1,0 +1,56 @@
+JSON Cheatsheet
+
+References
+     https://www.youtube.com/watch?v=iiADhChRriM -- Learn JSON in 10 Minutes
+     https://www.json.org/json-en.html -- includes a list of parser libraries for languages
+     https://www.w3schools.com/js/js_json_intro.asp -- JSON tutorial
+
+Overview
+    JSON Javascript Object Notation
+    Data representation format in objects and arrays
+    Lightweight
+    Easy to Read
+    Integrates with Javascript so variables in javascript can be assigned JSON values
+    All languages have libraries that read and write JSON
+
+Use Cases
+    Internet API's
+    Game Configuration Files
+    VSCode configuration
+
+Syntax
+    Datatype support: strings, numbers, booleans, null, arrays, objects (key:value pairs)
+    Top level of a file is an object or an array
+    file has .json extension
+    Lists or arrays are surrounded by []
+    Arrays and objects can be nested
+    All names (keys) and string values must be enclosed in double-quotes
+    Numbers in JSON are not quoted
+
+Comments
+    JSON does not support comments
+
+Online Validators and Linters
+    https://jsonlint.com/ -- validates and formats JSON
+    https://jsonformatter.curiousconcept.com/#about -- validates, formats, allows indent setting and full-page view
+
+Example
+    {
+        "name": "Geoffrey",
+        "favoriteNumber": 3,
+        "isProgrammer": true,
+        "hobbies": ["Running", "Coding", "Cleaning"],
+        "friends": 
+        [
+            { "name": "Michael",
+              "isProgrammer": false
+            },
+            { "name": "Jennifer",
+              "isProgrammer": true
+            }
+        ]
+    }
+
+Javascript and JSON
+    JSON.parse() -- converts a string into a JSON object
+    JSON.stringify() -- converts a JSON object into a string

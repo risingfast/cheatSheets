@@ -1,0 +1,30 @@
+Markdown Cheatsheet
+
+References
+    https://www.youtube.com/watch?v=bTVIMt3XllM&t=344s - Faraday Acadamy Learn Markdown in 30 minutes
+    https://www.youtube.com/watch?v=NnCy7wJRgP0 -- Effective Remot Work, Writing Notes in Markdown
+
+Markdown Tags
+    # <Heading Level 1 Text>
+    ## <Heading Level 2 Text>
+    **<Bold Text>**
+    __<Bold Text>__
+    *<Italic Text>*
+    _<Italic Text>_
+    ~~<Strikethrough Text>~~
+    1. <List Element Ordered List>
+    1. <List Element Ordered List>
+        1. <List subelement ordered list>
+    1. <List Element Ordered List>
+    * <unordered list>
+    - <unordered list>
+    ` <inline code block>`
+    > <inline code block>`
+    ``` <Multi-line code block>```
+    --- -- horizontal line
+    > <block quote>
+    [Link Text](Link URL)
+    ![Hover Text](Image URL)
+    | -- table vertical divider
+    | :---- | :---- | left aligned table horizontal divider
+    <details><summary>Summary</summary>Details</details> -- hidden detail text

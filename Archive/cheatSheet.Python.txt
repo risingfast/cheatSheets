@@ -1,0 +1,1376 @@
+Python Cheat Sheet
+
+Table of Contents
+    References
+    Forums
+    Problems
+    Conventions
+    Communities
+    Training
+    History
+    Acronyms
+    Application Areas
+    Frameworks
+    Versions
+    Terminology
+    Keywords
+    REPL Sites (Read-Eval-Print-Loop Sites)
+    Integrated Development Environments
+    Linters
+    Virtual Environments (virtualenv's)
+    Tips and Tricks
+    Installation
+    Code Sharing
+    Starting and Stopping Python
+    General Rules
+    Key Features
+    Data Types
+    Special Escaped Characters
+    Operators (in order of precedence)
+    Boolean Operators (in order of Precedence)
+    Variables and Identifiers
+    Program Structure
+    Booleans
+    Help
+    Comments and docStrings
+    Iterators and Iterables
+    Strings
+    String Methods and Functions
+    Mathematical Functions
+    Casting Functions
+    User-Defined Functions
+    Built-in Functions
+    Packages and Modules
+    Standard Modules
+    Compiled Modules
+    Non-Standard Modules
+    Files
+    Lists and Tuples and Sequences
+    List Comprehensions
+    Dictionaries and Set Data Types
+    Writing HTML
+    Flow Control and Loops
+    Formatting
+    Errors and Exceptions
+    Assertions
+    Logging
+    Debugging
+    Scope and Namespaces
+    Classes
+    Web Scraping and Requests API
+    SQLite3
+
+References
+    https://wiki.python.org/ -- main site for Python
+    https://docs.python.org/3.7/reference/index.html#reference-index -- Python Language Reference
+    https://www.afternerd.com/blog/
+    https://www.pythonforbeginners.com/
+    https://www.python.org/ -- download site for interpreter and IDE
+    https://docs.python.org/3/tutorial/
+    https://docs.python.org/3.7/tutorial/
+    https://realpython.com/ -- tutorials and tips ... goto https://realpython.com/python-basics/
+    https://realpython.com/python-debugging-pdb/ -- debugging
+    http://introcs.cs.princeton.edu/python/home/ -- text book
+    https://automatetheboringstuff.com/ -- Free book on Python for beginners
+    https://codingbat.com/python - exercises
+    https://docs.python.org/3/-- official Python site with tutorials
+    https://docs.python.org/3/tutorial/index.html -- python tutorial at python site
+    https://www.tynker.com/middle-school/coding-curriculum/python-511?src=pythonroom
+    https://www.explainingcomputers.com/python_coding.html -- tutorial
+    https://www.pythonforbeginners.com/learn-python/
+    https://www.w3schools.com/python/ - W3 schools
+    www.dbader.org and https://dbader.org/about/
+    https://dev.to/t/python -- Dev.to Python
+    http://inventwithpython.com/blog/ -- Al Sweigart blog (Programming Books by Al Sweigart)
+    https://www.pythonforbeginners.com/
+    https://www.fullstackpython.com/ -- HTML
+    https://snakify.org/en -- web and practice examples tutorials
+    C:\Program Files (x86)\Python37-32\Doc\python372.chm -- python docs on the file system
+    https://www.tutorialspoint.com/python/ -- python tutorials and definitions
+    https://lectures.quantecon.org/py/ -- basics and data science
+    https://www.programiz.com -- python, C, Java and Kotlin and others
+    https://www.pythonforbeginners.com/
+    https://www.pythonforbeginners.com/basics/python-websites-tutorials
+    https://developers.google.com/edu/python/ -- Google's Python class
+    http://codecademy.com/tracks/python
+    http://codingbat.com/python
+    http://pythontutor.com
+    http://learnpython.org
+    http://pyschools.com
+    http://learnstreet.com/lessons/study/python
+    file:///C:/Users/gjarman/Documents/Computing/Languages%20and%20IDEs/Python/References/dive-into-python-2.pdf -- Dive into Python book
+    https://docs.python.org/3/using/cmdline.html --  python docs on command line
+    https://www.python.org/dev/peps/pep-0008/#indentation -- Python PEP 8 Style Guide
+    https://docs.python.org/3/library/ -- the Python Standard Library
+    https://wiki.python.org/moin/BeginnersGuide/ -- beginners guide
+    http://greenteapress.com/thinkpython2/thinkpython2.pdf -- thinkpython book download
+    http://inventwithpython.com/makinggames.pdf
+    https://www.java67.com/2017/05/top-7-free-python-programming-books-pdf-online-download.html -- 10 courses in Python
+
+Forums
+    https://www.reddit.com/r/learnpython -- reddit
+    https://groups.google.com/forum/#!forum/comp.lang.python -- google
+    https://stackoverflow.com/tags/python -- Stack Overflow
+    http://code.activestate.com/lists/python-tutor/ -- ActiveState Python Q&A list
+    https://www.mail-archive.com/tutor@python.org/ -- Mirror site for Python Q&A list
+    https://www.quora.com/topic/Python-programming-language-1?merged_tid=13292
+
+Problems
+    Codechef
+    Codewars
+    dailycodingproblem.com
+    InterviewBit
+    LeetCode
+    HackerRank
+    ProjectEuler
+    Topcoder
+
+Conventions
+    https://us.pycon.org/2019/
+
+Communities
+    https://www.pythonistacafe.com/
+
+Training
+    https://dbader.org/blog/python-intro-statements-variables-and-loops -- variables and loops (Part 1) (Done)
+    https://dbader.org/blog/python-intro-functions-and-lists -- functions and lists (Part 2) (Done)
+    https://dbader.org/blog/python-intro-conditionals-and-if-statements -- conditional blocks (Part 3) (Done)
+    https://dbader.org/blog/python-intro-reacting-to-user-input -- user input (Part 4) (Done)
+    https://dbader.org/blog/how-to-structure-python-programs -- program structure (Part 5) (Done)
+    https://dbader.org/blog/python-send-email -- email (Done)
+    https://dbader.org/blog/python-file-io -- file I/O (Done)
+    https://automatetheboringstuff.com/chapter0/ -- Introduction (Done)
+    https://automatetheboringstuff.com/chapter1/ -- Basics (Done)
+    https://automatetheboringstuff.com/chapter2/ -- Flow Control -- at Boolean Operators (Done)
+    https://automatetheboringstuff.com/chapter2/ -- Flow Control -- at Flow Control Statements (Done)
+    https://automatetheboringstuff.com/chapter2/ -- Flow Control -- at While Loop Statements (Done)
+    https://automatetheboringstuff.com/chapter3/ -- Functions (Done)
+    https://automatetheboringstuff.com/chapter3/ -- Functions -- at Exception Handling (Done)
+    https://automatetheboringstuff.com/chapter3/ -- Functions -- at Collatz Sequence (Done)
+    https://automatetheboringstuff.com/chapter4/ -- Getting Individual Values in a List with Indexes (Done)
+    https://automatetheboringstuff.com/chapter4/ -- Negative Elements (Done)
+    https://automatetheboringstuff.com/chapter4/ -- Using for-Loops with Lists (Done)
+    https://automatetheboringstuff.com/chapter4/ -- Removing Values from Lists with remove() (Done)
+    https://automatetheboringstuff.com/chapter5/ -- Dictionaries and Structuring Data (Done)
+    https://automatetheboringstuff.com/chapter5/ -- Checking Whether a Key or Value Exists in a Dictionary (Done)
+    https://automatetheboringstuff.com/chapter5/ -- Pretty Printing (Done)
+    https://automatetheboringstuff.com/chapter5/ -- A Tic-Tac-Toe Board (Done)
+    https://automatetheboringstuff.com/chapter6/ -- Manipulating Strings start (Done)
+    https://automatetheboringstuff.com/chapter6/ -- Manipulating Strings ... (Done)
+    https://automatetheboringstuff.com/chapter6/ -- Removing Whitespace with strip(), rstrip(), /and lstrip() (Done)
+    https://automatetheboringstuff.com/chapter6/ -- Copying and Pasting Strings with the pyperclip Module (Done)
+    https://automatetheboringstuff.com/chapter6/ -- Project: Adding Bullets to Wiki Markup (Done)
+    https://automatetheboringstuff.com/appendixa/ -- Appendix A Installing Third-Party Modules (Done)
+    https://automatetheboringstuff.com/appendixb/ -- Appendix B Running Programs (Done)
+    https://automatetheboringstuff.com/chapter7/ -- Regular expressions (Done)
+    https://automatetheboringstuff.com/chapter9/ -- Organizing Files (Done)
+    https://automatetheboringstuff.com/chapter10/ -- Debugging (Done)
+    https://automatetheboringstuff.com/chapter10/ -- Assertions (Done)
+    https://automatetheboringstuff.com/chapter10/ -- Logging (Done)
+    https://automatetheboringstuff.com/chapter10/ -- Idle Debugger (Done)
+    https://automatetheboringstuff.com/chapter11/ -- Web Scraping (Done)
+    https://automatetheboringstuff.com/chapter11/ -- Web Scraping - HTML (Done)
+    https://automatetheboringstuff.com/chapter11/ -- Web Scraping - Using the Developer Tools to Find HTML Elements (Done)
+    https://automatetheboringstuff.com/chapter11/ -- Web Scraping - Parsing HTML with the BeautifulSoup Module (Done)
+    https://www.youtube.com/watch?v=6YLMWU-5H9o&t=630s at 11:58 (Done)
+    https://automatetheboringstuff.com/chapter11/ -- Web Scraping - Project: I'm Feeling Lucky Google Search (Done)
+    https://lectures.quantecon.org/py/python_by_example.html -- Lists (Done)
+    https://developers.google.com/edu/python/ (Google Python) (Done)
+    https://developers.google.com/edu/python/introduction -- (Google Python) user defined functions (Done)
+    https://developers.google.com/edu/python/introduction -- (Google Python) Online help, help(), and dir() (Done)
+    https://developers.google.com/edu/python/lists -- Lists (Google Python) list1.py exercises (Done)
+    https://developers.google.com/edu/python/sorting -- Sorting (Google Python) (Done)
+    https://developers.google.com/edu/python/dict-files -- Dictionaries and Files (Google Python) (Done)
+    https://developers.google.com/edu/python/regular-expressions -- Regulur Expressions (Googl Python) (Done)
+    https://developers.google.com/edu/python/utilities -- Utilities (Done)
+    https://www.youtube.com/watch?v=6YLMWU-5H9o -- Get Productive with Python and Visual Studio Code (VSCode) Dan Taylor (Done)
+    https://www.youtube.com/watch?v=k9TUPpGqYTo&t=6s -- Corey Schager strings (Done)
+    https://www.youtube.com/watch?v=W8KRzm-HUcc -- Corey Schafer Lists Tuples and Sets (Done)
+    Snippets in VSCode https://code.visualstudio.com/docs/editor/userdefinedsnippets (Done)
+    https://www.youtube.com/watch?v=CqvZ3vGoGs0 -- Corey Schafer imports (Done)
+    https://www.youtube.com/watch?v=daefaLgNkw0&t=22s to 05:19 -- Corey Schafer dictionaries (Done)
+    https://www.youtube.com/watch?v=daefaLgNkw0&t=22s from 05:20 -- Corey Schafer dictionaries continued (Done)
+    https://www.youtube.com/watch?v=DZwmZ8Usvnk -- Corey Schafer conditionals (Done)
+    https://www.youtube.com/watch?v=QVdf0LgmICw&t=158s -- Corey Schafer scope (Done)
+    https://www.youtube.com/watch?v=jTYiNjvnHZY -- Corey Schafer -- Iterables and Iterators (Done)
+    https://www.youtube.com/watch?v=BJ-VvGyQxho -- Corey Schafer -- class variables (Done)
+    https://www.youtube.com/watch?v=pd-0G0MigUA&t=204s -- SQLite3 -- sql databases (Done)
+    https://www.youtube.com/watch?v=pd-0G0MigUA&/=204s at 22:20 -- SQLite3 -- sql database application (Done)
+    https://www.youtube.com/watch?v=zdJEYhA2AZQ -- Corey Schafer -- 5 Common Mistakes (Done)
+    https://www.youtube.com/watch?v=ZDa-Z5JzLYM -- Corey Schafer -- Classes (Done)
+    https://www.youtube.com/watch?v=BJ-VvGyQxho&t=109s -- Corey Schager -- Class Variables (Done)
+    https://www.youtube.com/watch?v=RSl87lqOXDE -- Corey Schafer -- Inheritance (Done)
+    https://www.youtube.com/watch?v=rq8cL2XMM5M -- Corey Schafer -- Class Methods (Done)
+    https://www.youtube.com/watch?v=-nh9rCzPJ20&t=195s -- Corey Schafer -- Python and VSCode 24:30 (Done)
+    https://www.youtube.com/watch?v=-nh9rCzPJ20&t=195s -- Corey Schafer -- Python and VSCode 47:44 GIT (Done)
+    https://www.youtube.com/watch?v=VOwyH2-VCVY -- VSCode and Github (Done)
+    https://www.youtube.com/watch?v=wMqukSKYcvU -- James Q Quick -- Git and VS Code (Done)
+    https://www.youtube.com/watch?v=tJxcKyFMTGo&t=30s -- Corey Schafer -- OS package (Done)
+    https://www.youtube.com/watch?v=tJxcKyFMTGo&t=30s -- Corey Schafer -- OS package -- home directory (Done)
+    https://youtu.be/kr0mpwqttM0 -- Corey Schafer -- First Class Functions (Done)
+    https://www.youtube.com/watch?v=CqvZ3vGoGs0 -- Corey Schafer - Importing and Standard Library (Done)
+    https://www.youtube.com/watch?v=nghuHvKLhJA -- Corey Schafer -- f-strings (Done)
+    https://www.youtube.com/watch?v=0q8spKeh1Kc -- Corey Schafer -- string interpolation (Done)
+    https://www.youtube.com/watch?v=UaKZ4wKytcA -- Corey Schafer -- idempotence (Done)
+    https://www.youtube.com/watch?v=IGH4-ZhfVDk -- Corey Schafer -- DRY code (Done)
+    https://www.youtube.com/watch?v=q5uM4VKywbA -- Corey Schafer -- csv files (Done)
+    https://realpython.com/python-f-strings/ -- f-string formatting -- Real Python (Done)
+    https://docs.python.org/3.7/tutorial/index.html -- Python 3.7.4 online tutorial
+    https://www.youtube.com/watch?v=RJB1Ek2Ko_Y&t=313s -- thenewboston -- tkinter
+    https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g -- Corey Schafer course list at CoreyMS.com (CFP)
+    https://www.youtube.com/watch?v=qbW6FRbaSl0 -- script ideas in Python
+    https://www.youtube.com/watch?v=R-HLU9Fl5ug -- Joe James -- Data Structures
+    https://www.youtube.com/watch?v=zD0FDYI5_rs -- Joe James -- Beautiful Soup
+    https://www.youtube.com/watch?v=FsAPt_9Bf3U -- Corey Schafer -- Decorators
+    https://www.youtube.com/watch?v=swU3c34d2NQ&feature=youtu.be -- Corey Schafer -- Closures
+    https://www.youtube.com/watch?v=HW29067qVWk -- Corey Schafer - Jupyter Notebooks
+    https://www.geeksforgeeks.org/python-programming-language/ -- GeeksforGeeks python
+    https://www.youtube.com/watch?v=ykqrOe3B0eM&list=PLw02n0FEB3E2RDlD2cBULQjvXJ1K_jS1O -- Max Goodridghe python course list
+    https://code.visualstudio.com/docs/python/python-tutorial -- Python vscode tutorial
+    https://stackoverflow.com/questions/42429320/what-is-the-best-way-to-modify-a-text-file-in-place
+    https://realpython.com/courses/python-development-visual-studio-code-setup-guide/ -- VSCode Setup
+    https://realpython.com/what-is-pip/ -- What is PIP
+    https://realpython.com/courses/idiomatic-pandas-tricks-features-you-may-not-know/ -- Panda tricks
+    https://realpython.com/get-started-with-django-1/ -- Django starter
+    https://realpython.com/tutorials/web-dev/ -- web development
+    https://kite.com/?utm_medium=email&utm_source=realpython&utm_campaign=apr6drop -- Kite code completion
+    https://www.programiz.com/python-programming -- language tutorials for multiple languages
+    https://www.guru99.com/ -- Python tutorial and many others
+    https://lectures.quantecon.org/py/ -- quant economics Python course
+    https://code.visualstudio.com/docs/python/python-tutorial -- VS Code Python Tutorial
+    http://www.joelonsoftware.com/articles/Unicode.html -- Unicode
+    http://nedbatchelder.com/text/unipain.html -- Unicode
+    http://requests.readthedocs.org/. -- requests
+    https://mva.microsoft.com/en-us/training-courses/introduction-to-programming-with-python-8360?l=WnSEoxFz_1404984382 -- MVA course
+    Jim Anderson https://realpython.com/python-git-github-intro/
+    https://linuxconfig.org/python-introduction-and-installation-guide -- linux tutorials
+    https://dbader.org/blog/python-cffi -- interfacing python and C
+    https://www.youtube.com/watch?v=6YLMWU-5H9o -- Microsoft Python and VS Code
+    https://realpython.com/vim-and-python-a-match-made-in-heaven/ -- VIM and Python
+    VS Code and Python configuration and usage
+    Install Eclipse and PyDev add-on
+    Try connecting to Oracle via Python: https://blogs.oracle.com/opal/python-cx_oracle-71s-connection-fix-up-callback-improves-application-scalability?elq_mid=133424&sh=202212212192221726914261315125095&cmid=WWMK180508P00032C0002
+    Python and Excel
+    Python and C
+    Python and Assembler
+    Decorators
+    List Comprehension
+    Object Orienation
+    Iterators
+    SQLite3
+    SQLAlchemy -- use with SQLLite3 to prototype then migrate to a feature-rich db
+    Bulk Inserts
+    Namespaces
+    Generators
+    Coroutines
+    Functions
+    Dictionaries
+    Regular Expressions
+    Debugging
+    Dependencies and Virtual Environments
+    JSON data
+    Context Managers
+    Web Development
+    Data Science (using the Anaconda distro)
+        Data Analysis
+        Data Visualization
+        Machine Learning
+    Scripting
+    Embedded with Rasberry Pi
+    Scripting
+
+History
+    Guido Van Rossum (1980's)
+    1991 First Release
+    1994 Python 1
+    2000 Python 2
+    2008 Python 3
+    2015 Python 3.5
+
+Frameworks
+    General
+        Django -- comprehensive web
+        Django CMS 
+        Flask -- smaller and easier to learn (built on Werkzeug)
+        Werkzeug
+        Bottle
+        Pyramid
+        Plone
+        CherryPy
+    Machine Learning
+        scikit-learn
+        Tensorflow
+        Keras -- neural networks
+    Data Visualization
+        MatPlotLib
+        Seaborn
+    Gaming
+        PyGame
+        Panda3D
+    Desktop
+        TkInter
+        Tk
+    Mathematics
+        NumPy -- matrices and arrays
+            myArray = linspace(>lower>, <upper>, <increment>) -- generate an array between <lower> and <upper> divided into <increment>
+        SumPy
+        Orange
+        Pandas
+
+Versions
+    1.0.0 Available 1984 -- Guido van Rossum National Research Institute for Mathematics and Computer Science Netherlands
+    2.0.0 Available 200
+    2.7.15 with End of Life for Version 20 as 01/01/2020
+    3.7.0 Available 06/12/2018
+    3.7.2 Available 12/24/2018
+    3.7.4 Available 07/08/2019
+    In linux: $ python3 -- version (to get the installed version)
+    In Windows python --version (e.g. Python 3.7.2)
+    Primary differences between ver 2 and ver 3: print is a function in 3 and statement in 2, input() in 3 is rawinput() in 2
+    python --version to get the current installed version
+
+Acronyms
+    PEP -- Python Enhancement Proposal
+
+Terminology
+    Program Execution (or Execution) -- current statement being executed
+
+Keywords
+    and
+    as
+    assert
+    break, continue and pass
+    class
+    continue
+    def
+    del
+    elif
+    else
+    except
+    False
+    finally
+    for
+    from
+    global
+    if
+    import
+    in
+    is
+    lambda
+    None
+    nonlocal
+    not
+    or
+    pass
+    raise
+    return
+    True
+    try
+    while
+    with
+    yield
+
+REPL Sites (Read-Eval-Print-Loop Sites)
+    www.python.org/shell
+    pythonfiddle.com
+    repl.it
+    trinket.io
+    www.pythonanywhere.com
+    https://www.onlinegdb.com/online_python_compiler
+    https://www.tutorialspoint.com/execute_python_online.php
+    Google 'Python Online Compiler' for more ...
+
+Linters - check programs for errors and verifies code quality
+    flake8
+    pyLinter
+
+Virtual Environments (virtualenv's)
+    Establishes a reference environment of installed packages and versions
+    Install virtualenv (pip install virtualenv -- from the command line)
+    virtualenv <envname> to create a virtual environment in the current directory
+    Create a virtual environment on the command line
+        Run 'activate.bas' from the scripts subdirectory to run in the virtualenvironment
+        Run 'python' after activating
+        Run 'python -m idlelib.idle to run idle
+    Create a virtual environment in VS Code Terminal
+        python -m <venvname> env to create a virtual environment in the current folder
+        source env/scripts/activate -- to activate the virtual environment
+
+Integrated Development Environments
+    eric - is a Python development and editing environment on Linux
+    eric is located on the Suse Linux desktop at /Development/Integrated Environment/Eric3 Python IDE
+    IDLE - Integrated Development and Learning Environment ... interactive shell
+        <Alt>P -- previous command
+        <Alt>N -- next command
+        Options > Configure IDLE > Keys to change shortcut keys
+    Jupyter Notebook -- Python IDE in a browser
+    Spyder -- for data science
+    PyCharm -- dedicated IDE
+    Thonny -- simple IDE
+    Visual Studio, Code Runner and Python Extension
+    Eclipse
+    Thonny https://thonny.org/
+    Spyder
+
+VSCode (Visual Studio Code)
+    Available at; code.visualstudio.com
+    Documentation and tutorials: https://code.visualstudio.com
+    Features: Debugging, Linting, Testing, Refactoring
+    Extensions
+        Keyboard bindings for VIM
+        django snippets and templates
+        Commands
+            'code .' in a project directory to start VS Code with the directory as home
+     Keyboard Shortcuts
+        Ctrl Alt N - run
+        Ctrl P -- List files
+        Ctro+B -- Close Left Window
+        Ctrl Shft P -- Command Pallet
+        Ctrl Shft N -- Welcome
+        Ctrl Shft 0 -- Symbols
+        Shift+Enter -- Run selected code in the terminal
+        Shift Alt F -- Format with pep8
+        Ctrl+Space -- Intellisense
+        Ctrl Pallet 'Reload Window' to refresh explorer views
+        Ctrl+p -- show current open file as a list
+        Ctrl+` -- open a terminal window
+        Ctrl / -- toggle comments
+        F5 -- run debugger
+        Shift F5 -- stop debugger
+        F11 -- step into
+        CODE . -- open in current folder
+        Right Click -- run to cursor
+        Menu > View > Appearance > Move Side Bar Left/Right -- to move the side bar
+    Snippets
+        Ctrl Shft P then Snippets then Python or Menu > File > Preferences > User Snippets
+
+Editors
+    JEdit
+    Notepad++
+
+Tips and Tricks
+    Do not use leading spaces in python for formatting - Python code structure is based on indenting 
+        Code blocks are indented (normally 4 chars). Indent tabs must convert to spaces
+    Clear the screen with import os ... os.system('cls')  # on windows, os.system('clear') on linux
+    Don't name your program files the same as package names
+
+Installation 
+    Linux
+        The executable for Python is at /usr/bin/python 
+    Windows
+        C:\Users\gjarman\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.7  -- private install
+        C:\Program Files (x86)\Python37-32 -- shared install
+    Installation on Apache2 Webserver on Linux for Python and mod_Python
+        Python is installed as a cgi on Linux2. 
+        It is possible to also install as a mod_python module by editing httpd.conf
+        With this standard cgi installation, any script with a python shebang line (#! python3) will invoke the python enterpreter
+        The script should be placed somewhere under the /srv/www/cgi-bin/ filesystem root or top
+        Normally a subdirectory under cgi-bin is used for this (ie /srv/www/cgi-bin/python/<script.py>
+        The http address via the apache server for this loction is http://<host>:port/cgi-bin/python/<script.py>
+        Installing as mod_python, requires a pointer to the mod_python.so file (the DSO object)
+        mod_python.so is located at /usr/lib/apache/mod_python.so on the Suse 9.1 linux configuration
+        python must be an entry in the apache sysconfig file (see /etc/sysconfig/apache2) to load mod_python
+
+SimpleHTTPServer
+    sudo python -m SimpleHTTPServer 80 -- from the command line on Linux
+    looks at index.html in the user home directory (the current working directory)
+
+GIT and Code Sharing
+    http://pastebin.com/
+    http://gist.github.com/.
+        https://code.visualstudio.com/docs/editor/versioncontrol -- VSCode Git Reference
+        https://git-scm.com/doc -- Git documentation
+    SCM -- source control manager
+    Git
+        Initialize Repository created .init directory
+        Change > Stage > Commit > Push
+        Add a GitHub repository to a project
+            Ctrl+Shft+P - Command Dialog
+            Git: Clone and add a GitHub repository URL from GitHum
+        Ctrl+Shift+G -- source control view
+
+Starting and Stopping Python
+    <Ctrl>Z <Enter> to close the Python Interpreter
+    Choose IDLE or the Python Interpreter from Windows
+    Open a CMD session and type 'python'
+
+General Rules
+    Case matters
+    Ctrl-c breaks a program
+
+Key Features
+    Dynamic typing
+    Object oriented
+    Indented grouping -- indentation is used for grouping and not {} defaulting to 2 or 4 spaces 
+        set expand tab to spaces in the editor
+        The Pythong Style Guide recommends 4 spaces
+    Interpreted
+    Interactive
+    Standard modules (libraries)
+    Third party modules
+    Extendible via C, C++
+
+Style Guide
+    Indentation: 4 spaces
+    Max line width: 79 chars
+    Docstring width: 72 chars
+    Line continuation: wrap in parentheses, brackets or braces (use \ as a last resort
+    Use lower_case_underscores in variable_names and not camelCase style variableNames
+
+Data Types
+    Primitives
+        Integers 1, 2, 3, 44 (division of integers yields floats)
+        Floating Point Numbers 1.1, 2.2, 3.3, 4.567, -8.9
+        Decimal
+        Fraction
+        Booleans: True, False (converted to 1 and 0 in arithmetic expressions)
+            None, Zero empty sequences and empty dictionaries evaluate to False
+        Complex (using j for imaginary component) e.g. x = complex(1, 2)
+    Containers
+        Strings -- single quoted. 
+        Lists -- compound type ... my_list = [1, 2, 3, 4] for element in my_list: print(element)
+        Tuples -- immutable lists using () or no brackets e.g. x = ('a', 'b') or x = 'a', 'b' are identical
+        Sets -- unordered lists without duplicates using {} notation
+        Dictionaries
+        None -- contains only None value (similare to Null) and the return value of any function w/out an explicit return value
+
+Special Escaped Characters
+    \\ -- \
+    \' -- '
+    \" -- "
+    \a -- ringing bell
+    \b -- backspace
+    \f -- formfeed
+    \n -- newline
+    \r -- carriage return
+    \t -- tab
+    \uxxxx -- unicode char ... eg print u"\u041b" prints a unicode character
+    \0nn -- octal character with preceding \zero
+    \xnn -- hex character with preceding \x
+
+Operators (in order of precedence)
+    ** Exponent 2**3 = 8
+    %  Modulus 22%3 = 1
+    // Integer Division (floored quotient, rounds the result down always, including negative numbers) 5.5 // 2 = 4
+    /  Division
+    *  Multiplication or repeat string "happy" * 2 = "happyhappy"
+    -  Subtraction
+    +  Addition or concatenate trings
+    =  Assign or Mulitple Assign ... var1, var2 = 'Happy', 'Sad'
+    == Equal to
+    is Is the same value as (not just equal but the same)
+    != Not Equal to (synonym 'Not')
+    <  Less than
+    >  Greater than
+    <= Less than or equal to
+    >= Greater than or equal to
+    is Object identity ... same object in memory (id(a) == is(b))
+    in List operator true if value in a list, tuple or dictionary (e.g. 'bike' in vehicleList)
+    not in operator true if value not in a list, tuple or dictinary (e.g. 'cat' not in animalList)
+    +=, -=, *=, /=, %= augmented operators
+
+Booleans
+    Have two values: True and False (always init capital, unquoted) equivalent to 1 and 0
+    Expressions evaluate to booleans and can be mingled with booleans in expresssions ... (5 > 2) and True = True
+
+Boolean Operators (in order of precedence)
+    not  Boolean not
+    and  Boolean and
+    or   Boolean or
+
+Variables and Identifiers
+    Identifiers are names given to variables, classes and functions
+    Variable names comprise letters, numbers and underscores
+    Variable names cannot begin with a number
+    Variable names cannot contain hyphens or spaces or special characters
+    Variable names begin with a lower case letter but are camelcase otherwise
+    Variable names are case sensitive
+    Variable names should be meaningful
+
+Program Structure
+    The first line of a program run from the OS should be the shebang line
+        On Windows, the shebang line is #! python3.
+        On OS X, the shebang line is #! /usr/bin/env python3.
+        On Linux, the shebang line is #! /usr/bin/python3.
+    print() is a function -- has two optional chars for end of line (end) and separator (sep)
+        print(<string>, end=<endChar>) forces an ending char other than the default \n newline char
+    Test line continuation (multi-line strings) requires ''' instead of ' surrounding text, or a trailing \ on the broken line
+        you can use """ also
+    Use the "#" character for comments - place on the first space of a comment line
+    Use the """ triple double-quotes for multi-line comments
+    Use the "\" reverse or escape character to escape characters with special meanings, such as " double quotes
+    The shebang line is #!/usr/bin/env python on the first line (for windows use '#! Python3' if the path is set)
+    The encoding line is #-*- coding: cp1252 -*- on the second line
+    Semi-colons are not needed to end each line, but they are allowed as optional
+    _ is the last numeric value printed on the interpreter, so 10 + _ is evaluated on the value of _
+    Raw printing ... print(r'C:\some\name')  # note the r before the quote to treat the \ as raw ... non-special characters
+    Lists are mutable
+    Assignments can be multiple on a single row (comma separated)
+    Triple-quoted strings print newlines and other special characters as entered, without the need for \n
+    Main structure (to run a .py file directly but not if it is imported)
+        Define a main() function
+        Execute main() with
+            if __name__ == '__main__": -- test if the main program is running
+                main()
+        If a .py file is run directly rather than imported, __name__ is set to '__main__'
+        If a .py file is imported rather than run directly, __name is set to the file name
+
+Help using help() function and dir() function
+    References
+        https://docs.python.org/3/ -- includes a tutorial
+    dir(module_name) -- lists functions in a module
+        e.g print(dir(<val>)) prints a directory of all methods applicable to the val object such as a string dir(my_string1)
+    Builtin help(<object>) returns built-in help interactive mode
+        e.g. print(help(str)) returns help on the str object and methods/functions
+        Type help() for the help system
+        q or Ctrl-C to quit help
+    Also type copyright, credits, license() for more information
+
+Comments and docStrings
+    # starts a comment
+    ''' <code block> ''' to comment a block of code
+    """ <docString> """ to create a docString for a function, module, class or method
+            or to have multi-line string text
+        docstrings should appear immediately after the function declaration
+        print(<myFunc>.__doc__) to show the docString
+        help(<myFunc>) to show the docString
+    docstrings are available at runtime
+    <funcName>? prints the docstring
+    <funcName>?? prints the docstring and function source code help
+    <funcName> shows the docstring 
+Iterables and Iterators
+    Iterables can be looped over (such as a list)
+    Iterables have the dunder (double underscore) '__iter__' method
+    Iterators have the dunder '__next__' method to select the next object
+    next(list) -- returns the next value in a list or iterable
+    iter(list) -- returns the iterator for a list or iterable
+    iterators can only go forward -- not backwards
+
+Strings
+    str is a builtin class
+    Strings are enclosed in single quotes '...' or double quotes "..." and single quotes are common
+    Use triple quotes """ or ''' to span mulitple lines of text or end each line with \ to escape the newline
+    Strings are indexed base 0, so word='Hello' ... print(word[2]) gives 'l'
+    Strings (and tuples and strings) can be sliced, with [<start>:<end+1>:<step>]
+        Slicing word='Hello' ... print(word[2:4]) gives 'll' (the last number is excluded from output)
+    Strings are immutable and cannot be changed
+    Strings are multipled .. 'Hello' * 3 = 'HelloHelloHello'
+    Strings are lists of characters and list functions work on strings
+    Use \ to escape the ' quote (\'), or use doube-quotes (\") on the string. 
+    Use \n to escape a newline.
+    String '' is the null string
+    Escapes are \', \", \t (tab), \n (newline), \\ (backslash)
+    Prefix with r for a raw string ... print(r'this is Fred\'s string') will print the \' literally (for regex's)
+    Operators 'in' and 'not in' work for strings ... <substring> in <string> returns a boolean
+    ''' and """ enclose multi-line strings
+
+String Formats
+    '{}, {}, and {} are siblings'.format(str1, str2, str3) -- original string format -- string interpolation
+    f'{str1}, {str2}, and {str3} are siblings' -- using f-strings supports after Python 3.
+        f-strings allow expressions within their substitution variables
+
+String Slices
+    <str>[n:m] where n and m are the starting postion and ending position (end is not inclusive
+    <str>[1:4] is substring postions 1 through 3 inclusive
+    <str>[1:] is substring positions 1 through end inclusve
+    <str>[:5] is substring positions from start through 4 inclusive
+    <str>[:] is the full string
+    <str>[1:100] is substring positions 1 through 99 (or end of string if less than 99)
+    <str>[-1] is last position character
+    <str>[-4] is fourth position from last
+    <str>[:-3] is from the start up to (not including) the 3rd from the end
+    <str>[-3:] is from the 3rd from the end to the end
+
+String Substitution
+    text = '%d plus %d is equal to %d' %(3, 4, 7) -- substitutes numbers from tuple into text
+    %d integer
+    %s string
+    %f/%g floating point number
+
+Functions
+    Functions can be passed as parameters of other functions
+    Functions can take optional parameters using default values -- def myFunc(msg1 = 'Nothing passed')
+    Higher Order Funcion -- accepts a function as an argument or returns a function as a result
+
+First Class Functions
+    Functions that support all the operations available to other entites or functions
+    Operations typically include: being passed as an argument, returning from a function and assigning to a variable
+
+Closures
+    Uses are function factories and private methods and variables
+    
+
+String Methods and String Functions
+    Reference: https://docs.python.org/3/library/stdtypes.html#string-methods -- string methods
+    methods can be chained .. 'HELLO'.lower().islower() = True
+    + concatenate
+    <str>.count(<str1>) -- returns a count of str1 within str
+    <str>.find(<strVal>) -- returns the position of <strVal> in <string> or '-1' if not found
+    <str>.join(<list>) -- joins the elements of a list using <str> as the joining element (opposite of split)
+    <str>.input() -- get input ... value = input("Enter a number: ") returns a string
+    <str>.isupper() -- returns boolean if all chars are upper e.g. <mystring>.isupper()
+    <str>.islower() -- returns boolean True if all chars are lower e.g. <nystring>.islower()
+    <str>.isalpha() -- returns True is a string is only characters and no blanks e.g. <mystring>.isalpha()
+    <str>.isalnum() -- returns True if a string is only characters or numbers with no blanks
+    <str>.isdecimal -- returns True if a string is numeric characters and no blanks
+    <str>.isspace() -- returns True if a string is spaces, tabs and new lines and no blanks
+    <str>.istitle() -- returns True if a string is init caps
+    <str>.upper() -- <mystring>.upper()
+    <str>.lower() -- <mystring>.lower()
+    <str>.replace('old','new') -- replace occurances of 'old' with 'new' in string
+    <str>.split('delim') -- returns a list of strings splitting <str> by 'delim'
+    <str>.strip() -- removes leading and trailing spaces
+    len() -- length of a string
+    <str>.split('<delim>'>, <maxNum>) splits a string based on the delimiter. e.g. words = sentence.split(' ')
+        maxNum -- maximum number of splits (optional)
+    startswith(<substr>) -- tests if a string starts with <substr> e.g. <mystring>.startwith(<substr>) returns boolean
+    endswith(<substr>) -- tests if a string ends with <substr> e.g. <mystring>.endswith(<substr>) returns boolean
+    join(<str1>, <str2>) -- joins list elements with intervening chars e.g. ', '.join(['My', 'Name', 'is', 'Fred'])
+    split(<str>) -- splits a string into a list of elements e.g. <mystr>.split(' ')
+    <str>.rjust(<num>, <char>) -- right justify ... e.g. 'Hello'.rjust(10, '*') gives '*****Hello' and the filler char is optional
+    ljust(<num>, <char>) -- left justify ... e.g. 'Hello'.ljust(10, '*') gives 'Hello*****' and the filler char is optional
+    <string>.center(<num>, <char>) -- centers a string ... e.g. 'Hello'.center(11, '*') gives '***Hello***' and the filler char is optional
+    strip(<chars>) -- removes whitespace at the beginning and end of a string. <chars> optionally removes chars
+    rstrip(<chars>) -- removes whitespace at the end of a string. <chars> optionally removes chars
+    lstrip(<chars>) -- removes whitespace at the start of a string. <chars optionally removes chars
+
+Mathematical Functions
+    round(<float>, int) -- rounds the <float> to int decimals
+
+Casting Functions
+    int('string') casts a string of numbers to an integer
+    repr(obj) returns a string representation of an object
+    str(number) casts a number to a string
+    float(string or integer) casts to a float
+
+User-Defined Functions
+    User-defined function must be defined before they are called
+    Use 'def' keyword to define a function .. e.g. def FuncName(a, b): followed by indented function body
+    Use terminate on the return keyword to return a value or list
+    Functions without return values return an implicit 'none'
+    Functions can be defined within other functions
+    Functions and objects can be passed to functions as paramters
+    Use pass to define an empty function
+    Include a return <value> at the end of a function to return a <value>
+    Functions return None if no explicit value is returned
+
+Built-In Functions
+    Do not require an import of a module included in the standard library
+    dir(module_name) -- lists functions in a module
+    abs(), divmod(), input(), open(), staticmethod(), all(), enumerate(), int(), ord(), str(), any(), eval(), isinstance(),
+    pow(), sum() basestring(), execfile(), issubclass(), print(), super(), bin(), file(), iter(), property(), tuple() bool()
+    filter(), len(). range(), type(), bytearray(), float(), list(), raw_input(), unichr(), callable(), format(), locals()
+    reduce(), unicode(), chr(), frozenset(), long(), reload(), vars(), classmethod(), getattr(), map(), repr(), xrange(),
+    cmp(), globals(), max(), reversed(), zip(), compile(), hasattr(), memoryview(), round(), __import__(), complex(), hash()
+    min(), set(), delattr(), help(), next(), setattr(), dict(), hex(), object(), slice(), dir(), id(), oct(), sorted()
+
+Pip, Packages and Package Manager
+    packages are directories containing subpackages
+        sub-packages are sub-directories containing files
+            files with python code -- modules
+                Each module contains multipe defined functions
+            compiled code (from C or Fortran etc)
+             __init__.py file listing executions on import
+    Package directories are at -- C:\Program Files (x86)\Python37-32\Lib\site-packages\
+    packages contain all the files supporting a python module
+    install packages using pip
+        pip is the python package manager, included in python by default since version 3.4
+        downloadable from https://pypi.org/project/pip/
+        pip install flake8 -- install flake8 linter
+        'python -m pip install --upgrade pip' -- this upgrades pip to the current version
+    Packages contain collections of modules or .py files
+        import <module> as <myAlias> -- import package and alias
+        import sound.effects.echo -- imports a single module in a package (sound) and subpackage (effects)
+        from sound.effects import echo -- direct import of a named function
+    pip show <package> -- show installation dependencies for a package
+    pip list -- list installed packages and versions
+    import <module_name> <module_name> <module_name>
+        from <module_name> import *                  #alternative form to import a module
+            Calls to functions within the <module_name> do not need a <module_name> prefix if this form is used
+        from <module_name> import <function>
+        pip install virtualenv -- install the virtual environment package
+    import searchs directories in sys.path (from the sys module)
+
+Modules and Packages
+    Modules are .py files containing collections of functions
+    The module name becomes the namespace for the functions it holds
+    Each function within a module has it's own module as a namespace
+    Python searches for modules in directories in sys.path (import sys and print sys.path)
+    Use sys.path.append() to add to the path
+    Set PYTHONPATH environment variable to automatically append a search path for modules to the search path
+
+Standard Library (.py files) aka the Python Standard Modules
+    References
+        https://docs.python.org/3.7/library/index.html#library-index
+    See sys.path for location of the standard libraries
+    The Python Standard Library are the collection of .py files (modules) loaded with the interpreter by default
+        The functions in the standard library area available without explicit import
+    Some modules are built into the interpreter but not part of the core language
+    Standard Library
+        array -- working with lists
+        calendar
+            calendar.isleap(<year>) returns True or False
+        commands -- run external commands and capture the output -- deprecated in v2 and replaced with subprocess in v3
+            https://docs.python.org/2/library/commands.html -- doc reference for commands module
+        copy -- copies lists and tuples copy.copy(myList), copy.deepcopy(myList) for list including lists
+        csv -- csv formatting and reading/writing csv files
+            import csv
+            <readerObj> = csv.reader(<csvFile>)
+            <readerList> = list(readerObj) -- convert the reader object into a list with each element as a row of data
+        datetime (or use time module)
+            for working with times and dates together, more easily than the time module
+            represented by a floating point number of seconds since 01 Jan 1970 (the Unix Epoch) (01 Jan 1601 for Windows)
+                time before the epoch is a negative number
+            datetime data type
+                datetime.datetime.now() -- function returns current date and time data type
+                datetime.date.today() -- current date
+                datetime.datetime.fromtimestamp(1000000) -- converts from epoch time in minutes
+                datetime.datetime.fromtimestamp(time.time()) -- converts from current time
+            timedelta data type
+        decimal -- decimal datatype
+        email -- email and attachments
+        glob -- file lists from wildcard searches
+        json -- JSON messaging, write and read JSON data
+            json.loads() - -translates JSON to Python (loads means load string) -- returns a dictionary
+            json.dumps() -- translates Python to JSON (dumps means dump string)
+            json stores strings, integers, floats, booleans, lists, dictionaries and none types
+            locale -- formatting for locales
+        logging -- to a file or stderr -- returns a dictionary
+        math -- mathematics ... e.g. math.cos(), math.pi, math.radians(degrees)
+        poplib -- email
+        pprint -- printing
+            pprint()
+            pformat
+        random -- random numbers
+            randItem = random.choice(<list>) -- returns a random choice from a list
+        reprlib -- reporting
+        os -- operating system interface and file system access
+            https://docs.python.org/3/library/os.html -- OS Module Docs
+            os.access() -- Check read permissions
+            os.chdir("<Directory path>") -- change directory (use / for windows paths) 
+            os.chmod() -- Change the mode of path to the numeric mode
+            os.chown() -- Change the owner and group id
+            os.chroot(path) -- Change the root directory of the current process to path
+            os.path.dirname(path) - retuns the directory portion of path
+            os.path.basename(path) - returns the filename portion of path
+            os.path.split() -- returns the path and base filename as a tuple
+            os.environ(<enVar>) -- Get the users environment or a specific value like 'HOME'
+            os.envoron(<enVar>) = <strVal> -- set an environment variable (local to the process, not permanent)
+            os.path.isdir() -- tests if a directory
+            os.path.isfile() -- tests if a file
+            os.path.exists(path) - returns true if the patch exists
+            os.getcwd() -- get the current working directory
+            os.getgid() -- Return the real group id of the current process
+            os.getuid() -- Return the current process’s user id
+            os.getpid()  -- Returns the real process ID of the current process
+            os.getloadavg() -- Show queue averaged over the last 1, 5, and 15 minutes
+            os.getlogin() -- Return the name of the user logged
+            os.getsize() -- Get the size of a file
+            os.listdir("<Directory Path>") - list directory of all files and folders (use / or \\for windows paths)
+            os.makedirs(path) -- Recursive directory creation function
+            os.mkdir(path) -- Create a directory named path from the root node iff intermediate path exists
+            os.makedirs(path) -- Create a full directory path from root node
+            os.path.abspath(path) -- returns the absolute form of <path>
+            os.path.exists() -- Check if a path exists
+            os.path.isfile()
+            os.path.isdir()
+            os.path.split(<filename>) splits the patch and filename
+            os.path.join(dir1, filename) -- create path from directories and filenames and clean up delimiters
+            os.remove(path) -- Remove (delete) the file at the path
+            os.removedirs(path) -- Remove directories recursively
+            os.rename(src, dst) -- Rename the file or directory src to dst
+            os.removedirs(path) -- remove all directories in the path
+            os.rmdir(path) -- Remove (delete) the lowest level folder in a directory path
+            os.system()-- Executing a shell command and returns the output to python output (use subprocess module to capture output)
+            os.stat()-- Get the status and statistics of a file
+            os.umask(mask) -- Set the current numeric umask
+            os.uname() -- Return information about the current operating system
+                Use . for the current <Directory Path>
+            os.walk() -- Print out all directories, sub-directories and files as a tertiary tuple
+            os.unlink(path) -- deletes the file at path (irreversible)
+        shutil -- file and directory management including copying files
+        smtplib -- email
+        sqlite3 -SQLite database library -- part of the standard library
+        struct -- binary files
+        subprocess -- start other processes (replaces commands module in v3)
+            (status, output) = subprocess.getstatusoutput(cmd) -- runs a file system command and returns the status and output
+            Popen('<execPath>', '<arguments>') starts a program in exec path and returns a process id
+            procID.poll() -- returns None if process is running, and 0 if finished w/out errors
+            prodID.wait() -- returns 0 when process is finished, otherwise freezes the thread
+            subprocess.Popen(['C:\\python34\\python.exe', 'hello.py']) -- to run another python script
+        sys -- command line arguments (also argv, stdin, stdout getopt and argparse)
+            sys.argv is a list of command line arguments
+            sys.argv[1:] -- contains command line arguments
+            sys.arg[0] -- contains the program and full path
+            len(sys.argv) -- the number of command line arguments
+            exit()
+        textwrap -- formats paragraphs
+        threading -- multithreading
+        time (or use datetime module)
+            import time as tm
+            tm.time() -- time in seconds
+            tm.sleep()
+            tm.time() -- the number of seconds since the start of the epoch
+            tm.time_ns() -- the number of nanosecnds since the start of the epoch
+            tm.ctime() -- character time or timestamp
+            tm.ctime(t) -- the character time representing the float time of t (time.ctime(time.time))
+            dt.year, dt.month, dt.day retrieve the year, month and day in a datetime variable (from dt = datetime.datetime.now())
+            dt.hour, dt.minute, dt.second are also in a datetime variable
+            tm.ctime() -- time formatted as text
+            tm.gmtime(0) -- the start of the epoch as a string structure -- as a structure
+            tm.gmtime() -- the current time in GMT using the default as current time -- as a structure
+            tm.localtime() -- the current time in local time using the default as current time -- as a structure
+            tm.strftime() -- string format time on a time structure (tm.strftime('%Y-%m-%d', tm.localtime())
+            tm.asctime() -- local time in the format 'Sun Apr 28 12:03:27 2019'
+            tm.strftime('%c') -- local time in same format as tm.asctime()
+        urllib -- internet (replaced by request module in version 3)
+        urlparse -- internet (replaced by request module in version 3)
+        xmlrpc -- remote procedure calls
+        xml -- xml formatting
+
+Compiled Modules
+    Compiled module code is in the __pycache__ subdirectory of each module with a module.version.pyc naming standard
+    .pyc modules load faster than .py modules but the don't run faster
+
+Non-Standard Modules
+    Install on the command line with 'pip install <package_name>
+    AstroPy -- astronomical library
+    beautifulsoup4 (bs4 library) -- searching/parsing text and anchors in HTML pages (pip install BeautifulSoup4) import bs4
+    imapclient
+    io
+    logging Module -- to display log messages to the screen
+        import logging
+        specify the contents of the logRecord object
+        logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
+    openpyxl==2.1.4
+        import openpyxl
+        <wb> = openpyxl.load_worksheet('<path/file.xlsx') -- opens a workbook
+        <wb>.get_sheet_names() -- fetches all sheet references as a list
+        <sheet> = <wb>.active -- returns the active sheet reference
+        <cell> = <sheet>[A1] -- returns the reference to cell A1 of <sheet> using cell references
+        <cell> = <sheet>.cell(row=1, column=1) -- returns a reference to cell A1 using numeric references
+        <cell>.value -- returns the value of a cell
+        <cell>.row -- returns the row number of a cell (base is 1)
+        <cell>.column -- returns the column number of a cell (base is 1)
+        <sheet>.max_row -- returns the max row number
+        <sheet>.max_column -- returns the max column number
+    math Module
+        math.round(<float>) -- rounded value of a float
+        math.abs(<value>) -- absolute value
+    MySQLdb -- database
+    pillow -- image manipulation
+    psutil -- psutil (python system and process utilities) is a cross-platform library for retrieving information on running processes and system utilization
+    pyautogui -- windows and GUI manipulations
+    PyPDF2
+    pyperclip Module -- clipboard modules
+        pyperclip.copy(<mystring>) -- places <mystring> in the Windows clipboard
+        pyperclip.paste() -- pastes text from the Windows clipboard
+    python-docx
+    pytz -- timezones
+    pyzmail
+    random Modules
+        import random
+        from random import *
+        random.randint(<low>, <high>) -- generate a random integer >= <low> and <= <high>
+    re Module -- Regular Expressions
+        match1 = re.search(r'<expression>, string) -- returns the first matched word group if found, otherwise returns None
+            r is the raw option to pass backslashes without change
+            search returns a match object
+            match1.group() is the found string
+            match1.span() is the starting and ending position of the string
+        matches1 - re.findall(r'<expression>, string) -- returns a list of all matched word groups if found, otherwise None
+        Options for re methods: IGNORECASE, DOTALL, MULTILINE
+        newstr = re.sub(<expression>,<subexpress>, str) -- substitutes expression with subexpress on each match and returns the new string
+    requests -- submits web requests (replaces urllib and urlparse in version 3)
+    SciPy -- scientific library
+    selenium
+    send2trash -- deletes to the wastebasket so it can be reversed
+        send2trash.send2trash(<filename>) -- sends <filename> to trash (for future recovery)
+    shutil -- shell utilities for file system maintenance
+        shutil.copy(source, destination) -- copy a file or folder
+        shutil.copytree(source, destination) -- copy a folder tree to a new folder
+        shutil.move(source, destination) -- move a file or folder where the destination can be a folder or file name
+            if the destination is a folder and does not exist, move will use the name as the filename
+        shutil.rmtree(path) will remove the folder at path and all child folders (irriversible)
+    smtplib Module
+        import smtplib
+        References
+            https://dbader.org/blog/python-send-email
+        https://myaccount.google.com/lesssecureapps?pli=1 -- when logged into GMAIL to set promiscuous mail
+        Parameters include:
+            Recipient email address
+            Sender email address
+            Message Subject
+            Message Body
+            Attachments (if any, not required)
+            SMTP server address
+            SMTP port (usually 25, but could also be 2525 or 587 as alternatives)
+    sys Module
+        sys - built in for all pythons -- sys.ps1 is primary prompt, sys.ps2 is secondary prompt sys.path is the search path for modules
+        sys.exit() -- exit the running program
+    timeit -- measure performance in code snippets
+    traceback
+        traceback.format_exc() -- returns formatted traceback error message
+    turtle -- drawing
+        shape, speed, width, color, penup, goto, pendown 
+    twilio
+    webbrowser -- to open a webpage
+        webbrowser.open('URL') opens a tab of a webbrowser to a URL
+    winreg - built in for Windows python
+
+Files (use the standard library)
+    References
+        https://dbader.org/blog/python-file-io
+    Tips
+        Paths must use '/' and not '\' on MS DOS machines
+        Files are iterable objects and can be read on line at a time
+    Text file modes are 
+        'r' read a file (default mode if not specified)
+        'r+' read and write an existing file. The stream is positioned at the beginning of the file 
+        'w' write a file only. Over-write (truncate an existing file even if nothing is written. Otherwise creates a new file
+        'w+' read and write a file. Create if not existing. The stream is positioned at the beginning of the file. 
+        'a' append a file, 
+        'a+' append or read a file and create new if it does not exist 
+        'x' exclusive create
+    Binary file modes are (Windows only, suppressed adding the \r character to each \n) 
+        'rb' -- read binary
+        'r+b' -- read and write an existing file
+        'wb' - overwrite binary 
+        'w+b'-- overwrite existing binary or create new file if it does not exist 
+        'ab' -- append binary
+        'a+b'-- append binary or create a new file if it does not exist 
+        'xb'
+    File Mode Reference from https://stackoverflow.com/questions/16208206/confused-by-python-file-mode-w/16212401
+        r Opens a file for reading only. The file pointer is placed at the beginning of the file. This is the default mode.
+        rU Read in universal mode. Automatically translates newlines to \n in any operting system environment
+        r+ Opens a file for both reading and writing. The file pointer will be at the beginning of the file.
+        rb+ Opens a file for both reading and writing in binary format. The file pointer will be at the beginning of the file.
+        w Opens a file for writing only. Overwrites the file if the file exists. If the file does not exist, creates a new file for writing.
+        wb Opens a file for writing only in binary format. Overwrites the file if the file exists. If the file does not exist, creates a new file for writing.
+        w+ Opens a file for both writing and reading. Overwrites the existing file if the file exists. If the file does not exist, creates a new file for reading and writing.
+        wb+ Opens a file for both writing and reading in binary format. Overwrites the existing file if the file exists. If the file does not exist, creates a new file for reading and writing.
+        a Opens a file for appending. The file pointer is at the end of the file if the file exists. That is, the file is in the append mode. If the file does not exist, it creates a new file for writing.
+        ab Opens a file for appending in binary format. The file pointer is at the end of the file if the file exists. That is, the file is in the append mode. If the file does not exist, it creates a new file for writing.
+        a+ Opens a file for both appending and reading. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.
+        ab+ Opens a file for both appending and reading in binary format. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.
+    file_object = open(filename, mode) -- open a file (e.g. open("C:\path\Myfile.txt", "w") -- opens Myfile for over-writing
+    f = open(<filename>, <mode>) to open a file and define a file object 'f' or handle
+        Alternate form: with open(<filename>, <mode>) as f: -- automatically closes the file after it's used within the loop
+    with open("workData.txt", "r+") as file_object: -- nested form automatically closes file_object outside the block
+    f.close() -- destroy the file handle and flush the file buffer and frees memory used for file I/O
+    file_object.write("Some text\n") -- write to a file
+    fileobject.seek(offset, from_what) -- move the position pointer where from_what must be the start of the file for text
+        from_what is 0 beginning of file, 1 current position, 2 end of file
+        For text files seek(0, 2) moves to the end of the file 
+        seek(0, 0) moves to the start of the file
+    fileobject.tell() -- current position in the file.
+    Open a file in append mode and use fileobject.tell() to get the file size
+    f.read(n) -- n is optional number of characters, or leave null for entire file
+    f.readline() -- reads a single line from a file, one character at a time
+    f.readlines(<hint>) -- read a file and returns all lines into a character list. <hint> in an integer of max chars to read
+    f.read() -- read an entire file and not line by line
+    for line in f ... print(line, end=' ') to read each line of a file one line at a time
+    f.write('string') -- returns the number of characters written
+    f.seek(n) -- to to the nth byte in the file
+    f.read(n) -- read n bytes at the current postion and set the seek to the next byte
+    f.seek(-n) -- go to the nth byte before the end of the file
+    Context Managers for File Operations -- automatically close the file after (indented) actions are completed
+        with open('filename.ext', 'r') as fhandle:
+           ... file actions
+
+Data Structures
+    Lists, Tuples, Sets and Dictionaries: can hold any data type or data structure
+    Lists and Tuples are sequences (including strings)
+    Lists are sortable general purpose arrays which grow and shrink
+        Lists include strings
+    Tuples are immutable lists which cannot change or be sorted but are faster than lists
+    Sets are non-duplicate items, unordered and allowing set operations
+    Dictionaries are key/value pairs, unordered, like the Java hashmap
+
+Lists
+    Lists are sequences
+    list1 = [] or list = list() creates a null list of objects
+    list1 = list(<object>) -- constructor converts an interable object (tuple, string, set or dictionary) to a list
+    Lists can have duplicates
+    Lists are mutable and Tuples are not. Otehrwise they are the same
+    list = ['a', 'b', 'c'] -- defines a mutable list as a value that can contain mutiple values in an ordered sequence
+        list is a reference or pointer to the list so changing elements in list will change any copies
+    for element in list: print(list) -- prints all the members of a list
+    Join elements into a string with array_str = "".join(list) -- use a different value in "" to insert between each value
+    Elements in a list are referenced by number -- List[4]. The first element is zero
+    Lists within a list are referenced by two numbers -- List[4][3] is the 4th element in the 5th element of the list
+    The base index is 0 in a list
+    The index in a list can only be integer, not float
+    Negative indices start on the end of a list and count backards. -1 is the end, -2 is second from end etc
+
+Tuples
+    Tuples are sequences
+    Tuple -- an ordered immutable sequence or list of objects using () notation, otherwise like a list
+    tuple1 = () -- empty tuple
+    tuple2 = (1, 2, 3) -- three-valued tuple
+    tuple3 = 1, 2, 3 -- three-valued tuple (parens are optional)
+    tuple4 = 2, -- single value tuple with trailing comma
+    tuple5 = tuple(list1) -- creating a tuple from a list
+        Can contain different data types like a Struct in C and Java
+        Used to return multiple values from a function
+        myTuple = ('Hello',) needs trailing comma to indicate a tuple and not a set of parentheses
+        mytuple = ('a', 'a', 'c') -- define a tuple as a value. A tuple is also a pointer to a list.
+            Use nested () for dimensional tuples ... myTuple = (('a', 'b'), ('c, 'd')) etc
+            Use indices to reference elements ... for value in myTuple: value[-1] ... gives last element in each value group
+    A list is a value that can be passed to a function
+    Lists are defined as [item1, item2, item3, item4...] ... a comma-separated list of items
+    Len(list) ... counts members of a list
+    list[i] references an list element and myTuple[i] references a tuple element
+
+List and String Slicing
+    A list can be sliced using two indices: start:finish e.g. List[2:5]
+    list[-1] is the last element in the list
+    list[0:2] are the first 2 elements in the list (i.e. 0 and 1)
+
+List Functions on the list object
+    + append or combine lists -- list1 + list2 combines both lists
+    list = [] -- define an empty list
+    len(list) is the number of elements in the list
+    List concatenate with '+'
+    del list[2] deletes the third element.
+    <val> in <list> ... operator True if value in list
+    not in ... operator True if value not in list
+    Multiple Assignment ... use to assign all values in a list to variables
+        number of variables must match number of items in the list
+    list.append(<value) .. adds a value to a list ... list.append('Another') adds 'Another' to the end of list
+        use append to add a list to a list, otherwise it will add it as a single element with subelements
+    list.extend(list2) adds list2 to the end of list1
+    list.index(<value>) .. returns the index of the first matching value in a list, or ValueError
+    list.insert(<index>, <value>) ... inserts <value> at <index>
+    list.pop() -- returns the last value in a list and removes it from the list (to use a list as a stack)
+    list.reverse() -- reverses a list
+    list.remove(<value>) ... removes the first occurance of value from the list ... list.remove('<value>') ,, returns ValueError if not found
+        be careful iterating and removing because iteration skips the next value when a value is removed
+    sorted(list , key=<sortKey>, reverse=<Boolean) ... function, returns a new sorted list or any other enumeration and original list or enumeration is unchanged
+        list items must be the same data type (string or integer)
+        reverse option sorted(list, reverse=True) sorts in reverse
+        key option sorted(list, key=function or method) -- function or method takes and returns a single value e.g. len, str.lower of the iterator value or dictionary key)
+    list.sort(reverse=True) ... method, sorts the values in a list (only a list, not other enumerations). Sort order is ASCII
+        Use sort(key=str.lower) to sort all alpha values based on lower case
+        Returns None
+    <list3> = zip(<list1>,<list2> - joins two lists into a two dimensional list
+    enumerate(list) -- returns an index number and value from each value in the list
+    sum(list) -- returns the sum of elements in the list
+    min(list) -- returns the min value in the list
+    max(list) -- returns the max value in the list
+
+List Comprehensions
+    List Comprehensions are a shorthand syntax for generating lists from other lists
+        range(8) -- define a list of numbers 0 to 7
+        [expr1 for var in list if expr2] -- where expression is a formula on the var in the list
+            expr1 is evaluated once for every value in the list
+            expr2 is used to apply expr1 conditionally when expr2 is true
+        doubles = [2 * x for x in range(8)] -- define a list of numbers that are double the range values (list comprehension
+
+Generators
+    Use 'yield' and 'next' keywords to do the same work as a list comprehension
+
+Sets
+    Sets are unordered collections of dictionary keys (without the value pair)
+    mySet = set() -- an empty set
+    Sets do not allow duplicates so any duplicates are discarded
+    Sets find members quicky -- they are indexed
+    Indexes in dictionaries use keys which can be non-integer
+    Items are references by myDict[<key>]
+    Keys can be integers, string or tuples
+    Dictionaries are unordered and cannot be sliced
+    Accessing a value in a dictionary with a non-existant key gives a KeyError
+        Use 'in' to test if a key exists in a dictionary first ... e.g. 'a' in myDict -- returns true if exists
+
+Dictionaries
+    Dictionaries are unordereed collections of key-value pairs: hash maps or associative arrays
+        the key is identifer of the data and the value is the actual data
+    myDict = {} -- empty dictionary
+    Dictionaries use myDict= {<key>: <value>, ...}
+        e.g. myDict = {'a': 'Aardvark', 'b': 'Balloon', 'c': 'Creampuff', 'd': 'Dreadnought', 'e', 'Earthenware'}
+        value can be a list [val1, val2, val3 ...]
+    add values ... myDict[<key>] = <value> -- Adds value to a dictionary
+        myDict['f'] = 'Fantasy'
+        myDict['g'] = 'Geology'
+        If a value is added but the key exists, the value for the key is updated
+    myDict.update{'key1': newVal1, 'key2': newVal1} -- update takes a dictionary as an argument
+    del myDict[<key>] deletes a dict entry based on a key value
+    myDict.keys() fetches all keys in myDict and print(myDict.keys()) prints them
+    myDict.values() fetches all dictionary values and print(myDict.values()) prints them
+    myDict.items() fetches all key-value pairs in a dictionary and print(myDict.items()) prints them
+    myDict.get(<key>, <default>) fetches a value from a key or returns a default instead of an error 
+    setdefault(<key>, <value>) sets the dictionary value default ... myDict.setdefault(<key>, <defaultValue) sets an initial value for the key added to the dictionary
+        setdefault won't do anything if the key already exists with a value
+    Dictionary Formatting
+        hash = {}
+        hash['word'] = 'garfield'
+        hash['count'] = 42
+        s = 'I want %(count)d copies of %(word)s' % hash  # %d for int, %s for string
+        # 'I want 42 copies of garfield'
+
+Set and Dictionary Methods
+    intersection e.g. set1.intersection(set2)
+    union e.g. set1.union(set2)
+    difference e.g. set1.difference(set2)
+
+Writing HTML
+    Start with a shebang line as the first line -> #!/usr/bin/python and follow with a blank line
+    Include a content line as the third line in the script -> print "Content-Type: text/html\n\n"
+
+Conditionals, Flow Control and Loops
+    There is no switch case statement in Python so use if elif else ...
+    Flow Control statements comprise and condition (expression) and a clause (the block of code if the condition is true)
+    Conditions evaluate to a boolean value: True or False
+    Clauses begin with indentation and can contain other blocks
+    Clauses end when indentation ends
+    if flow control
+        if <var> == <value>:      # if is required but elsif and else are optional
+            <if statements>
+        elif <condition>          # there can be multiple elif's but only one or none will be executed
+            <elif statements>
+        else:                     # optional else
+            <else statements>
+    for loop (2 forms)
+        for <var> in range(<start>, <stop>, <step>):        # <stop> is required and is greater than max value, <start> defaults to 0, <step> defaults to 1
+            <statements>                                    # iteration occurs up to <stop> but not including <stop>
+            break                 # to force a break out of the loop or an infinite loop
+            continue              # to force the next run of the loop w/out running intervening code
+        for <var> in <iterable list>                         # loops for each object in list
+            <statements>
+            break
+            continue
+    while loop
+        while <condition>:        # runs while as long as condition evaluates True
+            <statements>
+            break                 # to force a break out of the loop or an infinite loop
+            continue              # to force to the next run of the loop w/out running intervening code
+
+Formatting
+    \ ... continuation of line
+    Indenting ... is ignored in lists crossing multiple lines
+
+Errors and Exceptions
+    https://docs.python.org/3/tutorial/errors.html -- errors doc
+    run time exceptions halt code execution and print an error message if exceptions are not trapped
+    Syntax Errors
+        Parsing Errors
+    Exception Trapping
+        Run time errors
+        Exception handlers using try; and except; can trap errors
+            Any error witihin a try clause moves execution to the except clause
+            try;
+                <try clause>
+            except <exception_nam>:              # <exception_name> is optional and predefined such as NameError, ZeroDivisionError etc
+                <exception clause>
+            else:
+                <else clause>                    # optional for nothing going wrong
+            finally:
+                <finally clause>                 # always executes whether or not an error happened in the try clause
+    User Defined Exceptions can be raised for any condition and show a user defined error message
+        raise Exception('Exception Message')
+        The program ends if this exception is not trapped by a try/except clause
+
+Assertions
+    assert <var> == <val>, 'Message' -- tests if <var> == <val> and if false, prints 'Message' as AssertionError
+    The program terminates immediately if AssertionError is fired
+    assert should be used to detect programming errors
+    use the CL option -o to disable assertions in the final code
+
+Logging
+    import logging
+    logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')  -- formats logging object with logging to terminal
+    logging.basicConfig(filename='myProgramLog.txt', level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s') with logging to file
+        writes to the current directory unless changed. i.e. C:\\Program Files (x86)\Python37-32\
+    logging.debug(<'Logging message in code>') --creates logging message to screen
+    logging.disable(logging.CRITICAL) -- disable all logging messages at or below CRITICAL
+        Put a disable close to the import logging and comment it in or out to enable or disable logging
+    Logging Levels
+        DEBUG -- logging.debug() -- lowest level for problem analysis
+        INFO -- logging.info() -- informational messages to show system state
+        WARNING -- logging.warning() -- potential problems
+        ERROR -- logging.error() -- source of failure
+        CRITICAL -- logging.critical() -- source of major failure
+
+Debugging
+    import pdb, then pdb.set_trace() -- interactively or inserted into a line of script
+    python -m pdb <scriptname.py> -- running a script
+    https://realpython.com/python-debugging-pdb/ -- tutorial
+    traceback is printed on untrapped errors and include: 
+        error message, 
+        the line causing the error, 
+        the call stack (sequence of function calls that let to the error)
+    import traceback -- to capture and format the traceback message
+        traceback.format_exc() -- returns the formatted error message which can be written to a log file
+
+Scopes and Namespaces
+    LEGB: Local, Enclosing, Global and Built-in
+        Local - variables defined within a function
+        Enclosing -  variables defined within the local scope of an enclosing function
+        Global - top level of a module or explicitly declared
+        Built-in - pre-assigned names -- infrequently used
+    global x -- defines a global x variable (within a function)
+    nonlocal x -- defines a nonlocal x in enclosing functions
+    A namepace is a mapping from names to object
+    The script read by the interpreter is __main__
+    Built-in methods are in the namespace 'builtins'
+    Scope is a textual region where the namespace is directly accessible (using unqualified references)
+    Global scope is created when a program begins and there is only one global scope
+    Local scope is created when a function is called and destroyed when a function returns a value
+    Local scope can access global variables but cannot access variables in any other local scope
+    You can use the same name for different variables in different local scopes
+    Global variables can be read from the local scope so avoid using local variables named the same as globals
+    Use the global statement to set or modify a global variable within a local scope
+
+Classes
+    Comprise attributes (data) and methods (functions)
+        Attributes -- class data which define state
+        Methods -- class functions
+    Allow logical grouping of data and functions for reusing and extending
+    Basic class definition ...
+        class Employee:
+            pass
+    Instances of a class are unique instances of the assocated class
+    Classes follow C++ and Modula-3 in syntax and functionality
+    Classes create instances and instances have attributes to define state
+    Classes have methods for modifying the state
+    Classes can inherit from multiple base classes and these derived classes can override methods inherited from the base classes
+    Class members are public by default and can be made private
+    Data attributes and methods are instance attributes of an object
+    Init methods __init__ initialize instances (as constructores) and are run automatically when an instance of a class is created
+    Class Variables are variables shared by all instances of a class
+    Instance Variables - specific to an instance and created in __init__
+    Class Variables - apply to a class and all instances of a class
+    Print a class or instance dictionary with <className>.__dict__ or <instanceName>.__dict__
+    Methods
+        Types are Regular, Class and Static Methods
+        Regular methods take the instance as the first argument ('self')
+        Class methods take a decorater @classmethod and a first argument 'cls'
+            Class methods are used as alternative constructors
+        Static methods do not take the class or instance as a first parameter and use decorator @staticmethod
+            The instance or class does not need to reference the instance or class to work
+
+Web Scraping and Requests API
+    import webbrowser
+        xwebbrowser.open('http://inventwithpython.com/') -- opens the default webbrowser at a webpage
+    import requests (after pip install requests) -- for downloading content from the web
+        request.get(URL) returns a webpage as a get
+           e.g. res = requests.get('https//automatetheboringstuff.com/files/rj.txt') -- returns a response object with attributes
+           the primary attribute of the response is a status code
+        res.status_code -- the status attribute of the response object after the request is made
+        res.text -- the returned text attribute with the contents of the response 
+        res.raise_for_status() -- raises an error if found in the response (such as 'HTTPError: 404 Client Error: Not Found for url')
+        res.content -- retrieve the content in bytes
+        res.iter_content(100000) -- iterate through content in byte blocks
+            (e.g. for chunk in res.iter_content(100000): 
+                     playFile.write(chunk)) -- to write the content to playFile on the file system
+    https://httpbin.org/ -- practice site for testing http transactions
+    Developer Tools in Browser - F12 (and F12 to remove) 
+
+SQLite3
+    SQLite3 is part of the standard library - import without installing
+        import sqlite3
+        sqlite3.connect(:memory:) -- creates a database in RAM which refreshes on every run
+        sqlite3.connect(<filename>) -- creates a db file on the local directory (binary file)
+
+    Table Datatypes: NULL, INTEGER, REAL, TEXT, BLOB
+

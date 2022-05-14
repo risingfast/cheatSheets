@@ -1,0 +1,411 @@
+Assembly Cheatsheet x86 Architecture
+
+References
+    https://www.youtube.com/watch?v=VQAKkuLL31g ; youtube video to create and compile and link an NASM program in Linux #1
+    https://www.youtube.com/watch?v=BWRR3Hecjao ; youtube video to create and compile and link an NASM program in Linux #2
+    http://www.tutorialspoint.com/assembly_programming - step by step intro for NASM multiple tutorials
+    https://www.youtube.com/playlist?list=PLPedo-T7QiNsIji329HyTzbKBuCAHwNFC ; series of videos on Assembly programming in MASM
+    http://masm32.com/ ; Microsoft MacroAssembler 32 bit download
+    https://www.youtube.com/watch?v=75gBFiFtAb8&t=3s ; HackUCF Assembly Crash Video
+    https://www.youtube.com/watch?v=wLXIWKUWpSs ; Intro to x86 Assembly Language (part 1)
+    https://nasm.us/ ; Netwide Assembler (NASM) home page
+    https://www.cs.uaf.edu/2017/fall/cs301/reference/x86_64.html ; x86_64 NASM Assembly Quick Reference ("Cheat Sheet")
+    https://gcc.godbolt.org/
+    https://www.youtube.com/watch?v=wLXIWKUWpSs -- x86 Assembly Language Introduction
+    https://www.youtube.com/watch?v=L1ung0wil9Y&t=137s -- MIT Assembly Language and Compiler Architecture
+
+Look at MASM and Assembly programming (Done)
+    https://www.youtube.com/watch?v=vtWKlgEi9js -- ALP Tutorial 00 -- Introduction to ASL (Done)
+    https://www.youtube.com/watch?v=mHC4-W3OUTQ -- ALP Tutorial 01 -- Installing MASM32 SDK (Done)
+    https://www.youtube.com/watch?v=FJI52OGese8 (Done)
+    https://www.youtube.com/watch?v=Uthq3BztdFA -- ALP Tutorial 03 -- Integer Expressions (Done)
+    https://www.youtube.com/watch?v=bIYWGX-s1sw -- ALP Tutorial 04 -- Real Number Constants (Done)
+    https://www.youtube.com/watch?v=1FsQHX4eHoA -- ALP Tutorial 05 -- Character Constants (Done)
+    https://www.youtube.com/watch?v=7fs-opP5iws -- ALP Tutorial 06 -- String Constants (Done)
+    https://www.youtube.com/watch?v=MOmkQyLEP1E -- ALP Tutorial 07 -- Reserved Words (Done)
+    https://www.youtube.com/watch?v=A5S27ZTItPU -- ALP Tutorial 08 -- Identifiers (Done)
+    https://www.youtube.com/watch?v=qj34jjuxGxc -- ALP Tutorial 09 -- Directives Pt1 (Pragmas) (Done)
+    https://www.youtube.com/watch?v=7HF3Lee9WS8 -- ALP Tutorial 10 -- Directives Pt2 Defining Segments (Done)
+    https://www.youtube.com/watch?v=ZrE-f5ijk6g -- ALP Tutorial 11 -- Instructions Pt1 Lables (Done)
+    https://www.youtube.com/watch?v=N3rQANcFCe4 -- ALP Tutorial 13 -- Instructions Pt3 Operands (Done)
+    https://www.youtube.com/watch?v=V25cg6rAlKg -- ALP Tutorial 14 -- Instructions Pt4 Comments (Done)
+    https://www.youtube.com/watch?v=OuDCI5pfpds -- ALP Tutorial 15 -- Installing 8086 Emulation (Done)
+
+Hello World in Assembly (Done)
+    https://www.youtube.com/watch?v=015dEE3NnZg -- Hello World in Assembly in 5 Minutes (Ubuntu 20.04) (Done)
+    https://www.youtube.com/watch?v=skRyVBM8yX0 -- Hello World Code Explanation Assembly in 15 Minutes (Ubuntu 20.04) (Done)
+
+x86_64 Linux Assembly (with NASM) (Done)
+    https://www.youtube.com/playlist?list=PLetF-YjXm-sCH6FrTz4AQhfH6INDQvQSn -- playlist (Done)
+    https://www.youtube.com/watch?v=VQAKkuLL31g -- x86_64 Linux Assembly #1 - "Hello, World!" (Done)
+    https://www.youtube.com/watch?v=BWRR3Hecjao -- x86_64 Linux Assembly #2 - "Hello, World!" Breakdown (Done)
+    https://www.youtube.com/watch?v=busHtSyx2-w -- x86_64 Linux Assembly #3 - Jumps, Calls, Comparisons (Done)
+    https://www.youtube.com/watch?v=VAy4FGHDx1I -- x86_64 Linux Assembly #4 - Getting User Input (Done)
+    https://www.youtube.com/watch?v=NFv7l3wQsZ4 -- x86_64 Linux Assembly #5 - Math Operations and the Stack (Done)
+    https://www.youtube.com/watch?v=Fz7Ts9RN0o4 -- x86_64 Linux Assembly #6 - Subroutine to Print Strings (Done)
+    https://www.youtube.com/watch?v=mRTax0MLaok -- x86_64 Linux Assembly #7 - Macros (Done)
+    https://www.youtube.com/watch?v=XuUD0WQ9kaE -- x86_64 Linux Assembly #8 - Subroutine to Print Integers
+    https://www.youtube.com/watch?v=xtFs1yBVinc -- x86_64 Linux Assembly #9 - Command Line Arguments
+    https://www.youtube.com/watch?v=AwmhZUATGYM -- x86_64 Linux Assembly #10 - Introduction to Files and File Permissions (Done)
+    https://www.youtube.com/watch?v=vXsUIX_Ozgc -- x86_64 Linux Assembly #11 - Writing Files (Done)
+    https://www.youtube.com/watch?v=BljOGzRP_Ws -- x86_64 Linux Assembly #12 - Reading Files (Done)
+    https://www.youtube.com/watch?v=bV0NJ7zvap8 -- x86_64 Linux Assembly #13 - Pausing With Nanoi sleep (Done)
+
+Introductory Intel x86: Architecture, Assembly, Applications
+    https://www.youtube.com/watch?v=H4Z0S9ZbC0g&t=409s -- Day 1 Part 1: Introductory Intel x86: Architecture, Assembly, Applications
+
+x64 Assembly Language for Intel and AMD
+    https://www.youtube.com/watch?v=rxsBghsrvpI -- Lesson 1
+
+Assembling and Linking
+    create a file with .asm extension
+    nasm -f elf64 -o file_name.o file_name.asm ; Network assember to create an object file
+    ld file_name.o -o file_name ; GNU linker to link the object file into an executable
+
+How to Start Coding Assembly on Windows (MASM)
+    https://www.youtube.com/watch?v=lCjbwLeLNfs
+    http://crclayton.com/projects/assembly-tutorial/
+
+set projectName=helloworld
+\masm32\bin\ml /c /Zd /coff %projectName%.asm
+\masm32\bin\Link /SUBSYSTEM:CONSOLE %projectName%.obj
+%projectName%.exe
+
+Heap - manual memory allocation (malloc, calloc, global or static variables)
+
+Stack - push or pop, grows towards lower memory addresses
+    stack frame ; stack segment with all local variables of a function
+    Stack frame ; grows downwards
+
+Registers - addresses or values
+    General purpose registers: 
+        rax ; return values from syscalls and functions, 
+        rbx ; base pointer to the data section
+        rcx ; scratch register and general counter
+        rdx ; scratch register
+        Index registers:
+            rsi ; source pointer for string operations
+            rdi ; destination pointer for string operations
+    Stack Pointer registers:
+        rip - instruction pointer to the next executable instruction (incremented by 1 with each execution)
+        rbp - stack base pointer has address of base of the current stack frame
+        rsp - stack pointer has address of top of the current stack frame
+    Eight Additional registers:
+        r8 - r15
+        function prolog - everthing between esp and ebp which contains local function variables
+        Caller-save registers ; must be saved by the caller before calling another function (may be lost otherwise)
+            RAX, RDX, RCX
+        Callee-save registers ; called function must preserve these values for the caller or restore these values upon return
+            RBP, RBX, RSI, RDI
+    Flags Register
+        RFLAGS ; flags register
+
+Architectures
+    32 Bit
+    64 Bit
+
+Instructions
+    Operation and one or two arguments (arguments separated by a comma)
+    Types: AT&T and Intel
+    mov arg1, arg2 - moves arg2 to arg1 (Intel)
+        e.g. mov eax, [ebp-0x8] ; moves contents of address ebp-0x8 to eax
+        you cannot mov from memory to memory
+    add arg1, arg2 - adds arg2 to arg1 and stores the result in arg1
+    sub arg1, arg2 - subtracts arg2 from arg1 and stores the result in arg1
+    push arg1 - pushes arg1 onto the top of the stack (decrements stack pointer and stores arg1 at stack pointer address)
+        push decrements the stack pointer by the size of the data pushed onto the stack
+    pop reg - pops the top value of the stack to reg and increments the stack pointer
+        pop increments the stack pointer by the size of the data popped off the stack
+    lea reg, addr - load effective address copies an address into a register
+    cmp arg1, arg2 - compare by subtracting arg2 from arg1. Sets a flag with result (<0, 0 or >0)
+    jmp addr - jump (calls cmp and jumps if ==, if <= o if =>). Jumps to address if condition is met
+    call <func> - same as push eip onto stack, then jmp to <func>
+    ret - sets esp to eip in stack frame and pops return from stack to eip
+
+Install NASM on Linux
+    sudo apt install nasm
+
+Compile and Run Assembly on Linux (using NASM)
+    nasm -f elf64 -o first.o first.asm ; assemble
+    ld first.o -o first ; link with the gnu linker
+    ./a.out ; run
+
+Sections
+    .data data ; section for data defined prior to compilation
+    .text code ; section for executable code
+        db     ; define bytes (8 bits)
+        dw     ; define word (16 bits)
+        dd     ; define double word (32 bits)
+        dq     ; define quadruple word (64 bits)
+    .bss  data ; 'block starting symbol' section - for future use variables, reserved space
+
+Labels
+    labels are addresses in memory calculated by the compiler
+    a call to a label loads the next instruction from the label's address
+    _start: ; starting address used by the linker to mark execution of first instruction
+    global ; a qualifier (linker instruction) for the _start label
+
+Flags
+    RFLAGS register 
+    Flags are part of a larger register - each flag is a single bit
+    The RFLAGS registers contain multiple flags
+    The RFLAGS register is updated after each instruction
+    CF ; Carry
+    PF ; Parity
+    ZF ; set to 1 if the result of the last instruction was 0
+    SF ; set to msb of the result of the last instruction (1 for negative, 0 for positive)
+    OF ; Overflow
+    AF ; Adjust
+    IF ; Interrupt Enabled
+
+Pointers
+    Pointers are registers that hold memory addresses
+    rip ; next execution address
+    rsp ; top of the stack
+    rbp - bottom of the stack
+
+Comments
+    ; prefix a comment with ; in nasm anywhere on the line
+
+System Calls
+    syscall ; with registers populated is a service request to the kernel
+    arguments:
+        RAX ; System call ID 
+        RDI ; first argument (destination index) or #filedescriptor (positive integer)
+               0 std_in
+               1 std_out
+               2 std_erro
+        RSI ; second argument (source index) or $buffer
+        RDX ; third argument (byte count)
+        R10 ; fourth argument
+        R8  ; fifth argument
+        R9  ; sixth argument
+
+Macros
+    Predefined set of instructions that perform a specific task
+    %macro <macroname> <argc> defines a multi-line macro name and the number of commnd line arguments
+    %endmacro marks the end of a macro
+    example:
+        %macro exit 0
+            mov rax, 60
+            mov rdi, 0
+            syscall
+        %endmacro
+    Call a macro using the macro name
+    %% use unique labels within a macro to avoid compiler arror "redefined symbol"
+
+Command Line Arguments
+    Arguments are a space-separated list and arg[0] is the file path
+        argc arg[0] arg[1] arg[2] ag[3] ... where argc is the count (always >= 1)
+    arguments are referenced within the macro with %1 %2 etc
+
+Values
+    Equate values with variable names
+    SYS_READ equ 0
+    SYS_WRITE equ 1
+    SYS_EXIT equ 60 etc
+
+Include Files
+    %include "filename.inc" or %include "filename.asm" pastes the contents of "filename.asm" where the include appears
+    Include files contain macros and 'equ' values
+    Include files are typically references at the beginning of an .asm file
+
+Jumps
+    jumps change the control flow by jumping to a specific instruction and not incrementing to the next instruction
+    loads an address represented by a jump label into the rip registuer
+    jmp <label> jumps control flow to a label location (loads <label> into rip register
+
+Comparisons
+    done on registers to set flags
+    cmp rax, rbx ; compare two registers
+    cmp rax, 23 ; compare a register to a value
+    ZF flag is set to 1 if comparison is true, 0 if comparison is false
+
+Conditional Jump
+    Can be done after a comparison is made
+    jmp is replaced by the conditional jump symbol
+        je - jump if equal
+        jne - jump if not equal
+        jg - jump if greater (ja for unsigned)
+        jz - jump if zero
+        etc
+    There are unsigned jump codes too
+
+Registers as Pointers using {}
+    mov rax, rbx  ; move the value in rbx to rax
+    mov rax, [rbx] ; used the value at the address in rbx to rax
+
+Calls
+   Similar to jumps but allow return to calling location using ret
+   Implements subroutines
+
+Math Operations (reg is a generic 'register')
+    add  rax, 5            ; rax is the subject changed
+    add  rbx, rax
+    mul  reg               ; mulitply rax by reg (unsigned)
+    imul reg               ; multiply rax by reg (signed)
+    div  reg               ; divide rax by reg
+    idiv reg               ; divide rax by reg (signed)
+    neg  reg               ; negate reg
+    inc  reg               ; increment reg
+    dec  reg               ; decrement reg
+    adc  a, b              ; a = a + b + CF (carry flag)
+    sbb  a, b              ; a = a - b - CF (carry flag)
+
+Stack Operations
+    push reg/value         ; push a register or value onto the stack
+    pop  reg               ; pop the stack and store in reg
+    mov  reg, [rsp]        ; store the top of the stack value (peek) in reg
+
+hello.asm ;--------------------------------
+
+section .data
+    text db "Hello World", 10       ;db = define bytes, 10 is \n, text is the memory address of the string
+    
+section .text
+    global _start
+
+_start:
+    mov rax, 1                      ; sys_write to stdout
+    mov rdi, 1
+    mov rsi, text
+    mov rdx, 14
+    syscall                         ; system call to the operating system
+
+    mov rax, 60                     ; sys_exit is 60 in rax
+    mov rdi, 0                      ; error code for 'no eror'
+    syscall
+
+jump.asm ;----------------------------------
+
+section .data
+    text db "I jumped", 10          ;db = define bytes, 10 is \n, text is the memory address of the string
+    
+section .text
+    global _start
+
+_start:
+
+    call _printJump
+
+    mov rax, 60                     ; sys_exit is 60 in rax
+    mov rdi, 0                      ; error code for 'no eror'
+    syscall
+    
+_printJump:
+    mov rax, 1                      ; sys_write to stdout
+    mov rdi, 1
+    mov rsi, text
+    mov rdx, 14
+    syscall                         ; system call to the operating system
+    ret
+
+getInput.asm --------------------------------;
+
+section .data
+    text1 db "What is your name? "
+    text2 db "Hello, "
+    
+section .bss
+    name resb 16
+
+section .text
+    global _start
+
+_start:
+   call _printText1                 ; call each subprogram in order
+   call _getName
+   call _printText2
+   call _printName
+
+    mov rax, 60
+    mov rdi, 0
+    syscall
+
+_getName:
+    mov rax, 0
+    mov rdi, 0
+    mov rsi, name
+    mov rdx, 16
+    syscall
+    ret
+
+_printText1:
+    mov rax, 1 
+    mov rdi, 1
+    mov rsi, text1
+    mov rdx, 19
+    syscall
+    ret
+
+_printText2:
+    mov rax, 1 
+    mov rdi, 1
+    mov rsi, text2
+    mov rdx, 7
+    syscall
+    ret
+
+_printName:
+    mov rax, 1 
+    mov rdi, 1
+    mov rsi, name
+    mov rdx, 16
+    syscall
+    ret
+
+printNum.asm --------------------------------;
+
+section .data
+  digit db 0, 10
+
+section .text
+  global _start
+
+_start:
+
+  mov rax, 7
+  call _printRAXDigit
+
+_printRAXDigit:
+
+  add rax, 48
+  mov [digit], al
+  mov rax, 1
+  mov rdi, 1
+  mov rsi, digit
+  mov rdx, 2
+  syscall
+  ret
+
+popStack.asm --------------------------------;
+
+section .data
+  digit db 0, 10
+
+section .text
+  global _start
+
+_start:
+
+  push 4
+  push 8
+  push 3
+
+  pop rax
+  call _printRAXDigit
+  pop rax
+  call _printRAXDigit
+  pop rax
+  call -PrintRAXDigit
+
+_printRAXDigit:
+
+  add rax, 48
+  mov [digit], al
+  mov rax, 1
+  mov rdi, 1
+  mov rsi, digit
+  mov rdx, 2
+  syscall
+  ret

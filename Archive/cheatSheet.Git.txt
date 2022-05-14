@@ -1,0 +1,120 @@
+Git (and GitHub) Cheatsheet
+
+References
+    https://www.youtube.com/watch?v=IHaTbJPdB-s -- Learn Git in 20 Minutes
+    https://www.youtube.com/watch?v=77W2JSL7-r8&t=86s -- GitHubDesktop Quick Intro for Windows
+    https://gist.github.com/adamjohnson/5682757 -- fix authentication using SSH key to connect to GIT
+    https://www.youtube.com/watch?v=RGOj5yH7evk -- Git and GitHub for Beginners - Crash Course
+    https://www.youtube.com/watch?v=DVRQoVRzMIY -- Git Tutorial for Beginners - Git & GitHub Fundamentals In Depth
+    https://mva.microsoft.com/en-US/training-courses/github-for-windows-users-16749?l=KTNeW39wC_6006218965 -- GitHub for Windows
+    https://www.youtube.com/watch?v=MJUJ4wbFm_A&feature=youtu.be -- An Introduction to GIT by Brian Yu
+    https://www.youtube.com/watch?v=IHaTbJPdB-s -- Learn Git in 20 Minutes
+    https://www.youtube.com/watch?v=77W2JSL7-r8&t=86s -- GitHubDesktop Quick Intro for Windows
+    https://gist.github.com/adamjohnson/5682757 -- fix authentication using SSH key to connect to GIT
+    https://www.youtube.com/watch?v=RGOj5yH7evk -- Git and GitHub for Beginners - Crash Course
+
+Training
+    https://www.youtube.com/watch?v=77W2JSL7-r8&t=86s -- GitHubDesktop Quick Intro for Windows to 06:00
+    https://www.youtube.com/watch?v=77W2JSL7-r8&t=86s -- GitHubDesktop Quick Intro for Windows to 11:00
+
+Functions of Git - Version Control System
+    Track changes
+    Easily swap versions
+    Show changes between versions
+    Undo changes
+    Ideal for teams
+
+Functions of GitHub - Remote Repository at https://github.com
+    Storage for files
+
+Non-Git Version Control Systems
+    Subverion
+    Team Foundation
+    Mercurial
+
+Git Structure
+    Working Directory -- where changes are made and new files added
+    Index/Staging (git add) adds all changes from the working directory
+    Head (git commit) saves as a version on the local machine - the code base
+    GitHub (git push) pushes files to GitHub
+
+Branches
+    Master
+    Sub branches (not the master)
+    State
+    Dev
+
+Commands
+
+Account on github risingfast, Mrfa4gh9
+Repository (Repo) or Codebase
+Fork - copy a repository
+
+Local GIT Repository
+    git -- show if Git is installed and list important git commands
+    git init -- initialize a local GIT repository on a client (does not create a master)t s
+    git status - show the status of the current repository on the client (current git folder)
+   *git add . -- add all changed files (using .)
+    git add <directory or filename> - add a directory or file to the repository for a future commit
+    git reset <filename> -- undo a staged file (reverse an add)
+    git commit -am "message text" -- add & commit changes to prev added files (-m message option is required) - not for new files
+   *git commit -m "<50 Char Title>" -m "<Description>" -- save to the codebase and to create a master branch (-m required)
+    git commit -m "message text" -- to commit an added file or directory (-m required)
+    git reset HEAD~1 -- rollback to prior commit (current commit -1)
+    git reset <commithash> -- rollback to prior commit from log hash
+    git reset --hard <commithash> -- rollback to prior commit from log hash and remove file changes
+    git checkout -b <NewBranchName> -- create a new branch and switch to it
+    git checkout master -- return to the master branch
+    git checkout <branchname> -- switch to a named branch
+    git checkout master -- switch to the master branch
+    git diff -- see changes in the current branch
+    git diff <branchname> -- see differences between current branch and named branch (q to end)
+    git merge <branchname> -- merge <branchname> into current branch (master) (q to end)
+    git merge master -- merge master into current branch to update for master changes
+    git branch <newbranchname> create a new branch
+    git branch -- show all branches and current branch
+    git branch -M <newname> -- change the name of the current branch
+    git branch -D <branchname> -- delete a merged branch (you cannot be in that branch)
+    git log -- show git history of commits
+    git log -p -- show changes in each file through history
+
+Remote Repository`
+    git remote -v -- list remote repositories for the current local repository
+    git remote add origin git@github.com:risingfast/fork.git -- connect to remote repository fork.git
+    git remote add origin git@github.com:risingfast/Web.git -- connect to remote repository Web.git
+    git remote add origin git@github.com:risingfast/WebSandbox.git -- connect to remote repository WebSandbox.git
+    git clone <repository URL> -- clone a remote repository to a local folder
+    git push -u origin master -- define an upstream repository and push files up
+    git push origin master -- push the local repository to the remote repository without defining it as upstream
+    git push -- push files to remote repository after upstream is defined
+    git clone <URL> - copy a repository to a local machine from a repository URL
+    git status - show the status of the uncommited files in the current repository on the client (current git folder)
+    git push -- upload to a repostory
+    *git push origin master -- to push the committed change back to the master (or branch)
+    git push -u origin master -- set upstream push path as the default
+    git pull -- download changes from a repository
+    *git pull origin master -- download changes made in the github master repo
+    git branch -- show all branches and current branch
+
+Administration
+    git --version -- to show the version of GIT installed (e.g. 2.25.1)
+
+Git Worflow to remove or change a remote repository
+    git remote -v -- list remote repository
+    gir remote remove origin -- remove origin repository
+    git remote add origin git@github.com:risingfast/WebSandbox.git -- add a remote repository
+
+Git Workflow to create and maintain a repository
+    git init -- initialize a local repository
+    create a remote repository on GitHub and get the link
+    git remote add origin git@github.com:risingfast/fork.git -- connect to remote repository fork.git
+    git add . -- add all changed files to the local repository as potential commits'
+    vim readme.md -- update the local readme
+    git commit -m "Message" -- commit changes to the local repository
+    git push origin master -- push the local repository to the remote repository
+    git status - check the status of the uncommited files in the current repository on the client (current git folder)
+
+GitHum Worflow to Fork another Repository
+    find the respository
+    Click 'Fork" to clone to a repository in your logon account
+    git clone <repository URL> -- clone a Github repository to a localhost folder
