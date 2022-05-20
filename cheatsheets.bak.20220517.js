@@ -19,21 +19,20 @@
 //    04-May-2022 change wrap button title
 //    11-May-2022 change helpDiv to uppercase
 //    12-May-2022 change "none" to "" in x.style.display
-//    17-May-2022 extend Clear function
 
 // globals
 
 const uri1 = "http://www.risingfast.com/cgi-bin/cheatSheets.cgi";
 
-function fClearCheatsheetsPage() {
+function fClearPage() {
 
     let h = document.getElementById("HELPDIV");
     h.style.display=""
 
     let y = document.getElementById("resultsArea");
-    y.value="";
+    y.style.display="";
 
-    let z = document.getElementById("sheet-options");
+    let z = document.getElementById("sheet");
     z.value="Choose";
     
     w = document.getElementById("wrapButton");
@@ -46,18 +45,16 @@ function fClearCheatsheetsPage() {
     c = document.getElementById("clearButton");
     c.disabled=true;
 
-    f = document.getElementById("filter-input");
+    f = document.getElementById("filter");
     f.value="";
-
-    fClearExtras();
 }
 
 // function to set document model values to match action chosen by the user ............................................
 
 function fSetAction() {
-    var sChoice = document.getElementById("sheet-options").value;
+    var sChoice = document.getElementById("sheet").value;
     b = document.getElementById("submitButton");
-    s = document.getElementById("sheet-options");
+    s = document.getElementById("sheet");
     if (s.value != 'Choose') {
         b.disabled=false;
         b.focus();
@@ -68,9 +65,6 @@ function fSetAction() {
     let y = document.getElementById("resultsArea");
     y.style.display="";
     
-    c = document.getElementById("clearButton");
-    c.disabled=false;
-
     fGetResults();
 }
 
@@ -84,8 +78,8 @@ async function fGetResults() {
     w = document.getElementById("wrapButton");
     w.disabled=false;
 
-    sFilterEncoded = encodeURIComponent(document.getElementById("filter-input").value);
-    let sRequest = uri1 + '?' + 'action=' + document.getElementById("sheet-options").value + '&filter=' + sFilterEncoded;
+    sFilterEncoded = encodeURIComponent(document.getElementById("filter").value);
+    let sRequest = uri1 + '?' + 'action=' + document.getElementById("sheet").value + '&filter=' + sFilterEncoded;
     let response = await fetch(sRequest);
     if (response.ok) {
         let text = await response.text();
@@ -114,7 +108,7 @@ async function fWrapText() {
     }
 }
 
-var input = document.getElementById("filter-input");
+var input = document.getElementById("filter");
 
 input.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {

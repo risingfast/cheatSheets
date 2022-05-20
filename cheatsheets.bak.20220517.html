@@ -14,7 +14,6 @@
     <META name="author" content="risingfast">
     <TITLE>Cheat Sheets</TITLE>
     <LINK rel="stylesheet" type="text/css" href="index.css">
-    <LINK rel="stylesheet" type="text/css" href="cheatsheets.css">
     <LINK rel="shortcut icon" href="letterRF.png" type="image/png">
 </HEAD>
 
@@ -52,8 +51,6 @@
 <!--    11-May-2022 - add <ASIDE3> for corner image caption                                                          -->
 <!--    14-May-2022 - change cheatSheets to cheatsheets                                                              -->
 <!--    15-May-2022 - add common.js script reference                                                                 -->
-<!--    17-May-2022 - extend Clear function                                                                          -->
-<!--    17-May-2022 - add local stylesheet                                                                           -->
 <!--                                                                                                                 -->
 <!-- <BODY> region for all content including header and footer ..................................................... -->
 
@@ -82,107 +79,109 @@
             <MAIN ID="MAIN1">
 
                 <SECTION>
-                    <DIV id="page-heading">
-                        <H3>Cheatsheets</H3>
+                    <DIV style="width:80%; margin: auto; max-width:800px; text-align:center;">
+                        <H3>Cheat Sheets</H3>
                     </DIV>
                 </SECTION>
 
 <!-- entry fields and options....................................................................................... -->
 
-                <DIV id="options-div">
-                        <DIV>
-                            <LABEL id="options-label" for="sheet-options">Sheet:</LABEL>
-                            <SELECT id="sheet-options" name="action" onchange="fSetAction()" onfocus="fSetAction()">
-                                <OPTION value="Choose" selected>Choose</OPTION>
-                                <OPTION value="Apache2">Apache2</OPTION>
-                                <OPTION value="Arduino">Arduino</OPTION>
-                                <OPTION value="Assembly">Assembly</OPTION>
-                                <OPTION value="Clang">Clang</OPTION>
-                                <OPTION value="Cpp">Cpp</OPTION>
-                                <OPTION value="GCP">GCP</OPTION>
-                                <OPTION value="Git">Git</OPTION>
-                                <OPTION value="JSON">JSON</OPTION>
-                                <OPTION value="Linux">Linux</OPTION>
-                                <OPTION value="Markdown">Markdown</OPTION>
-                                <OPTION value="MySQL">MySQL</OPTION>
-                                <OPTION value="Networks">Networks</OPTION>
-                                <OPTION value="Oracle">Oracle</OPTION>
-                                <OPTION value="Perl">Perl</OPTION>
-                                <OPTION value="Python">Python</OPTION>
-                                <OPTION value="Regex">Regex</OPTION>
-                                <OPTION value="Vi">Vi</OPTION>
-                                <OPTION value="Web">Web</OPTION>
-                                <OPTION value="Yaml">Yaml</OPTION>
-                            </SELECT>
-                            <LABEL id="filter-label" for="filter">Filter:</LABEL> 
-                            <INPUT id="filter-input" name="filter" required autofocus>
-                        </DIV>
-                        <DIV>
-                            <BUTTON id="submitButton"  onclick="fGetResults()" disabled>Submit</BUTTON>
-                        </DIV>
-                </DIV>
+                <SECTION>
+                    <DIV style="width:80%; margin: auto; max-width:800px; text-align:left">
+                            <DIV>
+                                <LABEL for="sheet" style="width:60px">Sheet:</LABEL>
+                                <SELECT id="sheet" STYLE="margin-left: 10; margin-bottom:10px" name="action" onchange="fSetAction()" onfocus="fSetAction()">
+                                    <OPTION value="Choose" selected>Choose</OPTION>
+                                    <OPTION value="Apache2">Apache2</OPTION>
+                                    <OPTION value="Arduino">Arduino</OPTION>
+                                    <OPTION value="Assembly">Assembly</OPTION>
+                                    <OPTION value="Clang">Clang</OPTION>
+                                    <OPTION value="Cpp">Cpp</OPTION>
+                                    <OPTION value="GCP">GCP</OPTION>
+                                    <OPTION value="Git">Git</OPTION>
+                                    <OPTION value="JSON">JSON</OPTION>
+                                    <OPTION value="Linux">Linux</OPTION>
+                                    <OPTION value="Markdown">Markdown</OPTION>
+                                    <OPTION value="MySQL">MySQL</OPTION>
+                                    <OPTION value="Networks">Networks</OPTION>
+                                    <OPTION value="Oracle">Oracle</OPTION>
+                                    <OPTION value="Perl">Perl</OPTION>
+                                    <OPTION value="Python">Python</OPTION>
+                                    <OPTION value="Regex">Regex</OPTION>
+                                    <OPTION value="Vi">Vi</OPTION>
+                                    <OPTION value="Web">Web</OPTION>
+                                    <OPTION value="Yaml">Yaml</OPTION>
+                                </SELECT>
+                                <LABEL for="filter" style="margin-left:10px;display:inline-block" >Filter:</LABEL> 
+                                <INPUT id="filter" name="filter" required style="display:inline-block;width:65%;margin-top:5px;margin-bottom:5px" autofocus>
+                            </DIV>
+                            <DIV>
+                                    <BUTTON id="submitButton" STYLE="margin:0px 0px 10px 0px" onclick="fGetResults()" disabled>Submit</BUTTON>
+                            </DIV>
+                    </DIV>
+                </SECTION>
 
 <!-- results area................................................................................................... -->
 
-                <DIV ID="resultsDiv">
-                    <TEXTAREA ID="resultsArea" readonly ROWS="35"> </TEXTAREA>
-                </DIV>
+            <DIV ID="resultsDiv" style="width:80%; margin:auto">
+                <TEXTAREA ID="resultsArea" readonly ROWS="25" style="float:left; width:100%; margin:auto; display:none; white-space:pre">
+                </TEXTAREA>
+            </DIV>
 
 <!-- buttons to clear the page and show and hide help .............................................................. -->
 
-                <DIV id="MOREBTTNS">
-                    <BUTTON id="helpButton" onclick="fShowHelp()">Help</BUTTON>
-                    <BUTTON id="clearButton" onclick="fClearCheatsheetsPage()">Clear</BUTTON>
-                    <BUTTON id="wrapButton" onclick="fWrapText()">Wrap</BUTTON>
+                <DIV style="display:inline-block; width:80%; margin-left:100px; max-width:800px; text-align:left;">
+                    <BUTTON id="wrapButton"The filter is case-sensitive and does not support wildcards or reges expressions style="margin-top:10px" onclick="fWrapText()">Wrap</BUTTON>
+                    <BUTTON id="clearButton" style="margin-top:10px" onclick="fClearPage()">Clear</BUTTON>
+                    <BUTTON id="helpButton" style="margin-top:10px" onclick="fShowHelp()">Help</BUTTON>
+                    <BR>
                 </DIV>
 
 <!-- help text controlled by button ................................................................................ -->
 
-                <DIV id="HELPDIV">
-                    <P>
-                        Choose a sheet from the drop down list to see the sheet contents<BR>
-                        Enter a text filter at any time and click 'Submit' to apply the filter<BR>
-                        The 'submit' button will remain disabled until a sheet name is selected<BR>
-                        The filter is not case-sensitive
-                           The filter does not support wildcards or regex expressions<BR>
-                        The filter allows multiple words and spaces<BR>
-                        Click 'Wrap' to toggle word-wrap in the displayed sheet contents<BR>
-                    </P>
+                <DIV id="HELPTXT">
+                    <DIV id="HELPDIV">
+                        <P>
+                            Choose a sheet from the drop down list to see the sheet contents<BR>
+                            Enter a text filter at any time and click 'Submit' to apply the filter<BR>
+                            The 'submit' button will remain disabled until a sheet name is selected<BR>
+                            The filter is not case-sensitive
+                            The filter does not support wildcards or regex expressions<BR>
+                            The filter allows multiple words and spaces<BR>
+                            Click 'Wrap' to toggle word-wrap in the displayed sheet contents<BR>
+                        </P>
+                    </DIV>
                 </DIV>
 
 <!-- internals text ................................................................................................ -->
 
-                <DIV id="INTERNALS">
-                    <DETAILS id="internals-details">
-                        <SUMMARY>
-                            Internals
-                        </SUMMARY>
-                        <P>
-                            html file: /var/www.html/cheatsheets.html<BR>
-                            js file: /var/www.html/cheatsheets.js<BR>
-                            js file: /var/www.html/common.js<BR>
-                            css file: /var/www/html/css/index.css<BR>
-                            css file: /var/www/html/css/cheatsheets.css<BR>
-                            cgi file: /usr/lib/cgi-bin/cheatsheets.cgi<BR>
-                            corner image: /var/www/html/cornerImage.png<BR>
-                            background image: /var/www/html/background.jpg<BR>
-                            CGI source code: C<BR>
-                       </P>
-                    </DETAILS>
-                </DIV>
+                <BR>
+                   <DIV id="INTERNALS">
+                        <DETAILS>
+                            <SUMMARY>
+                                Internals
+                            </SUMMARY>
+                            <P>
+                                html file: /var/www.html/cheatsheets.html<BR>
+                                js file: /var/www.html/cheatsheets.rev.20220502.js<BR>
+                                css file: /var/www/html/css/index.css<BR>
+                                cgi file: /usr/lib/cgi-bin/cheatsheets.cgi<BR>
+                                corner image: /var/www/html/cornerImage.png<BR>
+                                background image: /var/www/html/background.jpg<BR>
+                                CGI source code: C<BR>
+                            </P>
+                        </DETAILS>
+                    </DIV>
 
                 <SCRIPT src="cheatsheets.js"></SCRIPT>
                 <SCRIPT src="common.js"></SCRIPT>
 
             </MAIN>
-
 <!-- <ASIDE1> region for change log ................................................................................ -->
 
             <ASIDE ID="ASIDE1">
                     <H3 ID=ASIDE1H3>Changes 2021-22</H3>
                 <UL ID="ASIDE1UL">
-                    <LI CLASS="ASIDE1LI">17-May: add local stylesheet</LI>
-                    <LI CLASS="ASIDE1LI">17-May: extend Clear function</LI>
                     <LI CLASS="ASIDE1LI">14-May: decapitalize CheatSheets</LI>
                     <LI CLASS="ASIDE1LI">11-May: add corner image caption</LI>
                     <LI CLASS="ASIDE1LI">04-May: add unwrap button title</LI>

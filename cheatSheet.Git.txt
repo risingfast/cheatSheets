@@ -106,11 +106,11 @@ Git Worflow to remove or change a remote repository
 
 Git Workflow to create and maintain a repository
     git init -- initialize a local repository
-    create a remote repository on GitHub and get the link
-    git remote add origin git@github.com:risingfast/fork.git -- connect to remote repository fork.git
-    git add . -- add all changed files to the local repository as potential commits'
     vim readme.md -- update the local readme
+    git add . -- add all changed files to the local repository as potential commits'
     git commit -m "Message" -- commit changes to the local repository
+    create a remote repository on GitHub and gpet the target weblink
+    git remote add origin git@github.com:risingfast/fork.git -- connect to remote repository fork.git
     git push origin master -- push the local repository to the remote repository
     git status - check the status of the uncommited files in the current repository on the client (current git folder)
 
