@@ -1,4 +1,4 @@
-Regular Expressions Cheat Sheet
+RegEx Cheatsheet
 
 Regular Expressions Fast Start Examples for Finding Strings (quotes are not required)
     "hello" - matches the word hello

@@ -1,4 +1,4 @@
-Google Cloud Platform Cheatsheet
+GCP Cheatsheet (Google Cloud Platform)
 
 References
     https://www.youtube.com/watch?v=fmh94mNQHQc -- log onto GCP instance via Putty

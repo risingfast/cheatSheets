@@ -15,7 +15,8 @@ Server Directories
     /usr/lib/cgi-bin -- cgi binaries
     /var/www/html -- javascript, html and cheatsheets
 
-Troubleshooting Issues
+Tips and Tricks and Troubleshooting Issues
+    Don't use float in an elemet style because the element floats outside it's container <div>
     Cross Origin Resource Sharing (CORS)
     https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
         
@@ -68,6 +69,8 @@ References
     http://javascript.crockford.com/ -- misc JS topics
     http://addyosmani.com/resources/essentialjsdesignpatterns/book/ -- link to book on JS Design Patterns
     https://developer.mozilla.org/en-US/docs/Web/CSS/white-space -- whitespace and text wrapping settings in a textarea
+    https://www.w3schools.com/cssref/css_default_values.asp -- css default values
+    https://www.w3schools.com/html/html5_syntax.asp --html, css and js style guides
 
 Coding Challenge Sites
     HackerRank
@@ -459,6 +462,7 @@ HTML Tags and Attributes (tags always lower case and attributes always s/d-quote
     <strong> -- important text emphasized or bolded
     <sub> -- subscripted text
     <sup> -- superscripted text
+    <textarea></textarea> -- multiline text area
     <ul><li></li></ul> -- unordered list (bullets) of <li> list items
 
 HTML Semantic Tags introduced in HTML5
@@ -566,66 +570,67 @@ CSS Three Ways of load CSS
     Defined externally with <link rel=stylesheet" type="text/css" href="styles.css"> in <head>
 
 CSS Property and Value Pairs
-     align-items: center -- aligns items along a center line
-     background-color:<value>
-     background-image:url<value> e.g. background-image: url("/imgfolder/paper.gif");
-     border: 5px solid green
-     border-width: 5px
-     border-style: solid
-     border-color: green
-     border-radius: 8px -- round the corners on a box
-     color:<value>; seagreen, blue, ivory etc
-     color:#FFFFFF (FF red, FF green, FF blue) Hex value
-     color:rgb(255, 255, 255)
-     color:rgba(255, 255, 255, 1) where final number is opacity
-     color:hsl(0, 100%, 100%) hue, saturation, lightness
-     color:hsla(0, 100$, 100%, 1) hue, saturation, lightness, opacity
-     display
-         display:flex -- aligns all elements on a single line
-         display:inline -- elements are displayed inline, Height, width (margin, padding) cannot be overridden
-         display:block -- elements take the entire line and new elements get new lines. Height, width can be overridden
-         display:inline-block -- elements are inline and vertically aligned and height and width (margin, padding) can be set differently
-         display:none -- hide the element
-     flexbox
-        display:flex -- flexbox for flexible layout (on a parent element)
-        flex-direction:<value>, column, row
-        flex-wrap: wrap: -- allow wrapping to a second line
-        justify-content:<value> center, flex-start, flex-end, space-between, space-around, space-evenly
-        align-items:<value> top, center, bottom (inside a flexible container)
-     font-family:<value; courier, arial, verdana etc web-safe fonts (see https://www.cssfontstack.com/)
-     font-family:Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif; -- Windows 10 fonts
-     font-size:<value>; 100%, 200%, 18px, 30px, 40px, 1em, 2em, 1rem, 2 rem
-     font-style:italic; -- italic font
-     font-weight:800; -- 100 is normal, 800 is very heavy or bold
-     justify-content: space=between -- space out elements
-     line-height: 1.5 -- increases the space between each line in a paragraph
-     list-style: none; -- remove bullets from unordered lists
-     max-width: 600px -- maximum width o body{} to avoid scroll bars on small devices
-     min-width: 600px -- min width on body{} css before scroll bar appears and elements don't change size
-     opacity: .5; reduce or opaque an object
-     outline: 3px solid red; -- outlines a paragraph with a border. Does not add to size as border will.
-     padding: toppx rightpx bottompx leftpx; -- add padding to each side of an item
-     padding: topbottompx leftrightpx -- add padding equally above and below, left and right
-     position:<value>; static, relative, fixed, absolute sticky
-         static: the default order. Each element is on a new line
-         relative: same as static but allows top, right, bottom, left offsets and document flow is unchanged
-         absolute: removed from page flow and redisplayed in original position
-         fixed: same as absolute but does not move with window scroll
-     style.whiteSpace: normal, nowrap, pre, pre-wrap, pre-line, break-spaces -- to change text wrapping in a textarea
-     letter-spacing:0.2em; spaceing between letters
-     text-align:<value>;left. center, right
-     text-decoration:underline;
-     text-decoration:none; -- removes any default underlining
-     text-transform:uppercase; capitalize; lowercase; full-width etc
-     transform: skewY(-12dec); -- skew a division 12 degrees
-     word-spacing: 1em; -- spacing between words
-     margin:auto; puts even margin on all sides of a border (use for horizontal centering)
-     margin:30px; puts a 30px margin around an item's border
-     margin-top:<value>;20px, 40px, 60px etc
-     margin-bottom:
-     margin-left:
-     margin-right:
-     z-index: -1; set precedence of an overlapping element
+    align-items: center -- aligns items along a center line
+    background-color:<value>
+    background-image:url<value> e.g. background-image: url("/imgfolder/paper.gif");
+    border: 5px solid green
+    border-width: 5px
+    border-style: solid
+    border-color: green
+    border-radius: 8px -- round the corners on a box
+    color:<value>; seagreen, blue, ivory etc
+    color:#FFFFFF (FF red, FF green, FF blue) Hex value
+    color:rgb(255, 255, 255)
+    color:rgba(255, 255, 255, 1) where final number is opacity
+    color:hsl(0, 100%, 100%) hue, saturation, lightness
+    color:hsla(0, 100$, 100%, 1) hue, saturation, lightness, opacity
+    display
+        display:flex -- aligns all elements on a single line
+        display:inline -- elements are displayed inline, Height, width (margin, padding) cannot be overridden
+        display:block -- elements take the entire line and new elements get new lines. Height, width can be overridden
+        display:inline-block -- elements are inline and vertically aligned and height and width (margin, padding) can be set differently
+        display:none -- hide the element
+    flexbox
+       display:flex -- flexbox for flexible layout (on a parent element)
+       flex-direction:<value>, column, row
+       flex-wrap: wrap: -- allow wrapping to a second line
+       justify-content:<value> center, flex-start, flex-end, space-between, space-around, space-evenly
+       align-items:<value> top, center, bottom (inside a flexible container)
+    float: left -- floats an element within it's surrounding container and removes it from the container's (div's) hierarchy
+    font-family:<value; courier, arial, verdana etc web-safe fonts (see https://www.cssfontstack.com/)
+    font-family:Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif; -- Windows 10 fonts
+    font-size:<value>; 100%, 200%, 18px, 30px, 40px, 1em, 2em, 1rem, 2 rem
+    font-style:italic; -- italic font
+    font-weight:800; -- 100 is normal, 800 is very heavy or bold
+    justify-content: space=between -- space out elements
+    line-height: 1.5 -- increases the space between each line in a paragraph
+    list-style: none; -- remove bullets from unordered lists
+    max-width: 600px -- maximum width o body{} to avoid scroll bars on small devices
+    min-width: 600px -- min width on body{} css before scroll bar appears and elements don't change size
+    opacity: .5; reduce or opaque an object
+    outline: 3px solid red; -- outlines a paragraph with a border. Does not add to size as border will.
+    padding: toppx rightpx bottompx leftpx; -- add padding to each side of an item
+    padding: topbottompx leftrightpx -- add padding equally above and below, left and right
+    position:<value>; static, relative, fixed, absolute sticky
+        static: the default order. Each element is on a new line
+        relative: same as static but allows top, right, bottom, left offsets and document flow is unchanged
+        absolute: removed from page flow and redisplayed in original position
+        fixed: same as absolute but does not move with window scroll
+    style.whiteSpace: normal, nowrap, pre, pre-wrap, pre-line, break-spaces -- to change text wrapping in a textarea
+    letter-spacing:0.2em; spaceing between letters
+    text-align:<value>;left. center, right
+    text-decoration:underline;
+    text-decoration:none; -- removes any default underlining
+    text-transform:uppercase; capitalize; lowercase; full-width etc
+    transform: skewY(-12dec); -- skew a division 12 degrees
+    word-spacing: 1em; -- spacing between words
+    margin:auto; puts even margin on all sides of a border (use for horizontal centering)
+    margin:30px; puts a 30px margin around an item's border
+    margin-top:<value>;20px, 40px, 60px etc
+    margin-bottom:
+    margin-left:
+    margin-right:
+    z-index: -1; set precedence of an overlapping element
 
 CSS Units
      vw -- variable width in percent of viewport eg 50vw;
@@ -653,7 +658,7 @@ CSS Selector -- selects the tag e.g. h1 {} or class attribute or ID attribute
      tags are referenced in CSS by name
      classes are referenced in CSS by . prefix
      ID's are referenced in CSS by # prefix
-     descendent selectors .class <tag> -- selects all descendent tags within a class
+     descendent selectors .class <tag> -- selects all descendent tags within a class (e.g. .CLS p selects all <p> tags within the CLS class)
 
 CSS Property Value pairs -- a set list of properties and values predefined
 

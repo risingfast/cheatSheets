@@ -1,4 +1,4 @@
-Network Cheatsheet
+Networks Cheatsheet
 
 References
     https://www.youtube.com/watch?v=dl-C6cBoRg4 -- What is DNS? Introduction to Domain Name System. SXSW giveaway! (David Bombal)

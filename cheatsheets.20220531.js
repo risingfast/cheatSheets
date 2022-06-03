@@ -20,12 +20,10 @@
 //    11-May-2022 change helpDiv to uppercase
 //    12-May-2022 change "none" to "" in x.style.display
 //    17-May-2022 extend Clear function
-//    31-May-2022 set cornerimage rotation
 
 // globals
 
 const uri1 = "http://www.risingfast.com/cgi-bin/cheatSheets.cgi";
-const uri2 = "http://www.risingfast.com/cgi-bin/setCornerImage.cgi";
 
 function fClearCheatsheetsPage() {
 
@@ -124,22 +122,3 @@ input.addEventListener("keypress", function(event) {
     document.getElementById("submitButton").click();
   }
 });
-
-
-// function to ajax fetch the current corner image and captiona
-
-async function fSetCornerImage() {
-    let response = await fetch(uri2);
-    if (response.ok) {
-        let text = await response.text();
-        let array = text.split("\n");
-        array.pop();                      // remove the last element (empty element) created by the split("\n")
-        let intRecords = array.length/3;
-        let intRecordSelected = Math.trunc(Math.random() * intRecords);
-        document.getElementById("ASIDE2IMG").src=array[intRecordSelected * 3]
-        document.getElementById("ASIDE3-PARA").innerHTML=array[(intRecordSelected * 3) + 1];
-    } else {
-        alert("HttpError: " + response.status);
-    }
-}
-
