@@ -1,4 +1,4 @@
-Python Cheat Sheet
+Python Cheatsheet
 
 Table of Contents
     References

@@ -1,4 +1,4 @@
-Perl (and mod_Perl) CGI Cheat Sheet
+Perl Cheatsheet
 
 Tips and Tricks for Perl Programming
     Always put the shebang line first in a perl console script (not preceded by comments) to force perl interpretation

@@ -265,6 +265,7 @@ Linux Commands
     grep -lc <pattern> <files> -- list file names that contain a pattern on any line and the count of matches
     grep -L <pattern> <files> -- list file names that do not contain a pattern on any line
     grep '<pattern>' <dir> -- list lines in files containing a pattern in a directory (./* for files in the current directory)
+    grep -r "<SECTION>" ./* > search.txt -- recursively grep the text '<SECTION>' in current and sub-directories and save to a file
     groups -- list all groups where the current user is a member
     groups <username> -- list all groups where the named member is a member
     glibc -- the GNU C libaries

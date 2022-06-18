@@ -1,4 +1,4 @@
-Oracle CheatSheet
+Oracle Cheatsheet
 
 Table of Contents
     Overall

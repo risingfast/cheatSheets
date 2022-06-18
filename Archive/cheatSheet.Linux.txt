@@ -1,4 +1,4 @@
-Linux Cheat Sheet (Debian/Ubuntu)
+Linux Cheatsheet (Debian/Ubuntu)
 
 References
     https://www.youtube.com/watch?v=rxOTDG1peLw&list=PL_vyuxE-AO-A92UblMm33ENQZPzvAPpGl -- 10 Basic Ways to Secure Ubuntu from Hackers
@@ -17,6 +17,7 @@ References
     https://www.linuxtrainingacademy.com/vim-cheat-sheet/
     https://www.youtube.com/watch?v=ZtqBQ68cfJc --  The 50 Most Popular Linux & Terminal Commands - Full Course for Beginners
     https://www.youtube.com/watch?v=NsK7OPlK94U&t=431s -- Linux Command-Line Tips & Tricks: Over 15 Examples! (Done)
+    https://0xax.gitbooks.io/linux-insides/content/ -- Linux Insides book
 
 Engineer Man Linux on Youtube
     https://www.youtube.com/watch?v=UFIoRLqhFpo -- Linux File System
@@ -199,7 +200,7 @@ Linux Commands
     daemon -- a headless process
     date -- system date and time
     dc -- RPN calculater (see also bc)a
-    dd -- data duplicator to copy files and disks
+    dd -- data duplicator to copy files and disks (e.g. convert a file to upper or lower case ... dd if=input.txt of=output.txt conv=lcase)
     dig -- alternative to nslookup (apt install nsutils to install)
     dig -v -- version of dig
     dig gjarman2020.com -- show the A record of the DNS name (same as 'dig gjarman2020.com A') uses default DNS server in /etc/resolve.conf

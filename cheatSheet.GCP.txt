@@ -154,8 +154,8 @@ Cloud SQL
     Automated and on demand backup with point-in-time recovery
 
 Cloud SQL mySQL Instance
-    Instance ID: gjarman2020-sql
-    Type: MySQL 5.7 (Database version)
+    Instance ID: gjarman2020-sql (35.188.123.150 public IP, 10.69.160.3 private IP)
+    Version: MySQL 5.7.37-google (Database version)
     Instance Connection Name: risingfast001:us-central1:gjarman2020-sql
     Location: us-central1-f
     Region: us-central1 (Iowa)
@@ -163,7 +163,7 @@ Cloud SQL mySQL Instance
     Private IP 18.69.160.3
     Connect via cloudshell: gcloud sql connect gjarman2020-sql --user=root --quiet
     Connect via cloudshell: gcloud sql connect gjarman2020-sql --user=gjarman2020 --quiet
-    root password to db: Mpa4egu9 changed to Mpa4egu$ 17 Apr 2022
+    root password to db: Mpa4egu$
     gjarman2020 password to db: Mpa4egu$
 
 mySQL Commands Common

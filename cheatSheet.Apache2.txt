@@ -11,6 +11,7 @@ References
     https://apache.tutorials24x7.com/blog/how-to-use-basic-authentication-with-apache-using-htpasswd-on-ubuntu-20-04-lts -- password protect a website using basic authentication
     http://www.htaccess-guide.com/ -- description of .htaccess file security for subidrectories of apache2 website
     https://www.youtube.com/watch?v=00bwCjPp-FU&list=PL_vyuxE-AO-A92UblMm33ENQZPzvAPpGl&index=10 -- How to Password Protect Apache with Basic Authentication (Tony Teaches Tech)
+    https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-apache-on-ubuntu-18-04
     https://httpd.apache.org/docs/2.4/
     https://www.youtube.com/watch?v=rCr3-YlL5S8 -- Basics of Apache Webserver
     https://computer.howstuffworks.com/web-server.htm
@@ -50,6 +51,7 @@ Web Directories (www.risingfast.com)
 
 cgi Directories (www.risingfast.com/cgi-bin/file_name)
     /usr/lib/cgi-bin -- default CGI scripts directory for apache2 webserver
+    run 'sudo a2enmod cgi' to enable the cgi module in Apache the 'systemctl restart apache2' to apply
 
 Configuration Directories
     /etc/apache2 -- Server root (set in /etc/apache2/apache2.conf)
@@ -95,18 +97,27 @@ Key Files and Logs
 Version
     Server version: Apache/2.4.29 (Ubuntu) (from apache2 -v on the command line)
 
-Basic HTTP Authentication in Apache2
-    Secure a website or subdirectories of a website
-    htpasswd -c /etc/apache2/.htpasswd gjarman -- as superuser, to create an authenticated apache2 user file and entry
-    htpasswd /etc/apache2/.htpasswd gjarman -- as superuser, to create add authenticated apache2 users to the same file (drop the -c option)
-    Then edit /etc/apache2/sites-available/000-default.conf with new lines to enable .htpasswd as an authentication file
+Basic HTTP Authentication in Apache2 (aka basicAuth)
+    Secure a website or subdirectories of a website using the htpasswd utility
+        htpasswd -c /etc/apache2/.htpasswd gjarman -- as superuser, to create an authenticated apache2 user file and entry
+        htpasswd /etc/apache2/.htpasswd gjarman -- as superuser, to create add authenticated apache2 users to the same file (drop the -c option)
+            You will be prompted for the password after entering this line
+    Location where .htpasswd Security file is created
+        /etc/apache2/.htpasswd -- on GCP
+        /etc/apache2/.htpasswd gjarman -- on risingfast
+    Placing an .htaccess file in a directory overrides default security at the directory level
+        It can point to an different .htpasswd file in a different location
+    Location where .htaccess security file is created
+        none created
+    Then edit /etc/apache2/sites-available/000-default.conf with new lines to set the .htpasswd file location as an authentication file
         <Directory "/var/www/html">
                 AuthType Basic
-                AuthName "iroot area"
+                AuthName "main area"
                 AuthUserFile /etc/apache2/.htpasswd
                 Require valid-user
         </Directory>
-    Placing an .htaccess file in a subdirectory allows overriding the security at the subdirectory level
+    Create additional entries with different <Directory> entries for subdirectory security
+    Finally ... systemctl restart apache2 to reboot Apache
 
 Commands
     apache2 -v -- show version (e.g.  Apache/2.4.41 (Ubuntu) (e.g. Server built: 2022-03-16T16:52:53)

@@ -1,4 +1,4 @@
-Vi (and Vim) Cheat Sheet
+Vi (and Vim) Cheatsheet
 
 Mode Notes
     Normal (Command) Mode (use <Esc>), Insert Mode (use 'i'), Visual Mode (use <Esc>)

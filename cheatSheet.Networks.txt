@@ -5,6 +5,7 @@ References
     https://www.youtube.com/watch?v=nyH0nYhMW9M -- What is DNS (Domain Name System)? (IBM Technology)a
     https://www.youtube.com/watch?v=9J1nJOivdyw -- Web Server Concepts and Examples
     https://www.youtube.com/watch?v=earzZpX-PiY -- SSL Certificates: Serving secure web content over HTTPS
+    http://ipv4.whatismyv6.com/ -- IP identifier
 
 Network Configuration at Home
    Permanent IP Address 76.184.87.205 -- Risingfast on Spectrum
@@ -34,6 +35,9 @@ IP Addresses
     IP4 -- 4 groups of octal digits separated by dots
     IP6 -- 8 groups of hex digits with : separator
     127.0.0.1 -- loopback address to local host
+    76.184.87.205 -- home router www.risingfast.com
+    35.209.128.197 -- GCP Compute Engine (Private 10.128.0.3) gjarman2020.com
+    35.188.123.150 -- GCP mySQL Instance (Private: 10.69.160.3)
 
 Telnet
     https://www.howtoforge.com/how-to-install-and-use-telnet-on-ubuntu-1804/
