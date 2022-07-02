@@ -305,6 +305,7 @@ Linux Commands
     ln <filepath> [linkhome] -- create hard link
     locate <filename> -- find files or directories from a database maintained by updatedb
     ls -- list (files and subdirectories) in the current directory, -a show hidden , -l long format, -h human readable, -i show inode number, --color=never to disable color
+    ls -lR | grep "filename" to list all files matching a regex filename in the current directory and subdirectories
     ls -- does not support -i case insensitive switch so pipe to grep for this filter (e.g. ls -la | grep -i "<filtertext>"
     ls <path> -- list files in a non-local directory
     ls -laS * -- list files by filesize large to small in the current directory

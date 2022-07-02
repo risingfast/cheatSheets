@@ -10,7 +10,7 @@ History of Versions
 
 Resources and References
     http://lib.daemon.am/Books/C/ - Sams Teach Yourself C in 21 Days
-    http://www.gnu.org/software/libc/manual/ - GNU C Library
+    http://www.gnu.org/software/libc/manual/ - GNU C standard Library
     https://www.youtube.com/user/mycodeschool -- My Code School
     https://gcc.gnu.org/ -- GCC, the GNU Compiler Collection
 
@@ -336,6 +336,9 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=BM9cnSEY23s -- Refactoring your Code
     https://www.youtube.com/watch?v=n4_m1ioUjpE -- What's the Best Way to Copy a Struct in C and C++?
     https://www.youtube.com/watch?v=GIWeQ2I67rk -- Pulling Back the Curtain on the Heap
+    https://www.youtube.com/watch?v=Bd-xNEOXohs -- Are Pointers Bad for Embedded Systems? (Done)
+    https://www.youtube.com/watch?v=KGFOLJiIo1g -- Why I don't recommend C++ for beginners. (Done)
+    https://www.youtube.com/watch?v=BIht65Xu1jI -- Another reason C++ is so BAD...for beginners. (Done)
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
