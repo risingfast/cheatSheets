@@ -13,6 +13,7 @@ References
     https://gcc.godbolt.org/
     https://www.youtube.com/watch?v=wLXIWKUWpSs -- x86 Assembly Language Introduction
     https://www.youtube.com/watch?v=L1ung0wil9Y&t=137s -- MIT Assembly Language and Compiler Architecture
+    https://github.com/hackclub/some-assembly-required?utm_source=tldrnewsletter -- Assembly course
 
 Look at MASM and Assembly programming (Done)
     https://www.youtube.com/watch?v=vtWKlgEi9js -- ALP Tutorial 00 -- Introduction to ASL (Done)

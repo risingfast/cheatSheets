@@ -1,5 +1,12 @@
 Linux Cheatsheet (Debian/Ubuntu)
 
+Tips and Tricks and Troublshooting
+    Run a script as sudo without a password
+        sudo chown root.root <my script> -- set root as the script owner
+        sudo chmod 4755 <my script> -- change the SetUID bit
+        sudo <script> to run the script w/out a password (include the script full path)
+        reference: https://askubuntu.com/questions/167847/how-to-run-bash-script-as-root-with-no-password
+
 References
     https://www.youtube.com/watch?v=rxOTDG1peLw&list=PL_vyuxE-AO-A92UblMm33ENQZPzvAPpGl -- 10 Basic Ways to Secure Ubuntu from Hackers
     Review Engineer Man Linux videos
@@ -18,6 +25,7 @@ References
     https://www.youtube.com/watch?v=ZtqBQ68cfJc --  The 50 Most Popular Linux & Terminal Commands - Full Course for Beginners
     https://www.youtube.com/watch?v=NsK7OPlK94U&t=431s -- Linux Command-Line Tips & Tricks: Over 15 Examples! (Done)
     https://0xax.gitbooks.io/linux-insides/content/ -- Linux Insides book
+    https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-ubuntu-1804 -- Ubuntu Cron job how-to
 
 Engineer Man Linux on Youtube
     https://www.youtube.com/watch?v=UFIoRLqhFpo -- Linux File System
@@ -49,6 +57,26 @@ LearnLinuxTV
     https://www.youtube.com/watch?v=91dNq4C6260 -- Setting the Hostname of your Linux Workstation or Server (Linux Essentials Series)
     https://www.youtube.com/watch?v=tU9cO9FwDx0 -- Linux Essentials - htop
     https://www.youtube.com/watch?v=2Z6ouBYfZr8 -- Linux Essentials - Formatting & Mounting Storage Volumes
+
+Cron Jobs
+    Check latest Cron is installed and running
+        sudo apt update
+        sudo apt install cron
+        sudo systemctl enable cron
+    Edit or list crontab contents
+        crontab -e
+        crontab -l
+    Cron format and Examples
+        minute hour day_of_month month day_of_week command_to_run
+        30 17 * * 2 curl http://www.google.com -- example with '*' wildcard
+        * * * * * - Run the command every minute.
+        12 * * * * - Run the command 12 minutes after every hour.
+        0,15,30,45 * * * * - Run the command every 15 minutes.
+        */15 * * * * - Run the command every 15 minutes.
+        0 4 * * * - Run the command every day at 4:00 AM.
+        0 4 * * 2-4 - Run the command every Tuesday, Wednesday, and Thursday at 4:00 AM.
+    Systemwide crontab
+        /etc/crontab
 
 General
     store commands in ~/.bashrc
@@ -265,7 +293,7 @@ Linux Commands
     grep -lc <pattern> <files> -- list file names that contain a pattern on any line and the count of matches
     grep -L <pattern> <files> -- list file names that do not contain a pattern on any line
     grep '<pattern>' <dir> -- list lines in files containing a pattern in a directory (./* for files in the current directory)
-    grep -r "<SECTION>" ./* > search.txt -- recursively grep the text '<SECTION>' in current and sub-directories and save to a file
+    grep -ir "<SECTION>" ./* > search.txt -- recursively and case-insensitive grep the text '<SECTION>' in current and sub-directories and save to a file
     groups -- list all groups where the current user is a member
     groups <username> -- list all groups where the named member is a member
     glibc -- the GNU C libaries

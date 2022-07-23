@@ -71,6 +71,37 @@ References
     https://developer.mozilla.org/en-US/docs/Web/CSS/white-space -- whitespace and text wrapping settings in a textarea
     https://www.w3schools.com/cssref/css_default_values.asp -- css default values
     https://www.w3schools.com/html/html5_syntax.asp --html, css and js style guides
+    https://github.com/public-apis/public-apis -- public API's on github
+    https://www.youtube.com/playlist?list=PLyuRouwmQCjkWu63mHksI9EA4fN-vwGs7 -- Steve Griffith's Ajax playlists
+    https://www.youtube.com/watch?v=GhrvZ5nUWNg -- Difference between cookies, session and tokens
+    https://www.youtube.com/watch?v=-RCnNyD0L-s -- Node.js Passport Login System Tutorial
+    https://www.youtube.com/watch?v=j0PpT96EFeg -- Understanding Browser Cookies, Steve Griffith
+    https://www.youtube.com/playlist?list=PLyuRouwmQCjkWu63mHksI9EA4fN-vwGs7 -- Fetch playlist, Steve Griffith
+    https://www.npmjs.com/ -- npm repository of all node packages
+
+Acronyms 
+    AJAX - Asynchronous Javascript and XML
+    CDN - Content Delivery Network - geographically disbursed servers delivering web contenta
+    UUID - Universally Unique Identifier
+    GUID - Globally Unique Identifier
+
+URL Taxonomy
+    https://www.example.site.com/services/summary?arg1=value&arg2=value2
+    Protocol: https://
+    Subdomain: example
+    Domain: site
+    TLD (Top Level Domain): .com
+    Subfolder: /services -- a directory on the host
+    Slug: /summary -- a document on the host with default .html ending
+    ? -- first get parameter separator
+    & -- further get parameters (multiple allowed
+
+HTTP Response Codes
+    200 -- OK, content delivered
+    400 -- Bad request
+    403 -- Forbidden
+    404 -- Not found
+    500 -- Internal server error (consult the errorlog)
 
 Coding Challenge Sites
     HackerRank
@@ -237,6 +268,8 @@ Brad Schiff's Miscellaneous Courses
     https://www.youtube.com/RachelAndrew -- CSS Grid and Layouts by Rachel Andrew
     https://www.youtube.com/LayoutLand -- Layout Land Jen Simmons
     https://www.youtube.com/watch?v=rJesac0_Ftw -- JSON and AJAX Tutorial: With Real Examples
+    https://www.youtube.com/watch?v=z7ikpQCWbtQ&list=PLpcSpRrAaOargYaCNYxZCiFIp9YTqEl-l&in -- Learn Express.js In 48 Minutes: Web Server Tutorial
+    https://www.youtube.com/watch?v=xq34NS4S59o&list=PLpcSpRrAaOargYaCNYxZCiFIp9YTqEl-l&index=16 -- Create An API: CORS, SPA / Client-Side Routing Explanation
 
 Brad Schiff's Coding Bootcamp (LearnWebCode on YouTube)
     https://www.youtube.com/playlist?list=PLpcSpRrAaOargYaCNYxZCiFIp9YTqEl-l -- Playlist
@@ -265,6 +298,7 @@ Tutorials by Steve Griffin
     https://www.youtube.com/watch?v=KUmuiqV1xME&list=PLyuRouwmQCjncCz8JChyPNRBvm2ONGYa2 -- Steve Griffin HTML Intro (Done)
     https://www.youtube.com/watch?v=7EKebb4VUYQ&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=13 -- Steve Griffin What is Ajax (Done)
     https://www.youtube.com/watch?v=_5yhmkDQqIQ&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=14 -- Steve Griffin Fundamentals of the Fetch method (Done)
+    https://www.youtube.com/watch?v=KRfhdWxyenI&list=PLyuRouwmQCjnqkUsuXHT4WOPzeWXvuA4W&index=1 -- Prevent Directory Browsing on Apache, Steve Griffih
 
 Document Object Model (DOM)
     https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction -- DOM introduction
@@ -274,6 +308,9 @@ Document Object Model (DOM)
 JSON (Java Script Object Notation)
     http://www.json.org/
     http://www.filltext.com/ -- JSON data generator
+
+Cookies
+    Uses: Session management, customization and tracking 
 
 News and Blogs
     https://bitsofco.de/
@@ -736,14 +773,20 @@ Javascript Hot Keys
     // line comment in .js fie
     /* */ block comment in .js file
 
-Javascript Installing Node.js
+Javascript Installing Node.js on Ubuntu Linux
+    Steps
+        sudo apt-get remove nodejs -- remove existing nodejs
+        https://github.com/nodesource/distributions -- follow instructions for Node.js v16x in readme
+        sudo apt update
+        sudo apt upgrade
+        node -v -- check node is installed and get the version (eg. v10.19.0)
+        install npm (see below)
     Node is the V8 Javascript engine ripped out of Chrome
     Nodejs -- can run Javascript on a local machine or server (i.e. backend dev)
     https://nodejs.org/en/ -- download page
-    Type 'node' in the command prompt to run Javascript
+    Type 'node' in the command prompt to run Javascript in 
     Type .exit to exit
     Installs in Windows and available visible through Programs and Features
-    node -v -- display the installed version of node
     node <enter> -- node interactive mode
     .exit -- exit node interactive mode
     .edit -- enter editor mode
@@ -756,9 +799,12 @@ Javascript NVM Node Version Manager
     Installs any version of node js
 
 Javascript NPM Packages Installation
+    Update to latest NPM
+        npm install -g npm@latest -- to get instructions, or ...
+        npm install -g npm@8.13.2
     npm -- node package manager
     npm install -g <packagename> installs a node package globally (e.g npm install -g express)
-    npm install -- from within the repo
+    npm install -- from within the repo or subdirectory you are using
     npm test <filename> -- to run the code in a test sling
     npm root -g -- find where global packages are installed
     npm list -- list node packages installed in the current directory (in subdirectory node_modules
@@ -771,6 +817,7 @@ Javascript NPM Packages Installation
          c:\Users\gjarm -- Windows
     npm config get prefix -- find the path node uses to find global modules
     npm init -y -- create package.json file in the local directory -- project configuration file. -y suppresses project questions
+    npm install express -- after creating package.json in the local working directory to install the express package
 
 Javascript NPM Packages
     mongodb -- mongodb connector
@@ -778,11 +825,25 @@ Javascript NPM Packages
     express -- webServer
     mysql2 -- mySQL connector
 
+Javascript Express WebServer
+    Run <jscript with express in it> as sudo
+    Open the router firewall by mapping a port (eg. 3000) route
+    sudo node <jscript with express in it> -- to run the express server as a js script
+    npx nodemon <jscript with express in it> -- to automatically rerun altered js on saving
+        npx executes a node package without installing it locally
+        nodemon runs node and automatically reloads node if the targe js is changed
+    express middleware - functions that modify the req and res objects in a GET or POST request
+    Templating Engines
+        Handlebars
+        Pug (formerly Jade)
+        ejs at npmjs.com/package/ejs
+
 Javascript Strict Script
     The directive "use strict" at the start of a script enforces modern strict ECMAScript5 compliance
     Only comments can appear above the "use strict" directive
     "use strict" can be limited to a function if put at the beginning of the function
     Several language features like classes and modules implement strict mode automatically
+        use keyword
 
 Javascript Operators
     + - / * plus minus divide multiply
@@ -838,6 +899,11 @@ Javascript Data Types
         undefined: separate datatype and means 'no value assigned'
     typeof() returns the type of a variable. typeof x; is the same as typeof(x);
 
+Javascript Strings
+    string.toUpperCase() -- converts to uppercase
+    string.toLowerCase() -- converts to lowercase
+    string.trim() -- removes whitespace leading or trailing
+
 Javascript Escaped Characters in Strings
     \' single quote
     \" double quote
@@ -871,7 +937,7 @@ Javascript Properties (e.g. of Strings)
     strings are immutable .. existing individual characters cannot be changed
     declare an empty string: var mystring = "";
 
-Javascript Functions
+Javascript Functions including ES6 Arrow Functions
     Syntax 1 (preferred):
         function fMyFun(vars) {<body>};
         These function declarations are hoisted (they can be invoked before declared)
@@ -879,7 +945,7 @@ Javascript Functions
         const fMyFun = function(vars) {<body>};
         Function synonyms can be created as const fMyFuncSyn = fMyFun (a previously declared function)
         The first line of this syntax must include 'function()'
-    Syntax 3 Arrow functions for Anonymous Functions (myFunc = (vars) => {<body>};
+    Syntax 3 Arrow functions (ES6) for Anonymous Functions (myFunc = (vars) => {<body>};
     () is the function invocation operator
     functions take parameters and return a result (i.e. a function call)
     functions without return statements return undefined
@@ -1111,9 +1177,9 @@ Javascript String Methods
     myStrengt.length; -- length of the string
 
 Javascript Template Literals
-    Template literals are like strings but with embedded varialbes
+    Template literals are like strings but with embedded variables
     Template literals use `` backticks instead of quotes "" or '' and embedded ${} variables
-        e.g. `this is a strin of numbers like ${4+4} and others`
+        e.g. `this is a string of numbers like ${4+4} and others`
              `the name ${myName} is embedded in this string`
 
 Javascript Document Methods
@@ -1186,4 +1252,10 @@ Javascript Fetch and Promise
 MongoDB Notes
     MDB References
         https://www.mongodb.com/
+
+Google Sign-in for Websites
+    Name: GoogleAuth
+    Type: web application
+    Client ID: 212964569141-h2jr9eemnpa3r69bqf93mas1ugb3ouov.apps.googleusercontent.com
+    https://developers.google.com/identity/gsi/web -- migration services
 

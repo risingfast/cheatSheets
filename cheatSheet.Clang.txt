@@ -339,6 +339,8 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=Bd-xNEOXohs -- Are Pointers Bad for Embedded Systems? (Done)
     https://www.youtube.com/watch?v=KGFOLJiIo1g -- Why I don't recommend C++ for beginners. (Done)
     https://www.youtube.com/watch?v=BIht65Xu1jI -- Another reason C++ is so BAD...for beginners. (Done)
+    https://www.youtube.com/watch?v=hGBHGficAiM -- Generating Unique Identifiers in Your Programs (GUIDs/UUIDs) (Done)
+    https://www.youtube.com/watch?v=V3J5DWKPYts -- How to Indent Code the Right Way (Done)
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -918,7 +920,7 @@ Functions in lib.c and Other Libraries
     strcpy(dest, source) -- copies the source string to the destination string
     strdup(source) -- allocates a string dest and copies source to dest returning dest. dest must be free()'ed when no longer needed
     strsep(
-    strstr(<string1>, <string2>) -- finds a pointer to <string2> in <string1> or NULL
+    strstr(<string1>, <string2>) -- finds a pointer to <string2> within <string1> or NULL
     strlen(<string>) gives the length of a string excluding the null terminator, #include <string.h>
     write(int fildes, const void *buf, size_t nbytes)
         #include <unistd>

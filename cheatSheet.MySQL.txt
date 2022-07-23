@@ -190,7 +190,7 @@ SQL C API
     (int) strtol(row[0], endptr, 10);                                  -- convert string to integer
 
 Backup and Restore
-    mysqldump -u gjarman -p risingfast > /tmp/mysql_backup.sql -- from the server (sudo not required)
+    mysqldump -u gjarman -p risingfast > /tmp/mysql.backup.sql -- from the server (sudo not required)
     mysqldump --column-statistics=0 -h 35.188.123.150 -u root -p risingfast > /tmp/mysql.bak.sql -- from a local client to backup GCP SQL
     characterset convsersions on backfile from risigfast to gjarman2020
      :%s/utf8mb4_0900_as_ci/utf8_general_ci/g 

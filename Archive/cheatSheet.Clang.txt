@@ -10,7 +10,7 @@ History of Versions
 
 Resources and References
     http://lib.daemon.am/Books/C/ - Sams Teach Yourself C in 21 Days
-    http://www.gnu.org/software/libc/manual/ - GNU C Library
+    http://www.gnu.org/software/libc/manual/ - GNU C standard Library
     https://www.youtube.com/user/mycodeschool -- My Code School
     https://gcc.gnu.org/ -- GCC, the GNU Compiler Collection
 
@@ -281,7 +281,6 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=mfmXcbiRs0E -- Learning GDB
     https://www.youtube.com/watch?v=zkV-MoTosPE -- Debug faster with conditional breakpoints (GDB)
     https://www.youtube.com/watch?v=A_pV61xFty8 -- How to examine memory in GDB
-    https://www.youtube.com/watch?v=BM9cnSEY23s -- Refactoring your Code
     https://www.youtube.com/watch?v=7MhJmLV6tdM -- Be more productive with better command-line tools (exa, bat, rg)
     https://www.youtube.com/watch?v=dPxCGlW9lfM -- Why do programmers use hexadecimal numbers
     https://www.youtube.com/watch?v=ADh_OFBfdEE -- What are environment variables
@@ -331,6 +330,15 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=KjPvEcds0QA -- Do you see the bug? (Done)
     https://www.youtube.com/watch?v=RY71m2UKO5Q -- Testing matters. Watch those corner cases. (Done)
     https://www.youtube.com/watch?v=eC71xRY4yAM -- https://www.youtube.com/watch?v=eC71xRY4yAM (Done)
+    https://www.youtube.com/watch?v=q-BvQgZVRGA -- Detect Corruption with a Checksum (Done)
+    https://www.youtube.com/watch?v=lMk5AGz88g4 -- Code Review #2: Generalizing and D.R.Y.ing things up
+    https://www.youtube.com/watch?v=M6RCUiZzl8Y -- How to profile your own function calls in C? (instrument your code!)
+    https://www.youtube.com/watch?v=BM9cnSEY23s -- Refactoring your Code
+    https://www.youtube.com/watch?v=n4_m1ioUjpE -- What's the Best Way to Copy a Struct in C and C++?
+    https://www.youtube.com/watch?v=GIWeQ2I67rk -- Pulling Back the Curtain on the Heap
+    https://www.youtube.com/watch?v=Bd-xNEOXohs -- Are Pointers Bad for Embedded Systems? (Done)
+    https://www.youtube.com/watch?v=KGFOLJiIo1g -- Why I don't recommend C++ for beginners. (Done)
+    https://www.youtube.com/watch?v=BIht65Xu1jI -- Another reason C++ is so BAD...for beginners. (Done)
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -869,6 +877,7 @@ Structures
     You must name a structure and a type when creating a typedef for a structure
     typedef struct <StructName> { type <TypeVar>; type <TypeVar>; ...} <StructNameType>;
     copy a structure by equating the structure name e.g. struct2 = struct1 copies all the element values
+    also copy a structure by equating each element of the from/to structures or using memcopy on the structure as a whole
 
 Abstract Data Structures or Types
     Array

@@ -15,12 +15,22 @@ References
     https://httpd.apache.org/docs/2.4/
     https://www.youtube.com/watch?v=rCr3-YlL5S8 -- Basics of Apache Webserver
     https://computer.howstuffworks.com/web-server.htm
+    https://ubiq.co/tech-blog/set-access-control-allow-origin-cors-headers-apache/ -- resolving CORS problems
+    https://www.youtube.com/watch?v=zswi0cPMxsU&t=319s -- resolving CORS with .htaccess at /var/www/html on the server
+    https://httpd.apache.org/docs/2.4/getting-started.html -- Apache introduction
+    https://httpd.apache.org/docs/2.4/howto/htaccess.html -- htaccess file docs by Apache
+    https://httpd.apache.org/docs/current/howto/auth.html -- Authenitcation how-to
+    https://httpd.apache.org/docs/2.4/ -- Apache2 documentation main index
+    https://www.youtube.com/watch?v=KRfhdWxyenI&list=PLyuRouwmQCjnqkUsuXHT4WOPzeWXvuA4W&index=1 -- Prevent Directory Browsing on Apache, Steve Griffith
+    https://www.youtube.com/watch?v=SBw92maYVCY&list=PLyuRouwmQCjnqkUsuXHT4WOPzeWXvuA4W&index=2 -- Password Protecting Apache Directories, Steve Griffith
+    https://www.youtube.com/watch?v=zswi0cPMxsU&list=PLyuRouwmQCjnqkUsuXHT4WOPzeWXvuA4W&index=3 -- Understanding CORS AJAX fetch problems, Steve Griffith
 
 Installation Steps
     sudo apt update -- collect latest packages
     sudo apt upgrade -- apply latest packages
     sudo apt install apache2 -- install apache2
     sudo apt install apache2-doc -- install apache2 documentation package
+    sudo apt install apache2-utils -- install apache2 utilities package
     systemctl start apache2 -- start apache2
     systemctl enable apache2  -- enable apache2 start on machine boot
     systemctl status apache2 -- check status of apache2
@@ -37,10 +47,13 @@ Installation Steps
     curl http://192.168.0.18:80 -- test the homepage using Curl
     cd /etc/apache2/mods-enabled -- change to the mods-enabled directory
     sudo ln -s ../mods-available/cgi.load -- create a symlink
-    sudo service apache2 reload -- reload apache webserver
+    sudo service apache2 reload -- reload apache webserver (same as restart w/out dropping current sessions)
     http://192.168.0.18/ -- open the default homepage
     sudo vim /usr/lib/cgi-bin/hw.sh -- create a simple BASH cgi script
     http://127.0.0.1/cgi-bin/hw.sh -- run the cgi script
+
+Apache2 Environment Variable Definitions
+    /etc/apache2/envvars
 
 Web Directories (www.risingfast.com)
     /var/www/html/index.html -- Default document root path
@@ -50,14 +63,18 @@ Web Directories (www.risingfast.com)
     /var/www/rf - rf.com virtual host home
 
 cgi Directories (www.risingfast.com/cgi-bin/file_name)
+    /usr/sbin -- apache binaries
     /usr/lib/cgi-bin -- default CGI scripts directory for apache2 webserver
     run 'sudo a2enmod cgi' to enable the cgi module in Apache the 'systemctl restart apache2' to apply
 
 Configuration Directories
     /etc/apache2 -- Server root (set in /etc/apache2/apache2.conf)
+    /var/www -- Document root
     /etc/apache2/apache2.conf -- Apache global setting file
     /etc/apache2/ports.conf -- Listening port assignments for http and https
+    /etc/apache2/conf-available -- configuration fragments
     /etc/apache2/conf-enabled -- Symlinks to the files in conf-available
+    /etc/apache2/mods-available -- Available modules
     /etc/apache2/mods-enabled -- Enabled modules
     /etc/apache2/sites-available/ -- Configuration files directory
     /etc/apache2/sites-enabled -- vhost file entries for multiple sites on one server
@@ -65,15 +82,32 @@ Configuration Directories
     /etc/apache2/sites-enabled/000-default.conf -- default virtual host file
     /etc/httpd/conf/httpd.conf -- configuration file
 
+Configuration
+    Configuration uses directives in files in /etc/apache2/sites-enabled, or in .htaccess files on the file system
+    .htaccess files should only be used on hosted installactions where /etc/apache2 access is blocked
+
+Comments
+    comments in configuration and .htaccess must start the line with "#" always and cannot start mid-line
+
 Virtual Host Configuration
     Make a new directory under /var/www
     Copy /etc/apache2/sites-available/000-default.conf to a new file and name it as the new hostname (eg. rf.com.conf)
     Update the new conf file: add ServerName rf.com or the new server name and set document root to new directory
     Enable the  new virtual config ... sudo a2ensite rf.com
+    Disable a virtual config ... sudo a2dissite rf.com
     systemctl reload apache2 -- restart Apache
     Update the local hosts file to point to the new virtual host
     Create an index.html file and put in the new home
     Browse the new host http:rf.com
+
+Modules
+    /etc/apache2/mods-enabled -- subdirectory of enabled modules
+    apt search libapache2-mod -- list available modules for apache2
+    apt install libapache2-mod-python -- install python scripting support
+    run 'sudo a2enmod <modulename> to enable installed  modules in Apache the 'systemctl restart apache2' to apply
+    mod_session
+        as sudo: a2enmod session
+        as sudo: systemctl restart apatch2 -- to restart apache after enabling the mod
 
 Simple BASH CGI using sudo vim /usr/lib/cgi-bin/hw.sh ...
     #!/bin/bash
@@ -88,11 +122,15 @@ Mod Per and Mod Python
     sudo apt-get -y install libapache2-mod-python
 
 Key Files and Logs
-     /etc/apache2/apache2.conf -- configuration file
-     /etc/apache2/mods-enabled -- mods enabled such as perl and python
-     /var/log/apache2/access.log -- access.log file of access history
-     /var/log/apache2/error.log -- error.log file of error history
-     /var/run/apache2/apache2.pid -- process id for apache2
+    Log File Locations
+        /etc/apache2/apache2.conf -- configuration file
+        /etc/apache2/mods-enabled -- mods enabled such as perl and python
+        /var/log/apache2/access.log -- access.log file of access history
+        /var/log/apache2/error.log -- error.log file of error history
+        /var/run/apache2/apache2.pid -- process id for apache2
+    Log Monitoring
+        sudo tail -f /var/log/apache2/access.log -- monitor the access log in real time
+        zgrep "index.css" ./* | grep "jbarrie" -- check the access logs including compressed logs for a username
 
 Version
     Server version: Apache/2.4.29 (Ubuntu) (from apache2 -v on the command line)
@@ -119,14 +157,23 @@ Basic HTTP Authentication in Apache2 (aka basicAuth)
     Create additional entries with different <Directory> entries for subdirectory security
     Finally ... systemctl restart apache2 to reboot Apache
 
-Commands
-    apache2 -v -- show version (e.g.  Apache/2.4.41 (Ubuntu) (e.g. Server built: 2022-03-16T16:52:53)
+apachectl Commands to Control httpd (the HTTP Daemon)
+    apachectl -l -- list all compiled modules
+    apachectl -M -- list all loaded modues (compiled and dynamic)
+    apachectl -t -- validate all configurations
     systemctl status apache2 -- show Apache2 status, operating history and references
     systemctl start/stop/reload/restart apache2
+    systemctl enable apache2 -- configure apache2 startup when machine starts up
+
+Commands (non apachectl)
+    apache2 -v -- show version (e.g.  Apache/2.4.41 (Ubuntu) (e.g. Server built: 2022-03-16T16:52:53)
     netstat -tupan | grep -i apache2 -- check the port Apache2 is listing on (80/443)
     ps aux | grep -i apache -- get Apache2 processes running
     apache2 -t -- check the syntax of the Apache2 configuration file for errors before restarting apache2
-    systemctl enable apache2 -- configure apache2 startup when machine starts up
+
+Configuration Directives
+    Directives control the configuration of the server
+    Directives are single line commands placed in sections to limit their scope, such as <Directory>, <Files>, <Location> and <VirtualHost> sections
 
 Configuration File Directives (in /etc/apache2/apache2.conf)
     ServerRoot -- file system root for apache files
@@ -144,3 +191,15 @@ Hosting Modes
     Name-based Virtual Hosting -- supports multiple websites to the same IP address
     IP-based Virtual Hosting -- single website per IP address
 
+Cross Origin Scheduling (CORS)
+    CORS blocks can be fixed by editing httpd.conf or adding a .htaccess file -- see reference above
+    sudo a2enmod headers -- enable the headers module in Apache2
+    vim /etc/apache2/apache2.conf -- edit the configuration file
+        add line: Header set Access-Control-Allow-Origin "*" to <Directory /var/www/html> block
+        sudo apachectl -t -- test the configuration change for invalid syntax
+        sudo systemctl restart apache2 -- restart Apache2
+    Add a .htaccess file to /var/www/html with line Header Set Access-Control-Allow-Origin *
+
+Directory Browsing
+    Any directory under the apache root (e.g. /var/www/html) will display a directory listing if there is no index.html default page
+    Directory browsing can be blocked in /var/www/html/.htaccess with "Options -Indexes" and enabled with "Options +Indexes"

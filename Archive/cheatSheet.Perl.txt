@@ -127,7 +127,7 @@ Apache Installation and Configuration for Perl Scripts Under Linux
 Apache Installation and Configuration for Perl Scripts Under Windows
         For Linux, it is normally #!/usr/bin/perl 
         In Windows XP running Apache under the Oracle file system, 
-			it can be like #!D:\oracle\product\10.1.0\db_1\perl\5.6.1\lib\MSWin32-x86
+        it can be like #!D:\oracle\product\10.1.0\db_1\perl\5.6.1\lib\MSWin32-x86
         For Windows the apache httpd.conf line 'ScriptInterpreterSource' is set to 'registry' 
             This setting ignores the #!shebang line and the perl binary location is obtained from the registry
             It is not required because Apache uses Windows file associations to find the executable
@@ -157,7 +157,7 @@ Placing Perl CGI Scripts on the Filesystem
 Perl Content Type Headers
     Content headers in perl scripts dictate how perl instructs the http server to send output
         If the print "content header" instruction is not included, 
-			the webserver does not know the content type to send with the response
+    the webserver does not know the content type to send with the response
         The http server will error out without this information.
     These are required for HTML webpages and must be the following format, immediately after the shebang line
         print "Content-type: text/html\n\n" 
@@ -179,7 +179,7 @@ Basic Perl Script Structure Guidelines
     There is no "main()" procedure in perl as there is in java or "C".
         Perl executes a script starting on the first line of the target source file
     The simplest perl script is a shebang line and a print statement
-		This can be run at the console with "perl -e <scriptname>"
+    This can be run at the console with "perl -e <scriptname>"
         To stop the script console closing at completion, add a line to pause the script
         eg add "print "Hit any key to continue; $anykeys = <>;" to prompt for keyboard input to finish the script
     Whitespace is required between lexical tokens and many whitespaces are treated the same as a single whitespace
@@ -264,7 +264,7 @@ Basic Perl Commands
     Perl uses sigils (i.e. magical signs) to identify if a variable is scalar ($), array(@) or hash (%)
     Input is accomplished with $my_input = <STDIN>; which waits on input from the standard input of console
     Use $my_input = chomp( $my_input ) to delete the last character from the input value
-		chomp cuts the newline off the input string (or whatever the last character may be)
+    chomp cuts the newline off the input string (or whatever the last character may be)
 
 Line Input
     <> is the line input operator which fetches line oriented input from a file (defined by a file handle)
@@ -288,26 +288,26 @@ Basic Perl Variables
     	Variables need not be declared - they can be used without formal declaration (however "use strict" forces declarations)
     	Uninitialized variables have a numeric value of zero, an empty string value or a 'FALSE' boolean value
     Every variable type (scalar, array, hash) has its own namespace
-		so $foo can co-exist with @foo - one is a variable and the other is a completely separate array
-		this also means that in strict mode, each must be declared separately
-	Variable Scope and Declarations
-    	Variable scope can be package (using "our") or lexical (using "my"). 
-		Package variables never go out of scope.
-    		Package variable have global scope but require a package name qualifier to reference them
-        	The fully qualified variable name for a "package" scope variable is <sigil><package>::<variable>
-        	The default name for the module that is executed is "main"
-    	Lexical variables declared with 'my' have only local scope within the program or package where they are used. 
-        	They should always be used outside non-main packages
-        	Use the 'my' prefix to declare a lexical variable
-    	Variables should be declared where they are used to utilize perl's inbuilt garbage collection.
+    so $foo can co-exist with @foo - one is a variable and the other is a completely separate array
+    this also means that in strict mode, each must be declared separately
+Variable Scope and Declarations
+    Variable scope can be package (using "our") or lexical (using "my"). 
+    Package variables never go out of scope.
+    Package variable have global scope but require a package name qualifier to reference them
+        The fully qualified variable name for a "package" scope variable is <sigil><package>::<variable>
+        The default name for the module that is executed is "main"
+    Lexical variables declared with 'my' have only local scope within the program or package where they are used. 
+        They should always be used outside non-main packages
+        Use the 'my' prefix to declare a lexical variable
+    Variables should be declared where they are used to utilize perl's inbuilt garbage collection.
     The variables $!, $_, $#, $" and @_ have special meaning in Perl
         $! contains the text of the most recent error before a script exist
-			The $! variable can be used in the "or die('Error was -> , $!)" print instruction    
+    The $! variable can be used in the "or die('Error was -> , $!)" print instruction    
         $_ is the default input and pattern matching space
-			it is assigned a value in loops and @_ is the equivalent array value
-			it is not assigned from the default input operator "<>" unless in a loop (use "$_ = <>" for this)
-		$#_ is the index of the last value in the default array @_
-			You can get the index to the last entry in any array also (eg $last = $#my_array)
+    it is assigned a value in loops and @_ is the equivalent array value
+    it is not assigned from the default input operator "<>" unless in a loop (use "$_ = <>" for this)
+    $#_ is the index of the last value in the default array @_
+    You can get the index to the last entry in any array also (eg $last = $#my_array)
     	The two default variable names $_ and @_ are related, so $_[1] is a member of @_
         $"  is the list separator and the default value is a space
         $\ is the line terminator, which is defaulted to the newline "\n"
