@@ -1,0 +1,1266 @@
+Web Cheatsheet (HTML, CSS, JS)
+
+Action Items
+    Enable CORS in Apache
+    API Programming in JS and JSON
+    Media queries: different CSS for different screen sizes and devices
+    Flexbox positioning content in CSS
+    CSS Grid and grid positioning
+    Responsive images: different files to different devices based on size and pixel density
+    Figma tutorials on Youtube for graphic design
+    CSS Animations and animate.style example website
+    Go through the Bootstrap documentation and components
+
+Server Directories
+    /usr/lib/cgi-bin -- cgi binaries
+    /var/www/html -- javascript, html and cheatsheets
+
+Tips and Tricks and Troubleshooting Issues
+    Don't use float in an elemet style because the element floats outside it's container <div>
+    Cross Origin Resource Sharing (CORS)
+    https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+        
+References
+    https://developer.mozilla.org/en-US/ for tutorials on CSS and HTML and Javascript
+    https://developer.mozilla.org/en-US/docs/web/javascript -- tutorials and feature lookups for Javascript
+    https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+    https://developer.mozilla.org/en-US/docs/Learn/JavaScript -- Mozilla Javascript training
+    https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics -- Mozilla Javascript training introduction
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element -- HTML Elements
+    https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
+    https://www.whichbook.net/ -- book search on criteria
+    https://www.washington.edu/accesscomputing/webd2/student/ -- Washington U webpage design tutorials
+    https://www.htmlgoodies.com/
+    https://docs.microsoft.com/en-us/learn/ -- search topic for any courses
+    https://javascript.info -- many tutorial topics
+    https://www.freecodecamp.org/ -- freecodecamp homepage
+    https://www.youtube.com/watch?v=PkZNo7MFNFg -- freecodecamp Javascript tutorial with Beau Carnes
+    http ://codingphase.com/
+    https://javascript30.com/ -- 30 day JS coding challenges
+    https://www.w3schools.com -- courses on everything
+    http://www.htmldog.com
+    https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw -- Web Dev Simplified Kyle Cook courses on a variety of web topics
+    https://javascriptsimplified.com/ -- Kyle Cook's Web Dev Simplified home page
+    https://javascript.info/ -- Javascript Training, tutorials including HTML interactions
+    https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBMdkKFn3HasZnnAqVjzHn_ -- Playlist NodeJS for Beginners Tutorial Series on Youtube (thenewboston series)
+    http://web.stanford.edu/class/cs98si/ -- Stanford Javascript course -- Introduction to Javascript
+    http://www.gbengasesan.com/fyp/books.htm -- Book List and Links for online eBooks
+    http://www.gbengasesan.com/fyp/23/ -- Using Javascript Mark Reynolds (book)
+    http://www.gbengasesan.com/fyp/13/ -- JavaScript (Laura Lemay and Michael G. Moncur book)
+    http://www.gbengasesan.com/fyp/13/ch8.htm Improving a webpage with JS
+    https://javascript.info/ -- java tutorials including HTML interactions
+    https://mva.microsoft.com -- JS Intro on Microsoft Virtual Academy
+    https://www.youtube.com/watch?v=Ukg_U3CnJWI -- Learn Javascript in 12 Minutes on Youtube
+    https://www.youtube.com/watch?v=yQaAGmHNn9s -- thenewboston javascript on youtube
+    https://mva.microsoft.com/en-US/training-courses/javascript-fundamentals-for-absolute-beginners-14194?l=L4YIbtUxE_900115881 -- MS Virtual Acadamy JS course
+    http://htmldog.com/ -- Javascript tutorials
+    https://www.w3schools.com/js/default.asp
+    https://www.w3schools.com/html/html_scripts.asp -- W3 schools JS intro course within HTML course
+    https://www.w3schools.com/jsref/default.asp -- Javascript reference
+    http://web.stanford.edu/class/cs98si/ -- Stanford JS course Introduction to Javascript
+    http://www.gbengasesan.com/fyp/23/ -- Using Javascript Mark Reynolds (book)
+    http://www.gbengasesan.com/fyp/13/ -- JavaScript (Laura Lemay book)
+    https://javascript.info/
+    http://jsforcats.com/#basics
+    http://eloquentjavascript.net/
+    https://www.sitepoint.com/why-javascript-is-the-future-of-programming/ -- jscript Pin
+    https://www.reddit.com/r/dailyprogrammer/
+    https://nodejs.org/en/ -- Node JS download site
+    http://javascript.crockford.com/ -- misc JS topics
+    http://addyosmani.com/resources/essentialjsdesignpatterns/book/ -- link to book on JS Design Patterns
+    https://developer.mozilla.org/en-US/docs/Web/CSS/white-space -- whitespace and text wrapping settings in a textarea
+    https://www.w3schools.com/cssref/css_default_values.asp -- css default values
+    https://www.w3schools.com/html/html5_syntax.asp --html, css and js style guides
+    https://github.com/public-apis/public-apis -- public API's on github
+    https://www.youtube.com/playlist?list=PLyuRouwmQCjkWu63mHksI9EA4fN-vwGs7 -- Steve Griffith's Ajax playlists
+    https://www.youtube.com/watch?v=GhrvZ5nUWNg -- Difference between cookies, session and tokens
+    https://www.youtube.com/watch?v=-RCnNyD0L-s -- Node.js Passport Login System Tutorial
+    https://www.youtube.com/watch?v=j0PpT96EFeg -- Understanding Browser Cookies, Steve Griffith
+    https://www.youtube.com/playlist?list=PLyuRouwmQCjkWu63mHksI9EA4fN-vwGs7 -- Fetch playlist, Steve Griffith
+    https://www.npmjs.com/ -- npm repository of all node packages
+    https://alvinalexander.com/perl/edu/articles/pl010012/ -- cookies and CGI
+    https://www.easy400.net/cgidev2o/exhibiu8.htm -- cookies in CGI
+    developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie -- cookies and CGI
+    https://www.oreilly.com/library/view/cgi-programming-on/9781565921689/06_chapter-03.html -- cookies and CGI
+    https://techexpert.tips/apache/perl-cgi-apache/ -- cookies and CGI
+
+Acronyms 
+    AJAX - Asynchronous Javascript and XML
+    CDN - Content Delivery Network - geographically disbursed servers delivering web contenta
+    UUID - Universally Unique Identifier
+    GUID - Globally Unique Identifier
+
+URL Taxonomy
+    https://www.example.site.com/services/summary?arg1=value&arg2=value2
+    Protocol: https://
+    Subdomain: example
+    Domain: site
+    TLD (Top Level Domain): .com
+    Subfolder: /services -- a directory on the host
+    Slug: /summary -- a document on the host with default .html ending
+    ? -- first get parameter separator
+    & -- further get parameters (multiple allowed
+
+HTTP Response Codes
+    200 -- OK, content delivered
+    400 -- Bad request
+    403 -- Forbidden
+    404 -- Not found
+    500 -- Internal server error (consult the errorlog)
+
+Coding Challenge Sites
+    HackerRank
+    Leetcode
+    Codewars
+    Topcoder
+    Coderbyte
+
+Image Tools and Libraries
+    https://www.figma.com/ -- image editing
+    https://pixlr.com/ -- image editing
+    https://pixabay.com/en/ -- stock photos and images
+    https://unsplash.com/ -- stock photos and images
+    https://cloudinary.com/ -- stock photos and images
+    https://tinypng.com/ -- photo compression site
+    https://tinyjpg.com/ -- photo compression site
+
+Books
+    JavaScript: The Definitive Guide -- David Flanagan
+    https://github.com/getify/You-Dont-Know-JS -- You Don't Know Javascript
+    JavaScript: The Good Parts by Douglas Crawford
+    jQuery in Action 3rd Edition Bear Bibeault
+    front-end-handbook-2017.pdf
+
+Tools
+    https://haveibeenpwned.com/ -- email address checker for email exposed to hacks
+    https://10minutemail.com/10MinuteMail/index.html?dswid=4694 -- temporary emails
+    https://downforeveryoneorjustme.com/ -- check if website is down
+    https://ads.google.com/ -- adword research and ad purchases with Google
+    http://www.domainsbot.com -- domain name search
+    http://www.domaintools.com -- domain name statistics
+    http://www.namestation.com -- domain name creation 
+    http://www.leandomainsearch.com -- domain name creation (free service)
+    http://www.namemesh.com -- domain name creation
+    http://www.namechk.com -- multi-social media check for name in use
+    https://www.virustotal.com/#/home/upload -- owned by Google -- virus analyzer for files and URL's
+    https://handlebarsjs.com/ -- generate HTML from Javascript
+
+Linters (Style Checkers) Code Cleanup Tools
+    http://www.jslint.com/ -- for formatting javascript
+    Automatic style guide checking software
+        JSLint superceded by JSHint then ESLint
+    http://jshint.com/
+
+Hosting Services
+    Heroku
+    Netlify
+
+Chrome Developer Tools
+    https://developers.google.com/web/tools/chrome-devtools -- Chrome Devtools guides and reference
+    https://develor.chrome.com/devtools/docs/tips-and-tricks
+    https://developers.google.com/web/tools/chrome-devtools/ -- new
+    Chrome debugging tools for JavaScript
+    document.designMode="on" to enable design mode
+    https://www.youtube.com/watch?v=-q1z8BPFItw&t=519s -- debugging using Chrome Dev Tools
+    F12 -- in Chrome for Dev Tools (Windows)
+    <Ctrl><Shft>j -- in Chrome for Dev Tools (Windows)
+
+Web Compatability Tools
+    babeljs.io -- javascript compatability transformer
+    caniuse.com -- browser support tables
+
+API Tools
+    https://github.com/public-apis/public-apis -- sources of public API's
+    https://www.getpostman.com/ -- API testing tool
+    https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/
+    https://developer.mozilla.org/en-US/docs/Web/API -- JS API's
+
+Coding Challenges
+    https://projecteuler.net/ -- math puzzles to solve with programming
+
+Web and Text Editors 
+    https://atom.io/ -- Atom editor and IDE download site
+    https://code.visualstudio.com/ -- Visual Studio - installs as Microsoft Visual Studio Code
+    https://emmet.io/ -- Emmet CSS helper plugin for HTML shortcut keys
+    https://www.sublimetext.com/ -- sublime text -- has multiple plugins
+    https://notepad-plus-plus.org/ -- customizable editor download page
+    https://www.gnu.org/software/emacs/ -- emacs download page
+    https://code.visualstudio.com/ -- Visual Studio - installs as Microsoft Visual Studio Code
+
+Web Authoring Software
+    Adobe Dreamweaver (paid)
+    BlueGriffon (freeware)
+    TextMate (freeware)
+    OpenElement (freewared)
+    Nvu http://www.nvu.com/ New View Web Authoring software (freeware)
+    https://sourceforge.net/projects/kompozer/ -- Kompozer web Authoring software (freeware)
+
+VisualStudio Code Training
+    Visual Studio Code (VS Code)
+    https://www.youtube.com/watch?v=VqCgcpAypFQ -- Visual Studio Code for Beginners 0:30 (Done)
+    https://www.youtube.com/watch?v=WPqXP_kLzpo -- Visual Studio Code Crash Course 1:30
+    VisualStudio Code (VSC)
+        <Ctrl>` - open console
+        Source Directory C:\Users\gjarman\Documents\Computing\Web\Git\VSCode1
+        <Ctrl> / -- comment a line
+
+Lambda School Web Development Deandra Ryan-Mas
+    https://lambdaschool.com -- Lambda school mini bootcamp -- post-paid for classes
+    https://www.youtube.com/c/LambdaSchool/featured -- main Lambdaschool youtube site
+    https://www.youtube.com/results?search_query=Web+Development+101+by+Llambda+School+%7C+Lesson -- Class List
+    https://github.com/LambdaSchool/Precourse -- Github class repository
+    https://www.youtube.com/watch?v=HliFaiwkUEI -- Lesson 01 Lambdaschool mini bootcamp: terminal and GIT
+    https://www.youtube.com/watch?v=HliFaiwkUEI -- Lesson 01 Lambdaschool mini-Bootcamp: Terminal and Git 00:00
+    https://www.youtube.com/watch?v=HliFaiwkUEI -- Lesson 01 Lambdaschool mini-Bootcamp: terminal and Git 23:00
+    https://www.youtube.com/watch?v=qI6QpdRIwfk -- Lesson 02 Lambdaschool mini bootcamp: HTML and Intro CSS
+    https://www.youtube.com/watch?v=qI6QpdRIwfk -- Lesson 02 Lambdaschool mini bootcamp: HTML & CSS Basics
+    https://www.youtube.com/watch?v=fXEV0T1pr6U -- Lesson 03 Lambdaschool mini bootcamp: CSS
+    https://www.youtube.com/watch?v=fXEV0T1pr6U -- Lesson 03 Lambdaschool mini bootcamp: CSS minute 30:07 Flexbox
+    https://www.youtube.com/watch?v=fXEV0T1pr6U -- Lesson 03 Lambdaschool mini bootcamp: CSS Positioning 13:46
+    https://www.youtube.com/watch?v=oqTGD5J7Ahw -- Lesson 04 Lambdaschool mini bootcamp: Javascript intro and functions (basic and repl.it)
+    https://www.youtube.com/watch?v=oqTGD5J7Ahw -- Lesson 04 Lambdaschool mini bootcamp: Javascript Intro and functions
+    https://www.youtube.com/watch?v=CZ9Su7dXAHs -- Lesson 05 Lambdaschool mini bootcamp: Javascript node.js, data types and control flow (node.js)
+    https://www.youtube.com/watch?v=CZ9Su7dXAHs -- Lesson 05 Lambdaschool mini bootcamp: Javascript Data types and control flow
+    https://www.youtube.com/watch?v=aQYGJujtss4 -- Lesson 06 Lambdaschool mini bootcamp: Javascript For loops and arrays
+    https://www.youtube.com/watch?v=1Ieq5A5Drvk -- Lesson 07 Lambdaschool mini bootcamp: Javascript objects
+    https://www.youtube.com/watch?v=1Ieq5A5Drvk -- Lesson 07 Lambdaschool mini bootcamp: from 26:58 for loops
+    https://www.youtube.com/watch?v=1Ieq5A5Drvk -- Lesson 07 Lambdaschool mini bootcamp: after 26:58 more looping
+    https://www.youtube.com/watch?v=1Ieq5A5Drvk -- Lesson 07 Lambdaschool mini bootcamp: Javascript Objects
+    https://www.youtube.com/watch?v=OKN3k0UUAgM -- Lesson 08 Lambdaschool mini bootcamp: Javascript Objects
+    https://www.youtube.com/watch?v=k0XqPs3ChsM -- Lesson 08 Lambdaschool mini bootcamp: intro to classes
+    https://www.youtube.com/watch?v=k0XqPs3ChsM -- Lesson 08 Lambdaschool mini bootcamp: this keyword in classes and prototypes
+    https://www.youtube.com/watch?v=k0XqPs3ChsM -- Lesson 08 Lambdaschool mini bootcamp: after 41:20 redefining functions on existing class
+    https://www.youtube.com/watch?v=U1cLxm92Vck -- Lesson 09 Lambdaschool mini bootcamp: Javascript Callbacks
+    https://www.youtube.com/watch?v=uBLhBjeumsY -- Lesson 09 Lambdaschool mini bootcamp: callback function calls
+    https://www.youtube.com/watch?v=uBLhBjeumsY -- Lesson 09 Lambdaschool mini bootcamp: after 33:24 higher order functions
+    https://www.youtube.com/watch?v=uBLhBjeumsY -- Lesson 09 Lambdaschool mini bootcamp: after 46:02 array methods and callbacks
+    https://www.youtube.com/watch?v=Ha3wvueHQxQ -- Lesson 10 Lambdaschool mini bootcamp: closure and scope
+    https://www.youtube.com/watch?v=Ha3wvueHQxQ -- Lesson 10 Lambdaschool mini bootcamp: 40:50 cashing in a closure
+    https://www.youtube.com/watch?v=Ha3wvueHQxQ -- Lesson 10 Lambdaschool mini bootcamp: after 27:01 closure and caching
+    https://www.youtube.com/watch?v=Ha3wvueHQxQ -- Lesson 10 Lambdaschool mini bootcamp: Javascript Scope and Closure
+    https://www.youtube.com/watch?v=Gte_uY-YHIQ -- Lesson 11 Lambdaschool mini bootcamp: Javascript Recursion
+    https://www.youtube.com/watch?v=Gte_uY-YHIQ -- Lesson 11 Lambdaschool mini bootcamp: recursion
+    https://www.youtube.com/watch?v=1WQy2Jdk-ik -- Lesson 12 Lambdaschool mini bootcamp: DOM
+    https://www.youtube.com/watch?v=1WQy2Jdk-ik -- Lesson 12 Lambdaschool mini bootcamp: classes DOM Manipulation
+    https://www.youtube.com/watch?v=1WQy2Jdk-ik -- Lesson 12 Lambdaschool mini bootcamp: 24:24 classes DOM Manipulation
+
+Ben Bjurstrom WebConcepts Series
+    https://www.youtube.com/watch?v=wseU5RWsMmk&t=9s -- Finding a Domain Name, Choosing Target Keywords, and Evaluating the Market: Web Presence Part 1
+    https://www.youtube.com/watch?v=9J1nJOivdyw&t=1027s -- Web Server Concepts and Examples
+
+Brad Schiff's Coding Bootcamp 10 Days of Javascript
+     https://www.youtube.com/playlist?list=PLpcSpRrAaOaoIqHQddZOdbRrzr5dJtgSs Learn -- Playlist
+     https://www.youtube.com/watch?v=dc-2t26Vuhs&t=0s -- Day 0 Beginning
+     https://www.youtube.com/watch?v=K4b7LdWAVyw&t=0s -- Day 1 Getting Started
+     https://www.youtube.com/watch?v=bYshPb-wEWs&t=0s -- Day 2 Functions
+     https://www.youtube.com/watch?v=CXnnw9rQH5I&t=0s -- Day 3 Objects
+     https://www.youtube.com/watch?v=rTK0Gmf57jE&t=0s -- Day 4 Arrays
+     https://www.youtube.com/watch?v=ZWxWx-vmubI&t=0s -- Day 5 Decisions
+     https://www.youtube.com/watch?v=25VUf6pUwEU&t=0s -- Day 6 Higher Order Functions
+     https://www.youtube.com/watch?v=eJ7hvnS0Bfk&t=0s -- Day 7 Returning vs Mutating
+     https://www.youtube.com/watch?v=WPcW83BMT3Y&t=0s -- Day 8 Scope and Context
+     https://www.youtube.com/watch?v=AzxiDWeFeps&t=0s -- Day 9 Misc Must Know
+     https://www.youtube.com/watch?v=HQuJzGU7TWg&t=0s -- Day 10 Browser Practice
+     https://www.youtube.com/watch?v=WTOnKNjiPWU&t=0s -- Day 11 Full-Stack from Scratch
+
+Brad Schiff's Miscellaneous Courses
+    https://www.youtube.com/watch?v=zPHerhks2Vg&t=68s -- Javascript in Half an Hour (without jQuery) Brad Schiff
+    https://www.youtube.com/channel/UCHRp19HU7Y2LwfI0Ai6WAGQ --  LearnWebCode Youtube home for Brad Schiff
+    https://www.youtube.com/watch?v=EcJERV3IiLM -- LearnWebCode MongoDB Brad Schiff
+    https://www.youtube.com/playlist?list=PLu8EoSxDXHP7xj_y6NIAhy0wuCd4uVdid -- 20 videos on flexbox by Wes Bos
+    https://www.youtube.com/watch?v=k32voqQhODc&t=0s -- Flexbox Tutorial (CSS): Real Layout Examples
+    https://www.youtube.com/watch?v=pMVO1OPfVJ8&t=0s -- CSS Grid Tutorial: Responsive Design Examples
+    https://www.youtube.com/RachelAndrew -- CSS Grid and Layouts by Rachel Andrew
+    https://www.youtube.com/LayoutLand -- Layout Land Jen Simmons
+    https://www.youtube.com/watch?v=rJesac0_Ftw -- JSON and AJAX Tutorial: With Real Examples
+    https://www.youtube.com/watch?v=z7ikpQCWbtQ&list=PLpcSpRrAaOargYaCNYxZCiFIp9YTqEl-l&in -- Learn Express.js In 48 Minutes: Web Server Tutorial
+    https://www.youtube.com/watch?v=xq34NS4S59o&list=PLpcSpRrAaOargYaCNYxZCiFIp9YTqEl-l&index=16 -- Create An API: CORS, SPA / Client-Side Routing Explanation
+
+Brad Schiff's Coding Bootcamp (LearnWebCode on YouTube)
+    https://www.youtube.com/playlist?list=PLpcSpRrAaOargYaCNYxZCiFIp9YTqEl-l -- Playlist
+    https://www.youtube.com/playlist -- playlist
+    https://www.youtube.com/watch?v=HqzWCNbX_wg -- Free Coding Bootcamp - Brad's Bootcamp Intro (Dpne)
+    https://www.youtube.com/watch?v=zsBGJljX6Qg -- CSS Tutorial: Basic Selectors and Styles (Done)
+    https://www.youtube.com/watch?v=DJq6R2b0FoE -- CSS Layout: Flexbox & Grid Basics (Done)
+    https://www.youtube.com/watch?v=kuxRMgBXHO0 -- Creating HTML Files, Linking Between Pages, and Adding Your Own Images (Done)
+    https://www.youtube.com/watch?v=JeUMb0OgUGg -- Free Hosting With GitHub Pages: Push Your Site Live (Done)
+    https://www.youtube.com/watch?v=QZA3GSWI6b4 -- Chrome DevTools & Finishing The Design Chapter (Done)
+    https://www.youtube.com/watch?v=vRvhAzKUESw -- Bootstrap v5: Getting Started (Buttons, Responsive Columns, Accordion) (Done)
+    https://www.youtube.com/watch?v=RQipQrBU6QE -- Programming: Functions and Objects in JavaScript (Done)
+    https://www.youtube.com/watch?v=AVmGmLFcukM -- Dogs, JavaScript & An API ¿ Fetch, Promises & Async Await (includes the GitHub API's)
+    https://www.youtube.com/watch?v=EVze4Cq-dZ8 -- JavaScript Game: Interactive Questions With CSS Transitions & Animations
+
+Tutorials by Steve Griffin
+    https://www.youtube.com/watch?v=KFKScNHa-8M&list=PLyuRouwmQCjl4wTSNbb8RTKZuyMhoIxBe -- Steve Griffin CSS Introduction (Done)
+    https://www.youtube.com/watch?v=fWDVDm4HRwA&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=1 -- Steve Griffin Intro to Scripts in the Browser (Done)
+    https://www.youtube.com/watch?v=O6BNfJz3rgs&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=2 -- Steve Griffin Intro to the DOM (Done)
+    https://www.youtube.com/watch?v=DO02UZaedIo&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=3 -- Steve Griffin Finding HTML Elements (Done)
+    https://www.youtube.com/watch?v=an-6owXUwdg&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=4 -- Steve Griffin Creating HTML Content with Javascript (Done)
+    https://www.youtube.com/watch?v=KUmuiqV1xME&list=PLyuRouwmQCjncCz8JChyPNRBvm2ONGYa2 -- Steve Griffin HTML Intro (Done)
+    https://www.youtube.com/watch?v=QYqwRttZoWs&list=PLyuRouwmQCjncCz8JChyPNRBvm2ONGYa2&index=2 -- Steve Griffin HTML Page Layout (Done)
+    https://www.youtube.com/watch?v=XhItAZTTSR8&list=PLyuRouwmQCjncCz8JChyPNRBvm2ONGYa2&index=4 -- Steve Griffin HTML Paths (Done)
+    https://www.youtube.com/watch?v=ikR9DsGMUMc -- Steve Griffin Page Validation in JS (Done)
+    https://www.youtube.com/watch?v=KUmuiqV1xME&list=PLyuRouwmQCjncCz8JChyPNRBvm2ONGYa2 -- Steve Griffin HTML Intro (Done)
+    https://www.youtube.com/watch?v=7EKebb4VUYQ&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=13 -- Steve Griffin What is Ajax (Done)
+    https://www.youtube.com/watch?v=_5yhmkDQqIQ&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=14 -- Steve Griffin Fundamentals of the Fetch method (Done)
+    https://www.youtube.com/watch?v=KRfhdWxyenI&list=PLyuRouwmQCjnqkUsuXHT4WOPzeWXvuA4W&index=1 -- Prevent Directory Browsing on Apache, Steve Griffih
+
+Document Object Model (DOM)
+    https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction -- DOM introduction
+    https://www.youtube.com/watch?v=1WQy2Jdk-ik -- Web Development Mini-Bootcamp Lesson 12 DOM
+    https://www.youtube.com/watch?v=O6BNfJz3rgs&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=2 -- Steve Griffin Intro to the DOM (Done)
+
+JSON (Java Script Object Notation)
+    http://www.json.org/
+    http://www.filltext.com/ -- JSON data generator
+
+Cookies
+    Uses: Session management, customization and tracking 
+
+News and Blogs
+    https://bitsofco.de/
+    http://javascriptissexy.com -- last post 2019
+
+Online Coding Sanboxes and IDE's
+    https://en.wikipedia.org/wiki/Comparison_of_online_source_code_playgrounds
+    https://codesandbox.io/ -- online code sandbox
+    https://codepen.io/your-work -- HTML and CSS
+    https://jsfiddle.net/ -- HTML and CSS, browser development of JS with CSS and HTML
+    https://jsbin.com/
+    https://webmakerapp.com/app/
+    https://plnkr.co/ -- Plunker
+    http://quirktools.com/ -- drag and drop wireframes and mobile testers
+    https://replit.com/ -- Javascript and other languages
+    https://stackblitz.com/ -- VSCode in a browser
+    https://next.plnkr.co/ -- HTML CSS Javascript
+    https://codesandbox.io
+    https://editor.livegap.com/ -- online code editor for HTML, CSS and Javascript
+    http://scratchpad.io
+    https://www.jetbrains.com/webstorm/ -- webstorm IDE for JS
+    https://glitch.com/
+    http://www.tutorialspoint.com/codingground.htm -- online compilers for all compiler types
+
+Text Editors
+    Visual Studio Code (vscode)
+
+Groupware
+        https://slack.com/ -- messaging for groups
+        https://discordapp.com/ -- messaging for gamers
+        https://trello.com/ -- group project task management tools
+
+Javascript Frameworks
+    https://angular.io/ -- Angular
+    http://learn.jquery.com/
+    https://jquery.com/ -- home page javscript libraries and functions
+    https://learn.jquery.com/
+    http:://api.jquery.com/jquery.ajax -- Ajax requests via jQuery
+    https://learn.jquery.com/
+    http:://api.jquery.com/jquery.ajax -- Ajax requests via jQuery
+    https://jquery.com/
+    https://reactjs.org/ -- created by Facebook
+    https://getbootstrap.com/ -- Bootstrap predefined CSS classes
+    https://vuejs.org/ -- js frameword
+
+Git Resources
+    https://www.git-tower.com/blog/git-cheat-sheet
+
+Design Examples
+    https://labs.jensimmons.com/ -- CSS and Layouts
+    https://www.youtube.com/c/LayoutLand/playlists -- Jen Simmons layout and Grid tutorials
+    https://www.youtube.com/layoutland -- more jensimmons
+    https://css-tricks.com
+    http://www.jesseshowalter.com/ -- Jesse Showalter -- Freelancer
+    https://html5up.net/ethereal
+
+Youtubes
+    https://www.youtube.com/watch?v=fju9ii8YsGs -- Learn javascript in one video, Derek Banas
+    https://www.google.com/search?q=youtube&ie=utf-8&oe=utf-8#q=10+things+to+master+for+javascript+beginners -- 10 things for JS beginners
+    https://www.youtube.com/channel/UCwRXb5dUK4cvsHbx-rGzSgw -- Derek Banas Circuits and programming languages
+    https://www.youtube.com/channel/UCyU5wkjgQYGRB0hIHMwm2Sg -- Level up Tutorials 
+    https://www.youtube.com/channel/UCyIe-61Y8C4_o-zZCtO4ETQ -- Dev Tips
+
+Acronyms
+    XHR -- XML HTTP Request
+    HREF -- Hypertext REFerence
+    SASS -- Syntacticall Awewome Style Sheets
+
+Chrome Debugging Tool for JavaScript
+    F12 or Ctrl-Shft-J (for Console tab) or Ctrl-Shft-I (for Elements tab) or Menu > More Tools > Developer Tools, to get Developer tools and Debug
+    <Esc> Console
+    <Enter> to Execute
+    F5  Run
+    F8  Continue
+    F9  Step
+    F10 Step and Skip Function
+    F11 Step and Step Into Function
+    <Shift>F11 Step Out of Function
+
+HTML5 and CSS3
+    https://www.youtube.com/watch?v=yfoY53QXEnI CSS crash course 1:25 Website Styles
+    https://www.youtube.com/watch?v=0afZj1G0BIE CSS Introduction with floating nav layout (12 mins)
+    https://www.youtube.com/watch?reload=9&v=kMT54MPz9oE HTML/CSS/JS mini course
+    CSS and LESS and Bootstrap
+    WC3 Classes
+    Microsoft Certification Exam: 70-480 HTML5 and CSS3
+    https://www.codingame.com/
+    http://www.freewebdesigntutorials.net/
+    http://w3schools.com
+    https://plus.google.com/
+    http://jkorpela.fi/forms/index.html -- HTML and Forms
+    http://www.gbengasesan.com/fyp/25/ -- HTML 3.2 in 24 Hours
+    https://css-tricks.com/
+    https://developer.mozilla.org/en-US/docs/Web/CSS
+
+Kevin Powell CSS Course
+    https://www.youtube.com/playlist?list=PL4-IK0AVhVjM0xE0K2uZRvsM7LkIhsPT- -- Class list for Intro to HTML and CSS
+    https://www.youtube.com/watch?v=yqcd-XkxZNM&list=PL4-IK0AVhVjM0xE0K2uZRvsM7LkIhsPT-&index=3 -- HTML & CSS for Beginners Part 3: Paragraphs and Headings (Done)
+    https://www.youtube.com/watch?v=d2bzap43cNQ&list=PL4-IK0AVhVjM0xE0K2uZRvsM7LkIhsPT-&index=10 -- HTML & CSS for Beginners Part 10: Divs & Spans (Done)
+    https://www.youtube.com/watch?v=M6coJNLFBWI&list=PL4-IK0AVhVjM0xE0K2uZRvsM7LkIhsPT-&index=12 -- HTML & CSS for Beginners Part 12: The CSS Box Model - Margin, Borders & Padding explained (Done)
+    https://www.youtube.com/watch?v=33IinMVJf-M&list=PL4-IK0AVhVjM0xE0K2uZRvsM7LkIhsPT-&index=13 -- HTML & CSS for Beginners Part 13: Background Images (DOne)
+    https://www.youtube.com/watch?v=LrdkRMZhgZg&list=PL4-IK0AVhVjM0xE0K2uZRvsM7LkIhsPT-&index=18 -- HTML & CSS for Beginners Part 18: How Floats and Clears work (Done)
+    https://www.youtube.com/watch?v=ULVu2VNM_54&list=PL4-IK0AVhVjM0xE0K2uZRvsM7LkIhsPT-&index=20 -- HTML & CSS for Beginners Part 20: How to center a div (Done)
+    https://www.youtube.com/watch?v=DJtcBoHEgdk&list=PL4-IK0AVhVjM0xE0K2uZRvsM7LkIhsPT-&index=21 -- HTML & CSS for Beginners Part 21: How to create a basic website layout - the HTML (Done)
+    https://www.youtube.com/watch?v=TAJnJCry6_4&list=PL4-IK0AVhVjM0xE0K2uZRvsM7LkIhsPT-&index=22 -- HTML & CSS for Beginners Part 22: How to create a basic layout - the CSS (Done)
+    https://www.youtube.com/watch?v=6ardZEhjvV0 -- 6 simple typography tips to more professional looking sites
+    https://www.youtube.com/watch?v=x_i2gga-sYg&list=PL4-IK0AVhVjP27yZLwW-gkPggRps0CCnP&index=17 -- Block, Inline, and Inline-Block explained | CSS Tutorial
+    https://www.youtube.com/watch?v=R7gqJkdc5dM&t=536s --Floats, Flexbox, Grid? The progression of CSS layouts
+    https://www.youtube.com/watch?v=_lEkD8IGkwo -- The EASIEST way to get started with CSS GRID
+    https://www.youtube.com/playlist?list=PL4-IK0AVhVjPv5tfS82UF_iQgFp4Bl998 -- CSS Grid videos
+
+Gary Simon coursetro
+    https://www.youtube.com/watch?v=qTGbWfEEnKI -- Easily Structure your Layout with CSS Grid's 'grid-template-areas'
+
+Dani Krossing
+    https://www.youtube.com/watch?v=HgwCeNVPlo0 -- How to Create Website Layouts Using CSS Grid | Learn HTML and CSS | HTML Tutorial
+
+HTML Tag and Element Structure
+    <!DOCTYPE html> -- the only DOCTYPE declaration for HTML5. Declaration to the browser identifying the html version to render
+    <html lang="en-US"> -- html tag with embedded lang attribute (for search engines)
+        <head> -- metadata region (notrendered). Metadata typically define the document title, character set, styles, scripts, and other meta information)
+            <title>This is the page title</title> -- appears in the page tab of the browser
+            <meta name="description" content="This is the description"> -- picked up by the search engine
+            <meta charset="UTF-8">
+        </head>
+        <body>
+            defines the body area of HTML containing non-metadata (rendered data)
+        </body>
+    </html>
+    Attributes are within the opening HTML tag and define characteristics of the tag (metadata)
+    Empty elements have no content or ending tag. They have attributes (eg <img>).
+    Meaningless elements <DIV> and <SPAN> are used to assign CSS but are otherwise meaningless
+    Block elements appear around their content (e.g. <DIV>
+    Inline elements appear infront of and after their content (e.g. <SPAN>)
+
+HTML Rules
+    Extra spaces are removed by rendering (space, tab, newline) unless protected by <pre> preformat tag which preserves whitespace
+    Case doesn't matter in tags but lower case is the standard
+    Quotes can be single our double on attributes and nesting is allowed on opposite types
+
+HTML Tags and Attributes (tags always lower case and attributes always s/d-quoted, but not required unless in xhtml)
+    <!--      --> comments
+    <!DOCTYPE html> first element on an HTML page
+    <a href="http://google.com"  target="_blank">I am a link</a> -- anchor self-closing element with attributes, target="_blank" opens in new page, target="_self" opens in the current page (the default), HREF is Hyptertext REFerence
+    <a href="http://google.com">I am a link</a> -- anchor self-closing element with attributes, _blank opens in new page
+    <article> -- HTML5 grouping of text that has meaning on its own
+    <aside> -- content with a topic that is aside from the content it is near
+    <body> -- body (rendered) region of an html document
+    <b> -- bold
+    <br> -- line break
+    <button> -- clickable button
+    <div></div> -- defined a boundary for CSS, meaningless otherwise, a CSS container
+    <details><summary></summary</details> -- drop down details below summary heading and drop down arrow
+    <del> -- deleted text (lined through)
+    <em> -- emphasized text (italicized)
+    <footer> -- footer section of document
+    <h1></h1> Heading 1 important - matches a search engine priority (size is driven by CSS)
+    <h1 style ="font-size: 32px;">Heading 1</h1> -- inline CSS to change fontsize
+    <h2></h2> Heading 2 less important
+    <h3></h3> Heading 3 even less important
+    <h6></h6> Heading 6 least important
+    <head> container for metadata not displayed
+    <header> -- specifies the heading of a document containing introductory headings and content
+    <hr> -- horizontal rule or line
+    <html> -- whole document element
+    <img src="https://lorempixel.com/420/320/abstract/1/Sample"/> -- image self-closing element with src attribute
+    <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"> -- with src and size attributes - alt is text if image can't be displayed
+    <i> -- italic
+    <ins> -- inserted text (underlined)
+    <link rel="stylesheet" type="text/css" href="theme.css"> -- CSS link in the <head> tag region
+    <main> -- main document content
+    <mark> -- highlighted (background highlighting)
+    <nav> -- horizontally grouped navigation anchors or navigation area
+    <ol><li></li></ol> -- ordered list (numbered) of <li> list items
+    <p> paragraph tag, for contiguous block of text. Each paragraph starts a new line
+    <p style="color:red">Red words.</p> -- paragraph with embedded CSS style attributes
+    <p style="font-size: 10px;"> -- paragraph with embedded CSS for font size
+    <p style="font-size: 10px; font-family:Courier"> --multiple inline CSS style elements
+    <p title="I'm a tooltip"> -- adds a mouseover tooltip to the paragraph
+    <pre> -- preformatted text (to preserve spacing)
+    <ul><li></li></ul> -- unordered list (bulletted) list items
+    <section> -- thematic grouping of content typically with a heading
+    <small> -- smaller size font
+    <span></span> -- iinline version of <div> primariy used for styying blocks of text that appear on the same line as other spans (divs appear on separate lines> and have style attributes, meaningless otherwise
+       <span></span> -- formatted region referenced in CSS
+    <strong> -- important text emphasized or bolded
+    <sub> -- subscripted text
+    <sup> -- superscripted text
+    <textarea></textarea> -- multiline text area
+    <ul><li></li></ul> -- unordered list (bullets) of <li> list items
+
+HTML Semantic Tags introduced in HTML5
+
+HTML Elements with meaningful names: <p>, <h1>, <header>, <body> etc have meaning
+    Semantic elements introduced in HTML5: 
+        <article> text with a heading
+        <aside> right side text aka sidebar content
+        <details> heading with a drop down arrow for additional text
+        <figcaption> caption for an image
+        <figure> surrounding elements for an image and figcaptoin
+        <footer> defines a footer in a document
+        <header> header content ... cannot be within a footer
+        <main> main page content distinct to a single page (excludes asides, navbars footers etc)
+        <mark> to highlight text with background marker color
+        <nav> area for navigation links
+        <section> 
+        <summary> visible heading for a <details> element
+        <time> mapping text to a date and time
+
+HTML Non-semantic elements: <div> and <span> are used to reference CSS treatments
+
+HTML Tag Hierarchy and Structure
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta>
+            <title>
+            <meta name="" content=""
+        </head>
+        <body>
+            <header>
+                <h1></h1>
+            </header>
+            <nav>
+                navigation link area: include anchors here
+            </nav>
+            <main>
+                <section>
+                    <ul>
+                        <li></li>
+                    </ul>
+                    <h2><h2>
+                    <article>
+                        <div>
+                            <p></p>
+                        </div>
+                    </article>
+                </section>
+                <section>
+                </section>
+            </main>
+            <footer>
+            </footer>
+        </body>
+    </html>
+
+HTML Attributes
+        alt -- alternate text for a missing image
+        disabled -- for input element to be disabled (via Javascript etc)
+        id -- identifier to link CSS
+        href -- hypertext referencee for an anchor
+        src -- source for an img tag
+        style -- inline CSS style
+        title -- mouseover tooltip
+
+HTML Entities
+    Characters with special meaning
+    &#entity_number
+    &#38 -- & (or &amp)
+    &#34 -- #
+    &#60 -- < (or &lt;)
+    &#62 -- > (or &gt;) 
+    &copy; -> copyright symbol
+
+CSS Reference
+     https://www.w3.org/TR/CSS21/propidx.html -- elements and inheritance
+     https://css-tricks.com/
+
+CSS Rules
+    CSS Can control the appearance of multiple web pages
+    CSS applies the last defined style if styles are overlapping
+    CSS applies the most specific style: ID, Class, Element
+    CSS Inline styles override all others
+
+CSS Tricks
+    Use the body tag to reference the entire document in the stylesheet
+    fonts.google.com has 1000 free fonts
+    Use getComputedStyle to fetch style values from a separate CSS file
+    Use attribute autofocus (HTML5) to set focus on an item at page load
+    Use style font-weight:bold to bold text from css
+    Set inline elements to inline-block or block to set their width
+    Use STYLE="postion:relative" on a surround <DIV> element to position elements within the <DIV>
+    Set the background color on a DIV element to show it's position and contents on a page
+    Don't use margin:auto on inline elements: change to block first
+
+CSS Color Tools
+    Google "Color Picker" to get Google's color picking tool on the search results page
+    https://material.io/design/color/the-color-system.html
+    https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+
+CSS Three Ways of load CSS
+    Embed directly in HTML tag attributes (<h1 style="color: blue">Title</h1
+    Embed in <head> metadata within <style></style> tags
+    Defined externally with <link rel=stylesheet" type="text/css" href="styles.css"> in <head>
+
+CSS Property and Value Pairs
+    align-items: center -- aligns items along a center line
+    background-color:<value>
+    background-image:url<value> e.g. background-image: url("/imgfolder/paper.gif");
+    border: 5px solid green
+    border-width: 5px
+    border-style: solid
+    border-color: green
+    border-radius: 8px -- round the corners on a box
+    color:<value>; seagreen, blue, ivory etc
+    color:#FFFFFF (FF red, FF green, FF blue) Hex value
+    color:rgb(255, 255, 255)
+    color:rgba(255, 255, 255, 1) where final number is opacity
+    color:hsl(0, 100%, 100%) hue, saturation, lightness
+    color:hsla(0, 100$, 100%, 1) hue, saturation, lightness, opacity
+    display
+        display:flex -- aligns all elements on a single line
+        display:inline -- elements are displayed inline, Height, width (margin, padding) cannot be overridden
+        display:block -- elements take the entire line and new elements get new lines. Height, width can be overridden
+        display:inline-block -- elements are inline and vertically aligned and height and width (margin, padding) can be set differently
+        display:none -- hide the element
+    flexbox
+       display:flex -- flexbox for flexible layout (on a parent element)
+       flex-direction:<value>, column, row
+       flex-wrap: wrap: -- allow wrapping to a second line
+       justify-content:<value> center, flex-start, flex-end, space-between, space-around, space-evenly
+       align-items:<value> top, center, bottom (inside a flexible container)
+    float: left -- floats an element within it's surrounding container and removes it from the container's (div's) hierarchy
+    font-family:<value; courier, arial, verdana etc web-safe fonts (see https://www.cssfontstack.com/)
+    font-family:Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif; -- Windows 10 fonts
+    font-size:<value>; 100%, 200%, 18px, 30px, 40px, 1em, 2em, 1rem, 2 rem
+    font-style:italic; -- italic font
+    font-weight:800; -- 100 is normal, 800 is very heavy or bold
+    justify-content: space=between -- space out elements
+    line-height: 1.5 -- increases the space between each line in a paragraph
+    list-style: none; -- remove bullets from unordered lists
+    max-width: 600px -- maximum width o body{} to avoid scroll bars on small devices
+    min-width: 600px -- min width on body{} css before scroll bar appears and elements don't change size
+    opacity: .5; reduce or opaque an object
+    outline: 3px solid red; -- outlines a paragraph with a border. Does not add to size as border will.
+    padding: toppx rightpx bottompx leftpx; -- add padding to each side of an item
+    padding: topbottompx leftrightpx -- add padding equally above and below, left and right
+    position:<value>; static, relative, fixed, absolute sticky
+        static: the default order. Each element is on a new line
+        relative: same as static but allows top, right, bottom, left offsets and document flow is unchanged
+        absolute: removed from page flow and redisplayed in original position
+        fixed: same as absolute but does not move with window scroll
+    style.whiteSpace: normal, nowrap, pre, pre-wrap, pre-line, break-spaces -- to change text wrapping in a textarea
+    letter-spacing:0.2em; spaceing between letters
+    text-align:<value>;left. center, right
+    text-decoration:underline;
+    text-decoration:none; -- removes any default underlining
+    text-transform:uppercase; capitalize; lowercase; full-width etc
+    transform: skewY(-12dec); -- skew a division 12 degrees
+    word-spacing: 1em; -- spacing between words
+    margin:auto; puts even margin on all sides of a border (use for horizontal centering)
+    margin:30px; puts a 30px margin around an item's border
+    margin-top:<value>;20px, 40px, 60px etc
+    margin-bottom:
+    margin-left:
+    margin-right:
+    z-index: -1; set precedence of an overlapping element
+
+CSS Units
+     vw -- variable width in percent of viewport eg 50vw;
+     vh -- variable hight in percent of viewport eg 2vh;
+     px -- pixels eg 20px;
+     em -- multiple of current element font eg. 2em twice the size
+     rem -- multiple of the root element font eg. 2rem twice the size
+
+CSS Link States as Selectors
+     a:hover {}
+     a:visited {}
+     a:active {}
+
+CSS rule-sets comprise: a selector and declaration block
+     The selector points to the HTML element where the style applies
+         Selectors use: element type name (type), id (#name), class (.name), attribute or other 
+         Selector for everything is *
+     The declaration block has one or more declarations separated by semi-colons
+
+CSS can be inserted three ways: inline, internal using <style> in the header, and external
+
+CSS Precedence cascades: inline (highest), internal then external
+
+CSS Selector -- selects the tag e.g. h1 {} or class attribute or ID attribute
+     tags are referenced in CSS by name
+     classes are referenced in CSS by . prefix
+     ID's are referenced in CSS by # prefix
+     descendent selectors .class <tag> -- selects all descendent tags within a class (e.g. .CLS p selects all <p> tags within the CLS class)
+
+CSS Property Value pairs -- a set list of properties and values predefined
+
+CSS Position property:
+     static - default position in order of HTML
+     fixed - relative to top corner of browser window
+     absolute - relative to top corner of parent element
+     relative - relative to each other element in HTML
+
+CSS Box Model
+     Content - actual text or graphic with a container box
+     Padding - spacing between content and border with background color
+     Border - boundary of a box or container
+     Margin - outermost spacing between the border and surrounding elements without background color
+
+CSS Grid
+     display: grid
+     grid-template-columns: 1fr 1fr 1fr -- three fractional units
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)
+     grid-column-gap: 45px; -- space between the columns
+     grid-row-gap: 45px; -- space between the rows
+
+CSS Media Query (responsive layout)
+     @media(max-width: 600px) { ...} and include override CSS for media less than 600px wide
+    Layout defines regions including headings and footings
+    Layout types: table, float, flex and grid
+    Responsiveness attributes handle scaling (viewports) on different screen and browser window sized
+     
+Javascript Versions
+    ES6 - Major Release of Javascript in 2016
+
+Javascript Rules and Gotchas
+    Functions must be defined in code before they are called
+    All lines end with a terminating semi-colon but it is not required (JS uses Automatic Semicolon Insertion rules)
+    Missing ; will cause a script to be ignored
+    Ctrl Shft j for the debug window
+    Uss camelCaseLettering for variable names
+    JS lines end with a semicolon - JS uses Automatic Semicolon Insertion (ASI) to insert them where they are missing
+    ASI means the coder can omit semicolons on code lines and Javascript will insert them during the interpreter run
+
+Javascript Output
+    document.write(); -- html text
+    alert(); -- pop up window (all lower case)
+    console.log() -- write to the console log
+    console.clear() -- clears the console
+    console.error() -- write an error to the console log
+    console.warning() -- write a warning to the console log
+    console.dir(document) -- write the components of the current document to the log
+    console.log('text to show on the console') -- prints to the command shell in node
+    console.log('text1', 'text2') -- prints each string with a space separator
+    console.assert()
+    console.table() -- to show JSON data in the console
+
+Javascript Separate Script File
+    <script src="jsprogram.js"> where jsprogram.js is in the same directory as the html
+
+Javascript Commands
+    document.location - file system location of an html page with a "file:" prefix  
+
+Javascript Uses
+    Put content in a webpage on the fly (dymamic content)
+    Make web pages responsive
+    Detect a browser type
+    Create cookies
+    Validate forms of data
+    Creat animations, slideshows, scrollers
+    Build apps using frameworks (AngularJS, ReactJS, BackboneBJ)
+
+Javascript Typescript is javascript with c# like programming constructs
+
+Javascript Hot Keys
+    <Ctrl>/ make the line a comment of // (single line)
+    <Ctrl><Shift>/ highlighted multiline comments
+    /* ... */ multiline comment block
+    // line comment in .js fie
+    /* */ block comment in .js file
+
+Javascript Installing Node.js on Ubuntu Linux
+    Steps
+        sudo apt-get remove nodejs -- remove existing nodejs
+        https://github.com/nodesource/distributions -- follow instructions for Node.js v16x in readme
+        sudo apt update
+        sudo apt upgrade
+        node -v -- check node is installed and get the version (eg. v10.19.0)
+        install npm (see below)
+    Node is the V8 Javascript engine ripped out of Chrome
+    Nodejs -- can run Javascript on a local machine or server (i.e. backend dev)
+    https://nodejs.org/en/ -- download page
+    Type 'node' in the command prompt to run Javascript in 
+    Type .exit to exit
+    Installs in Windows and available visible through Programs and Features
+    node <enter> -- node interactive mode
+    .exit -- exit node interactive mode
+    .edit -- enter editor mode
+    ^c -- exit editor mode
+    .clear -- clear saved interactive command history
+    .load -- load a file
+    .help -- list node interactive help
+
+Javascript NVM Node Version Manager
+    Installs any version of node js
+
+Javascript NPM Packages Installation
+    Update to latest NPM
+        npm install -g npm@latest -- to get instructions, or ...
+        npm install -g npm@8.13.2
+    npm -- node package manager
+    npm install -g <packagename> installs a node package globally (e.g npm install -g express)
+    npm install -- from within the repo or subdirectory you are using
+    npm test <filename> -- to run the code in a test sling
+    npm root -g -- find where global packages are installed
+    npm list -- list node packages installed in the current directory (in subdirectory node_modules
+    node packages are installed globally or locally under the node_packages subdirectory
+    npm list -g -- list directory of node packages installed globally
+        /usr/local/lib -- linux
+        C:\Users\gjarm\AppData\Roaming\npm -- Windows
+    npm list -- list node packages installed under the local directory
+         /mnt/c/Users/gjarm -- linux
+         c:\Users\gjarm -- Windows
+    npm config get prefix -- find the path node uses to find global modules
+    npm init -y -- create package.json file in the local directory -- project configuration file. -y suppresses project questions
+    npm install express -- after creating package.json in the local working directory to install the express package
+
+Javascript NPM Packages
+    mongodb -- mongodb connector
+    http -- http simple server
+    express -- webServer
+    mysql2 -- mySQL connector
+
+Javascript Express WebServer
+    Run <jscript with express in it> as sudo
+    Open the router firewall by mapping a port (eg. 3000) route
+    sudo node <jscript with express in it> -- to run the express server as a js script
+    npx nodemon <jscript with express in it> -- to automatically rerun altered js on saving
+        npx executes a node package without installing it locally
+        nodemon runs node and automatically reloads node if the targe js is changed
+    express middleware - functions that modify the req and res objects in a GET or POST request
+    Templating Engines
+        Handlebars
+        Pug (formerly Jade)
+        ejs at npmjs.com/package/ejs
+
+Javascript Strict Script
+    The directive "use strict" at the start of a script enforces modern strict ECMAScript5 compliance
+    Only comments can appear above the "use strict" directive
+    "use strict" can be limited to a function if put at the beginning of the function
+    Several language features like classes and modules implement strict mode automatically
+        use keyword
+
+Javascript Operators
+    + - / * plus minus divide multiply
+    + also concatenates strings
+    ++ increment by 1
+    -- decrement by 1
+    += add to a variable (e.g a += 2; adds 2; to a)
+    -= subtract from a variable (e.g. a -= 2; subtracts 2 from a)
+    *= multiply and equate to self (e.g. a *=2; multiples a by 2)
+    /= divide and equate to self (e.g. a /=2; divides a by 2)
+    % remainder (e.g. 11 % 3 = 2)
+
+Javascript Logical Operators
+    && and
+    || inclusive or
+    ! not
+
+Javascript Comparison Operators
+    == equal in value only
+    === equal in value and type (strict equality)
+    != - not equal to (inequality operator)
+    !== - strictly not equal to (strict inequality operator)
+    > greater than
+    < less than
+    >= greater than or equal to
+    <= less than or equal to
+    ? ternary operator (i.e. console.log((a==b) ? 'equal':'not equal'); -- concise test of true or false expression
+
+Javascript Statements
+    Comprise Values, Operators, Expressions, Keywords and Comments
+    // identifies single inline or partial line comment 
+    /* ... */ identifies multiline comments
+    Statements or lines end in a semicolon ';'
+    Multiple lines are allowed in a single statement
+    Multiple statements are allowed on a single line with semicolon delimiters
+    Multi-line statements do not require a special line continuation character
+
+Javascript Data Types
+    Javascript is dynamically typed and variables can contain any data type when they are assigned a value
+    Types are: 
+        boolean: true or false
+        number (includes NaN and infinity), 
+        char: doesn't exist. implemented as a string of length '1'
+        string: 'some words'
+            strings use '' or "" interchangeably, and backticks `` to embed variables which are evaluated
+            escape embedded quotes in strings with \" or \'
+            Strings have built-in's or native (functions)
+        array: 
+        object: the only non-primative datatype and holds multiple key-value pairs
+        symbols: unique immutable unique object identifiers
+        null: separate datatype and means nothing e.g. var name = null;
+        NaN: not a number
+        undefined: separate datatype and means 'no value assigned'
+    typeof() returns the type of a variable. typeof x; is the same as typeof(x);
+
+Javascript Strings
+    string.toUpperCase() -- converts to uppercase
+    string.toLowerCase() -- converts to lowercase
+    string.trim() -- removes whitespace leading or trailing
+
+Javascript Escaped Characters in Strings
+    \' single quote
+    \" double quote
+    \\ backslash
+    \n newine
+    \r carriage return
+    \t tab
+    \b backspace
+    \f form feed
+
+Javascript Variables (let and const, or var prior to ES6)
+    Use these 3 keywords or by omitting a keyword:
+        const = (for constants) cannot be changed once declared (ES6). Use capital letters for const values e.g. const PI = 3.12159
+            arrays declared as const can have their memeber values changed
+        let = (for variables, introduced with ES6, block-scoped), cannot be redeclared, only reassigned
+        var =  (old term, pre ES6, function-scoped) (predates ES6), can be redeclared and reassigned
+        <none> = global variable
+    Variable names must use numbers, letters, '_' or '$' and cannot start with a number
+    Variables can be declared but not initialized or assigned an initial value
+       Always use let to declare a variable -- don't omit this keyword
+    let varNam/e; -- declares variable varName in the local scope
+    let varName = 'Hello'; -- declares and assigns a value to a variable (merged declaration and assignment)
+    Declaring variables
+    const myConst = 'Hello'; -- declares a constant whos value cannot be changed
+    const PI = 3.17; -- use upper case for contants determined in advance
+
+Javascript Properties (e.g. of Strings)
+    <string>.length
+    <string>.slice(4) -- first four characters are removed
+    <string>[n] is the n-1 character in a string
+    strings are immutable .. existing individual characters cannot be changed
+    declare an empty string: var mystring = "";
+
+Javascript Functions including ES6 Arrow Functions
+    Syntax 1 (preferred):
+        function fMyFun(vars) {<body>};
+        These function declarations are hoisted (they can be invoked before declared)
+    Syntax 2 (not preferred, not hoisted):
+        const fMyFun = function(vars) {<body>};
+        Function synonyms can be created as const fMyFuncSyn = fMyFun (a previously declared function)
+        The first line of this syntax must include 'function()'
+    Syntax 3 Arrow functions (ES6) for Anonymous Functions (myFunc = (vars) => {<body>};
+    () is the function invocation operator
+    functions take parameters and return a result (i.e. a function call)
+    functions without return statements return undefined
+    function expressions can be immediately invoked (IEFE's)
+    All arguments passed in a function are stored in an array 'arguments'
+       Access arguments inside a function from the 'arguments' array
+       This array can be used in variadic functions with variable numbers of arguments
+    Higher Order Functions are functions that take callbacks as arguments or return functions as a result (i.e. closures)
+       e.g. document.addEventListener("click", clickFunction)
+
+Javascript Anonymous functons
+    Anonymous functions are not named - they are function expressions
+        function() {...};
+        Anonymous functions are single use functions and often used as callbacks
+            e.g. document.addEventListener("click", function() {alert("Thank you for clicking"})
+        Arrow syntax 
+            e.g. document.addEventListener("click", () => alert("Thank you for clicking"))
+
+Javascript Calllback Functions
+    Callbacks are functions passed by name as paramenters in other functions and executed before the other function ends
+        // callback example where seeded forEach only takes a callback function referencing the item and index in the array
+        const cars = ['Ford', 'Honda', 'Chevrolet', 'Buick'];
+        function myCallBack(item, index) {
+          console.log(index, item);
+        }
+        cars.forEach(myCallBack);
+
+Javascript Constructor Functions
+    The new keyword in front of any function creates an object
+    The function name will have initial uppercase if the function is intended as a constructor
+
+Javascript Arrays (One Dimensional)
+    Declare an empty array with colors = [];
+    Declare as an array object, let colors = new Array('red', 'green', 'blue');
+    Arrays can have unspecified length and can be added onto, or subtracted from, without limit
+    Arrays can be defined with a length like myarray.length = 5; but these can also be extended
+    Any array elements not defined are assigned 'undefined'
+    Arrays are objects used to store multiple values in a single variable
+    Array elements are referenced by an integer index: myArray[i];
+    The base index of an array is 0 i.e.myArray[0] is the first element in myArray
+    Declare direct, let colors = ['red', 'blue', 'green'];
+    Arrays can include elements of different datatypes (e.g. number, string, boolean)
+    Elements of arrays may be undefined if not assigned
+    Sparse arrays have empty elements
+    Avoid sparse arrays
+    myArray.push(value) method appends data to the end of an array and returns the new count of array elements
+    myArray.pop() method removes data from the end of an array
+    myArray.shift() removes the first element from an array
+    myArray.unshift() adds an element to the start of the array
+    array.length property returns the array length
+    array.sort() method sorts the array temporarily
+    array.tostring() method creates a string from an array
+    array.reverse() method reverses the original order of the array
+
+Javascript Arrays (Two Dimensional)
+    Two dimensional arrays are defined as arrays of arrays
+    Declare direct; let array_vals = [[1, "One"], [2, "Two"], [3, "Three"]];
+    Declare as an array object let array_vals = new Array(); ... then loop through each member and declare is as another array
+        for (let 1 = 0; i < n; i++) { array_vals[1] = []; } or {array.vals[i] = new Array();}
+
+Javascript Array Code Samples
+    // define two arrays initially in a single dimenstion
+    let colors = [];
+    let months = new Array();
+    // populate elements of an array with undefined element gaps
+    months[0] = 'Jan';
+    months[1] = 'Feb';
+    months.push('Mar');
+    months[4] = 'May';
+    months[3] = 'Apr';
+    months[11] = 'Dec';
+    months.splice(2, 3); -- remove 3 elements starting at index/offset 2
+    months.foreach(<function>) -- executes the function for each element of the array (seeded higher order function)
+    months.map(fn()) -- returns the components of the array returned by fn()
+    months.filter(fn) -- returns the components of the array satisified by fn()
+    // print the elements of the array
+    for (let i = 0; i < months.length; i++) {
+        console.log(months[i]);
+    };
+    // define values in an array using a loop
+    for (let i = 0; i < 20; i++) {
+      colors[i] = 'Red or other'
+    };
+    // print the elements in the array
+    for (let j = 0; j < 20; j++) {
+      console.log(j + ' ' + colors[j]);
+    }
+    // define a two dimensional array  by defining a one dimenstional array then each element as another array
+    let squares = new Array();
+    for (let k = 0; k < 8; k++) {
+    //    squares[k] = new Array(); 
+        squares[k] = []; 
+    }
+    // print the contents of the two dimensional array
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+          squares[i][j] = i + j;
+          console.log(i + ' ' + j + ' ' + squares[i][j]);
+      }
+    }
+    // create an array with element labels
+    myArray = [
+        {name: 'Jim', age: 22},
+        {name: 'Fred', age: 34},
+        {name: 'Mark', age: 39}
+    ]
+    // print an array element using the name reference
+    console.log(myArray[0].name); // prints 'Jim'
+
+Javascript Conditionals and Decisions (Control Flow)
+    If (boolean expression) {true action} else {false action}. 
+    if (boolean expression) {true action) else if (true action};
+    Expression can include && (logical and) and || (logical or) operators
+    Switch (value) {case val1: action; break; case val2: action; break; default: action; break;}
+    ? -- ternary operator for true of false
+
+Javascript Iterations and Loops
+    for ... (e.g. for(1 = 0; i < 10;, i++) {console.log(i)};
+    while ... (e.g. while (i < 10) {console.log(i)}); and i must be declared prior to the loop
+    for each -- used for arrays (e.g array1.forEach(function(array1){console.log(array1)}) steps through array1 executing a function for each value
+
+Javascript Modal Interaction
+    prompt(question[, default]) -- Ask a question, and return either what the visitor entered or null if they pressed “cancel”.
+    confirm(question) -- Ask a question and suggest to choose between Ok and Cancel. The choice is returned as true/false.
+    alert(message) -- outputs a message
+
+Javascript Console Commands
+    console.log('text to show on the console') -- prints to the command shell in node
+    console.log('text1', 'text2') -- prints each string with a space separator
+    console.clear()
+    console.assert()
+    console.table() -- to show JSON data in the console
+    Esc -- show (or hide) console drawer along the bottom of Dev Tools
+
+Javascript Best Practices
+    "use strict" as the first line of code (before or after comments) to enforce clean javascript
+    avoid global variables - put variables in anonymous functions (closures)
+
+Javascript Javascript in HTML
+    Embed with the <script> tag
+    <script language=javascript but for HTML5 only <script></script> is needed
+        ..
+    </script>
+
+Javascript Objects Properties and Methods (Object functions)
+    Objects comprise key: value pairs where the keys are unique
+    The context of object is referenced by this and defined as the object of the calling function
+    Create an object with an Object Definition
+        const myObj = {}; -- instantiates a new empty object
+        const myObj = {
+            <key1>: <value1>,
+            <key2>: <value2>,
+            <key2>: <value2>,
+            function() {                // only the function name is stated and not the 'Function' prefix
+                <functionBody>
+            }
+    };
+    Create an object using an Object Constructor Function
+        Define an Object Constructor function: 
+            function myObjConstr(property1, property2) { 
+                this.prop1 = property1;
+                this.prop2 = property2;
+                };
+        Create new objects using the constructor function
+            newObj = new myObjConstr(attrib1, attrib2 etc);
+    Object.Create() Method
+        Clone an existing literal object to create a new object
+    Access object values in an object as properties using dot notation
+        myObject.key1;
+        myObject.key2;
+    Access object values using bracket notation and quoted keys (or variables)
+        myObject['key1'];
+        myObject['key2'];
+        myobject['key3'];
+    Assign values to object keys using standard assignments
+        myObject.key1 = 'newValue';
+        myObject['key1'] = 'newValue;
+    Delete values in objects using the delete keyword
+        delete myObject.key1;
+        delete myObject['key1'];
+    Add keys and values to an existing object
+        myObject.newKey = <newValue>;
+        myObject['newKey'] = <newValue>;
+    Iterate throuh an obect with a for ... in  loop
+        for (let iterator in dog) {
+            console.log(iterator, ': ', dog[iterator]);
+        }
+    Define a method in an object
+        myObject {
+            <key1>: <value1>
+            <key2>: function() {
+                console.log('Hello from myObject');
+            };
+        }
+    Invoke a method in an object
+        myObject.key2();
+    Global Objects always exist in the global scope
+        console
+        Math
+        Date
+
+Javascript Classes
+    Use the Class syntax with embedded constructor function to define a class
+    Define a class the same way as defining a function but use initcaps (psueod-classical)
+        function User(name, github) {
+            this.name = name;
+            this.github = github;
+        }
+    Create an object from a class with the 'new' keyword
+        myObj = new.User('Geoff','Repo');
+
+Javascript Date Methods
+    Date.getFullYear() gets the current year in 4 digit format
+    Date.getMonth() gets the current month on the clock returns a value where 0 = first
+    Date.getDate() gets the current day on the clock
+    Date.getHours() gets the current hours on the clock
+    Date.getMinutes() gets the current minutes on the clock
+    Date.getSeconds() gets the current seconds on the clock
+
+Javascript Math Methods
+    Math.pow(<base>, <exp>);
+    Math.random(); -- returns a number between zero and one (but not one)
+    Math.round();
+    Math.floor(<number>); -- rounds down to nearest integer
+    Math.ciel(<number>); -- rounds up to nearest integer
+
+Javascript String Methods
+    const myString = "Miscellaneous text";
+    myStrengt.length; -- length of the string
+
+Javascript Template Literals
+    Template literals are like strings but with embedded variables
+    Template literals use `` backticks instead of quotes "" or '' and embedded ${} variables
+        e.g. `this is a string of numbers like ${4+4} and others`
+             `the name ${myName} is embedded in this string`
+
+Javascript Document Methods
+    Document.write(<FONT COLOR=RED>This is Red</FONT><BR>)
+
+Javascript JSON
+    Javascript Object Notation
+    JSON.stringify(myArray) - sets array elements in printable format
+
+Javascript Closures
+    Functions that return functions bound to data
+    The data persists as part of the returned function
+
+Javascript This Keyword
+    This determines the way a function is called
+
+Javascript Destructuring
+    Unpacking arrays into variables or other arrays
+
+Javascript DOM (Document Object Model)
+    window
+        history
+        location
+        document
+            links[]
+            anchors[]
+            images[]
+            forms[]
+                form elements
+        document.body
+        document.body.style
+        document.body.style.backgroundColor = green
+
+Javascript DOM (Document Object Model) Manipulation
+
+Javascript Event Handlers
+    Added to page elements using element attributes
+        e.g. <A HREF="www.google.com" onClick="alert('You clicked Google.');">
+    onclick -- button is clicked
+    onmouseover -- mouse passes over
+    onmouseout -- mouse leaves
+
+Javascript Locator Functions
+    document.getElementById(id) - returns one element node
+    document.querySelector(css) - returns one element node (first matching)
+    document.querySelectorAll(css) - returns node list
+
+Javascript Locator Update Functions
+    document.createElement(tagname) - returns 1 element node
+    document.createTextNode(text) - return 1 text node
+    parent.appendChild(node) - add child to parent
+    parent.removeChild(node) - remove node from parent
+
+Javascript GET Requests
+    GET requests encode all information into the URL
+    The format is <URL>?param1=<value1>&param2=<value2>&param3=<value3> ...
+    The parameter string is saved as the QUERY_STRING environment variable in the server, starting after the ? separator
+
+Javascript Fetch and Promise
+    Fetch returns a promise
+    Example
+        async function start() {
+            const response = await fetch("https://dog.ceo/api/breeds/list/all");
+            const data = await response.json();
+            console.log(data);
+        }
+ 
+            start();
+
+MongoDB Notes
+    MDB References
+        https://www.mongodb.com/
+
+Google Sign-in for Websites
+    Name: GoogleAuth
+    Type: web application
+    Client ID: 212964569141-h2jr9eemnpa3r69bqf93mas1ugb3ouov.apps.googleusercontent.com
+    https://developers.google.com/identity/gsi/web -- migration services
+
