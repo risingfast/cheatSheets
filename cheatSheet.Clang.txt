@@ -1,63 +1,4 @@
-Clang CheatSheet
-
-History of Versions
-    1983 ANSI committee established
-    1988 C88 first standard
-    1990 ANSI
-    1999 C99
-    2011 C11
-    2017 C17
-
-Resources and References
-    http://lib.daemon.am/Books/C/ - Sams Teach Yourself C in 21 Days
-    http://www.gnu.org/software/libc/manual/ - GNU C standard Library
-    https://www.youtube.com/user/mycodeschool -- My Code School
-    https://gcc.gnu.org/ -- GCC, the GNU Compiler Collection
-
-C Programming Language
-    https://www.geeksforgeeks.org/ -- C lessons
-    https://ecomputernotes.com/what-is-c/ -- C tutorials
-    https://www.willmaster.com/library/tutorials/javascript-and-cgi-talking-to-each-other.php
-    http://sekrit.de/webdocs/c/beginners-guide-away-from-scanf.html -- issues with scanf and solutions
-    Review Engineer Man C videos
-    https://webassembly.org/getting-started/developers-guide/ -- look at webAssembly in C
-    https://preshing.com/
-    http://www.cprogramming.com/ -- full tutorials and reference
-    https://www.techonthenet.com/c_language/index.php
-    https://computer.howstuffworks.com/c.htm
-    https://www.includehelp.com/icp/ -- coding challenges in C
-    https://www.tutorialspoint.com/cprogramming/index.htm -- C course with multiple reference lessons
-    https://codeforwin.org/2017/08/introduction-c-programming.html -- C tutorials
-    http://www.c-faq.com/ -- C FAQ's
-    https://beginnersbook.com/2014/01/c-tutorial-for-beginners-with-examples/
-    http://cslibrary.stanford.edu/101/ -- Stanford C course and topics
-    http://cslibrary.stanford.edu/ -- Stanford C and Computer Science content and materials
-    http://codingfox.com/ -- C tutorial series (extensive)
-    https://www.youtube.com/watch?v=KJgsSFOSQv0 FreeCodeCamp -- training video
-    https://www.freecodecamp.org/news/the-c-beginners-handbook/ -- Codecamp C book
-    https://www.youtube.com/watch?v=KJgsSFOSQv0 -- C Programming Tutorial for Beginners (Codecamp) Giraffe Acadamy
-    https://www.studytonight.com/c/ -- many courses including c
-    https://www.sanfoundry.com/c-tutorials/ (Done)
-    https://overiq.com/c-programming-101/ -- C tutorials
-    https://www.studytonight.com/c/ -- C tutorials
-    https://www.udemy.com/course/c-programming-for-beginners/
-    https://www.tutorialcup.com/cprogramming
-    https://www.learn-c.org/
-    https://www.eskimo.com/~scs/cclass/ -- Eskimo Hosting Service C classes
-    https://godbolt.org/ -- compiler explorer
-    Programming with C, Byron S. Gottfried, Schaum's Outline Series (code prefix gt)
-
-CS0 Harvard Youtube Classes (Done)
-    http://cs50.tv/2017/fall/ -- Harvard CS50 class (Done)
-    https://www.youtube.com/watch?v=fykrlqbV9wM -- Harvard CS50 (2109) #3 Algorithms 1:02 Pyramid recursion, Merge, Selection and Bubble Sort (Done)
-    https://www.youtube.com/watch?v=cF6YkH-8vFk -- Harvard CS50 (2019) #4 Memory 58:35 (Done)
-    https://www.youtube.com/watch?v=4IrUAqYKjIA -- Harvard CS50 (2109) #5 30:20 Linked List Code (Done)
-    https://www.youtube.com/watch?v=4IrUAqYKjIA -- Harvard CS50 (2019) #5 Data Structures 28:46 Data Structures (Done)
-    https://www.youtube.com/watch?v=fL308_-Kbt0 -- Harvard CS50 (2019) #6 Pythona (Done)
-    https://www.youtube.com/watch?v=XISnO2YhnsY -- Harvard CS50 (2017) Pointers Doug Lloyd (Done)
-    https://www.youtube.com/watch?v=xa4ugmMDhiE -- Harvard CS50 (2017) Dynamic Memory Allocation Doug Lloyd (Done)
-    https://www.youtube.com/watch?v=PUPDGbnpSjw -- Harvard CS50 (2017) #6 HTTP (Done)
-    https://www.youtube.com/watch?v=sCtY--xRUyI -- Harvard CS50 Introduction to GDB (Done)
+vard CS50 Introduction to GDB (Done)
     https://www.youtube.com/watch?v=y5JmQItfFck -- Harvard cs50 (2015) GDB (Done)
     https://www.youtube.com/watch?v=-G_klBQLgdc -- Harvard CS50 (2105) Debugging (Visual) (Done)
     https://www.youtube.com/watch?v=y5JmQItfFck -- Harvard CS50 (2015) GDB (Done)
@@ -341,6 +282,8 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=BIht65Xu1jI -- Another reason C++ is so BAD...for beginners. (Done)
     https://www.youtube.com/watch?v=hGBHGficAiM -- Generating Unique Identifiers in Your Programs (GUIDs/UUIDs) (Done)
     https://www.youtube.com/watch?v=V3J5DWKPYts -- How to Indent Code the Right Way (Done)
+    https://www.youtube.com/watch?v=Vd-4eGnBAK8 -- The What, How, and Why of Void Pointers in C and C++? (Done)
+    https://www.youtube.com/watch?v=8T0WOABe7OY -- What about Pointer Arithmetic with Void Pointers? (Done)
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist

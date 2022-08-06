@@ -1,0 +1,1608 @@
+Table of Contents
+    Active Server Pages (ASP)
+    Utilities
+    DOS Commands
+    Excel
+    Group Policy
+    PowerShell
+    Processes and Services
+    Script Host
+    SQL Server
+    Visual Basic
+    Windows XP
+    Windows 7
+    Windows 8
+    Windows 10
+    Windows Registry
+
+Active Server Pages Table of Contents (ASPTOC)
+    References
+        http://www.w3schools.com/asp/default.asp
+        http://localhost/iishelp/iis/misc/default.asp
+        http://www.asp101.com/articles/pauld/request/default.asp
+    Overview
+        ASP is Active Server Pages and comprises HTML pages with embedded scripting
+        ASP.net uses compiled VB.net or C#.net and not scripts - ASP and ASP.net are different
+        ASP can be used to create dynamic database connected webpages
+    Server Handling of .ASP pages
+        If an ASP page is requested, the http server passes the request to a registered .asp engine
+        The .asp engine runs the embedded scripts in the html page and ignores any html blocks
+        The .asp engine writes any display lines from the code to memory
+        The .asp engine merges the display lines back with the html blocks and gives it to the webServer to serve up
+    Allowed Scripts
+        Any .COM compliant (Component Object Model) scripting language is supported
+            JavaScript, PERL, vbScript, JScript and others
+            COM components are secured executables compliled as DLL's
+            COM can be written in any language that supports it (eg C# or VB)
+    Syntax and Page Setup
+        The first non-comment line should declare the script handler
+            <%@ Language=VBScript %> or <%@ Language=JavaScript %> are examples
+        Script is delimited by <% and %> directly in the html code. 
+            Whitespace is ignored
+            The same delimiters are used regardless of the script language
+    Request Object
+        The Request object contains all the information sent by the requesting page
+            Information is organized in "collections of data within the Request object
+        Collections include:
+            ClientCertificate: The values of fields stored in the client certificate that is sent in the HTTP request. 
+            Cookies: The values of cookies sent in the HTTP request. 
+            Form: The values of form elements in the HTTP request body. 
+            QueryString: The values of variables in the HTTP query string. 
+            ServerVariables: The values of predetermined server/environment variables.
+        The syntax of the request object is:
+            Request[.collection|property|method](variable)
+        All request variables can be accessed directly without prefixing the collection
+            Use "request.<variablename> to get the value of each item
+            The order of search through the collections is:
+                Querystring, Form, Cookies, ClientCertificate, ServerVariables
+    Using the SQL Server Database
+        Replace any single quotes with two single quotes prior to buidling SQL strings
+            Strings must have single quotes around variables so single quotes in text need protection
+            Two adjacent single quotes is equivalent to one single quote
+
+Windows Utilities
+    msinfo32 shows the host profile information including hardware, software and features e.g. msinfo32 /report C:\Users\gjarman\Documents\Computing\Microsoft\Cmd\msinfo.txt (same as SYSTEMINFO)
+    https://support.microsoft.com/en-us/help/300887/how-to-use-system-information-msinfo32-command-line-tool-switches
+
+Windows Scripting Languages
+    perl
+    Kixstart
+    Powershell
+    Visual Basic
+    Javascript and JScript
+    REXX
+
+Script Applications
+    Logon Script to map network drives
+    Backup files
+    Set restore points
+    Modify registry on multiple machines
+    Clean disks
+    Defrag disks
+    Delete old archive files
+
+DOS Commands Table of Contents (DCTOC)
+    References
+        http://steve-jansen.github.io/guides/windows-batch-scripting
+        http://w3schools.org.in/Batch%20Files.html
+        http://www.chebucto.ns.ca/~ak621/DOS/Bat-Adv1.html#DRTD -- example scripts
+        http://www.chebucto.ns.ca/~ak621/DOS/BatBasic.html#Basics
+        http://www.computerhope.com/msdos.htm
+        http://www.microsoft.com/downloads/details.aspx?FamilyID=9d467a69-57ff-4ae7-96ee-b18c4790cffd&DisplayLang=en - Windows Server 2003 Resource Toolkit
+        http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/ntcmds.mspx?mfr=true - Windows command reference
+        http://www.trytoprogram.com/batch-file/
+        https://ss64.com/nt/ -- A-Z Index of Windows CMD Command Line
+        https://ss64.com/nt/ -- list of Windows commands
+        https://www.dostips.com
+        https://www.dreamincode.net/forums/topic/55203-batch-tutorial-part-1/
+        https://www.itprotoday.com/devops-and-software-development/shell-scripting-101-lesson-1 -- scripting lessons
+        https://www.robvanderwoude.com
+        https://www.tutorialspoint.com/batch_script/
+        https://www.windows-commandline.com/
+        https://www.windows-commandline.com/windows-for-loop-examples/
+    Help on Commands
+        For more information on a specific command, type HELP <command-name> or type the command with a /? parameter
+        For a list of all console commands, type HELP at the command prompt
+    File Extensions
+        .bat
+        .cmd
+    Command Interpreter (Shell, Console, or Terminal)
+        C:\Windows\System32\cmd.exe 
+        Use %COMSPEC% in 32 and 64 bits previously command.com in 16 bit
+        In normal mode, home directory is C:\USERS\<user>
+        In administrator mode, home directory is C:\WINDOWS\SYSTEM32
+        Use <WIN>-R to open the command line and type CMD
+        Type CMD in the address bar of Windows Explorer
+    External vs Internal Commands
+        External commands are not included in cmd.exe or command.com
+        Internal commands are included in cmd.exe or command.com
+        External commands must be in the %PATH% or current directory to execute
+    Shortcut Keys
+        F3 Recall last command
+        F7 Show command history (like DOSKEY /HISTORY)
+    Debugging
+        Run within a console with switches to avoid shutdown of the console on errors
+            eg: %COMSPEC% /K "C:\Users\gjarman\Documents\Computing\Microsoft\Cmd\test.bat" (prefix START for new window)
+    Command Switches and Options in cmd.exe
+        /Q Turn Echo off
+        /C Run and terminate
+        /K run and return to command prompt -- useful for testing to examine variables with ECHO %VAR% after script is run
+    Shortcuts
+        Drag a folder or file from explorer onto the CMD window to drag the file patch
+        Type CMD in the address bar of File Explorer to open a CMD session in the folder
+    Envronment Variables (use SET to show variables)
+        %RANDOM%        Random number
+        %HOMEPATH%      Home directory of current user
+        %COMSPEC%       Directory of cmd.exe file
+        %ORACLE_HOME%   Oracle home directory
+        %OS% Operating  System
+        %PATH%          Fite path for executables
+        %PROMPT%        Prompt string
+        %SYSTEMROOT%    C:\WINDOWS -- the operating system home
+        %TEMP%          Temp directory for the current user (e.g. C:\Users\gjarman\AppData\Local\Temp)
+        %USERNAME%      Current User
+        %USERPROFILE%   Home directory of current user (e.g. C:\Users\gjarman
+    Standard DOS Commands including BuiltIns (internal to cmd.exe)
+        @        Suppresses a command from displaying before it is run so the script lines are suppressed (same as ECHO OFF)
+        |        Pipe
+        ^        Escape character for <> and other special characters
+        >        Redirect to file (use >> to append an existing file) ... somecommand >NUL redirects output to NUL (suppresses output) but reports success %ERRORLEVEL%=0
+        :~-N,M   Extracts substring length M startomg at N from the right ... eg SET name=Geoffrey ... ECHO %name:~-4,2% gives ff :~N,M    Extracts substring length M starting at N from the left, starting with zero eg SET name=Geoffrey ... ECHO %name:~4,2 gives fr 
+        ALIAS    Create synonyms
+        ASSOC    Displays or modifies file extension associations. Change associations 
+        AT       Schedules commands and programs to run on a computer.  
+        ATTRIB   Displays or changes file attributes.  
+        BREAK    Sets or clears extended CTRL+C checking.  
+        CACLS    Displays or modifies access control lists (ACLs) of files.
+        CALL     Calls one batch program from another.
+        CD       Displays the name of or changes the current directory... cd .. move back a directory or ../.. two directories. Same as CHDIR
+        CHCP     Displays or sets the active code page number.
+        CHDIR    Displays the name of or changes the current directory. Same as CD
+        CHKDSK   Checks a disk and displays a status report. CHKDSK /f C: fixes bad files on C: (admin privs)
+        CHKNTFS  Displays or modifies the checking of disk at boot time.
+        CHOICE   Allows the user to select one item from a list
+        CIPHER   Encrypts deleted files in the current directory ... CIPHER /E while ignoring undeleted files
+        CLIP     Clipboard desination ... eg type <filename.txt> | clip to send the file contents to the clipboard
+        CLS      Clears the screen.
+        CMD      Starts a new instance of the Windows command interpreter
+        COLOR    Sets the default console foreground and background colors.
+        COMP     Compares the contents of two files or sets of files.
+        COMPACT  Displays or alters the compression of files on NTFS partitions.
+        CONVERT  Converts FAT volumes to NTFS.  You cannot convert the current drive.
+        COPY     Copies one or more files to another location. Use + between files to concatenate
+        COPY     Copy to Clipboard by highlighting text and left clicking with the mouse
+        CTRL-C   Control-C to break execution (same as SIGINIT) - with interception and cleanup
+        CTRL-Z   Control-Z to suspend execution w/out interception
+        DATE     Displays or sets the date. Use /T switch to show the date and not prompt for a new date (see also TIME)
+        DEVCON   Device (Driver) Console - device management for local and remote hosts (installable with SDK, WDK and VisualStudio)
+        DEL      Deletes one or more files with content. Use DEL . to delete contents of current directory with warning. Same as ERASE
+        DIR      Displays a list of files and subdirectories in a directory. dir /w for wide format, /p one page at a time, /S recurse all subdirectories listing files in each directory
+        DISKCOMP Compares the contents of two floppy disks.
+        DISKCOPY Copies the contents of one floppy disk to another.
+        DOSKEY   Edits command lines, recalls Windows commands, and creates macros. Use DOSKEY /HISTORY or F7 for history or up/down arrows
+        DRIVERQUERY -v Lists locations of all drivers in Windows
+        ECHO     Displays messages, or turns command echoing on or off (using ECHO OFF or ECHO ON). Use ECHO. to print a blank line. Use @ECHO to disable the ECHO OFF line from printing
+        ENDLOCAL Ends localization of environment changes in a batch file.
+        EOF      End of File
+        ERASE    Deletes one or more files. Same as DEL
+        ERRORLEVEL Return value of a command line 0 Success, 1, Incorrect Function, 2 File not found, 3 path not found, 5 access denied
+        EXIT     Quits the CMD.EXE program (command interpreter).
+        F3       Recall last command on the command line
+        FC       Compares two files or sets of files, and displays the differences between them.
+        FIND     Searches for a text string in a file or files.
+        FINDSTR  Searches for strings in files. Be sure to put long file pathnames in quotes to avoid spaces eg FINDSTR <string> <file pattern>
+        FOR      Runs a specified command for each file in a set of files. eg FOR %g in (1 2 3 4 5) do (echo %g) or use %%g in scripts
+        FORFILES Select a set of files and execute a command on each
+        FORMAT   Formats a disk for use with Windows.
+        FSUTIL   File System Utility for miscellaneous file system inquiries ... FSUTIL FSINFO ... for file system information
+        FTYPE    Displays or modifies file types used in file extension associations.
+        GOTO     Directs the Windows command interpreter to a labeled line (a marker) in a batch program as a ':'
+        GRAFTABL Enables Windows to display an extended character set in graphics mode.
+        HELP     Provides Help information for Windows commands.
+        IF ELSE  Performs conditional processing in batch programs. IF DEFINED <variable> () ELSE () tests if a variable is defined, IF EXIST <filename> tests if a file exists. Use == for comparison IF %var%==value () ELSE ()
+        IPCONFIG Shows network assigned IP addresses ... IPCONFIG /ALL to see all ... /release ... /renew
+        LABEL    Creates, changes, or deletes the volume label of a disk.
+        MD       Creates (makes) a directory. (same as MKDIR)
+        MKDIR    Creates a directory. (same as MD)
+        MODE     Configures a system device.    
+        MORE     Displays output one screen at a time. Use <spacebar> to step through screens, <Enter> show next line, P n show next N lines
+        MOVE     Moves one or more files from one directory to another directory. Also used to rename a file by moving to the new name
+        NET STATISTICS Shows network activity on the local host
+        NETSTAT  Lists open ports with netstat -aon (--help for options)
+        PATH     Displays or sets a search path for executable files.
+        PATHPING Shows path to server with intermediates. Similar to TRACERT but does not show delay times
+        PAUSE    Suspends processing of a batch file and displays a message. Or waits for input. Use pause > nul to suppress the pause message
+        PING     Pings a server on the network PING . Use PING localhost -n 20 >NUL to delay execution for some seconds
+        POPD     Restores the previous value of the current directory saved by PUSHD.
+        POWERCFG Shows options for power management POWERCFG /a ... POWERCFG /energy
+        PRINT    Prints a text file.
+        PROMPT   Changes the Windows command prompt. Use Regedit for permanent change HKEY_CURRENT_USER>SOFTWARE>>MICROSOFT>COMMAND PROCESSOR and create a string Autorun and enter the prompt command
+        PUSHD    Saves the current directory then changes it.
+        RD       Removes a directory.
+        RECOVER  Recovers readable information from a bad or defective disk.
+        REM      Records comments (remarks) in batch files or CONFIG.SYS.
+        REN      Renames a file or files or directories
+        RENAME   Renames a file or files.
+        REPLACE  Replaces files.
+        RMDIR    Removes a directory if empty (use /S option to delete folders with files or subdirectories).
+        ROBOCOPY Copies directories and subdirectories to a mirror for changed files and new files (ROBOCOPY <Origin> <Destination> /MIR (mirror option)
+        SET      Displays, sets, or removes Windows environment variables or gets input. Concatenate using SET c=%a%%b%. Filter list using SET <filter letters>. Do not use spaces ... SET var=Hello. SET /A for arithmetic values or SET /P for prompting input
+        SETLOCAL Begins localization of environment changes in a batch file. Use 
+        SFC      sfc /SCANNOW ... System File Checker scans the integrity of all protected system files and replaces incorrect versions with correct Microsoft versions
+        SHIFT    Shifts the position of replaceable parameters in batch files.
+        SHUTDOWN Shuts down the computer ... shutdown /h hibernates, shutdown /r /o restarts the computer
+        SORT     Sorts input (eg SORT sortme.txt - will sort the rows in sortme.txt to the console. Do SORT sortme.txt > sorted.txt to write to a file)
+        START    Starts a separate window and optionally run a specified program or command. Can be a website (e.g. START iexp.exe http://www.google.com, START /MAX Notepad)
+        SUBST    Associates a path with a drive letter.
+        <TAB>    Autocomplete
+        TASKKILL Kill a running task for a specific process id (taskkill /f /pid nnn)
+        TASKLIST List currently running tasks
+        TIME     Displays or sets the system time. use  Use /T switch to display time w/out prompting for a new time (see also DATE)
+        TITLE    Sets the window title for a CMD.EXE session.
+        TREE     Graphically displays the directory structure of a drive or path.
+        TYPE     Displays the contents of a text file.
+        VER      Displays the Windows version.
+        VERIFY   Tells Windows whether to verify that your files are written correctly to a disk.
+        VOL      Displays a disk volume label and serial number.
+        WHOAMI   Displays the users name and domain name
+        XCOPY    Copies files and directory trees. -- xcopy dir1 dir2 /s copies the contents of dir1 to dir2 including subdirectories
+    External Commands in C:\WINDOWS\SYSTEM32 folder)
+        CHKDSK C: /f /r /x
+        CODE       Starts Visual Studio CODE
+        CSCRIPT    Show installed version of VB Script engine (5.812 in Windows 10)
+        NET        Shows network settings on the local host
+        NET TIME   Syncrhonizes time to another server on the network
+        NET USE    Shows attached devices and maps network drives
+            References
+                https://www.howtogeek.com/118452/how-to-map-network-drives-from-the-command-prompt-in-windows/
+            Use Cases
+                net use k: \\hp-g7\users /user:geoffrey.jarman@risingfast.com Mmaif$#* -- map network drive with authentication
+                net use k: \\hp-g7\users -- map network drive without authentication
+                net use -- list mapped drives
+                net use k: /delete -- delete a mapped drive
+                map a network drive with 
+        NET USER   Shows users, NET USER <username> /ADD -- adds a usesr
+        RASDIAL
+        SCHTASKS   Task Scheduler manager
+        SYSTEMINFO Shows basic system hardware information like (similar to msinfo32)
+        TASKKILL   Ends a task TASKKILL -<PID> kills a proces based on PID identified in TASKLIST
+        TASKLIST   Lists running applications and services TASKLIST -v shows detail TASKLIST -m shows .dlls TASKLIST -svc shows services tasklist /fi "memusage GT 40000" returns tasks using more than 40k memory, tasklist /fi "imagename eq netstat.exe" shows VIM tasks, tasklist -nh (no headers)
+        TRACERT    Traceroute and show delays in each stage
+        WMIC       WIM Console or Windows Management Instrumentation Console
+    Extended Commmands (not part of Windows C:\WINDOWS\SYSTEM32
+        NSLOOKUP to find the IP address of a web address (e.g. risingfast.com) to get the IP address. Shows DNS server and IP for web address
+        TCPDUMP
+        TSHARK -- command line version of wireshark
+        WMIC -- windows management information console
+    Extended Commands from Windows Server 2003 Resource Toolkit
+        NOW     Shows current date and time without prompting for a new date time value (as TIME does)
+    Standard Input and Output and Error (Streams)
+        Standard Input Stdin is File No 1
+        Standard Output StdOut is File No 1
+        Standard Error StdErris File No 2
+        Redirect errors to a file   DIR <pattern> 2>> errors.txt
+        Redirect errors to stdout   2>&1
+        Redirect stdin from a file SORT < SomeFile.txt
+        Redirect ping to delay script PING localhost -n 20 >NUL or PING 127.0.0.1 > NUL
+        Redirect output to input using | ... dir /b | sort
+        Copy console input to a file ... TYPE CON > output.txt
+    Operators
+        Use SET/A to set arithmetic variables
+        Arithmetic: +, -, *, /, %
+        Logical: AND, OR, NOT
+        Relational: EQU, NEQ, LSS, LEQ, GTR, GEQ
+        Assignment: += -= *=, /=, %=
+        Bitwise: &, |, ^
+    String Operators
+        :~-N,M   Extracts substring length M startomg at N from the right or end ... eg SET name=Geoffrey ... ECHO %name:~-4,2% gives ff 
+        :~N,M    Extracts substring length M starting at N from the left or start, starting with zero eg SET name=Geoffrey ... ECHO %name:~4,2 gives fr 
+        SET var=%var:<from_string>=<to_string> replaces the from_string with the to_string in %var%. The string can be a single character e.g set tm=%tm: =0% replaces spaces with zeroes in %tm%
+    IF
+        IF [NOT] ERRORLEVEL number command
+        IF [NOT] string1==string2 command
+        IF [NOT] EXIST filename command -- do not use EXISTS
+    FOR Loops
+        Special Rules
+            Use %%g in scripts but % in command shell
+            Put opening paren ( on the same line as FOR and not on a following line
+        Basic FOR Loop With No Switches (assumes a set of files if no switch specified)
+            FOR %g IN (1 2 3 4 5) do (echo %g) -- step through set of values and execute a command for each value
+            FOR %g in (s*) DO (ECHO %) -- lists all files in the current directory matching wildcard
+            For %g in (fileserv1 fileserv2 fileserv3 fileserv4 fileserv5) Do Ping -n 1 %g -- to ping once on multiple servers
+        Command Extensions FOR Loops with /D /R /L /F Switches
+            Directories /D
+                FOR /D %g IN (*.*) DO (ECHO %g) -- list directories matching wildcard set specification
+                FOR /D %g in (*) do (expression) looks through directories from current position. Wildcard expressions allowed in (*)
+            Recurse Directories /R
+                FOR /R %g IN (.) DO (ECHO %g) >> recurse.txt -- recurse through subdirectories and echo full directory paths to a file (. is a wildcard for full path)
+                FOR /R "c:\users\gjarman\documents" %%g IN (Archive) DO ( ECHO %%g ) -- recurse from a starting directory
+            Lists of Numbers /L (numeric mode)
+                FOR /L %%g in (start, step, end) do (expression) loops through a range of numbers using the /L option
+            File Contents, String Contents and Commands Contents /F
+                Default token is 1, default delimiter is a space
+                FOR /F "delims=?|| skip=3" %g in (filename) do (expression) lists the contents of the named file. Filename is required. Skip ignores first N tokens
+                FOR /F "TOKENS=1" %g IN ('DIR') DO (ECHO %g) -- list the first column of values (datestamps) from a DIR on the current directory
+                FOR /F "TOKENS=1" %g IN ('HOSTNAME') DO (ECHO %g) -- store the hostname in %g%
+                FOR /F "TOKENS=1" %g IN ("This is a string") DO (ECHO %g)
+                FOR /F "DELIMS=" %%g in ("!String!") DO (ECHO %%g)-- for a string variable
+                FOR /F "tokens=*" %%g IN ('hostname') do (SET Host=%%g) -- assigns the output of the hostname command to the variable %Host% in a script (requires %%g)
+    Entering Multiple and Conditional Commands
+        Use & and && and || for running multiple commands or running a command if another fails
+            If the first command fails then the second command will run
+        & run both commands
+        && run the second command if the first succeeds
+        || run the second command if the first fails
+    COPY
+        Copy from the console to create a file with "copy con samplefile.txt" and used ctrl-Z to send an eof
+            Concate to an existing file from the console with "copy <existingfile.txt>+con"
+            Add text to a file direcly from the console using "echo "some words of text" >> <textfile.txt>>
+        Concatenating Files
+            Use the copy command with a "+" between each file name to concatenate all files into the first file
+            Or specify a target file w/out a plus sign eg copy a.txt+b.txt+c.txt target.txt
+    POPD/PUSHD
+        Enter pushd <directory> to change to a directory and push the new directory onto a stack
+        Enter popd to pop the most recent pushd directory off the stack and change back to that directory
+        Set the promt to $p$g (i.e. prompt $p$g) to see the directory changes as part of the prompt
+    FINDSTR
+        Use the format 'findstr /options "expression" <infile> > <outfile>
+        Prints to console if <outfile> is not given
+        "expression" is a regex
+        Use double quotes for spaces in expressions and not single quotes
+            single quotes are considered part of the expression
+        Use /b to match expressions to the beginning of lines in a file    
+        Use wildcards for filenames to match in multiple files
+            findstr will prefix the filename to the result lines
+        Use /s to search subdirectories recursively
+        Use /f:<filename> to read filenames from a file - omit the file spec at the end of the command
+        Use /g:<filename> to read expressions from a file for matching - omit the expression clause of the command
+    Program Files Synonyms
+        PROGRA~1 for C:\Program Files (environment variable ProgramFiles - to eliminate spaces)
+        PROGRA~2 for C:\Program Files (x86) (environment variable ProgramFiles(x86) - to eliminate spaces)
+        Reference: http://en.wikipedia.org/wiki/Program_Files
+    Batch File Programming Notes
+        Website Resources
+            http://www.computerhope.com/
+            http://labmice.techtarget.com/scripting/batchifles.htm
+            http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/ntcmds.mspx
+        General Rules
+            Batch commands are intended to be used in batch files but can be used at the console prompt
+            Non batch DOS commands are commonly used at the command prompt but also applicable to batch files
+            Any command line string can be included in a batch file
+            Use F3 to repeat the previous command on the command line
+            Case does not matter - upper and lower case are treated equally
+            Blank lines are ignored by the interpreter and are for formatting only
+            Literal strings are not quoted, eg if %1 == Happy (..) is OK and so is if "%1" == "Happy" ...
+            Commands are separated by newlines but using () can group multiple lines into a single command
+            Use double quotes working with directory paths with spaces
+        Getting Help
+            Type "help <cmd>" at the command line
+        Running Batch Commands
+            Run at the command line by typing the filename 
+                Alternatively type filename.bat or filename.cmd - either are allowed
+        Setting the Command Prompt
+            Shorten the command prompt with the PROMPT= command
+                eg  PROMPT=$P - sets to the current drive path
+                    PROMPT=$$ - sets it to '$'
+                    PROMPT=$ - sets it to a blank
+                Other values are $G (Greater than), $D (Date), $N (Drive), $B (Pipe)
+                Multiple values can be strung together for a compound prompt
+        Batch Commands
+            :: - comment or remark that is not echoed to the console (skipped by the interpreter)
+            @ - suppresses the current line from printing (use with @echo off)
+            %1 %2 etc - command line parameters replaced dynamically but including any quotes (eg echo %1) and %~1 has quotes removed
+            call batfile arglist - calls another batch file and passes arguments
+            Echo Off|On - suppresses following lines from printing, or restores printing
+            Echo Message - displays a message on the screen
+            Echo. <Message> - displays a blank line after an optional message (echo. displays a blank line)
+            Endlocal - cancels a Setlocal and drops local environment variables
+            Exit - terminates the program
+            For %%v in (set) do command %%v - loops through values in a list and executes a command with each value
+            LABEL is a colon - go to a label marked :LABEL (eg.. goto here .... :here). Must be the first column on the line w/out whitespace
+                Only the first 8 characters are used. Whitespaces in the label are allowed
+            if [not] Exist <file> <cmd> - executes cmd if file exists
+            if [not] text1 == text2 <cmd> - executes if values are equal
+            if [not] text1 == text2 (cmds) else (cmds)
+            Pause - prompts the user, pauses and waits for a key to continue
+            Popd - changes to the last saved directory path (previously saved by a Pushd)
+            Pushd <path> - saves the current directory on a stack and moves to <path>
+            Rem or REM - marks a remark line. Read by the interpreter and echoed to the console
+            Setlocal - creates a local copy of environment variables for a batchfile's liftime
+            Shift - shifts the command line arguments left one position (%2 is moved to %1). Used to access arguments > 10
+            Start - starts an executable program in a separate window (allows a datafile target also)
+            Title - sets the title of the command box window
+        Command Line Variables or Arguments
+            %0, %1, %2, %3 .. %9 etc are read from the command line when the batchfile is run ... e.. c:\test\mybat.bat var1 var2 var3
+            %0 is always the name of the batch file
+        Program Variables and Data Types
+            Variable names comprise numbers letters and underscors and cannot begin with a number
+            SET var1=Value .. sets var1 to 'Value'. Print using echo %Var1% and use the /A option to set numerics ... SET /A num1=5
+        Environment Variables and General Variables
+            SET to list all system/environment variables
+            %abc% is a generate variable value (e.g. SET abc="Hello", then ECHO %abc% to print the value
+            %var% returns an environment variable: eg echo %username%
+            New variables can be defined with SET: eg set myenv=buttons (env is %myenv%)
+            %~nx0 -- the script file name
+            %COMSPEC% -- the path to cmd.exe
+            %HOMEPATH% -- users home on the file system
+            %RANDOM% -- a random number 5 digits
+        Command Line Commands to Include in Batch Files
+            Type - same as cat in Linux - echos contents of a file (also use > to redirect)
+        For Statement
+            Use the FOR statement to step through the lines and a file and conditionally process each line
+        Sample Commands
+            echo %path% >> c:\temp\path.txt -- write the Windows path to a text file
+        Debugging
+            run with redirect e.g. test.bat > testout.txt 2>&1 to redirecto all output to a file testout.txt
+        Functions
+            Use labels to name functions
+            Use call :FuncName to call a function.
+            Use goto :eof to end a called function and return to the calling block (end of function)
+            If you use goto :FuncName and goto :eof it will go to the end-of-file
+            Pass variables spaced in the call e.g. :FuncName var1 var2 and reference in the function with %~1, %~2 etc
+            Use SETLOCAL and ENDLOCAL within a function to limit scope on variables
+        Examples
+            dir /s Archive | findstr Directory ... run from root to find all Archive directories and print each path
+            ForFiles /p "C:\Users\gjarman\Documents\Computing\Oracle\Notes\Archive" /d -120 /c "cmd /c del @file" -- delete all files older than 120 days in an archive directory
+            VER | FIND "Windows NT" || echo Not Windows NT -- echo Windows NT not found if VER does not include the string
+            FSUTIL fsinfo volumeinfo d: | findstr /B "File System Name : FAT32" && SET fs=FAT32 -- check if a drive is FAT32 which cannot handle large files
+            wmic os get serialnumber|find "-" -- get the serial number of a computer
+            set tm=%tm: =0% -- change blank spaces to zeroes in a string %tm%
+            IF ERRORLEVEL 1 <COMMAND> -- executes <command> when errorlevel is set to 1 by last executed command
+            IF %var1% EQU %var2% echo var1 and var2 match
+            FOR /F "DELIMS=*" %i IN (commands.txt) DO %i -- run each line in a file as a command
+Excel
+     VBA Excel
+     Keys
+        <Ctrl><Shift><DownArrow> Last cell in column highlighted
+        <Alt><F11> Go to VBA
+        <Ctrl><Spacebar> Intellisense
+        <Alt><F8> Show Macros
+        <F4> Show Properties
+        <F5> Run to End
+    Courses
+        ExcelVBAHelp
+        WiseOwl
+        ExcelVbaIsFun
+        ExcelIsFun - non VBA videos
+        https://msdn.microsoft.com/en-us/library/office/ee814737(v=office.14).aspx
+
+Group Policy Table of Contents (GPTOC)
+    Tools
+        Local Group Policy Editor 
+            Windows > Run > Edit Group Policy
+
+ Powershell
+    Powershell Table of Contents (PSTOC)
+        Overview
+        References
+        Downloads
+        Registry Entries
+        Windows Management Framework
+        Command-Lets (Cmdlets)
+        Comments
+        Environment Commands
+        Pipelines
+        Printing
+        Profiles
+        Providers and File System Drives
+        Scripts and Execution Policy
+        Variables
+    Overview
+        Powershell is a task-based command line shell and scripting language for Windows
+        It is intended for System Administation and built on the .NET framework
+        PowerShell is built on the .NET CLR and accepts and returns .NET objects
+        Powershell can access the file system, registr and digital certificate stores
+        Code is in c:\Windows\System32\WindowsPowerShell\v1.0
+        Run Powershell or Powershell ISE (Integrated Scripting Environment)
+            Start > All Programs > Accessories > Windows Powershell > Powershell
+            Windows > Run > Powershell
+    References
+        https://docs.microsoft.com/en-us/powershell/#pivot=main&panel=getstarted
+        https://technet.microsoft.com/en-us/library/hh847741(v=wps.630).aspx -- PowerShell 4 documenation library
+        http://blogs.technet.com/b/heyscriptingguy/
+        http://blogs.technet.com/b/heyscriptingguy/archive/2012/02/07/learn-how-to-use-the-free-powershell-ise-to-edit-scripts.aspx
+        http://www.powershellmagazine.com/
+        https://technet.microsoft.com/en-us/scriptcenter/dd742419.aspx -- 
+        https://technet.microsoft.com/en-us/scriptcenter/dd742419.aspx?f=255&MSPPError=-2147217396 -- training
+        http://blogs.technet.com/b/musings_of_a_technical_tam/archive/2012/06/04/windows-powershell-self-training-guide.aspx
+        http://go.microsoft.com/fwlink/?LinkID=108518 -- online help files
+        http://powershell.org -- includes articles and ebooks
+        http://blogs.technet.com/b/heyscriptingguy/
+    Downloads
+        https://www.microsoft.com/en-us/download/details.aspx?id=40855 -- version4
+        https://www.microsoft.com/en-us/download/details.aspx?id=46889 -- version5 preview
+    Registry Entries
+        HKLM:\SOFTWARE\Microsoft\PowerShell\
+    Windows Management Framework 4.0 (WMF 4.0)
+        Components
+            Powershell
+            Integrated Scripting Engine (ISE)
+            Web Services (IIS Extension)
+            Remote Management (WinRM)
+            Windows Management Instrumentation (WMI)
+            Desired State Configuration (DSC)
+               Uses WinRM to communicate with remote machines
+    Command-lets (Cmdlets)
+        get-command -- list cmdlets
+        Command-lets are verb-noun commands to control the features of Windows
+        Cmdlet parameters are preceded by a hyphen
+        Cmdlets are not case-sensitive
+        Cmdlets can be concatenated with a ; separator
+            e.g. Get-Process;Get-Service
+        Example CmdLets
+            Clear-Host -- clears the screen (aliased to cls and clear)
+            Export-CSV -- to export output to CSV in a piped operation
+                e.g. Get-Process | Export-CSV proclist.csv
+            Export-CliXML -- to export an XML file
+                e.g. Get-Process | Export-CliXML proclist.xml
+            Format-List -- shows values in an object as a list or sublist
+            Find-String -- search for a string
+                e.g. get-service Appinfo | format-list -property name -- where name is the property
+            Format-Table
+            Format-Wide
+            Format-Custom
+            Get-Alias -- list all aliases and their corrsponding cmdlet
+               alternatively set the Powershell drive to alias
+               Set-Location alias: -- sets the drive to Alias
+               Get-ChildItem -- lists the aliases in the Alias drive
+            Get-ChildItem -recurse -- fetches members of a provider recursively
+            Get-Children -- same as dir and lists contents of the current directory
+            Get-Command <string> -- to list commands matching <string> 
+               Get-Command -verb Export -- to show commands with the Export verb
+               Get-Command -Name <name> -- use wildcards in <name> for fuzzy matching
+            Get-Help <CmdLet> to show help on commands
+                * -- list all commands
+                -online -- option, to open the online version of the help file
+                -detailed -- option, to get detailed help
+                -examples -- option, to show examples
+                -full -- option to show all help text
+                -parameter -- option to list all parameters of the <CmdLet>
+                run Powershell as administrator to download help files using this command
+                update-help -- to update existing helpfiles
+                use help instead of get-help to display one page at a time (same as | more)
+                get-help about_* to list about help topics
+            Get-History -- lists the history of entered commands
+            Get-Location -- same as pwd or show present directory
+            Get-Member lists the methods and properties of an object 
+                e.g. get-service | get-member -- lists the members of the get-service command
+            Get-Service -- lists the properties and methods of a service
+                e.g. (Get-Service appinfo).stop() -- executes the stop() method on service appinfo
+                e.g. (Get-service appinfo).name -- gets the name property value
+            Start-Service
+            Stop-Service
+            Suspend-Service
+            Resume-Service
+            Restart-Service
+            Get-Process - returns a list of processes, or Get-Process <processName> returns stats on a process
+            Start-Process
+            Stop-Process
+            Wait-Process
+            Get-Verb -- list all the command verbs
+            more -- pipe to more to see one page at a time
+            Remove-Item -- same as del or rmdir
+            Set-Alias -- define an alias for the current session
+                e.g. Set-Alias gj Get-Help
+                e.g. Set-Alias np C:\Windows\Notepad.exe -- starts notepad
+                e.g. Remove Item Alias:np  -- to remove the Notepad alias
+            Set-Location -- same as cd to change directory
+            Stop-Process -- stops a process or list of processes
+                e.g. Get-Process -Name Notepad | Stop-Process -- kills the Notepad process
+            Test-Path -- checks if a directory path exists
+                e.g. test-path "C:\" -- tests the existance of the c: drive
+                e.g. test-path $Profile -- tests if a user profile file is defined
+    Comments
+        # -- for inline comments
+        <# .. #> -- for comment blocks
+    Environment Commands
+        $PSVersionTable.PSVersion -- get current version
+        $env:path -- gets the path environment variable
+        $env:windir -- gets the windows home directory environment variable
+        $home -- current user home
+        $pshome -- PowerShell home directory
+        Get-ChildItem -path env: -- fetches all children in the env: dataprovider path
+    Pipelines
+        Use | to pipeline output to another cmdlet
+            e.g. Get-Command | findstr "test"
+            e.g. ipconfig | findstr "address"
+    Printing
+        Use | Out-Printer -- to send output to the default printer
+            e.g. get-command | findstr "Test" | Out-Printer -- sends to the default printer
+    Profiles
+        Profiles store locally scoped definitions for reuse
+        Profiles are maintained at four levels
+            %windir%\system32\WindowsPowerShell\v1.0\profile.ps1
+            %windir%\system32\WindowsPowerShell\v1.0\ Microsoft.PowerShell_profile.ps1
+            %UserProfile%\My Documents\WindowsPowerShell\profile.ps1
+            %UserProfile%\\My Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+                $Profile -- to fetch this location
+                Get-Content $Profile -- to fetch the contents of the $Profile file
+                    test-path $profile -- to test the existance of the file
+        Create a profile by creating a file of the specified location and name
+            or create a profile from within Powershell
+                new-item -path $profile -itemtype file -force -- creates a profile at path $Profile
+        Create a function and add to the $profile
+            function pro { notepad $profile } -- opens profile file in Notepad
+    Providers and File System Drives
+        Get-PSProvider -- lists the providers and their drive collections
+        Get-PSDrive -- lists the drives in each provider
+            Registries can be HKLM (local machine) or HKCU (current user)
+        Get-ChildItem env: -- lists the items in a env: provider
+        Providers and Drives
+            Drives are drive names followed by a colon
+                e.g. env:, c:, alias:, function, variable, cert, wsman
+        Navigate within a File System
+            cd and ls and dir are aliases for Set-Location and Get-Location
+            Set-Location
+            Get-ChildItem
+                e.g. Get-ChildItem alias:
+        Item Cmdlets
+            Get-Item -- gets information about the current directory
+            Get-ChildItem -- gets information about the contents of a directory
+            New-Item
+            Remove-Item
+            Set-Item -- sets a value in a variable or registy key
+            Move-Item
+            Copy-Item
+        Predefined Location Variables
+            $PSHome -- Powershell home
+            $home -- current user home
+        Providers are .net assemblies that make data in specialized data stores available
+        get-help about_psprovider -- displays help on providers
+        get-help registry -- gets help on the Registry provider
+        Set-Postion c: -- (or env: or hklm: or or hkcu or any other drive) sets the current drive
+    Scripts and Execution Policy
+        References
+            https://technet.microsoft.com/en-us/magazine/hh551144.aspx -- Scripting Crash Course
+        Powershell scripts have extension .ps1
+        Run scripts in the current directory using the .\<Scriptname> syntax
+            A path specification is always needed even if it is the current directory
+        Run scripts in specific directories using the directory name
+            e.g. c:\users\geoffrey.jarman\documents\scripts\script1.ps1
+        Running scripts in ISE have global scope but scripts in the shell have local scope
+        Execution policy controls running scripts
+            Cmdlets
+                Get_Executionpolicy -- to fetch the current setting
+            Values
+                Restricted - no scripts will be allowed to run
+                Remotesigned - downloaded scripts must be signed to run
+                Allsigned - local and remote scripts must be signed to run
+            Digital signatures are required
+            Get-Help about_signing -- describes what can run
+            Get-Help about_execution_policy - describes execution policies
+            Get-ExecutionPolicy - shows the current policy
+            Set-ExecutionPolicy remotesigned -- changes execution policy to remotesigned
+        Parentheses control the order of evaluation
+            Everything within the () parentheses is evaluated as a single unit
+        Scope
+            Variables defined within an instance of a script or session only exist within that context
+                These variables are discarded when the session or script ends
+    Variables
+        Variables are designated with a leading $
+            e.g. $Var1 = 'Hello' (and $Var1 will print the contents)
+            e.g. $Array1 = 1,2,3,4,5 (and $Array1[0] will print the first value 1
+            e.g. $Array2 = 'One','Two','Three','Four','Five' (and $Array2[1] will print 'Two'
+        Negative Array references start at the end and -1 is the final value
+            e.g. $Array3 = 7,8,9 and $Array3[-1] will print 9
+        Use single-quotes for text and double-quotes for test that include variable names
+            e.g. $t1 = 'everyone'; $t2 = "Hello $t1", and $t2 will print 'Hello everyone'
+        Double-quotes containing single quotes treat the single quotes as literals
+            e.g. $string1 = "These single quotes '' are OK"
+        Escape is ` (the back-tick or grave)
+            e.g. $t3 = 'text'; $t3="`$t3 is not text"; $t3 will print '$t2 is not text'
+            Get-Help about_escape_characters 
+            Escape can assign special meaning to characters
+                `0    Null
+                `a    Alert
+                `b    Backspace
+                `f    Form feed
+                `n    New line
+                `r    Carriage return
+                `t    Horizontal tab
+                `v    Vertical tab
+            Escape can continue a line
+                e.g. Get-Process '
+                     >> Powershell -- is the same as Get-Process Powershell
+        Properties
+            Variables can have properties which are referenced with a . operator
+                e.g. $Var9 = Get-Service
+                     $Var9[20].name -- gives the name of service 21
+                     $var9[20].name.toupper() -- gives the name of service21 in uppercase
+                     $var9 | format-list -- shows everything
+
+Processes and Services Table of Contents (PSTOC)
+    Processes are instances of an application or service
+    Services run in the background (as a process)
+    Applicatons run in the foreground (as a process)
+ 
+Script Host Table of Contents (SHTOC)
+    Script Editor
+        Use the Script Editor in Office Macros for debugging VB Scripts
+    Websites and Resources
+        https://isvbscriptdead.com/resources/advanced-vbs-ms.pdf -- Advanced VBScript
+        Windows 2000 Scripting Guide at http://www.microsoft.com/technet/scriptcenter/guide/default.mspx
+        Script Center at Microsoft - http://www.microsoft.com/technet/scriptcenter/default.mspx
+        Debugging - http://msdn.microsoft.com/library/default.asp?url=/library/en-us/sdbug/html/sdbug_1.asp 
+        Debugging - http://msdn.microsoft.com/scripting/debugger
+        DevGuru vbscript reference - http://www.devguru.com/Technologies/vbscript/
+        vbScript Users Guide - http://msdn.microsoft.com/library/default.asp?url=/library/en-us/script56/html/dd5dc02a-71e4-412b-8b30-9cc2d3d5e6fb.asp
+        vbScript Reference - http://msdn.microsoft.com/library/default.asp?url=/library/en-us/script56/html/ddfa5183-d458-41bc-a489-070296ced968.asp
+        vbUnleashed - http://docs.rinet.ru/VB/
+        vbScript and ActiveX - http://docs.rinet.ru/ActiveVB/
+        WMI Scripting Primer - http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnclinic/html/scripting06112002.asp
+        W3Schools vbs reference - 
+        File Scripts - http://www.activexperts.com/activmonitor/windowsmanagement/adminscripts/filesfolders/files/
+        Reference - http://www.winguides.com/scripting
+        Samples and tips/tricks - http://groups.msn.com/windowsscript/
+        Extensive tutorials - http://www.webbasedprogramming.com/Teach-Yourself-VBScript-in-21-Days/
+    Books
+        Windows Administration Scripting Guide - 
+    Getting Started
+        Scripts are placed in files ending .vbs (eg "testscript.vbs") and run from the command line
+        Run as either cscript textscript.vbs or wscript textscript.vbs to run windows or DOS box versions
+            cscript is the 'console' script host or interpreter
+            wscript is the 'windows' script host - it is invoked automatically from within Windows to run scripts
+    Introduction
+        Windows script and WMI is the primary language for managing Windows servers and resources
+        VBScript is a 'glue' language for accessing and tying together Automation Objects (including WMI objects)
+        Connecting to an object is 'binding' which instantiates an object of a class (e.g. Set objWMIService = GetObject("winmgmts:"))
+        GetObject() should be used to bind an object to ADSI or WMI
+        CreateObject() should be used to bind an object to any object other than WMI or ADSI (eg FileSystems, Dictionaries, Internet Explorer)
+        'Set' must be used to create an object reference but cannot be used for any other assignment
+        Any language supporting the COM standard can be used to script WMI (eg ActivePerl)
+        WMI can be used to monitor events in real time using 'event subscriptions'
+    Tips and Tricks
+        Using "save as" in Notepad - surround the filename with double quotes to prevent Notepad adding the .txt extension
+        Scripts are not case sensitive
+        whitespaces between arguments on the command line are ignored 
+        Functions are available based on the script language used. If the script is vbScript, use vb functions
+    Microsoft Script Editor
+        Available choice when running a script in //D debug mode
+    Microsoft Script Debugger
+        Can be found by searching the Microsoft Download Center using "Script Debugger"
+        Installs into "C:\Program Files\Microsoft Script Debugger" directory
+        Creates an installation entry in the Control Panel "Add Remove Programs Listing"
+        //D option = invoke debugging on an error by running a script in debug mode using //D eg "wscript //D myscript.vbs"
+        //X option = invoke debugging automatically on the first statement using the //X option (even if no error)
+    Namespaces
+        root\cimv2
+    Sample Simple Scripts
+    Definitions
+        Automation Objects - COM objects that provide access to Microsoft Applications like Work, Excel and Outlook (methods and properties)
+    Acroynms
+        ADSI - Active Directory Services Interface
+        COM - Component Object Model (standard ways to expose services that can be called by scripts)
+        DLL - Dynamic Link Library programming libraries
+        HTA - HTML Application (such as Scriptomatic)
+        SWbem - Scripting Web Based Enterprise Manager
+        WMI - Windows Management Instrumentation (a set of COM objects to expose Windows OS services to scripts) - implements WBEM
+        WSH - Windows Script Host
+        WBEM - Web Based Enterprise Management - an industry standard for enterprise management component access
+        DMTF - Distributed Management Task Force - standards body guiding the development of WMI
+        CIM - Common Information Model - repository of services and providers implemented as a schema
+        CIMOM - CIM Object Manager
+    Data Types in Visual Basic Script
+        Data types are: Boolean, Byte, Integer, Long, Single, Double, String, Date, Empty, Object and Error
+        'Dim' is used to explicitly declare a variable (e.g. 'Dim myString, myCount, myDate')
+            'Dim' should not be used in combination with a variable initialization - it will throw an error
+                e.g. Dim strMyString = "Foobar" will throw an error
+                You can use the multi-statement separater instead (i.e. the colon ":")
+                  e.g. Dim strMyString : strMyString = "Foobar"
+        All dimensioned data is type variant - it is not strictly typed until it is used
+        'Option Explicit' forces checking of variable declarations by the interpreter (i.e. to prevent typos)
+        Booleans are True and False with True represented internally as "-1" (not "1) and false as "0"
+    Comments
+        ' is used to identify a comment (i.e. a single quote)
+        The quote can appear anywhere on the line, or on its own line
+    WMI Objects, Methods and Properties    
+        There are a dozen or so objects in WMI that have methods providing access to the WMI infrastructure via methods
+            Methods return collections of managed objects include 'instanceOf' and 'execQuery' where the object type is part of the call argument
+                e.g. objWMIService = objWMIService.execQuery("Select * From WIn32_Service")
+            Each instance is a virtual representation of a Windows managed resource.
+            The WMI providers such as 'Win32_Service' are defined as DLL's in the host %SystemRoot%\system32\wbem directory
+        Methods 
+            GetObject()
+            Get() method
+    CIMON Broker (Common Information Model (CIM) Object Manager (OM))
+        CIMON is the broker between Script languages and the underlying instrumentation providers. It serves multiple roles:
+            Provider Registration - maintains a list of all providers and their call features
+            Request Routing - manages connections between scripts and underlying providers
+            Remote Access - allows remote connections to serve up data
+            Security - limites access to the provider functions
+            Query Processing - processes queries to return collections of objects and properties
+            Event Processing - allows scripts to subscribe to events
+        Namespaces group object defintions into related groups. 
+            The main namespace is root\cimv2 which stores common windows (cimv2 is Common Information Model Version 2)
+        WMI Tester (wbemtest.exe) and WMI Command Line (wmic.ext) allow browsing the namespace schemas and running WMI commandline actions
+            See MS Help for additional details.
+        CIM Studio (Part of the WMI SDK) is a graphical user interface for browsing and interacting with the WMI assets 
+    Scriptomatic
+        Scriptomatic is an HTA application that allows you to select a namespace and class to generate base code 
+        The code that is generated displays all the properties in the class and provides a template for using the class
+    COM Namespaces and Objects
+        root\CIMV2\Win32_Service - extracts currently running services, names and resource usages
+        root\CIMV2\Win32_Process - extracts currently running processes, names and resource usages
+        Win32_BIOS - extracts information about the BIOS
+    Built In WScript Objects
+        WshShell
+        WshNetwork
+        WshContoller
+        WScript - the primary object with methods to bind to other objects and report basic properties
+    vbScript Formatting Characters
+        vbTab - represents a tab character that can be echoed 
+        vbNewLine - represents a newline that can be echoed 
+        vbCRLF  - windows newline character same as vbNewLine
+    vbScript String Functions
+        inStr() - returns the position of a string within another string
+        ucase() - convert a string to upper case
+        lcase() - convert a string to lower case
+    Displaying Results on a Screen
+        WScript.echo() - simple text boxes
+        MsgBox - boxes with buttons
+        PopUp - customizable titles
+
+SQL Server Table of Contents (SQLSTOC)
+    Tips and Tricks
+        You need Microsoft SQL Server Management Studio intalled to communicate with the local (or remote) database and run scripts
+    Web Books and Papers and Tutorials
+        http://msdn.microsoft.com/en-us/library/ms167593.aspx (reachable via Help on Management Studio Express)
+        http://msdn2.microsoft.com/en-us/library/ms379066(MSDN.10).aspx - Microsoft MSDN Documentation on SQL Server
+        http://msdn.microsoft.com/sql/express/ - intro articles and newsletters
+        http://msdn2.microsoft.com/en-us/library/ms130214.aspx - Books online for SQL Server
+        http://msdn2.microsoft.com/en-us/library/ms169620.aspx - Tutorials
+        http://www.microsoft.com/downloads/details.aspx?FamilyId=9697AAAA-AD4B-416E-87A4-A8B154F92787&displaylang=en - Books Online
+        https://www.microsoftelearning.com/sqlserver2005 - dba and developer tutorials
+        http://go.microsoft.com/fwlink/?linkid=51793 - SQL Server software, documentation and tutorials
+        http://www.codeplex.com/Wikipage?ProjectName=SqlServerSamples - for sample databases to download
+    Published Books and Papers
+        Microsoft SQL Server 2005 Express Edition Step by Step
+        Overview of SQL Server Management Studio Express Edition (Eric Brown - Quilogy)
+    Support Forums
+        http://forums.microsoft.com/MSDN/ShowForum.aspx?ForumID=158&SiteID=1
+    Blogs
+        http://blogs.msdn.com/sqlrem/ - for Relational Engine Manageability Team Blog
+    Downloads
+        http://msdn.microsoft.com/vstudio/express/sql/download
+        http://msdn.microsoft.com/sql
+    WebCasts
+        http://www.microsoft.com/webcasts      
+    Express Feature Exclusions
+            SQL Server Agent User Interface (scheduled jobs)
+            Full Text Catalog User Interface
+            Replication Publication User Interface
+            Import/Export Wizard (uses integration services)
+            Copy Database Wizard
+            Script action as jobs in dialogs
+            Log viewer (you can use Notepad against the log directory)
+            Management reports
+            Profiler/DTA integration (Database Tuning Advisor)
+            Solution Explorer (script storage and control)
+    Getting Started
+        The process sqlservr.exe must be running under task manager (with user Name 'NETWORK SERVICE)
+            You can also check under SQL Server Configuration Manager
+        Startup log files are at C:\Program Files\Microsoft SQL Server\100\Setup Bootstrap\Log
+    Connections and Connection Problems
+        The default connection method is shared memory. TCP is for remote host connections
+        Change connection method to named pipes if you get SSPI context errors
+    Servers and Databases
+        A connection/server is a single running instance of SQL Server with it's associated tables
+        Server groups organize registered servers into groups (eg. all express servers in one group)
+        Each Server instance has five system databases: master, model, tempdb, msdb and resource (hidden)
+            Master: stores all system level information for a server instance
+            Model: used by SQL Server agent for scheduling jobs and alerts
+            MSDB: used as a template for creating new databases under the server instance
+            Temp: an area for holding temporary or intermediate results
+            Resource: a hidden database containing system objects. 
+    Database Files
+        .mdf files - hold the database tables
+        .ldf files - hold the logs - to recover lost transactions
+    Users, Roles and Logins
+        Security is managed by creating server logins, and then database users for that login
+        Server logins manage access to the server, and db user accounts allow access to specific databases
+            SQL Logins are server level logins that have access privileges to the SQL Server objects
+        Windows accounts can be mapped to SQL Server login accounts for validation
+        SQL Users - are local SQL accounts with only database access privileges
+            You create a user at the db level by right-clicking 'Security' under a database
+        Role based security is the recommended way of assigning privileges to users
+            Privileges are assigned to roles and users are assigned to roles
+        Defining a new login won't work unless mixed authentication is turned on in server properties
+    Basic Navigation
+        Use the Summary Page for faster navigation - not the tree view
+        Keyboard customization and shortcuts are under Tools/Options/Keyboard
+        Standard config is Visual Studio - SQL Server 2000 is for SQL Server config
+    Views
+        Right click on 'Views' to show the view builder
+        Use views as stored queries
+        Filter wildcards are '%'
+        Columns can be suppressed from output and synonyms can be declared
+    Running Scripts
+        Start scripts with the USE <database name> GO clause to point to the right database
+            The USE directive ensures the query will run in the proper database
+        Highlight a portion of a script to run only that portion
+        Use F5 to execute
+        Use the comment-out button to comment out portions of a script (Same as Visual Studio)
+        Right click and choose 'Results To' to change the export format to text or file
+    Script Templates
+        Show templates from the view menu or Ctrl-Alt-T
+        Click the 'Replace Parameters' button to substitute actual variables in the template
+            This button looks like an 'A -> B' logo on the button bar
+    Transact SQL
+        Transact SQL is the SQL implementation for communicating with SQL Server
+        http://msdn2.microsoft.com/en-us/library/ms365303(SQL.90).aspx
+    Unicode Notation
+        Target strings in where clauses may be expressed with a 'N' prefix (eg. ... where name = N'Jane')
+            The 'N' prefix denotes that the target literal is in unicode format
+    Comments
+        Use /* .... */ to comment out blocks of code
+        Use -- to comment out lines or remainder of lines
+        The toolbar has a block comment, unblock comment icon for blocking out multiple lines conveniently
+    Schema Reporting
+        sp_help <table_name> creates a database schema report for a table
+    Database Schema Tables
+        sysobjects - objects (including tables) in database
+        syscolumns - columns in tables
+    Surface Area Configuration
+        Manages server security - most external access to services are turned off by default
+        SQL Server Browser must be turned on to access a SQL Server instance from the network
+            It provides name resolution to incoming requests through port 1433
+            Named pipe communication is through \sql\query
+    SQL Server Manager
+        Manages services and internal configurations of the server
+    Database Backup and Recovery
+        A database can be backed up by detaching the mdf file and copying it to another location
+            Right click on a database and choose Task/Detach
+            Files are normally located under the SQL Server Program Top
+            e.g. C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data - contains all mdf files by default
+            The actual file location can be found in the 'files' page from a database property window.
+        Alternatively use the Backup Dialog box (right click on a database and choose tasks/backup)
+            Backups are saved to the default installation folder which can be changed through backup setup options
+            e.g. c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Backup\
+            You can point to a named backup device in the backup configuration instead of a file
+            Backup devices are defined/named under Server Objects/Backup Devices on the Object Navigation pane
+    Schema
+        Set of database entities that form a single namespace - can be a user name or separate/independently defined
+        Tables within the same schema cannot have the same name
+        In SQL 2000 a user name and a schema are equivalent - creating a user creates a schema
+            Dropping database users does not require dropping all objects in the users' schema
+        Fully qualified object names are server.database.schema.object
+        Users have a default schema when they are created. 
+            Objects are searched starting in the default schema, and then to the dbo schema
+        With user/schema separation, schema can be owned by roles rather than individual users
+        There are several standard schemas in SQL Server 2005 that correspond to certain db roles or users
+            users: dbo, guest, INFORMATION_SCHEMA, and sys, 
+            roles: db_owner, db_accessadmin, db_securityadmin, db_dlladmin, db_backupoperator, 
+                db_datareader, db_datawriter, db_denydatareader, and db_denydatawriter
+    Creating Tables
+        You can create a key on a table column by clicking the key icon 
+            or right click in the pane and select the key icon
+        You can define a sequence by setting Identity to 'Yes' in the field properties
+            this allows you to choose the increment and seed values
+            only numeric data 
+           
+Visual Basic 2005 Table of Contents (VBTOC)
+    Sites
+        VB Training Videos (intro level) -  http://msdn.microsoft.com/vstudio/express/vb/learning/
+        VB Developers - http://msdn.microsoft.com/vbasic/
+        VB Developers - http://msdn.com/vbasic
+        Coding4Fun - http://msdn.microsoft.com/coding4fun
+        VB Forums - http://forums.microsoft.com/
+        VB Team Blog - http://blogs.msdn.com/vbteam
+        VB Code Snippets - http://blogs.msdn.com/vbide
+        Channel9 Microsoft Videos - http://channel9.msdn.com
+        Code Project Code Samples (membership required) - http://www.codeproject.com/vb/net/
+        Fritz Onion Movie Project - http://msdn.microsoft.com/virtuallabs/fritzonion/ 
+        Web Services - http://msevents.microsoft.com/CUI/WebCastEventDetails.aspx?EventID=1032286889&EventCategory=3&culture=en-US&CountryCode=US
+        Virtual Labs - http://msdn.microsoft.com/virtuallabs/vbasic/
+        VB Events and webCasts - http://www.microsoft.com/events/series/msdnvb2005.
+        VP Training (Paid) http://LearnVisualStudio.NET
+        VB.net Training Courses with Code Samples - http://www.homeandlearn.co.uk/NET/vbNet.html#Text
+        MSDN VB Reference - http://msdn2.microsoft.com/en-us/library/2x7h1hfk(VS.80).aspx
+        About.com VB.net - http://visualbasic.about.com/od/learnvbnet/
+        Developer.com tutorials - http://www.developers.net/all_content/Focus/Visual%a
+        VB FAQ's on MSDN - http://blogs.msdn.com/vbfaq/default.aspx
+        Code Snippets in VB - http://channel9.msdn.com/Showpost.aspx?postid=126728
+        Downloads - http://msdn.microsoft.com/vbasic/downloads/
+        Examples and Howto's - http://www.vbcity.com/
+    Reminders
+        Put declarations in class member variables but put initializations in constructors or other methods
+    Basic Statements
+        You can dimension a variable only at the module or procedure level
+        Variables declared at module level are class members, whereas variables declared within a procedure are local
+            Variable declared within a codebloc have scope only within the block - they are private to the outside
+            Variables declared at the module level have access modifiers so the 'Dim' keyword is implied
+        You cannot instantiate a variable or object outside a procedure unless it is shared
+        Dim is implied when access modifiers are used such as Private, Public, Friend or Protected
+        Dim <variable> As <variableType> = <value> e.g. Dim myInteger As Integer = 1
+        Dim <objectName> As <class> = New <class>()
+        Public/Protected/Private Function <myFunction>(args) As <ReturnType> <codeblock> End Function
+        Public/Protected/Private Sub <mySub>(args) <codeblock> End Sub
+        Public <PropertyName> as <datatype>Get <codeblock> End Get, Set <codeBlock> End Set
+    Code Snippets
+        Demo at http://channel9.msdn.com/Showpost.aspx?postid=126728
+        Demo solution - CodeSnippets.sln
+        Use right click/snippet picker or ?<tab> to bring up the snippet picker
+            Also type the shortcut directly (e.g. colcreatekey) and <tab>
+        Replacement code is in green with help hovering over the green code
+        Hit <ctrl><space> to get a list of substitute items
+        Also type the start of a shortcut and tab to get all snippets matching what was typed
+        Snippets are XML files renamed to .snippet
+            The XML file includes any imports needed for the snippet to work
+            Invoking a snippet automatically invokes the associated import into the application
+        Snippets can be defined or edited in the Code Snippets Manager (navigation = menu/tools/code snippets manager)
+    Conversion and Casting
+        ms-help://MS.VSExpressCC.v80/MS.NETFramework.v20.en/dv_vbalr/html/1cdacd21-ba31-4b62-b5be-395e41eeaa17.htm
+        ctype(expression, type) is compiled inline to a specific function such as 
+    Functions
+        ctype() - converts a type to another type by casting
+        val() - converts a string to a signed numeric value (in Microsoft.visualbasic.conversion{} namespace)
+            overloaded for integers and doubles - converts chars to integers and strings to doubles
+            strips $ signs etc. Reads up to first non-numeric char. Ignores spaces
+            e.g. "123 45 6 abc" converst to "123456"
+    Delegates
+        Delegates are type-safe object-oriented references to methods 
+        They can be defined and used to make methods more extensible and usable
+        Delegates are reference types that point to a method signature and return type (like a java abstract method)
+    Strings
+    Arrays
+        Arrays are declared like elementary data types with parentheses containing dimensions
+            e.g. dim myInts(10) as Integer
+        Multidimensional arrays are declared using comma spacing between each dimension
+            e.g. dim myInts(10, 10) as Integer 
+        Array values can be assigned directly
+            e.g. myInts(4) = 324
+        Arrays can be dimensioned and initialized in one step
+            e.g. dim myInts as Integer() = New Integer(3) {1, 2, 3, 4}
+        The index to an array is always a zero-based offset 
+
+Windows Troubleshooting Table of Contents (WTTOC)
+    References
+        Remove Programs which fail Uninstall
+            http://support.microsoft.com/mats/program_install_and_uninstall
+        General Fixit Site
+            http://support.microsoft.com/fixit/
+
+Windows Update Table of Contents (WUTOC)
+    Manual Deinstallation
+        Windows > Run > wusa (Windows Update Stand Alone Installer)
+
+Windows XP Table of Contents (WXPTOC)
+    Windows Predefined Shortcut Keys
+        Surround a URL with www://....com in MS Internet Explorer ..... Ctrl-Enter
+        <Win>-A Show Browser Favorites
+        <Win>-E Show Windows Explorer
+        <Win>-F1 Show Windows Help
+        <Win>-F Find/Search (use <Win><Ctrl>-F to find hosts)
+        <Win>-L Lock the desktop
+        <Win>-R Run Dialog Box
+        <Win>-U Utility Manager (Narrator and Magnifier)
+        <Win><Break> - System Properties
+        <Win><blank> - Start Menu
+        <Ctrl><Shft><Esc> - Task Manager
+    User Defined Shortcut Keys
+        Create a shortcut on the desktop and open Properties to define
+        Click Ctrl and a key to define a Ctrl-Alt-Key shortcut
+        <Ctrl><Alt>-B for Browser (Internet Explorer)
+        <Ctrl><Alt>-C for Console
+        <Ctrl><Alt>-O for Outlook
+    Shortcut Keys  Mostly in Windows Explorer
+        Create a shortcut - right click on file or folder or desktop
+        Drop down Address Bar - F4
+        Open as new folder  tools/folders/options
+        Kiosk or Full Screen Mode - F11
+        Thumbnails - Right click folder/properties/general/enable thumbnail
+        Open With - Right click/open with
+        Open With Permanent - Right click/open with /choose program
+        Open an Item - Ctrl O
+        Close Document - Right click task bar or Alt-F4
+        Save file as different extension - file/save as/-myfile.sql- to force extension
+        Properties - Alt Doubleclick or Alt Enter
+        Load CD without starting - Press Shift Key and Close CD Drive Bay
+        Close a document - Ctrl W or Ctrl F4
+        Highlight Address Bar in Windows Explorer - Alt D
+        Start Menu - Windows Key or Ctrl-Esc
+        Run - Alt R (from Desktop)
+        Minimize All - Windows M
+        Help - Windows F1
+        Explorer - Windows E
+        System Properties - Windows Break
+        Shortcuts for Applications - Applications (ie Menu) key or Shift F10
+        Activate the Menu Bar - F10
+        Search for a File of Folder - F3
+        Select All - Ctrl A or left margin triple click
+        Delete Permanently - Shift Delete
+        Switch Focus Across Documents - F6
+    Services
+        See all services running by entering services.msc at the console or DOS box
+    Instructions to shut down UDP Port 135 Windows Messenger Service:
+        Open Control Panel, Admin Tools and display the list of services
+        Choose Messenger Service and shut it down, and set to manual startup
+        Save and close
+        This port is used to broadcast messages from a server and is heavily used by spammers
+        It is not the same as Windows Messenger (MSN) and will not affect it.
+    Setting up the firewall in XP
+        Show network connections and right-click for advanced properties
+        Check Firewall option on and save.
+    Environment Variables
+        Review at the command prompt using 'set'
+        The %systemroot% environment variable is normally set to c:\windows
+        The %userprofile% environment variable is set to the users document home, eg 'c:\documents and settings\gjarman'
+    Changing the Path Environment Variable
+        Go to Start/Settings/Control Panel/System/Advanced/Environment and edit the path directly.
+    Important Files and Directories
+        Systemroot = c:\winnt
+        Autoexec.nt - in c:\winnt\system32 and c:\winnt\repair
+        IIS Root directory is c:\inetpub\wwwroot
+    Startup Folders and Startup Programs
+        Look in user areas of C:\documents and settings\all users\start menu\startup for program icons. 
+        Also check the same directories for administrator, default user, and other users if they exist.
+        Use msconfig to change startup options
+    Command Interpreter (cmd.exe)
+        Cmd.exe is the 32 bit version of command.com and is located at %systemroot%\system32
+        Start the command interpreter with 'start cmd.com' or 'start'
+        Get a list of all console commands with 'help'
+        Get the options for each console command with 'help <command>' or '<command> /?'
+        Use Alt-Enter to go full screen on the console
+        Right click on the title bar to set the console properties including quick-edit
+        Cut and paste using the mouse in quick-edit mode
+        Use f7 to get a history list of commands or arrow up to scroll through the list directly
+    Autorun (previously autoexec.com)
+        autorun is the WinXP version of autoexec.com under the DOS world
+    Windows Explorer
+        Right drag to display options to move, copy or cancel files
+        F3 or Ctrl-E Open the search function in the Explorer Bar area
+    File Associations Set in Windows Explorer
+        Change file associations and icons from the Folder Manager in Control Panel
+        System/Settings/Control Panel/Folder Options/File Types Tab/
+    Uniform Naming Convention and Access to Network Drives
+        UNC is Uniform Naming Convention  at takes the structure \\<servername>\<sharename>\<directory>
+        Drives can be shared by specifying the UNC in "My Computer"
+        Go to My Computer/Tools/Map Network Drive - and specify the UNC and corresponding drive name
+    Version
+        Type winver at the command line to get the version of the operating system
+    File Associations
+        Change file associations and icons from the Folder Manager in Control Panel
+        System/Settings/Control Panel/Folder Options/File Types Tab/
+    Cleanup Steps for Windows XP
+        C:\temp
+        C:\winnt\temp
+        C:\documents and settings\administrator\local settings\temp
+        C:\documents and settings\gjarman\local settings\temp
+        C:\documents and settings\administrator\local settings\temporary internet files
+        :\documents and settings\all users\documents\drwatson 
+        C:\my documents\download files
+        Windows trash can
+        Any file matching "~*.*" in Windows explorer on the C: or D: drives
+    Cleanup Outlook and Netscape Email and Email Folders
+        Compress Local and Server Files (use Control key to select multiple) in Netscape
+        Search for large attachments in Outlook over 250 k and download, then delete the mail
+        Create a backup export .pst file and delete after exporting
+    Cleanup Browser Caches Histories and Cookies 
+        Export Cookies and Favorites - C:\program files\netscape\users\Geoffrey_jarman
+        Clean out caches and history lists in Netscape via Edit, Properties
+        Review cookies in Internet Explorer - documents and settings/gjarman/cookies.
+        Delete temp files in Internet Explorer - Menu/Internet Options/Delete Files
+        Delete history on Internet Explorer - Menu/Internet Options/Clear History
+        Export cookies and favorites to local Netscape and to My Documents folders
+    Compress Access Databases
+        Purge old actions from the actions table and the archive
+        Run Options/Database Utilities/Compress and Repair for each Access database
+    Compress Large *.tif Files	
+        Search for *.tif files in Windows Explorer and zip them or delete them
+    Console Commands
+        Command  /? .... for online help 
+        \   for directory delimiters
+        doskey - stores commands in a buffer to access using uparrow and downarrow
+        edit - to display the DOS editor
+        edlin - do display the DOS line editor (and specify a file name to edit or a new file)
+        finger
+        hostname
+        lpconfig
+        mmc - Microsoft management console
+        path = ....;%path% to extend existing path
+        ping - to get the current IP address (eg ping gjarmant-lap)
+    IIS (Internet Information Server)
+        Root directory is c:\inetpub\wwwroot
+    FTP Server
+        Created by IIS with a home directory of c:\inetpub\ftproot
+        Place files in this root and FTP to the hostname (gjarmant-lap)
+        Use ftp://gjarmant-lap from the browser
+        Use ftp gjarmant-lap from the console and login as administrator/jun30200
+    Utilities, Troubleshooting and Diagnostics
+        ipconfig - to display ip settings including DHCP
+        netplwiz - user management
+        Network Connection Test Ping 206.223.27.62 - ip for the Oracle firewall proxy server
+        Regedit at the console to edit the Windows registry
+        Regedt32 at the console to edit the Windows registry with full functions (recommended)
+        Winmsd at the console (windows Microsoft System Diagnostics)
+    Windows Registry
+        Use regedt32 and not regedit to edit in 32 bit mode (at the console, type regedt32)
+        HKEY_CURRENT_USER - configuration for current logged on user
+        HKEY_USERS - configuration for all users (contains HKEY_CURRENT_USER)
+        HKEY_LOCAL_MACHINE - configuration for the computer (any user)
+        HKEY_CLASSES_ROOT - configuration for each application type/extension 
+        HKEY_CURRENT_CONFIG - startup information for the computer
+        Each value in the registry consists of three parameters:
+            Entry Name, Entry Type, Entry Value
+    Virtual Memory Sizing
+        Choose Properties from My Computer, Advanced, Performance, Virtual Memory and click Charge
+        Defrag the drive before changing the size of the virtual drive.
+    Performance and Tuning
+        You can match an application to it's underlying process by right-clicking the app and choosing "Go To Process"
+        Use <Ctrl><Shft><Esc> to bring up the Task Manager
+        Task Manager has a network tab for network analysis
+        Double-click on the Task Manager dialog (not in a picture) to show the simple view - doubleclick to restore the original view
+        Page File memory is virtual memory usage (ie disk files)
+        Commit Charge - total physical and virtual memory (page file) usage
+        Commit Charge Peak - highest commit charge in the current session
+        Memory usage for a process can be checked in the process window
+        <Ctrl><Tab> - move between tabs on Task Manager
+    Automatic Update
+        Set throught My Computer, Properties, Automatic Updates
+    Group Policy
+        gpedit utility from the command line
+    Bugs and Resolutions
+        Delayed Write Failure see http://support.microsoft.com/?kbid=330174 and turn of caching on drives
+            Also set page file size high (My Computer/Properties/Advanced/Performance Settings/Advanced/Virtual Memory Change/
+                Set to above 1.5 gig (set to 4 gig)
+                At starting point on Task Manager, Commit Charge Total Peak is 630 Meg, Handles 19200, Threads 750, Processes 70
+                At breaking point on Task Manager, Commit Charge Total Peak is 1286 Meg, Handles 18386, Threads 692, Processes 72
+
+Windows 7 Table of Contents (W7TOC)
+    References
+        https://technet.microsoft.com/en-us/magazine/ff628330.aspx?sdmr=win7&sdmi=topics -- Technet Windows 7 topics
+    XP Mode and Windows VM
+    Network Troubleshooting
+        http://blogs.technet.com/b/windows_vpc/archive/2009/09/26/networking-and-using-windows-xp-mode.aspx
+        Set Network Device in Properties to the Centrino Advanced Driver if using wireless to get a separate IP address
+    Training
+        http://windows.microsoft.com/en-us/windows7/install-and-use-windows-xp-mode-in-windows-7
+        http://www.pcmag.com/Windows-7/
+        http://windows.microsoft.com/en-us/windows7/help/videos#tab=compare -- Microsoft Windows 7 How-to Videos
+        http://www.itfreetraining.com/70-680/troubleshooting-device-drivers/ -- Device Drivers
+    Homegroup
+        Password: c3rF74vm28
+    Device Drivers
+        Staging Area
+            c:\windows\system32\driverstore\filerepository
+        Troubleshooting
+            References
+                http://www.itfreetraining.com/70-680/troubleshooting-device-drivers/
+        Utilities
+            PnPUtil
+                PnPUtil -a <Source directory\filename> -- adds a driver to the driver store
+                PnPUtil -d oemNN
+                PnPUtil -a -i adds driver to repository and installs it
+                PnPUtil -e -- lists all drivers
+            Sigverif
+                Verifies drivers as digitally signed
+                Allows saving the results to a log
+            DxDiag
+                DirectX Diagnostic 
+                Provides information about the system profile and DirectX version
+            Verifier
+                Driver Verification
+            System Information
+                Readonly profile of the system
+            Driverquery
+                driverqueryy /v /fo csv > drivers.csv - verbose formatted output piped to a file
+            USB Port Device Drivers (Universal Serial Bus)
+                Open Host Controller Interface - USB 1 and 1.1
+                Enhanced Host Controller Interface - USB 2
+                Extensible Host Controller Interface - USB 3
+
+Windows 8 Table of Contents (WTOC)
+    Lock Screen
+        Click to remove or swipe from bottom
+    Keyboard Shortcuts
+        Windows Key - start screen
+        Desktop - 
+        Advanced Menu - Windows-X
+        Charms Bar - Windows-C
+        Control Panel - Windows-I
+    Charms Bar
+        Windows-C, or
+        Swipe from upper or lower right
+        Hover over bottom right
+    Tiles
+        Long press on tile for properties
+    Desktop
+        Choose the desktop tile
+    Turn Off
+        Charms Bar (Windows-C) and turn off
+    Defrag
+        Charms > Search > Settings > Type 'Defrag'
+
+Windows 8.1 Table of Contents (W81TOC)
+    Training
+        References
+            http://windows.microsoft.com/en-us/windows/tutorial
+
+Windows 10 (W10TOC)
+    Introduction
+        References
+            Introducing Windows 10 for IT Professionals, Preview Edition
+        Features
+            Continuous updates
+            User Experience Changes
+            Security Enhancements
+            Runs on Multiple Devices
+            Multiple Desktops
+            Synched Settings Signon Account
+    Architecture
+        Boot Process
+            BIOS (normally fast unless master boot record is network based)
+                BIOS/UEFI (Unified Extensible Firmware Interface)
+                Identification of hardware devices
+                Power On Self Test (POST)
+                Bootmgr.exe - reads master boot record
+            OS Loader
+                BOOTMGR
+                Winload.exe
+                Prepare system for kernal
+                Load system registry and drivers marked BOOT_START
+            OS Initialization
+                Kernal Initialization
+                    Windows Kernal Invoked (NTOSKRNL)
+                    Data Structures and Components Intialized
+                    PnP Manager Started
+                    BOOT_START driver Initialization
+                Session Initialization
+                    Kernal passes control to session manager smss.exe (SMSS)
+                    Registry initialized
+                    Non BOOT_START devices and drivers loaded
+                    Subsystem processes started (CSRSS)
+                Winlogon Initialization (WINLOGON)
+                    Winlogon.exe started
+                    User logs on (WINLOGONUI process)
+                    User is authenticated (LSASS authentication process)
+                    Service Control Manager starts Windows Services and Group Policy run
+                Explorer Initialization
+                    explorer.exe started
+                    System creates desktop windows mnaager process and desktop initialized
+                    Service Control Manager continues starting Windows services
+                    Memory Manager prefetches code and data
+                Post Boot Activity - run applications
+                    Tray icons and applications code run in background
+        Drivers
+            Windows Driver Kit
+            References
+                 https://msdn.microsoft.com/en-us/windows/hardware/hh852365
+        Task Manager
+            Shortcut <Ctrl>-<Shft>-<Esc>
+        Terminology
+            Applications/Programs - sequence of instructions
+            Processes - an instance of an executable program typically running within a user interface
+            Services - are background processes running w/out a user interface by service control manager (svchost.exe) and typically started in the boot process
+            Threads - scheduled by the kernal for execution on a processor - one thread runs on one processor
+            Functions (Methods) - a block of reusable code
+            Stack - temporary storage for parameters, variables and return address
+        User Mode
+            System Processes
+            Services
+            Applications
+            Environmental Subsystems
+            Kernel32.dll - User mode version of NTDLL.dll
+                Forwards requests to NTDLL.dll
+        NTDLL.dll - image loader
+            Library of NT kernel functions as a dynamic link library
+            Loaded when an application is started
+            Loads and unloads DLL's at runtime
+            Visible in Task Manager under the Performance Tab (right click on CPU graph)
+        Kernal Mode (NTOSKRNL.EXE)
+            Executive
+            Device and File System Drivers
+            Kernal
+            Hardware Abstraction Layer
+            Windowing and Graphics
+        Event Tracing for Windows (ETW)
+            Instrumentation Framework (low 5% overhead)
+            Can be inserted into applications to generate diagnostics
+            Monitors Kernal and User modes
+            Components
+                Controller - defines information to track
+                Session - sources data for the controller
+                Provider - instruments such as Microsoft Group Policy which provides dat
+                Consumer - application that presents results (e.g. Windows Performance Analyzer, Event Viewer, Perfmon)
+        Threads and Processes
+            Processes
+                Address space
+                Security token (identify and privileges)
+                Resource usage and tracking (handle table)
+             Threads
+                Threads execute code
+                Scheduled on CPU according to priority
+                Have a user-mode and kerna-lmode stack for function parameters, return addresses and local variables
+                    The stack may grow and hit limits
+             Thread Scheduling
+                Queue 1 - Job Queue - Managed by CPU Scheduler
+                Queue 2- Ready Queue - Managed by Dispatcher
+                CPU - processes threads from the Ready Queue
+        Virtual Memory
+            Committed
+                Shareable
+                    Sharable across processes (e.g. EXE, DLL, shared memory, other memory mapped files)
+                Private (e.g. individual process heap)
+            Uncommitted
+                Reserved (not yet committed)
+                Free (not yet defined)
+        Priorities and Priority Levels
+            There are 32 priorities
+            16 Real-Time Levels
+            15 Variable Levels
+            01 System Levels (For page manager)
+        Game Development
+            References
+                Introduction to C++ and DirectX Game Development Jump Start
+                    https://mva.microsoft.com/en-US/training-courses/introduction-to-c-and-directx-game-development-jump-start-8824?l=vaR6Adx2_8304984382
+        Edge Browser
+            Spartan Engine
+            Annotation
+        Windows Performance Toolkit (WPT)
+            Download
+                https://msdn.microsoft.com/en-us/windows/hardware/hh852365
+                     Click on 'Get Debugging Tools for Windows (WinDbg) (from the SDK)'
+            Windows Performance Recorder (WPR) -- captures the data (the Controller)
+            Windows Performance Analyzer (WPA) -- formats the data from WPR (the Consumer)
+            Part of Windows Assessment and Deployment Toolkit
+        Security
+            Trusted OS File Boot Checking
+            Windows Defender Built-in
+        System Internals (SysInternals)
+            References
+                https://mva.microsoft.com/en-US/training-courses/utilizing-sysinternals-tools-for-it-pros-8232?l=9SkcINJy_5304984382
+                https://technet.microsoft.com/en-us/sysinternals/bb545021.aspx -- OTN Reference Site
+            Process Explorer
+                Procexp.exe
+                Advanced version of Windows Task Manager
+                Combines several SysInternals tools
+            Process Monitor
+        Utilities   
+            Gpedit.msc -- Local Group Policy Editor
+            optionalfeatures.exe - Turn on and off Windows optional features
+            perfmon.exe -- Performance Monitor
+            Regedit.exe -- Regsitry Editor
+        Virtualization
+            References
+                http://www.groovypost.com/howto/create-virtual-machine-windows-10-hyper-v/ -- instructions to create a VM
+            Windows 10
+                Client Hyper-V Virtualization (Pro version)
+        Performance
+            References
+                https://mva.microsoft.com/en-US/training-courses/windows-performance-jump-start-8830?l=o7U3qtx2_7304984382 -- Microsoft Virtual Academy 'Windows Performance Jumpstart'
+
+Windows Registry Table of Contents (WRTOC)
+    Important Precautions
+        Always create a backup of the Registry before opening it with RegEdit
+            Inadvertant changes to the Registry can corrupt the machine or interfer with its operation
+    Additional References
+        http://en.wikipedia.org/wiki/Windows_Registry
+    Windows 2000
+        Use regedt32 and not regedit to edit in 32 bit mode (at the console, type regedt32)
+    History
+        The registry is a central repository to replace individual application INI files
+    Registry Hives
+        The topmost keys in the registry are hives designated by HKEY (Hive Key)
+        Hives are stored in different files or in volatile memory depending on their purpose
+            e.g. %SystemRoot%\System32\Config
+        Hives (Hive Keys or HKEY's) include:
+            HKEY_CURRENT_USER (HKCU) – configuration for current logged on user
+                A pointer to the current logged on user defined under HKEY_USERS
+                The general structure of keys is:
+                    HKEY_CURRENT_USER\Software\Vendor's name\Application's name\Version\Setting name
+                If software cannot find the setting here, it looks in the same path in the HKLM hive
+            HKEY_USERS (HKU) – configuration for all users (contains HKEY_CURRENT_USER)
+                Each user is identified by a Security Identifer (SID)
+                This hive is stored in a separate file per user and loaded during login
+            HKEY_LOCAL_MACHINE (HKLM) – configuration for the computer (any user)
+                The path HKLM\SOFTWARE contains software settings on the local machine including Windows settings
+                The path HKLM\HARDWARE is a dynamic file not stored on disk - it is generated in the heap space when the machine starts
+            HKEY_CLASSES_ROOT (HKCR) – configuration for each application type/extension 
+                It holds information about registered applications, such as file associations and OLE Object Class IDs
+            HKEY_CURRENT_CONFIG (HKCC) – startup information for the computer
+                This key is a handle to HKEY_LOCAL_MACHINE\System\CurrentControlSet\Hardware Profiles\Current
+                It stores runtime profile data and is refreshed at startup
+         Below the HKEY entries (Keys) are a hieararchy of sub-keys
+            For example: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows has 3 subkeys in its hierarchy
+    Registry Entries or 'Values'
+        Registry values are name/data pairs stored within a key hierarchy
+        Each value in the registry contains a key and value pair
+        Each value in the registry consists of three parameters:
+            Value Name, Value Type (data type), Key Value
+        There can be multiple registry entries within a single key hierarchy path
+            Each registry entry in the same path has a unique name
+    .REG Files
+        .REG files are text files used for importing and exporting registry entries
+        They can also be used to remove registry entries
+        .REG file structure Reference: http://en.wikipedia.org/wiki/Windows_Registry
+        .REG files can be started by double-clicking or
+            by typing 'RegEdit.exe /s <file.reg>' on the command line with the /s option
+                where /s means 'silent merge' (no prompts)
+        Regedit.exe /e <file.reg> exports the registry to a file
+            RegEdit.exe /e file HKEY_CLASSES_ROOT[\<key>] exports the named hive
+    Group Policy Changes to Registries
+        Windows Group Policies can act on multiple registries across a netowrk
+        Windows will also check for Group Policy changes and apply them periodically (e.g. every 90 minutes)
+        Advanced Group Policy rules can be implemented through WMI expressions
+    Linux Equivalents of the Registry
+        System-wide configuration files (simlar to HKEY_LOCAL_MACHINE on Windows) are in /etc/ and its subdirectorie
+            User specific files are sometimes in /usr/local/etc. 
+        Per-user information (similar to HKEY_CURRENT_USER) is stored in hidden directories and files
+            These files a period/full stop within the user's home directory
+
+IIS – Internet Information Server and FTP
+
+Documentation
+    http://<host ip>/iishelp/ which routes you to ...
+        http://localhost/iishelp/iis/misc/default.asp
+
+IIS Default Web Setup and Activation
+    IIS includes http listener, ftp, smtp servers
+    IIS documentation is physically at %systemroot%\help\iishelp (or go there through URL link)
+    Install IIS using ‘Add/Delete Programs’ – Windows Components and choose IIS
+    IIS runs by default on port 80 of the machine – the default port for the machine
+    Systemroot Directory is \inetpub\wwwroot\ and the file default.htm will execute
+    Ping gjarmant-lap to get the ip address if http://gjarmant-lap does not work
+
+Changing the Default Listener Port in IIS
+    1.Open IIS Manager via Control Panel (Administrative Tools,  Internet Services Manager)
+    2.Open the list of  sites under the host icon
+    3.Right click the Default Web Site entry and choose Properties
+    4.Choose the website tab (this is the default)
+    5.Modify the TCP Port value and click OK
+
+Starting and Stopping IIS
+    At the command line, "iisreset" will stop and start the server (bounce)
+        Alternatively, just start with "net start w3svc" to start IIS or check it is running
+
+Troubleshooting IIS
+    Get better error messages in the browser by turning off "friendly messages" in IExplorer
+        In IE navigate "/tools/internet options/advanced/Show Friendly Http Messages" and check off
+    Try stopping and starting (see above)
+    The IIS runs as "inetinfo" in the task manager process list
+        The executable is C:\WINDOWS\system32\inetsrv\inetinfo.exe
+        It is registered as the service "World Wide Web Publishing" under Admin Tools/Services
+    Check msdtc is running with "net start msdtc" - required by IIS
+        If it is not installed, then do "msdtc -install"
+    If .asp pages don't display there is a problem with COM object registration - try this
+        cd %windir%\system32\inetsrv
+        rundll32 wamreg.dll, CreateIISPackage
+        regsvr32 asptxn.dll
+        iisreset
+
+FTP
+    Both port 20 and port 21 must be open through the router for ftp to work
+    Use ftp:// and the IP address to reach the FTP site
+        Or, use ftp gjarmant-lap from the command line to connect to the server
+    FTP’s root directory is c:\inetpub\ftproot
+    Any directories under c:\inetpub\ftproot appear as subdirectories in the browser
+    Use a short name for subdirectories without spaces.
+
+FTP Commands from the Console
+    ftp (hostname) from the console to connect (have a username,password ready)
+    help – ftp online help
+    bin – binary mode (off by default)
+    get – pull files from the remote ftp host
+    put – push files to the remote host
+    mget – pull multiple files from the remote ftp host
+    mput – push multiple files to the remote host
+    quit – quit ftp
+    pwd – to show current remote directory
+    dir or ls – to list files in remote directory
+    ldir or lls – to list files in the local directory
+    cd or lcd – change directory in the remote or local machine
+
+SMTP
+    Simple Mail Transfer Protocol
+    -> %Systemroot%\;mail.chm
+
+CGI’s
+    Common Gateway Interface
+    Place executables in c:\inetpub\cgi-bin 
+    Turn executable permissions on for the folder (folder properties, websharing tab, edit)
+
+IIS7 on Dell
+    Default File Address
+        C:\Windows\winsxs\amd64_microsoft-windows-iis-corewebengine_31bf3856ad364e35_6.1.7601.17514_none_2dd00d963fe4475e
+    Control Panel Navigation
+        Control Panel > Administrative Tools > Internet Information Services (IIS) Manager
+    Default Browser Address
+        http://127.0.0.1/ (the loopback address)

@@ -50,6 +50,15 @@ Account on github risingfast, Mrfa4gh9
 Repository (Repo) or Codebase
 Fork - copy a repository
 
+Connecting a new machine to GitHub
+    Create new rsa keys (private and public) on the local machine (existing keys are in ~/.ssh)
+    Existing keys are listed ... copy the rsa key to github at Settings > SSH and CPG Keys > New SSH Key
+
+Connecting a Local and Remote Repository
+    Create a local repository with git init
+    Create a remote reposistory on github (log onto gitHub > Repositories > New
+    Point the local repository to the remote githum repository with get remote add ...
+
 Local GIT Repository
     git -- show if Git is installed and list important git commands
     git init -- initialize a local GIT repository on a client (does not create a master)t s
@@ -109,7 +118,7 @@ Git Workflow to create and maintain a repository
     vim readme.md -- update the local readme
     git add . -- add all changed files to the local repository as potential commits'
     git commit -m "Message" -- commit changes to the local repository
-    create a remote repository on GitHub and gpet the target weblink
+    create a remote repository on GitHub and get the target weblink
     git remote add origin git@github.com:risingfast/fork.git -- connect to remote repository fork.git
     git push origin master -- push the local repository to the remote repository
     git status - check the status of the uncommited files in the current repository on the client (current git folder)
