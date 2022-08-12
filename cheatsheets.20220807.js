@@ -22,7 +22,6 @@
 //    17-May-2022 extend Clear function
 //    31-May-2022 set cornerimage rotation
 //    18-Jun-2022 move fSetCornerImage() to common.js
-//    07-Aug-2022 clear the filter on action change
 
 // globals
 
@@ -61,10 +60,8 @@ function fSetAction() {
     var sChoice = document.getElementById("sheet-options").value;
     b = document.getElementById("submitButton");
     s = document.getElementById("sheet-options");
-    f = document.getElementById("filter-input");
     if (s.value != 'Choose') {
-        b.disabled = false;
-        f.value = '';
+        b.disabled=false;
         b.focus();
     } else {
         b.disabled=true;

@@ -20,6 +20,7 @@
  *      30-Apr-2022 add Arduino
  *      03-May-2022 add case-insensitive string comparison in fprintSheet()
  *      05-May-2022 change sheets to sheet in each filename
+ *      06-Aug-2022 add the Microsoft cheatsheet
  *  Enhancements:
 */
 
@@ -130,6 +131,17 @@ int main(void) {
         f = fopen("cheatSheet.Cpp.txt", "r");
         if (f == NULL) {
             printf("Error - cannot open file cheatSheet.Cpp.txt for reading");
+            printf("\n\n");
+        }
+        else {
+            fPrintSheet(f, caText, sFilter);
+        }
+    }
+    else if (strstr(getenv("QUERY_STRING"), "Microsoft") != NULL) {
+        FILE *f;
+        f = fopen("cheatSheet.Microsoft.txt", "r");
+        if (f == NULL) {
+            printf("Error - cannot open file cheatSheet.MySQL.txt for reading");
             printf("\n\n");
         }
         else {

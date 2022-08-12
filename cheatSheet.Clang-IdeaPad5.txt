@@ -1,0 +1,1014 @@
+Clang CheatSheet
+
+History of Versions
+    1983 ANSI committee established
+    1988 C88 first standard
+    1990 ANSI
+    1999 C99
+    2011 C11
+    2017 C17
+
+Resources and References
+    http://lib.daemon.am/Books/C/ - Sams Teach Yourself C in 21 Days
+    http://www.gnu.org/software/libc/manual/ - GNU C standard Library
+    https://www.youtube.com/user/mycodeschool -- My Code School
+    https://gcc.gnu.org/ -- GCC, the GNU Compiler Collection
+
+C Programming Language
+    https://www.geeksforgeeks.org/ -- C lessons
+    https://ecomputernotes.com/what-is-c/ -- C tutorials
+    https://www.willmaster.com/library/tutorials/javascript-and-cgi-talking-to-each-other.php
+    http://sekrit.de/webdocs/c/beginners-guide-away-from-scanf.html -- issues with scanf and solutions
+    Review Engineer Man C videos
+    https://webassembly.org/getting-started/developers-guide/ -- look at webAssembly in C
+    https://preshing.com/
+    http://www.cprogramming.com/ -- full tutorials and reference
+    https://www.techonthenet.com/c_language/index.php
+    https://computer.howstuffworks.com/c.htm
+    https://www.includehelp.com/icp/ -- coding challenges in C
+    https://www.tutorialspoint.com/cprogramming/index.htm -- C course with multiple reference lessons
+    https://codeforwin.org/2017/08/introduction-c-programming.html -- C tutorials
+    http://www.c-faq.com/ -- C FAQ's
+    https://beginnersbook.com/2014/01/c-tutorial-for-beginners-with-examples/
+    http://cslibrary.stanford.edu/101/ -- Stanford C course and topics
+    http://cslibrary.stanford.edu/ -- Stanford C and Computer Science content and materials
+    http://codingfox.com/ -- C tutorial series (extensive)
+    https://www.youtube.com/watch?v=KJgsSFOSQv0 FreeCodeCamp -- training video
+    https://www.freecodecamp.org/news/the-c-beginners-handbook/ -- Codecamp C book
+    https://www.youtube.com/watch?v=KJgsSFOSQv0 -- C Programming Tutorial for Beginners (Codecamp) Giraffe Acadamy
+    https://www.studytonight.com/c/ -- many courses including c
+    https://www.sanfoundry.com/c-tutorials/ (Done)
+    https://overiq.com/c-programming-101/ -- C tutorials
+    https://www.studytonight.com/c/ -- C tutorials
+    https://www.udemy.com/course/c-programming-for-beginners/
+    https://www.tutorialcup.com/cprogramming
+    https://www.learn-c.org/
+    https://www.eskimo.com/~scs/cclass/ -- Eskimo Hosting Service C classes
+    https://godbolt.org/ -- compiler explorer
+    Programming with C, Byron S. Gottfried, Schaum's Outline Series (code prefix gt)
+
+CS0 Harvard Youtube Classes (Done)
+    http://cs50.tv/2017/fall/ -- Harvard CS50 class (Done)
+    https://www.youtube.com/watch?v=fykrlqbV9wM -- Harvard CS50 (2109) #3 Algorithms 1:02 Pyramid recursion, Merge, Selection and Bubble Sort (Done)
+    https://www.youtube.com/watch?v=cF6YkH-8vFk -- Harvard CS50 (2019) #4 Memory 58:35 (Done)
+    https://www.youtube.com/watch?v=4IrUAqYKjIA -- Harvard CS50 (2109) #5 30:20 Linked List Code (Done)
+    https://www.youtube.com/watch?v=4IrUAqYKjIA -- Harvard CS50 (2019) #5 Data Structures 28:46 Data Structures (Done)
+    https://www.youtube.com/watch?v=fL308_-Kbt0 -- Harvard CS50 (2019) #6 Pythona (Done)
+    https://www.youtube.com/watch?v=XISnO2YhnsY -- Harvard CS50 (2017) Pointers Doug Lloyd (Done)
+    https://www.youtube.com/watch?v=xa4ugmMDhiE -- Harvard CS50 (2017) Dynamic Memory Allocation Doug Lloyd (Done)
+    https://www.youtube.com/watch?v=PUPDGbnpSjw -- Harvard CS50 (2017) #6 HTTP (Done)
+    https://www.youtube.com/watch?v=sCtY--xRUyI -- Harvard CS50 Introduction to GDB (Done)
+    https://www.youtube.com/watch?v=y5JmQItfFck -- Harvard cs50 (2015) GDB (Done)
+    https://www.youtube.com/watch?v=-G_klBQLgdc -- Harvard CS50 (2105) Debugging (Visual) (Done)
+    https://www.youtube.com/watch?v=y5JmQItfFck -- Harvard CS50 (2015) GDB (Done)
+    https://www.youtube.com/watch?v=bOF-SpEAYgk -- Harvard CS50 (2017) File Pointers Doug Lloyd (Done)
+    https://www.youtube.com/playlist?list=PLhQjrBD2T381k8ul4WQ8SQ165XqY149WW -- Harvard CS50 Shorts Doug Lloyd (Done)
+
+CS50 Harvard Youtube Doug Lloyd Classes (Done)
+    Arrays                      https://www.youtube.com/watch?v=YdSycMcxvY0  (Done)
+    Command Line                https://www.youtube.com/watch?v=BnJ013X02b8  (Done)
+    Conditional Statements      https://www.youtube.com/watch?v=1wsaV5nVC7g  (Done)
+    Data Types                  https://www.youtube.com/watch?v=Fc9htmvVZ9U  (Done)
+    Debugging                   https://www.youtube.com/watch?v=VtkMZjvvKaU  (Done)
+    Functions                   https://www.youtube.com/watch?v=n1glFqt3g38  (Done)
+    Hexadecimal                 https://www.youtube.com/watch?v=u_atXp-NF6w  (Done)
+    IDE                         https://www.youtube.com/watch?v=tEjbe85aZT4  (Done)
+    Loops                       https://www.youtube.com/watch?v=WgX8e_O7eG8  (Done)
+    Operators                   https://www.youtube.com/watch?v=f1xZf4iJDWE  (Done)
+    Pointers                    https://www.youtube.com/watch?v=XISnO2YhnsY  (Done)
+    Variables and Scope         https://www.youtube.com/watch?v=GiFbdVGjF9I  (Done)
+    Command Line Arguments      https://www.youtube.com/watch?v=AI6Ccfno6Pk  (Done)
+    Computational Complexity    https://www.youtube.com/watch?v=YoZPTyGL2IQ  (Done)
+    Data Structures             https://www.youtube.com/watch?v=3uGchQbk7g8  (Done)
+    Defining Custom Types       https://www.youtube.com/watch?v=96M4q0OnMfY  (Done)
+    Dynamic Memory Allocation   https://www.youtube.com/watch?v=xa4ugmMDhiE  (Done)
+    File Pointers               https://www.youtube.com/watch?v=bOF-SpEAYgk  (Done)
+    GDB                         https://www.youtube.com/watch?v=G4OIp_5fF1A  (Done)
+    Structures                  https://www.youtube.com/watch?v=N5pA7RvvQDg  (Done)
+    Algorithms Summary          https://www.youtube.com/watch?v=ktWL3nN38ZA  (Done)
+    Linear Search               https://www.youtube.com/watch?v=TwsgCHYmbbA  (Done)
+    Binary Search               https://www.youtube.com/watch?v=T98PIp4omUA  (Done)
+    Selection Sort              https://www.youtube.com/watch?v=3hH8kTHFw2A  (Done)
+    Bubble Sort                 https://www.youtube.com/watch?v=RT-hUXUWQ2I  (Done)
+    Insertion Sort              https://www.youtube.com/watch?v=O0VbBkUvriI  (Done)
+    Recursion                   https://www.youtube.com/watch?v=mz6tAJMVmfM  (Done)
+    Call Stacks                 https://www.youtube.com/watch?v=aCPkszeKRa4  (Done)
+    Singly-Linked Lists         https://www.youtube.com/watch?v=zQI3FyWm144  (Done)
+    Doubly-Linked Lists         https://www.youtube.com/watch?v=FHMPswJDCvU  (Done)
+    Stacks                      https://www.youtube.com/watch?v=hVsNqhEthOk  (Done)
+    Queues                      https://www.youtube.com/watch?v=3TmUv1uS92s  (Done)
+    Hash Tables                 https://www.youtube.com/watch?v=nvzVHwrrub0  (Done)
+    Magic Numbers               https://www.youtube.com/watch?v=vK_naJkrtjc  (Done)
+    Merge Sort                  https://www.youtube.com/watch?v=Ns7tGNbtvV4  (Done)
+    Tries                       https://www.youtube.com/watch?v=MC-iQHFdEDI  (Done)
+    Internet Primer             https://www.youtube.com/watch?v=04GztBlVo_s  (Done)
+    IP                          https://www.youtube.com/watch?v=A1g9SokDJSU  (Done)
+    TCP                         https://www.youtube.com/watch?v=GP7uvI_6uas  (Done)
+    HTTP                        https://www.youtube.com/watch?v=4axL8Gfw2nI  (Done)
+    HTML                        https://www.youtube.com/watch?v=YK78KhMf7bs  (Done)
+    CSS                         https://www.youtube.com/watch?v=Ub3FKU21ubk  (Done)
+    JavaScript                  https://www.youtube.com/watch?v=Z93IaNfavZw  (Done)
+    MVC                         https://www.youtube.com/watch?v=Fr4P6FkZUTE  (Done)
+    DOM                         https://www.youtube.com/watch?v=LKWJpgvfH3U  (Done)
+    Python                      https://www.youtube.com/watch?v=mgBpcQRDtl0  (Done)
+    Flask                       https://www.youtube.com/watch?v=X0dwkDh8kwA -- micro web framework written in Python (Done)
+    SQL                         https://www.youtube.com/watch?v=AywtnUjQ6X4  (Done)
+    AJAX                        https://www.youtube.com/watch?v=dQcBs4S-wEQ  (Done)
+
+C Programming -- Virtual Training Company (VTC)
+    https://www.youtube.com/playlist?list=PLJYx5cxExeL3lpyNDMxMmhyavzL9m5ONu -- VTC Playlist (Done)
+    https://www.youtube.com/watch?v=OtBLikJ2bCk&list=PLJYx5cxExeL3lpyNDMxMmhyavzL9m5ONu&index=3 -- C Programming - Using C on the Web (Done)
+
+C Compilers
+    https://norasandler.com/2017/11/29/Write-a-Compiler.html
+
+Stanford C Courses
+    https://www.youtube.com/watch?v=Ps8jOj7diA0 -- CS Stanford Programming Paradigms
+
+C Exercises
+    https://codeforwin.org/c-programming-examples-exercises-solutions-beginners -- C exercises
+
+Mycodeschool (MCS) C and C++ -- Introduction and Basic
+    https://www.youtube.com/playlist?list=PL2_aWCzGMAwLSqGsERZGXGkA5AfMhcknE -- playlist
+    https://www.youtube.com/watch?v=AWliApDc61w -- Introduction to Programming
+    https://www.youtube.com/watch?v=xyBbocLXbNY -- Basics of Computer Memory
+    https://www.youtube.com/watch?v=aMpsKnf6DrQ -- Writing and Executing First Program
+    https://www.youtube.com/watch?v=lqzuR2USKRM -- Installing and configuring gcc/g++ on Windows
+    https://www.youtube.com/watch?v=4LbarXsdEbM -- Working with IDE's
+    https://www.youtube.com/watch?v=OSyjOvFbAGI -- Data Types, Constants and Variables (Done)
+    https://www.youtube.com/watch?v=xOIVXR35aI4 -- Input and Output: printf and scanf
+    https://www.youtube.com/watch?v=vvpDbhqPrww -- Arithmetic Operators
+    https://www.youtube.com/watch?v=zxb8DvLUqcM -- Know your data type: int in C
+    https://www.youtube.com/watch?v=5tPLyHCZdU0 -- Arrays in programming (Done)
+
+Mycodeschool (MCS) C and C++ -- Pointers in C/C++ Playlist (Done)
+    https://www.youtube.com/playlist?list=PL2_aWCzGMAwLZp6LMUKI3cc7pgGsasm2_ -- playlist (Done)
+    https://www.youtube.com/watch?v=h-HBipu_1P0 -- Introduction to pointers in C/C++ (Done)
+    https://www.youtube.com/watch?v=X1DcpcgSUXw -- Working with Pointers (Done)
+    https://www.youtube.com/watch?v=JTttg85xsbo -- Pointer types, pointer arithmetic, void pointers (Done)
+    https://www.youtube.com/watch?v=d3kd5KbGB48 -- Pointers to pointers (Done)
+    https://www.youtube.com/watch?v=LW8Rfh6TzGg -- Pointers as function arguments - call by reference (Done)
+    https://www.youtube.com/watch?v=ASVB8KAFypk -- Pointers and Arrays (Done)
+    https://www.youtube.com/watch?v=CpjVucvAc3g -- Arrays as Function Arguments (Done)
+    https://www.youtube.com/watch?v=Bf8a6IC1dE8 -- Character arrays and pointers - part 1 (Done)
+    https://www.youtube.com/watch?v=vFZTxvUoZSU -- Character arrays and pointers - part 2 (Done)
+    https://www.youtube.com/watch?v=sHcnvZA2u88 -- Pointers and 2-Dimensional arrays (Done)
+    https://www.youtube.com/watch?v=_j5lhHWkbnQ -- Pointers and multidimensional arrays (Done)
+    https://www.youtube.com/watch?v=_8-ht2AKyH4 -- Pointers and Dynamic Memory (Done)
+    https://www.youtube.com/watch?v=E8Yh4dw6Diw -- Pointers as Function Returns in C/C++ (Done)
+    https://www.youtube.com/watch?v=ynYtgGUNelE -- Function pointers (Done)
+    https://www.youtube.com/watch?v=sxTFSDAZM8s -- Function pointers and callbacks (Done)
+    https://www.youtube.com/watch?v=F2nrej6Kjww -- Memory Leak in C/C++ (Done)
+
+Mycodeschool (MCS) C and C++ -- Data Structures (Done)
+    https://www.youtube.com/playlist?list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P -- Playlist (Done)
+    https://www.youtube.com/watch?v=92S4zgXN17o -- Introduction to data structures (Done)
+    https://www.youtube.com/watch?v=HdFG8L1sajw -- Data Structures: List as abstact data type (Done)
+    https://www.youtube.com/watch?v=NobHlGUjV3g -- Introduction to Linked List (Done)
+    https://www.youtube.com/watch?v=lC-yYCOnN8Q -- Data Structures: Arrays vs Linked Lists (Done)
+    https://www.youtube.com/watch?v=vcQIFT79_50 -- Linked List implementation in C/C++ (Done)
+    https://www.youtube.com/watch?v=cAZ8CyDY56s -- Linked List: Inserting a node at the beginning (Done)
+    https://www.youtube.com/watch?v=IbvsNF22Ud0 -- Linked List in C/C++ - Inserting a node in the nth position
+    https://www.youtube.com/watch?v=Y0n86K43GO4 -- Linked List in C/C++ - Deleting a node at the nth position
+    https://www.youtube.com/watch?v=sYcOK51hl-A -- Reverse a linked list - Iterative method
+    https://www.youtube.com/watch?v=K7J3nCeRC80 -- Print elements of a linked list in forward and reverse order using recursion
+    https://www.youtube.com/watch?v=KYH83T4q6Vs -- Reverse a linked list using recursion
+    https://www.youtube.com/watch?v=JdQeNxWCguQ -- Data structures: Introduction to Doubly Linked List
+    https://www.youtube.com/watch?v=VOQNf1VxU3Q -- Doubly Linked List: Implementation in C/C++
+    https://www.youtube.com/watch?v=F1F2imiOJfk -- Data structures: Introduction to stack
+    https://www.youtube.com/watch?v=sFVxsglODoo -- Data structures: Array implementation of stacks
+    https://www.youtube.com/watch?v=MuwxQ2IB8lQ -- Data structures: Linked List implementation of stacks
+    https://www.youtube.com/watch?v=hNP72JdOIgY -- Reverse a string or linked list using a stack
+    https://www.youtube.com/watch?v=QZOLb0xHB_Q -- Check for balanced parentheses using stack
+    https://www.youtube.com/watch?v=jos1Flt21is -- Infix, Postfix, Prefix
+    https://www.youtube.com/watch?v=MeRb_1bddWg -- Evaluation of Prefix and Postfix expressions using stack
+    https://www.youtube.com/watch?v=vq-nUF0G4fI -- Infix to Postfix using stack
+    https://www.youtube.com/watch?v=XuCbpw6Bj1U -- Data structures: Introduction to Queues
+    https://www.youtube.com/watch?v=okr-XE8yTO8 -- Data structures: Array implementation of Queue
+    https://www.youtube.com/watch?v=A5_XdiK4J8A -- Data structures: Linked List implementation of Queue
+    https://www.youtube.com/watch?v=qH6yxkw0u78 -- Data structures: Introduction to Trees
+    https://www.youtube.com/watch?v=H5JubkIy_p8 -- Data structures: Binary Tree
+    https://www.youtube.com/watch?v=pYT9F8_LFTM -- Data tructures: Binary Search Tree
+    https://www.youtube.com/watch?v=COZK7NATh4k -- Binary Search Tree (BST) - Implementation in C/C++
+    https://www.youtube.com/watch?v=hWokyBoo0aI -- BST Implementation - memory allocation in stack and heap
+    https://www.youtube.com/watch?v=Ut90klNN264 -- Find min and max element in a binary search tree
+    https://www.youtube.com/watch?v=_pnqMz5nrRs -- Find height of a binary tree
+    https://www.youtube.com/watch?v=9RHO6jU--GU -- Binary tree traversal - breadth-first and depth-first strategies
+    https://www.youtube.com/watch?v=86g8jAQug04 -- Binary tree: Level Order Traversal
+    https://www.youtube.com/watch?v=gm8DUJJhmY4 -- Binary tree traversal: Preoder, Inorder, Postorder
+    https://www.youtube.com/watch?v=yEwSGhSsT0U -- Check if binary tree is binary search tree or not
+    https://www.youtube.com/watch?v=gcULXE7ViZw -- Delete a node from Binary Search Tree
+    https://www.youtube.com/watch?v=5cPbNCrdotA -- Inorder Successor in a binary search tree
+    https://www.youtube.com/watch?v=gXgEDyodOJU -- Data structures: Introduction to graphs
+    https://www.youtube.com/watch?v=AfYqN3fGapc -- Data structures: Properties and Graphs
+    https://www.youtube.com/watch?v=ZdY1Fp9dKzs -- Graph Representation part 01 - Edge List
+    https://www.youtube.com/watch?v=9C2cpQZVRBA -- Graph Representation part 02 - Adjacency Matrix
+    https://www.youtube.com/watch?v=k1wraWzqtvQ -- Graph Representation part 03 - Adjacency List
+
+Mycodeschool (MCS) C ad C++ -- Programming Interview Questions
+    https://www.youtube.com/playlist?list=PL2_aWCzGMAwLPEZrZIcNEq9ukGWPfLT4A -- Playlist
+
+Mycodeschool (MCS) C and C++ -- Sorting Algorithms
+    https://www.youtube.com/playlist?list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U -- Playlist
+
+Mycodeschool (MCS) C and C++ -- Binary Search
+    https://www.youtube.com/playlist?list=PL2_aWCzGMAwL3ldWlrii6YeLszojgH77j -- Playlist
+
+Mycodeschool (MCS) C and C++ -- Mathematics for Programmers
+    https://www.youtube.com/playlist?list=PL2_aWCzGMAwLL-mEB4ef20f3iqWMGWa25 -- Playlist
+
+Mycodeschool (MCS) C and C++ -- Recursion
+    https://www.youtube.com/playlist?list=PL2_aWCzGMAwLz3g66WrxFGSXvSsvyfzCO -- Playlist
+
+Mycodeschool (MCS) C and C++ -- Time Complexity Analysis
+    https://www.youtube.com/playlist?list=PL2_aWCzGMAwI9HK8YPVBjElbLbI3ufctn -- Playlist
+
+C Videos Jacob Sorber (code prefix js)
+    https://www.youtube.com/user/jms36086/playlists -- Jacob Sorber videos
+    https://www.youtube.com/watch?v=SC8uWXmDJs4 -- Learn C in minutes - Lesson 0 (Done)
+    https://www.youtube.com/watch?v=mib3ahMbq_0 -- Basic Types (Done)
+    https://www.youtube.com/watch?v=PP03QAsIij8 -- Comments (Done)
+    https://www.youtube.com/watch?v=LLqDNjr0kPo -- Code Smell #4: Comments (Done)
+    https://www.youtube.com/watch?v=5TzFNouc0PE -- Strings in C (Done)
+    https://www.youtube.com/watch?v=83M5-NPDeWs -- Sending and Handling Signals in Linux (kill, signal, sigaction) (Done)
+    https://www.youtube.com/watch?v=79KFwjNZupU -- Tips for Student Programmers (Done)
+    https://www.youtube.com/watch?v=IZiUT-ipnj0 -- Handling Errors in C/Unix (perror, strerror, errno) (Done)
+    https://www.youtube.com/watch?v=ySY_FlA7EvA -- Understanding the Extern keyword (Done)
+    https://www.youtube.com/watch?v=6tIWFEzzx9I -- How to Use the Volatile Keyword in C (Done)
+    https://www.youtube.com/watch?v=Sddn1UjzSAo -- Finding memory leaks in Valgrind (Done)
+    https://www.youtube.com/watch?v=ps4MI41Bg58 -- Experiment with your code, people! (Done)
+    https://www.youtube.com/watch?v=8bmEhtMVrhk -- Should you ever use goto? (Done)
+    https://www.youtube.com/watch?v=bWMIpHVRFUo -- How to inspect compiled binaries (Binutils) (Done)
+    https://www.youtube.com/watch?v=ZIhy4uy5uJM -- Defining Constants (Done)
+    https://www.youtube.com/watch?v=-eDY7yh-CyA -- Tame binary headaches with a HEX editor (Done)
+    https://www.youtube.com/watch?v=BQJBe4IbsvQ -- Reading and Writing Files in C (Done)
+    https://www.youtube.com/watch?v=m7E9piHcfr4 -- How to Map Files into Memory in C (mmap)
+    https://www.youtube.com/watch?v=2AmP7Pse4U0 -- Spying on running programs (strace and ltrace) (Done)
+    https://www.youtube.com/watch?v=MruzHlXqspU -- What if my open file gets deleted? (Done)
+    https://www.youtube.com/watch?v=MCVa1ZhQaqI -- How Arguments are Passed to Functions in C (and most other languages) (Done)
+    https://www.youtube.com/watch?v=uT-YLEHwVS4 -- Arrays, Pointers and Why Arrays Start at Zero? (Done)
+    https://www.youtube.com/watch?v=rww_OHQOmbs -- Fixed and variable arrays in C and C++ (Done)
+    https://www.youtube.com/watch?v=yM9zteeTCiI -- How to check pointers at runtme (Done)
+    https://www.youtube.com/watch?v=P0k1C3F61xY -- A common pitfall when using the sizeof() with pointers in c (Done)
+    https://www.youtube.com/watch?v=SKa6d9bUlO0 -- Problems with pointer arithmetic (C) (Done)
+    https://www.youtube.com/watch?v=k6ESk9zafHM -- Making Peace with Double Pointers (Done)
+    https://www.youtube.com/watch?v=axngwDJ79GY -- Understanding and Using Function Pointers in C (Done)
+    https://www.youtube.com/watch?v=axngwDJ79GY -- Understanding and Using Function Pointers in C (Done)
+    https://www.youtube.com/watch?v=1vGfkBwIOXw -- Loops in C (while, do-while, for (Done)
+    https://www.youtube.com/watch?v=PLnmboUvqq8 -- A Tour of C's Many Operators (Done)
+    https://www.youtube.com/watch?v=PfMV_wa0KY4 -- The Ternary Operator (Done)
+    https://www.youtube.com/watch?v=gNEZHW5-Wso -- Is the Modulus Operator useful (Done)
+    https://www.youtube.com/watch?v=A0A19LQKOjM -- Checking return values (Done)
+    https://www.youtube.com/watch?v=t6Jfrmdg5rk -- the Inline Keyword in C (Done)
+    https://www.youtube.com/watch?v=wg1wZgCdJPA -- Three strategies for finishing programming projects 10-times faster (Done)
+    https://www.youtube.com/watch?v=1Jh9BUxIw0U -- assertions (Done)
+    https://www.youtube.com/watch?v=iYRl50gtprA -- Why should I learn assembly language in 2020? (complete waste of time) (Done)
+    https://www.youtube.com/watch?v=JbHmin2Wtmc -- How to write your own code libraries in C (Done)
+    https://www.youtube.com/watch?v=eQcRcgOnl9o -- Can I Handle Exceptions with Try Catch in C? (setjmp, longjmp) (Done)
+    https://www.youtube.com/watch?v=2YfM-HxQd_8 -- Compiling C programs with Multiple Files (Done)
+    https://www.youtube.com/watch?v=U161zVjv1rs -- Compiler Optimizations (Done)
+    https://www.youtube.com/watch?v=JPPxV3Hdz_A == How Look Up Tables (LUTs) make your code Smaller, Faster, and Better (example in C) (Done)
+    https://www.youtube.com/watch?v=NqUTiJPgBn8 -- Copying Memory in C (memcpy, memset) (Done)
+    https://www.youtube.com/watch?v=liWdn92SAvs -- Real Programming vs Tutorials (Done)
+    https://www.youtube.com/watch?v=P6oqhAxV0dA -- Allocating memory with malloc, calloc, realloc, and free (Done)
+    https://www.youtube.com/watch?v=Fq9chEBQMFE -- What if I try to malloc way too much memory? (Done)
+    https://www.youtube.com/watch?v=dcBcgPGIMpo -- Reversing Strings (in C) and Divergent Thinking (Done)
+    https://www.youtube.com/watch?v=a8l8PwCzw20 -- Parsing C Strings with strtok() (Done)
+    https://www.youtube.com/watch?v=cCdn7Cy6TfE -- More string parsing with strtok(), strsep (and strdup) (Done)
+    https://www.youtube.com/watch?v=ck_RfVOYgjQ -- Duplicate Code (DRY) (Done)
+    https://www.youtube.com/watch?v=rBtfqH4kdlc -- What should I code next? Ideas for expanding skills (Done)
+    https://www.youtube.com/watch?v=DzyxGrDT2yk -- What should I automate? Advice for new programmers (Done)
+    https://www.youtube.com/watch?v=mfmXcbiRs0E -- Learning GDB
+    https://www.youtube.com/watch?v=zkV-MoTosPE -- Debug faster with conditional breakpoints (GDB)
+    https://www.youtube.com/watch?v=A_pV61xFty8 -- How to examine memory in GDB
+    https://www.youtube.com/watch?v=7MhJmLV6tdM -- Be more productive with better command-line tools (exa, bat, rg)
+    https://www.youtube.com/watch?v=dPxCGlW9lfM -- Why do programmers use hexadecimal numbers
+    https://www.youtube.com/watch?v=ADh_OFBfdEE -- What are environment variables
+    https://www.youtube.com/watch?v=Pqf6H1WSbeY -- Which IDE should new students use?
+    https://www.youtube.com/watch?v=wcpH2PkC-94 -- What languages should you learn?
+    https://www.youtube.com/watch?v=FPVTr4thm2M -- Answering your Questions
+    https://www.youtube.com/watch?v=2Ti5yvumFTU -- hash tables
+    https://www.youtube.com/watch?v=VOpjAHCee7c -- Understanding and implementing a Linked List in C and Java
+    https://www.youtube.com/watch?v=KFbm6lkMhgw -- Doubly Linked List (in C)
+    https://www.youtube.com/watch?v=bXsKnUGndEU -- Should you avoid linked lists? (linked list vs arrays)
+    https://www.youtube.com/watch?v=UbhlOk7vjVY -- How to Implement a tree in C
+    https://www.youtube.com/watch?v=hfwwaNNJ-0A -- Understand and Implement a Binary Search Tree in C
+    https://www.youtube.com/watch?v=7mKfWrNQcj0 -- Strings can get you hacked
+    https://www.youtube.com/watch?v=6Dk8s0F2gow -- Getting command line arguments in C
+    https://www.youtube.com/watch?v=GV10eIuPs9k -- Debugging with Core Dumps
+    https://www.youtube.com/watch?v=uA8X5zNOGw8 -- Threads
+    https://www.youtube.com/watch?v=ss1-REMJ9GA -- Creating new processes with fork()
+    https://www.youtube.com/watch?v=kDxjcyHu_Qs -- Making forked clones more useful with exec()!
+    https://www.youtube.com/watch?v=a8mPKBxQ9No -- Learn Make in 60 seconds)
+    https://www.youtube.com/watch?v=G5dNorAoeCM -- More make: automatic variables for smaller and easier to maintain makefiles
+    https://www.youtube.com/watch?v=p8RC_i9t0MU -- Smelly Code and Magic Numbers
+    https://www.youtube.com/watch?v=zx7euEEZ0H4 -- Smelly Code and Bad Names
+    https://www.youtube.com/watch?v=ll4XT0MYKN0 -- Long Functions
+    https://www.youtube.com/watch?v=w3iXBUbq4NY -- How to Write Function-Like Preprocessor Macros (C example)
+    https://www.youtube.com/watch?v=dh1mil1ehvE -- debugging with macros
+    https://www.youtube.com/watch?v=vEICc0zygWQ -- improving code through testing
+    https://www.youtube.com/watch?v=NeOTr0u7ALk -- header issues: Guards, Name Mangling, and extern "C"
+    https://www.youtube.com/watch?v=S-ak715zIIE -- variadic functions
+    https://www.youtube.com/watch?v=Jkmy2YLUbUY -- CPU Scheduling Basics
+    https://www.youtube.com/watch?v=axngwDJ79GY -- Function pointers in C
+    https://www.youtube.com/watch?v=liWdn92SAvs -- Real programming vs tutorials
+    https://www.youtube.com/watch?v=eLRWDZ7uQQU -- How to Automatically Remove dead Code?
+    https://www.youtube.com/watch?v=daA-KBKfJ_o -- Easy Networking in C (libcurl)
+    https://www.youtube.com/watch?v=Os5cK0H8EOA -- how to measure memory usage inside my program
+    https://www.youtube.com/watch?v=XV5sRaSVtXQ -- where processes get more memory (brk, mmap)
+    https://www.youtube.com/watch?v=LRLlEzkCL4I -- How Memory Usage Slows Down Your Programs
+    https://www.youtube.com/watch?v=bdIiTxtMaKA -- How to build a web client
+    https://www.youtube.com/watch?v=esXw4bdaZkc -- Program your own webserver in C
+    https://www.youtube.com/watch?v=dhFkwGRSVGk -- Pipes and Named Pipes
+    https://www.youtube.com/watch?v=5td9upDbkaU -- Best programming font
+    https://www.youtube.com/watch?v=iF2F0YIgxy4 -- Highlighting a student programming project
+    https://www.youtube.com/watch?v=p63O8g4beBo -- ASCII Art and Curses
+    https://www.youtube.com/watch?v=xJ8KenZw2ag -- Understanding Zombie Processes
+    https://www.youtube.com/watch?v=vMFa6oKSmao -- Are Vectors Slower than Arrays?
+    https://www.youtube.com/watch?v=lbq2lntAJIE -- The Most Useless Keyword in C?
+    https://www.youtube.com/watch?v=modeJNBDtcM -- What are Language Standards? Do they matter?
+    https://www.youtube.com/watch?v=KjPvEcds0QA -- Do you see the bug? (Done)
+    https://www.youtube.com/watch?v=RY71m2UKO5Q -- Testing matters. Watch those corner cases. (Done)
+    https://www.youtube.com/watch?v=eC71xRY4yAM -- https://www.youtube.com/watch?v=eC71xRY4yAM (Done)
+    https://www.youtube.com/watch?v=q-BvQgZVRGA -- Detect Corruption with a Checksum (Done)
+    https://www.youtube.com/watch?v=lMk5AGz88g4 -- Code Review #2: Generalizing and D.R.Y.ing things up
+    https://www.youtube.com/watch?v=M6RCUiZzl8Y -- How to profile your own function calls in C? (instrument your code!)
+    https://www.youtube.com/watch?v=BM9cnSEY23s -- Refactoring your Code
+    https://www.youtube.com/watch?v=n4_m1ioUjpE -- What's the Best Way to Copy a Struct in C and C++?
+    https://www.youtube.com/watch?v=GIWeQ2I67rk -- Pulling Back the Curtain on the Heap
+    https://www.youtube.com/watch?v=Bd-xNEOXohs -- Are Pointers Bad for Embedded Systems? (Done)
+    https://www.youtube.com/watch?v=KGFOLJiIo1g -- Why I don't recommend C++ for beginners. (Done)
+    https://www.youtube.com/watch?v=BIht65Xu1jI -- Another reason C++ is so BAD...for beginners. (Done)
+    https://www.youtube.com/watch?v=hGBHGficAiM -- Generating Unique Identifiers in Your Programs (GUIDs/UUIDs) (Done)
+    https://www.youtube.com/watch?v=V3J5DWKPYts -- How to Indent Code the Right Way (Done)
+
+Barry Brown C programming
+    https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
+    https://www.youtube.com/watch?v=GExnnTaBELk -- C Programming Makefiles --- Makefiles (Done)
+    https://www.youtube.com/watch?v=nFuaTsJUpy8 -- Ponter Arithmetic and the Call Stack
+    https://www.youtube.com/watch?v=TpIuj3Lgho0 -- Function pointers in C
+
+Ashley Mills C programming
+    https://www.youtube.com/playlist?list=PLCNJWVn9MJuPtPyljb-hewNfwEGES2oIW -- Playlist
+    https://www.youtube.com/watch?v=kyBoBtQz2BI&list=PLCNJWVn9MJuPtPyljb-hewNfwEGES2oIW&index=15 Ashley Mills Part 14 Command Line Args (Done)
+    https://www.youtube.com/watch?v=8oyQ3ixxDaM&list=PLCNJWVn9MJuPtPyljb-hewNfwEGES2oIW&index=18 Ashly Mills Part 17 Make Files and Multifile
+
+C Engineer Man
+    https://www.youtube.com/playlist?list=PLlcnQQJK8SUg4C8syQ63d6o44dzt_vFls -- Index to C Videos (Done)
+    https://www.youtube.com/watch?v=90gFFdzuZMw -- Engineer Man Strings (Done)
+    https://www.youtube.com/watch?v=90gFFdzuZMw -- working with character arrays and strings in C (Done)
+    https://www.youtube.com/watch?v=lrx5dcB_4Oo -- How GCC does compilation (Done)
+    https://www.youtube.com/watch?v=Zuwa8zlfXSY -- 8 super heroic Linux commands that you probably aren't using (Done)
+    https://www.youtube.com/watch?v=lQP4X3odvHE -- Memory management in C Malloc Calloc (Done)
+
+C SpecterDev Tutorials
+    https://www.youtube.com/watch?v=NuQ3IN-2ixU -- environment setup (Done)
+    https://www.youtube.com/watch?v=_jkik4cOYFE -- first program (Done)
+    https://www.youtube.com/watch?v=zfuOcvYrhOs -- makefile and compile (Done)
+    https://www.youtube.com/watch?v=g9QTTT3TkyY -- looping and logic (Done)
+    https://www.youtube.com/watch?v=gJcn98UVrxw -- strings (Done)
+    https://www.youtube.com/watch?v=YKP9WUQNYg4 -- data types (Done)
+    https://www.youtube.com/watch?v=wbsh1raPb8Y -- getting input (Done)
+
+Computer Science with Kris Jordan
+    https://www.youtube.com/channel/UCX2Dop_X6MtbcmEVkbjMpSA -- main landing page
+C++ and Assembly javidx9 One Lone Coder (code prefix olc)
+    https://www.youtube.com/watch?v=vVRCJ52g5m4 -- 8 bits of advice
+    https://www.youtube.com/watch?v=iChalAKXffs -- What are pointers in C++
+    https://www.youtube.com/watch?v=8OK8_tHeCIA -- Code Tetris
+    https://www.youtube.com/watch?v=Y37-gB83HKE -- Programming Mazes
+
+C on Linux (code prefix cc)
+    https://www.youtube.com/watch?v=1uR4tL-OSNI -- C with Caleb - C Programming Crash Course (Done)
+    https://www.youtube.com/watch?v=CPjZKsUYSXg -- C with Caleb - C Tutorial 01 - Intro to C (Done)
+    https://www.youtube.com/watch?v=9_goo9L5Uko -- C with Caleb - C Tutorial 02 - Installing GCC (Done)
+    https://www.youtube.com/watch?v=Rw_Pyzuv0Go -- C with Caleb - C Tutorial 03 - Writing Our First Program - Hello World (Done)
+    https://www.youtube.com/watch?v=Rw_Pyzuv0Go -- C with Caleb - C Tutorial 04 - How a C Program Works - Part 1 (Done)
+    https://www.youtube.com/watch?v=RGxwgBNQwbI -- C with Caleb - C Tutorial 05 - How a C Program Works - Part 2 (Done)
+    https://www.youtube.com/watch?v=EbIRKJykc_M -- C with Caleb - C Tutorial 06 - Intro to UNIX/Linux - Part 1 (Done)
+    https://www.youtube.com/watch?v=2sAqu2VoJCQ -- C with Caleb - C Tutorial 07 - Intro to UNIX/Linux - Part 2 (Done)
+    https://www.youtube.com/watch?v=HPo_BfBJkLA -- C with Caleb - C Tutorial 08 - Intro to UNIX Linux - Part 3 (Done)
+    https://www.youtube.com/watch?v=Rwtsx0BfLxk -- C with Caleb - C Tutorial 09 - C Basics Part 1 - Variables, Expressions, Statements (Done)
+    https://www.youtube.com/watch?v=tPlT9mg7bkw -- C with Caleb - C Tutorial 10 - C Basics Part 2 - Print Variables Using Printf (Done)
+    https://www.youtube.com/watch?v=EA8K2d3USDc -- C with Caleb - C Tutorial 11 - C Basics Part 3 - Taking Input from User (Done)
+
+C Other Sites
+    https://www.journaldev.com/c-programming -- algorithm topics and tutorials
+    https://www.codewithc.com/ -- references and tutorials
+    https://beej.us/guide/ -- C tutorial pdf's including networking and IPC
+    https://notesformsc.org/ -- C tutorial with example code
+    https://docs.microsoft.com/en-us/cpp/c-language/c-language-reference?view=vs-2019 -- Microsoft C Language reference
+    https://aticleworld.com/c-programming/ -- tutorials and topics
+    https://www.studytonight.com/c/ -- C tutorials and other languages
+    https://www.youtube.com/watch?v=DWWQEmyVplU -- C Programming Youtube lessons
+    https://www.cprogramming.com/tutorial/c-tutorial.html -- short C topics
+    https://www.cprogramming.com/tutorial/c++-tutorial.html -- short C++ topics
+
+C and CGI
+    https://www.eskimo.com/~scs/cclass/handouts/cgi.html -- C and C/CGI tutorials
+    https://computer.howstuffworks.com/cgi.htm -- tutorial on CGI
+    http://www.garshol.priv.no/download/text/http-tut.html -- HTTP and CGI
+    http://jkorpela.fi/forms/cgic.html
+    https://www.linuxjournal.com/article/6863 -- linux CGI project using mySQL`
+    http://www6.uniovi.es/cscene/topics/web/cs2-12.xml.html -- starter CGI tutorial
+    http://libcgi.sourceforge.net/ -- CGI library
+    http://jkorpela.fi/forms/index.html -- HTTP and CGI explanation
+    http://www.webthing.com/tutorials/cgifaq.html -- CGI FAQ's
+    http://web.mit.edu/wwwdev/www/cgic.html -- CGIC library for C and CGI with example
+    https://www.oreilly.com/openbook/linuxdrive3/book/
+
+Integrated Development Environments
+    In Linux, the Anjuta IDE is a C tool shipped standard with Suse Linux 
+        The path to Anjuta on the graphical desktop is Development/Integrated Environment/Anjuta IDE
+    In Linux and Windows, NetBeans supports 
+    http://www.tutorialspoint.com/codingground.htm -- online compilers
+    https://ideone.com/
+    https://repl.it/
+    http://codepad.org/
+    http://www.codeblocks.org/downloads/26 -- Code Blocks installable IDE for C
+    https://www.eclipse.org/cdt/ -- Eclipse C Development Tooling
+    https://netbeans.org/features/cpp/ -- Netbeans C Development
+    https://ide.cs50.io -- Harvard CS50 Teaching IDE (available via https://ide.cs50.io using git credentials)
+    http://www.smorgasbordet.com/pellesc/ -- Pelles C IDE and Tookit for Windows Dev
+    http://www.bloodshed.net/dev/devcpp.html - Dev-Cpp installable IDE for C/C++
+    http://www.codeblocks.org/downloads/26 -- Code Blocks installable IDE for C/C++
+    https://www.eclipse.org/cdt/ -- Eclipse C/C++ Development Tooling
+    https://netbeans.org/features/cpp/ -- Netbeans C/C++ Development
+
+Libc Library Built-ins
+    libc --- the standard library (contains most standard functions: e.g. printf, malloc, calloc, free etc)
+    puts - put a string to the console
+
+Warnings and Tricks
+    Do not modify a string literal, only modify arrays (otherwise ... core dump)
+    Use strcmp() and don't test for string equality using '==' which compares pointer addresses
+    Don't strcat onto an uninitialized array - strcpy into it or initialize it before using it
+    Don't do cumulative strcat's in recursive functions
+    Pass an array to a function by array name only, so also pass the primary length(s) as another parameter(s)
+    Arrays can be initialized but are not modifiable lvalues and cannot be used in assignments (use strcpy)
+    Arrays are passed to functions by reference and not by values, using the array name as the copied address
+    The size of array must be passed as a parameter in a function call
+    scanf ignores leading whitespace characters so entering a leading '\n' is ignored
+    Don't specify '%[...]s' in scanf for  string, use '%[...]' instead
+    Use -lm linker option for math.h functions
+    Always initialize a pointer (to NULL or otherwisei e.g. int *ptr = NULL; or *ptr == 0;)
+    Heap memory is global
+    Seg faults or segmentation faults are caused by accessing memory that is not mapped or allocated to the program (including dereferencing a NULL pointer)
+    Use strcmp() and not sizeof() to malloc or calloc string space: sizeof() will only return the size of the first character in the string
+
+
+Updating Repositories in Ubuntu using APT (Advanced Packaging Tool)
+    sudo apt-get update -- update the package database list from all external repositories
+    sudo apt-get upgrade -- upgrade all installed packages with newer versions
+    sudo apt-get upgrade <package-name1> <package-name2> to upgrade named packages only
+    sudo apt-get dist-upgrade -- upgrades installed packages and package dependencies
+    sudo apt-get update && sudo apt-get upgrade -y -- update the repository then install the newer versions
+    sudo apt-get install <package-name1> <package-name2> ... -- installs named packages not already installed
+    sudo apt-get install update
+    sudo apt-get install build-essential -- for gcc, gdb and other dev tools
+    sudo apt-get remove <package_name1> <package_name2> ... -- removes named packages but not the related configuration files
+    sudo apt-get purge < package_name1> <package_name2> ... -- removes named packages and their configuration files
+    sudo apt-cache pkgnames <pckge search term> -- searches for existing package names based on partial search term
+    sudo apt-cache search <search term> -- searches package names and descriptions
+
+Debugging with GDB
+    gdb ./<executable> to run debug
+    -g option in gcc to include debug information
+    -g0 option suppressed debug information from the executable
+    -g1 option includes minimal debug information
+    -g2 option is the same as -g
+    -g3 opton in gcc to include debug information including macros
+    -ggdb option in gcc to include all debug information - most detailed
+    http://www.gnu.org/software/gdb/documentation/ -- GNU reference
+    b <lineno> or breakpoint <lineNo> -- set a breakpoint at a line
+    b <lineno> if <expr) -- conditional breakpoint (e.g. b 20 if i>10)
+    b main or breakpoint main -- set a breakpoint at main
+    b <functionName> -- set a breakpoint on a function
+    bt or backtrace -- show function call history to current point
+    clear <lineNo> -- clear breakpoint
+    c or continue -- run to next break or watch
+    <Ctrl>-u -- undo characters at command line
+    delete <lineNo> -- delete a breakpoint or watchpoint at line number
+    d <lineNum> or disable <lineNum> -- disable breakpoint at line number
+    e or enable -- enable breakpoint at line number
+    <enter> -- repeat last command
+    file <filename> -- load a file for debugging
+    frame -- show he current stack frame
+    gdb <program_name> to start gdb
+    info locals -- show local variables
+    info w -- show current watchpoints
+    info b -- show current breakpoints
+    l <linNum> or list <lineNum> -- list 10 lines around line num
+    l <from> <to>  -- list code in a range of line numbers
+    layout next -- show the lines of code in a separate window, then 'next' for each layout
+    n or next -- run the current code line (step over library functions)
+    p <var> or print <var> -- print the value of <var>
+    q or quit -- end the debug session
+    r or run or restart -- run/debug program or restart current session
+    set <var> = <val> -- set a variable to a value
+    start -- set a breakpoint at main and submit 'run'
+    s or step -- run the current code line (step into library functions)
+    w <var> or watch <var> -- set a watch on a variable
+    x/<num>b -- examine num bytes of memory
+    x/<num>i -- examine num instructions
+    x/<num>s -- examine num strings
+    x/<num>xh -- examine num halfwords
+
+Debugging CGI with GDB
+    Add sleep(60) to the code at the first breakpoint
+    Run it
+    Get the PID ps ax | grep <exe file name>
+    Attach gdb sudo gdb -p PID
+    Attach gdb to running process: sudo gdb --pid=PID
+    Continue stepping from the sleep()
+    Always include header in CGI as printf("Content-Type: text/html\n\n") whether printing or not
+    Find ubuntu logs for Apache at /var/log/apache2/error.log and /var/log/apache2/access.log
+    info registers -- show contents of all registers
+    info registers eax -- show contents of eax register
+
+Linters (Static Analysis Tools)
+    based on lint by Stephen C Johson Bell Labs 1978
+    cppcheck <progName.c>  -- on a single C program
+    cppcheck ./*c -- on all C programs in the current directory
+
+Coredump(in Linux)
+    ulimit -c unlimited -- to set the size of the coredump file to unlimited
+    gdb <prgram> core -- to run gdb to the point of failure
+
+Linker and Assembler
+    Reference: https://www.youtube.com/watch?v=GV10eIuPs9k -- Jacob Sorber
+    ld (linux linker)
+    as (linux assembler)
+
+GCC Command Options
+    gcc -S -o d_helloWorld.asm d_helloWorld.c -- create assembly file with -S option
+    gcc -c foo.c -o foo.o -- create an object binary file foo.o from foo.c but don't link
+
+Compilation Process
+    C programs are built from one or more compilation or translation units
+    Each object file is a separate translation unit (.o file) compiled separately
+    Object files are linked into a single executable binary in the final compiliation step
+
+Compilation Toolchain (Process)
+    Both gcc and clang compilers use the same optionss listed here
+    Preprocessing (using .c files to create .i intermdiate files)
+        gcc -E <program.c> -o <program.i>
+        -E option: preprocess source files
+        Includes header files (#include)
+        Expands macros (#define)
+        Remove comments
+        Substitute MACRO text
+    Compilation (using .i files to create .s assembly files)
+        gcc -S <program.i> -o <program.s> to generate assembly in program.s
+        -S option: preprocess and compile source files
+        Discards unreachable code
+    Assembly (using .s files to create .o object files)
+        gcc  -c <program.s> -o <program.o>
+        -c option: generate object (binary) code from source files
+    Linking (using .o files to create the executable file)
+        gcc <program.o> -o <program>
+        No option: links object files into executable
+        links the libC library but not other libraries like math (use -lm compiler option)
+        Creates executable
+    Full Chain
+        gcc <myprogram.c> creates a.out compiled executable
+        gcc <myprogram.c> -o <program> creates a compiled myprogram'
+
+Compiliation of Multiple Files
+    Create object (.o) files from source files
+        gcc -c <sourcefile1> -- create object file from source
+        gcc -c <sourcefile2> -- create object file from source
+    Create single executable by linking multiple object (.o) files
+        gcc <sourcefile1.o> <sourcefile2.o>
+
+Compiling with Libraries (example Cairo graphics library)
+    Include the header file in the code and use the -I include option in compiliation
+    Use the -l and -L options in compilation for the library
+    gcc -o hello hello.c -I/usr/include/cairo -lcairo -L/usr/lib/cairo
+
+Compiler Optimizations and Optimization Levels
+    gcc -O0 test.c -- no optimizations applied (for debugging)
+    gcc -O1 test.c -- apply level 1 optimizations
+    gcc -O2 test.c -- apply level 2 optimizations
+    gcc -O3 test.c -- apply level 3 optimizations
+    gcc -OFAST -- apply FAST optimizations (non-standard and potentially dangerous)
+    Optimized code should not be debugged in GDB because they change the code (so debug before optimizing)
+    Use the linux 'time' command to measure run time (e.g. time ./<executable>
+
+Make References
+    https://www.oreilly.com/openbook/make3/book/
+
+Make (GNU Make)
+    Makefile comprises recipies
+    # -- comment
+    # -*- MakeFile -*- is the first line (to disable tab expansion)
+    Each recipe comprises two lines
+        target: dependencies
+        <tab>action
+    make without a target argument will only build the first object
+        Otherwise, include an all: list to specify all targets to build
+    General make pattern target and rule
+        %: %.c %.h$
+        ^I$(CC) $(CFLAGS) $@ $^$
+
+Memory Model
+    The memory model comprises: Code (Text), Static/Global, Stack, and Heap
+    The Stack comprises one stack frame for each function
+
+Format Specifiers
+    %i -- integer (base 10) (autodetects base in scanf)
+    %d -- signed integer (base 10)
+    %lld -- long long integer (base 10)
+    %u -- unsigned integer (base 10)
+    %o -- octal integer
+    %x -- hexadecimal number
+    %c -- character
+    %s -- string of characters
+    %e -- exponential float
+    %f -- floating point number
+    %lf -- double precision floating point number
+    %% or \% -- print %
+
+Special Format Characters
+    \a  -- audible alert
+    \b  -- backspace
+    \f  -- form feed
+    \n  -- newline, or linefeed
+    \r  -- carriage return
+    \t  -- tab
+    \v  -- vertical tab -- drop vertically w/out carriage returning
+    \\  -- backslash
+
+CS50 Harvard Class
+    Documentation: https://cs50.harvard.edu/college/2020/fall/tutorials/
+    https://ide.cs50.io -- IDE
+    https://cs50.readthedocs.io/ide/online/ -- IDE Online Docs
+    https://www.youtube.com/watch?v=MJUJ4wbFm_A&feature=youtu.be -- An Introduction to GIT by Brian Yu
+
+IDE Tools
+    render50 <sourcefile> -o <outfile.pdf> -- prints the source to pdf
+    style50 -- checks the style of c source (available via CS50 online via https://ide.cs50.io using git credentials)
+    debug50 -- run the debugger after setting a breakpoint
+    valgrind -- detect memory leaks ... valgrind ./<executable>
+        e.g. valgrind ./<executable> to run valgrind diagnostic (include ./ prefix or it won't find the program)
+        compile executable with debug enabled and valgrind will include line numbers on its issues list
+    bless -- binary text editor (runs in graphics mode on Linux) -- uses hexdump layout
+    binUtils -- binary utilities
+    ghex (install in Linux) -- uses GUI and allows editing of a file in hex/binary
+    hexdump -- Linux utility
+    hexedit.it -- online hex file editor (uses hexdump layout)
+    ltrace -- library trace including calls to libc standard library
+    objdump -t <binary filename> -- dump the symbol table for an binary file (similar to readelf)
+    objdump -s <binary filename> -- dump the sections of an binary file
+    objdump -d <binary filename> -- dump the disassembed code of an binary file
+    readelf --symbols <binary filename> (ELF = Executable and Linkable Format) -- lists symbols in the executable
+    readelf --segments <binary filename> (ELF = Executable and Linkable Format) -- lists symbols in the executable
+    strace <executableprogram> -- sytem call trace
+    strings -- extracts and lists printable strings from a file including a binary file or executable
+    strings -- extracts and lists printable strings from a file including a binary file or executable
+    godbolt.org -- compiler explorer showing source code and coresponding asssembly code
+    strip <executable name> -- strips debug symbols to shorten the file size (say 40% smaller)
+
+C Language Rules
+    Case matters: a != A
+    Symbolic Constants: #define PI 3.1416 - compiler directive to define a constant (use upper case)
+    Constants: use const prefix to make a variable fixed and unchangeable (i.e immutable)
+    volatile: prefix a variable to prevent optimizations on it
+    Storage Classes: Automatic, External , Static, Register
+    Strings: are immutable if defined as strings but not as arrays
+    sleep(seconds) -- <unistd.h>
+    ternary conditionals: int x = (expr) ? 1 : 2;
+
+Data Types
+    Numerical
+        Integer (signed and unsigned)
+            char 1 byte 8 bit max value 255
+            short 2 bytes 16 bit max value 65535
+            int 4 bytes 32 bit max value 4294967295
+            long 4 bytes 32 bit max value 4294967295
+            long long 8 bytes 64 bit 2**64-1
+        Fixed width integer types are defined in /usr/include/stdint.h
+            int8_t -- 8 bit integer (always 8 bits on all compilers and platforms)
+            uint64_t -- unsigned 64 bit integer (always 64 bits on all compilers and platforms)
+        Floating point:
+            float
+            double
+    Arrays - a systematic arrangement of variables of the same datatype
+    Structures are compound types or collections of values
+    Pointers
+    Primitive Types (Defined in the language)
+        int integer 4 bytes, nnn (decimal) 0xnnn (hexadecimal) 0nnn (octal)
+        unsigned int integer 4 bytes not two's complement
+        long long int 8 bytes
+        unsigned long long int 8 bytes not two's complement
+        char character 1 byte (use '.' single quotes)
+        char * -- string 4 bytes (use "..." double quotes)
+        float real
+        double real double precision
+    Composite Types (defined by a program)
+
+Arrays
+    A systematic arrangement of variables of the same datatype
+    Declaration int myArray1D[5]; -- one dimensional array
+    int myArray2D[5][4] -- two dimensional array
+    The base address of an array is the address of the first element which is the array name
+    The offset in an array is the offset from the starting or base address
+    The arrayname is a pointer to the starting address
+    You cannot increment the base address of an array (e.g. for int A[10], you cannot A++)
+    Arrays can be initialized but are not modifiable lvalues and cannot be used in assignments (use strcpy)
+    Arrays are passed to functions by reference and not by values, using the array name as address
+    Always pass the size of an array as a function parameter when passing an array
+    Declare an array in a function prototype as e.g. int [] or int *
+    sizeof() gives the length of an array in bytes including the NULL terminator
+
+Strings
+    Stings are arrays of chars terminated with a numeric zero ('\0')
+    char *b = "This is a string";
+    char a[] = "This is a another string";
+    man string in Linux returns the man page for C string functions
+    string literals are declared as "this is a string" and the ending null terminator is implicitly added by the compiler
+
+Pointers
+    pointer variables are typed
+    variables that store the address of other variables or structures
+    int *p -- pointern to integer (the contents of address p is an integer)
+
+Pointer Arithmetic
+    incrementing a pointer increments it by the size of the pointer type
+    Only adding or subtracting integer values are allowed in pointer arithmetic
+    void *p; is a void pointer (generic pointer type)
+    You cannot dereference a void pointer type
+
+Endian Architecture
+    Little Endian - Least significant byte assigned to lowest address
+    Big Endian - Most signficant buy assinged lowest address (reversed byte order)
+
+Operators
+    Arithmentic, logical or relational
+    % Modulus gives a remainder e.. 5 % 2 is 1
+    + - * /
+    +=, -=, *= /= e.g. x += 5 is x = x + 5
+    true (not 0), false (0)
+    && logical AND
+    || logical OR
+    !  logical NOT (also the Bang operator)
+    <, <=, ==, !=, >, >= relational operators
+    ?  ternary operator e.g. max = (a > b ? a : b)
+    *  dereference (contents of)
+    &  address of
+
+Bitwise Operators
+    >> right shift and discard rightmost bit
+    << left shift and fill rightmost operator with zero
+    & AND
+    | OR
+    ^ exclusive OR
+    ~ NOT
+
+Comments
+    // -- single line comment
+    /* ... */ -- multi-line or bookend comments
+    never leave commented code lines in a program - remove them after testing or put them the code in a command line switch
+
+Return Codes
+    Defined in stdlib.h
+    EXIT_SUCCESS -- same as exit 0;
+    EXIT_FAILURE -- same as exit 1;
+
+Variable Declarations and Variable Names
+    variable declarations start with a type: int, float, double, struct, array, pointer
+    variable names must start with a letter
+    remainder can be letters, numbers and underscores
+    cannot be keywords
+    cannot have spaces
+
+Variable Scope
+    Variables are block-scoped
+    Local variables are scoped within the block of code where they are declared
+    Global or static variables are declared outside any block or function and are globally accessable
+    Formal parameter variables have scope within the function where they are declared
+    Variables declared in a loop have scope within the loop and not outside the loop
+
+Variable Definitions
+    variables are defined after they are declared
+    definitions assigne values to variables
+    variables should be declared and defined at the same time to avoid unexpected results
+
+Variable and Funcion Qualifiers (reserved words or keywords)
+    extern -- declares a variable in one translation unit and uses it in another
+    volatile -- qualifies a variable as changeable by another process (compiler instruction) to prevent it being optimized out
+    const -- a value that is not allowed to change. const variables are typed so the compiler can type-check the use in a program
+    const variables obey scope laws
+    static -- global variables that retain their value between invocations (kept in the Static/Global memory block separate from the stack)
+    inline -- function qualifier hint to inline function code with main()
+
+Command Line Arguments
+    int argc -- argument count
+    char *argv[] -- argument vector (variable array) of strings where argv[0] is the program name
+    char *envp[] -- argument vector (variable array) of strings to environment variables
+
+Statements and Expressions
+    goto -- unconditional jump to a label 
+        labels are on a separate line of code and end with a colon: e.g. label1:
+
+Loops
+    break -- breaks out of a loop
+    continue -- continues to the next iteration of a loop immediately
+    while <condition> {...} -- loops while condition is true
+    do {...} while <condition> -- loops while <condition> is true after executing once
+    for (<start>, <loop condition>, <end>) {...} -- loops while <loop condition> is true
+
+File Commands
+    fopen(), fclose(), fgetc(), fputc(), fread(), fwrite()
+    FILE *fpFile1 = fopen(<sFileName>, <operation>)
+    fgetc(<fpFile1>) returns a character or EOF (defined as -1 in /usr/include/stdio.h)
+    fputc(<char>, <fpFile2>;
+    fread(<pBuffer>, <size>, <quantity>, <fpFile1>;
+    fwrite(<pBuffer>, <size>, <quanitty>, <fpFile1>);
+    File Operations
+        r -- read from a file
+        w -- write to a file starting at the beginning
+        a -- append to a file
+    File Operations and Corresponding open() flags
+        r  O_RDONLY
+        w  O_WRONLY|O_CREAT|O_TRUNC
+        a  O_WRONLY|O_CREAT|O_APPEND
+        r+ O_RDWR
+        w+ O_RDWR|O_CREAT|O_TRUNC
+        a+ O_RDWR|O_CREAT|O_APPEND
+    fgets() -- reads a full string from a file
+    fputs() -- writes a full string to a file
+    fprintf() -- writes a formatted string to a file
+    fseek() -- rewind or forward the curent file position
+    ftell() -- get the current file position
+    feof() -- tells if EOF is reached
+    ferror() -- tells if file error is set
+
+Signal Handling and Signals
+    signal(SIGINT, handler) -- registers the handler() function to invoke when SIGINT occursa
+
+Header Files for C (located at /usr/include)
+    Header files for the standard c library in /usr/include in Linux
+    Header files contain declarations (usually)
+    <stdio.h> is a header in the C standard library
+    'myheader.h' is a header file in the local source directory
+    <stdint.h> -- fixed width integer declarations
+
+Preprocessor Commands and Directives
+    # - indicates a preprocessor directive
+    #include <stdio> includes the stdio header file in the code
+    #define -- do define a constant value 
+
+Preprocessor Macro Sumbols for Debugging
+    __LINE__  line number integer
+    __FILE__  source file name string
+    __func__  function name string
+    __DATE__  date string
+    __TIME__  time string
+
+Preprocessor Function-Like Macros
+    #define FUNC(A, B) (A < B) ? A : B) -- the () identifies the define as a function-like macro
+    Use inner {} for compound expressions (i.e. multi-line)
+    line continuation uses '\'
+
+Structures
+    struct <StructName> { type <TypeVar>; type <TypeVar>; ...};
+    declaration: struct <StructName> <VarName>
+    struct <StructName> *<pVarName> = malloc(sizeof(struct <StructName>));
+    pVarName-><StuctMember> = <value>
+    You must name a structure and a type when creating a typedef for a structure
+    typedef struct <StructName> { type <TypeVar>; type <TypeVar>; ...} <StructNameType>;
+    copy a structure by equating the structure name e.g. struct2 = struct1 copies all the element values
+    also copy a structure by equating each element of the from/to structures or using memcopy on the structure as a whole
+
+Abstract Data Structures or Types
+    Array
+    Linked List
+    Stack
+    Queue
+    Tree
+    Graph
+
+Functions
+    Blocks of code that perform a specific task
+    Functions are defined as a return type, name, and parameters
+    C functions do not support default parameters implicitly
+    Parameters are passed by value as copies and not as references (pointers) to the original values
+    Parameters are cast automatically (e.g. int is cast to float etc) if parameter data types do not match parameter values
+    Arguments passed by the calling function are actual arguments
+    Arguments defined in the called funcion are formal arguments
+    Call by reference uses pointers as actual arguments 
+    Call by value uses standard variables as actual arguments and not pointers
+
+Functions in lib.c and Other Libraries
+    calloc() -- e.g. int *arr = calloc(sizeof(int), 100); and sets bytes to zero, specifies memoy required in bytes, #include <stdlib.h>
+    calloc() returns a void pointer which must be cast to a specific pointer type
+    dprintf() -- print to a file descriptor, like STDOUT_FILENO
+    exit(<number>) -- system call to close the current program
+    free(ptr) -- frees memory allocated to ptr with malloc or calloc (set ptr = NULL afterwards), do not free the same memory twice, #include <stdlib.h>
+    index(<string>, <char>) -- returns a pointer to the first occurance of <char> in <string> or returns NULL
+    main() -- where a C program starts
+    malloc() - e.g int *x = malloc(sizeof(int)), int *arr = (int *)malloc(sizeof(int)*100) etc or NULL, specifies memory required in bytes, memory is not initialized, #include <stdlib.h>
+    malloc() returns a void pointer which must be cast to a specific pointer type
+    memcpy( &a, &b, sizeof(<type>)); -- copies memory from b to a #include string.h
+    memset(<buffer>, <value>, <size>) -- set a block of memory in bytes to a value
+    printf() -- print a formatted string to STDOUT
+    realloc() -- e.g. arr = realloc(arr, sizeo(int)*200) increases the allocation of memory to an existing pointer in bytes, passing a NULL pointer works like malloc(), #include <stdlib.h>
+    sizeof() -- the number of bytes in an array or data type
+    stat() -- get file status #include <sys/stat.h>
+    strchr(<string>, <char>) -- finds a pointer to the first character in the string, or NULL
+    strcpy(dest, source) -- copies the source string to the destination string
+    strdup(source) -- allocates a string dest and copies source to dest returning dest. dest must be free()'ed when no longer needed
+    strsep(
+    strstr(<string1>, <string2>) -- finds a pointer to <string2> within <string1> or NULL
+    strlen(<string>) gives the length of a string excluding the null terminator, #include <string.h>
+    write(int fildes, const void *buf, size_t nbytes)
+        #include <unistd>
+        fildes == file descriptor like 0 STDIN_FILENO, 1 STDOUT_FILENO, or 2 STDERR_FILENO
+        *buf -- string to write
+        size_t -- bytes to write (one char is one byte)
+
+Functions in rf50.c
+    char *toUpperStr(char *);
+    char *toLowerStr(char *);
+    void fPressEnterToContinue(void);
+    void fRetitleConsole(char *strPrgNme);
+    char *fUrlDecodeSpaces(char *sInput, bool bShowAudit);
+    char *fUrlDecode(char *sInput);
+    int  fLogMessage(char *, char*);
+    char *fTimeStamp();
+    char **fLoadWords(void);
+    LLStringNode_t *fStartLL(LLStringNode_t *, char *);
+    LLStringNode_t *fPrependLL(LLStringNode_t *pStart, char *pWord);
+    int fAppendLL(LLStringNode_t *pStart, char *pWord);
+    int fPrintList(LLStringNode_t *);
+    int fDeleteLLStrings(LLStringNode_t *);
+    int fDeleteLLStrings(LLStringNode_t *pStart);
+    int fCountLLNodes(LLStringNode_t *pStart);
+    bool fSearchLL(LLStringNode_t *pStart, char *pSearchStr);
+    bool fSearchSubStrLL(LLStringNode_t *pStart, char *pSearchSubStr);
+    char *fStripChars(char *pSubjectStr, char *pRemChars);
+
+Functions in cs50.c
+   typedef char *string;
+    char GetChar(void);
+    double GetDouble(void);
+    float GetFloat(void);
+    int GetInt(void);
+    long long GetLongLong(void);
+    string GetString(void); 
+
+The Unix System Interface
+    File descriptors handle IO
+    fd 0 = STDIN
+    fd 1 = STDOUT
+    fd 2 = STDERR
+    Low level IO
+        int num = read (int fd, char *buf, int number);
+        int num = write (ind fd, char *buf, int number);
+
+Function Pointers
+    Function pointers store addresses of functions
+    They can be dereferenced to execute a function
+    Function pointers store the starting address or entry point of a function in the .text segment
+    Declare a function pointer like: int (*p)(int, int); then equate it to a defined function like: p = &myFunc or p = myFunc (same thing)
+    Create a typedef for a specific function pattern: typedef int(*fptr)(int, int);
+
+Assertions
+    #include <assert.h>
+    assert(expression) -- program will abort if this expression is false and expression will be printed to the console
+    gcc -DNDEBUG <sourcecode.c> -- removes assertions in compilation
+
+Error Handling
+    Usage checks
+    References
+        http://courses.cms.caltech.edu/cs11/material/general/usage.html -- usage check programming guidelines
+        https://www.youtube.com/watch?v=IZiUT-ipnj0 -- Handling Errors in C/Unix (perror, strerror, errno) -- Jacob Sorber
+    <errno.h> defines errno values for error handling on fileopen type operations
+    use strerror(errorno) -- returns a string that explains the meaning of errorno
+        fprintf(stderr, "error = %s\n", strerror(errorno)); -- prints the error message
+
+C and CGI
+    CGI is the leading method of interacting with a web server program and a client
+    POST -- uses STDIN to send data to the web server
+    GET -- uses the address line to send data to the web server
+    /usr/lib/cgi-bin for executables 
+    /usr/lib/cgi-source for sourc code
+    AJAX -- Asynchronous Javascipt and XML is implemented by CGI (POST and GET methods) for dynamic pages
+    CGI executables read STDIN (POST) or from environment variable 'QUERY_STRING' (GET) and write to STDOOUT
+    https://apache.org/
+    printf("Content-type:text/plain\n\n") -- MIME (Multipurpose Internet Mail Extensions) type prefix required for STDOUT for plain text
+    printf("Content-type:text/html\n\n") -- MIME (Multipurpose Internet Mail Extensions) type prefix required for STDOUT for HTML
+    HTML Forms
+        action=<cgi_program> method="post" -- input comes to STDIN
+        action=<cgi_program> method="get"  -- input comes to QUERY_STRING environment variable
+    Environment Variable Prefixes
+        HTTP -- set by the browser
+        REMOTE -- set by the server descibing the client
+        SERVER -- set by the server
+        REQUEST_METHOD -- must be checked to handle a GET or a POST properly without assuming one or the other
+            if PUT then CONTENT_LENGTH will give byte count on STDIN
+            if GET then QUERY_STRING will have the data
+
+MySQL Connection
+    /usr/include/mysql/ -- header files incl mysql.h

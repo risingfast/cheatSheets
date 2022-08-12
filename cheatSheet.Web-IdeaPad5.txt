@@ -123,7 +123,6 @@ Image Tools and Libraries
     https://cloudinary.com/ -- stock photos and images
     https://tinypng.com/ -- photo compression site
     https://tinyjpg.com/ -- photo compression site
-    https://compresspng.com/ -- compress different file types w/no size limit
 
 Books
     JavaScript: The Definitive Guide -- David Flanagan
@@ -145,7 +144,6 @@ Tools
     http://www.namechk.com -- multi-social media check for name in use
     https://www.virustotal.com/#/home/upload -- owned by Google -- virus analyzer for files and URL's
     https://handlebarsjs.com/ -- generate HTML from Javascript
-    https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer -- Live Server for Visual Studio Code
 
 Linters (Style Checkers) Code Cleanup Tools
     http://www.jslint.com/ -- for formatting javascript
@@ -166,11 +164,10 @@ Chrome Developer Tools
     https://www.youtube.com/watch?v=-q1z8BPFItw&t=519s -- debugging using Chrome Dev Tools
     F12 -- in Chrome for Dev Tools (Windows)
     <Ctrl><Shft>j -- in Chrome for Dev Tools (Windows)
-    You can type javascript directly into the Chrome console and hit <enter> to run it
 
 Web Compatability Tools
     babeljs.io -- javascript compatability transformer
-    caniuse.com -- browser support and compatibility tables
+    caniuse.com -- browser support tables
 
 API Tools
     https://github.com/public-apis/public-apis -- sources of public API's
@@ -181,14 +178,14 @@ API Tools
 Coding Challenges
     https://projecteuler.net/ -- math puzzles to solve with programming
 
-Web and Text Editor Tools 
+Web and Text Editors 
     https://atom.io/ -- Atom editor and IDE download site
     https://code.visualstudio.com/ -- Visual Studio - installs as Microsoft Visual Studio Code
-    Visual Studio Code (vscode) and LiveServer extension
     https://emmet.io/ -- Emmet CSS helper plugin for HTML shortcut keys
     https://www.sublimetext.com/ -- sublime text -- has multiple plugins
-    https://notepad-plus-plgg/us.org/ -- customizable editor download page
+    https://notepad-plus-plus.org/ -- customizable editor download page
     https://www.gnu.org/software/emacs/ -- emacs download page
+    https://code.visualstudio.com/ -- Visual Studio - installs as Microsoft Visual Studio Code
 
 Web Authoring Software
     Adobe Dreamweaver (paid)
@@ -198,22 +195,14 @@ Web Authoring Software
     Nvu http://www.nvu.com/ New View Web Authoring software (freeware)
     https://sourceforge.net/projects/kompozer/ -- Kompozer web Authoring software (freeware)
 
-Visual Studio Code (VS Code)
-    Visual Studio Code Training
-        https://www.youtube.com/watch?v=VqCgcpAypFQ -- Visual Studio Code for Beginners 0:30 (Done)
-        https://www.youtube.com/watch?v=WPqXP_kLzpo -- Visual Studio Code Crash Course 1:30
-    Visual Studio Code Extensions
-        Live Server -- local webserver updated in real time
-        Emmet -- javascript code completion shortcuts
-        Molokai++ -- text colourizing theme matching submlime text theme
-        Vim -- vim emulation
-    VisualStudio Code Shortcuts
+VisualStudio Code Training
+    Visual Studio Code (VS Code)
+    https://www.youtube.com/watch?v=VqCgcpAypFQ -- Visual Studio Code for Beginners 0:30 (Done)
+    https://www.youtube.com/watch?v=WPqXP_kLzpo -- Visual Studio Code Crash Course 1:30
+    VisualStudio Code (VSC)
         <Ctrl>` - open console
         Source Directory C:\Users\gjarman\Documents\Computing\Web\Git\VSCode1
         <Ctrl> / -- comment a line
-
-Emmet Shortcuts
-    doc <tab> -- start an HTM document
 
 Lambda School Web Development Deandra Ryan-Mas
     https://lambdaschool.com -- Lambda school mini bootcamp -- post-paid for classes
@@ -316,22 +305,6 @@ Tutorials by Steve Griffin
     https://www.youtube.com/watch?v=_5yhmkDQqIQ&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=14 -- Steve Griffin Fundamentals of the Fetch method (Done)
     https://www.youtube.com/watch?v=KRfhdWxyenI&list=PLyuRouwmQCjnqkUsuXHT4WOPzeWXvuA4W&index=1 -- Prevent Directory Browsing on Apache, Steve Griffih
 
-Web Dev Simplied
-    https://www.youtube.com/watch?v=y17RuWkWdn8 -- Learn DOM Manipulation In 18 Minutes
-    https://www.youtube.com/watch?v=v7rSSy8CaYE -- Learn JavaScript DOM Traversal In 15 Minutes
-
-Net Ninja Modern Javascript Course
-    https://github.com/iamshaunjp/modern-javascript -- Github
-    https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/ -- Udemy Course $15.99
-    https://www.youtube.com/playlist?list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc -- Modern JavaScript Tutorial Table of Contents (Done)
-    https://www.youtube.com/watch?v=iWOYAxlnaww&list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc&index=1 -- Modern JavaScript Tutorial #1 - Intro & Setup (Done)
-    https://www.youtube.com/watch?v=FhguwBJeqWs&list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc&index=2 -- Modern JavaScript Tutorial #2 - Syntax Basics & Types
-    https://www.youtube.com/watch?v=JloLGV9DmtQ&list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc&index=3 -- Modern JavaScript Tutorial #3 - Control Flow
-    https://www.youtube.com/watch?v=xUI5Tsl2JpY&list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc&index=4 -- Modern JavaScript Tutorial #4 - Functions
-    https://www.youtube.com/watch?v=X0ipw1k7ygU&list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc&index=5 -- Modern JavaScript Tutorial #5 - Objects
-    https://www.youtube.com/watch?v=wKBu_dEaF9E&list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc&index=6 -- Modern JavaScript Tutorial #6 - The Document Object Model
-    https://www.youtube.com/playlist?list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc -- Modern JavaScript Tutorial #6 - The Document Object Model
-
 Document Object Model (DOM)
     https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction -- DOM introduction
     https://www.youtube.com/watch?v=1WQy2Jdk-ik -- Web Development Mini-Bootcamp Lesson 12 DOM
@@ -366,6 +339,9 @@ Online Coding Sanboxes and IDE's
     https://www.jetbrains.com/webstorm/ -- webstorm IDE for JS
     https://glitch.com/
     http://www.tutorialspoint.com/codingground.htm -- online compilers for all compiler types
+
+Text Editors
+    Visual Studio Code (vscode)
 
 Groupware
         https://slack.com/ -- messaging for groups
@@ -756,11 +732,6 @@ CSS Media Query (responsive layout)
 Javascript Versions
     ES6 - Major Release of Javascript in 2016
 
-Javascript Where Placed in HTML
-    Javascript can be placed in the <head> or <body> of html between <script> tags
-    Javascript is normally placed before </body> or ina separate file and referenced by <script src="common.js"></script> tags in the body
-    Javascript code is run when the page is loaded
-
 Javascript Rules and Gotchas
     Functions must be defined in code before they are called
     All lines end with a terminating semi-colon but it is not required (JS uses Automatic Semicolon Insertion rules)
@@ -879,32 +850,16 @@ Javascript Strict Script
     Several language features like classes and modules implement strict mode automatically
         use keyword
 
-Javascript Operators and Order of Operation
-    Operators
-        + - / * plus minus divide multiply
-        + also concatenates strings
-        ++ increment by 1
-        -- decrement by 1
-        += add to a variable (e.g a += 2; adds 2; to a)
-        -= subtract from a variable (e.g. a -= 2; subtracts 2 from a)
-        *= multiply and equate to self (e.g. a *=2; multiples a by 2)
-        /= divide and equate to self (e.g. a /=2; divides a by 2)
-        % modulus or remainder (e.g. 11 % 3 = 2)
-        ** multiply
-    Order (BIDMAS)
-        Brackest
-        Indices
-        Divisions
-        Multiplications
-        Additions
-        Subtractions
-
-Javascript Scope
-    Block scope applies to let and const but not var (which is always global)
-    Global Scope apply everywhere if defined outside any code block
-    Block Scope (local scope) applies to variables declared inside a block
-    You cannot redefine a variable in the same scope but you can redefine a variable in a different scope or block
-    Block or local scope variables are not accessible outside its code block
+Javascript Operators
+    + - / * plus minus divide multiply
+    + also concatenates strings
+    ++ increment by 1
+    -- decrement by 1
+    += add to a variable (e.g a += 2; adds 2; to a)
+    -= subtract from a variable (e.g. a -= 2; subtracts 2 from a)
+    *= multiply and equate to self (e.g. a *=2; multiples a by 2)
+    /= divide and equate to self (e.g. a /=2; divides a by 2)
+    % remainder (e.g. 11 % 3 = 2)
 
 Javascript Logical Operators
     && and
@@ -912,9 +867,9 @@ Javascript Logical Operators
     ! not
 
 Javascript Comparison Operators
-    == equal in value only (loose comparison) e.g. 25 == '25' is true
+    == equal in value only
     === equal in value and type (strict equality)
-    != - not equal to (inequality operator) (loose inequality)
+    != - not equal to (inequality operator)
     !== - strictly not equal to (strict inequality operator)
     > greater than
     < less than
@@ -922,7 +877,7 @@ Javascript Comparison Operators
     <= less than or equal to
     ? ternary operator (i.e. console.log((a==b) ? 'equal':'not equal'); -- concise test of true or false expression
 
-Javascript Statements and Comments
+Javascript Statements
     Comprise Values, Operators, Expressions, Keywords and Comments
     // identifies single inline or partial line comment 
     /* ... */ identifies multiline comments
@@ -931,44 +886,28 @@ Javascript Statements and Comments
     Multiple statements are allowed on a single line with semicolon delimiters
     Multi-line statements do not require a special line continuation character
 
-Javascript Data Types (7 different types)
-    Data types are stored on the stack and not in the heap
+Javascript Data Types
     Javascript is dynamically typed and variables can contain any data type when they are assigned a value
     Types are: 
-        boolean: true or false (not enclosed in quotes)
-        number: integers, floats, decimals etc (includes NaN and infinity), 
+        boolean: true or false
+        number (includes NaN and infinity), 
         char: doesn't exist. implemented as a string of length '1'
         string: 'some words'
             strings use '' or "" interchangeably, and backticks `` to embed variables which are evaluated
             escape embedded quotes in strings with \" or \'
-            Strings have built-in's (or native functions)
+            Strings have built-in's or native (functions)
         array: 
-        object: the only non-primative datatype and holds multiple key-value pairs: arrays, dates, literals etc
-        symbols: unique immutable object identifiers
-        null: separate datatype and means nothing (intentionally) or no value e.g. var name = null;
+        object: the only non-primative datatype and holds multiple key-value pairs
+        symbols: unique immutable unique object identifiers
+        null: separate datatype and means nothing e.g. var name = null;
         NaN: not a number
-        undefined: separate datatype and means 'no value assigned' (unintentionally) and automatically assigned by the browser if not initialized
+        undefined: separate datatype and means 'no value assigned'
     typeof() returns the type of a variable. typeof x; is the same as typeof(x);
-
-Javascript Type Conversion (explicit type conversion)
-    typeof -- show the type of a variable (e.g. typeof varname)
-    value1 = Number(value2) -- convert value2 to a number and save in value1
-    value1 = String(value2) -- convert value2 into a number and save in value1
-    value1 = Boolean(value2) -- converts value2 into a boolean
-        truthy values - positive and negative numbers and all non-empty strings
-        falsy values  - zero and any empty string
 
 Javascript Strings
     string.toUpperCase() -- converts to uppercase
     string.toLowerCase() -- converts to lowercase
     string.trim() -- removes whitespace leading or trailing
-    string.length -- length property
-    string.indexOf('<char>'); -- find the position of a character in a string
-    string.lastIndexOf('<char>'); -- find the position of the last occurance of a character in a string
-    string.slice(<start>, <end + 1>); -- returns a substring from start index to end index
-    string.substr(<start>, <length>); -- returns a substring from start counting length characters
-    string.replace('<char'>, '<char>'); -- replaces the first occurance of a character
-    string.includes('<char>') -- returns true if char exists in a string, otherwise returns false
 
 Javascript Escaped Characters in Strings
     \' single quote
@@ -987,8 +926,7 @@ Javascript Variables (let and const, or var prior to ES6)
         let = (for variables, introduced with ES6, block-scoped), cannot be redeclared, only reassigned
         var =  (old term, pre ES6, function-scoped) (predates ES6), can be redeclared and reassigned
         <none> = global variable
-    Variable names must use numbers, letters, '_' or '$', cannot start with a number and cannot contain spaces
-    Variable names cannot be js keywords
+    Variable names must use numbers, letters, '_' or '$' and cannot start with a number
     Variables can be declared but not initialized or assigned an initial value
        Always use let to declare a variable -- don't omit this keyword
     let varNam/e; -- declares variable varName in the local scope
@@ -1005,19 +943,15 @@ Javascript Properties (e.g. of Strings)
     declare an empty string: var mystring = "";
 
 Javascript Functions including ES6 Arrow Functions
-    Function are objects defined with the 'function' keyword and () and {};
-    Syntax 1 Function Declaration (preferred):
-        function fMyFun(vars) {<body>}
+    Syntax 1 (preferred):
+        function fMyFun(vars) {<body>};
         These function declarations are hoisted (they can be invoked before declared)
-    Syntax 2 Function Expression (not preferred, not hoisted, requires a trailing semi-colon):
-        const fMyFun = function(vars) {<body>}
-        Invoke by fMyFun();
+    Syntax 2 (not preferred, not hoisted):
+        const fMyFun = function(vars) {<body>};
         Function synonyms can be created as const fMyFuncSyn = fMyFun (a previously declared function)
         The first line of this syntax must include 'function()'
     Syntax 3 Arrow functions (ES6) for Anonymous Functions (myFunc = (vars) => {<body>};
     () is the function invocation operator
-    The () are only required if there is more than one parameter or no parameters
-    The {} are not needed if the function only returns a value
     functions take parameters and return a result (i.e. a function call)
     functions without return statements return undefined
     function expressions can be immediately invoked (IEFE's)
@@ -1026,8 +960,6 @@ Javascript Functions including ES6 Arrow Functions
        This array can be used in variadic functions with variable numbers of arguments
     Higher Order Functions are functions that take callbacks as arguments or return functions as a result (i.e. closures)
        e.g. document.addEventListener("click", clickFunction)
-    Default Parameters
-        function myFunc(arg1 = "Yes", arg2 = "Thanks") -- will be used if no arguments are passed in the parameters
 
 Javascript Anonymous functons
     Anonymous functions are not named - they are function expressions
@@ -1037,7 +969,7 @@ Javascript Anonymous functons
         Arrow syntax 
             e.g. document.addEventListener("click", () => alert("Thank you for clicking"))
 
-Javascript Callback Functions
+Javascript Calllback Functions
     Callbacks are functions passed by name as paramenters in other functions and executed before the other function ends
         // callback example where seeded forEach only takes a callback function referencing the item and index in the array
         const cars = ['Ford', 'Honda', 'Chevrolet', 'Buick'];
@@ -1060,25 +992,18 @@ Javascript Arrays (One Dimensional)
     Array elements are referenced by an integer index: myArray[i];
     The base index of an array is 0 i.e.myArray[0] is the first element in myArray
     Declare direct, let colors = ['red', 'blue', 'green'];
-    Arrays can include elements of different or mixed datatypes (e.g. number, string, boolean)
+    Arrays can include elements of different datatypes (e.g. number, string, boolean)
     Elements of arrays may be undefined if not assigned
     Sparse arrays have empty elements
     Avoid sparse arrays
-    
-Javascript Array Functions
-    myArray.join('<char>'); -- joins the elements of an array into a single string with a character delimiter
-    myArray.indexOf('<element>'; -- returns the index of an element in an array
-    myArray.concat(array2) -- creates one combined array from two separate arrays
     myArray.push(value) method appends data to the end of an array and returns the new count of array elements
-    myArray.pop() method removes data from the end of an array and returns the popped value
+    myArray.pop() method removes data from the end of an array
     myArray.shift() removes the first element from an array
     myArray.unshift() adds an element to the start of the array
     array.length property returns the array length
     array.sort() method sorts the array temporarily
     array.tostring() method creates a string from an array
     array.reverse() method reverses the original order of the array
-    array.includes('<element>') -- returns true if element exists in array, othewise returns false
-    array.from(list) converst a list to an array
 
 Javascript Arrays (Two Dimensional)
     Two dimensional arrays are defined as arrays of arrays
@@ -1135,23 +1060,17 @@ Javascript Array Code Samples
     // print an array element using the name reference
     console.log(myArray[0].name); // prints 'Jim'
 
-Javascript Conditionals and Compound Conditionals and Decisions (Control Flow)
+Javascript Conditionals and Decisions (Control Flow)
     If (boolean expression) {true action} else {false action}. 
     if (boolean expression) {true action) else if (true action};
     Expression can include && (logical and) and || (logical or) operators
-    Switch (value) {case val1: action; break; case val2: action; break; default: action;}
-        break is not needed on the default case
-        case uses strict equality
-    ! not operator
+    Switch (value) {case val1: action; break; case val2: action; break; default: action; break;}
     ? -- ternary operator for true of false
 
-Javascript Iterations and Loops and Conditionals (Control Flow)
+Javascript Iterations and Loops
     for ... (e.g. for(1 = 0; i < 10;, i++) {console.log(i)};
     while ... (e.g. while (i < 10) {console.log(i)}); and i must be declared prior to the loop
-    do while ... (e.g. do {...} while (i < 10) so the code runs at least once
     for each -- used for arrays (e.g array1.forEach(function(array1){console.log(array1)}) steps through array1 executing a function for each value
-    break -- break out of a loop
-    continue == advance to next iteration of a loop without executing more statements in the current loop
 
 Javascript Modal Interaction
     prompt(question[, default]) -- Ask a question, and return either what the visitor entered or null if they pressed “cancel”.
@@ -1177,15 +1096,12 @@ Javascript Javascript in HTML
     </script>
 
 Javascript Objects Properties and Methods (Object functions)
-    Objects are reference types stored on the heap with a pointer on the stack
     Objects comprise key: value pairs where the keys are unique
-    Built-in objects: Date, Math, etc
-    Object Literal notation: one way of creating a new object
     The context of object is referenced by this and defined as the object of the calling function
-    Create an object with an Object Definition using Object-literal notation
+    Create an object with an Object Definition
         const myObj = {}; -- instantiates a new empty object
         const myObj = {
-            <key1>: <value1>,   -- key value pairs
+            <key1>: <value1>,
             <key2>: <value2>,
             <key2>: <value2>,
             function() {                // only the function name is stated and not the 'Function' prefix
@@ -1266,12 +1182,10 @@ Javascript String Methods
     myStrengt.length; -- length of the string
 
 Javascript Template Literals
-    Template literals or template strings are like strings but with embedded variables
-    Template literals or template strings use `` backticks instead of quotes "" or '' and embedded ${} variables
+    Template literals are like strings but with embedded variables
+    Template literals use `` backticks instead of quotes "" or '' and embedded ${} variables
         e.g. `this is a string of numbers like ${4+4} and others`
              `the name ${myName} is embedded in this string`
-    Use Cases
-        Dynamic HTML content for the browser
 
 Javascript Document Methods
     Document.write(<FONT COLOR=RED>This is Red</FONT><BR>)
@@ -1291,8 +1205,6 @@ Javascript Destructuring
     Unpacking arrays into variables or other arrays
 
 Javascript DOM (Document Object Model)
-    The DOM root element or node is <HTML>
-        Secondary notes are <head> and <body>
     window
         history
         location
@@ -1305,36 +1217,8 @@ Javascript DOM (Document Object Model)
         document.body
         document.body.style
         document.body.style.backgroundColor = green
-    View the DOM in the console by typing 'document<enter>' and expanding nodes
-    View the DOM methods in the console by typing 'document. and scrolling through the list
 
 Javascript DOM (Document Object Model) Manipulation
-    Query the DOM with querySelector()
-        let element = parentNode.querySelector("<cssselector>") where selector is a vald CSS selector expression: element, .class, #id
-            <cssselectors> must include selector prefix: #, . etc
-        const para = document.querySelector('p') -- fetch a reference to the first paragraph in the document
-        const paras = document.querySelectorAll('p') -- fetch all paras in a nodelist (use paras.forEach(arrowfn) to step through a node list)
-    Query the DOM with getElementBy()
-        const elem = document.getElementById("<id>") -- fetch a reference to an element by element id
-            document.getElementById("resp3") -- do not add # prefix in this format
-        const elems = document.getElementsByClassName("<classname>") -- fetch all elements in a class to an HTML collection (not a node list)
-            document.getElementsByClassName("classname") -- dp mpt add . prefix in this format
-        const paras = document.getElementsByTagName('p') -- fetch references to all paras into an HTML collection
-    Changing Elements
-        const para = document.querySelector('p');
-        para.innerText = "changed text"; -- replace existing text
-        para.innerText += "changed text"; -- append to existing text
-    List Classes on an Element
-        element.classList were element is a reference to an HTML element obtained by element = document.querySelector()
-        element.classList.add('className'); adds a class to an element
-        element.classList.remove('className') removes class from an element
-        element.classList.toggle('className') removes or adds class from an element that has the class or doesn't
-        p.innerText - returns visible text with no formatting
-        p.textContent - returns visible and hidden text and spacing and formating
-        element.append(<string>) -- append a string to an element
-        element.appendChild(<tab>) -- append an HTML tag to an object
-        document.createElement("div") -- create a div element
-        body.append(div); -- add a div to a page
 
 Javascript Event Handlers
     Added to page elements using element attributes

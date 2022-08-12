@@ -1,0 +1,60 @@
+/* cheatsheets.css - stylesheet for cheatsheets.html specific content layouts                                         */
+/* Referencs:                                                                                                         */
+/*     None                                                                                                           */
+/* Log:                                                                                                               */
+/*     17-May-2022 - start                                                                                            */
+/*                                                                                                                    */
+
+#resultsDiv {
+    width: 80%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#submitButton {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#resultsArea {
+    width: 100%;
+    margin: auto;
+    white-space: pre;
+}
+
+#sheet-options {
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+}
+
+#options-label {
+    width: 60px;
+}
+
+#options-div {
+    width: 80%;
+    margin: auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+#page-heading {
+    width: 80%;
+    margin: auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+#filter-input {
+    display: inline-block;
+    width: 65%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#filter-label {
+    margin-left: 10px;
+    display: inline-block;
+}
