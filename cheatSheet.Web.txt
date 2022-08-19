@@ -84,6 +84,10 @@ References
     https://www.oreilly.com/library/view/cgi-programming-on/9781565921689/06_chapter-03.html -- cookies and CGI
     https://techexpert.tips/apache/perl-cgi-apache/ -- cookies and CGI
 
+Definitions
+    asynchronous - non-blocking task run in a separate parallel thread
+    synchronous - blocking task, single threaded
+
 Acronyms 
     AJAX - Asynchronous Javascript and XML
     CDN - Content Delivery Network - geographically disbursed servers delivering web contenta
@@ -315,6 +319,10 @@ Tutorials by Steve Griffin
     https://www.youtube.com/watch?v=7EKebb4VUYQ&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=13 -- Steve Griffin What is Ajax (Done)
     https://www.youtube.com/watch?v=_5yhmkDQqIQ&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=14 -- Steve Griffin Fundamentals of the Fetch method (Done)
     https://www.youtube.com/watch?v=KRfhdWxyenI&list=PLyuRouwmQCjnqkUsuXHT4WOPzeWXvuA4W&index=1 -- Prevent Directory Browsing on Apache, Steve Griffih
+    https://www.youtube.com/playlist?list=PLyuRouwmQCjkWu63mHksI9EA4fN-vwGs7 -- JavaScript AJAX with fetch series catalog
+    https://www.youtube.com/watch?v=7EKebb4VUYQ&list=PLyuRouwmQCjkWu63mHksI9EA4fN-vwGs7 -- What is AJAX nad Why Should I Care?
+    https://www.youtube.com/watch?v=SmPouEFKOBg&list=PLyuRouwmQCjkWu63mHksI9EA4fN-vwGs7 -- JavaScript ES6 Promises - Basic Syntax 
+
 
 Web Dev Simplied
     https://www.youtube.com/watch?v=y17RuWkWdn8 -- Learn DOM Manipulation In 18 Minutes
@@ -330,7 +338,6 @@ Net Ninja Modern Javascript Course
     https://www.youtube.com/watch?v=xUI5Tsl2JpY&list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc&index=4 -- Modern JavaScript Tutorial #4 - Functions
     https://www.youtube.com/watch?v=X0ipw1k7ygU&list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc&index=5 -- Modern JavaScript Tutorial #5 - Objects
     https://www.youtube.com/watch?v=wKBu_dEaF9E&list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc&index=6 -- Modern JavaScript Tutorial #6 - The Document Object Model
-    https://www.youtube.com/playlist?list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc -- Modern JavaScript Tutorial #6 - The Document Object Model
 
 Document Object Model (DOM)
     https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction -- DOM introduction
@@ -372,7 +379,7 @@ Groupware
         https://discordapp.com/ -- messaging for gamers
         https://trello.com/ -- group project task management tools
 
-Javascript Frameworks
+JS Frameworks
     https://angular.io/ -- Angular
     http://learn.jquery.com/
     https://jquery.com/ -- home page javscript libraries and functions
@@ -656,12 +663,6 @@ CSS Property and Value Pairs
         display:block -- elements take the entire line and new elements get new lines. Height, width can be overridden
         display:inline-block -- elements are inline and vertically aligned and height and width (margin, padding) can be set differently
         display:none -- hide the element
-    flexbox
-       display:flex -- flexbox for flexible layout (on a parent element)
-       flex-direction:<value>, column, row
-       flex-wrap: wrap: -- allow wrapping to a second line
-       justify-content:<value> center, flex-start, flex-end, space-between, space-around, space-evenly
-       align-items:<value> top, center, bottom (inside a flexible container)
     float: left -- floats an element within it's surrounding container and removes it from the container's (div's) hierarchy
     font-family:<value; courier, arial, verdana etc web-safe fonts (see https://www.cssfontstack.com/)
     font-family:Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif; -- Windows 10 fonts
@@ -697,6 +698,16 @@ CSS Property and Value Pairs
     margin-left:
     margin-right:
     z-index: -1; set precedence of an overlapping element
+
+CSS Flexbox
+    display:flex -- assign to outer div for flexbox layout of inner components (i.e assign on a parent element)
+    flex: 1 (flex values of 1 or 2 or 3 etc) assign on the inner element to give proportional size within the box
+    flex-direction:<value>, column to stack flex elements or row to line them out, left to right. 
+    order 1 or 2 or 3, on each element to specify the order of appearance in the outer flexbox
+    align-items: start (or end or center or stretch (default), to change the size of each element in the flex box and align them
+    flex-wrap: wrap: -- allow wrapping to a second line of elements within a flexbox
+    justify-content:<value> center, flex-start, flex-end, space-between, space-around, space-evenly -- to space within a flexbox
+    align-items:<value> top, center, bottom (inside a flexible container)
 
 CSS Units
      vw -- variable width in percent of viewport eg 50vw;
@@ -753,15 +764,15 @@ CSS Media Query (responsive layout)
     Layout types: table, float, flex and grid
     Responsiveness attributes handle scaling (viewports) on different screen and browser window sized
      
-Javascript Versions
+JS Versions
     ES6 - Major Release of Javascript in 2016
 
-Javascript Where Placed in HTML
+JS Where Placed in HTML
     Javascript can be placed in the <head> or <body> of html between <script> tags
     Javascript is normally placed before </body> or ina separate file and referenced by <script src="common.js"></script> tags in the body
     Javascript code is run when the page is loaded
 
-Javascript Rules and Gotchas
+JS Rules and Gotchas
     Functions must be defined in code before they are called
     All lines end with a terminating semi-colon but it is not required (JS uses Automatic Semicolon Insertion rules)
     Missing ; will cause a script to be ignored
@@ -770,7 +781,7 @@ Javascript Rules and Gotchas
     JS lines end with a semicolon - JS uses Automatic Semicolon Insertion (ASI) to insert them where they are missing
     ASI means the coder can omit semicolons on code lines and Javascript will insert them during the interpreter run
 
-Javascript Output
+JS Output
     document.write(); -- html text
     alert(); -- pop up window (all lower case)
     console.log() -- write to the console log
@@ -783,13 +794,13 @@ Javascript Output
     console.assert()
     console.table() -- to show JSON data in the console
 
-Javascript Separate Script File
+JS Separate Script File
     <script src="jsprogram.js"> where jsprogram.js is in the same directory as the html
 
-Javascript Commands
+JS Commands
     document.location - file system location of an html page with a "file:" prefix  
 
-Javascript Uses
+JS Uses
     Put content in a webpage on the fly (dymamic content)
     Make web pages responsive
     Detect a browser type
@@ -798,16 +809,16 @@ Javascript Uses
     Creat animations, slideshows, scrollers
     Build apps using frameworks (AngularJS, ReactJS, BackboneBJ)
 
-Javascript Typescript is javascript with c# like programming constructs
+JS Typescript is javascript with c# like programming constructs
 
-Javascript Hot Keys
+JS Hot Keys
     <Ctrl>/ make the line a comment of // (single line)
     <Ctrl><Shift>/ highlighted multiline comments
     /* ... */ multiline comment block
     // line comment in .js fie
     /* */ block comment in .js file
 
-Javascript Installing Node.js on Ubuntu Linux
+JS Installing Node.js on Ubuntu Linux
     Steps
         sudo apt-get remove nodejs -- remove existing nodejs
         https://github.com/nodesource/distributions -- follow instructions for Node.js v16x in readme
@@ -829,10 +840,10 @@ Javascript Installing Node.js on Ubuntu Linux
     .load -- load a file
     .help -- list node interactive help
 
-Javascript NVM Node Version Manager
+JS NVM Node Version Manager
     Installs any version of node js
 
-Javascript NPM Packages Installation
+JS NPM Packages Installation
     Update to latest NPM
         npm install -g npm@latest -- to get instructions, or ...
         npm install -g npm@8.13.2
@@ -853,13 +864,13 @@ Javascript NPM Packages Installation
     npm init -y -- create package.json file in the local directory -- project configuration file. -y suppresses project questions
     npm install express -- after creating package.json in the local working directory to install the express package
 
-Javascript NPM Packages
+JS NPM Packages
     mongodb -- mongodb connector
     http -- http simple server
     express -- webServer
     mysql2 -- mySQL connector
 
-Javascript Express WebServer
+JS Express WebServer
     Run <jscript with express in it> as sudo
     Open the router firewall by mapping a port (eg. 3000) route
     sudo node <jscript with express in it> -- to run the express server as a js script
@@ -872,14 +883,14 @@ Javascript Express WebServer
         Pug (formerly Jade)
         ejs at npmjs.com/package/ejs
 
-Javascript Strict Script
+JS Strict Script
     The directive "use strict" at the start of a script enforces modern strict ECMAScript5 compliance
     Only comments can appear above the "use strict" directive
     "use strict" can be limited to a function if put at the beginning of the function
     Several language features like classes and modules implement strict mode automatically
         use keyword
 
-Javascript Operators and Order of Operation
+JS Operators and Order of Operation
     Operators
         + - / * plus minus divide multiply
         + also concatenates strings
@@ -899,19 +910,19 @@ Javascript Operators and Order of Operation
         Additions
         Subtractions
 
-Javascript Scope
+JS Scope
     Block scope applies to let and const but not var (which is always global)
     Global Scope apply everywhere if defined outside any code block
     Block Scope (local scope) applies to variables declared inside a block
     You cannot redefine a variable in the same scope but you can redefine a variable in a different scope or block
     Block or local scope variables are not accessible outside its code block
 
-Javascript Logical Operators
+JS Logical Operators
     && and
     || inclusive or
     ! not
 
-Javascript Comparison Operators
+JS Comparison Operators
     == equal in value only (loose comparison) e.g. 25 == '25' is true
     === equal in value and type (strict equality)
     != - not equal to (inequality operator) (loose inequality)
@@ -922,7 +933,7 @@ Javascript Comparison Operators
     <= less than or equal to
     ? ternary operator (i.e. console.log((a==b) ? 'equal':'not equal'); -- concise test of true or false expression
 
-Javascript Statements and Comments
+JS Statements and Comments
     Comprise Values, Operators, Expressions, Keywords and Comments
     // identifies single inline or partial line comment 
     /* ... */ identifies multiline comments
@@ -931,7 +942,7 @@ Javascript Statements and Comments
     Multiple statements are allowed on a single line with semicolon delimiters
     Multi-line statements do not require a special line continuation character
 
-Javascript Data Types (7 different types)
+JS Data Types (7 different types)
     Data types are stored on the stack and not in the heap
     Javascript is dynamically typed and variables can contain any data type when they are assigned a value
     Types are: 
@@ -950,7 +961,7 @@ Javascript Data Types (7 different types)
         undefined: separate datatype and means 'no value assigned' (unintentionally) and automatically assigned by the browser if not initialized
     typeof() returns the type of a variable. typeof x; is the same as typeof(x);
 
-Javascript Type Conversion (explicit type conversion)
+JS Type Conversion (explicit type conversion)
     typeof -- show the type of a variable (e.g. typeof varname)
     value1 = Number(value2) -- convert value2 to a number and save in value1
     value1 = String(value2) -- convert value2 into a number and save in value1
@@ -958,7 +969,7 @@ Javascript Type Conversion (explicit type conversion)
         truthy values - positive and negative numbers and all non-empty strings
         falsy values  - zero and any empty string
 
-Javascript Strings
+JS Strings
     string.toUpperCase() -- converts to uppercase
     string.toLowerCase() -- converts to lowercase
     string.trim() -- removes whitespace leading or trailing
@@ -970,7 +981,7 @@ Javascript Strings
     string.replace('<char'>, '<char>'); -- replaces the first occurance of a character
     string.includes('<char>') -- returns true if char exists in a string, otherwise returns false
 
-Javascript Escaped Characters in Strings
+JS Escaped Characters in Strings
     \' single quote
     \" double quote
     \\ backslash
@@ -980,7 +991,7 @@ Javascript Escaped Characters in Strings
     \b backspace
     \f form feed
 
-Javascript Variables (let and const, or var prior to ES6)
+JS Variables (let and const, or var prior to ES6)
     Use these 3 keywords or by omitting a keyword:
         const = (for constants) cannot be changed once declared (ES6). Use capital letters for const values e.g. const PI = 3.12159
             arrays declared as const can have their memeber values changed
@@ -997,14 +1008,14 @@ Javascript Variables (let and const, or var prior to ES6)
     const myConst = 'Hello'; -- declares a constant whos value cannot be changed
     const PI = 3.17; -- use upper case for contants determined in advance
 
-Javascript Properties (e.g. of Strings)
+JS Properties (e.g. of Strings)
     <string>.length
     <string>.slice(4) -- first four characters are removed
     <string>[n] is the n-1 character in a string
     strings are immutable .. existing individual characters cannot be changed
     declare an empty string: var mystring = "";
 
-Javascript Functions including ES6 Arrow Functions
+JS Functions including ES6 Arrow Functions
     Function are objects defined with the 'function' keyword and () and {};
     Syntax 1 Function Declaration (preferred):
         function fMyFun(vars) {<body>}
@@ -1029,7 +1040,7 @@ Javascript Functions including ES6 Arrow Functions
     Default Parameters
         function myFunc(arg1 = "Yes", arg2 = "Thanks") -- will be used if no arguments are passed in the parameters
 
-Javascript Anonymous functons
+JS Anonymous functons
     Anonymous functions are not named - they are function expressions
         function() {...};
         Anonymous functions are single use functions and often used as callbacks
@@ -1037,7 +1048,7 @@ Javascript Anonymous functons
         Arrow syntax 
             e.g. document.addEventListener("click", () => alert("Thank you for clicking"))
 
-Javascript Callback Functions
+JS Callback Functions
     Callbacks are functions passed by name as paramenters in other functions and executed before the other function ends
         // callback example where seeded forEach only takes a callback function referencing the item and index in the array
         const cars = ['Ford', 'Honda', 'Chevrolet', 'Buick'];
@@ -1046,11 +1057,11 @@ Javascript Callback Functions
         }
         cars.forEach(myCallBack);
 
-Javascript Constructor Functions
+JS Constructor Functions
     The new keyword in front of any function creates an object
     The function name will have initial uppercase if the function is intended as a constructor
 
-Javascript Arrays (One Dimensional)
+JS Arrays (One Dimensional)
     Declare an empty array with colors = [];
     Declare as an array object, let colors = new Array('red', 'green', 'blue');
     Arrays can have unspecified length and can be added onto, or subtracted from, without limit
@@ -1065,7 +1076,7 @@ Javascript Arrays (One Dimensional)
     Sparse arrays have empty elements
     Avoid sparse arrays
     
-Javascript Array Functions
+JS Array Functions
     myArray.join('<char>'); -- joins the elements of an array into a single string with a character delimiter
     myArray.indexOf('<element>'; -- returns the index of an element in an array
     myArray.concat(array2) -- creates one combined array from two separate arrays
@@ -1080,13 +1091,13 @@ Javascript Array Functions
     array.includes('<element>') -- returns true if element exists in array, othewise returns false
     array.from(list) converst a list to an array
 
-Javascript Arrays (Two Dimensional)
+JS Arrays (Two Dimensional)
     Two dimensional arrays are defined as arrays of arrays
     Declare direct; let array_vals = [[1, "One"], [2, "Two"], [3, "Three"]];
     Declare as an array object let array_vals = new Array(); ... then loop through each member and declare is as another array
         for (let 1 = 0; i < n; i++) { array_vals[1] = []; } or {array.vals[i] = new Array();}
 
-Javascript Array Code Samples
+JS Array Code Samples
     // define two arrays initially in a single dimenstion
     let colors = [];
     let months = new Array();
@@ -1135,7 +1146,7 @@ Javascript Array Code Samples
     // print an array element using the name reference
     console.log(myArray[0].name); // prints 'Jim'
 
-Javascript Conditionals and Compound Conditionals and Decisions (Control Flow)
+JS Conditionals and Compound Conditionals and Decisions (Control Flow)
     If (boolean expression) {true action} else {false action}. 
     if (boolean expression) {true action) else if (true action};
     Expression can include && (logical and) and || (logical or) operators
@@ -1145,7 +1156,7 @@ Javascript Conditionals and Compound Conditionals and Decisions (Control Flow)
     ! not operator
     ? -- ternary operator for true of false
 
-Javascript Iterations and Loops and Conditionals (Control Flow)
+JS Iterations and Loops and Conditionals (Control Flow)
     for ... (e.g. for(1 = 0; i < 10;, i++) {console.log(i)};
     while ... (e.g. while (i < 10) {console.log(i)}); and i must be declared prior to the loop
     do while ... (e.g. do {...} while (i < 10) so the code runs at least once
@@ -1153,12 +1164,12 @@ Javascript Iterations and Loops and Conditionals (Control Flow)
     break -- break out of a loop
     continue == advance to next iteration of a loop without executing more statements in the current loop
 
-Javascript Modal Interaction
+JS Modal Interaction
     prompt(question[, default]) -- Ask a question, and return either what the visitor entered or null if they pressed “cancel”.
     confirm(question) -- Ask a question and suggest to choose between Ok and Cancel. The choice is returned as true/false.
     alert(message) -- outputs a message
 
-Javascript Console Commands
+JS Console Commands
     console.log('text to show on the console') -- prints to the command shell in node
     console.log('text1', 'text2') -- prints each string with a space separator
     console.clear()
@@ -1166,17 +1177,17 @@ Javascript Console Commands
     console.table() -- to show JSON data in the console
     Esc -- show (or hide) console drawer along the bottom of Dev Tools
 
-Javascript Best Practices
+JS Best Practices
     "use strict" as the first line of code (before or after comments) to enforce clean javascript
     avoid global variables - put variables in anonymous functions (closures)
 
-Javascript Javascript in HTML
+JS Javascript in HTML
     Embed with the <script> tag
     <script language=javascript but for HTML5 only <script></script> is needed
         ..
     </script>
 
-Javascript Objects Properties and Methods (Object functions)
+JS Objects Properties and Methods (Object functions)
     Objects are reference types stored on the heap with a pointer on the stack
     Objects comprise key: value pairs where the keys are unique
     Built-in objects: Date, Math, etc
@@ -1236,7 +1247,7 @@ Javascript Objects Properties and Methods (Object functions)
         Math
         Date
 
-Javascript Classes
+JS Classes
     Use the Class syntax with embedded constructor function to define a class
     Define a class the same way as defining a function but use initcaps (psueod-classical)
         function User(name, github) {
@@ -1246,7 +1257,7 @@ Javascript Classes
     Create an object from a class with the 'new' keyword
         myObj = new.User('Geoff','Repo');
 
-Javascript Date Methods
+JS Date Methods
     Date.getFullYear() gets the current year in 4 digit format
     Date.getMonth() gets the current month on the clock returns a value where 0 = first
     Date.getDate() gets the current day on the clock
@@ -1254,18 +1265,18 @@ Javascript Date Methods
     Date.getMinutes() gets the current minutes on the clock
     Date.getSeconds() gets the current seconds on the clock
 
-Javascript Math Methods
+JS Math Methods
     Math.pow(<base>, <exp>);
     Math.random(); -- returns a number between zero and one (but not one)
     Math.round();
     Math.floor(<number>); -- rounds down to nearest integer
     Math.ciel(<number>); -- rounds up to nearest integer
 
-Javascript String Methods
+JS String Methods
     const myString = "Miscellaneous text";
     myStrengt.length; -- length of the string
 
-Javascript Template Literals
+JS Template Literals
     Template literals or template strings are like strings but with embedded variables
     Template literals or template strings use `` backticks instead of quotes "" or '' and embedded ${} variables
         e.g. `this is a string of numbers like ${4+4} and others`
@@ -1273,24 +1284,24 @@ Javascript Template Literals
     Use Cases
         Dynamic HTML content for the browser
 
-Javascript Document Methods
+JS Document Methods
     Document.write(<FONT COLOR=RED>This is Red</FONT><BR>)
 
-Javascript JSON
+JS JSON
     Javascript Object Notation
     JSON.stringify(myArray) - sets array elements in printable format
 
-Javascript Closures
+JS Closures
     Functions that return functions bound to data
     The data persists as part of the returned function
 
-Javascript This Keyword
+JS This Keyword
     This determines the way a function is called
 
-Javascript Destructuring
+JS Destructuring
     Unpacking arrays into variables or other arrays
 
-Javascript DOM (Document Object Model)
+JS DOM (Document Object Model)
     The DOM root element or node is <HTML>
         Secondary notes are <head> and <body>
     window
@@ -1308,67 +1319,100 @@ Javascript DOM (Document Object Model)
     View the DOM in the console by typing 'document<enter>' and expanding nodes
     View the DOM methods in the console by typing 'document. and scrolling through the list
 
-Javascript DOM (Document Object Model) Manipulation
-    Query the DOM with querySelector()
-        let element = parentNode.querySelector("<cssselector>") where selector is a vald CSS selector expression: element, .class, #id
+JS DOM (Document Object Model) Manipulation
+    The DOM is created by the Browser when an webpage is loaded
+    Type 'document' <enter> in the console to drill down into the DOM
+    Type 'document.' <enter> to see all elements and methods defined for the DOM
+    The DOM hierarchy comprises an html root, and a head and body subsection (element nodes) and subsidiary element nodes
+        html
+            head
+                title
+            body
+                h1
+                div
+                div
+                    p
+                    [
+                div
+    Query the DOM with querySelector() to get an element reference
+        let elementRef = document.querySelector('<cssSelecctor>'); -- identifies the first occurance of <cssSelector> on the document
+            e.g. document.querySelector('p'); -- identifies the first paragraph on the document
+            e.g. document.querySelector('.className1'); -- identifies the first element assigned class='className' on the document
+            e.g. document.querySelector('#idName1'); -- identifies the element with id='idName1' id on the document
+            t.g. document.querySelector('div.className1>); -- identifies the first div with class="className1" on the document
+        let elementRef = parentNode.querySelector("<cssselector>") where selector is a vald CSS selector expression: element, .class, #id
             <cssselectors> must include selector prefix: #, . etc
-        const para = document.querySelector('p') -- fetch a reference to the first paragraph in the document
-        const paras = document.querySelectorAll('p') -- fetch all paras in a nodelist (use paras.forEach(arrowfn) to step through a node list)
-    Query the DOM with getElementBy()
+    Query the DOM with querySelectorAll() to get multiple element references as a nodelist (not an array but supports forEach and array referencing)
+        const elementRefs = document.querySelectorAll('p') -- fetch all paras in a nodelist (use paras.forEach(arrowfn) to step through a node list)a
+    Get a Unique Selector from the Browser
+        Inspect the element > riight click on the element in Elements page > Copy > Copy Selector
+    Query the DOM with getElementBy('idValue') - no # prefix in 'idValue
         const elem = document.getElementById("<id>") -- fetch a reference to an element by element id
             document.getElementById("resp3") -- do not add # prefix in this format
-        const elems = document.getElementsByClassName("<classname>") -- fetch all elements in a class to an HTML collection (not a node list)
+        const elems = document.getElementsByClassName("<classname>") -- no . prefix on classname. Fetch all elements in a class to an HTML collection (not a node list)
+            returns an HTML collection which supports index [n] referencing and collection.length property but not forEach() method
             document.getElementsByClassName("classname") -- dp mpt add . prefix in this format
         const paras = document.getElementsByTagName('p') -- fetch references to all paras into an HTML collection
-    Changing Elements
-        const para = document.querySelector('p');
-        para.innerText = "changed text"; -- replace existing text
-        para.innerText += "changed text"; -- append to existing text
+        HTML Collections convert into an array with the Array.from() method
+    Changing Text on Elements
+        const paraRef = document.querySelector('p');
+        paraRef.innerText = "changed text"; -- replace existing text
+        paraRef.innerText += "changed text"; -- append to existing text
+    Change HTML within an Element
+        divRef.innerHTML = <newHTML>; replace existing html with new html
+        divRef.innerHTML += <newHTML>; append new html to existing html
     List Classes on an Element
-        element.classList were element is a reference to an HTML element obtained by element = document.querySelector()
-        element.classList.add('className'); adds a class to an element
-        element.classList.remove('className') removes class from an element
-        element.classList.toggle('className') removes or adds class from an element that has the class or doesn't
-        p.innerText - returns visible text with no formatting
-        p.textContent - returns visible and hidden text and spacing and formating
-        element.append(<string>) -- append a string to an element
-        element.appendChild(<tab>) -- append an HTML tag to an object
+    Set, Get and Remove Classes on an Element
+        elementRef.classList where element is a reference to an HTML elementRef obtained by element = document.querySelector()
+        elementRef.classList.add('className'); adds a class to an element's classlist
+        elementRe.classList.remove('className') removes class from an element
+        elementRef.classList.toggle('className') removes or adds class from an element that has the class or doesn't
+    Add an Element to an Existing Element
+        elementRef.append(<string>) -- append a string to an element
+        elementRef.appendChild(<tab>) -- append an HTML tag to an object
+    Add an Element to a Page
         document.createElement("div") -- create a div element
         body.append(div); -- add a div to a page
+    Set, Get and Remove Attributes Indirectly
+        elementRef.setAttribute("<attribName>", "setting"); to set a new attribute or change an existing attribute
+        elementRef.getAttribute("<attribName>");
+        elementRef.removeAttribute(<attribName>
+    Set Attributes Directly
+        elementRef.attribute = "setting";
+            e.g. p.innerText - returns visible text with no formatting
+            e.g. p.textContent - returns visible and hidden text and spacing and formating
 
-Javascript Event Handlers
+JS Event Handlers
     Added to page elements using element attributes
         e.g. <A HREF="www.google.com" onClick="alert('You clicked Google.');">
     onclick -- button is clicked
     onmouseover -- mouse passes over
     onmouseout -- mouse leaves
 
-Javascript Locator Functions
+JS Locator Functions
     document.getElementById(id) - returns one element node
     document.querySelector(css) - returns one element node (first matching)
     document.querySelectorAll(css) - returns node list
 
-Javascript Locator Update Functions
+JS Locator Update Functions
     document.createElement(tagname) - returns 1 element node
     document.createTextNode(text) - return 1 text node
     parent.appendChild(node) - add child to parent
     parent.removeChild(node) - remove node from parent
 
-Javascript GET Requests
+JS GET Requests
     GET requests encode all information into the URL
     The format is <URL>?param1=<value1>&param2=<value2>&param3=<value3> ...
     The parameter string is saved as the QUERY_STRING environment variable in the server, starting after the ? separator
 
-Javascript Fetch and Promise
+JS Fetch and Promise (in Ajax Calls)
     Fetch returns a promise
     Example
         async function start() {
             const response = await fetch("https://dog.ceo/api/breeds/list/all");
             const data = await response.json();
             console.log(data);
-        }
- 
-            start();
+        start();
 
 MongoDB Notes
     MDB References
