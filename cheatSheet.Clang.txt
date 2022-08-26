@@ -204,7 +204,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=wg1wZgCdJPA -- Three strategies for finishing programming projects 10-times faster (Done)
     https://www.youtube.com/watch?v=1Jh9BUxIw0U -- assertions (Done)
     https://www.youtube.com/watch?v=iYRl50gtprA -- Why should I learn assembly language in 2020? (complete waste of time) (Done)
-    https://www.youtube.com/watch?v=JbHmin2Wtmc -- How to write your own code libraries in C (Done)
+    https://www.youtube.com/watch?v=JbHmin2Wtmc -- How to write your own code  in C (Done)
     https://www.youtube.com/watch?v=eQcRcgOnl9o -- Can I Handle Exceptions with Try Catch in C? (setjmp, longjmp) (Done)
     https://www.youtube.com/watch?v=2YfM-HxQd_8 -- Compiling C programs with Multiple Files (Done)
     https://www.youtube.com/watch?v=U161zVjv1rs -- Compiler Optimizations (Done)
@@ -242,6 +242,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=kDxjcyHu_Qs -- Making forked clones more useful with exec()!
     https://www.youtube.com/watch?v=a8mPKBxQ9No -- Learn Make in 60 seconds)
     https://www.youtube.com/watch?v=G5dNorAoeCM -- More make: automatic variables for smaller and easier to maintain makefiles
+    https://www.youtube.com/watch?v=l5KqE0DMG-Q -- Why that "Perfect" Makefile Doesn't Work
     https://www.youtube.com/watch?v=p8RC_i9t0MU -- Smelly Code and Magic Numbers
     https://www.youtube.com/watch?v=zx7euEEZ0H4 -- Smelly Code and Bad Names
     https://www.youtube.com/watch?v=ll4XT0MYKN0 -- Long Functions
@@ -284,6 +285,8 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=V3J5DWKPYts -- How to Indent Code the Right Way (Done)
     https://www.youtube.com/watch?v=Vd-4eGnBAK8 -- The What, How, and Why of Void Pointers in C and C++? (Done)
     https://www.youtube.com/watch?v=8T0WOABe7OY -- What about Pointer Arithmetic with Void Pointers? (Done)
+    https://www.youtube.com/watch?v=8a3HyL1VN0Q -- A const int is not a constant
+    https://www.youtube.com/watch?v=aAAtROsWskc -- What the FizzBuzz? (A toy problem worth caring about?)
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -484,8 +487,9 @@ Linker and Assembler
     as (linux assembler)
 
 GCC Command Options
-    gcc -S -o d_helloWorld.asm d_helloWorld.c -- create assembly file with -S option
-    gcc -c foo.c -o foo.o -- create an object binary file foo.o from foo.c but don't link
+    -o -- output filename
+    -S -- gcc -S -o d_helloWorld.asm d_helloWorld.c -- create assembly file with -S option
+    -c -- gcc -c foo.c -o foo.o -- create an object binary file foo.o from foo.c but don't link
 
 Compilation Process
     C programs are built from one or more compilation or translation units
@@ -494,7 +498,7 @@ Compilation Process
 
 Compilation Toolchain (Process)
     Both gcc and clang compilers use the same optionss listed here
-    Preprocessing (using .c files to create .i intermdiate files)
+    Preprocessing (using .c files to create .i intermediate files)
         gcc -E <program.c> -o <program.i>
         -E option: preprocess source files
         Includes header files (#include)
@@ -524,7 +528,16 @@ Compiliation of Multiple Files
     Create single executable by linking multiple object (.o) files
         gcc <sourcefile1.o> <sourcefile2.o>
 
-Compiling with Libraries (example Cairo graphics library)
+Libraries
+    A static library is compiled into the source code at compile time
+    A dynamic library is compiled separately and loaded at runtim
+    Creating Dynamic Libraries
+        libmycodde.so: libmycode.c mycode.h
+        $(CC) $(CFLAGS) -fPIC -shared -o $@ libmycode.c -lc
+            .so - loaded at runtime
+            fPIC - position-independent code
+            shared - make a shared library that is loaded only once if multiple programs use it
+    Compiling with Libraries (example Cairo graphics library)
     Include the header file in the code and use the -I include option in compiliation
     Use the -l and -L options in compilation for the library
     gcc -o hello hello.c -I/usr/include/cairo -lcairo -L/usr/lib/cairo
@@ -542,17 +555,34 @@ Make References
     https://www.oreilly.com/openbook/make3/book/
 
 Make (GNU Make)
-    Makefile comprises recipies
+    Makefile comprises recipies of two lines each (multiple recipies allowd)
+        1. The make command comprising ... target: dependencies (or source files)
+        2. <tab>The compilation command or action -- the first character must be a tab characer
+            The second line is the compile command and only run if the make command dependencies have changed since the last time make ran
     # -- comment
     # -*- MakeFile -*- is the first line (to disable tab expansion)
-    Each recipe comprises two lines
-        target: dependencies
-        <tab>action
     make without a target argument will only build the first object
         Otherwise, include an all: list to specify all targets to build
     General make pattern target and rule
-        %: %.c %.h$
-        ^I$(CC) $(CFLAGS) $@ $^$
+        %: %.c %.h
+        ^I$(CC) -- the compilier command variable
+            CC = gcc
+        $(CFLAGS) -- the compiler flags string
+            CFLAGS = -g -O0 -std=gnu99
+        $@ -- the target filename
+        $^ -- the dependency filename list
+    Automatic Variables
+        $@ -- target (copied from line 1 of a make instruction group
+        $^ -- dependencies (copied from line 1 of a make instruction group_
+        $< -- first listed dependent filea
+    Substitution Variables
+        %  -- substitutes target name into all references e.g. %.o is main.o, %.c is main.c if main is a target
+    Running the makefile
+        make <argument list>  -- where the argument list is a list of targets (i.e. commands)
+        if no <argument list> is specified, then only the first rule  in the file is executed
+        all: ...  is the default rule in most cases but it can be named anything e.g. default: ...
+    The clean: rule lists all the targets to be removed along with intermediate files
+        make clean -- to run the clean process
 
 Memory Model
     The memory model comprises: Code (Text), Static/Global, Stack, and Heap
@@ -792,10 +822,15 @@ Signal Handling and Signals
 
 Header Files for C (located at /usr/include)
     Header files for the standard c library in /usr/include in Linux
-    Header files contain declarations (usually)
+    Header files contain declarations (usually) and creates the interface to a translation unit (the combined header file and source file)
     <stdio.h> is a header in the C standard library
     'myheader.h' is a header file in the local source directory
     <stdint.h> -- fixed width integer declarations
+    Header Guards are used to avoid including the same header multiple times
+        #ifndef <headername> -- start of header guard
+        #define <headername> -- header name (can be any unique name)
+        #endif -- to end the #ifdef block
+        
 
 Preprocessor Commands and Directives
     # - indicates a preprocessor directive
@@ -843,7 +878,7 @@ Functions
     Call by reference uses pointers as actual arguments 
     Call by value uses standard variables as actual arguments and not pointers
 
-Functions in lib.c and Other Libraries
+Functions in the lib.c library and Other Libraries
     calloc() -- e.g. int *arr = calloc(sizeof(int), 100); and sets bytes to zero, specifies memoy required in bytes, #include <stdlib.h>
     calloc() returns a void pointer which must be cast to a specific pointer type
     dprintf() -- print to a file descriptor, like STDOUT_FILENO
