@@ -1160,19 +1160,19 @@ JS Array Methods
     myArray.pop() method removes data from the end of an array and returns the popped value
     myArray.shift() removes the first element from an array
     myArray.unshift() adds an element to the start of the array
-    array.every(<function>) returns true if every item in the array returns true on <function>
-    array.length property returns the array length
-    array.find(<function> returns the first item in an array where <function> returns true
-    array.sort() method sorts the array temporarily
-    array.some(<function>) returns true if an array has any items where <function> returns true
-    array.tostring() method creates a string from an array
-    array.reverse() method reverses the original order of the array
-    array.includes('<element>') -- returns true if element exists in array, othewise returns false
-    array.from(list) converst a list to an array
-    array.forEach(<function>) performs <function> on each element in the array returning a new array
-    array.map(<function>) performs the <function> passed to map to transform each element of the array returning a new array
-    array.filter(<function>) returns elements of the array if the filter <function> returns boolean true
-    array.reduce(<function>) returns a sigle value. The <function> takes two arguments: previous returned value plus current value
+    myAarray.every(<function>) returns true if every item in the array returns true on <function>
+    myArray.length property returns the array length
+    myArray.find(<function> returns the first item in an array where <function> returns true
+    myArray.sort() method sorts the array temporarily
+    myArray.some(<function>) returns true if an array has any items where <function> returns true
+    myArray.tostring() method creates a string from an array
+    myArray.reverse() method reverses the original order of the array
+    myArray.includes('<element>') -- returns true if element exists in array, othewise returns false
+    myArray.from(list) converst a list to an array
+    myArray.forEach(<function>) performs <function> on each element in the array returning a new array
+    amyArray.map(<function>) performs the <function> passed to map to transform each element of the array returning a new array
+    myArray.filter(<function>) returns elements of the array if the filter <function> returns boolean true
+    myArray.reduce(<function>) returns a sigle value. The <function> takes two arguments: previous returned value plus current value
 
 JS Arrays (Two Dimensional)
     Two dimensional arrays are defined as arrays of arrays
