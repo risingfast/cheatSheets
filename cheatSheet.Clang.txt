@@ -211,7 +211,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=eQcRcgOnl9o -- Can I Handle Exceptions with Try Catch in C? (setjmp, longjmp) (Done)
     https://www.youtube.com/watch?v=2YfM-HxQd_8 -- Compiling C programs with Multiple Files (Done)
     https://www.youtube.com/watch?v=U161zVjv1rs -- Compiler Optimizations (Done)
-    https://www.youtube.com/watch?v=JPPxV3Hdz_A == How Look Up Tables (LUTs) make your code Smaller, Faster, and Better (example in C) (Done)
+    https://www.youtube.com/watch?v=JPPxV3Hdz_A -- How Look Up Tables (LUTs) make your code Smaller, Faster, and Better (example in C) (Done)
     https://www.youtube.com/watch?v=NqUTiJPgBn8 -- Copying Memory in C (memcpy, memset) (Done)
     https://www.youtube.com/watch?v=liWdn92SAvs -- Real Programming vs Tutorials (Done)
     https://www.youtube.com/watch?v=P6oqhAxV0dA -- Allocating memory with malloc, calloc, realloc, and free (Done)
@@ -341,6 +341,13 @@ C on Linux (code prefix cc)
     https://www.youtube.com/watch?v=Rwtsx0BfLxk -- C with Caleb - C Tutorial 09 - C Basics Part 1 - Variables, Expressions, Statements (Done)
     https://www.youtube.com/watch?v=tPlT9mg7bkw -- C with Caleb - C Tutorial 10 - C Basics Part 2 - Print Variables Using Printf (Done)
     https://www.youtube.com/watch?v=EA8K2d3USDc -- C with Caleb - C Tutorial 11 - C Basics Part 3 - Taking Input from User (Done)
+
+Bluefever Software
+    https://www.youtube.com/playlist?list=PLZ1QII7yudbdFfKY1eKV3x_bag04AMPJq -- Beginning C Programming Index
+    https://www.youtube.com/watch?v=m1EHPnWOF8w&list=PLZ1QII7yudbdFfKY1eKV3x_bag04AMPJq&index=39&t=308s -- Beginning C Programming - Part 39 - Data Structures #1
+
+Hathibelagal Productions
+    https://www.youtube.com/watch?v=dQyXuFWylm4&t=8s -- How to Parse JSON in C
 
 C Other Sites
     https://www.journaldev.com/c-programming -- algorithm topics and tutorials
@@ -476,6 +483,9 @@ Debugging CGI with GDB
     Find ubuntu logs for Apache at /var/log/apache2/error.log and /var/log/apache2/access.log
     info registers -- show contents of all registers
     info registers eax -- show contents of eax register
+
+CORS Troubleshooting
+    Add an HTML header to each CGI that requests resources from a server host other than the webserver host:  printf("Access-Control-Allow-Origin: *\n\n");
 
 Linters (Static Analysis Tools)
     based on lint by Stephen C Johson Bell Labs 1978
@@ -749,6 +759,8 @@ Data Types
             int 4 bytes 32 bit max value 4294967295
             long 4 bytes 32 bit max value 4294967295
             long long 8 bytes 64 bit 2**64-1
+            size_t typedef of unsigned long in 32 bit compiler -- returned by sizeof(), malloc, memcopy, strlen, etc
+            size_t typedef of unsigned long long in 64 bit compiler -- returned by sizeof(), malloc, memcopy, strlen etc
         Fixed width integer types are defined in /usr/include/stdint.h
             int8_t -- 8 bit integer (always 8 bits on all compilers and platforms)
             uint64_t -- unsigned 64 bit integer (always 64 bits on all compilers and platforms)
@@ -939,14 +951,19 @@ Preprocessor Function-Like Macros
     line continuation uses '\'
 
 Structures
-    struct <StructName> { type <TypeVar>; type <TypeVar>; ...};
-    declaration: struct <StructName> <VarName>
+    struct <StructName> { type <TypeVar>; type <TypeVar>; ...}; -- a semi-colon separated list of types and variable names
+    declaration: struct <StructName> <VarName> -- to declare a structure without using a typedef
     struct <StructName> *<pVarName> = malloc(sizeof(struct <StructName>));
     pVarName-><StuctMember> = <value>
-    You must name a structure and a type when creating a typedef for a structure
-    typedef struct <StructName> { type <TypeVar>; type <TypeVar>; ...} <StructNameType>;
+    You do not have to name a structure ... only name a type when creating a typedef for a structure ... since the structure name would not be needed
+    typedef struct <StructName> { type <TypeVar>; type <TypeVar>; ...} <StructNameType>; -- <StructName> can be omitted from this typedef because <StrucNameType> will be used
     copy a structure by equating the structure name e.g. struct2 = struct1 copies all the element values
     also copy a structure by equating each element of the from/to structures or using memcopy on the structure as a whole
+    Initialize a structure's contents when declaring it, but you cannot use an initializer once it is declared. Each structure member must be assigned a value individually once it is declared
+
+Structure Arrays
+    You can define all values in an array element at once using an initializer
+    You cannot use an initializer for a structure element of an array after the array is declared. Values must be assigned to each element
 
 Abstract Data Structures or Types
     Array

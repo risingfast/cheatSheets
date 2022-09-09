@@ -56,6 +56,9 @@ CS50 Harvard Youtube Doug Lloyd Classes (Done)
     SQL                         https://www.youtube.com/watch?v=AywtnUjQ6X4  (Done)
     AJAX                        https://www.youtube.com/watch?v=dQcBs4S-wEQ  (Done)
 
+Acronms
+    ELF - Executable and Linkable Format
+
 C Programming -- Virtual Training Company (VTC)
     https://www.youtube.com/playlist?list=PLJYx5cxExeL3lpyNDMxMmhyavzL9m5ONu -- VTC Playlist (Done)
     https://www.youtube.com/watch?v=OtBLikJ2bCk&list=PLJYx5cxExeL3lpyNDMxMmhyavzL9m5ONu&index=3 -- C Programming - Using C on the Web (Done)
@@ -204,7 +207,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=wg1wZgCdJPA -- Three strategies for finishing programming projects 10-times faster (Done)
     https://www.youtube.com/watch?v=1Jh9BUxIw0U -- assertions (Done)
     https://www.youtube.com/watch?v=iYRl50gtprA -- Why should I learn assembly language in 2020? (complete waste of time) (Done)
-    https://www.youtube.com/watch?v=JbHmin2Wtmc -- How to write your own code  in C (Done)
+    https://www.youtube.com/watch?v=JbHmin2Wtmc -- How to write your own code libraries in C (Done)
     https://www.youtube.com/watch?v=eQcRcgOnl9o -- Can I Handle Exceptions with Try Catch in C? (setjmp, longjmp) (Done)
     https://www.youtube.com/watch?v=2YfM-HxQd_8 -- Compiling C programs with Multiple Files (Done)
     https://www.youtube.com/watch?v=U161zVjv1rs -- Compiler Optimizations (Done)
@@ -318,6 +321,7 @@ C SpecterDev Tutorials
 
 Computer Science with Kris Jordan
     https://www.youtube.com/channel/UCX2Dop_X6MtbcmEVkbjMpSA -- main landing page
+
 C++ and Assembly javidx9 One Lone Coder (code prefix olc)
     https://www.youtube.com/watch?v=vVRCJ52g5m4 -- 8 bits of advice
     https://www.youtube.com/watch?v=iChalAKXffs -- What are pointers in C++
@@ -349,6 +353,10 @@ C Other Sites
     https://www.youtube.com/watch?v=DWWQEmyVplU -- C Programming Youtube lessons
     https://www.cprogramming.com/tutorial/c-tutorial.html -- short C topics
     https://www.cprogramming.com/tutorial/c++-tutorial.html -- short C++ topics
+    https://www.cprogramming.com/tutorial/shared-libraries-linux-gcc.html -- Shared Libraries with GCC on Lnux
+    https://www.youtube.com/watch?v=Slfwk28vhws -- Write Better Code! | How to Create Shared Libraries in C/C++
+    https://www.youtube.com/watch?v=mUbWcxSb4fw -- Creating and Linking Shared Libraries embeddedarmdev
+    https://www.youtube.com/watch?v=YoyKDZlXCUM -- Introduction to Compiling (embeddedarmdev)
 
 C and CGI
     https://www.eskimo.com/~scs/cclass/handouts/cgi.html -- C and C/CGI tutorials
@@ -369,6 +377,7 @@ Integrated Development Environments
     In Linux and Windows, NetBeans supports 
     http://www.tutorialspoint.com/codingground.htm -- online compilers
     https://ideone.com/
+    http:https://www.jdoodle.com -- online compilers for 
     https://repl.it/
     http://codepad.org/
     http://www.codeblocks.org/downloads/26 -- Code Blocks installable IDE for C
@@ -380,10 +389,6 @@ Integrated Development Environments
     http://www.codeblocks.org/downloads/26 -- Code Blocks installable IDE for C/C++
     https://www.eclipse.org/cdt/ -- Eclipse C/C++ Development Tooling
     https://netbeans.org/features/cpp/ -- Netbeans C/C++ Development
-
-Libc Library Built-ins
-    libc --- the standard library (contains most standard functions: e.g. printf, malloc, calloc, free etc)
-    puts - put a string to the console
 
 Warnings and Tricks
     Do not modify a string literal, only modify arrays (otherwise ... core dump)
@@ -498,21 +503,21 @@ Compilation Process
 
 Compilation Toolchain (Process)
     Both gcc and clang compilers use the same optionss listed here
-    Preprocessing (using .c files to create .i intermediate files)
+    Preprocessing (-E) to include header declarations => .i file (using .c files to create .i intermediate files)
         gcc -E <program.c> -o <program.i>
         -E option: preprocess source files
         Includes header files (#include)
         Expands macros (#define)
         Remove comments
         Substitute MACRO text
-    Compilation (using .i files to create .s assembly files)
+    Compilation (-S) to create assembly source => .i file (using .i files to create .s assembly files)
         gcc -S <program.i> -o <program.s> to generate assembly in program.s
         -S option: preprocess and compile source files
         Discards unreachable code
-    Assembly (using .s files to create .o object files)
+    Assembly (-c_ to create binary or library but not link => .o binary file (using .s files to create .o object files)
         gcc  -c <program.s> -o <program.o>
         -c option: generate object (binary) code from source files
-    Linking (using .o files to create the executable file)
+    Linking (null) to create an executable => no extension (using .o files to create the executable file)
         gcc <program.o> -o <program>
         No option: links object files into executable
         links the libC library but not other libraries like math (use -lm compiler option)
@@ -521,6 +526,26 @@ Compilation Toolchain (Process)
         gcc <myprogram.c> creates a.out compiled executable
         gcc <myprogram.c> -o <program> creates a compiled myprogram'
 
+Compilation Contexts and Output File Types
+    .c -> -E -> .i Intermediate code (preprocessor directives executed, header files included)
+    .c, .i -> -S -> .s source code (assembly) created
+    .c. ,i, is -> -c -> .o object (binary) code created (main compiliation process) without linking
+    .o -> -shared -> .so shared object (binary) code created from .o binary
+    (null) -> (.null)linked executable created 
+
+Compilation Options
+    -o -- name the output file differently to the default
+    -Wall -- enable all warning messages (-c context)
+    -Werror -- make all warnings into errors (-c context)
+    -fPIC -- generates Position Independent Code suitable for shared libraries (-c context)a - no size limit
+    -fpic -- same as fPIC but with memory limitations for faster code
+    -L<directory path> library location for linking ((null) context)
+    -save-temps -- do not delete the intermediate files .i .o .s
+    -I <directory> -- non-standard include file directory
+    -L <lib directory> -- non-standard library file directory
+    -l<libname> -- specific library to link in (e.g. -lm -lc -lpthread)
+    -no-pie -- no position independent executable (changes ELF from shared object to executable
+
 Compiliation of Multiple Files
     Create object (.o) files from source files
         gcc -c <sourcefile1> -- create object file from source
@@ -528,31 +553,10 @@ Compiliation of Multiple Files
     Create single executable by linking multiple object (.o) files
         gcc <sourcefile1.o> <sourcefile2.o>
 
-Libraries
-    A static library is compiled into the source code at compile time
-    A dynamic library is compiled separately and loaded at runtim
-    Creating Dynamic Libraries
-        libmycodde.so: libmycode.c mycode.h
-        $(CC) $(CFLAGS) -fPIC -shared -o $@ libmycode.c -lc
-            .so - loaded at runtime
-            fPIC - position-independent code
-            shared - make a shared library that is loaded only once if multiple programs use it
-    Compiling with Libraries (example Cairo graphics library)
-    Include the header file in the code and use the -I include option in compiliation
-    Use the -l and -L options in compilation for the library
-    gcc -o hello hello.c -I/usr/include/cairo -lcairo -L/usr/lib/cairo
-
-Compiler Optimizations and Optimization Levels
-    gcc -O0 test.c -- no optimizations applied (for debugging)
-    gcc -O1 test.c -- apply level 1 optimizations
-    gcc -O2 test.c -- apply level 2 optimizations
-    gcc -O3 test.c -- apply level 3 optimizations
-    gcc -OFAST -- apply FAST optimizations (non-standard and potentially dangerous)
-    Optimized code should not be debugged in GDB because they change the code (so debug before optimizing)
-    Use the linux 'time' command to measure run time (e.g. time ./<executable>
-
 Make References
     https://www.oreilly.com/openbook/make3/book/
+    U -- undefined
+    T -- text section (i.e. the code section)
 
 Make (GNU Make)
     Makefile comprises recipies of two lines each (multiple recipies allowd)
@@ -583,6 +587,91 @@ Make (GNU Make)
         all: ...  is the default rule in most cases but it can be named anything e.g. default: ...
     The clean: rule lists all the targets to be removed along with intermediate files
         make clean -- to run the clean process
+
+Libraries
+    Static and dynamic libraries are compiled separately, before they are combined with the customer source code
+    A static library is embedded into the source code at soure compile time
+    Static libraries typically contain collections of compiled object fies
+    A dynamic library is loaded at runtime and can be shared by multiple source files
+    Creating Dynamic Libraries
+        libmycodde.so: libmycode.c mycode.h
+        $(CC) $(CFLAGS) -fPIC -shared -o $@ libmycode.c -lc
+            .so - loaded at runtime
+            fPIC - position-independent code
+            shared - make a shared library that is loaded only once if multiple programs use it
+    Compiling with Libraries (example Cairo graphics library)
+    Include the header file in the code and use the -I include option in compiliation
+    Use the -l and -L options in compilation for the library
+    gcc -o hello hello.c -I/usr/include/cairo -lcairo -L/usr/lib/cairo
+
+Shared Libraries (collections of software)
+    shared libraries load at runtime and not at compile time making compiled code smaller and avoiding multiply library loades
+    Shared libraries improve maintenance because fixees apply to everywhere they are used at runtim - only the shared library must be recompiled
+    Shared libary names
+        Real Name: <libname>.so.x.y.z where x, y and z are version, subversion and patch numbers e.g. e.g libname.so.5.3.4
+        Shared Object Name (soname): <libname>.so.x where x is the version name and the subversion and patch names are dropped e.g. libname.so.5
+            implemented as a symbolic link to the real name in the library directory on linux
+        Linker Name: <libname>.so which is referencyed by using <lname> in the linker command
+    library directories: /lib, /usr/lib and /user/local/lib are shared library directories
+    LD_LIBRARY_PATH environment variable is where all default library directories are held
+        e.g. export LD_LIBRARY_PATH=/mnt/c/Users/gjarm/OneDrive/Computing/Languages/clang/codeSandbox/makeLibrary2/
+    create a shared library with an .so extension from source
+       gcc -o libmycode.so -fpic -shared mycode.c -- command line to create a shared object.so file from source. Must be prefixed lib...
+       libmycode.so: libmycode.c mycode.h
+        $(CC) $(FLAGS) -fPIC -shared -o $@ libmycode.c -lc
+            -fPIC is "flag Position Independent Code"
+            -shared is shared library
+            -lc is libc shared library
+    Libraries in makefiles begin with l<libraryname> and are automatically expanded to lib<libaryname>a
+
+iShared Library Detailed Steps
+    #References
+        https://www.youtube.com/watch?v=mUbWcxSb4fw&t=1227s -- Creating and Linking Shared Libraries (embededarmdev)
+    1. compile each library component source file into position independed object files using the -c and -fpic options
+        e.g.gcc -fpic -c source1.c source2.c (option order does not matter: -c -fpic or -fpic -c)
+        creates source1.o and source2.o
+        View the ELF file formats created using 'file *.o' on linux
+    2. compile the object components into a single shared library file
+        e.g. -fpic source1.o source2.o -shared -o libsource.so.1.1.1 -- no -soname option
+        e.g. -fpic source1.o source2.o -shared -Wl,soname,libsource.so.1, -o libsource.so.1.1.1 -- includes soname option
+            the soname is embedded in the .so file ... review withe readelf -a libsource.so.1.1.1 | grep soname
+    3. Create a symbolic link for the soname linking to the library .so file
+        e.g. ln -s libsource.so.1 libsource.so.1.1.1
+    4. Create a linker name for the library as symbolic link
+        ln -s librf50.so.1 lrf50
+    5. Compile the source with the custm library and specify the library directory as current directory
+        e.g. gcc dynLibTest.c -o dynLibTest lrf50 -L .
+    6. Define LD_LIBRARY_PATH as the directory where the compiled library is stored
+        e.g. LD_LIBRARY_PATH="<current library directory>"
+    7. Export the LD_LIBRARY_PATH to the current shell
+        e.g. export LD_LIBRARY_PATH
+    8. Run the executable
+        ./dynLibTest    
+
+Static Libraries (collections of software)
+    Static libraries are created as archive files and compiled into the exeutable file at compile time
+    Static libraries are distributed as archives or .a files
+    Use the ar command within a makefile
+
+
+Libc Library for Built-ins
+    libc --- the standard library (contains most standard functions: e.g. printf(), malloc(), calloc(), realloc(), free() etc)
+    puts - put a string to the console
+
+Compiler Optimizations and Optimization Levels
+    gcc -O0 test.c -- no optimizations applied (for debugging)
+    gcc -O1 test.c -- apply level 1 optimizations
+    gcc -O2 test.c -- apply level 2 optimizations
+    gcc -O3 test.c -- apply level 3 optimizations
+    gcc -OFAST -- apply FAST optimizations (non-standard and potentially dangerous)
+    Optimized code should not be debugged in GDB because they change the code (so debug before optimizing)
+    Use the linux 'time' command to measure run time (e.g. time ./<executable>
+
+nm or Name command
+    nm <objectCode.o> -- shows the symbol table on a binary and which symbols are resolved or unresolved
+
+ldd or List Dependencies
+    ldd <executable>
 
 Memory Model
     The memory model comprises: Code (Text), Static/Global, Stack, and Heap
@@ -828,14 +917,14 @@ Header Files for C (located at /usr/include)
     <stdint.h> -- fixed width integer declarations
     Header Guards are used to avoid including the same header multiple times
         #ifndef <headername> -- start of header guard
-        #define <headername> -- header name (can be any unique name)
+        #define <headername> -- constant for the header name (can be any unique name)
         #endif -- to end the #ifdef block
         
 
 Preprocessor Commands and Directives
     # - indicates a preprocessor directive
     #include <stdio> includes the stdio header file in the code
-    #define -- do define a constant value 
+    #define -- defines a constant value (convention is capitals e.g. MY_PI 3.1415926
 
 Preprocessor Macro Sumbols for Debugging
     __LINE__  line number integer
