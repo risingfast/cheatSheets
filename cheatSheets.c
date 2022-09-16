@@ -21,6 +21,7 @@
  *      03-May-2022 add case-insensitive string comparison in fprintSheet()
  *      05-May-2022 change sheets to sheet in each filename
  *      06-Aug-2022 add the Microsoft cheatsheet
+ *      15-Sep-2022 add Access-Control-Allow-Origin: * CORS http header
  *  Enhancements:
 */
 
@@ -49,11 +50,12 @@ int main(void) {
 
     int i;
 
-// print the html content type and <head> block -----------------------------------------------------------------------
+// print the html content type header and CORS header block -----------------------------------------------------------
 
-    printf("Content-type: text/html\n\n");
+    printf("Content-type: text/html\n");
+    printf("Access-Control-Allow-Origin: *\n\n");
 
-// check for a NULL query string -------------------------------------------------------------------------------------=
+// check for a NULL query string --------------------------------------------------------------------------------------
 
 //    setenv("QUERY_STRING", "action=Json&Filter=dummmy", 1);
 
@@ -78,7 +80,7 @@ int main(void) {
     sSubstring = strtok(NULL, caDelimiter);
     sscanf(sSubstring, "filter=%s", caFilterTemp);
 
-// parse the QUERY_STRING for each argument: Action and Filter ---------------------------------------------------------
+// parse the QUERY_STRING for each argument: Action and Filter --------------------------------------------------------
 
     strcpy(caFilter, fUrlDecode(caFilterTemp));
     sFilter = caFilter;
@@ -86,7 +88,7 @@ int main(void) {
 //    printf("Unencoded: %s", sFilter);
 //    printf("\n\n");
 
-// test if Null or All or non-Null values should be shown ------------------------------------------------------------
+// test if Null or All or non-Null values should be shown -------------------------------------------------------------
 
     if (getenv("QUERY_STRING") == NULL) {
         printf("\n\n");
