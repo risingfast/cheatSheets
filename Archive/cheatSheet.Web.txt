@@ -1,7 +1,6 @@
 Web Cheatsheet (HTML, CSS, JS)
 
 Action Items
-    Enable CORS in Apache
     API Programming in JS and JSON
     Media queries: different CSS for different screen sizes and devices
     Flexbox positioning content in CSS
@@ -17,7 +16,7 @@ Server Directories
 
 Tips and Tricks and Troubleshooting Issues
     Don't use float in an elemet style because the element floats outside it's container <div>
-    Cross Origin Resource Sharing (CORS)
+    Cross Origin Resource Sharing (CORS) - set http response header Access-Control-Allow-Origin: * on server side in Ajax response or CGI
     https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
         
 References
@@ -223,6 +222,14 @@ The Coding Train
     https://www.youtube.com/watch?v=q8SHaDQdul0 -- 16.1: let vs var - Topics of JavaScript/ES6
     https://www.youtube.com/watch?v=2iLVFyYwyRA -- 16.2: const - Topics of JavaScript/ES6
     https://www.youtube.com/watch?v=mrYMzpbFz18 -- 16.3: ES6 Arrow Function - Topics of JavaScript/ES6
+
+JuniorDeveloper and Codebubb
+    https://www.juniordevelopercentral.com/
+    https://www.youtube.com/watch?v=SbsfX88o9gA -- How To Print With JavaScript
+
+Adam Koury
+    https://www.youtube.com/playlist?list=PL00952AC35D0A4701 -- JavaScript Tutorial Videos
+    https://www.youtube.com/watch?v=UJAwNkhbYWM -- Partial Print Document JavaScript Tutorial HTML div Content
 
 Document Object Model (DOM)
     https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction -- DOM introduction
@@ -1160,19 +1167,19 @@ JS Array Methods
     myArray.pop() method removes data from the end of an array and returns the popped value
     myArray.shift() removes the first element from an array
     myArray.unshift() adds an element to the start of the array
-    array.every(<function>) returns true if every item in the array returns true on <function>
-    array.length property returns the array length
-    array.find(<function> returns the first item in an array where <function> returns true
-    array.sort() method sorts the array temporarily
-    array.some(<function>) returns true if an array has any items where <function> returns true
-    array.tostring() method creates a string from an array
-    array.reverse() method reverses the original order of the array
-    array.includes('<element>') -- returns true if element exists in array, othewise returns false
-    array.from(list) converst a list to an array
-    array.forEach(<function>) performs <function> on each element in the array returning a new array
-    array.map(<function>) performs the <function> passed to map to transform each element of the array returning a new array
-    array.filter(<function>) returns elements of the array if the filter <function> returns boolean true
-    array.reduce(<function>) returns a sigle value. The <function> takes two arguments: previous returned value plus current value
+    myAarray.every(<function>) returns true if every item in the array returns true on <function>
+    myArray.length property returns the array length
+    myArray.find(<function> returns the first item in an array where <function> returns true
+    myArray.sort() method sorts the array temporarily
+    myArray.some(<function>) returns true if an array has any items where <function> returns true
+    myArray.tostring() method creates a string from an array
+    myArray.reverse() method reverses the original order of the array
+    myArray.includes('<element>') -- returns true if element exists in array, othewise returns false
+    myArray.from(list) converst a list to an array
+    myArray.forEach(<function>) performs <function> on each element in the array returning a new array
+    amyArray.map(<function>) performs the <function> passed to map to transform each element of the array returning a new array
+    myArray.filter(<function>) returns elements of the array if the filter <function> returns boolean true
+    myArray.reduce(<function>) returns a sigle value. The <function> takes two arguments: previous returned value plus current value
 
 JS Arrays (Two Dimensional)
     Two dimensional arrays are defined as arrays of arrays
@@ -1530,4 +1537,22 @@ Google Sign-in for Websites
     Type: web application
     Client ID: 212964569141-h2jr9eemnpa3r69bqf93mas1ugb3ouov.apps.googleusercontent.com
     https://developers.google.com/identity/gsi/web -- migration services
+
+Printing Webpages
+    References
+         https://www.youtube.com/watch?v=SbsfX88o9gA -- How To Print With JavaScript (using @media print)
+         https://www.youtube.com/watch?v=UJAwNkhbYWM -- Partial Print Document JavaScript Tutorial HTML div Content
+    Print partial webpages by hiding the unwanted areas via css using @media. E.g.
+        @media print {
+            selector {
+                display: none;
+            }
+        }
+        Add a button to the webpage
+            <button onclick="fPrintContent()">Print</button>
+        Add a function to JS
+            function fPrintContent() {
+                window.print();
+            }
+    Print partial webpages by hiding the webpage and then unhiding the printable parts (second approach - see references)
 

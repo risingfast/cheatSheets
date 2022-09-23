@@ -1491,12 +1491,14 @@ JS DOM (Document Object Model) Manipulation
             e.g. p.innerText - returns visible text with no formatting
             e.g. p.textContent - returns visible and hidden text and spacing and formating
 
-JS Event Handlers
+JS Events and Event Handlers
     Added to page elements using element attributes
         e.g. <A HREF="www.google.com" onClick="alert('You clicked Google.');">
     onclick -- button is clicked
     onmouseover -- mouse passes over
     onmouseout -- mouse leaves
+    oninput -- any change to an input or textarea as it happens
+    onchange -- any change to an input or textarea after the element loses focus
 
 JS Locator Functions
     document.getElementById(id) - returns one element node
@@ -1555,4 +1557,14 @@ Printing Webpages
                 window.print();
             }
     Print partial webpages by hiding the webpage and then unhiding the printable parts (second approach - see references)
+        function fPrintBookText() {$                                                                    3195     let restorepage = document.body.innerHTML;$
+            let titleid = document.getElementById("booksid-input").value;$
+            let nametext = document.getElementById("booksname-input").value;$
+            let characterstext = document.getElementById("bookscharacters-textarea").value.replaceAll("\n", "<br />\r\n");$
+            let printcontent = 'Title ID: ' + titleid + '<br><br>'$
+                             + 'Title: ' + nametext + '<br><br>'$
+                             + 'Characters:<br>' + characterstext;$
+            document.body.innerHTML = printcontent;$
+            window.print();$
+            document.body.innerHTML = restorepage;$
 

@@ -413,6 +413,8 @@ Warnings and Tricks
     Heap memory is global
     Seg faults or segmentation faults are caused by accessing memory that is not mapped or allocated to the program (including dereferencing a NULL pointer)
     Use strcmp() and not sizeof() to malloc or calloc string space: sizeof() will only return the size of the first character in the string
+    A NULL pointer is a pointer pointing to nothing.
+    An empty string is a string with a non-NULL address but with the first character as '\0'. It is a NULL string but not a NULL pointer
 
 
 Updating Repositories in Ubuntu using APT (Advanced Packaging Tool)

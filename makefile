@@ -7,6 +7,7 @@
 #       09-Dec-2021 add bookDelRating
 #       10-Dec-2021 add bookDelSeries
 #       10-Dec-2021 add bookDetails2
+#       20-Sep-2022 add .cgi target
 # $@ Target file
 # $^ Dependency files
 # $(CC) Compiler executable
@@ -20,10 +21,13 @@ CC=gcc
 CFLAGS=-g -o
 SQL2FLAGS=-L/usr/lib/x86_64-linux-gnu
 
-all: cheatSheets
+all: cheatsheets cheatsheets.cgi
 
-cheatSheets: cheatSheets.c ../shared/rf50.c
+cheatsheets: cheatsheets.c ../shared/rf50.c
+	$(CC) $(CFLAGS) $@ $^ $(SQL2FLAGS)
+
+cheatsheets.cgi: cheatsheets.c ../shared/rf50.c
 	$(CC) $(CFLAGS) $@ $^ $(SQL2FLAGS)
 
 clean:
-	rm -f *.o *.s *.i cheatSheets
+	rm -f *.o *.s *.i cheatsheets cheatsheets.cgi

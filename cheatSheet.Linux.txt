@@ -212,7 +212,8 @@ Linux Commands
     Command History -- Up arrow (default is 1000 lines), stored in HISTFILE, normally ~/.bash_history/
     Command-line completion -- use tab character to see completion options
     Configuration Files: /etc/environment (global), /etc/profile (shell), ~/.bashrc (user shell)
-    cp -- copy files or directories, -u updates onl
+    cp -- copy files or directories, -u updates only
+    cp -r -- copy all files and recursively copy subdirectories and their contents
     curl -4 icanhazip -- fetch your external ip address with curl
     <Ctrl>-+ -- increase terminal font size
     <Ctrl>-- -- decrease terminal font size
@@ -376,6 +377,7 @@ Linux Commands
     ps -axjf -- 
     pstree -- show processes in parent/child tree
     pwd -- print working directory
+    readelf -a <filename> -- display the contents of an elf file (comppiled object file), -a option = read all
     reboot -- reboot the operating system (requires sudo) reboot --force to force immediate reboot (see shutdown)
     reset -- restore the linux terminal to it's original state (see clear)
     rev -- reverse text
