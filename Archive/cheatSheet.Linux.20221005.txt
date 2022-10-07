@@ -255,7 +255,6 @@ Linux Commands
     echo $SHELL -- display the current shell
     echo $0 -- display the current shell in use
     env [command] -- (or printenv) shows environment variables including $PATH. Allows running a command in a new environment
-    environment variables -- set and unset e.g. QUERY_STRING="mystring", export QUERY_STRING, echo $QUERY_STRING, unset QUERY_STRING
     epoch -- 01 Jan 1970, aka the Unix Epoch
     exec <command> -- execute a command in the current shell (vs fork and exec for normal commands)
     exec bash -- create a new bash shell in the current shell
