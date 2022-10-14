@@ -21,7 +21,9 @@
  *      03-May-2022 add case-insensitive string comparison in fprintSheet()
  *      05-May-2022 change sheets to sheet in each filename
  *      06-Aug-2022 add the Microsoft cheatsheet
- *      15-Sep-2022 add Access-Control-Allow-Origin: * CORS http header
+ *      10-Oct-2022 add a line counter to the output
+ *      10-Oct-2022 add a trap for invalid action
+ *      10-Oct-2022 remove caText parameter from fPrintSheet(FILE *f, char *caText, char *caFilter)
  *  Enhancements:
 */
 
@@ -33,8 +35,6 @@
 
 #define MAXLEN 1024
 
-char caText[MAXLEN] = {'\0'};
-char caTextFltr[MAXLEN] = {'\0'};
 char caAction[MAXLEN] = {'\0'};
 char *sAction = NULL;
 char caFilter[MAXLEN] = {'\0'};
@@ -44,58 +44,62 @@ char *sParams = NULL;
 char *sSubstring = NULL;
 char caDelimiter[] = "&";
 
-void fPrintSheet(FILE *, char *, char *);
+void fPrintSheet(FILE *, char *);
 
 int main(void) {
 
     int i;
 
-// print the html content type header and CORS header block -----------------------------------------------------------
+// print the html content type and <head> block ------------------------------------------------------------------------
 
-    printf("Content-type: text/html\n");
-    printf("Access-Control-Allow-Origin: *\n\n");
+    printf("Content-type: text/html\n\n");
 
-// check for a NULL query string --------------------------------------------------------------------------------------
+// check for a NULL query string ---------------------------------------------------------------------------------------
 
 //    setenv("QUERY_STRING", "action=Json&Filter=dummmy", 1);
 
     sParams = getenv("QUERY_STRING");
 
-    if(sParams == NULL) {
-        printf("\n");
-        printf("Query string is empty. Terminating program");
+    if (sParams == NULL) {
+        printf("Query string is NULL. Expecting QUERY_STRING=\"action=<cheatsheet>&filter=<optionalfilter>\". Terminating program");
         printf("\n\n");
         return 1;
     }
 
-//    printf("QUERY_STRING: %s", getenv("QUERY_STRING"));
-//    printf("\n\n");
+    if (sParams[0] == '\0') {
+        printf("Query string is empty (non-NULL). Expecting QUERY_STRING=\"action=<cheatsheet>&filter=<optionalfilter>\". Terminating program");
+        printf("\n\n");
+        return 1;
+    }
 
-//  get the content from QUERY_STRING and tokenize based on '&' character----------------------------------------------
+//    printf("QUERY_STRING: %s", getenv("QUERY_STRING"));                                  // uncomment for testing only
+//    printf("\n\n");                                                                      // uncomment for testing only
+
+//  get the content from QUERY_STRING and tokenize based on '&' character-----------------------------------------------
 
     sSubstring = strtok(sParams, caDelimiter);
     sscanf(sSubstring, "action=%s", caAction);
+
+    if (caAction[0] == '\0') {
+        printf("Action is empty (non-NULL). Expecting QUERY_STRING=\"action=<cheatsheet>&filter=<optionalfilter>\". Terminating program");
+        printf("\n\n");
+    }
     sAction = caAction;
 
     sSubstring = strtok(NULL, caDelimiter);
     sscanf(sSubstring, "filter=%s", caFilterTemp);
 
-// parse the QUERY_STRING for each argument: Action and Filter --------------------------------------------------------
+// parse the QUERY_STRING for each argument: Action and Filter ---------------------------------------------------------
 
     strcpy(caFilter, fUrlDecode(caFilterTemp));
     sFilter = caFilter;
 
-//    printf("Unencoded: %s", sFilter);
-//    printf("\n\n");
+//    printf("Unencoded: %s", sFilter);                                                    // uncomment for testing only
+//    printf("\n\n");                                                                      // uncomment for testing only
 
-// test if Null or All or non-Null values should be shown -------------------------------------------------------------
+// test if Null or All or non-Null values should be shown --------------------------------------------------------------
 
-    if (getenv("QUERY_STRING") == NULL) {
-        printf("\n\n");
-        printf("No parameter string passed");
-        printf("\n\n");
-    }
-    else if (strstr(getenv("QUERY_STRING"), "Assembly") != NULL) {
+    if (strstr(getenv("QUERY_STRING"), "Assembly") != NULL) {
         FILE *f;
         f = fopen("cheatSheet.Assembly.txt", "r");
         if (f == NULL) {
@@ -103,7 +107,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Web") != NULL) {
@@ -114,7 +118,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Clang") != NULL) {
@@ -125,7 +129,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Cpp") != NULL) {
@@ -136,7 +140,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Microsoft") != NULL) {
@@ -147,7 +151,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "MySQL") != NULL) {
@@ -158,7 +162,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Networks") != NULL) {
@@ -169,7 +173,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Perl") != NULL) {
@@ -180,7 +184,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Regex") != NULL) {
@@ -191,7 +195,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Linux") != NULL) {
@@ -202,7 +206,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Vi") != NULL) {
@@ -213,7 +217,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Git") != NULL) {
@@ -224,7 +228,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Markdown") != NULL) {
@@ -235,7 +239,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Python") != NULL) {
@@ -246,7 +250,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Oracle") != NULL) {
@@ -257,7 +261,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "VsCode") != NULL) {
@@ -268,7 +272,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "GCP") != NULL) {
@@ -279,7 +283,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Apache2") != NULL) {
@@ -290,7 +294,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Yaml") != NULL) {
@@ -301,7 +305,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "Arduino") != NULL) {
@@ -312,7 +316,7 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
     }
     else if (strstr(getenv("QUERY_STRING"), "JSON") != NULL) {
@@ -323,18 +327,29 @@ int main(void) {
             printf("\n\n");
         }
         else {
-            fPrintSheet(f, caText, sFilter);
+            fPrintSheet(f, sFilter);
         }
+    }
+    else {
+        printf("QUERY_STRING \"%s\" option invalid. Nothing printed", sParams);
+        printf("\n\n");
     }
     return 0;
 }
 
-void fPrintSheet(FILE *f, char *caText, char *caFilter)
+// print each line of any cheatsheet
+
+void fPrintSheet(FILE *f, char *caFilter)
 {
+    int iLineNo = 0;
+    char caText[MAXLEN] = {'\0'};
+    char caTextFltr[MAXLEN] = {'\0'};
+
     while (fgets(caText, MAXLEN, f) != NULL) {
         strcpy(caTextFltr, caText);
+        iLineNo++;
         if ((strstr(toUpperStr(caTextFltr), toUpperStr(caFilter)) != NULL) || (strlen(caFilter) == 0)) {
-            printf("%s", caText);
+            printf("%4d %s", iLineNo, caText);
         }
     }
     fclose(f);

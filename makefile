@@ -21,13 +21,13 @@ CC=gcc
 CFLAGS=-g -o
 SQL2FLAGS=-L/usr/lib/x86_64-linux-gnu
 
-all: cheatsheets cheatsheets.cgi
+all: cheatSheets cheatSheets.cgi
 
-cheatsheets: cheatsheets.c ../shared/rf50.c
+cheatSheets: cheatSheets.c ../shared/rf50.c
 	$(CC) $(CFLAGS) $@ $^ $(SQL2FLAGS)
 
-cheatsheets.cgi: cheatsheets.c ../shared/rf50.c
+cheatSheets.cgi: cheatSheets.c ../shared/rf50.c
 	$(CC) $(CFLAGS) $@ $^ $(SQL2FLAGS)
 
 clean:
-	rm -f *.o *.s *.i cheatsheets cheatsheets.cgi
+	rm -f *.o *.s *.i cheatSheets cheatSheets.cgi

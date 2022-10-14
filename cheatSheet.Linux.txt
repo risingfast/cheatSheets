@@ -363,6 +363,7 @@ Linux Commands
     netstat -ie -- network configuration located in /etc/xinet, netstat -ntlp
     nohup -- run a process without interruption if the submitter logs off
     nslookup -- look up an ip address for a dns name nslookup google.com
+    ntpdate time.windows.com -- to synchronize the clock date and time on Linux subsystem for Windows (as sudo)
     passwd -- change the password of the current user
     passwd <username> -- change passwd of any user
     PID -- process ID
