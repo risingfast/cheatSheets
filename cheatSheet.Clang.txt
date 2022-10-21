@@ -290,6 +290,9 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=8T0WOABe7OY -- What about Pointer Arithmetic with Void Pointers? (Done)
     https://www.youtube.com/watch?v=8a3HyL1VN0Q -- A const int is not a constant
     https://www.youtube.com/watch?v=aAAtROsWskc -- What the FizzBuzz? (A toy problem worth caring about?)
+    https://www.youtube.com/watch?v=p-FiE1C4tfQ -- How to Read Just One Character from the Terminal (stdin)? (Done)
+    https://www.youtube.com/watch?v=ykaaFfOPGdU -- How to get better help with your programming (Done)
+    https://www.youtube.com/watch?v=bdO9mEYeaQw -- The Good and Bad of Automatic Make Rules (Done)
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -345,7 +348,9 @@ C on Linux (code prefix cc)
 Bluefever Software
     https://www.youtube.com/playlist?list=PLZ1QII7yudbdFfKY1eKV3x_bag04AMPJq -- Beginning C Programming Index
     https://www.youtube.com/watch?v=DWWQEmyVplU&list=PLZ1QII7yudbdFfKY1eKV3x_bag04AMPJq&index=1&t=19s -- Beginning C Programming - Part 1 - Compiler and Editor Install
+    https://www.youtube.com/watch?v=vDUqc1j73gs&list=PLZ1QII7yudbdFfKY1eKV3x_bag04AMPJq&index=8 -- Beginning C Programming - Part 8 - User Input with fgets() and strncmp()
     https://www.youtube.com/watch?v=m1EHPnWOF8w&list=PLZ1QII7yudbdFfKY1eKV3x_bag04AMPJq&index=39&t=308s -- Beginning C Programming - Part 39 - Data Structures #1
+
 
 Hathibelagal Productions
     https://www.youtube.com/watch?v=dQyXuFWylm4&t=8s -- How to Parse JSON in C
@@ -366,6 +371,7 @@ C Other Sites
     https://www.youtube.com/watch?v=mUbWcxSb4fw -- Creating and Linking Shared Libraries embeddedarmdev
     https://www.youtube.com/watch?v=YoyKDZlXCUM -- Introduction to Compiling (embeddedarmdev)
     https://cplusplus.com/ -- Reference > C Library -- C std library refernences
+    https://codeforwin.org/ -- Panjak Prakesh exercises in C and examples
 
 C and CGI
     https://www.eskimo.com/~scs/cclass/handouts/cgi.html -- C and C/CGI tutorials
@@ -806,6 +812,7 @@ Strings
     char a[] = "This is a another string";
     man string in Linux returns the man page for C string functions
     string literals are declared as "this is a string" and the ending null terminator is implicitly added by the compiler
+    strncmp(<str1>, <str2>i, len) returns 0 if strings match for len characters (in string.h) 
 
 Pointers
     pointer variables are typed
@@ -873,7 +880,7 @@ Variable Definitions
     definitions assigne values to variables
     variables should be declared and defined at the same time to avoid unexpected results
 
-Variable and Funcion Qualifiers (reserved words or keywords)
+Variable and Function Qualifiers (reserved words or keywords)
     extern -- declares a variable in one translation unit and uses it in another
     volatile -- qualifies a variable as changeable by another process (compiler instruction) to prevent it being optimized out
     const -- a value that is not allowed to change. const variables are typed so the compiler can type-check the use in a program
@@ -896,6 +903,9 @@ Loops
     while <condition> {...} -- loops while condition is true
     do {...} while <condition> -- loops while <condition> is true after executing once
     for (<start>, <loop condition>, <end>) {...} -- loops while <loop condition> is true
+
+Input Functions
+    etc() -- get a single character from stdin and terminate if EOF
 
 File Commands
     fopen(), fclose(), fgetc(), fputc(), fread(), fwrite()
@@ -1002,7 +1012,7 @@ Functions in the lib.c library and Other Libraries
     memcpy( &a, &b, sizeof(<type>)); -- copies memory from b to a #include string.h
     memset(<buffer>, <value>, <size>) -- set a block of memory in bytes to a value
     printf() -- print a formatted string to STDOUT
-    realloc() -- e.g. arr = realloc(arr, sizeo(int)*200) increases the allocation of memory to an existing pointer in bytes, passing a NULL pointer works like malloc(), #include <stdlib.h>
+    realloc() -- e.g. arr = realloc(arr, sizeo(int)*200) increases the allocation of memory to an existing pointer in bytes, passing a NULL pointer, works like malloc() with no initialization of extra memory, #include <stdlib.h>
     sizeof() -- the number of bytes in an array or data type
     stat() -- get file status #include <sys/stat.h>
     strchr(<string>, <char>) -- finds a pointer to the first character in the string, or NULL

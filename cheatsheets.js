@@ -23,10 +23,12 @@
 //    31-May-2022 set cornerimage rotation
 //    18-Jun-2022 move fSetCornerImage() to common.js
 //    07-Aug-2022 clear the filter on action change
+//    16-Sep-2022 change www.risingfast.com to gjarman2020.com
+//    15-Oct-2022 trap the 'Choose' option and prevent futher processing
 
 // globals
 
-const uri1 = "http://www.risingfast.com/cgi-bin/cheatSheets.cgi";
+const uri1 = "http://gjarman2020.com/cgi-bin/cheatSheets.cgi";
 
 function fClearCheatsheetsPage() {
 
@@ -76,7 +78,11 @@ function fSetAction() {
     c = document.getElementById("clearButton");
     c.disabled=false;
 
-    fGetResults();
+    if (s.value != 'Choose') {
+        fGetResults();
+    } else {
+        document.getElementById("resultsArea").value="";
+    }
 }
 
 // function to ajax fetch text2 from the server

@@ -113,6 +113,11 @@ Record Selection and sorting
     select * from <tablename> order by  field (<fieldname>, 'value1', 'value4', 'value3', 'value2') for custom ordering
     select * from <tablename> where <condition> limit [<offset>,] <number>; to limit lines in the result starting at offset (base zero)
 
+Record Selection in JSON Format
+    Use function JSON_OBJECT to assign field tags and select table columns in a table quey
+        SELECT JSON_OBJECT('TitleID', `Title ID`, 'TitleName', `Title Name`y) FROM risingfast.`Book Titles`; -- selects table date in JSON format
+    The field order may be altered in the output for query optimization
+
 Record Manipulation
     insert into <tablename> (col1, coll2) values ('My First Record', 'First'), ('My Second Record', 'Second'); -- insert multiple rows
     INSERT INTO table_name(column_list) SELECT select_list FROM another_table WHERE condition; -- insert into table by selecting records from other tables
