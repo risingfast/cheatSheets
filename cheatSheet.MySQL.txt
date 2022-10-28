@@ -103,6 +103,7 @@ References
     https://dev.mysql.com/doc/c-api/8.0/en/c-api-data-structures.html -- MySQL Data Types
     https://dev.mysql.com/doc/c-api/8.0/en/ -- C API reference
     https://zetcode.com/db/mysqlc/ -- C API tutorial for MySQL
+    https://stackoverflow.com/questions/17112852/get-the-new-record-primary-key-id-from-mysql-insert-query -- retrieving a record ID on insert
 
 Record Selection and sorting
     select concat(<col1>, <col2) from <tablename> -- concatenate columns
@@ -112,6 +113,7 @@ Record Selection and sorting
     select * from <tablename> where <col1> in ('val1', 'val2', val3'); select matching members
     select * from <tablename> order by  field (<fieldname>, 'value1', 'value4', 'value3', 'value2') for custom ordering
     select * from <tablename> where <condition> limit [<offset>,] <number>; to limit lines in the result starting at offset (base zero)
+    select last_insert_id() -- select the generated record key for the last insert
 
 Record Selection in JSON Format
     Use function JSON_OBJECT to assign field tags and select table columns in a table quey

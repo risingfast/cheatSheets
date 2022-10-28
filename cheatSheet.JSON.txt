@@ -4,6 +4,7 @@ References
      https://www.youtube.com/watch?v=iiADhChRriM -- Learn JSON in 10 Minutes
      https://www.json.org/json-en.html -- includes a list of parser libraries for languages
      https://www.w3schools.com/js/js_json_intro.asp -- JSON tutorial
+     https://linuxprograms.wordpress.com/2010/08/19/json_object_new_object/ -- create a JSON object in C using the C json library
 
 Overview
     JSON Javascript Object Notation
@@ -54,3 +55,13 @@ Example
 Javascript and JSON
     JSON.parse() -- converts a string into a JSON object
     JSON.stringify() -- converts a JSON object into a string
+
+JSON and C
+    Include <json/json.h>
+    compile with -ljson-c , for example ...
+        jsontest: jsontest.c$
+        ^I$(CC) $(CFLAGS) $@ $^ -ljson-c$
+
+Sample Programs
+    C:\Users\gjarm\OneDrive\Computing\Languages\cLang\codeSandbox\jsontest.c -- sample program to read json in C
+    C:\Users\gjarm\OneDrive\Computing\Languages\cLang\codeSandbox\json4Ajax.c -- sample program to create a json response to an ajax call

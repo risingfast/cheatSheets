@@ -43,7 +43,6 @@ char caFilterTemp[MAXLEN] = {'\0'};
 char *sParams = NULL;
 char *sSubstring = NULL;
 char caDelimiter[] = "&";
-char *sTemp = NULL;
 
 void fPrintSheet(FILE *, char *);
 
@@ -51,12 +50,13 @@ int main(void) {
 
     int i;
 
-// print the html content type and CORS <header> block -----------------------------------------------------------------
+// print the html content type and <head> block ------------------------------------------------------------------------
 
-    printf("Content-type: text/html\n");
-    printf("Access-Control-Allow-Origin: *\n\n");
+    printf("Content-type: text/html\n\n");
 
 // check for a NULL query string ---------------------------------------------------------------------------------------
+
+//    setenv("QUERY_STRING", "action=Json&Filter=dummmy", 1);
 
     sParams = getenv("QUERY_STRING");
 
@@ -66,13 +66,14 @@ int main(void) {
         return 1;
     }
 
-// test for an empty (non-NULL) query string ---------------------------------------------------------------------------
-
     if (sParams[0] == '\0') {
         printf("Query string is empty (non-NULL). Expecting QUERY_STRING=\"action=<cheatsheet>&filter=<optionalfilter>\". Terminating program");
         printf("\n\n");
         return 1;
     }
+
+//    printf("QUERY_STRING: %s", getenv("QUERY_STRING"));                                  // uncomment for testing only
+//    printf("\n\n");                                                                      // uncomment for testing only
 
 //  get the content from QUERY_STRING and tokenize based on '&' character-----------------------------------------------
 
@@ -90,10 +91,11 @@ int main(void) {
 
 // parse the QUERY_STRING for each argument: Action and Filter ---------------------------------------------------------
 
-    sTemp = fUrlDecode(caFilterTemp);
-    strcpy(caFilter, sTemp);
+    strcpy(caFilter, fUrlDecode(caFilterTemp));
     sFilter = caFilter;
-    free(sTemp);
+
+//    printf("Unencoded: %s", sFilter);                                                    // uncomment for testing only
+//    printf("\n\n");                                                                      // uncomment for testing only
 
 // test if Null or All or non-Null values should be shown --------------------------------------------------------------
 
