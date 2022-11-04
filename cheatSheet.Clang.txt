@@ -293,6 +293,11 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=p-FiE1C4tfQ -- How to Read Just One Character from the Terminal (stdin)? (Done)
     https://www.youtube.com/watch?v=ykaaFfOPGdU -- How to get better help with your programming (Done)
     https://www.youtube.com/watch?v=bdO9mEYeaQw -- The Good and Bad of Automatic Make Rules (Done)
+    https://www.youtube.com/watch?v=JgUbcu9d70Q -- How to Debug a Program when the Output Looks Right (Done)
+    https://www.youtube.com/watch?v=4p564Su-F9M -- What are the Most Important CS Courses? (Done)
+    https://www.youtube.com/watch?v=Htwj4jJQeRc -- Is there Garbage Collection in C and C++? (Done)
+    https://www.youtube.com/watch?v=PVIzokTJdVM -- How to Automatically Run a Function When My Program Exits. (atexit)
+    https://www.youtube.com/watch?v=kjHDnUjaai4 -- Incremental Programmers Finish First (Done)
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -424,7 +429,6 @@ Warnings and Tricks
     A NULL pointer is a pointer pointing to nothing.
     An empty string is a string with a non-NULL address but with the first character as '\0'. It is a NULL string but not a NULL pointer
 
-
 Updating Repositories in Ubuntu using APT (Advanced Packaging Tool)
     sudo apt-get update -- update the package database list from all external repositories
     sudo apt-get upgrade -- upgrade all installed packages with newer versions
@@ -438,6 +442,12 @@ Updating Repositories in Ubuntu using APT (Advanced Packaging Tool)
     sudo apt-get purge < package_name1> <package_name2> ... -- removes named packages and their configuration files
     sudo apt-cache pkgnames <pckge search term> -- searches for existing package names based on partial search term
     sudo apt-cache search <search term> -- searches package names and descriptions
+
+Debuggin Techniques
+    Use gdb
+    Examine output files in hex/binary with xxd (linux)
+    Strip debug code with 'strip <filename> after finishing testinga
+    Use assertions in the code and remove after debugging (see assertions for the removal tool)
 
 Debugging with GDB
     gdb ./<executable> to run debug
@@ -496,6 +506,9 @@ Debugging CGI with GDB
 
 CORS Troubleshooting
     Add an HTML header to each CGI that requests resources from a server host other than the webserver host:  printf("Access-Control-Allow-Origin: *\n\n");
+
+Formatters
+    indent (e.g. indent from.c -o to.c) formats c code (backup from.c before running)
 
 Linters (Static Analysis Tools)
     based on lint by Stephen C Johson Bell Labs 1978
@@ -645,7 +658,7 @@ Shared Libraries (collections of software)
             -lc is libc shared library
     Libraries in makefiles begin with l<libraryname> and are automatically expanded to lib<libaryname>a
 
-iShared Library Detailed Steps
+Shared Library Detailed Steps
     #References
         https://www.youtube.com/watch?v=mUbWcxSb4fw&t=1227s -- Creating and Linking Shared Libraries (embededarmdev)
     1. compile each library component source file into position independed object files using the -c and -fpic options
@@ -721,6 +734,10 @@ Special Format Characters
     \t  -- tab
     \v  -- vertical tab -- drop vertically w/out carriage returning
     \\  -- backslash
+
+Line Continuation
+    A single line of code can be broken into two lines without special continuation characters by adding a newline in any space
+    A quoted string of text or a token name can be broken into two line with the '\' character  but the second lone of the string should not be indented
 
 CS50 Harvard Class
     Documentation: https://cs50.harvard.edu/college/2020/fall/tutorials/
@@ -963,7 +980,7 @@ Preprocessor Macro Sumbols for Debugging
 Preprocessor Function-Like Macros
     #define FUNC(A, B) (A < B) ? A : B) -- the () identifies the define as a function-like macro
     Use inner {} for compound expressions (i.e. multi-line)
-    line continuation uses '\'
+    line continuation uses '\' to continue quoted strings across multiple lines
 
 Structures
     struct <StructName> { type <TypeVar>; type <TypeVar>; ...}; -- a semi-colon separated list of types and variable names
@@ -1000,10 +1017,12 @@ Functions
     Call by value uses standard variables as actual arguments and not pointers
 
 Functions in the lib.c library and Other Libraries
+    abort() - end a program immediately without call to atexit() raises the SIGABRT signal (requires stdlib.h). 
+    atexit(*func(void)) - function automatically invoked when a program terminates via a return statement, takes a function name/pointer as it's argument (e.g. write a log message or delete temp files)
     calloc() -- e.g. int *arr = calloc(sizeof(int), 100); and sets bytes to zero, specifies memoy required in bytes, #include <stdlib.h>
     calloc() returns a void pointer which must be cast to a specific pointer type
     dprintf() -- print to a file descriptor, like STDOUT_FILENO
-    exit(<number>) -- system call to close the current program
+    exit(<number>) -- system call to close the current program and return <number> to the calling program
     free(ptr) -- frees memory allocated to ptr with malloc or calloc (set ptr = NULL afterwards), do not free the same memory twice, #include <stdlib.h>
     index(<string>, <char>) -- returns a pointer to the first occurance of <char> in <string> or returns NULL
     main() -- where a C program starts

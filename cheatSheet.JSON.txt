@@ -52,6 +52,10 @@ Example
         ]
     }
 
+Field References
+    jsonVar.name -- references the name field
+    jsonVar["Error Message"] -- references the "Error Message" field (the field name is multi-word with spaces)
+
 Javascript and JSON
     JSON.parse() -- converts a string into a JSON object
     JSON.stringify() -- converts a JSON object into a string

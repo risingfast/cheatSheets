@@ -470,4 +470,5 @@ Linux Commands
     who -- show all logged in users and terminal sessions
     whoami -- show current user, same as id -un.
     xargs -- run a command multiple time from std input e.g. find /tmp -mtime +14 | xargs rm  to rm all files over 14 days old in /tmp
+    xxd -- hex dump utility e.g. xxd myfile.txt
     yes -- outputs a stream of 'y' characters or other (e.g. yes charString)
