@@ -1,4 +1,4 @@
-vard CS50 Introduction to GDB (Done)
+Harvard CS50 Introduction to GDB (Done)
     https://www.youtube.com/watch?v=y5JmQItfFck -- Harvard cs50 (2015) GDB (Done)
     https://www.youtube.com/watch?v=-G_klBQLgdc -- Harvard CS50 (2105) Debugging (Visual) (Done)
     https://www.youtube.com/watch?v=y5JmQItfFck -- Harvard CS50 (2015) GDB (Done)
@@ -225,6 +225,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=mfmXcbiRs0E -- Learning GDB
     https://www.youtube.com/watch?v=zkV-MoTosPE -- Debug faster with conditional breakpoints (GDB)
     https://www.youtube.com/watch?v=A_pV61xFty8 -- How to examine memory in GDB
+    https://www.youtube.com/watch?v=mm0b_H0KIRw -- Debug faster with gdb layouts (TUI)
     https://www.youtube.com/watch?v=7MhJmLV6tdM -- Be more productive with better command-line tools (exa, bat, rg)
     https://www.youtube.com/watch?v=dPxCGlW9lfM -- Why do programmers use hexadecimal numbers
     https://www.youtube.com/watch?v=ADh_OFBfdEE -- What are environment variables
@@ -298,6 +299,8 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=Htwj4jJQeRc -- Is there Garbage Collection in C and C++? (Done)
     https://www.youtube.com/watch?v=PVIzokTJdVM -- How to Automatically Run a Function When My Program Exits. (atexit)
     https://www.youtube.com/watch?v=kjHDnUjaai4 -- Incremental Programmers Finish First (Done)
+    https://www.youtube.com/watch?v=iX1uGr6Si0E -- Better Portability with Standard Integers (Done)
+    https://www.youtube.com/watch?v=vusV4lF0Epo -- Why printf is Magically Breaking Your Program (Done)
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -356,11 +359,10 @@ Bluefever Software
     https://www.youtube.com/watch?v=vDUqc1j73gs&list=PLZ1QII7yudbdFfKY1eKV3x_bag04AMPJq&index=8 -- Beginning C Programming - Part 8 - User Input with fgets() and strncmp()
     https://www.youtube.com/watch?v=m1EHPnWOF8w&list=PLZ1QII7yudbdFfKY1eKV3x_bag04AMPJq&index=39&t=308s -- Beginning C Programming - Part 39 - Data Structures #1
 
-
 Hathibelagal Productions
     https://www.youtube.com/watch?v=dQyXuFWylm4&t=8s -- How to Parse JSON in C
 
-C Other Sites
+C Other Site References
     https://www.journaldev.com/c-programming -- algorithm topics and tutorials
     https://www.codewithc.com/ -- references and tutorials
     https://beej.us/guide/ -- C tutorial pdf's including networking and IPC
@@ -377,6 +379,8 @@ C Other Sites
     https://www.youtube.com/watch?v=YoyKDZlXCUM -- Introduction to Compiling (embeddedarmdev)
     https://cplusplus.com/ -- Reference > C Library -- C std library refernences
     https://codeforwin.org/ -- Panjak Prakesh exercises in C and examples
+    https://en.wikibooks.org/wiki/C_Programming -- C Programming tutorial topics
+    https://sourceware.org/gdb/onlinedocs/gdb/TUI-Commands.html#TUI-Commands -- TUI Commands for GDB
 
 C and CGI
     https://www.eskimo.com/~scs/cclass/handouts/cgi.html -- C and C/CGI tutorials
@@ -396,8 +400,9 @@ Integrated Development Environments
         The path to Anjuta on the graphical desktop is Development/Integrated Environment/Anjuta IDE
     In Linux and Windows, NetBeans supports 
     http://www.tutorialspoint.com/codingground.htm -- online compilers
+    https://www.tutorialspoint.com/online_c_compiler.php -- online C compiler
     https://ideone.com/
-    http:https://www.jdoodle.com -- online compilers for 
+    https://www.jdoodle.com -- online compilers for 
     https://repl.it/
     http://codepad.org/
     http://www.codeblocks.org/downloads/26 -- Code Blocks installable IDE for C
@@ -443,11 +448,38 @@ Updating Repositories in Ubuntu using APT (Advanced Packaging Tool)
     sudo apt-cache pkgnames <pckge search term> -- searches for existing package names based on partial search term
     sudo apt-cache search <search term> -- searches package names and descriptions
 
-Debuggin Techniques
+Program Structure and Memory Structure
+    High memory address
+        stack
+        libraries
+        empty
+        heap
+        globals
+        code
+    Low memory address
+    The break is he highest memory address in the heap (break with 'empty')
+
+Binary and Memory Sizes
+    Nibble: 4 bits e.g. F (decimal 1 - 15) (hex 0 - F)
+    Byte  : 8 bits, 2 nibbles  e.g. FF (decimal 1 - 255) (hex 0 - FF)
+    Page  : 12 bits, 3 nibbles e.g. FFF (decimal 1 - 4095) (hex 0 - FFF) -- minimum size of new memory allocations with mmap() and brk() 
+
+Memory Management
+    brk() and sbrk()
+        void *ptr = brk -- moves the memory break (top of the heap) up to a new address (use sbrk(0) to get the current break address
+        void *ptr = sbrk(nbytes) -- moves the memory break (top of the heap) up by nbytes and returns a void pointer to the original break address
+        Both brk and sbrk move the brk in increments of one 4k page
+        #include <unistd> is required for both functions
+    mmap() and munmap() -- map or unmap files or devices into memory
+
+Debugging and Troubleshooting Techniques
     Use gdb
     Examine output files in hex/binary with xxd (linux)
-    Strip debug code with 'strip <filename> after finishing testinga
+    Strip debug code with 'strip <filename> after finishing testing
     Use assertions in the code and remove after debugging (see assertions for the removal tool)
+    strace <executableprogram> -- system call trace
+    ltrace -- library trace including calls to libc standard library
+    see 'IDE Tools'
 
 Debugging with GDB
     gdb ./<executable> to run debug
@@ -458,51 +490,83 @@ Debugging with GDB
     -g3 opton in gcc to include debug information including macros
     -ggdb option in gcc to include all debug information - most detailed
     http://www.gnu.org/software/gdb/documentation/ -- GNU reference
+    break nn or fn (or 'b') -- set a breakpoint at a line no nn or function name fn
     b <lineno> or breakpoint <lineNo> -- set a breakpoint at a line
     b <lineno> if <expr) -- conditional breakpoint (e.g. b 20 if i>10)
     b main or breakpoint main -- set a breakpoint at main
     b <functionName> -- set a breakpoint on a function
-    bt or backtrace -- show function call history to current point
+    backtrace (or bt) -- show function call history (the callstack) to current point
     clear <lineNo> -- clear breakpoint
-    c or continue -- run to next break or watch
+    continue (or c) -- run to next break or watch
     <Ctrl>-u -- undo characters at command line
-    delete <lineNo> -- delete a breakpoint or watchpoint at line number
     d <lineNum> or disable <lineNum> -- disable breakpoint at line number
+    delete -- delete all breakpoints and watchpoints
+    delete <idNum> -- delete a breakpoint or watchpoint with idNum (found using display)
+    display <var> [, <var2>, <var3>]-- display variable values at each step in debugging
+    down -- move down the call stack
     e or enable -- enable breakpoint at line number
     <enter> -- repeat last command
     file <filename> -- load a file for debugging
+    finish -- finish the current function and stop and show the return value
     frame -- show he current stack frame
     gdb <program_name> to start gdb
-    info locals -- show local variables
-    info w -- show current watchpoints
-    info b -- show current breakpoints
+    info locals (or i l) -- show local variables
+    info w (or i w) -- show current watchpoints
+    info b (or i b) -- show current breakpoints
+    list -- show 5 lines before and 4 after the current line
+    list nn, nn -- list lines from line nn to line nn
     l <linNum> or list <lineNum> -- list 10 lines around line num
     l <from> <to>  -- list code in a range of line numbers
-    layout next -- show the lines of code in a separate window, then 'next' for each layout
-    n or next -- run the current code line (step over library functions)
-    p <var> or print <var> -- print the value of <var>
-    q or quit -- end the debug session
+    layout next -- show the lines of code in a separate window, then 'next' for each layout (TUI via curses)
+    next (or n) -- run the current code line (step over library functions)
+    nexti -- next assembly instruction
+    print (or p) <var> or <expr> -- print the value of <var> or <exp>
+    quit (or q) -- end the debug session
     r or run or restart -- run/debug program or restart current session
-    set <var> = <val> -- set a variable to a value
+    reverse next (or rn) -- step backthrough the code (if target record full is done)
+    set var <varname> = <val> -- set a variable <varname> to a value
     start -- set a breakpoint at main and submit 'run'
     s or step -- run the current code line (step into library functions)
-    w <var> or watch <var> -- set a watch on a variable
+    stepi -- next assembly instruction (in a called library function)
+    target record full
+    tui disable - switch out of tui mode
+    tui enable - switch to TUI mode
+    undisplay (lineId) -- undisplay all values on display line (lineId)
+    up -- move up the call stack
+    watch <var> or w -- set a watch on a variable and stop when it changes
+    what is <var> -- show the type of <var>
     x/<num>b -- examine num bytes of memory
     x/<num>i -- examine num instructions
     x/<num>s -- examine num strings
     x/<num>xh -- examine num halfwords
 
+Debugging with GDB and TUI (Terminal User Mode)
+    layout next -- show the next layout or start TUI
+    tui enable -- start TUI
+    tui disable -- end TUI
+    info win -- list windows and sizes
+    layout next (or prev, src, asm, split, rgs) -- displays next window layout
+    focus next, prev, src, asm, regs, cmd -- moves cursor to different windows
+    tui reg next, rev, general, float, system, vector, all
+
+    stepi -- step through a single assembly instruction (with asm window displayed)
+
 Debugging CGI with GDB
-    Add sleep(60) to the code at the first breakpoint
-    Run it
-    Get the PID ps ax | grep <exe file name>
-    Attach gdb sudo gdb -p PID
-    Attach gdb to running process: sudo gdb --pid=PID
-    Continue stepping from the sleep()
-    Always include header in CGI as printf("Content-Type: text/html\n\n") whether printing or not
-    Find ubuntu logs for Apache at /var/log/apache2/error.log and /var/log/apache2/access.log
-    info registers -- show contents of all registers
-    info registers eax -- show contents of eax register
+    Running in the web
+        Add sleep(60) to the code at the first breakpoint
+        Run it
+        Get the PID ps ax | grep <exe file name>
+        Attach gdb sudo gdb -p PID
+        Attach gdb to running process: sudo gdb --pid=PID
+        Continue stepping from the sleep()
+        Always include header in CGI as printf("Content-Type: text/html\n\n") whether printing or not
+        Find ubuntu logs for Apache at /var/log/apache2/error.log and /var/log/apache2/access.log
+        info registers -- show contents of all registers
+        info registers eax -- show contents of eax register
+    Running as the terminal
+        Add a header entry in the CGIa to avoid CORS errors then submit the program in the terminal
+             printf("Content-type: text/html\n");$
+             printf("Access-Control-Allow-Origin: *\n\n");$
 
 CORS Troubleshooting
     Add an HTML header to each CGI that requests resources from a server host other than the webserver host:  printf("Access-Control-Allow-Origin: *\n\n");
@@ -515,9 +579,12 @@ Linters (Static Analysis Tools)
     cppcheck <progName.c>  -- on a single C program
     cppcheck ./*c -- on all C programs in the current directory
 
-Coredump(in Linux)
+Core Dump(in Linux)
+    Core dumps are saved in a file 'core'' in the current directory by the operating system
+    ulimit -c must be changed to allow saving a core dump (default ulimit -c is zero bytes)
     ulimit -c unlimited -- to set the size of the coredump file to unlimited
-    gdb <prgram> core -- to run gdb to the point of failure
+    gdb <prgram> core -- to run gdb to the point of failure in <prgam>
+    Requires debug mode set in gcc
 
 Linker and Assembler
     Reference: https://www.youtube.com/watch?v=GV10eIuPs9k -- Jacob Sorber
@@ -763,7 +830,7 @@ IDE Tools
     objdump -d <binary filename> -- dump the disassembed code of an binary file
     readelf --symbols <binary filename> (ELF = Executable and Linkable Format) -- lists symbols in the executable
     readelf --segments <binary filename> (ELF = Executable and Linkable Format) -- lists symbols in the executable
-    strace <executableprogram> -- sytem call trace
+    strace <executableprogram> -- system call trace
     strings -- extracts and lists printable strings from a file including a binary file or executable
     strings -- extracts and lists printable strings from a file including a binary file or executable
     godbolt.org -- compiler explorer showing source code and coresponding asssembly code
@@ -958,7 +1025,7 @@ Header Files for C (located at /usr/include)
     Header files contain declarations (usually) and creates the interface to a translation unit (the combined header file and source file)
     <stdio.h> is a header in the C standard library
     'myheader.h' is a header file in the local source directory
-    <stdint.h> -- fixed width integer declarations
+    <stdint.h> -- fixed width integer declarations: int8_t, uint8_t, int16_t, uint16_t, int32_t, uint32_t, int64_t, uint64_t etc
     Header Guards are used to avoid including the same header multiple times
         #ifndef <headername> -- start of header guard
         #define <headername> -- constant for the header name (can be any unique name)
@@ -1018,6 +1085,7 @@ Functions
 
 Functions in the lib.c library and Other Libraries
     abort() - end a program immediately without call to atexit() raises the SIGABRT signal (requires stdlib.h). 
+    asprintf(&ptr, <format>, <vars>) -- prints formatted text to a string and stores in a perfectly sized buffer, takes an address to a pointer, needs to be freed after use, requires  '#define _GNU_SOURCE' before #include <stdio.h>
     atexit(*func(void)) - function automatically invoked when a program terminates via a return statement, takes a function name/pointer as it's argument (e.g. write a log message or delete temp files)
     calloc() -- e.g. int *arr = calloc(sizeof(int), 100); and sets bytes to zero, specifies memoy required in bytes, #include <stdlib.h>
     calloc() returns a void pointer which must be cast to a specific pointer type
@@ -1033,6 +1101,9 @@ Functions in the lib.c library and Other Libraries
     printf() -- print a formatted string to STDOUT
     realloc() -- e.g. arr = realloc(arr, sizeo(int)*200) increases the allocation of memory to an existing pointer in bytes, passing a NULL pointer, works like malloc() with no initialization of extra memory, #include <stdlib.h>
     sizeof() -- the number of bytes in an array or data type
+    sleep(nseconds) -- sleep or pause for nseconds (see also usleep)
+    snprintf() -- prints formatted text to a buffer not to exceed n bytes
+    sprintf() -- prints formatted text to a string buffer
     stat() -- get file status #include <sys/stat.h>
     strchr(<string>, <char>) -- finds a pointer to the first character in the string, or NULL
     strcpy(dest, source) -- copies the source string to the destination string
@@ -1040,6 +1111,7 @@ Functions in the lib.c library and Other Libraries
     strsep(
     strstr(<string1>, <string2>) -- finds a pointer to <string2> within <string1> or NULL
     strlen(<string>) gives the length of a string excluding the null terminator, #include <string.h>
+    usleep(nuseconds) -- sleep or pause for nuseconds (ie. micoseconds)
     write(int fildes, const void *buf, size_t nbytes)
         #include <unistd>
         fildes == file descriptor like 0 STDIN_FILENO, 1 STDOUT_FILENO, or 2 STDERR_FILENO

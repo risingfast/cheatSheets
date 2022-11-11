@@ -11,6 +11,9 @@ History of Versions
     2020 C++20 (C++2a)
     2023 C++23 (C++2b) Future release as of 2022
 
+Conferences
+    https://cppcon.org/
+
 Resources and References
     https://www.youtube.com/watch?v=8jLOx1hD3_o -- + Programming Course - Beginner to Advanced
     https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1132/ -- Stanford Class CS106B Pogramming Abstractions
