@@ -24,6 +24,7 @@
  *      10-Oct-2022 add a line counter to the output
  *      10-Oct-2022 add a trap for invalid action
  *      10-Oct-2022 remove caText parameter from fPrintSheet(FILE *f, char *caText, char *caFilter)
+ *      16-Dec-2022 change strcpy() to strncpy()
  *  Enhancements:
 */
 
@@ -37,7 +38,7 @@
 
 char caAction[MAXLEN] = {'\0'};
 char *sAction = NULL;
-char caFilter[MAXLEN] = {'\0'};
+char caFilter[MAXLEN + 1] = {'\0'};
 char *sFilter = NULL;
 char caFilterTemp[MAXLEN] = {'\0'};
 char *sParams = NULL;
@@ -91,7 +92,7 @@ int main(void) {
 // parse the QUERY_STRING for each argument: Action and Filter ---------------------------------------------------------
 
     sTemp = fUrlDecode(caFilterTemp);
-    strcpy(caFilter, sTemp);
+    strncpy(caFilter, sTemp, MAXLEN);
     sFilter = caFilter;
     free(sTemp);
 
@@ -340,11 +341,11 @@ int main(void) {
 void fPrintSheet(FILE *f, char *caFilter)
 {
     int iLineNo = 0;
-    char caText[MAXLEN] = {'\0'};
-    char caTextFltr[MAXLEN] = {'\0'};
+    char caText[MAXLEN + 1] = {'\0'};
+    char caTextFltr[MAXLEN + 1] = {'\0'};
 
     while (fgets(caText, MAXLEN, f) != NULL) {
-        strcpy(caTextFltr, caText);
+        strncpy(caTextFltr, caText, MAXLEN);
         iLineNo++;
         if ((strstr(toUpperStr(caTextFltr), toUpperStr(caFilter)) != NULL) || (strlen(caFilter) == 0)) {
             printf("%4d %s", iLineNo, caText);

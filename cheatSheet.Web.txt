@@ -152,7 +152,7 @@ Brad Schiff's Miscellaneous Courses
     https://www.youtube.com/watch?v=pMVO1OPfVJ8&t=0s -- CSS Grid Tutorial: Responsive Design Examples
     https://www.youtube.com/RachelAndrew -- CSS Grid and Layouts by Rachel Andrew
     https://www.youtube.com/LayoutLand -- Layout Land Jen Simmons
-    https://www.youtube.com/watch?v=rJesac0_Ftw -- JSON and AJAX Tutorial: With Real Examples
+    https://www.youtube.com/watch?v=rJesac0_Ftw -- JSON and AJAX Tutorial: With Real Examples (Done)
     https://www.youtube.com/watch?v=z7ikpQCWbtQ&list=PLpcSpRrAaOargYaCNYxZCiFIp9YTqEl-l&in -- Learn Express.js In 48 Minutes: Web Server Tutorial
     https://www.youtube.com/watch?v=xq34NS4S59o&list=PLpcSpRrAaOargYaCNYxZCiFIp9YTqEl-l&index=16 -- Create An API: CORS, SPA / Client-Side Routing Explanation
 
@@ -553,8 +553,10 @@ HTML Tags and Attributes (tags always lower case and attributes always s/d-quote
     <html> -- whole document element
     <img src="https://lorempixel.com/420/320/abstract/1/Sample"/> -- image self-closing element with src attribute
     <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"> -- with src and size attributes - alt is text if image can't be displayed
+    <input> -- data input field, optionally associated with a label element using the for= attribute on the label
     <i> -- italic
     <ins> -- inserted text (underlined)
+    <label> -- text optionally tied to an input element
     <link rel="stylesheet" type="text/css" href="theme.css"> -- CSS link in the <head> tag region
     <main> -- main document content
     <mark> -- highlighted (background highlighting)
@@ -1499,6 +1501,7 @@ JS Events and Event Handlers
     onmouseout -- mouse leaves
     oninput -- any change to an input or textarea as it happens
     onchange -- any change to an input or textarea after the element loses focus
+    onblur -- loss of focus on an element
 
 JS Locator Functions
     document.getElementById(id) - returns one element node
@@ -1516,19 +1519,25 @@ JS GET Requests
     The format is <URL>?param1=<value1>&param2=<value2>&param3=<value3> ...
     The parameter string is saved as the QUERY_STRING environment variable in the server, starting after the ? separator
 
-JS Fetch and promise using .then or async and await (in Ajax Calls)
-    Fetch returns a promise
-    Promises are handled with .then() or async await syntax e.g. fetch('rainbow.jpg').then(response => {return response.blob();});
-        .then can be chained for successive handling, and chained to .catch for errors
-    Example
-        async function start() {
-            const response = await fetch("https://dog.ceo/api/breeds/list/all");  -- fetch is async and must include 'await' in it's call
-            const jsonData = await response.json();                               -- response is converted to json
-            console.log(jsonData);                                                -- extract the json data from the response
-        start();                                                                  -- call the async function which also returns a response 
-        start().catch(error => {                                                  -- or call the async function with a .catch if it returns an error response
-            console.log(error);
-        });
+JS AJAX Requests (using XMLHttpRequests or fetch)
+    AJAX is implemented by XMLHttpRequests (aka XHR) or by Fetch which is a simplified syntax uses promises
+    XMLHttpRequest
+        var ourRequest = new XMLHttpReques();
+        ourRequest.open('GET', <url>)
+        ourRequest.onload = function() ... etc
+    Fetch and promise using .then or async and await (in Ajax Calls)
+        Fetch returns a promise
+        Promises are handled with .then() or async await syntax e.g. fetch('rainbow.jpg').then(response => {return response.blob();});
+            .then can be chained for successive handling, and chained to .catch for errors
+        Example
+            async function start() {
+                const response = await fetch("https://dog.ceo/api/breeds/list/all");  -- fetch is async and must include 'await' in it's call
+                const jsonData = await response.json();                               -- response is converted to json
+                console.log(jsonData);                                                -- extract the json data from the response
+            start();                                                                  -- call the async function which also returns a response 
+            start().catch(error => {                                                  -- or call the async function with a .catch if it returns an error response
+                console.log(error);
+            });
 
 MongoDB Notes
     MDB References

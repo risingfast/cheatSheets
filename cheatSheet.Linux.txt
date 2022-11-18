@@ -243,7 +243,7 @@ Linux Commands
     df - h -- 'disk free' hunab readable space and used space on mounted file systems, df -h for human readable
     dict <word> -- search online dictionaries for references to <word>
     dictionary file -- see /usr/share/dict/words file
-    dmesg -- reads the kernel messages
+    dmesg -- read the kernel messages including messages created by drivers using printk() function in C
     dos2unix -- convert dos file format to unix (see also unix2dos)
     dpkg -- Debian Package Manager, to install locally downloaded packages. e.g dkg -l to list installed packages
     du -- disk usage, showing sizes of directories and files defaulting to current directory
@@ -345,6 +345,7 @@ Linux Commands
     ls -la | wc -l -- count the number of entries in a directory
     lsb_release -a -- 'Linux Standard Base' 'all info' shows release or version of Operating System (Ubuntu linx
     lsblk -- list all block devices (physical devices) attached to the computer (sda = SCSI drive, sda1 = SCSI Partion, hda = IDE drive, hda1 = IDE partition)
+    lsmod -- list current running drivers (modules)
     lsof -- list open files and the processes using them
     make -- run make to create object files from C source after ./configure is run in source directory
     make install -- install a C executable after make is run

@@ -188,7 +188,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=BQJBe4IbsvQ -- Reading and Writing Files in C (Done)
     https://www.youtube.com/watch?v=m7E9piHcfr4 -- How to Map Files into Memory in C (mmap)
     https://www.youtube.com/watch?v=2AmP7Pse4U0 -- Spying on running programs (strace and ltrace) (Done)
-    https://www.youtube.com/watch?v=MruzHlXqspU -- What if my open file gets deleted? (Done)
+    https://www.youtube.com/watch?v=MruzHlXqspU -- What if my open fil gets deleted? (Done)
     https://www.youtube.com/watch?v=MCVa1ZhQaqI -- How Arguments are Passed to Functions in C (and most other languages) (Done)
     https://www.youtube.com/watch?v=uT-YLEHwVS4 -- Arrays, Pointers and Why Arrays Start at Zero? (Done)
     https://www.youtube.com/watch?v=rww_OHQOmbs -- Fixed and variable arrays in C and C++ (Done)
@@ -301,6 +301,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=kjHDnUjaai4 -- Incremental Programmers Finish First (Done)
     https://www.youtube.com/watch?v=iX1uGr6Si0E -- Better Portability with Standard Integers (Done)
     https://www.youtube.com/watch?v=vusV4lF0Epo -- Why printf is Magically Breaking Your Program (Done)
+    https://www.youtube.com/watch?v=6c1nCsbwUEk -- How to Resize an Array in C/C++? Is there a best way? (Done)
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -381,6 +382,8 @@ C Other Site References
     https://codeforwin.org/ -- Panjak Prakesh exercises in C and examples
     https://en.wikibooks.org/wiki/C_Programming -- C Programming tutorial topics
     https://sourceware.org/gdb/onlinedocs/gdb/TUI-Commands.html#TUI-Commands -- TUI Commands for GDB
+    https://www.youtube.com/watch?v=ssJY5MDLjlo -- C Programming for Beginners | Full Course (Kevin Brown)
+    https://www.youtube.com/playlist?list=PLc7W4b0WHTAWusrFLTv8abWMIYFimp7bi -- Low Level Learning C Programming
 
 C and CGI
     https://www.eskimo.com/~scs/cclass/handouts/cgi.html -- C and C/CGI tutorials
@@ -564,7 +567,7 @@ Debugging CGI with GDB
         info registers -- show contents of all registers
         info registers eax -- show contents of eax register
     Running as the terminal
-        Add a header entry in the CGIa to avoid CORS errors then submit the program in the terminal
+        Add a header entry in the CGI to avoid CORS errors then submit the program in the terminal
              printf("Content-type: text/html\n");$
              printf("Access-Control-Allow-Origin: *\n\n");$
 
@@ -1021,16 +1024,17 @@ Signal Handling and Signals
     signal(SIGINT, handler) -- registers the handler() function to invoke when SIGINT occursa
 
 Header Files for C (located at /usr/include)
-    Header files for the standard c library in /usr/include in Linux
+    Header files are C source files containing declarations: constants and function prototypes (but not function definitinos)
     Header files contain declarations (usually) and creates the interface to a translation unit (the combined header file and source file)
+    Header files for the standard c library in /usr/include in Linux
     <stdio.h> is a header in the C standard library
     'myheader.h' is a header file in the local source directory
     <stdint.h> -- fixed width integer declarations: int8_t, uint8_t, int16_t, uint16_t, int32_t, uint32_t, int64_t, uint64_t etc
-    Header Guards are used to avoid including the same header multiple times
-        #ifndef <headername> -- start of header guard
-        #define <headername> -- constant for the header name (can be any unique name)
-        #endif -- to end the #ifdef block
-        
+
+Header Guards are used to avoid including the same header multiple times
+    #ifndef <headername> -- start of header guard, where <headername> is normally the filename (e.g. MYHEADER_H)
+    #define <headername> -- constant for the header name (can be any unique name)
+    #endif -- to end the #ifdef block
 
 Preprocessor Commands and Directives
     # - indicates a preprocessor directive
@@ -1092,6 +1096,7 @@ Functions in the lib.c library and Other Libraries
     dprintf() -- print to a file descriptor, like STDOUT_FILENO
     exit(<number>) -- system call to close the current program and return <number> to the calling program
     free(ptr) -- frees memory allocated to ptr with malloc or calloc (set ptr = NULL afterwards), do not free the same memory twice, #include <stdlib.h>
+    gets() -- get a string from stdin (use fgets() to avoid buffer overflow)
     index(<string>, <char>) -- returns a pointer to the first occurance of <char> in <string> or returns NULL
     main() -- where a C program starts
     malloc() - e.g int *x = malloc(sizeof(int)), int *arr = (int *)malloc(sizeof(int)*100) etc or NULL, specifies memory required in bytes, memory is not initialized, #include <stdlib.h>
@@ -1103,14 +1108,15 @@ Functions in the lib.c library and Other Libraries
     sizeof() -- the number of bytes in an array or data type
     sleep(nseconds) -- sleep or pause for nseconds (see also usleep)
     snprintf() -- prints formatted text to a buffer not to exceed n bytes
-    sprintf() -- prints formatted text to a string buffer
+    sprintf(char *dest, char *src, size_t n) -- prints formatted text to a string buffer for n characters
     stat() -- get file status #include <sys/stat.h>
     strchr(<string>, <char>) -- finds a pointer to the first character in the string, or NULL
-    strcpy(dest, source) -- copies the source string to the destination string
+    strcpy(dest, source) -- copies the source string to the destination string (use strncpy to avoid buffer overflow)
     strdup(source) -- allocates a string dest and copies source to dest returning dest. dest must be free()'ed when no longer needed
     strsep(
     strstr(<string1>, <string2>) -- finds a pointer to <string2> within <string1> or NULL
     strlen(<string>) gives the length of a string excluding the null terminator, #include <string.h>
+    system(<command>) runs a system command from within a c program
     usleep(nuseconds) -- sleep or pause for nuseconds (ie. micoseconds)
     write(int fildes, const void *buf, size_t nbytes)
         #include <unistd>
@@ -1202,3 +1208,12 @@ C and CGI
 
 MySQL Connection
     /usr/include/mysql/ -- header files incl mysql.h
+
+Regular Expressions
+    Sandbox Sprograms: d_regex.c, d_regexscanf.c, stripDebugInfo.c
+    Steps
+        #include <regex.h>a
+        regex_t <patternName> -- declare a variable name for the regex pattern
+        regcom(<patternName>, <patternDef>, 0); -- define the regular expression and compile it into the pattern variable
+        regexec(<patternName, <textToMatch>, 0, NULL, 0) -- execute the regular expression comparison to the text and return 0 if finds a matche
+

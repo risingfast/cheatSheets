@@ -30,6 +30,7 @@ Resources and References
     https://www.cplusplus.com/doc/tutorial/ -- Tutorial and resources
     https://www.tutorialspoint.com/cplusplus/ -- Tutorialspoint C++ tutorial set
     https://google.github.io/styleguide/cppguide.html#C++_Version -- Google C++ Coding Standards
+    https://www.engineer4free.com/cplusplus.html -- Engineer4Free C++ Full Course
 
 C++ Code Beauty (code prefix cb)
     https://www.youtube.com/watch?v=GQp1zzTwrIg -- C++ FULL COURSE For Beginners (Learn C++ in 10 hours)
