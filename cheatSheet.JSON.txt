@@ -20,7 +20,13 @@ Use Cases
     VSCode configuration
 
 Syntax
-    Datatype support: strings, numbers, booleans, null, arrays, objects (key:value pairs)
+    Datatype support: 
+        strings -- enclosed in double-quote 
+        numbers -- integers and floats
+        booleans -- true or fals (unquoted)
+        null -- as unquoted null, represents 'empty' value
+        arrays -- enclosed in {} amd comma-separated
+        objects -- {} containing key:value pairs comma separated
     Top level of a file is an object or an array
     file has .json extension
     Lists or arrays are surrounded by []
@@ -31,11 +37,17 @@ Syntax
 Comments
     JSON does not support comments
 
+File Extension
+    .json
+
+MIME Type
+    "Applicatoin/json"
+
 Online Validators and Linters
     https://jsonlint.com/ -- validates and formats JSON
     https://jsonformatter.curiousconcept.com/#about -- validates, formats, allows indent setting and full-page view
 
-Example
+Example JSON Object
     {
         "name": "Geoffrey",
         "favoriteNumber": 3,
@@ -51,6 +63,15 @@ Example
             }
         ]
     }
+
+Example JSON Array of Objects
+    {People:
+        [{"name": "John", "Age": "20"},
+         {"name": "Mary": "Age": "34"},
+         {"name": "Fred": "Age": "55"}
+        }
+    }
+         
 
 Field References
     jsonVar.name -- references the name field

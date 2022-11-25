@@ -241,7 +241,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=7mKfWrNQcj0 -- Strings can get you hacked
     https://www.youtube.com/watch?v=6Dk8s0F2gow -- Getting command line arguments in C
     https://www.youtube.com/watch?v=GV10eIuPs9k -- Debugging with Core Dumps
-    https://www.youtube.com/watch?v=uA8X5zNOGw8 -- Threads
+    https://www.youtube.com/watch?v=uA8X5zNOGw8 -- How to create and join threads in C (pthreads)
     https://www.youtube.com/watch?v=ss1-REMJ9GA -- Creating new processes with fork()
     https://www.youtube.com/watch?v=kDxjcyHu_Qs -- Making forked clones more useful with exec()!
     https://www.youtube.com/watch?v=a8mPKBxQ9No -- Learn Make in 60 seconds)
@@ -845,7 +845,7 @@ C Language Rules
     Constants: use const prefix to make a variable fixed and unchangeable (i.e immutable)
     volatile: prefix a variable to prevent optimizations on it
     Storage Classes: Automatic, External , Static, Register
-    Strings: are immutable if defined as strings but not as arrays
+    Strings: are immutable if defined as strings but not as arrays (e.g  chr *chrStr1 = "These are words")
     sleep(seconds) -- <unistd.h>
     ternary conditionals: int x = (expr) ? 1 : 2;
 
@@ -1019,9 +1019,6 @@ File Commands
     ftell() -- get the current file position
     feof() -- tells if EOF is reached
     ferror() -- tells if file error is set
-
-Signal Handling and Signals
-    signal(SIGINT, handler) -- registers the handler() function to invoke when SIGINT occursa
 
 Header Files for C (located at /usr/include)
     Header files are C source files containing declarations: constants and function prototypes (but not function definitinos)
@@ -1217,3 +1214,26 @@ Regular Expressions
         regcom(<patternName>, <patternDef>, 0); -- define the regular expression and compile it into the pattern variable
         regexec(<patternName, <textToMatch>, 0, NULL, 0) -- execute the regular expression comparison to the text and return 0 if finds a matche
 
+Processes and Threads
+    Processes
+        Processes are instances of running programs
+        Each process has it's own stack segment in memory and is isolated from any other process
+    Threads
+        Threads are instances of running programs which share the same stack segment in memory
+        Each thread runs concurrently
+
+Signals (Software Interrupts)
+    #include <signal.h>a
+    write a function to act as the handler with declaration void hsndler(int)
+    signal(<signal>, <function>); -- define a function to handle a signal
+        signal(SIGINT, handler) -- registers the handler() function to invoke when SIGINT occurs
+    getpid() -- get the process id of the current process
+    signals inlcude:
+        SIGINT -- interrupt the process (same as <Ctrl>-c on the keyboard)
+        SIGTERM -- terminate the process
+        SIGKILL -- kill the process (cannot be handled by a signal handler)
+        SIGTSTP -- stop the process
+        SIGSEGV -- segfault signal
+        SIGFPE  -- floating point error (e.. divide by zero)
+        SIGSTOP -- stop a process and block it
+        SIGCONT -- unblock a prevously blocked or stopped state

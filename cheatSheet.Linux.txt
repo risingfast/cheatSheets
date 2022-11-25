@@ -26,6 +26,14 @@ References
     https://www.youtube.com/watch?v=NsK7OPlK94U&t=431s -- Linux Command-Line Tips & Tricks: Over 15 Examples! (Done)
     https://0xax.gitbooks.io/linux-insides/content/ -- Linux Insides book
     https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-ubuntu-1804 -- Ubuntu Cron job how-to
+    https://www.youtube.com/watch?v=mXw9ruZaxzQ&list=TLPQMTgxMTIwMjKpq-VJdRmp9w&index=1 2:45:43 Operating System Full Course
+    https://www.youtube.com/watch?v=9GDX-IyZ_C8 -- Operating System Basics (Brian WIll)
+    https://www.youtube.com/watch?v=xHu7qI1gDPA -- Unix system calls (1/2) (Brian Will)
+    https://www.youtube.com/watch?v=2DrjQBL5FMU -- Unix system calls (2/2) (Brian Will)
+    https://www.youtube.com/watch?v=9-KUm9YpPm0 -- Hardware Basics (Brian Will)
+    https://www.youtube.com/watch?v=zJTqTs7Ujr8&list=PLW1yb8L3S1ngGmtKlI5XYcTNQQ1r3xZvq&index=1 -- M1U1L1 Overview: Introducing the OS (Mitch Davis)a
+    https://www.youtube.com/watch?v=Ku1gdK7ybAk&list=PLW1yb8L3S1ngGmtKlI5XYcTNQQ1r3xZvq&index=2 -- M1U1L2 Overview: OS terminology (Mitch Davis)
+
 
 Engineer Man Linux on Youtube
     https://www.youtube.com/watch?v=UFIoRLqhFpo -- Linux File System
@@ -123,7 +131,7 @@ Linux Commands
     /etc/group -- group accounts and members
     /etc/passwd -- user accounts: login name, uid, login gid, account name, home directory, login shell
     /etc/profile -- systemwide environment variables for all users
-    /etc/shadow -- the shadow file for the /etc/passwd file
+    /etc/shadow -- the shadow file for the n/etc/passwd file
     /etc/shells -- list of shells
     /etc/sudoers -- sudo privileges
     /etc/sudoers.tmp -- sudo privileges updated by 'sudo visudo'
@@ -198,7 +206,10 @@ Linux Commands
     calendar -- shows 2 day listing of current calendar events
     cat -Ans <filename> -- writes a file to stdout, reads from <stdin> if no file specified, -Ans show all chars, number lines and suppress repeating blank lines
     cat /etc/passwd
-    cd <path> -- change directory, cd - ,change to previous/prior working directory, cd ~</path> change to home directory path, cd  change to home directory , default is $HOME
+    cd <path> -- change directory
+    cd - ,change to previous/prior working directory
+    cd ~</path> change to home directory path
+    cd  change to home directory , default is $HOME
     chgrp -- change a file group
     chmod -- change mode (security)
     chown -- change ownership of a file or directory, chown -R to recursively change ownership of subidirectories and contents
@@ -323,18 +334,21 @@ Linux Commands
     invocation -- /etc/profile > /etc/bash_bashrc > ~/.bash_profile > ~/.bash_login > ~./profile > ~/.bashrc
     jobs -- list foreground and background jobs spawned within a shell and their status (a shell builtin)
     join -- join records in two files on a matching field
-    journalctl -fu <unitname> -- follow the log entries on a log file for a unit 
-    kill [signal] pid -- kill process with PID, -l list signals and numbers, e.g.kill -9 1234
-    kill - INT 22 (i.e. kill -2)-- interrupt process 22 with the SIGINT signal
-    kill - TERM 22 (i.e. kill -15)-- terminate process 22 with the SIGTERM signal - superior to SIGINT
-    kill - KILL 22 (i.e. kill -9) -- kill process 22 with the SIGKILL signal - superior to SIGTERM and cannot be blocked
-    kill - TSTP 22 (i.e. kill -20) -- kill process 22 with the SIGTSTP signal - terminal stop or <ctrl>-z
+    journalctl -fu <unitname> -- follow the log entries on a log file for a unit
+    kill -- send a signal (software interrupt), so named because the most common default action of a signal is to kill a process
+    kill -l -- list all signals
+    kill [signalSuffix] pid -- kill process with PID, -l list signals and numbers, e.g.kill -9 1234
+    kill -INT 22 (i.e. kill -2)-- interrupt process 22 with the SIGINT signal
+    kill -TERM 22 (i.e. kill -15)-- terminate process 22 with the SIGTERM signal - superior to SIGINT
+    kill -KILL 22 (i.e. kill -9) -- kill process 22 with the SIGKILL signal - superior to SIGTERM and cannot be blocked or handled
+    kill -TSTP 22 (i.e. kill -20) -- kill process 22 with the SIGTSTP signal - terminal stop or <ctrl>-z
+    kill -STOP 22 (i.e. kill -19) -- kill process 22 with the SIGSTOP signal - cannot be blocked or handled
     ld -- gnu linker
-    ldd -- list libraries used by a binary execcutable
+    ldd <path/executable> -- list libraries used by a binary execcutable
     less <filename> -- scroll through any text file's contents, e.g. ldd <program binary name>
     ll -- list directory contents in detail (see also ls -la)
     ln -s <filepath> [linkhome] -- create symbolic (soft) link (symlink), -s symbolic
-    ln <filepath> [linkhome] -- create hard link
+    ln <filepath> [linkhome] -- create hard link (see unlink to remove)
     locate <filename> -- find files or directories from a database maintained by updatedb
     ls -- list (files and subdirectories) in the current directory, -a show hidden , -l long format, -h human readable, -i show inode number, --color=never to disable color
     ls -lR | grep "filename" to list all files matching a regex filename in the current directory and subdirectories
@@ -388,6 +402,7 @@ Linux Commands
     rev -- reverse text
     rm -- remove files and directories, -r recursive (for directories and contents and subdirectories)
     rm -r <directory> remove a directory and all subdirectories
+    rm -rf <directory> remove a directory and all subdirectories and force deletion (no prompting)
     rmdir -- remove directory (must be empty, otherwise use rm -r for recursive delete)
     rsync -- syncrhonize folders between directories or hosts (e.g. sudo rsync -azvv /home/path/folder1/ /home/path/folder2)
     script <filename> -- stores bash shell session in a file
@@ -396,6 +411,7 @@ Linux Commands
     set -- show and set environment variables and shell variables (see unset)
     shift -- move command line arguments one position left
     shopt -- shell options e.g. shopt to show current option settings
+    shopt -s nocaseglob -- disable case sensitive behaviour for the ls command
     shutdown -h now -- shutdown the system (see also halt) e.g. shutdown -r 5 shutdown and reboot in 5 mins (see also reboot)
     signals -- SIGINT, SIGTERM
     sleep n -- sleep n seconds, e.g. sleep 30, sleep 360 &, 
@@ -435,7 +451,7 @@ Linux Commands
     tee <filename> -- split stdout to console and file, e.g. ls | tee <filename>
     test <filename> -- use in conditional && commands to execute second command if test is successful
     time <command> -- runs command and prints elapsed time: real is total elapsed, user is CPU time in user mode and sys is time in kernal mode
-    top -- continuously updated process list sorted by CPU activity. Use h for help and q to quit (see also htop)
+    top -- continuously updated process list sorted by CPU activity. Use h for help and q to quit (see also htop). Shows available memory and CPU utilization
     touch -- creates a new file or changes the timestamp on an existing file
     tr -- translate characters in a file
     traceroute -- determine the route of network packets
@@ -452,6 +468,7 @@ Linux Commands
     uname -a -- prints basic system information like operating system version
     uniq -- show unique lines or duplicate lines in a sorted file
     unix2dos -- convert unix file format to dos (see also dos2unix)
+    unlink -- remove a symbolic link (see ln to create a symbolic link)
     unset <shellVar> -- delete a shell variable (see set and export)
     updatedb -- updates the locate database for file name searching
     uptime -- show uptime and user count
