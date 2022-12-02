@@ -33,6 +33,9 @@ References
     https://www.youtube.com/watch?v=9-KUm9YpPm0 -- Hardware Basics (Brian Will)
     https://www.youtube.com/watch?v=zJTqTs7Ujr8&list=PLW1yb8L3S1ngGmtKlI5XYcTNQQ1r3xZvq&index=1 -- M1U1L1 Overview: Introducing the OS (Mitch Davis)a
     https://www.youtube.com/watch?v=Ku1gdK7ybAk&list=PLW1yb8L3S1ngGmtKlI5XYcTNQQ1r3xZvq&index=2 -- M1U1L2 Overview: OS terminology (Mitch Davis)
+    https://www.youtube.com/watch?v=Jkmy2YLUbUY -- CPU Scheduling Basics (Jacob Sorber)
+    https://www.youtube.com/watch?v=9GDX-IyZ_C8 -- Operatng system Basics (Brian Will)
+
 
 
 Engineer Man Linux on Youtube
@@ -351,6 +354,7 @@ Linux Commands
     ln <filepath> [linkhome] -- create hard link (see unlink to remove)
     locate <filename> -- find files or directories from a database maintained by updatedb
     ls -- list (files and subdirectories) in the current directory, -a show hidden , -l long format, -h human readable, -i show inode number, --color=never to disable color
+    ls -R -- lists all files and folders recursively from the current directory
     ls -lR | grep "filename" to list all files matching a regex filename in the current directory and subdirectories
     ls -- does not support -i case insensitive switch so pipe to grep for this filter (e.g. ls -la | grep -i "<filtertext>"
     ls <path> -- list files in a non-local directory
@@ -425,6 +429,7 @@ Linux Commands
     ssh-copy_id -- copy a local key to a remote server
     ssh-keygen -- generate an SSH key on the client at default location /home/gjarman/.ssh/id_rsa
     ssh configuration file is /etc/ssh/sshd_config
+    stat <filename> -- get statistics on a file including size
     stdin, stdout, stderr -- basic datastreams
     strings <filename> -- returns a list of continuous character strings from filename
     su [username] -- switch user, run a shell as another user, -l invoke new user's environment, blank username is root
@@ -465,7 +470,8 @@ Linux Commands
     ulimit -c unlimited -- change the core dump limit to unlimited
     umount <mountpoint> -- unmount a file system after clearing pending data writes
     unalias <aliasname> -- remove an alias created by the alias command
-    uname -a -- prints basic system information like operating system version
+    uname -a -- 'unix name' 'all',  prints basic system information like operating system version
+    uname -o -- 'unix name' 'operating system' prints the operating system only
     uniq -- show unique lines or duplicate lines in a sorted file
     unix2dos -- convert unix file format to dos (see also dos2unix)
     unlink -- remove a symbolic link (see ln to create a symbolic link)

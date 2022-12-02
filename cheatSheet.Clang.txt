@@ -76,6 +76,7 @@ Mycodeschool (MCS) C and C++ -- Introduction and Basic
     https://www.youtube.com/playlist?list=PL2_aWCzGMAwLSqGsERZGXGkA5AfMhcknE -- playlist
     https://www.youtube.com/watch?v=AWliApDc61w -- Introduction to Programming
     https://www.youtube.com/watch?v=xyBbocLXbNY -- Basics of Computer Memory
+    Memory Management with brk()`
     https://www.youtube.com/watch?v=aMpsKnf6DrQ -- Writing and Executing First Program
     https://www.youtube.com/watch?v=lqzuR2USKRM -- Installing and configuring gcc/g++ on Windows
     https://www.youtube.com/watch?v=4LbarXsdEbM -- Working with IDE's
@@ -186,8 +187,6 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=ZIhy4uy5uJM -- Defining Constants (Done)
     https://www.youtube.com/watch?v=-eDY7yh-CyA -- Tame binary headaches with a HEX editor (Done)
     https://www.youtube.com/watch?v=BQJBe4IbsvQ -- Reading and Writing Files in C (Done)
-    https://www.youtube.com/watch?v=m7E9piHcfr4 -- How to Map Files into Memory in C (mmap)
-    https://www.youtube.com/watch?v=2AmP7Pse4U0 -- Spying on running programs (strace and ltrace) (Done)
     https://www.youtube.com/watch?v=MruzHlXqspU -- What if my open fil gets deleted? (Done)
     https://www.youtube.com/watch?v=MCVa1ZhQaqI -- How Arguments are Passed to Functions in C (and most other languages) (Done)
     https://www.youtube.com/watch?v=uT-YLEHwVS4 -- Arrays, Pointers and Why Arrays Start at Zero? (Done)
@@ -196,7 +195,6 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=P0k1C3F61xY -- A common pitfall when using the sizeof() with pointers in c (Done)
     https://www.youtube.com/watch?v=SKa6d9bUlO0 -- Problems with pointer arithmetic (C) (Done)
     https://www.youtube.com/watch?v=k6ESk9zafHM -- Making Peace with Double Pointers (Done)
-    https://www.youtube.com/watch?v=axngwDJ79GY -- Understanding and Using Function Pointers in C (Done)
     https://www.youtube.com/watch?v=axngwDJ79GY -- Understanding and Using Function Pointers in C (Done)
     https://www.youtube.com/watch?v=1vGfkBwIOXw -- Loops in C (while, do-while, for (Done)
     https://www.youtube.com/watch?v=PLnmboUvqq8 -- A Tour of C's Many Operators (Done)
@@ -261,7 +259,6 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=eLRWDZ7uQQU -- How to Automatically Remove dead Code?
     https://www.youtube.com/watch?v=daA-KBKfJ_o -- Easy Networking in C (libcurl)
     https://www.youtube.com/watch?v=Os5cK0H8EOA -- how to measure memory usage inside my program
-    https://www.youtube.com/watch?v=XV5sRaSVtXQ -- where processes get more memory (brk, mmap)
     https://www.youtube.com/watch?v=LRLlEzkCL4I -- How Memory Usage Slows Down Your Programs
     https://www.youtube.com/watch?v=bdIiTxtMaKA -- How to build a web client
     https://www.youtube.com/watch?v=esXw4bdaZkc -- Program your own webserver in C
@@ -302,6 +299,13 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=iX1uGr6Si0E -- Better Portability with Standard Integers (Done)
     https://www.youtube.com/watch?v=vusV4lF0Epo -- Why printf is Magically Breaking Your Program (Done)
     https://www.youtube.com/watch?v=6c1nCsbwUEk -- How to Resize an Array in C/C++? Is there a best way? (Done)
+    https://www.youtube.com/watch?v=2AmP7Pse4U0 -- Spying on Running Programs (strace, ltrace, /ystem calls vs function calls) (Done)
+    https://www.youtube.com/watch?v=XV5sRaSVtXQ -- How processes get more memory (brk, mmap)
+    https://www.youtube.com/watch?v=m7E9piHcfr4 -- How to Map Files into Memory in C (mmap, memory mapped file io)
+    https://www.youtube.com/watch?v=rPV6b8BUwxM -- Simple Shared Memory in C (mmap)
+    https://www.youtube.com/watch?v=WgVSq-sgHOc -- How to Set up Shared Memory in Your Linux and MacOS Programs. (shmget, shmat, shmdt, shmctl, ftok)
+    https://www.youtube.com/watch?v=ukM_zzrIeXs -- What is a semaphore? How do they work? (Example in C)
+    https://www.youtube.com/watch?v=FT2A2HQbTkU -- How to get a file's size in C? (stat, fstat, fileno)
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -436,6 +440,10 @@ Warnings and Tricks
     Use strcmp() and not sizeof() to malloc or calloc string space: sizeof() will only return the size of the first character in the string
     A NULL pointer is a pointer pointing to nothing.
     An empty string is a string with a non-NULL address but with the first character as '\0'. It is a NULL string but not a NULL pointer
+    Flush stdin when using consective getchar()'s by reading the buffer all the way through the newline character and discarding
+        while ((chrBuffer = getchar() != '\n') && (chrBuffer != EOF)) {
+            continue;
+105     }
 
 Updating Repositories in Ubuntu using APT (Advanced Packaging Tool)
     sudo apt-get update -- update the package database list from all external repositories
@@ -451,7 +459,7 @@ Updating Repositories in Ubuntu using APT (Advanced Packaging Tool)
     sudo apt-cache pkgnames <pckge search term> -- searches for existing package names based on partial search term
     sudo apt-cache search <search term> -- searches package names and descriptions
 
-Program Structure and Memory Structure
+Program Structure and Process Memory Structure
     High memory address
         stack
         libraries
@@ -460,20 +468,12 @@ Program Structure and Memory Structure
         globals
         code
     Low memory address
-    The break is he highest memory address in the heap (break with 'empty')
+    The break is he highest memory address in the unallocated heap (i.e. it is the 'break' between allocated heap space and unallocated 'empty' heap space)
 
 Binary and Memory Sizes
     Nibble: 4 bits e.g. F (decimal 1 - 15) (hex 0 - F)
     Byte  : 8 bits, 2 nibbles  e.g. FF (decimal 1 - 255) (hex 0 - FF)
     Page  : 12 bits, 3 nibbles e.g. FFF (decimal 1 - 4095) (hex 0 - FFF) -- minimum size of new memory allocations with mmap() and brk() 
-
-Memory Management
-    brk() and sbrk()
-        void *ptr = brk -- moves the memory break (top of the heap) up to a new address (use sbrk(0) to get the current break address
-        void *ptr = sbrk(nbytes) -- moves the memory break (top of the heap) up by nbytes and returns a void pointer to the original break address
-        Both brk and sbrk move the brk in increments of one 4k page
-        #include <unistd> is required for both functions
-    mmap() and munmap() -- map or unmap files or devices into memory
 
 Debugging and Troubleshooting Techniques
     Use gdb
@@ -486,6 +486,7 @@ Debugging and Troubleshooting Techniques
 
 Debugging with GDB
     gdb ./<executable> to run debug
+    -- args name arg1 arg2 arg3 e.g. gdb --args ./<prgname> arg1 arg2 arg3 ... 
     -g option in gcc to include debug information
     -g0 option suppressed debug information from the executable
     -g1 option includes minimal debug information
@@ -649,6 +650,7 @@ Compilation Options
     -L <lib directory> -- non-standard library file directory
     -l<libname> -- specific library to link in (e.g. -lm -lc -lpthread)
     -no-pie -- no position independent executable (changes ELF from shared object to executable
+    - ansi -- comppile with compliance to ANSI stadard
 
 Compiliation of Multiple Files
     Create object (.o) files from source files
@@ -994,8 +996,13 @@ Loops
 Input Functions
     etc() -- get a single character from stdin and terminate if EOF
 
-File Commands
-    fopen(), fclose(), fgetc(), fputc(), fread(), fwrite()
+File Manipulation using LibC Functions
+    fopen()
+    fclose()
+    fgetc()
+    fputc()
+    fread() -- binary mode
+    fwrite() -- binary mode
     FILE *fpFile1 = fopen(<sFileName>, <operation>)
     fgetc(<fpFile1>) returns a character or EOF (defined as -1 in /usr/include/stdio.h)
     fputc(<char>, <fpFile2>;
@@ -1005,25 +1012,42 @@ File Commands
         r -- read from a file
         w -- write to a file starting at the beginning
         a -- append to a file
-    File Operations and Corresponding open() flags
+    File Operations and Corresponding system call flags
         r  O_RDONLY
         w  O_WRONLY|O_CREAT|O_TRUNC
         a  O_WRONLY|O_CREAT|O_APPEND
         r+ O_RDWR
         w+ O_RDWR|O_CREAT|O_TRUNC
         a+ O_RDWR|O_CREAT|O_APPEND
-    fgets() -- reads a full string from a file
+    fgets(char *str, int n, FILE *stream) -- reads a full string from a file
     fputs() -- writes a full string to a file
     fprintf() -- writes a formatted string to a file
-    fseek() -- rewind or forward the curent file position
+    fseek(FILE (stream, long nt offset, int whence) -- rewind or forward the curent file position
+        whence values: SEEK_SET (start of file), SEEK_CUR (current file position) , SEEK_END (end of file)
+        returns zero if successful, otherwise non-zero
     ftell() -- get the current file position
     feof() -- tells if EOF is reached
     ferror() -- tells if file error is set
+    fprintf(<stream>, <format>, <variables>) -- print formatted output to a file or stream
+    fscanf(<stream>, <format>, <variables>) -- read formated input from a file
+    int remove(<filepath>) -- delete a file, return 0 if successful and non-zero for failure
+    rewind() -- set the file pointer to the beginning of the file
+
+Files Manipulation Using System Calls
+    File Operations
+        O_APPEND
+        O_APPEND
+        O_CREAT
+        O_RDONLY
+        O_RDWR
+        O_TRUNC
+        O_WRONLY
 
 Header Files for C (located at /usr/include)
     Header files are C source files containing declarations: constants and function prototypes (but not function definitinos)
     Header files contain declarations (usually) and creates the interface to a translation unit (the combined header file and source file)
     Header files for the standard c library in /usr/include in Linux
+    <ctype.h> declares functions to determine character types and upper/lower case conversions
     <stdio.h> is a header in the C standard library
     'myheader.h' is a header file in the local source directory
     <stdint.h> -- fixed width integer declarations: int8_t, uint8_t, int16_t, uint16_t, int32_t, uint32_t, int64_t, uint64_t etc
@@ -1088,11 +1112,13 @@ Functions in the lib.c library and Other Libraries
     abort() - end a program immediately without call to atexit() raises the SIGABRT signal (requires stdlib.h). 
     asprintf(&ptr, <format>, <vars>) -- prints formatted text to a string and stores in a perfectly sized buffer, takes an address to a pointer, needs to be freed after use, requires  '#define _GNU_SOURCE' before #include <stdio.h>
     atexit(*func(void)) - function automatically invoked when a program terminates via a return statement, takes a function name/pointer as it's argument (e.g. write a log message or delete temp files)
-    calloc() -- e.g. int *arr = calloc(sizeof(int), 100); and sets bytes to zero, specifies memoy required in bytes, #include <stdlib.h>
-    calloc() returns a void pointer which must be cast to a specific pointer type
+    calloc(sizeof(<type>, count) -- e.g. int *arr = calloc(sizeof(int), 100); and sets bytes to zero, specifies memoy required in bytes, #include <stdlib.h>
+    calloc() returns a void pointer to a memory initialized to zero, which must be cast to a specific pointer type
     dprintf() -- print to a file descriptor, like STDOUT_FILENO
     exit(<number>) -- system call to close the current program and return <number> to the calling program
+    fileno(<fpointer>) -- returns a file desriptor from a pointer to the file
     free(ptr) -- frees memory allocated to ptr with malloc or calloc (set ptr = NULL afterwards), do not free the same memory twice, #include <stdlib.h>
+    fstat() -- same as stat() but takes a file descriptor instead of a file name
     gets() -- get a string from stdin (use fgets() to avoid buffer overflow)
     index(<string>, <char>) -- returns a pointer to the first occurance of <char> in <string> or returns NULL
     main() -- where a C program starts
@@ -1101,6 +1127,9 @@ Functions in the lib.c library and Other Libraries
     memcpy( &a, &b, sizeof(<type>)); -- copies memory from b to a #include string.h
     memset(<buffer>, <value>, <size>) -- set a block of memory in bytes to a value
     printf() -- print a formatted string to STDOUT
+    putch() -- same as putchar() but only on Windows
+    putc(<character, <streamptr>) -- outpputs a single character to a stream, returns the character or EOF if error 
+    putchar(<character> | <int>) -- puts a character to stdout (equivalent to putc(<character>, stdout), returns the character printed or EOF if error
     realloc() -- e.g. arr = realloc(arr, sizeo(int)*200) increases the allocation of memory to an existing pointer in bytes, passing a NULL pointer, works like malloc() with no initialization of extra memory, #include <stdlib.h>
     sizeof() -- the number of bytes in an array or data type
     sleep(nseconds) -- sleep or pause for nseconds (see also usleep)
@@ -1110,7 +1139,7 @@ Functions in the lib.c library and Other Libraries
     strchr(<string>, <char>) -- finds a pointer to the first character in the string, or NULL
     strcpy(dest, source) -- copies the source string to the destination string (use strncpy to avoid buffer overflow)
     strdup(source) -- allocates a string dest and copies source to dest returning dest. dest must be free()'ed when no longer needed
-    strsep(
+    strsep(/
     strstr(<string1>, <string2>) -- finds a pointer to <string2> within <string1> or NULL
     strlen(<string>) gives the length of a string excluding the null terminator, #include <string.h>
     system(<command>) runs a system command from within a c program
@@ -1237,3 +1266,26 @@ Signals (Software Interrupts)
         SIGFPE  -- floating point error (e.. divide by zero)
         SIGSTOP -- stop a process and block it
         SIGCONT -- unblock a prevously blocked or stopped state
+
+System Calls
+    Calls to functions owned by the operating system
+    man syscalls -- to get the man pages on system calls
+    The system call is the fundamental interface between an application and the Linux kernel.
+    System  calls are generally not invoked directly, but rather via wrapper functions in glibc (or perhaps some other library).
+    Memory Management with brk() and sbrk()
+        brk() -- allocate memory in the heap to the current process by moving the break between the globals region and unallocated heap space
+            int brk(void *addr) -- moves the memory break (top of the heap) up to a new address (use sbrk(0) to get the current break address
+            brk() returns 0 on success
+            sbrk() returns the 'old' break address (before additional space was allocated)
+        sbrk() -- void *sbrk(intptr_t increment) -- moves the memory break (top of the heap) up by nbytes and returns a void pointer to the original break address
+        Both brk and sbrk move the brk in increments of one 4k page (1k hex) even when less memory is requested
+        #include <unistd> is required for both functions
+    Memory Management with mmap() and unmmap()
+        mmap() -- allocate memory to the current process
+        unmmap() -- unmap memory or files or devices from memory
+
+
+
+
+
+
