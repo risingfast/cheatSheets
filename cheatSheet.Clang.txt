@@ -226,7 +226,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=mm0b_H0KIRw -- Debug faster with gdb layouts (TUI)
     https://www.youtube.com/watch?v=7MhJmLV6tdM -- Be more productive with better command-line tools (exa, bat, rg)
     https://www.youtube.com/watch?v=dPxCGlW9lfM -- Why do programmers use hexadecimal numbers
-    https://www.youtube.com/watch?v=ADh_OFBfdEE -- What are environment variables
+    https://www.youtube.com/watch?v=ADh_OFBfdEE -- What are environment variables, and how do I use them? (get,set)
     https://www.youtube.com/watch?v=Pqf6H1WSbeY -- Which IDE should new students use?
     https://www.youtube.com/watch?v=wcpH2PkC-94 -- What languages should you learn?
     https://www.youtube.com/watch?v=FPVTr4thm2M -- Answering your Questions
@@ -306,6 +306,17 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=WgVSq-sgHOc -- How to Set up Shared Memory in Your Linux and MacOS Programs. (shmget, shmat, shmdt, shmctl, ftok)
     https://www.youtube.com/watch?v=ukM_zzrIeXs -- What is a semaphore? How do they work? (Example in C)
     https://www.youtube.com/watch?v=FT2A2HQbTkU -- How to get a file's size in C? (stat, fstat, fileno)
+    https://www.youtube.com/watch?v=ewqX1IuYzC8 -- Simpler Paths in C with realpath()!
+
+CodeVault
+    https://www.youtube.com/@CodeVault -- main index
+    https://www.youtube.com/watch?v=BFDUeEVxUok -- What are unions in C?
+    https://www.youtube.com/watch?v=9guJVmDyFmE -- What is typedef
+    https://www.youtube.com/watch?v=Lksi1HEMZgY -- How to read a line of text in C
+    https://www.youtube.com/watch?v=38GRFkICJ1A -- Global functions in multi-file projects in C
+    https://www.youtube.com/watch?v=-7cSmcdMryo -- How to parse a string in C (sscanf)
+    https://www.youtube.com/watch?v=gWOeL1oymrc -- What is size_t in C?
+    https://www.youtube.com/watch?v=TtJw4VUYsiM -- Declaration vs. Definition of a variable in C
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -388,6 +399,7 @@ C Other Site References
     https://sourceware.org/gdb/onlinedocs/gdb/TUI-Commands.html#TUI-Commands -- TUI Commands for GDB
     https://www.youtube.com/watch?v=ssJY5MDLjlo -- C Programming for Beginners | Full Course (Kevin Brown)
     https://www.youtube.com/playlist?list=PLc7W4b0WHTAWusrFLTv8abWMIYFimp7bi -- Low Level Learning C Programming
+    https://www.youtube.com/watch?v=ssJY5MDLjlo&t=355s -- C Programming for Beginners | Full Course, Kevin Brown  (Single 6 Hour Portfolio Courses)
 
 C and CGI
     https://www.eskimo.com/~scs/cclass/handouts/cgi.html -- C and C/CGI tutorials
@@ -788,6 +800,8 @@ Format Specifiers
     %d -- signed integer (base 10)
     %lld -- long long integer (base 10)
     %u -- unsigned integer (base 10)
+    %ul -- unsigned long integer (base 10)
+    %ull -- unsigned long long integer (base 10)
     %o -- octal integer
     %x -- hexadecimal number
     %c -- character
@@ -795,6 +809,8 @@ Format Specifiers
     %e -- exponential float
     %f -- floating point number
     %lf -- double precision floating point number
+    %zd -- size__T or unsigned__64bit
+    %zu -- size__T or unsigned__64bit
     %% or \% -- print %
 
 Special Format Characters
@@ -852,6 +868,7 @@ C Language Rules
     ternary conditionals: int x = (expr) ? 1 : 2;
 
 Data Types
+    Enums are variables with a set of valid values implemented as integers
     Numerical
         Integer (signed and unsigned)
             char 1 byte 8 bit max value 255
@@ -861,6 +878,7 @@ Data Types
             long long 8 bytes 64 bit 2**64-1
             size_t typedef of unsigned long in 32 bit compiler -- returned by sizeof(), malloc, memcopy, strlen, etc
             size_t typedef of unsigned long long in 64 bit compiler -- returned by sizeof(), malloc, memcopy, strlen etc
+            size_t is unsigned_int64
         Fixed width integer types are defined in /usr/include/stdint.h
             int8_t -- 8 bit integer (always 8 bits on all compilers and platforms)
             uint64_t -- unsigned 64 bit integer (always 64 bits on all compilers and platforms)
@@ -879,6 +897,7 @@ Data Types
         char * -- string 4 bytes (use "..." double quotes)
         float real
         double real double precision
+    Unions are 
     Composite Types (defined by a program)
 
 Arrays
@@ -970,7 +989,7 @@ Variable Definitions
     variables should be declared and defined at the same time to avoid unexpected results
 
 Variable and Function Qualifiers (reserved words or keywords)
-    extern -- declares a variable in one translation unit and uses it in another
+    extern -- declaration qualifier to declare a variable in one translation unit that is defined in another
     volatile -- qualifies a variable as changeable by another process (compiler instruction) to prevent it being optimized out
     const -- a value that is not allowed to change. const variables are typed so the compiler can type-check the use in a program
     const variables obey scope laws
@@ -991,14 +1010,15 @@ Loops
     continue -- continues to the next iteration of a loop immediately
     while <condition> {...} -- loops while condition is true
     do {...} while <condition> -- loops while <condition> is true after executing once
-    for (<start>, <loop condition>, <end>) {...} -- loops while <loop condition> is true
+    for (<start>; <loop condition>; <increment>) {...} -- loops while <loop condition> is true
 
 Input Functions
     etc() -- get a single character from stdin and terminate if EOF
 
 File Manipulation using LibC Functions
-    fopen()
+    fopen(<file path>, <mode>) -- buffered file open where mode is: O_RDONLY (00), O_WRONLY (01), O_RDWR (02) O_APPEND, O_CREAT
     fclose()
+    fflush() -- flush an output stream
     fgetc()
     fputc()
     fread() -- binary mode
@@ -1029,37 +1049,50 @@ File Manipulation using LibC Functions
     feof() -- tells if EOF is reached
     ferror() -- tells if file error is set
     fprintf(<stream>, <format>, <variables>) -- print formatted output to a file or stream
-    fscanf(<stream>, <format>, <variables>) -- read formated input from a file
+    fscanf(<stream>, <format>, <variables>) -- read formated input from a file until a format mismatch occurs then stop
+        reads a filestrea until a mismatch occurs, then stops
+        use  %[] to include chars ... eg %[a-zA-Z]c includes all alpha caracters but stops on a mismatch
+        use %[^] to exclue chars ... eg %[^\n']s reads a string with everything except a newline so stops on a newline
+        use %[^\n]\ns to read everything up to a newline into a string, then read the newline and stop
     int remove(<filepath>) -- delete a file, return 0 if successful and non-zero for failure
     rewind() -- set the file pointer to the beginning of the file
+    truncate(<file path>. <offset>) -- truncates a file down to offset length
 
 Files Manipulation Using System Calls
-    File Operations
-        O_APPEND
+    close(<file descriptor)
+    open() -- non-buffered file open
+    File Operations for open()
         O_APPEND
         O_CREAT
         O_RDONLY
         O_RDWR
         O_TRUNC
         O_WRONLY
+    read(<file descriptor>, &<var>, count) -- reads count bytes from a file
+    lseek(<file descriptor<, offset, whence) -- moves the file pointer to a specific location in a binary file, header file: <fcntl.h>
+    ftruncate(<file descriptor>, <length>) -- truncate a file to <length> bytes. File must be writable.
+    write()
 
 Header Files for C (located at /usr/include)
     Header files are C source files containing declarations: constants and function prototypes (but not function definitinos)
     Header files contain declarations (usually) and creates the interface to a translation unit (the combined header file and source file)
     Header files for the standard c library in /usr/include in Linux
     <ctype.h> declares functions to determine character types and upper/lower case conversions
+    <limits.h> 
     <stdio.h> is a header in the C standard library
     'myheader.h' is a header file in the local source directory
     <stdint.h> -- fixed width integer declarations: int8_t, uint8_t, int16_t, uint16_t, int32_t, uint32_t, int64_t, uint64_t etc
 
 Header Guards are used to avoid including the same header multiple times
+    #ifdef <header name> -- define a header name
     #ifndef <headername> -- start of header guard, where <headername> is normally the filename (e.g. MYHEADER_H)
     #define <headername> -- constant for the header name (can be any unique name)
     #endif -- to end the #ifdef block
+    #undef <header name> -- undefine a variable or macro
 
 Preprocessor Commands and Directives
     # - indicates a preprocessor directive
-    #include <stdio> includes the stdio header file in the code
+    #include <stdio> includes the stdio header file in the code (try man stdio for docs)
     #define -- defines a constant value (convention is capitals e.g. MY_PI 3.1415926
 
 Preprocessor Macro Sumbols for Debugging
@@ -1123,15 +1156,27 @@ Functions in the lib.c library and Other Libraries
     index(<string>, <char>) -- returns a pointer to the first occurance of <char> in <string> or returns NULL
     main() -- where a C program starts
     malloc() - e.g int *x = malloc(sizeof(int)), int *arr = (int *)malloc(sizeof(int)*100) etc or NULL, specifies memory required in bytes, memory is not initialized, #include <stdlib.h>
-    malloc() returns a void pointer which must be cast to a specific pointer type
+    malloc() returns a void pointer which must be cast to a specific , an unsigned long long integerpointer type
     memcpy( &a, &b, sizeof(<type>)); -- copies memory from b to a #include string.h
     memset(<buffer>, <value>, <size>) -- set a block of memory in bytes to a value
     printf() -- print a formatted string to STDOUT
+        Conversion specifiers
+            %X hexadecimal lower case
+            %X hexadecimal upper case
+            %#X hexadecimal upper case with 0x prefix
+            %d integer
+            %8d integer with 8 character window, aligned right
+            %80d integer with 8 character window, zero filled, aligned right
+            %ld long integer
+            %lld long long integer
+            %p pointer address
+            %c character equivalent
     putch() -- same as putchar() but only on Windows
     putc(<character, <streamptr>) -- outpputs a single character to a stream, returns the character or EOF if error 
     putchar(<character> | <int>) -- puts a character to stdout (equivalent to putc(<character>, stdout), returns the character printed or EOF if error
     realloc() -- e.g. arr = realloc(arr, sizeo(int)*200) increases the allocation of memory to an existing pointer in bytes, passing a NULL pointer, works like malloc() with no initialization of extra memory, #include <stdlib.h>
-    sizeof() -- the number of bytes in an array or data type
+    realpath() -- builds a full path from a relative directory path
+    sizeof() -- the number of bytes in an array or data type, an unsigned long long integer
     sleep(nseconds) -- sleep or pause for nseconds (see also usleep)
     snprintf() -- prints formatted text to a buffer not to exceed n bytes
     sprintf(char *dest, char *src, size_t n) -- prints formatted text to a string buffer for n characters
@@ -1144,9 +1189,9 @@ Functions in the lib.c library and Other Libraries
     strlen(<string>) gives the length of a string excluding the null terminator, #include <string.h>
     system(<command>) runs a system command from within a c program
     usleep(nuseconds) -- sleep or pause for nuseconds (ie. micoseconds)
-    write(int fildes, const void *buf, size_t nbytes)
+    write(int fd, const void *buf, size_t nbytes)
         #include <unistd>
-        fildes == file descriptor like 0 STDIN_FILENO, 1 STDOUT_FILENO, or 2 STDERR_FILENO
+        fd == file descriptor like 0 STDIN_FILENO, 1 STDOUT_FILENO, or 2 STDERR_FILENO
         *buf -- string to write
         size_t -- bytes to write (one char is one byte)
 
@@ -1181,10 +1226,10 @@ Functions in cs50.c
     string GetString(void); 
 
 The Unix System Interface
-    File descriptors handle IO
-    fd 0 = STDIN
-    fd 1 = STDOUT
-    fd 2 = STDERR
+    File descriptors handle IO (defined at program startup)
+    fd 0 = STDIN buffered
+    fd 1 = STDOUT buffered
+    fd 2 = STDERR unbuffered
     Low level IO
         int num = read (int fd, char *buf, int number);
         int num = write (ind fd, char *buf, int number);
@@ -1283,9 +1328,5 @@ System Calls
     Memory Management with mmap() and unmmap()
         mmap() -- allocate memory to the current process
         unmmap() -- unmap memory or files or devices from memory
-
-
-
-
 
 

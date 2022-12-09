@@ -537,7 +537,7 @@ HTML Tags and Attributes (tags always lower case and attributes always s/d-quote
     <b> -- bold
     <br> -- line break
     <button> -- clickable button
-    <div></div> -- defined a boundary for CSS, meaningless otherwise, a CSS container
+    <div></div> -- a block element or container, defined as a boundary for CSS, meaningless otherwise, a CSS container
     <details><summary></summary</details> -- drop down details below summary heading and drop down arrow
     <del> -- deleted text (lined through)
     <em> -- emphasized text (italicized)
@@ -571,7 +571,7 @@ HTML Tags and Attributes (tags always lower case and attributes always s/d-quote
     <ul><li></li></ul> -- unordered list (bulletted) list items
     <section> -- thematic grouping of content typically with a heading
     <small> -- smaller size font
-    <span></span> -- iinline version of <div> primariy used for styying blocks of text that appear on the same line as other spans (divs appear on separate lines> and have style attributes, meaningless otherwise
+    <span></span> -- iinline container version of <div> primariy used for styling blocks of text that appear on the same line as other spans (divs appear on separate lines> and have style attributes, meaningless otherwise
        <span></span> -- formatted region referenced in CSS
     <strong> -- important text emphasized or bolded
     <sub> -- subscripted text

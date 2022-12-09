@@ -369,7 +369,16 @@ Linux Commands
     make install -- install a C executable after make is run
     makeinfo -- translate documents into typesetting format
     man [page] <command> -- display manual for command (using 'Less' commands to navigate). See also 'info'
-    man 3 printf -- man 3 are the c reference pages
+    man man -- man pages on the man command
+    man <topic> displays the manual for a command or topic from any of the man pages
+    man 1 User Commands
+    man 2 System Calls
+    man 3 C Library Functions
+    man 4 Devices and Special Files
+    man 5 File Formats and Conventions
+    man 6 Games et. al.
+    man 7 Miscellanea
+    man 8 Sys Admin Tools and Daemons
     man man -- shows documentation on man (to get started)
     mkdir -- make directories
     mkdir -p /new/new2/new3 -- make directories including new parent directories
