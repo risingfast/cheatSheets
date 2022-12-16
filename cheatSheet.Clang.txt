@@ -307,6 +307,10 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=ukM_zzrIeXs -- What is a semaphore? How do they work? (Example in C)
     https://www.youtube.com/watch?v=FT2A2HQbTkU -- How to get a file's size in C? (stat, fstat, fileno)
     https://www.youtube.com/watch?v=ewqX1IuYzC8 -- Simpler Paths in C with realpath()!
+    https://www.youtube.com/watch?v=Os5cK0H8EOA -- How to measure memory usage inside my program? (getrusage)
+    https://www.youtube.com/watch?v=BAGcSyrWiPs -- How Big Is A Character?
+    https://www.youtube.com/watch?v=sZ8mRwCh4Sk -- Is memcpy dangerous?
+    https://www.youtube.com/watch?v=1KQqpiXxvWQ -- How to Time Your Code (time, clock, times, clock_gettime)
 
 CodeVault
     https://www.youtube.com/@CodeVault -- main index
@@ -317,6 +321,16 @@ CodeVault
     https://www.youtube.com/watch?v=-7cSmcdMryo -- How to parse a string in C (sscanf)
     https://www.youtube.com/watch?v=gWOeL1oymrc -- What is size_t in C?
     https://www.youtube.com/watch?v=TtJw4VUYsiM -- Declaration vs. Definition of a variable in C
+    https://www.youtube.com/watch?v=8nix1eqoMHM -- Implementing a stack in C
+    https://www.youtube.com/watch?v=uBZHMkpsTfg -- Short introduction to Linked Lists
+    https://www.youtube.com/watch?v=8-j331ZY6Qg -- Iterating over a Linked LIst
+    https://www.youtube.com/watch?v=dAZbGAhWQtw -- Reading and writing a linked list to a file in C
+    https://www.youtube.com/watch?v=ld8xjJ3j-eY -- Deallocating a linked list
+    https://www.youtube.com/watch?v=nFl1cNXk85s -- Difference between memmove and memcpy
+    https://www.youtube.com/watch?v=ypG9W33LOTk -- Memory manipulation functions in C
+    https://www.youtube.com/watch?v=zJzpCorv1JQ -- The sizeof operator in C
+    https://www.youtube.com/watch?v=nasTgF78CUc -- Local vs global variables in C
+    https://www.youtube.com/watch?v=UQ5INK_pXCI -- How to convert strings to numbers in C
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -915,12 +929,36 @@ Arrays
     sizeof() gives the length of an array in bytes including the NULL terminator
 
 Strings
-    Stings are arrays of chars terminated with a numeric zero ('\0')
-    char *b = "This is a string";
+    Strings are arrays of chars terminated with a numeric zero ('\0')
+    Strings declared as pointers instead of arrays are not allocated in the stack and cannot be written-to as an array
+        eg. char *strMyString = "Test String"; is allocated as a pointer in the stack and the actual string is stored in protected memory outside the stack
+    char *b = "This is a string"; -- the pointer 'b' is allocated in the stack but the string is stored elsewhere
     char a[] = "This is a another string";
     man string in Linux returns the man page for C string functions
     string literals are declared as "this is a string" and the ending null terminator is implicitly added by the compiler
-    strncmp(<str1>, <str2>i, len) returns 0 if strings match for len characters (in string.h) 
+
+String Functions
+    Copy
+        void *memcpy(void *dest, const void *src, size_t n);
+        void *memmove(void *dest, const void * src, size_t n);
+        char *strcpy(char *dest, const char *src);
+        char *strncpy(char *dest, const char *src, size_t n); 
+    Concatenate
+        char *strcat(char *dest, const char *src);
+        char *strncat(char *dest, const char *src, size_t n);
+    Compare
+        int memcmp(const void *s1, const void *s2, size_t n);
+        int strcmp(const char *s1, const char *s2);
+        int strncmp(<str1>, <str2>i, len) returns 0 if strings match for len characters (in string.h)
+    Search
+        char *strchr(const char *s, int c);
+        char *strrchr(const char *s, int c);
+        char *strtok(char *s, const char *delim);
+        char *strstr(const char *haystack, const char *needle);
+    Other
+        void *memset(void *s, int c, size_t n);
+        size_t strlen(const char *s);
+        void *memchr(const void *s, int c, size_t n);
 
 Pointers
     pointer variables are typed
@@ -952,12 +990,12 @@ Operators
     &  address of
 
 Bitwise Operators
-    >> right shift and discard rightmost bit
-    << left shift and fill rightmost operator with zero
-    & AND
-    | OR
-    ^ exclusive OR
-    ~ NOT
+    >> bitwise right shift and discard rightmost bit
+    << bitwise left shift and fill rightmost operator with zero
+    & bitwise AND
+    | bitwise OR
+    ^ bitwise exclusive OR
+    ~ bitwise NOT
 
 Comments
     // -- single line comment
@@ -1050,7 +1088,7 @@ File Manipulation using LibC Functions
     ferror() -- tells if file error is set
     fprintf(<stream>, <format>, <variables>) -- print formatted output to a file or stream
     fscanf(<stream>, <format>, <variables>) -- read formated input from a file until a format mismatch occurs then stop
-        reads a filestrea until a mismatch occurs, then stops
+        reads a filestream until a mismatch occurs, then stops
         use  %[] to include chars ... eg %[a-zA-Z]c includes all alpha caracters but stops on a mismatch
         use %[^] to exclue chars ... eg %[^\n']s reads a string with everything except a newline so stops on a newline
         use %[^\n]\ns to read everything up to a newline into a string, then read the newline and stop
@@ -1145,6 +1183,7 @@ Functions in the lib.c library and Other Libraries
     abort() - end a program immediately without call to atexit() raises the SIGABRT signal (requires stdlib.h). 
     asprintf(&ptr, <format>, <vars>) -- prints formatted text to a string and stores in a perfectly sized buffer, takes an address to a pointer, needs to be freed after use, requires  '#define _GNU_SOURCE' before #include <stdio.h>
     atexit(*func(void)) - function automatically invoked when a program terminates via a return statement, takes a function name/pointer as it's argument (e.g. write a log message or delete temp files)
+    atoi -- convert alphanumeric string to integer (see also strto_() family of functions
     calloc(sizeof(<type>, count) -- e.g. int *arr = calloc(sizeof(int), 100); and sets bytes to zero, specifies memoy required in bytes, #include <stdlib.h>
     calloc() returns a void pointer to a memory initialized to zero, which must be cast to a specific pointer type
     dprintf() -- print to a file descriptor, like STDOUT_FILENO
@@ -1176,17 +1215,24 @@ Functions in the lib.c library and Other Libraries
     putchar(<character> | <int>) -- puts a character to stdout (equivalent to putc(<character>, stdout), returns the character printed or EOF if error
     realloc() -- e.g. arr = realloc(arr, sizeo(int)*200) increases the allocation of memory to an existing pointer in bytes, passing a NULL pointer, works like malloc() with no initialization of extra memory, #include <stdlib.h>
     realpath() -- builds a full path from a relative directory path
+    scanf("%s", buffer) -- use fgets() instead, to avoid buffer overflow by someonee inputting to many characters in stdin
     sizeof() -- the number of bytes in an array or data type, an unsigned long long integer
     sleep(nseconds) -- sleep or pause for nseconds (see also usleep)
     snprintf() -- prints formatted text to a buffer not to exceed n bytes
     sprintf(char *dest, char *src, size_t n) -- prints formatted text to a string buffer for n characters
     stat() -- get file status #include <sys/stat.h>
     strchr(<string>, <char>) -- finds a pointer to the first character in the string, or NULL
+    strcat(dest, src) -- concatenate two strings
+    strncat(dest, src, n) -- concatenate two strings up to n characters of the source string
     strcpy(dest, source) -- copies the source string to the destination string (use strncpy to avoid buffer overflow)
     strdup(source) -- allocates a string dest and copies source to dest returning dest. dest must be free()'ed when no longer needed
+    strlen(<string>) gives the length of a string excluding the null terminator, #include <string.h>
     strsep(/
     strstr(<string1>, <string2>) -- finds a pointer to <string2> within <string1> or NULL
-    strlen(<string>) gives the length of a string excluding the null terminator, #include <string.h>
+    strtod() -- convert string to integer
+    strtol -- convert string to long integer
+    strtoll -- convert string to long long integer
+    strtoul -- convert string to unsigned long integer
     system(<command>) runs a system command from within a c program
     usleep(nuseconds) -- sleep or pause for nuseconds (ie. micoseconds)
     write(int fd, const void *buf, size_t nbytes)

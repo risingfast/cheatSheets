@@ -404,6 +404,7 @@ Linux Commands
     ps -- 'process status' lists processes and ID's for the terminal session, an external command
     ps -ax -- show Status of each process
     ps -aux show additional columns incl owners and user names. 
+    ps -u -- show memory and CPU utilizationm were VSZ = Virtual Set Size and RSS is resident set size
     ps -x -- list system-wide processes
     ps -He -- list processes in a hierarchy across all terminals
     ps -axjf -- 
