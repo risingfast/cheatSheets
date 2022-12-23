@@ -331,6 +331,11 @@ CodeVault
     https://www.youtube.com/watch?v=zJzpCorv1JQ -- The sizeof operator in C
     https://www.youtube.com/watch?v=nasTgF78CUc -- Local vs global variables in C
     https://www.youtube.com/watch?v=UQ5INK_pXCI -- How to convert strings to numbers in C
+    https://www.youtube.com/watch?v=7ud2iqu9szk -- Background and foreground processes
+    https://www.youtube.com/watch?v=8A3Zycio0W4 -- How to find a word inside a sentence in C
+    https://www.youtube.com/watch?v=0qSU0nxIZiE -- Replace substrings in C
+    https://www.youtube.com/watch?v=ZJl41yjl2bI -- Post-increment vs pre-increment in C (a++ vs ++a)
+    https://www.youtube.com/watch?v=IKG1P4rgm54 -- Difference between processes and threads
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -954,7 +959,7 @@ String Functions
         char *strchr(const char *s, int c);
         char *strrchr(const char *s, int c);
         char *strtok(char *s, const char *delim);
-        char *strstr(const char *haystack, const char *needle);
+        char *strstr(const char *haystack, const char *needle); returns pointer to the first character value if found, otherwise returns NULL
     Other
         void *memset(void *s, int c, size_t n);
         size_t strlen(const char *s);
