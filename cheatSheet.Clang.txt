@@ -336,6 +336,11 @@ CodeVault
     https://www.youtube.com/watch?v=0qSU0nxIZiE -- Replace substrings in C
     https://www.youtube.com/watch?v=ZJl41yjl2bI -- Post-increment vs pre-increment in C (a++ vs ++a)
     https://www.youtube.com/watch?v=IKG1P4rgm54 -- Difference between processes and threads
+    https://www.youtube.com/watch?v=rUA3IkQNe5I -- Format strings in C
+    https://www.youtube.com/watch?v=dDjfaA9Q3n8 -- Reading from binary files in C
+    https://www.youtube.com/watch?v=P-fWNCF7Wx8 -- Writing to binary files in C
+    https://www.youtube.com/watch?v=_dGyVkPkBRI -- Compile and run C code using Notepad++ (2021)
+    https://www.youtube.com/watch?v=N5GhV8K8DIc -- Compile and run C code using Visual Studio Code (2021)
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -350,7 +355,8 @@ Ashley Mills C programming
 
 C Engineer Man
     https://www.youtube.com/playlist?list=PLlcnQQJK8SUg4C8syQ63d6o44dzt_vFls -- Index to C Videos (Done)
-    https://www.youtube.com/watch?v=90gFFdzuZMw -- Engineer Man Strings (Done)
+    https://www.youtube.com/watch?v=90g
+    https://www.youtube.com/watch?v=P-fWNCF7Wx8 -- Writing to binary files in CFFdzuZMw -- Engineer Man Strings (Done)
     https://www.youtube.com/watch?v=90gFFdzuZMw -- working with character arrays and strings in C (Done)
     https://www.youtube.com/watch?v=lrx5dcB_4Oo -- How GCC does compilation (Done)
     https://www.youtube.com/watch?v=Zuwa8zlfXSY -- 8 super heroic Linux commands that you probably aren't using (Done)
@@ -433,6 +439,10 @@ C and CGI
     http://web.mit.edu/wwwdev/www/cgic.html -- CGIC library for C and CGI with example
     https://www.oreilly.com/openbook/linuxdrive3/book/
 
+Algorithms and Code Challenges
+    https://www.javatpoint.com/c-programming-language-tutorial -- left side menu bar
+    https://leetcode.com/
+
 Integrated Development Environments
     In Linux, the Anjuta IDE is a C tool shipped standard with Suse Linux 
         The path to Anjuta on the graphical desktop is Development/Integrated Environment/Anjuta IDE
@@ -453,7 +463,7 @@ Integrated Development Environments
     https://www.eclipse.org/cdt/ -- Eclipse C/C++ Development Tooling
     https://netbeans.org/features/cpp/ -- Netbeans C/C++ Development
 
-Warnings and Tricks
+Warnings and Tips and Tricks
     Do not modify a string literal, only modify arrays (otherwise ... core dump)
     Use strcmp() and don't test for string equality using '==' which compares pointer addresses
     Don't strcat onto an uninitialized array - strcpy into it or initialize it before using it
@@ -474,7 +484,16 @@ Warnings and Tricks
     Flush stdin when using consective getchar()'s by reading the buffer all the way through the newline character and discarding
         while ((chrBuffer = getchar() != '\n') && (chrBuffer != EOF)) {
             continue;
-105     }
+        }
+    Use asprintf() to create formatted strings without the risk of buffer overflow or a mis-sized buffer
+
+MinGW Minimal GNU on Windows and MSYS2
+    MSYS2 -- Software Distribution and Building Platform for Windows at https://www.msys2.org/
+    Installation Directory
+        C:\msys64\mingw64\bin
+    Package Management
+        pacman -S mingw-w64-ucrt-x86_64-gcc
+        pacman -S --needed base-devel mingw-w64-x86_64-toolchain    
 
 Updating Repositories in Ubuntu using APT (Advanced Packaging Tool)
     sudo apt-get update -- update the package database list from all external repositories
@@ -876,6 +895,10 @@ IDE Tools
     godbolt.org -- compiler explorer showing source code and coresponding asssembly code
     strip <executable name> -- strips debug symbols to shorten the file size (say 40% smaller)
 
+Address Sanitizer
+    http://gavinchou.github.io/experience/summary/syntax/gcc-address-sanitizer/
+    https://www.osc.edu/book/export/html/5471
+
 C Language Rules
     Case matters: a != A
     Symbolic Constants: #define PI 3.1416 - compiler directive to define a constant (use upper case)
@@ -951,6 +974,7 @@ String Functions
     Concatenate
         char *strcat(char *dest, const char *src);
         char *strncat(char *dest, const char *src, size_t n);
+        literal strings can be concatenated by typing togeher (e.g. printf("This is"" a string");
     Compare
         int memcmp(const void *s1, const void *s2, size_t n);
         int strcmp(const char *s1, const char *s2);
@@ -1060,6 +1084,7 @@ Input Functions
 
 File Manipulation using LibC Functions
     fopen(<file path>, <mode>) -- buffered file open where mode is: O_RDONLY (00), O_WRONLY (01), O_RDWR (02) O_APPEND, O_CREAT
+    fopen_s -- fopen (secure) -- updated version of fopen
     fclose()
     fflush() -- flush an output stream
     fgetc()
@@ -1223,8 +1248,8 @@ Functions in the lib.c library and Other Libraries
     scanf("%s", buffer) -- use fgets() instead, to avoid buffer overflow by someonee inputting to many characters in stdin
     sizeof() -- the number of bytes in an array or data type, an unsigned long long integer
     sleep(nseconds) -- sleep or pause for nseconds (see also usleep)
-    snprintf() -- prints formatted text to a buffer not to exceed n bytes
-    sprintf(char *dest, char *src, size_t n) -- prints formatted text to a string buffer for n characters
+    snprintf() -- prints formatted text to a buffer not to exceed n bytes (see also asprintf()
+    sprintf(char *dest, char *src, size_t n) -- prints formatted text to a string buffer for n characters (see also asprintf())
     stat() -- get file status #include <sys/stat.h>
     strchr(<string>, <char>) -- finds a pointer to the first character in the string, or NULL
     strcat(dest, src) -- concatenate two strings

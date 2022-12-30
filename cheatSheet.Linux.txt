@@ -22,7 +22,7 @@ References
     http://www.sanfoundry.com
     Look at Linux Administration on Youtube https://www.youtube.com/watch?v=qAMWG86sEm8 -- overview of areas, not a tutorial
     https://www.linuxtrainingacademy.com/vim-cheat-sheet/
-    https://www.youtube.com/watch?v=ZtqBQ68cfJc --  The 50 Most Popular Linux & Terminal Commands - Full Course for Beginners
+    https://www.youtube.com/watch?v=ZtqBQ68cfJc --  The 50 Most Popular Linux & Terminal GCommands - Full Course for Beginners
     https://www.youtube.com/watch?v=NsK7OPlK94U&t=431s -- Linux Command-Line Tips & Tricks: Over 15 Examples! (Done)
     https://0xax.gitbooks.io/linux-insides/content/ -- Linux Insides book
     https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-ubuntu-1804 -- Ubuntu Cron job how-to
@@ -36,14 +36,12 @@ References
     https://www.youtube.com/watch?v=Jkmy2YLUbUY -- CPU Scheduling Basics (Jacob Sorber)
     https://www.youtube.com/watch?v=9GDX-IyZ_C8 -- Operatng system Basics (Brian Will)
 
-
-
 Engineer Man Linux on Youtube
     https://www.youtube.com/watch?v=UFIoRLqhFpo -- Linux File System
     https://www.youtube.com/watch?v=TJzltwv7jJs -- processes
     https://www.youtube.com/watch?v=Zuwa8zlfXSY -- eight linux commands
 
-LearnLinuxTV
+Learn LinuxTV with Jay LaCroix
     https://www.learnlinux.tv/ -- homepage
     https://www.youtube.com/watch?v=wYwGNgsfN3I -- Linux Essentials - The ps Command (Done)
     https://www.youtube.com/watch?v=zMKacHGuIHI -- Linux Essentials - Data Streams (stdin, stdout & stderr) (Done)
@@ -68,6 +66,13 @@ LearnLinuxTV
     https://www.youtube.com/watch?v=91dNq4C6260 -- Setting the Hostname of your Linux Workstation or Server (Linux Essentials Series)
     https://www.youtube.com/watch?v=tU9cO9FwDx0 -- Linux Essentials - htop
     https://www.youtube.com/watch?v=2Z6ouBYfZr8 -- Linux Essentials - Formatting & Mounting Storage Volumes
+
+Learn LinuxTV Bash Scripting Course with Ja LaCroix
+    https://www.youtube.com/watch?v=2733cRPudvI -- Bash Scripting on Linux (The Complete Guide) Class 01 - Course Introduction
+    https://www.youtube.com/watch?v=boqC9QenshY -- Bash Scripting on Linux (The Complete Guide) Class 02 - Hello World
+    https://www.youtube.com/watch?v=uQE_4Q-HZZw -- Bash Scripting on Linux (The Complete Guide) Class 03 - Variables
+    https://www.youtube.com/watch?v=YDnp2oEiF64 -- Bash Scripting on Linux (The Complete Guide) Class 04 - Basic Math
+    https://www.youtube.com/watch?v=YrE1Qg-Aw0Q -- Bash Scripting on Linux (The Complete Guide) Class 05 - If Statements 31:42
 
 Cron Jobs
     Check latest Cron is installed and running
@@ -133,7 +138,7 @@ Linux Commands
     /etc/init.d -- boot scripts for daemons (see service command)
     /etc/group -- group accounts and members
     /etc/passwd -- user accounts: login name, uid, login gid, account name, home directory, login shell
-    /etc/profile -- systemwide environment variables for all users
+    /etc/profile -- systemwide environment variables for all users all upper case
     /etc/shadow -- the shadow file for the n/etc/passwd file
     /etc/shells -- list of shells
     /etc/sudoers -- sudo privileges
@@ -242,7 +247,7 @@ Linux Commands
     cut -- print selected part of a file to <stdout>
     daemon -- a headless process
     date -- system date and time
-    dc -- RPN calculater (see also bc)a
+    dc -- RPN calculater (see also bc)
     dd -- data duplicator to copy files and disks (e.g. convert a file to upper or lower case ... dd if=input.txt of=output.txt conv=lcase)
     diff -- compare two files and find differences
     dig -- alternative to nslookup (apt install nsutils to install)
@@ -302,10 +307,10 @@ Linux Commands
     gid -- group id (similar to a uid)
     gpasswd -a <username> <groupname> -- add a user to a group
     gpasswd -d <username> <groupname> -- delete a user from a group
-    grep '<pattern>' <files> -- global/regular expression/print -- search for text in <files> where files are in the current <dir> 
+    grep '<pattern>' <files> -- global/regular expression/print -- search for text in <files> where files are in the current <dir>
     grep "<pattern>" <files> -- use "" instead of '' on the pattern
     grep "<pattern>" ./* -- use "" instead of '' on the pattern
-    grep -A n, -B n, -C n "<pattern>" <files> -- -a n lines after, -b  lines before, -c lones before and after (context) 
+    grep -A n, -B n, -C n "<pattern>" <files> -- -a n lines after, -b  lines before, -c lones before and after (context)
     grep -wic <pattern> <files> -i ignore case, only -w whole word, count matches
     grep '<pattern>' <files> -- use '<pattern>' or "<pattern>" for regular expressions
     grep -lc <pattern> <files> -- list file names that contain a pattern on any line and the count of matches
@@ -335,7 +340,7 @@ Linux Commands
     inode -- metadata (excluding filenames) about a file or a directory
     ip -a -- replacement for ifconfig, shows network configuration of host (see also netstat -ie)
     ip link show -- show the Mac address for each connection
-    iptables -- 
+    iptables --
     invocation -- /etc/profile > /etc/bash_bashrc > ~/.bash_profile > ~/.bash_login > ~./profile > ~/.bashrc
     jobs -- list foreground and background jobs spawned within a shell and their status (a shell builtin)
     join -- join records in two files on a matching field
@@ -355,7 +360,7 @@ Linux Commands
     ln -s <filepath> [linkhome] -- create symbolic (soft) link (symlink), -s symbolic
     ln <filepath> [linkhome] -- create hard link (see unlink to remove)
     locate <filename> -- find files or directories from a database maintained by updatedb
-    ls -- list (files and subdirectories) in the current directory, -a show hidden , -l long format, -h human readable, -i show inode number, --color=never to disable color
+    ls -- list storage (files and subdirectories) in the current directory, -a show hidden , -l long format, -h human readable, -i show inode number, --color=never to disable color
     ls -R -- lists all files and folders recursively from the current directory
     ls -lR | grep "filename" to list all files matching a regex filename in the current directory and subdirectories
     ls -- does not support -i case insensitive switch so pipe to grep for this filter (e.g. ls -la | grep -i "<filtertext>"
@@ -405,11 +410,11 @@ Linux Commands
     printenv [option] -- show all or a single environment variable (see env)
     ps -- 'process status' lists processes and ID's for the terminal session, an external command
     ps -ax -- show Status of each process
-    ps -aux show additional columns incl owners and user names. 
+    ps -aux show additional columns incl owners and user names.
     ps -u -- show memory and CPU utilizationm were VSZ = Virtual Set Size and RSS is resident set size
     ps -x -- list system-wide processes
     ps -He -- list processes in a hierarchy across all terminals
-    ps -axjf -- 
+    ps -axjf --
     pstree -- show processes in parent/child tree
     pwd -- print working directory
     readelf -a <filename> -- display the contents of an elf file (comppiled object file), -a option = read all
@@ -433,7 +438,7 @@ Linux Commands
     shopt -s nocaseglob -- disable case sensitive behaviour for the ls command
     shutdown -h now -- shutdown the system (see also halt) e.g. shutdown -r 5 shutdown and reboot in 5 mins (see also reboot)
     signals -- SIGINT, SIGTERM
-    sleep n -- sleep n seconds, e.g. sleep 30, sleep 360 &, 
+    sleep n -- sleep n seconds, e.g. sleep 30, sleep 360 &,
     sort <filename> -- sorts lines in a textfile to std output
     source <filename> -- executes filename as a script, e.g. source ~/.bashrc to load new shell vars into startup config for the current user
     spell <filename> -- checks spelling in a file and prints misspellings one word per line
@@ -456,14 +461,14 @@ Linux Commands
     systemctl -- control script for systemd units (services) -- components started after the kernal
     systemctl list-unit-files --type=service -- list service files and show their state
     systemctl status apache2 -- get the status of apache on Ubuntus
-    systemctl enable apache2 -- enable apache on Ubuntu (as root) 
-    systemctl enable --now apache2 -- enable apache on Ubuntu and start the service (as root) 
-    systemctl disable apache2 -- disable apache on Ubuntu so it does not start on reboot (as root) 
-    systemctl start apache2 -- start apache on Ubuntu (as root) 
-    systemctl stop apache2 -- stop apache on Ubuntu (as root) 
-    systemctl restart apache2 -- stop and cold start apache on Ubuntu (as root) 
+    systemctl enable apache2 -- enable apache on Ubuntu (as root)
+    systemctl enable --now apache2 -- enable apache on Ubuntu and start the service (as root)
+    systemctl disable apache2 -- disable apache on Ubuntu so it does not start on reboot (as root)
+    systemctl start apache2 -- start apache on Ubuntu (as root)
+    systemctl stop apache2 -- stop apache on Ubuntu (as root)
+    systemctl restart apache2 -- stop and cold start apache on Ubuntu (as root)
     systemctl restart sshd -- restart the ssh listener daemon
-    systemctl reload apache2 -- stop and warm start apache on Ubuntu (as root) 
+    systemctl reload apache2 -- stop and warm start apache on Ubuntu (as root)
     tac -- writes a file to stdout in reverse order
     tail -- show last 10 lines in a text file, e.g. tail -n 3 <filename> shows last three lines in <filename>, -f follow new entries
     tail -f <filename> -- follow additons to <filename> in real time
@@ -473,7 +478,7 @@ Linux Commands
     time <command> -- runs command and prints elapsed time: real is total elapsed, user is CPU time in user mode and sys is time in kernal mode
     top -- continuously updated process list sorted by CPU activity. Use h for help and q to quit (see also htop). Shows available memory and CPU utilization
     touch -- creates a new file or changes the timestamp on an existing file
-    tr -- translate characters in a file
+    tr -- translate characters in a file e.g. cat file.txt | tr "abcd" "ABCD" > outfile.txt
     traceroute -- determine the route of network packets
     tree -- print the directory tree
     truncate -s <size> <filename>
@@ -481,7 +486,7 @@ Linux Commands
     type <command> -- shows the type of command (built-in, executable, script, alias)
     uid -- user id, starting at 1000 for locally added users, below 1000 for system accounts, see also gid for groups
     ulimit -a -- find the current per-user resource limits in a session
-    ulimit -c -- find the upper limit for coredump 
+    ulimit -c -- find the upper limit for coredump
     ulimit -c unlimited -- change the core dump limit to unlimited
     umount <mountpoint> -- unmount a file system after clearing pending data writes
     unalias <aliasname> -- remove an alias created by the alias command
@@ -507,7 +512,7 @@ Linux Commands
     wc <filename> -- 'Word Count' displays lines, words and bytes in a file, -l linecount only, -w words only, -c bytes/chars only
     wc -l -- line count e.g. cat /etc/passwd | wc -l to get a count of users on the systesm
     wget -- download files from the web
-    whatis <command> -- shows summary description of unix command 
+    whatis <command> -- shows summary description of unix command
     whereis -- find the directory for a file (e.g. where is cal)
     which -- show directory of executable if the executable is installed (does not work for built-ins which are part of Bash)
     who -- show all logged in users and terminal sessions
@@ -526,7 +531,7 @@ Shell Scripting
         Variable names are case sensitive
         Variables are untyped and treated as strings
     Input/Output
-        echo -- print to stdout
+        echo -- print to stdout eg echo "this is a quote"
         read -- get from stdin
     Command Line Arguments
         $# -- number of arguments
@@ -536,11 +541,22 @@ Shell Scripting
     Quotations
         unquoted strings are interpreted directly
         "" quoted string are treated as literals but embedded $VAR's are evaluated
-        '' quoted string are treated as literals and embedded $VAR's are literal also
+        '' quoted string are treated as literals and embedded $VAR's are literal
         ` leading quoted strings are evaluated as commands and assigned to a variable
+        Use \ to escape a quote embedded within a string
+    Variables
+        myName="Geoff"
+        echo $myName
+        $ is required to reference the contents of a variable
+        Variables are tied to the session where they are defined and do not persist across sessions
     Special Variables
         $? -- the exit status of a program
         $$ -- the shell's pid
+    Enviornment Variables
+        All are uppercase and system defined e.g. %USER (by convention)
+        Use 'env' command to list environment variables
+    Subshells
+        files=$(ls); -- creates a subshell to run ls and returns the output of the subshell command
     First Line
         #!/bin/basha
     Tests
@@ -553,3 +569,9 @@ Shell Scripting
         for-do-done
         while-do-done
         until-do-done
+    Subshells
+        files=$(ls) sets variable 'files' to the output of ls
+    Math Functions
+        expr -- evaluate expression e.g. expr 30 + 10 (use spaces)
+        Operators + - / \*
+        Operators on variables: expr $val1 + $val2 -- adds two variables
