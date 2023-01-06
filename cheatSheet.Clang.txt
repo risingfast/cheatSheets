@@ -314,6 +314,7 @@ C Videos Jacob Sorber (code prefix js)
 
 CodeVault
     https://www.youtube.com/@CodeVault -- main index
+    https://www.youtube.com/playlist?list=PLfqABt5AS4FmErobw8YyTwXDUE5nPH5lH -- full playlist
     https://www.youtube.com/watch?v=BFDUeEVxUok -- What are unions in C?
     https://www.youtube.com/watch?v=9guJVmDyFmE -- What is typedef
     https://www.youtube.com/watch?v=Lksi1HEMZgY -- How to read a line of text in C
@@ -327,10 +328,10 @@ CodeVault
     https://www.youtube.com/watch?v=dAZbGAhWQtw -- Reading and writing a linked list to a file in C
     https://www.youtube.com/watch?v=ld8xjJ3j-eY -- Deallocating a linked list
     https://www.youtube.com/watch?v=nFl1cNXk85s -- Difference between memmove and memcpy
-    https://www.youtube.com/watch?v=ypG9W33LOTk -- Memory manipulation functions in C
+    https://www.youtube.com/watch?v=ypG9W33LOTk -- Memory manipulation functions in C (memcmp, memcpy, memset, memchr)
     https://www.youtube.com/watch?v=zJzpCorv1JQ -- The sizeof operator in C
     https://www.youtube.com/watch?v=nasTgF78CUc -- Local vs global variables in C
-    https://www.youtube.com/watch?v=UQ5INK_pXCI -- How to convert strings to numbers in C
+    https://www.youtube.com/watch?v=UQ5INK_pXCI -- How to convert strings to numbers in C (strtol(), strtod(), strtof() etc)
     https://www.youtube.com/watch?v=7ud2iqu9szk -- Background and foreground processes
     https://www.youtube.com/watch?v=8A3Zycio0W4 -- How to find a word inside a sentence in C
     https://www.youtube.com/watch?v=0qSU0nxIZiE -- Replace substrings in C
@@ -341,6 +342,8 @@ CodeVault
     https://www.youtube.com/watch?v=P-fWNCF7Wx8 -- Writing to binary files in C
     https://www.youtube.com/watch?v=_dGyVkPkBRI -- Compile and run C code using Notepad++ (2021)
     https://www.youtube.com/watch?v=N5GhV8K8DIc -- Compile and run C code using Visual Studio Code (2021)
+    https://www.youtube.com/watch?v=EA2MVIgu7Q4 -- How to use fseek in C
+    https://www.youtube.com/watch?v=k3DbBOZRvRs -- What are void pointers in C?
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -985,9 +988,9 @@ String Functions
         char *strtok(char *s, const char *delim);
         char *strstr(const char *haystack, const char *needle); returns pointer to the first character value if found, otherwise returns NULL
     Other
-        void *memset(void *s, int c, size_t n);
+        void *memset(void *s, int c, size_t n); -- set all places to a single value
         size_t strlen(const char *s);
-        void *memchr(const void *s, int c, size_t n);
+        void *memchr(const void *s, int c, size_t n); -- find a value inside a memory range
 
 Pointers
     pointer variables are typed

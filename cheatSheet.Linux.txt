@@ -6,6 +6,7 @@ Tips and Tricks and Troublshooting
         sudo chmod 4755 <my script> -- change the SetUID bit
         sudo <script> to run the script w/out a password (include the script full path)
         reference: https://askubuntu.com/questions/167847/how-to-run-bash-script-as-root-with-no-password
+        export PATH=<newpath>:$PATH to prefix the existing path with another value
 
 References
     https://www.youtube.com/watch?v=rxOTDG1peLw&list=PL_vyuxE-AO-A92UblMm33ENQZPzvAPpGl -- 10 Basic Ways to Secure Ubuntu from Hackers
@@ -31,10 +32,14 @@ References
     https://www.youtube.com/watch?v=xHu7qI1gDPA -- Unix system calls (1/2) (Brian Will)
     https://www.youtube.com/watch?v=2DrjQBL5FMU -- Unix system calls (2/2) (Brian Will)
     https://www.youtube.com/watch?v=9-KUm9YpPm0 -- Hardware Basics (Brian Will)
-    https://www.youtube.com/watch?v=zJTqTs7Ujr8&list=PLW1yb8L3S1ngGmtKlI5XYcTNQQ1r3xZvq&index=1 -- M1U1L1 Overview: Introducing the OS (Mitch Davis)a
+    https://www.youtube.com/watch?v=zJTqTs7Ujr8&list=PLW1yb8L3S1ngGmtKlI5XYcTNQQ1r3xZvq&index=1 -- M1U1L1 Overview: Introducing the OS (Mitch Davis)
     https://www.youtube.com/watch?v=Ku1gdK7ybAk&list=PLW1yb8L3S1ngGmtKlI5XYcTNQQ1r3xZvq&index=2 -- M1U1L2 Overview: OS terminology (Mitch Davis)
     https://www.youtube.com/watch?v=Jkmy2YLUbUY -- CPU Scheduling Basics (Jacob Sorber)
     https://www.youtube.com/watch?v=9GDX-IyZ_C8 -- Operatng system Basics (Brian Will)
+    http://www.oracle.com/technetwork/articles/linux/saternos-scripting-088882.html
+    http://freeos.com/guides/lsst/ -- shell scripting training book
+    https://www.youtube.com/watch?v=2733cRPudvI -- Learn Linux TV Bash Shell scripting
+    https://wiki.linuxfoundation.org/lsb/fhs -- Linux Foundation Filesystem Hierarchy Standard
 
 Engineer Man Linux on Youtube
     https://www.youtube.com/watch?v=UFIoRLqhFpo -- Linux File System
@@ -127,7 +132,7 @@ Linux Commands
     /boot/grub -- multi-OS bootloader support (Grand Unified Bootloader)
     /cdrom -- legacy mount point for cdrom
     /dev -- device nodes as files e.g. sda with partitions sda1, sda2.
-    /dev/null -- the null device or bit bucket
+    /dev/null -- the null device or bit bucket e.g. 2 > /dev/null redirects stderr to the bit bucket, & > /dev/null redirects stdout and stderr to the bit bucket
     /etc -- configuration files, init on boot scripts, host-specific system configuration files
     /etc/apt/sources.list - list of all sources used by apt
     /etc/bin -- boot scripts for system configuration
@@ -137,6 +142,7 @@ Linux Commands
     /etc/hosts -- file mapping DNS to IP addresses
     /etc/init.d -- boot scripts for daemons (see service command)
     /etc/group -- group accounts and members
+    /etc/os-release -- operating system release profile
     /etc/passwd -- user accounts: login name, uid, login gid, account name, home directory, login shell
     /etc/profile -- systemwide environment variables for all users all upper case
     /etc/shadow -- the shadow file for the n/etc/passwd file
@@ -145,6 +151,7 @@ Linux Commands
     /etc/sudoers.tmp -- sudo privileges updated by 'sudo visudo'
     /home -- user files
     /home/<username>/bin -- bin automatically included in path on startup
+    /home/<username>/.bashrc -- run commands for the bash shell
     /lib -- shared system libaries
     /lost+found -- empty unless file system crash is partially recovered with fsck
     /media -- automatic mount points for external media hardware such as usb drives
@@ -169,7 +176,7 @@ Linux Commands
     /usr/src -- source installed by the distribution
     /usr/local -- local distribution-dependent extensions
     /usr/local/src -- source installed by users for sharing across users
-    /user/local/bin -- binaries for locally built software
+    /user/local/bin -- binaries for locally built software and bash scripts
     /usr/log -- log files
     /var -- variable files expected to grow e.g. spools, mail, databases, logs
     /var/log -- system logs and logfiles and error logs
@@ -214,6 +221,7 @@ Linux Commands
     calendar -- shows 2 day listing of current calendar events
     cat -Ans <filename> -- writes a file to stdout, reads from <stdin> if no file specified, -Ans show all chars, number lines and suppress repeating blank lines
     cat /etc/passwd
+    cat -n /etc/passwd -- cat a file and show line numbers
     cd <path> -- change directory
     cd - ,change to previous/prior working directory
     cd ~</path> change to home directory path
@@ -227,6 +235,7 @@ Linux Commands
     cmp -- compare two files
     column -- arrange a file in columns with optional delimiters (e.g. mount | column -t)
     comm -- compare two sorted files line by line< e.g. comm file1name> <file2name>
+    command -v <command> -- tests if a command is available/installed (e.g. command -v htop) and returns the path
     Command Prompt -- user@machine<currentDirectory>$ (# if root), PS1="\h\w$ " to set to host and working directory
     Command History -- Up arrow (default is 1000 lines), stored in HISTFILE, normally ~/.bash_history/
     Command-line completion -- use tab character to see completion options
@@ -234,6 +243,7 @@ Linux Commands
     cp -- copy files or directories, -u updates only
     cp -r -- copy all files and recursively copy subdirectories and their contents
     curl -4 icanhazip -- fetch your external ip address with curl
+    curl wttr.in -- 3 day weather forecase
     <Ctrl>-+ -- increase terminal font size
     <Ctrl>-- -- decrease terminal font size
     <Ctrl>-a -- move cursor to start of line
@@ -281,6 +291,7 @@ Linux Commands
     exec <command> -- execute a command in the current shell (vs fork and exec for normal commands)
     exec bash -- create a new bash shell in the current shell
     export -- marks an environment variable for child shell processes e.g. MYVAR="Geoff", export MYVAR, then echo $MYVAR in a child process (see unset)
+    F11 -- make the terminal full screen
     fc -- builtin 'fix command' to list, edit and re-execute commands from history e.g. fc -e vi nn to use vi to edit command line nn
     fdisk /dev/<device> -- format a disk
     fdisk -l -- list devices on a host machine
@@ -297,6 +308,7 @@ Linux Commands
     find . -type f -name '*Open*' -- add a type qualifier to find only files matching a pattern
     find . -type d '<directoryname> -- search for directories recursively within the current directory
     find . -type f -size +1000k -- find files larger than 1 meg
+    find /etc -type f -- find every file in the /etc directory
     fmt <filename> -- formats a file into lines of 75 chars and protects indented text
     findmnt -- show mounted file systems in a readable format (see also mount)
     fold -w nn -- fold text into multiple lines of length nn, e.g. fold -w 12
@@ -319,6 +331,7 @@ Linux Commands
     grep -inr --include \*.c "sprintf" ./* -- list lines and line numbers from all *.c files matching sprintf and ignore case
     grep -ir "<SECTION>" ./* > search.txt -- recursively and case-insensitive grep the text '<SECTION>' in current and sub-directories and save to a file
     grep -s "color?r" ./* -- suppress errr messages about non-existant or unreadable files
+    grep -q i'<pattern>' <files> -- quiet mode (for shell scripts)
     groups -- list all groups where the current user is a member
     groups <username> -- list all groups where the named member is a member
     glibc -- the GNU C libaries
@@ -360,6 +373,7 @@ Linux Commands
     ln -s <filepath> [linkhome] -- create symbolic (soft) link (symlink), -s symbolic
     ln <filepath> [linkhome] -- create hard link (see unlink to remove)
     locate <filename> -- find files or directories from a database maintained by updatedb
+    logrotate -- rotates, compresses and mails system logs
     ls -- list storage (files and subdirectories) in the current directory, -a show hidden , -l long format, -h human readable, -i show inode number, --color=never to disable color
     ls -R -- lists all files and folders recursively from the current directory
     ls -lR | grep "filename" to list all files matching a regex filename in the current directory and subdirectories
@@ -368,7 +382,7 @@ Linux Commands
     ls -laS * -- list files by filesize large to small in the current directory
     ls -lia -- list inode numbers
     ls -la | wc -l -- count the number of entries in a directory
-    lsb_release -a -- 'Linux Standard Base' 'all info' shows release or version of Operating System (Ubuntu linx
+    lsb_release -a -- 'Linux Standard Base' 'all info' shows release or version of Operating System (Ubuntu linx (or cat /etc/os-release to see release profile
     lsblk -- list all block devices (physical devices) attached to the computer (sda = SCSI drive, sda1 = SCSI Partion, hda = IDE drive, hda1 = IDE partition)
     lsmod -- list current running drivers (modules)
     lsof -- list open files and the processes using them
@@ -384,7 +398,7 @@ Linux Commands
     man 4 Devices and Special Files
     man 5 File Formats and Conventions
     man 6 Games et. al.
-    man 7 Miscellanea
+    man 7 Miscellane
     man 8 Sys Admin Tools and Daemons
     man man -- shows documentation on man (to get started)
     mkdir -- make directories
@@ -393,6 +407,7 @@ Linux Commands
     mkfs - make file system
     mount -- show mounted file systems or mount a file system e.g mount -t iso9660 /dev/sdc /mnt/cdrom see also findmnt
     mv -- move or rename file or folder/directory
+    naon -- nano editor
     ncal -- shows current month calendar with days vertical and weeks horizontal
     ncdu -- disk usage utility defaulting to the current user home directory tree
     ncdu / -- disk usage  utility defaulting to the root file system
@@ -419,7 +434,7 @@ Linux Commands
     pwd -- print working directory
     readelf -a <filename> -- display the contents of an elf file (comppiled object file), -a option = read all
     reboot -- reboot the operating system (requires sudo) reboot --force to force immediate reboot (see shutdown)
-    reset -- restore the linux terminal to it's original state (see clear)
+    reset -- restore the linux terminal to it's original state (see cleart
     rev -- reverse text
     rm -- remove files and directories, -r recursive (for directories and contents and subdirectories)
     rm -r <directory> remove a directory and all subdirectories
@@ -472,16 +487,17 @@ Linux Commands
     tac -- writes a file to stdout in reverse order
     tail -- show last 10 lines in a text file, e.g. tail -n 3 <filename> shows last three lines in <filename>, -f follow new entries
     tail -f <filename> -- follow additons to <filename> in real time
+    tar -czvf <compressedfilename> <filetocompress>
     tasksel -- task select on Ubuntu to install complex configurations (run as sudo)
     tee <filename> -- split stdout to console and file, e.g. ls | tee <filename>
-    test <filename> -- use in conditional && commands to execute second command if test is successful
+    test -f <filename> -- use in conditional && commands to execute second command if test is successful
     time <command> -- runs command and prints elapsed time: real is total elapsed, user is CPU time in user mode and sys is time in kernal mode
     top -- continuously updated process list sorted by CPU activity. Use h for help and q to quit (see also htop). Shows available memory and CPU utilization
     touch -- creates a new file or changes the timestamp on an existing file
     tr -- translate characters in a file e.g. cat file.txt | tr "abcd" "ABCD" > outfile.txt
     traceroute -- determine the route of network packets
     tree -- print the directory tree
-    truncate -s <size> <filename>
+    truncate -s <size> <filename> e.g. truncate -s 0 to fully truncate a file
     TTY -- terminal
     type <command> -- shows the type of command (built-in, executable, script, alias)
     uid -- user id, starting at 1000 for locally added users, below 1000 for system accounts, see also gid for groups
@@ -558,7 +574,7 @@ Shell Scripting
     Subshells
         files=$(ls); -- creates a subshell to run ls and returns the output of the subshell command
     First Line
-        #!/bin/basha
+        #!/bin/bash
     Tests
         Use [ ] to test logical expressions e.g [ -f somefile.txt ] tests if somefile.txt is a regular file
         Use in an if loop or while loop
@@ -575,3 +591,49 @@ Shell Scripting
         expr -- evaluate expression e.g. expr 30 + 10 (use spaces)
         Operators + - / \*
         Operators on variables: expr $val1 + $val2 -- adds two variables
+    Date Functions
+        $(date)
+    If statements (using [[] test command)
+        if [ -f ~/filename ] -- test if file exists (use -d for directory check)
+            then ....
+        fi
+    While Loops
+        myvar=1
+        while [ $myvar -le 10 ]
+        do
+            echo $myvar
+            myvar=$(( $myvar +1 ))
+            sleep 0.5
+        done
+    Exit Codes
+        echo $? -- exit code of last command run in the shell
+        Exit code 0 means success and anything else means failure
+        exit <number> exits the script with a specific number
+    Operators
+        || logical OR
+        && logical AND
+    Script Directory
+        /usr/local/bin
+    Comments
+        # at the start of a comment (on a separate line or at the end of a script line)
+    Reading from stdin
+        read myvar
+        echo "You entered $myvar"
+    Functions
+        functions must be defined before they are called
+        check_exit_status() {
+            if [ $? =ne 0 ]
+            then
+                echo "An error occured ..."
+            fi
+        }
+    Case Statements
+        Useful for menus
+        Each case option must end with ;; except the last option
+        read choice
+        case $choice in
+            1) echo "you chose 1" ;;
+            2) echo "you chose 2" ;;
+            *) echo "you chose something else"
+        esac
+
