@@ -106,6 +106,7 @@ References
     http://greenteapress.com/thinkpython2/thinkpython2.pdf -- thinkpython book download
     http://inventwithpython.com/makinggames.pdf
     https://www.java67.com/2017/05/top-7-free-python-programming-books-pdf-online-download.html -- 10 courses in Python
+    https://www.py4e.com/lessons -- Charles Severance python full course
 
 Forums
     https://www.reddit.com/r/learnpython -- reddit

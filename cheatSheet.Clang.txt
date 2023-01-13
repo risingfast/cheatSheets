@@ -344,6 +344,7 @@ CodeVault
     https://www.youtube.com/watch?v=N5GhV8K8DIc -- Compile and run C code using Visual Studio Code (2021)
     https://www.youtube.com/watch?v=EA2MVIgu7Q4 -- How to use fseek in C
     https://www.youtube.com/watch?v=k3DbBOZRvRs -- What are void pointers in C?
+    https://www.youtube.com/watch?v=eeMEq510A5U -- Strpbrk and strspn in C
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -428,6 +429,9 @@ C Other Site References
     https://www.youtube.com/watch?v=ssJY5MDLjlo -- C Programming for Beginners | Full Course (Kevin Brown)
     https://www.youtube.com/playlist?list=PLc7W4b0WHTAWusrFLTv8abWMIYFimp7bi -- Low Level Learning C Programming
     https://www.youtube.com/watch?v=ssJY5MDLjlo&t=355s -- C Programming for Beginners | Full Course, Kevin Brown  (Single 6 Hour Portfolio Courses)
+    https://www.youtube.com/watch?v=j-_s8f5K30I -- Charles Severance C Course on Coursera -- reading from K&R C Language original edition
+    https://www.youtube.com/watch?v=z3o6yEzcnLc -- Charles Severance How to be a Master Programmer (with David Bombal)
+    https://www.cc4e.com/book/pages/page_001 -- K&R C Programming Language book as text page 001
 
 C and CGI
     https://www.eskimo.com/~scs/cclass/handouts/cgi.html -- C and C/CGI tutorials
@@ -983,10 +987,12 @@ String Functions
         int strcmp(const char *s1, const char *s2);
         int strncmp(<str1>, <str2>i, len) returns 0 if strings match for len characters (in string.h)
     Search
-        char *strchr(const char *s, int c);
-        char *strrchr(const char *s, int c);
+        char *strchr(const char *str, int c); -- find the first occurance of c in str
+        char *strrchr(const char *str, int c); -- find the last occurance of c in str
         char *strtok(char *s, const char *delim);
         char *strstr(const char *haystack, const char *needle); returns pointer to the first character value if found, otherwise returns NULL
+        char *strpbrk(const char *sr1, const char *str2) -- finds the first character in str1 that matches any characer in str2
+        site_t strspn(const char *str1, const char *str2) -- calculates the length of the initial segment of str that consists entirely of characters in str2
     Other
         void *memset(void *s, int c, size_t n); -- set all places to a single value
         size_t strlen(const char *s);
