@@ -345,6 +345,9 @@ CodeVault
     https://www.youtube.com/watch?v=EA2MVIgu7Q4 -- How to use fseek in C
     https://www.youtube.com/watch?v=k3DbBOZRvRs -- What are void pointers in C?
     https://www.youtube.com/watch?v=eeMEq510A5U -- Strpbrk and strspn in C
+    https://www.youtube.com/watch?v=cpbkXzd2TKY -- Good practice for freeing memory in C
+    https://www.youtube.com/watch?v=4jN8YG74aPc -- How to generate random strings in C
+    https://www.youtube.com/watch?v=FuBzYpLMo7c -- How to generate random strings from a set of characters in C
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -493,6 +496,7 @@ Warnings and Tips and Tricks
             continue;
         }
     Use asprintf() to create formatted strings without the risk of buffer overflow or a mis-sized buffer
+    Always set a pointer to NULL after free()
 
 MinGW Minimal GNU on Windows and MSYS2
     MSYS2 -- Software Distribution and Building Platform for Windows at https://www.msys2.org/
@@ -1228,7 +1232,7 @@ Functions in the lib.c library and Other Libraries
     dprintf() -- print to a file descriptor, like STDOUT_FILENO
     exit(<number>) -- system call to close the current program and return <number> to the calling program
     fileno(<fpointer>) -- returns a file desriptor from a pointer to the file
-    free(ptr) -- frees memory allocated to ptr with malloc or calloc (set ptr = NULL afterwards), do not free the same memory twice, #include <stdlib.h>
+    free(ptr) -- frees memory allocated to ptr with malloc or calloc (set ptr = NULL afterwards, free(null) does not throw an error), do not free the same memory twice, #include <stdlib.h>
     fstat() -- same as stat() but takes a file descriptor instead of a file name
     gets() -- get a string from stdin (use fgets() to avoid buffer overflow)
     index(<string>, <char>) -- returns a pointer to the first occurance of <char> in <string> or returns NULL

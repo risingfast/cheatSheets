@@ -71,6 +71,7 @@ Learn LinuxTV with Jay LaCroix
     https://www.youtube.com/watch?v=91dNq4C6260 -- Setting the Hostname of your Linux Workstation or Server (Linux Essentials Series)
     https://www.youtube.com/watch?v=tU9cO9FwDx0 -- Linux Essentials - htop
     https://www.youtube.com/watch?v=2Z6ouBYfZr8 -- Linux Essentials - Formatting & Mounting Storage Volumes
+    https://www.youtube.com/watch?v=bA8GVdGFT30 -- Demystifying Hostnames and Domain Names in Linux, and How Server Naming Benefits You
 
 Learn LinuxTV Bash Scripting Course with Ja LaCroix
     https://www.youtube.com/watch?v=2733cRPudvI -- Bash Scripting on Linux (The Complete Guide) Class 01 - Course Introduction
@@ -355,10 +356,12 @@ Linux Commands
     hostnamectl set-hostname <newHostName> -- change the hostname (note: update /etc/hosts with any changes)
     htop -- improved top command
     id -- current user and associated groups. -un show only user name (see also whoami)
+    ifconfig -- show the internet configuration
+    ifconfig | grep ether -- show the MAC address
     info <command> -- shows GNU info pages (with hyperlinks) for a command (see also man)
     inode -- metadata (excluding filenames) about a file or a directory
     ip -a -- replacement for ifconfig, shows network configuration of host (see also netstat -ie)
-    ip link show -- show the Mac address for each connection
+    ip link show -- show the Mac address for each connection (as the link/ether entry
     iptables --
     invocation -- /etc/profile > /etc/bash_bashrc > ~/.bash_profile > ~/.bash_login > ~./profile > ~/.bashrc
     jobs -- list foreground and background jobs spawned within a shell and their status (a shell builtin)
