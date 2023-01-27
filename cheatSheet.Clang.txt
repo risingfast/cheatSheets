@@ -74,11 +74,10 @@ C Exercises
 
 Mycodeschool (MCS) C and C++ -- Introduction and Basic
     https://www.youtube.com/playlist?list=PL2_aWCzGMAwLSqGsERZGXGkA5AfMhcknE -- playlist
-    https://www.youtube.com/watch?v=AWliApDc61w -- Introduction to Programming
-    https://www.youtube.com/watch?v=xyBbocLXbNY -- Basics of Computer Memory
-    Memory Management with brk()`
+    https://www.youtube.com/watch?v=AWliApDc61w -- Introduction to Programming and Programming Languages
+    https://www.youtube.com/watch?v=xyBbocLXbNY -- Basics of Computer Memory and Getting Started
     https://www.youtube.com/watch?v=aMpsKnf6DrQ -- Writing and Executing First Program
-    https://www.youtube.com/watch?v=lqzuR2USKRM -- Installing and configuring gcc/g++ on Windows
+    https://www.youtube.com/watch?v=lqzuR2USKRM -- Installing and configuring gcc/g++ on Windows (Done)
     https://www.youtube.com/watch?v=4LbarXsdEbM -- Working with IDE's
     https://www.youtube.com/watch?v=OSyjOvFbAGI -- Data Types, Constants and Variables (Done)
     https://www.youtube.com/watch?v=xOIVXR35aI4 -- Input and Output: printf and scanf
@@ -105,14 +104,14 @@ Mycodeschool (MCS) C and C++ -- Pointers in C/C++ Playlist (Done)
     https://www.youtube.com/watch?v=sxTFSDAZM8s -- Function pointers and callbacks (Done)
     https://www.youtube.com/watch?v=F2nrej6Kjww -- Memory Leak in C/C++ (Done)
 
-Mycodeschool (MCS) C and C++ -- Data Structures (Done)
-    https://www.youtube.com/playlist?list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P -- Playlist (Done)
+Mycodeschool (MCS) C and C++ -- Data Structures
+    https://www.youtube.com/playlist?list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P -- Playlist
     https://www.youtube.com/watch?v=92S4zgXN17o -- Introduction to data structures (Done)
-    https://www.youtube.com/watch?v=HdFG8L1sajw -- Data Structures: List as abstact data type (Done)
+    https://www.youtube.com/watch?v=HdFG8L1sajw -- Data Structures: List as abstact data typr (Done)
     https://www.youtube.com/watch?v=NobHlGUjV3g -- Introduction to Linked List (Done)
-    https://www.youtube.com/watch?v=lC-yYCOnN8Q -- Data Structures: Arrays vs Linked Lists (Done)
-    https://www.youtube.com/watch?v=vcQIFT79_50 -- Linked List implementation in C/C++ (Done)
-    https://www.youtube.com/watch?v=cAZ8CyDY56s -- Linked List: Inserting a node at the beginning (Done)
+    https://www.youtube.com/watch?v=lC-yYCOnN8Q -- Data Structures: Arrays vs Linked Lists
+    https://www.youtube.com/watch?v=vcQIFT79_50 -- Linked List implementation in C/C++
+    https://www.youtube.com/watch?v=cAZ8CyDY56s -- Linked List: Inserting a node at the beginning
     https://www.youtube.com/watch?v=IbvsNF22Ud0 -- Linked List in C/C++ - Inserting a node in the nth position
     https://www.youtube.com/watch?v=Y0n86K43GO4 -- Linked List in C/C++ - Deleting a node at the nth position
     https://www.youtube.com/watch?v=sYcOK51hl-A -- Reverse a linked list - Iterative method
@@ -311,6 +310,8 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=BAGcSyrWiPs -- How Big Is A Character?
     https://www.youtube.com/watch?v=sZ8mRwCh4Sk -- Is memcpy dangerous?
     https://www.youtube.com/watch?v=1KQqpiXxvWQ -- How to Time Your Code (time, clock, times, clock_gettime)
+    https://www.youtube.com/watch?v=grk4QUDveFw -- Struct packing: No, you're not going crazy
+    https://www.youtube.com/watch?v=oyX30WVuEos -- Implementing a Circular Queue in C
 
 CodeVault
     https://www.youtube.com/@CodeVault -- main index
@@ -348,6 +349,11 @@ CodeVault
     https://www.youtube.com/watch?v=cpbkXzd2TKY -- Good practice for freeing memory in C
     https://www.youtube.com/watch?v=4jN8YG74aPc -- How to generate random strings in C
     https://www.youtube.com/watch?v=FuBzYpLMo7c -- How to generate random strings from a set of characters in C
+    https://www.youtube.com/watch?v=6W0QT9I9OLE -- How to get environment variables in C
+    https://www.youtube.com/watch?v=rUA3IkQNe5I -- Format strings in C
+    https://www.youtube.com/watch?v=lXYSW4_ojEk -- How to use scanf with fgets
+    https://www.youtube.com/watch?v=5XyEaMFvXDQ -- How to find a string in an array of strings in C
+    https://www.youtube.com/watch?v=9pjBseGfEPU -- Visual Studio Code for C/C++ on Linux (2021)
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -435,6 +441,8 @@ C Other Site References
     https://www.youtube.com/watch?v=j-_s8f5K30I -- Charles Severance C Course on Coursera -- reading from K&R C Language original edition
     https://www.youtube.com/watch?v=z3o6yEzcnLc -- Charles Severance How to be a Master Programmer (with David Bombal)
     https://www.cc4e.com/book/pages/page_001 -- K&R C Programming Language book as text page 001
+    https://www.youtube.com/playlist?list=PL0170B6E7DD6D8810 -- C Programming Tutorials with iTzAdam5X 87 videos using CodeBlock
+    https://notabug.org/gleport/awesome-c -- C libraries and references
 
 C and CGI
     https://www.eskimo.com/~scs/cclass/handouts/cgi.html -- C and C/CGI tutorials
@@ -452,6 +460,10 @@ C and CGI
 Algorithms and Code Challenges
     https://www.javatpoint.com/c-programming-language-tutorial -- left side menu bar
     https://leetcode.com/
+    https://codedrills.io/problems/
+    https://www.codechef.com/practice
+    https://github.com/EbookFoundation/free-programming-books/blob/main/more/problem-sets-competitive-programming.md -- list of all coding challenge sites
+    https://www.algoexpert.io/
 
 Integrated Development Environments
     In Linux, the Anjuta IDE is a C tool shipped standard with Suse Linux 
@@ -472,10 +484,14 @@ Integrated Development Environments
     http://www.codeblocks.org/downloads/26 -- Code Blocks installable IDE for C/C++
     https://www.eclipse.org/cdt/ -- Eclipse C/C++ Development Tooling
     https://netbeans.org/features/cpp/ -- Netbeans C/C++ Development
+    https://www.sololearn.com/compiler-playground/c
+    https://www.interviewbit.com/online-c-compiler/
+    https://www.jdoodle.com/c-online-compiler/
+    https://www.programiz.com/c-programming/online-compiler/
 
 Warnings and Tips and Tricks
     Do not modify a string literal, only modify arrays (otherwise ... core dump)
-    Use strcmp() and don't test for string equality using '==' which compares pointer addresses
+    Use strcmp() to compare strings but don't test for string equality using '==' which compares pointer addresses
     Don't strcat onto an uninitialized array - strcpy into it or initialize it before using it
     Don't do cumulative strcat's in recursive functions
     Pass an array to a function by array name only, so also pass the primary length(s) as another parameter(s)
@@ -660,7 +676,14 @@ GCC Command Options
     -o -- output filename
     -S -- gcc -S -o d_helloWorld.asm d_helloWorld.c -- create assembly file with -S option
     -c -- gcc -c foo.c -o foo.o -- create an object binary file foo.o from foo.c but don't link
-    -v -- version information (e.g. gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1)
+    -v -- version information (e.g. gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) and include search paths
+
+GCC Include Directories
+    /usr/lib/gcc/x86_64-linux-gnu/9/include
+    /usr/local/include
+    /usr/include/x86_64-linux-gnu
+    /usr/include -- includes stdio.h, stdlib.h and many other
+    /usr/include/mysql -- for added mysql header files
 
 Compilation Process
     C programs are built from one or more compilation or translation units
@@ -820,6 +843,13 @@ Static Libraries (collections of software)
     Static libraries are distributed as archives or .a files
     Use the ar command within a makefile
 
+Third Party Libraries
+    gtk -- applications UI elements and screen widgets
+    qt -- applications UI elements
+    raylib -- graphics https://github.com/raysan5/raylib
+    phaser.io -- graphics used to write cardgames.io using HTML5 Game Framework and js
+    unity -- games
+    unreal Engine -- games
 
 Libc Library for Built-ins
     libc --- the standard library (contains most standard functions: e.g. printf(), malloc(), calloc(), realloc(), free() etc)
@@ -940,7 +970,7 @@ Data Types
             double
     Arrays - a systematic arrangement of variables of the same datatype
     Structures are compound types or collections of values
-    Pointers
+    Pointers 4 bytes
     Primitive Types (Defined in the language)
         int integer 4 bytes, nnn (decimal) 0xnnn (hexadecimal) 0nnn (octal)
         unsigned int integer 4 bytes not two's complement
@@ -952,6 +982,15 @@ Data Types
         double real double precision
     Unions are 
     Composite Types (defined by a program)
+
+Abstract Data Types
+    Lists
+    Linked Lists
+    Doubly Linked List
+    Stack
+    Queue
+    Trees
+    Graphs
 
 Arrays
     A systematic arrangement of variables of the same datatype
@@ -982,6 +1021,8 @@ String Functions
         void *memmove(void *dest, const void * src, size_t n);
         char *strcpy(char *dest, const char *src);
         char *strncpy(char *dest, const char *src, size_t n); 
+        size_t snprintf() -- prints formatted text to a buffer not to exceed n bytes
+        asprintf() -- prints to a new allocated string of exact size, requires  '#define _GNU_SOURCE' before #include <stdio.h>
     Concatenate
         char *strcat(char *dest, const char *src);
         char *strncat(char *dest, const char *src, size_t n);
@@ -1120,7 +1161,7 @@ File Manipulation using LibC Functions
         r+ O_RDWR
         w+ O_RDWR|O_CREAT|O_TRUNC
         a+ O_RDWR|O_CREAT|O_APPEND
-    fgets(char *str, int n, FILE *stream) -- reads a full string from a file
+    fgets(char *str, int n, FILE *stream) -- reads a full string from a file or stdin, including the newline '\n' so replace the '\n' with '\0'
     fputs() -- writes a full string to a file
     fprintf() -- writes a formatted string to a file
     fseek(FILE (stream, long nt offset, int whence) -- rewind or forward the curent file position
@@ -1130,11 +1171,11 @@ File Manipulation using LibC Functions
     feof() -- tells if EOF is reached
     ferror() -- tells if file error is set
     fprintf(<stream>, <format>, <variables>) -- print formatted output to a file or stream
-    fscanf(<stream>, <format>, <variables>) -- read formated input from a file until a format mismatch occurs then stop
+    fscanf(<stream>, <format>, <variables>) -- read formated input from a file until a format mismatch occurs or whitespace in a string, then stop
         reads a filestream until a mismatch occurs, then stops
         use  %[] to include chars ... eg %[a-zA-Z]c includes all alpha caracters but stops on a mismatch
-        use %[^] to exclue chars ... eg %[^\n']s reads a string with everything except a newline so stops on a newline
-        use %[^\n]\ns to read everything up to a newline into a string, then read the newline and stop
+        use %[^] to exclude chars ... eg %[^\n']s reads a string with everything except a newline so stops on a newline
+        use %[^\n]\ns to read everything iincluding whitespace up to a newline into a string, then read the newline and stop
     int remove(<filepath>) -- delete a file, return 0 if successful and non-zero for failure
     rewind() -- set the file pointer to the beginning of the file
     truncate(<file path>. <offset>) -- truncates a file down to offset length
@@ -1234,7 +1275,7 @@ Functions in the lib.c library and Other Libraries
     fileno(<fpointer>) -- returns a file desriptor from a pointer to the file
     free(ptr) -- frees memory allocated to ptr with malloc or calloc (set ptr = NULL afterwards, free(null) does not throw an error), do not free the same memory twice, #include <stdlib.h>
     fstat() -- same as stat() but takes a file descriptor instead of a file name
-    gets() -- get a string from stdin (use fgets() to avoid buffer overflow)
+    gets() -- get a string from stdin (use fgets() which requires a number of characters to avoid buffer overflow)
     index(<string>, <char>) -- returns a pointer to the first occurance of <char> in <string> or returns NULL
     main() -- where a C program starts
     malloc() - e.g int *x = malloc(sizeof(int)), int *arr = (int *)malloc(sizeof(int)*100) etc or NULL, specifies memory required in bytes, memory is not initialized, #include <stdlib.h>
@@ -1352,6 +1393,8 @@ C and CGI
     /usr/lib/cgi-source for sourc code
     AJAX -- Asynchronous Javascipt and XML is implemented by CGI (POST and GET methods) for dynamic pages
     CGI executables read STDIN (POST) or from environment variable 'QUERY_STRING' (GET) and write to STDOOUT
+    char *getenv(<Environment Variable Name>); fetches the environment variable
+        eg getenv("QUERY_STRING") returns the QUERY_STRING envirnment variable for a GET request
     https://apache.org/
     printf("Content-type:text/plain\n\n") -- MIME (Multipurpose Internet Mail Extensions) type prefix required for STDOUT for plain text
     printf("Content-type:text/html\n\n") -- MIME (Multipurpose Internet Mail Extensions) type prefix required for STDOUT for HTML

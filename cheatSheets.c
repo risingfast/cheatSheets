@@ -25,6 +25,7 @@
  *      10-Oct-2022 add a trap for invalid action
  *      10-Oct-2022 remove caText parameter from fPrintSheet(FILE *f, char *caText, char *caFilter)
  *      16-Dec-2022 change strcpy() to strncpy()
+ *      22-Jan-2022 set freed pointer to NULL
  *  Enhancements:
 */
 
@@ -95,6 +96,7 @@ int main(void) {
     strncpy(caFilter, sTemp, MAXLEN);
     sFilter = caFilter;
     free(sTemp);
+    sTemp = NULL;
 
 // test if Null or All or non-Null values should be shown --------------------------------------------------------------
 
