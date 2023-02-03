@@ -74,35 +74,35 @@ C Exercises
 
 Mycodeschool (MCS) C and C++ -- Introduction and Basic
     https://www.youtube.com/playlist?list=PL2_aWCzGMAwLSqGsERZGXGkA5AfMhcknE -- playlist
-    https://www.youtube.com/watch?v=AWliApDc61w -- Introduction to Programming and Programming Languages
-    https://www.youtube.com/watch?v=xyBbocLXbNY -- Basics of Computer Memory and Getting Started
-    https://www.youtube.com/watch?v=aMpsKnf6DrQ -- Writing and Executing First Program
+    https://www.youtube.com/watch?v=h-HBipu_1P0    Introduction to Programming and Programming Languages (Done)
+    https://www.youtube.com/watch?v=xyBbocLXbNY -- Basics of Computer Memory and Getting Started (Done)
+    https://www.youtube.com/watch?v=aMpsKnf6DrQ -- Writing and Executing First Program (Done)
     https://www.youtube.com/watch?v=lqzuR2USKRM -- Installing and configuring gcc/g++ on Windows (Done)
-    https://www.youtube.com/watch?v=4LbarXsdEbM -- Working with IDE's
+    https://www.youtube.com/watch?v=4LbarXsdEbM -- Working with IDE's (Done)
     https://www.youtube.com/watch?v=OSyjOvFbAGI -- Data Types, Constants and Variables (Done)
-    https://www.youtube.com/watch?v=xOIVXR35aI4 -- Input and Output: printf and scanf
-    https://www.youtube.com/watch?v=vvpDbhqPrww -- Arithmetic Operators
-    https://www.youtube.com/watch?v=zxb8DvLUqcM -- Know your data type: int in C
+    https://www.youtube.com/watch?v=xOIVXR35aI4 -- Input and Output: printf and scanf (Done)
+    https://www.youtube.com/watch?v=vvpDbhqPrww -- Arithmetic Operators (Done)
+    https://www.youtube.com/watch?v=zxb8DvLUqcM -- Know your data type: int in C (Done)
     https://www.youtube.com/watch?v=5tPLyHCZdU0 -- Arrays in programming (Done)
 
 Mycodeschool (MCS) C and C++ -- Pointers in C/C++ Playlist (Done)
-    https://www.youtube.com/playlist?list=PL2_aWCzGMAwLZp6LMUKI3cc7pgGsasm2_ -- playlist (Done)
+    https://www.youtube.com/playlist?list=PL2_aWCzGMAwLZp6LMUKI3cc7pgGsasm2_ -- playlist
     https://www.youtube.com/watch?v=h-HBipu_1P0 -- Introduction to pointers in C/C++ (Done)
     https://www.youtube.com/watch?v=X1DcpcgSUXw -- Working with Pointers (Done)
-    https://www.youtube.com/watch?v=JTttg85xsbo -- Pointer types, pointer arithmetic, void pointers (Done)
-    https://www.youtube.com/watch?v=d3kd5KbGB48 -- Pointers to pointers (Done)
-    https://www.youtube.com/watch?v=LW8Rfh6TzGg -- Pointers as function arguments - call by reference (Done)
-    https://www.youtube.com/watch?v=ASVB8KAFypk -- Pointers and Arrays (Done)
-    https://www.youtube.com/watch?v=CpjVucvAc3g -- Arrays as Function Arguments (Done)
-    https://www.youtube.com/watch?v=Bf8a6IC1dE8 -- Character arrays and pointers - part 1 (Done)
-    https://www.youtube.com/watch?v=vFZTxvUoZSU -- Character arrays and pointers - part 2 (Done)
-    https://www.youtube.com/watch?v=sHcnvZA2u88 -- Pointers and 2-Dimensional arrays (Done)
-    https://www.youtube.com/watch?v=_j5lhHWkbnQ -- Pointers and multidimensional arrays (Done)
-    https://www.youtube.com/watch?v=_8-ht2AKyH4 -- Pointers and Dynamic Memory (Done)
-    https://www.youtube.com/watch?v=E8Yh4dw6Diw -- Pointers as Function Returns in C/C++ (Done)
-    https://www.youtube.com/watch?v=ynYtgGUNelE -- Function pointers (Done)
-    https://www.youtube.com/watch?v=sxTFSDAZM8s -- Function pointers and callbacks (Done)
-    https://www.youtube.com/watch?v=F2nrej6Kjww -- Memory Leak in C/C++ (Done)
+    https://www.youtube.com/watch?v=JTttg85xsbo -- Pointer types, pointer arithmetic, void pointers
+    https://www.youtube.com/watch?v=d3kd5KbGB48 -- Pointers to pointers
+    https://www.youtube.com/watch?v=LW8Rfh6TzGg -- Pointers as function arguments - call by reference
+    https://www.youtube.com/watch?v=ASVB8KAFypk -- Pointers and Arrays
+    https://www.youtube.com/watch?v=CpjVucvAc3g -- Arrays as Function Arguments
+    https://www.youtube.com/watch?v=Bf8a6IC1dE8 -- Character arrays and pointers - part 1
+    https://www.youtube.com/watch?v=vFZTxvUoZSU -- Character arrays and pointers - part 2
+    https://www.youtube.com/watch?v=sHcnvZA2u88 -- Pointers and 2-Dimensional arrays
+    https://www.youtube.com/watch?v=_j5lhHWkbnQ -- Pointers and multidimensional arrays
+    https://www.youtube.com/watch?v=_8-ht2AKyH4 -- Pointers and Dynamic Memory
+    https://www.youtube.com/watch?v=E8Yh4dw6Diw -- Pointers as Function Returns in C/C++
+    https://www.youtube.com/watch?v=ynYtgGUNelE -- Function pointers
+    https://www.youtube.com/watch?v=sxTFSDAZM8s -- Function pointers and callbacks
+    https://www.youtube.com/watch?v=F2nrej6Kjww -- Memory Leak in C/C++
 
 Mycodeschool (MCS) C and C++ -- Data Structures
     https://www.youtube.com/playlist?list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P -- Playlist
@@ -312,6 +312,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=1KQqpiXxvWQ -- How to Time Your Code (time, clock, times, clock_gettime)
     https://www.youtube.com/watch?v=grk4QUDveFw -- Struct packing: No, you're not going crazy
     https://www.youtube.com/watch?v=oyX30WVuEos -- Implementing a Circular Queue in C
+    https://www.youtube.com/watch?v=xedk5KXg0VI -- Scanf Basics: the good, the bad, and why so many pointers?
 
 CodeVault
     https://www.youtube.com/@CodeVault -- main index
@@ -354,6 +355,9 @@ CodeVault
     https://www.youtube.com/watch?v=lXYSW4_ojEk -- How to use scanf with fgets
     https://www.youtube.com/watch?v=5XyEaMFvXDQ -- How to find a string in an array of strings in C
     https://www.youtube.com/watch?v=9pjBseGfEPU -- Visual Studio Code for C/C++ on Linux (2021)
+    https://www.youtube.com/watch?v=i1MeXMciy6Q -- How to get current time and date in C
+    https://www.youtube.com/watch?v=NBwvtoJghz4 -- Format and parse datetime in C
+    https://www.youtube.com/watch?v=9guJVmDyFmE -- What is typedef?
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -443,6 +447,8 @@ C Other Site References
     https://www.cc4e.com/book/pages/page_001 -- K&R C Programming Language book as text page 001
     https://www.youtube.com/playlist?list=PL0170B6E7DD6D8810 -- C Programming Tutorials with iTzAdam5X 87 videos using CodeBlock
     https://notabug.org/gleport/awesome-c -- C libraries and references
+    http://www.crasseux.com/books/ctutorial/ -- The GNU C Programming Tutorial
+    https://learn.microsoft.com/en-us/cpp/c-language/?view=msvc-170 -- Microsoft C Language Reference for Visual Studio
 
 C and CGI
     https://www.eskimo.com/~scs/cclass/handouts/cgi.html -- C and C/CGI tutorials
@@ -545,7 +551,7 @@ Program Structure and Process Memory Structure
         globals
         code
     Low memory address
-    The break is he highest memory address in the unallocated heap (i.e. it is the 'break' between allocated heap space and unallocated 'empty' heap space)
+    The break is the highest memory address in the unallocated heap (i.e. it is the 'break' between allocated heap space and unallocated 'empty' heap space)
 
 Binary and Memory Sizes
     Nibble: 4 bits e.g. F (decimal 1 - 15) (hex 0 - F)
@@ -994,8 +1000,9 @@ Abstract Data Types
 
 Arrays
     A systematic arrangement of variables of the same datatype
-    Declaration int myArray1D[5]; -- one dimensional array
-    int myArray2D[5][4] -- two dimensional array
+    Declaration int myArray[5]; -- one dimensional array
+    int myArray[5][4] -- two dimensional array
+    The array name myArray is a pointer to the base of the array (ie the base address)
     The base address of an array is the address of the first element which is the array name
     The offset in an array is the offset from the starting or base address
     The arrayname is a pointer to the starting address
@@ -1140,7 +1147,7 @@ File Manipulation using LibC Functions
     fopen(<file path>, <mode>) -- buffered file open where mode is: O_RDONLY (00), O_WRONLY (01), O_RDWR (02) O_APPEND, O_CREAT
     fopen_s -- fopen (secure) -- updated version of fopen
     fclose()
-    fflush() -- flush an output stream
+    fflush() -- flush an output stream (but undefined for stdin)
     fgetc()
     fputc()
     fread() -- binary mode
@@ -1200,7 +1207,7 @@ Header Files for C (located at /usr/include)
     Header files contain declarations (usually) and creates the interface to a translation unit (the combined header file and source file)
     Header files for the standard c library in /usr/include in Linux
     <ctype.h> declares functions to determine character types and upper/lower case conversions
-    <limits.h> 
+    <limits.h> - defines min and max sizes of data types
     <stdio.h> is a header in the C standard library
     'myheader.h' is a header file in the local source directory
     <stdint.h> -- fixed width integer declarations: int8_t, uint8_t, int16_t, uint16_t, int32_t, uint32_t, int64_t, uint64_t etc
@@ -1297,7 +1304,7 @@ Functions in the lib.c library and Other Libraries
     putch() -- same as putchar() but only on Windows
     putc(<character, <streamptr>) -- outpputs a single character to a stream, returns the character or EOF if error 
     putchar(<character> | <int>) -- puts a character to stdout (equivalent to putc(<character>, stdout), returns the character printed or EOF if error
-    realloc() -- e.g. arr = realloc(arr, sizeo(int)*200) increases the allocation of memory to an existing pointer in bytes, passing a NULL pointer, works like malloc() with no initialization of extra memory, #include <stdlib.h>
+    realloc() -- arr = realloc(arr, sizeof(int)*newCount) where newCount is the new array element count, increases the allocation of memory to an existing pointer in bytes, passing a NULL pointer, works like malloc() with no initialization of extra memory, #include <stdlib.h>
     realpath() -- builds a full path from a relative directory path
     scanf("%s", buffer) -- use fgets() instead, to avoid buffer overflow by someonee inputting to many characters in stdin
     sizeof() -- the number of bytes in an array or data type, an unsigned long long integer
