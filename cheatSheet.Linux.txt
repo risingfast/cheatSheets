@@ -116,6 +116,7 @@ Linux Commands
     & -- run in the background (appended to command) with space, e.g. './jobname &')
     > redirect stdout
     >> redirect stdout and concatenate to the target
+    < redirect stdin to a different source
     .<filename> -- run filename as source commands to the shell
     ./<filename> -- run the filename from the current directory
     ~ -- home directory
@@ -168,7 +169,7 @@ Linux Commands
     /snap -- snap packages used in Ubuntu
     /sbin -- system binaries (like /bin) but for the sysadmin user e.g. disk formatters, partitioners etc
     /srv -- service files used by server
-    /sys -- system folder in RAM
+    /sys -- system folder in RAM with files controlling hardware settings
     /tmp -- temp files used in a session, emptied on reboot automatically
     /usr -- user programs and supporting files (large)
     /usr/bin -- linux executables (non-shell built-in commands)
@@ -347,7 +348,7 @@ Linux Commands
     halt -- shutdown the system and do not reboot (see also shutdown)
     head -- show first 10 lines in a text file, e.g. head -n 3 <filename> shows first 3 lines in <filename>
     help <command> -- show help page
-    hexdump -C <binaryfile> or hd -C <binaryfile> -- hex dump utiliyt
+    hexdump -C <binaryfile> or hd -C <binaryfile> -- hex dump utility in hex format
     HISTTIMEFORMAT="%Y-%m-%d %T " to display a timestamp in command history (also put in ~/.bashrc)
     history n -- list n lines of keyboard history, stored in ~/.bash_history
     host <domainName> -- returns the DNS address of the domain name
@@ -445,7 +446,7 @@ Linux Commands
     reboot -- reboot the operating system (requires sudo) reboot --force to force immediate reboot (see shutdown)
     reset -- restore the linux terminal to it's original state (see cleart
     rev -- reverse text
-    rm -- remove files and directories, -r recursive (for directories and contents and subdirectories)
+    rm -- remove files and directories, non-recursive by default, so use -r recursive (for directories and contents and subdirectories)
     rm -r <directory> remove a directory and all subdirectories
     rm -rf <directory> remove a directory and all subdirectories and force deletion (no prompting)
     rmdir -- remove directory (must be empty, otherwise use rm -r for recursive delete)
@@ -543,6 +544,7 @@ Linux Commands
     who -- show all logged in users and terminal sessions
     whoami -- show current user, same as id -un.
     xargs -- run a command multiple time from std input e.g. find /tmp -mtime +14 | xargs rm  to rm all files over 14 days old in /tmp
+    xdg-open <filename> -- opens a file or URL in a user's default application
     xxd -- hex dump utility e.g. xxd myfile.txt
     yes -- outputs a stream of 'y' characters or other (e.g. yes charString)
 
@@ -570,7 +572,7 @@ Shell Scripting
         "" quoted string are treated as literals but embedded $VAR's are evaluated
         '' quoted string are treated as literals and embedded $VAR's are literal
         ` leading quoted strings are evaluated as commands and assigned to a variable
-        Use \ to escape a quote embedded within a string
+        Use \ to escape a quote or a space embedded within a string ie. "Hello World" is the same as "Hello\ World"
     Variables
         myName="Geoff"
         echo $myName

@@ -136,18 +136,18 @@ Mycodeschool (MCS) C and C++ -- Data Structures
     https://www.youtube.com/watch?v=COZK7NATh4k -- Binary Search Tree (BST) - Implementation in C/C++ (Done)
     https://www.youtube.com/watch?v=hWokyBoo0aI -- BST Implementation - memory allocation in stack and heap (Done)
     https://www.youtube.com/watch?v=Ut90klNN264 -- Find min and max element in a binary search tree (Done)
-    https://www.youtube.com/watch?v=_pnqMz5nrRs -- Find height of a binary tree (Next)
-    https://www.youtube.com/watch?v=9RHO6jU--GU -- Binary tree traversal - breadth-first and depth-first strategies
-    https://www.youtube.com/watch?v=86g8jAQug04 -- Binary tree: Level Order Traversal
-    https://www.youtube.com/watch?v=gm8DUJJhmY4 -- Binary tree traversal: Preoder, Inorder, Postorder
-    https://www.youtube.com/watch?v=yEwSGhSsT0U -- Check if binary tree is binary search tree or not
-    https://www.youtube.com/watch?v=gcULXE7ViZw -- Delete a node from Binary Search Tree
+    https://www.youtube.com/watch?v=_pnqMz5nrRs -- Find height of a binary tree (Done)
+    https://www.youtube.com/watch?v=9RHO6jU--GU -- Binary tree traversal - breadth-first and depth-first strategies (Done)
+    https://www.youtube.com/watch?v=86g8jAQug04 -- Binary tree: Level Order Traversal (Done)
+    https://www.youtube.com/watch?v=gm8DUJJhmY4 -- Binary tree traversal: Preoder, Inorder, Postorder (Done)
+    https://www.youtube.com/watch?v=yEwSGhSsT0U -- Check if binary tree is binary search tree or not (Done)
+    https://www.youtube.com/watch?v=gcULXE7ViZw -- Delete a node from Binary Search Tree (Done)
     https://www.youtube.com/watch?v=5cPbNCrdotA -- Inorder Successor in a binary search tree
-    https://www.youtube.com/watch?v=gXgEDyodOJU -- Data structures: Introduction to graphs
-    https://www.youtube.com/watch?v=AfYqN3fGapc -- Data structures: Properties and Graphs
-    https://www.youtube.com/watch?v=ZdY1Fp9dKzs -- Graph Representation part 01 - Edge List
+    https://www.youtube.com/watch?v=gXgEDyodOJU -- Data structures: Introduction to graphs (Done)
+    https://www.youtube.com/watch?v=AfYqN3fGapc -- Data structures: Properties and Graphs (Done)
+    https://www.youtube.com/watch?v=ZdY1Fp9dKzs -- Graph Representation part 01 - Edge List (Done)
     https://www.youtube.com/watch?v=9C2cpQZVRBA -- Graph Representation part 02 - Adjacency Matrix
-    https://www.youtube.com/watch?v=k1wraWzqtvQ -- Graph Representation part 03 - Adjacency List
+    https://www.youtube.com/watch?v=k1wraWzqtvQ -- Graph Representation part 03 - Adjacency List (Next)
 
 Mycodeschool (MCS) C ad C++ -- Programming Interview Questions
     https://www.youtube.com/playlist?list=PL2_aWCzGMAwLPEZrZIcNEq9ukGWPfLT4A -- Playlist
@@ -268,7 +268,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=daA-KBKfJ_o -- Easy Networking in C (libcurl)
     https://www.youtube.com/watch?v=Os5cK0H8EOA -- how to measure memory usage inside my program
     https://www.youtube.com/watch?v=LRLlEzkCL4I -- How Memory Usage Slows Down Your Programs
-    https://www.youtube.com/watch?v=bdIiTxtMaKA -- How to build a web client
+    https://www.youtube.com/watch?v=bdIiTxtMaKA -- How to build a web client (sockets)
     https://www.youtube.com/watch?v=esXw4bdaZkc -- Program your own webserver in C
     https://www.youtube.com/watch?v=dhFkwGRSVGk -- Pipes and Named Pipes
     https://www.youtube.com/watch?v=5td9upDbkaU -- Best programming font
@@ -323,6 +323,11 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=oyX30WVuEos -- Implementing a Circular Queue in C
     https://www.youtube.com/watch?v=xedk5KXg0VI -- Scanf Basics: the good, the bad, and why so many pointers?
     https://www.youtube.com/watch?v=ufdVNyH5EsI -- Scanf scansets, and reading a CSV file
+    https://www.youtube.com/watch?v=NqEbV5FBKmg -- Working with a Matrix/2D Array in your C C++ programs (next)
+    https://www.youtube.com/watch?v=tq3zPnrQIpU -- What is a Graph Data Structure? When to use it? How to easily visualize it?
+    https://www.youtube.com/watch?v=nvRkFi8rbOM -- How To Implement a Graph in C. (adjacency matrix version)
+    https://www.youtube.com/watch?v=YO6K5K1TUj4 -- Your Variables are Not Real
+    https://www.youtube.com/watch?v=il4N6KjVQ-s -- Sockets and Pipes Look Like Files (Unix/fdopen)
 
 CodeVault
     https://www.youtube.com/@CodeVault -- main index
@@ -368,6 +373,7 @@ CodeVault
     https://www.youtube.com/watch?v=i1MeXMciy6Q -- How to get current time and date in C
     https://www.youtube.com/watch?v=NBwvtoJghz4 -- Format and parse datetime in C
     https://www.youtube.com/watch?v=9guJVmDyFmE -- What is typedef?
+    https://www.youtube.com/watch?v=fXOOCpZyvwM -- Intro to recursive functions in C
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
@@ -459,6 +465,10 @@ C Other Site References
     https://notabug.org/gleport/awesome-c -- C libraries and references
     http://www.crasseux.com/books/ctutorial/ -- The GNU C Programming Tutorial
     https://learn.microsoft.com/en-us/cpp/c-language/?view=msvc-170 -- Microsoft C Language Reference for Visual Studio
+    https://www.youtube.com/watch?v=jDM6_TnYIqE -- 10.1 AVL Tree - Insertion and Rotations, Abdul Bari
+    https://learncgames.com/how-to-use-indexed-sequential-files/ -- ISAM files in C
+    https://github.com/oz123/awesome-c -- links to various C resources
+    https://breue.com/free_programming_books -- programming books including C
 
 C and CGI
     https://www.eskimo.com/~scs/cclass/handouts/cgi.html -- C and C/CGI tutorials
@@ -523,7 +533,7 @@ Warnings and Tips and Tricks
     Heap memory is global
     Seg faults or segmentation faults are caused by accessing memory that is not mapped or allocated to the program (including dereferencing a NULL pointer)
     Use strcmp() and not sizeof() to malloc or calloc string space: sizeof() will only return the size of the first character in the string
-    A NULL pointer is a pointer pointing to nothing.
+    A NULL pointer is a pointer pointing to nothing. Defined in as/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef/h as #define NULL ((void *)0)
     An empty string is a string with a non-NULL address but with the first character as '\0'. It is a NULL string but not a NULL pointer
     Flush stdin when using consective getchar()'s by reading the buffer all the way through the newline character and discarding
         while ((chrBuffer = getchar() != '\n') && (chrBuffer != EOF)) {
@@ -866,6 +876,7 @@ Third Party Libraries
     qt -- applications UI elements
     raylib -- graphics https://github.com/raysan5/raylib
     phaser.io -- graphics used to write cardgames.io using HTML5 Game Framework and js
+    sdl -- Simple DirectMedia Layer (graphics) http://libsdl.org/
     unity -- games
     unreal Engine -- games
 
@@ -909,13 +920,14 @@ Scansets for the scanf() families
         %*c to read and discard a single character (assignemt suppression)
         nn reads nn characters to nn field width e.g. %99[^\n] reads max 99 chars up to a newline and stops
 
-Format Specifiers for scanf(), print() etc
-    %i -- integer (base 10) (autodetects base in scanf)
+Format Specifiers for scanf(), printf() etc
+    %i -- unsigned integer (base 10) (autodetects base in scanf)
     %d -- signed integer (base 10)
-    %lld -- long long integer (base 10)
+    %ld ior %l or %li -- long integer
+    %lld or lld -- long long integer (base 10)
     %u -- unsigned integer (base 10)
     %ul -- unsigned long integer (base 10)
-    %ull -- unsigned long long integer (base 10)
+    %llu -- unsigned long long integer (base 10)
     %o -- octal integer
     %x -- hexadecimal number
     %c -- character
@@ -1061,7 +1073,7 @@ String Functions
         char *strcpy(char *dest, const char *src);
         char *strncpy(char *dest, const char *src, size_t n); 
         size_t snprintf() -- prints formatted text to a buffer not to exceed n bytes
-        asprintf() -- prints to a new allocated string of exact size, requires  '#define _GNU_SOURCE' before #include <stdio.h>
+        asprintf(char **ret, const char *format, char *src) -- prints to a new allocated string of exact size, requires  '#define _GNU_SOURCE' before #include <stdio.h>
     Concatenate
         char *strcat(char *dest, const char *src);
         char *strncat(char *dest, const char *src, size_t n);
@@ -1071,14 +1083,14 @@ String Functions
         int strcmp(const char *s1, const char *s2);
         int strncmp(<str1>, <str2>i, len) returns 0 if strings match for len characters (in string.h)
     Search
-        char *strchr(const char *str, int c); -- find the first occurance of c in str
+        char *strchr(const char *str, int c); -- return a pointer to the first occurance of c in str or return NULL
         char *strrchr(const char *str, int c); -- find the last occurance of c in str
         char *strtok(char *s, const char *delim);
         char *strstr(const char *haystack, const char *needle); returns pointer to the first character value if found, otherwise returns NULL
         char *strpbrk(const char *sr1, const char *str2) -- finds the first character in str1 that matches any characer in str2
         site_t strspn(const char *str1, const char *str2) -- calculates the length of the initial segment of str that consists entirely of characters in str2
     Other
-        void *memset(void *s, int c, size_t n); -- set all places to a single value
+        void *memset(void *str, int Char, size_t numbytes); -- set numbyte characters (bytes) in array str to a single value, returns a pointer to the memory area
         size_t strlen(const char *s);
         void *memchr(const void *s, int c, size_t n); -- find a value inside a memory range
 
@@ -1130,7 +1142,16 @@ Return Codes
     EXIT_FAILURE -- same as exit 1;
 
 Variable Declarations and Variable Names
-    variable declarations start with a type: int, float, double, struct, array, pointer
+    variable declarations start with a type: 
+        int 
+        unsigned
+        long
+        unsigned long
+        float 
+        double 
+        struct 
+        array 
+        * pointer suffix
     variable names must start with a letter
     remainder can be letters, numbers and underscores
     cannot be keywords
@@ -1152,7 +1173,7 @@ Variable and Function Qualifiers (reserved words or keywords)
     extern -- declaration qualifier to declare a variable in one translation unit that is defined in another
     volatile -- qualifies a variable as changeable by another process (compiler instruction) to prevent it being optimized out
     const -- a value that is not allowed to change. const variables are typed so the compiler can type-check the use in a program
-    const variables obey scope laws
+        const variables obey scope laws
     static -- global variables that retain their value between invocations (kept in the Static/Global memory block separate from the stack)
     inline -- function qualifier hint to inline function code with main()
 
@@ -1177,18 +1198,34 @@ Input Functions
 
 File Manipulation using LibC Functions
     fopen(<file path>, <mode>) -- buffered file open where mode is: O_RDONLY (00), O_WRONLY (01), O_RDWR (02) O_APPEND, O_CREAT
+        FILE *fopen(const char *filename, const char *mode) 
+            "r" open existing file for reading
+            "w" open new file for writing or trunc and write existing file
+            "a" open file or appending or create new file for appending
+            "r+" open an existing file to read and write
+            "W+" open a new  file for reading and writing
+            "a+" open a file for reading and appending
     fopen_s -- fopen (secure) -- updated version of fopen
     fclose()
     fflush() -- flush an output stream (but undefined for stdin)
     fgetc()
     fputc()
-    fread() -- binary mode
+    fread() -- binary mode size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
+        returns total number of elements of size read
+        ptr -- a pointer to a block of memory of minimum size  size * rMemb bytes
+        size -- the size in bytes of each element read from the file
+        nmemb -- the number of elements read from the file
+        stream -- file pointer open for reading
     fwrite() -- binary mode
     FILE *fpFile1 = fopen(<sFileName>, <operation>)
     fgetc(<fpFile1>) returns a character or EOF (defined as -1 in /usr/include/stdio.h)
     fputc(<char>, <fpFile2>;
     fread(<pBuffer>, <size>, <quantity>, <fpFile1>;
-    fwrite(<pBuffer>, <size>, <quanitty>, <fpFile1>);
+    fwrite(<pBuffer>, <size>, <quanitty>, <fpFile1>); size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)
+        ptr -- pointer to an array of elements written
+        size -- the size in bytes of each element
+        nMemb -- the number of elements
+        stream -- file pointer to a file open for writing
     File Operations
         r -- read from a file
         w -- write to a file starting at the beginning
@@ -1207,7 +1244,7 @@ File Manipulation using LibC Functions
         whence values: SEEK_SET (start of file), SEEK_CUR (current file position) , SEEK_END (end of file)
         returns zero if successful, otherwise non-zero
     ftell() -- get the current file position
-    feof() -- tells if EOF is reached
+    feof(FILE *) -- tells if EOF is reached if a file (defined as -1 in /usr/include/stdio.h)
     ferror() -- tells if file error is set
     fprintf(<stream>, <format>, <variables>) -- print formatted output to a file or stream
     fscanf(<stream>, <format>, <variables>) -- read formated input from a file until a format mismatch occurs or whitespace in a string, then stop
@@ -1237,6 +1274,12 @@ Files Manipulation Using System Calls
     ftruncate(<file descriptor>, <length>) -- truncate a file to <length> bytes. File must be writable.
     write()
 
+
+File System Commands
+    remove(const char *filename) -- to delete a file from the filesystem, returns 0 on success, -1 on error
+    rename(const char *oldfilename, const char *newFileName) -- rename a file on the filesystem, returns 0 on success, -1 on error
+
+    remove()
 Header Files for C (located at /usr/include)
     Header files are C source files containing declarations: constants and function prototypes (but not function definitinos)
     Header files contain declarations (usually) and creates the interface to a translation unit (the combined header file and source file)
@@ -1356,7 +1399,8 @@ Functions in the lib.c library and Other Libraries
     strcat(dest, src) -- concatenate two strings
     strncat(dest, src, n) -- concatenate two strings up to n characters of the source string
     strcpy(dest, source) -- copies the source string to the destination string (use strncpy to avoid buffer overflow)
-    strdup(source) -- allocates a string dest and copies source to dest returning dest. dest must be free()'ed when no longer needed
+    char *strdup(char *orig) -- returns a pointer to a copied string ... allocates a string dest and copies source to dest returning dest. dest must be free()'ed when no longer needed
+    char *strndup(const char *orig, size_t size) -- returns a pointer to a copy of a string, .. allocates a string and copies size chars of the orig string, new string must be freed when no longer needed
     strlen(<string>) gives the length of a string excluding the null terminator, #include <string.h>
     strsep(/
     strstr(<string1>, <string2>) -- finds a pointer to <string2> within <string1> or NULL
@@ -1508,4 +1552,6 @@ System Calls
         mmap() -- allocate memory to the current process
         unmmap() -- unmap memory or files or devices from memory
 
-
+Serialization and Marshalling
+    Serialization is the process of a complex datastructure into a stream of bytes for storage on another medium (and de-serialization is the reverse)
+    Marhalling is a special case of serialization applicable to remote procedure calls
