@@ -147,7 +147,7 @@ Mycodeschool (MCS) C and C++ -- Data Structures
     https://www.youtube.com/watch?v=AfYqN3fGapc -- Data structures: Properties and Graphs (Done)
     https://www.youtube.com/watch?v=ZdY1Fp9dKzs -- Graph Representation part 01 - Edge List (Done)
     https://www.youtube.com/watch?v=9C2cpQZVRBA -- Graph Representation part 02 - Adjacency Matrix
-    https://www.youtube.com/watch?v=k1wraWzqtvQ -- Graph Representation part 03 - Adjacency List (Next)
+    https://www.youtube.com/watch?v=k1wraWzqtvQ -- Graph Representation part 03 - Adjacency List (Next) 16:08
 
 Mycodeschool (MCS) C ad C++ -- Programming Interview Questions
     https://www.youtube.com/playlist?list=PL2_aWCzGMAwLPEZrZIcNEq9ukGWPfLT4A -- Playlist
@@ -1073,14 +1073,14 @@ String Functions
         char *strcpy(char *dest, const char *src);
         char *strncpy(char *dest, const char *src, size_t n); 
         size_t snprintf() -- prints formatted text to a buffer not to exceed n bytes
-        asprintf(char **ret, const char *format, char *src) -- prints to a new allocated string of exact size, requires  '#define _GNU_SOURCE' before #include <stdio.h>
+        int asprintf(char **ret, const char *format, char *src) -- prints to a new allocated string of exact size, returns character count allocated, requires  '#define _GNU_SOURCE' before #include <stdio.h>
     Concatenate
         char *strcat(char *dest, const char *src);
         char *strncat(char *dest, const char *src, size_t n);
         literal strings can be concatenated by typing togeher (e.g. printf("This is"" a string");
     Compare
         int memcmp(const void *s1, const void *s2, size_t n);
-        int strcmp(const char *s1, const char *s2);
+        int strcmp(const char *s1, const char *s2); returns < 0, 0 or > 0 if less than, equal to or greater than
         int strncmp(<str1>, <str2>i, len) returns 0 if strings match for len characters (in string.h)
     Search
         char *strchr(const char *str, int c); -- return a pointer to the first occurance of c in str or return NULL
@@ -1198,6 +1198,7 @@ Input Functions
 
 File Manipulation using LibC Functions
     fopen(<file path>, <mode>) -- buffered file open where mode is: O_RDONLY (00), O_WRONLY (01), O_RDWR (02) O_APPEND, O_CREAT
+        fopen returns NULL pointer on failure
         FILE *fopen(const char *filename, const char *mode) 
             "r" open existing file for reading
             "w" open new file for writing or trunc and write existing file
@@ -1237,7 +1238,8 @@ File Manipulation using LibC Functions
         r+ O_RDWR
         w+ O_RDWR|O_CREAT|O_TRUNC
         a+ O_RDWR|O_CREAT|O_APPEND
-    fgets(char *str, int n, FILE *stream) -- reads a full string from a file or stdin, including the newline '\n' so replace the '\n' with '\0'
+    fgets(char *caArray, int n, FILE *stream) -- reads a full string from a file or stdin into an array, including the newline '\n' so replace the '\n' with '\0'
+        returns a pointer to the array or NULL
     fputs() -- writes a full string to a file
     fprintf() -- writes a formatted string to a file
     fseek(FILE (stream, long nt offset, int whence) -- rewind or forward the curent file position
@@ -1555,3 +1557,6 @@ System Calls
 Serialization and Marshalling
     Serialization is the process of a complex datastructure into a stream of bytes for storage on another medium (and de-serialization is the reverse)
     Marhalling is a special case of serialization applicable to remote procedure calls
+
+Time
+    strftime -- formats time returned from the time(NULL) function as a time_t number (unsigned long int)
