@@ -469,6 +469,7 @@ C Other Site References
     https://learncgames.com/how-to-use-indexed-sequential-files/ -- ISAM files in C
     https://github.com/oz123/awesome-c -- links to various C resources
     https://breue.com/free_programming_books -- programming books including C
+    https://www.sanfoundry.com/ -- C tests, algorithms and tutorials
 
 C and CGI
     https://www.eskimo.com/~scs/cclass/handouts/cgi.html -- C and C/CGI tutorials
