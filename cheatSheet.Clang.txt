@@ -637,7 +637,7 @@ Debugging with GDB
     set var <varname> = <val> -- set a variable <varname> to a value
     start -- set a breakpoint at main and submit 'run'
     s or step -- run the current code line (step into library functions)
-    stepi -- next assembly instruction (in a called library function)
+    step -- next assembly instruction (in a called library function)
     target record full
     tui disable - switch out of tui mode
     tui enable - switch to TUI mode
@@ -1196,6 +1196,21 @@ Loops
 
 Input Functions
     etc() -- get a single character from stdin and terminate if EOF
+
+Modes that open files or return NULL
+    r	Open for reading.	If the file does not exist, fopen( ) returns NULL.
+    r+	Open for both reading and writing.	If the file does not exist, fopen( ) returns NULL.
+    rb	Open for reading in binary mode.	If the file does not exist, fopen( ) returns NULL.
+    rb+	Open for both reading and writing in binary mode.	If the file does not exist, fopen( ) returns NULL.
+Modes that create or open files
+    w	Open for writing.	If the file exists, its contents are overwritten. If the file does not exist, it will be created.
+    wb	Open for writing in binary mode.	If the file exists, its contents are overwritten. If the file does not exist, it will be created.
+    a	Open for append. 	Data is added to the end of the file. If the file does not exist, it will be created.
+    ab	Open for append in binary mode.	Data is added to the end of the file. If the file does not exist, it will be created.
+    w+ 	Open for both reading and writing. 	If the file exists, its contents are overwritten. If the file does not exist, it will be created.
+    wb+	Open for both reading and writing in binary mode.	If the file exists, its contents are overwritten. If the file does not exist, it will be created.
+    a+	Open for both reading and appending.	If the file does not exist, it will be created.
+    ab+	Open for both reading and appending in binary mode.	If the file does not exist, it will be created.
 
 File Manipulation using LibC Functions
     fopen(<file path>, <mode>) -- buffered file open where mode is: O_RDONLY (00), O_WRONLY (01), O_RDWR (02) O_APPEND, O_CREAT
