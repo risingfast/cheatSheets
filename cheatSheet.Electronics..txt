@@ -1,0 +1,237 @@
+Electronics Notes
+    Table of Contents
+        References
+        Acronms
+        Test Equipment
+        Prototyping Supplies
+        Tools
+        Components and Assemblies
+    References
+        Books
+            Semiconductors: From Book to Breadboard Kevin McGowan August 8, 2012 Cengage Learning (Amazon $12.49)
+        Websites
+            http://www.talkingelectronics.com/
+        Youtube
+            https://www.youtube.com/playlist?list=PLowKtXNTBypETld5oX1ZMI-LYoA2LWi8D -- Digital Electronics Playlist, Ben Eater
+            https://www.youtube.com/watch?v=uo2KgRN04XI&t=38s -- How a transistor amplifies current | Digital electronics (6 of 10), Ben Eater
+            https://www.youtube.com/watch?v=2uowMENwiHQ -- Starter Guide to BJT Transistors (ElectroBOOM101 - 011)
+        Circuits
+            http://www.engineersgarage.com/electronic-circuits/
+            http://www.talkingelectronics.com/projects/200TrCcts/101-200TrCcts.html#64
+        Electrical Theory
+            https://www.youtube.com/watch?v=ykgmKOVkyW0 -- inductance and capacitance phase difference
+            http://www.electricaltechnology.org/
+        Software
+            http://www.altium.com/altium-designer/features -- PCB CAD
+            https://www.circuitlab.com/editor/ -- circuit simulator
+            https://easyeda.com/ -- PCB CAD and simulation
+            https://www.element14.com
+            http://fritzing.org/home/ -- breadboard and printed circuit board layout designer
+            http://www.tina.com/ - circuit simulator
+                http://www.ti.com/tool/tina-ti -- download
+            https://en.wikipedia.org/wiki/Comparison_of_EDA_software -- comparison chart
+            https://en.wikipedia.org/wiki/List_of_free_electronics_circuit_simulators -- list of free simulators
+        Supplies
+            https://www.adafruit.com/
+            http://www.allelectronics.com/
+            https://www.circuitspecialists.com/
+            http://www.digikey.com
+            https://dgxtech.com/
+            http://www.elenco.com/
+            http://www.globalspecialties.com/
+            http://www.gravitech.us/solderless-breadboard-830-830.html
+            https://www.hobbyengineering.com/
+            http://www.jameco.com
+            http://www.kr4.us/
+            http://www.mouser.com
+            http://www.mpja.com/
+            https://www.pjrc.com/
+            https://www.seeedstudio.com/
+            https://www.sparkfun.com/
+            http://www.wishmaker.com.tw
+            http://www.surplussales.com/
+        Tutorials
+            https://www.baldengineer.com/
+            http://www.electronics-tutorials.ws/
+            http://www.penguintutor.com/electronics/
+        Youtube Videos
+            https://www.youtube.com/watch?v=PgsH43Tpqjc ItKindaWorks Home Security
+        Youtube rolinychupet
+            https://www.youtube.com/watch?v=s69o0AmYyjo -- iEECE 251 - A BJT tutorial/recitation with a quick review of theory
+            https://www.youtube.com/watch?v=1IYOGhS2OZc&t=8s -- EECE 251 - BJT Design of the Bias Circuit
+            https://www.youtube.com/watch?v=MyK39RFxPuM&t=295s -- HP01 - My set up for the HP-50g (2013)
+            https://www.youtube.com/watch?v=dDmW7C6Mh9o -- HP02: HP 50g Part One of RPN and STACK
+        HP50G Online Training
+            https://www.mathtutordvd.com/public/department178.cfm
+    Acronyms
+        EDA - Electronic Design Automation
+    Test Equipment
+        Function and Signal Generators
+            Instech 1003 Signal Generator
+            Leader Function Generator
+        Logic Analyzers
+            Acute (PC Based)
+        Oscilloscopes
+            Digital Storage Oscilloscope (or DSO'a)
+                TDS Tektronix 2014 Oscilliscope
+                Rigol DS 1052E Oscilloscope
+                    DS 1054Z Oscilloscope
+                Amazon Seeed Studio DSO Nano
+            PC-Based
+                PicoScope
+    Prototyping Supplies
+        Breadboards (0.1 inch hole spacing)
+            All Electronics Part No PB-840 840 Tie Points $7.65
+            Circuit Specialists WB-102 Solderless Breadboard 830 Tie Points $3.99
+                WB-102+J Solderless Breadboard with Jumpers 830 Tie Points, $5.99
+            Digikey Part No 922309-ND 3M Solderless Breadboard 840 Tie Ponts $48.48
+            Digikey Part No 438-1045-ND  Twin Industries Solderless Breadboard $8.98
+            Frys Part No 7726908 Solderless Breadboard 830 Tie Points $.99
+            Global Specialties Solderless Breadboard Part No GS-830 830 Tie Points, $8.25 (Sold through Mouser)
+            Gravitech Item  GRA-102 Solderless Breadboard 830 Tie Points, $5.99
+            Jameco Part no.: 20723 Solderless Breadboard 830 Tie Points $9.95
+            Karlsson Robotics Part No PRT-12615 830 Tie Points $5.95
+            Mouser Part No 589-TW-E40-1020, 630 + 200 Tie Points $7.99
+            MPJA Part No 24443 TE Solderless Breadboard 830 Tie Points, $4.95
+        Connectors
+            Dupont Jumper wires (male to male) 22 AWG
+                Gravitech Part WIRES-PACK-MM, 100 wires $7.99
+                Frys Elenco Part No 4612408 350 pieces $13.99
+                Amazon Z&T ® Solderless Flexible Breadboard Jumper Wires M/M 100 pcs $7.09
+            Headers (Male and Female)
+                Amazon 10 Pcs 40 Pin 2.54mm Pitch Straight Single Row Breadboard Pin Headers 10 pieces $5.15
+            Hookup Wire
+                22 Gauge (AWG) solid core hookup wire (.02540 inches, 0.6451 mm)
+            JST Connectors
+                JST Male Female Connectors 200mm 22AWG Wire for RC Plane Battery DT eBay 20 Pair $3.46
+                Amazon BTF-LIGHTING 20 Pairs JST SM 3 Pin Connectors For WS2812B WS2811 WS2812 LED Strip Female Male 15cm 20awg wire  $9.88
+        Kits
+            Amazon Elegoo EL-CK-002 Electronic Fun Kit Bundle with Breadboard Cable Resistor, Capacitor, LED, Potentiometer (235 Items) $12.86
+            Amazon Elegoo Upgrade Electronics Fun Kit w/ Power Supply Module, Jumper Wire, Precision Potentiometer, 830 tie-points Breadboard for Arduino, Raspberry Pi, STM32 300 pieces $16.86
+            Amazon Elegoo Mega 2560 Project The Most Complete Ultimate Starter Kit w/ TUTORIAL, MEGA 2560 controller board, LCD1602, Servo, Stepper Motor for Arduino Mega2560 UNO Nano 200 pieces $59.99
+            dgxtech Elegoo EL-CK-002 Electronic Fun Kit Bundle with Breadboard Cable Resistor, Capacitor, LED, Potentiometer (235 Items) $17.99
+            Elegoo Mega 2560 Project The Most Complete Ultimate Starter Kit w/ TUTORIAL, MEGA 2560 controller board, LCD1602, Servo, Stepper Motor for Arduino Mega2560 UNO Nano 200 pieces $89.99
+        Stripboards
+            Veraboard Stripboard or Perfboard
+            Perma Prototype Board
+            Protoboard
+        Solder and Fluxes
+            Cleaners
+                Laquer Thinner
+                Acetone
+                Alcohol
+            Solder
+                0.032" for through hole Sn63/Pb37
+                0.020" for surface mount or more control on through-hole
+            Fluxes
+                Type R - 
+                Type RMA - Rosen Mildly Activated - for clean curcuit boards
+                Type RA - 
+    Tools
+        Forceps
+            Amazon SE 616FC 16-Inch Self-Locking Curved Forceps $7.54
+        Helper Tools (for PCB soldering)
+            Frys
+        Hot Glue Gun (Glue is removed by rubbing alcohol)
+        Resistor Lead Bending Tool
+            Sparkfun Part No TOL-13114 $4.80
+        Side Cutters
+            Hakko
+            Lindstrom
+            Home Depot Klein 5 in. Light-Weight Flush Cutter $7.46
+        Wire Cutters and Strippers
+            Home Depot Klein Wire Stripper/Cutter $11.64
+            Home Depot Hakko CHP 0.787 in. Medium Cutter $4.97
+    Components
+        Batteries
+            Rechargeable USB
+                Amazon AmazonBasics Portable Power Bank - 10,000 mAh 5 Volt $24.99
+        Battery Holders
+            9 Volt Battery Clips
+                Amazon 10 pieces Black Hard Plastic Housing T Type Wired 9V Battery Clip Connectors $1.86 
+            AA Battery 
+                Amazon Hilitchi 2Set 6 x AA Thicken Battery Holder and T Type Wired Battery Clip Standard Snap Connector $6.99
+        Bipolar Junction Transistors
+            NPN BJT's
+                2N3904 NPN General Purpose BJT (Mouser $11.80 per 100)
+                    2N1904 Alternative
+                    2N2222 Alternative (Amazon $1.83 per 100) Higher Current
+                    PN2222A Alternative (Mousers $11.00 per 100) in TO-92 case from Video on YouTube
+                        References
+                            How to design a transistor circuit that controls low-power devices (on Youtube)
+            PNP BJT's
+                2N3906 PNP General Purpose BJT (Mouser $11.80 per 100)
+                    2N2906 Alternative
+            Darlington NPN  Transistors
+                512-TIP120 NPN Darlington (Mouser $32.80 per 100)
+        Capacitors (Breadboard project need 22 microF 50V Electrolytic, 100 nanoF Ceramic
+            Sparkfun SparkFun Capacitor Kit Part No KIT-13698 115 pieces $6.95
+            Amazon Elenco 100 Capacitor Component Kit $14.70
+        Computers (on a Single Board)
+            Rasberry Pi 
+                Element14
+            LattePanda (Windows 10)
+        Diodes
+            Elenco Diode 80 Piece Kit Amazon 80 Pieces $16.98
+        Dual Inline Pin Sockets (DIP Sockets)
+            Amazon uxcell® 10 x 8 Pin DIP IC Sockets Adaptor Solder Type Socket $2.36
+        Inductors
+            Amazon Cofufu 0307 DIP Inductor Assorted Kit 22 value total 220pcs 1uH to 1mH 0.25W $10.70
+        Light Emitting Diodes (LED's)
+            Visible
+                Sparkfun LED - Assorted (20 pack) Part No COM-12062 20 pieces 4 colors $2.95
+                Amazon Elenco Electronics LEDK-80 80 pc LED Component Kit 80 pieces $14.58
+            Infrared Emmitters
+                Adafruit Super-bright 5mm IR LED - 940nm $0.75
+        Microcontrollers
+            ESP Modules
+                Mouser ATTINY 8 Bit Microcontrollers $1.39
+                    Replaced/superceded by Sparkfun WiFi Module - ESP8266 (includes wireless) $6.95
+            AVR Programmers
+                Sparkfun Pocket AVR Programmer PGM-09825 RoHS Open Source Hardware $14.95
+            Arduino and Compatible
+                Arduino
+                Teensy - C programmable uses Arduino IDE (www.pjrc.com)
+        MOSFETS
+            NPN
+                Mouser FQP30N06L MOSFET $72.00 per 100
+                Amazon (10PCS) FQP6N60C TO-220 600V N-Channel MOSFET $14.99
+        Passive Infrared Motion Sensors (PIR's)
+            Adafruit PIR (motion) sensor Product ID: 189  $9.95
+        Photocell
+            Sparkfun Mini Photocell SEN-09088 In Fritzing Library $1.50
+        Plastic Bags
+            Amazon 4 Mil Clear Zip Lock Bags,2.5 x 3 Inches,5 Packs of 100 $9.79
+        Relays
+            Amazon uxcell® 10 Pcs DC 5V Coil 7A 240VAC 10A 125VAC/28VDC 5 Pins SPST Power Relay JQC-3F $4.97
+        Resistors (Breadboard projects need 10k, 4.7k, 220 ohm, 470 ohm, 1.0k)
+            Resistors
+                Sparkfun Resistor Kit - 1/4W (500 total) Part No Kit-10969 $7.95
+            Flex Resistors
+                Adafruit Long Flex sensor PRODUCT ID: 182 $12.95
+            Trimming Potentiometers (Trimpots)
+                Amazon Kalevel 50pcs 10k Ohm Resistor Kit 3296 Potentiometer Assorted Kit 10K Ohm Potentiometer Kit High Precision Cermet Potentiometer Trimpot Trimmer Pot - 10K Ohm $9.99
+        Semiconductor Kits
+            Sparkfun SparkFun Discrete Semiconductor Kit 120 components $8.95
+            Amazon Elenco Transistor Kit, 100-Piece $19.99
+        Sensors
+            Hall Effect Magnetic Field Sensors
+                Amazon 10 pcs New A3144 A3144E OH3144E 3144 Hall Effect Sensor $5.42
+        Switches
+            Momentary Pushbutton
+                Amazon RTE Momentary N.O. ERSW-101/CS10 (Casepack of 10) Classic Small Push Button Switch Red $7.95
+        Temperature Sensors
+            Amazon Vktech 5pcs DS18b20 Waterproof Temperature Sensors Temperature Transmitter $6.67
+        Thermistors
+            Amazon 50pcs 10K Ohm 0.05W 3435B NTC Thermistors Resistor MF52-103 $8.48
+        Vibration Sensors
+            Amazon SeeedStudio - Grove - Piezo Vibration Sensor - DIY Maker Open Source BOOOLE $10.99
+        Voltage Regulators
+            7805 5 Volt Regulator
+            LM1117 3.3 Volt Regulator
+    Assemblies
+        Power Supplies
+            All Electronics YuRobot Power Supply for Breadboards Part No MB-PS $6.75
+                Breadboard compatible 3.5. and 5 volt rails
+            Gravitech Breadboard Power Supply Part BB-SUP-KIT, $12.99, Assembly Required
+            Amazon 365buying MB102 MB-102 Breadboard Power Supply Module 3.3V/5V For Arduino Board $4.99
