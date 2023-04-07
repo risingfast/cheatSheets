@@ -239,6 +239,8 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=wcpH2PkC-94 -- What languages should you learn?
     https://www.youtube.com/watch?v=FPVTr4thm2M -- Answering your Questions
     https://www.youtube.com/watch?v=2Ti5yvumFTU -- hash tables
+    https://www.youtube.com/watch?v=KI_V91UdL1I -- A better hash table (in C) 
+    https://www.youtube.com/watch?v=OQHDEhLKVv0 -- Fixing our "better" hash table's memory leaks (in c)
     https://www.youtube.com/watch?v=VOpjAHCee7c -- Understanding and implementing a Linked List in C and Java
     https://www.youtube.com/watch?v=KFbm6lkMhgw -- Doubly Linked List (in C)
     https://www.youtube.com/watch?v=bXsKnUGndEU -- Should you avoid linked lists? (linked list vs arrays)
