@@ -11,6 +11,7 @@ Electronics Notes
             Semiconductors: From Book to Breadboard Kevin McGowan August 8, 2012 Cengage Learning (Amazon $12.49)
         Websites
             http://www.talkingelectronics.com/
+            https://www.allaboutcircuits.com/video-tutorials/
         Youtube
             https://www.youtube.com/playlist?list=PLowKtXNTBypETld5oX1ZMI-LYoA2LWi8D -- Digital Electronics Playlist, Ben Eater
             https://www.youtube.com/watch?v=uo2KgRN04XI&t=38s -- How a transistor amplifies current | Digital electronics (6 of 10), Ben Eater
@@ -22,6 +23,7 @@ Electronics Notes
             https://www.youtube.com/watch?v=ykgmKOVkyW0 -- inductance and capacitance phase difference
             http://www.electricaltechnology.org/
         Software
+            https://www.ni.com/en-us/support/downloads/software-products/download.multisim.html#452133 -- Multisim National Instruments Download site
             http://www.altium.com/altium-designer/features -- PCB CAD
             https://www.circuitlab.com/editor/ -- circuit simulator
             https://easyeda.com/ -- PCB CAD and simulation
@@ -31,6 +33,7 @@ Electronics Notes
                 http://www.ti.com/tool/tina-ti -- download
             https://en.wikipedia.org/wiki/Comparison_of_EDA_software -- comparison chart
             https://en.wikipedia.org/wiki/List_of_free_electronics_circuit_simulators -- list of free simulators
+            https://ecstudiosystems.com/ -- EC Studio
         Supplies
             https://www.adafruit.com/
             http://www.allelectronics.com/
