@@ -468,8 +468,8 @@ Linux Commands
     source <filename> -- executes filename as a script, e.g. source ~/.bashrc to load new shell vars into startup config for the current user
     spell <filename> -- checks spelling in a file and prints misspellings one word per line
     ssh uses port 22
-    ssh gjarman@192.168.0.13 -- connect to a host via SSH using the host IP address, use <Ctrl>-d to disconnect
-    ssh -v gjarman@192.168.0.13 -- connect verbose
+    ssh gjarman@192.168.1.64 -- connect to a host via SSH using the host IP address, use <Ctrl>-d to disconnect
+    ssh -v gjarman@192.168.1.64 -- connect verbose
     ssh -v linuxserver -- connect verbose using profile in ~/.ssh/known_hosts
     ssh-copy_id -- copy a local key to a remote server
     ssh-keygen -- generate an SSH key on the client at default location /home/gjarman/.ssh/id_rsa

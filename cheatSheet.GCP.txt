@@ -30,13 +30,14 @@ References
     https://cloud.google.com/sdk/docs/cheatsheet -- Google Cloud CLI cheatsheet
     https://cloud.google.com/appengine -- App Engine description
     https://cloud.google.com/sql/docs/mysql -- Cloud SQL for MySQL documentation
+        https://cloud.google.com/compute/docs/ -- google documentation and training
 
 Persistant Storage
     5 gig (check with df -h)
 
 URLs
     https://cloud.google.com/ -- Google Cloud
-    http://gjarman2020.com ip 35.209.128.197 Static IP 
+    http://gjarman2020.com ip 35.209.128.197 Static IP changed to 35.212.209.127 on 19-Apr-2023
 
 Google Abbreviations and Acronyms
     DKE Docker and Kubernetes Engine
@@ -176,3 +177,54 @@ mySQL Commands Common
 
 Big Query
     SELECT * FROM EXTERNAL_QUERY("projects/risingfast001/locations/us-central1/connections/risingfast-connection", "SELECT * FROM INFORMATION_SCHEMA.TABLES;");
+
+19-Apr-2023
+    IP Address: 35.212.209.127 (static external)
+                10.138.0.2 (internal)
+    Users: gjarman/Mpa4egu9
+    users: gjarman2020/<no password on google SSH>
+    list users: vim /etc/passwd
+    Compute Instance: Micro e2 Ubuntu
+    install gcc -- sudo apt-get install manpages-dev
+    validate gcc -- gcc --version
+    references for mysql: https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04
+    install mysql -- pt install mysql-server
+    start mysql -- systemctl start mysql.service
+    run the secure installation script -- mysql_secure_installation
+    set password -- Mpa4egu$
+    start mysql anonymously -- mysql
+    create a new user -- CREATE USER 'gjarman'@'localhost' IDENTIFIED BY 'Mpa4egu$';
+    grant privileges -- GRANT CREATE, ALTER, DROP, INSERT, UPDATE, INDEX, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
+    create a new user -- CREATE USER 'gjarman'@'%' IDENTIFIED BY 'Mpa4egu$';
+    grant all privileges -- GRANT ALL PRIVILEGES ON *.* TO 'gjarman'@'%' WITH GRANT OPTION;
+    make privilege changes take immediate effect - FLUSH PRIVILEGES;
+    grant all privileges -- GRANT ALL PRIVILEGES ON *.* TO 'gjarman'@'108.200.158.218' WITH GRANT OPTION;
+    exit mysql to test the new user -- exit
+    mysql -u gjarman -p -- log back onto mysql with the new user and requesting a password prompt
+    mysqladmin -p -u sammy version -- log on using mysqladmin tool and return the version
+    references for apache -- https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04
+    install -- apt update then apt install apache2
+    check the firewall -- ufw app list
+    references for ufw -- https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04
+    enable the firewall -- ufw enable
+    check the firewall status -- ufw status
+    enable firewall access -- ufw allow OpenSSH, ufw allow Apache etc ...
+    start apache2 -- systemctl status apache2
+    update domain ip at https://domains.google.com/ to 35.212.209.127
+20-Apr-2023
+    Open the Google Firewall page -- GCP > Networks > Firewall, or ... https://console.cloud.google.com/networking/firewalls/list?project=risingfast001
+    reference -- https://cloud.google.com/dns/docs/tutorials/create-domain-tutorial
+    Create a firewall rule -- click the 'CREATE FIREWALL RULE' link at the top of the page and use IP filter 0.0.0.0/0 for 'All'
+    Test access -- browse http://gjarman2020.com
+    Find storage buckets -- https://console.cloud.google.com/storage/browser?project=risingfast001
+    Copy local web files to the bucket with upload files - click the bucket name then click UPLOAD FILES and navigate to C:\Users\gjarm\OneDrive\Projects\Open\backups\AllWeb
+    Copy local web files from the bucket to the compute instance: in SSH on the compute instance, sudo gsutil cp gs://www.gjarman2020.com/* . with SSH in the local direcotryyy /var/www/html
+    Delete the web files from the bucket (50 per delete)
+    Copy local cgi files to the bucket with upload files - click the bucket name then click UPLOAD FILES and navigate to C:\Users\gjarm\OneDrive\Projects\Open\backups\AllCGIp
+    Copy local cgo files from the bucket to the compute instance: in SSH on the compute instance, sudo gsutil cp gs://www.gjarman2020.com/* . with SSH in the local direcotryyy /usr/lib/cgi-bina
+    Delete the web files from the bucket (50 per delete)
+    Modify and recompile cGI files to point to the database host on port 3306 -- in file /etc/mysql/mysql.cnf, add bind-address=35.212.209.127 port=3306
+    install the json library -- sudo apt install libjson-c-dev
+    install the mysql library --  apt install libmysqlclient-dev
+    troubleshoot missing c libraries -- find . -type f -name 'libmysqlclient.so*' >> ./usr/lib/x86_64-linux-gnu/libmysqlclient.so.20.3.28
+    configure VIM defaults
