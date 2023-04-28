@@ -34,6 +34,7 @@ Electronics Notes
             https://en.wikipedia.org/wiki/Comparison_of_EDA_software -- comparison chart
             https://en.wikipedia.org/wiki/List_of_free_electronics_circuit_simulators -- list of free simulators
             https://ecstudiosystems.com/ -- EC Studio
+            https://www.altium.com/altium-designer/licensing -- expensive
         Supplies
             https://www.adafruit.com/
             http://www.allelectronics.com/

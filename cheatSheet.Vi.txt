@@ -1,11 +1,9 @@
 Vi (and Vim) Cheatsheet
 
 Mode Notes
-    Normal (Command) Mode                               <esc>
-    Insert Mode                                         i
-    Visual Mode                                         V
-    Replace mode                                        R
-
+    Normal (Command) Mode (use <Esc>), Insert Mode (use 'i'), Visual Mode (use <Esc>)
+    Components: Commands, Motions and Operators
+  
 VI Command Summary Notes
     Fast Start and Finish
     Start vi at the command line                        vi or vi filename.ext if the file is in the current directory
@@ -33,7 +31,7 @@ Execute Shell Commands Notes
 
 Inserting Text
     Insert at left of cursor, or beginning of line      :i, I (the 'I' ignores leading spaces on a line)
-    Open new line before or after current line          :O (Capital 'Oh'), or :0 (small 'Oh')
+    Open new line before or after current line          :O (Capital 'Oh'), or :0 (small 'Oh') 
     Insert tab                                          <Ctrl>-i (in insert mode)
 
 Read or Write a File Notes
@@ -50,7 +48,7 @@ Undo and Repeat Notes
     Repeat the previous command                         .
     Repeat previous search forward or backward          / or ?
     Substitute first occurance of string                :s/<string1>/<string2>/
-    Substitute all occurances on a line (global)        :s/<string1>/<string2>/g
+    Substitute all occurances on a line (global)        :s/<string1>/<string2>/g 
     Substitute all occurances on all lines              :%s/<string1>/<string2>/g
     Substitute all subsequent occurances                :$s/<string1>/<string2>/g
     Substitute all subsequent from a line to EOF        :20, $ s/<string1>/<string2>/g
@@ -62,7 +60,6 @@ Undo and Repeat Notes
 
 Change, or Replace or Join Notes
     Change word (delete word and type a new word)       cw or c(n)w for n words
-    Change to end of word                               ce
     Change the current character with new character     r or r(n) <char> to replace multple characters
     Change the current character with new text          s followed by typing the <newtext>, or ns to replace n chars
     Change the line with new text                       S
@@ -78,6 +75,7 @@ Change, or Replace or Join Notes
 
 Delete Notes (Operator d or x and Count and Motion e.g. d10w deletes 10 words)
     Delete characters fwd or back                       x, nx (forward) and X, nX (backwards)
+    Delete remainder of word incl last character        de
     Delete to start of line or end of line              d0 (zero) to delete back, D or d$ to delete end of line
     Delete a line (drop dead) or range of lines         dd, ndd or :3,22 d
     Delete up to/including a matching character         dt<char>, df<char>
@@ -87,7 +85,6 @@ Delete Notes (Operator d or x and Count and Motion e.g. d10w deletes 10 words)
     Delete from cursor to character position            dn| (d10| deletes to position 10)
     Delete to bottom of screen                          dL
     Delete lines containing a string                    :g/<string>/d
-    Delete to end of word                               de
     Delete to end of file                               dG
 
 Move and Scroll Notes (Motions)
@@ -108,8 +105,6 @@ Move and Scroll Notes (Motions)
     Move to a position on a line                        n| (pipe) (e.g. 20|)
     Move to matching parentheses                        % (place cursor on one parenthesis first)
     Move to previous location, next location            <Ctrl>-o, <Ctrl>-i
-    Move to a letter (fwd or bck)                       m <letter, M <letter>
-    Move forward or back one word                       w, b
 
 Mark and Return
     Mark text anywhere on a line                        mx, my, mz
@@ -117,10 +112,10 @@ Mark and Return
 
 Window Notes
     Move between split windows                          <Ctrl>-w j (down) or k (up)
-    Rotate windows                                      <Ctrl>-w r (down) or R (up)
-    Exchange or switch window with next window          <Ctrl>-x
-    Move to top, bottom or previous window              <Ctrl>-w t, <Ctrl>-b, <Ctrl>-p
-    Make windows equal height                           < Ctrl>-=:
+    Rotate windows                                      <Ctrl>-w r (down) or R (up) 
+    Exchange or switch window with next window          <Ctrl>-x 
+    Move to top, bottom or previous window              <Ctrl>-w t, <Ctrl>-b, <Ctrl>-p 
+    Make windows equal height                           < Ctrl>-=: 
     Increase or decrease window height                  <Ctrl>-+ (increase) or - (decrease)
     Set default window height                           <Ctrl>-_ (underscore) which is very large
     Open new window and close existing window            <Ctrl>-w n for new and <Ctrl>-w c to close (or :q)
@@ -142,8 +137,6 @@ Search Notes
     Find next or previous                               n, N
     Find next or previous occurance of word at cursor   *, #
     Find matching parentheses for ( { [                 %
-    Find a letter                                       f <letter>
-
 
 Sorting, Indenting and Counting Notes
     Sort lines in visual mode                           v, then highlight lines, then :!sort (or :!sort u ... unique)

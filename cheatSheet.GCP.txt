@@ -30,7 +30,10 @@ References
     https://cloud.google.com/sdk/docs/cheatsheet -- Google Cloud CLI cheatsheet
     https://cloud.google.com/appengine -- App Engine description
     https://cloud.google.com/sql/docs/mysql -- Cloud SQL for MySQL documentation
-        https://cloud.google.com/compute/docs/ -- google documentation and training
+    https://cloud.google.com/compute/docs/ -- google documentation and training
+    https://cloud.google.com/community/tutorials/setting-up-mysql
+    https://phoenixnap.com/kb/mysql-show-users
+    https://www.youtube.com/watch?v=fmh94mNQHQc -- configure SSH connnection to Google Compute Engine
 
 Persistant Storage
     5 gig (check with df -h)
@@ -185,7 +188,8 @@ Big Query
     users: gjarman2020/<no password on google SSH>
     list users: vim /etc/passwd
     Compute Instance: Micro e2 Ubuntu
-    install gcc -- sudo apt-get install manpages-dev
+    install gcc -- sudo apt install manpages-dev
+    install gdb -- sudo apt install gdb
     validate gcc -- gcc --version
     references for mysql: https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04
     install mysql -- pt install mysql-server
@@ -202,6 +206,10 @@ Big Query
     exit mysql to test the new user -- exit
     mysql -u gjarman -p -- log back onto mysql with the new user and requesting a password prompt
     mysqladmin -p -u sammy version -- log on using mysqladmin tool and return the version
+    define the database -- mysql > create database risingfast;
+    restore from backup -- dd mysql -u root -p risingfast < mysql.20230421.sql
+    sed -i 's/utf8mb4_0900_ai_ci/utf8_general_ci/g' mysql.20230421.sql -- to remove unsupported characterset
+    sed -i 's/CHARSET=utf8mb4/CHARSET=utf8/g' mysql.20230421.sql -- to remove unsupported characterset
     references for apache -- https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04
     install -- apt update then apt install apache2
     check the firewall -- ufw app list
@@ -210,6 +218,9 @@ Big Query
     check the firewall status -- ufw status
     enable firewall access -- ufw allow OpenSSH, ufw allow Apache etc ...
     start apache2 -- systemctl status apache2
+    check directories created by apache -- /var/www/html and /usr/lib/cgi-bin
+    enable cgi scripts in apache -- 'sudo a2enmod cgi
+    restart apache -- systemctl restart apache2
     update domain ip at https://domains.google.com/ to 35.212.209.127
 20-Apr-2023
     Open the Google Firewall page -- GCP > Networks > Firewall, or ... https://console.cloud.google.com/networking/firewalls/list?project=risingfast001
@@ -224,7 +235,62 @@ Big Query
     Copy local cgo files from the bucket to the compute instance: in SSH on the compute instance, sudo gsutil cp gs://www.gjarman2020.com/* . with SSH in the local direcotryyy /usr/lib/cgi-bina
     Delete the web files from the bucket (50 per delete)
     Modify and recompile cGI files to point to the database host on port 3306 -- in file /etc/mysql/mysql.cnf, add bind-address=35.212.209.127 port=3306
+    check if 3306 is open -- https://www.youtube.com/watch?v=W5mPX1-015o&list=PLsd39W4KNFfO5uYLB0rRv0nJi4GCPPvi8 35.212.209.127 3306
     install the json library -- sudo apt install libjson-c-dev
     install the mysql library --  apt install libmysqlclient-dev
     troubleshoot missing c libraries -- find . -type f -name 'libmysqlclient.so*' >> ./usr/lib/x86_64-linux-gnu/libmysqlclient.so.20.3.28
     configure VIM defaults
+    install the <uuid.h> header -- apt install uuid-dev
+    recompile all cgi scripts on the server to invoke the different library version for mysql connect libraries
+    copy all web files from the local backup folder to the google machine -- upload to the bucket then run sudo gsutil -m cp gs://www.gjarman2020.com/* . into the GCP /var/www/html directory
+    copy all cgi files from the local backup folder to the google machine -- upload to the bucket then run sudo gsutil -m cp gs://www.gjarman2020.com/* . into the GCP /usr/lib/cgi-bn directory
+    change the URL on all cgi scipts to point to the new host
+    list users and their hosts -- mysql> select Host, User from mysql.user;
+    show process list on mysql -- select Host, User from mysql.user;
+21-Apr-2023
+    Reference -- https://cloud.google.com/sql/docs/mysql/connect-admin-ip
+    Find client IP address: 108.200.158.218 using http://ipv4.whatismyv6.com/
+    https://phoenixnap.com/kb/mysql-remote-connection
+    generate an ssh key pair on linux -- ssh-keygen -t rsa -f ~/.ssh/KEY_FILENAME -C USERNAME -b 2048
+    check ssh key fles at /home/gjarman/.ssh/ as my-ssh-key and my-ssh-key.pub
+    move the files to the tmp directory in windows as root -- mv my-ssh-key* /mnt/c/users/gjarm/OneDrive/temp
+    upload to google cloud bucket
+    transfer to google cloud compute machine temp directory -- sudo gsutil cp gs://www.gjarman2020.com/*
+21-Apr-2023 Try MySQL Cloud Service on Google
+    create a Google cloud SQL instance -- https://www.bing.com/videos/search?q=google+cloud+use+mysql&view=detail&mid=35E5D79E8EE26212489D35E5D79E8EE26212489D&FORM=VIRE
+    Connection Name: risingfast001:us-west1:risingfast
+    Pwd: Mpa4egu9
+    Public IP: 34.127.93.88
+    Connect from Google Compute Engine in cloud shell -- mysql -h 34.127.93.88 -u root -p
+    Install the database from the cloud shell runnin on the cmpute instance -- mysql -h 34.127.93.88 -u root -p risingfast < mysql.20230421.sql
+25-Apr-2023
+    Connect to Compute Engine via SSH -- see: https://www.youtube.com/watch?v=fmh94mNQHQc for the setup of SSH using a key
+27-Apr-2023
+Retry installing mySQL on Google Compute Engine -- https://cloud.google.com/community/tutorials/setting-up-mysql
+    Install the Google Cloud SDK -- https://cloud.google.com/sdk/docs/install-sdk
+    GCSKD installed at C:\Program Files (x86)\Google\Cloud SDK
+    Choose Core Libraries only  and uncheck all other packages (Python and Powershell options) -- installation failed and requires Python installed
+    Check mySQL already installed -- mysql ... to get the mysql> prompt, then exit
+    Secure the installation and create a root password -- mysql_secure_installation (password for root ... 'Mpa4egu9')
+    Choose secure options to remove anonymous accounts and leave samepl database installed
+    List current users: select host, user from mysql.user;
+    create a new user gjarman2020@localhost-- CREATE USER 'gjarman2020'@'localhost' IDENTIFIED BY 'Mpa4egu$';
+    grant all privileges to gjarman2020@localhost -- GRANT ALL PRIVILEGES ON *.* TO 'gjarman2020'@'localhost' WITH GRANT OPTION;
+    create a new user gjarman2020@% -- CREATE USER 'gjarman2020'@'localhost' IDENTIFIED BY 'Mpa4egu$';
+    grant all privileges to gjarman2020@% --  GRANT ALL PRIVILEGES ON *.* TO 'gjarman2020'@'%' WITH GRANT OPTION;
+    reference -- https://linuxize.com/post/mysql-remote-access/
+    recompile cgi to access local SQL on Compute Engine using loopback ip: 127.0.0.1 gjarman2020 Mpa4egu$ ... success
+    edit config file to allow all remote servers to access local mySQL -- vim /etc/mysql/mysql.conf.d/mysqld.cnf and set bind-address^I^I= 0.0.0.0
+    restart the mySQL server -- systemctl restart mysql
+    grant remote access -- GRANT ALL ON risingfast.* TO gjarman2020@'108.200.158.218' IDENTIFIED BY 'Mpa4egu$';
+    verify connection  -- mysql -u gjarman2020 -h 35.212.209.127 -p
+    cd /etc/mysql/mysql.conf.d -- change direcory to folder with mysql.cnf file and edit the bind-address in the file to 0.0.0.0
+    cd /etc/mysql/ -- change directory to another folder with another mysql.cnf file and edit the bind-address in the file to 0.0.0.0
+    systemctl restart mysql.service -- to restart mysql and check if anything broke
+    create a new remote user -- CREATE USER 'remote'@'108.200.158.218' IDENTIFIED BY 'Mpa4egu$';
+    grant privileges -- GRANT ALL ON risingfast.* TO 'remote'@'108.200.158.218' IDENTIFIED BY 'Mpa4egu$';
+    enforce the change -- FLUSH PRIVILEGES;
+    check if 3306 is open -- https://portchecker.co/checking 35.212.209.127 3306
+
+
+
