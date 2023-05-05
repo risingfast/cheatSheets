@@ -450,9 +450,18 @@ DOS Commands Table of Contents (DCTOC)
             IF ERRORLEVEL 1 <COMMAND> -- executes <command> when errorlevel is set to 1 by last executed command
             IF %var1% EQU %var2% echo var1 and var2 match
             FOR /F "DELIMS=*" %i IN (commands.txt) DO %i -- run each line in a file as a command
+Windows Subsystem for Linux
+    References
+        https://www.youtube.com/watch?v=_fntjriRe48 -- WSL 2 Playlist, David Bombal
+        https://www.youtube.com/watch?v=_fntjriRe48 -- WSL 2: Getting started, David Bombal
+        https://www.youtube.com/watch?v=GFgJgGV4d28 -- Windows Terminal and WSL 2 Tips, David Bombal
+    File Navigation Ubuntu to Windows
+        cd /mnt to get to the topmost directory and find the C drive
+    File Navigation Windows to Ubuntu
+        In Windows File Explorer, go to Linux at bottom under 'This PC'
 Excel
-     VBA Excel
-     Keys
+    VBA Excel
+    Keys
         <Ctrl><Shift><DownArrow> Last cell in column highlighted
         <Alt><F11> Go to VBA
         <Ctrl><Spacebar> Intellisense

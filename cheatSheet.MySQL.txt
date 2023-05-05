@@ -25,6 +25,18 @@ MySQL Fan Zhang
 MySQL Tutorial
     https://www.mysqltutorial.org/
 
+Uninstall MySQL on Ubuntu
+    sudo apt purge mysql-server mysql-client mysql-common
+    sudo apt autoremove
+    sudo mv -iv /var/lib/mysql /var/tmp/mysql-backup
+    sudo rm -rf /var/lib/mysql*
+
+Reinstall MySQL on Ubuntu
+    sudo apt update
+    sudo apt install mysql-server
+    mysqld --initialize
+    sudo /usr/bin/mysql_secure_installation
+
 C and mySQL
     https://timmurphy.org/2009/08/20/connecting-to-mysql-in-c/
     http://zetcode.com/db/mysqlc/
@@ -36,8 +48,8 @@ Connect Troubleshooting
     sudo mysql
     alter user 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Mpa4egu$'
     exit
-
-Directories( using ... find / -name mysql 2>/dev/null)
+ll
+Directories and Files using ... find / -name mysql 2>/dev/null)
     /usr/share/mysql
     /usr/bin/mysql
     /usr/include/mysql
@@ -56,7 +68,8 @@ Connect to GCP Instance from GCP Compute Engine VM Instance
     mysql --host=35.188.123.150 --user=root --password$ -- using GCP public ip of gjarman2020-sql instance
     mysql --host=10.69.160.3 --user=root --password -- using local ip of gjarman2020-sql instance
 
-Database Manipulation
+Database Troubleshooting and Diagnostics
+    /usr/local/mysql/bin/mysql start
     systemctl stop mysql -- stop the database
     systemctl status mysql -- check the status of mysql
     mysql> create database risingfast;
@@ -79,18 +92,21 @@ Index Manipulation
     drop index <indexname< on <tablename>; -- delete an index
 
 User and User Privileges Manipulation
-    mysql> -u root -p -- login as root with prompted password
-    mysql> -u gjarman -p
-    mysql> create user gjarman@'%' identified by <password>;
-    mysql> grant all privileges on *.* to 'gjarman'; -- grant global privileges
-    mysql> grant select on risingfast.test to 'gjarman'; -- grant select on a table
-    mysql> flush privileges; -- force new privileges to take affect without a db restart - clears the grants table
-    mysql> show grants for 'gjarman';
-    mysql> drop user 'gjarman'@'%' -- drop a user
+    change a user password -- mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'Mpa4egu$';
+    login as root -- mysql> -u root -p -- login as root with prompted password
+    login as gjarman2020 -- mysql> -u gjarman2020 -p
+    create a new user -- mysql> create user gjarman2020 @'%' identified by <password>;
+    grant global privileges to a new user -- mysql> grant all privileges on *.* to 'gjarman';
+    grant specific priieges to a new user -- GRANT CREATE, ALTER, DROP, INSERT, UPDATE, INDEX, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'root'@'localhost' WITH GRANT OPTION;
+    grant select on a table -- mysql> grant select on risingfast.test to 'gjarman2020'; -- grant select on a table
+    force new privileges into effect -- mysql> flush privileges;
+    show all grants for a user -- mysql> show grants for 'gjarman2020';
+    delete a user -- mysql> drop user 'gjarman'@'%'
+    show current users -- select user, host from mysql.user;
 
 Configure Remote Access
     Modify file /etc/mysql/mysql.cnf as sudo
-    Add lines: [mysqld] bind-address=192.168.0.13 port=3306
+    Add lines: [mysqld] bind-address=192.168.1.64 port=3306
     Restart db: etc/init.d/mysql restart
 
 References
@@ -175,8 +191,7 @@ Prepared Statements
     DEALLOCATE PREPARE stmt1;
 
 SQL C API
-
-    char *strServer = "192.168.0.13";                                           -- define server IP
+    char *strServer = "192.168.1.64";                                           -- define server IP
     char *strUser = "gjarman";                                                       -- define user
     char *strPassword = "Mpa4egu$";                                              -- define password
     char *strDatabase = "risingfast";                                            -- define database
@@ -185,7 +200,6 @@ SQL C API
     MYSQL *conn;                                                   -- connection object (structure)
     MYSQL_RES *res;                                                    -- result object (structure)
     MYSQL_ROW row;
-
     conn = mysql_init(NULL);
     MYSQL *mysql_real_connnect(con, strServer, strser, strPassword, strDatabase, 0, NULL, 0);
     char *mysql_error(con))                               -- error message after connection attempt
@@ -196,12 +210,17 @@ SQL C API
     mysql_close(conn);                                -- free the MYSQL connection structure memory
     (int) strtol(row[0], endptr, 10);                                  -- convert string to integer
 
-Backup and Restore
+Backup
     mysqldump -u gjarman -p risingfast > /tmp/mysql.backup.sql -- from the server (sudo not required)
+    mysqldump -h 34.127.93.88 -u gjarman2020 --port 3306 -p risingfast > /tmp/mysql.bak.sql -- dump data from GCP SQL host
     mysqldump --column-statistics=0 -h 35.188.123.150 -u root -p risingfast > /tmp/mysql.bak.sql -- from a local client to backup GCP SQL
+    mysqldump -h 34.127.93.88 -P 3306 -u root -p risingfast > mysql.backup.sql -- dump Google SQL Cloud service
     characterset convsersions on backfile from risigfast to gjarman2020
      :%s/utf8mb4_0900_as_ci/utf8_general_ci/g 
      :%s/utf8mb4_0900_ai_ci/utf8_general_ci/g
      :%s/CHARSET=utf8mb4/CHARSET=utf8/g
-    
-
+Restore
+    mysql > create database risingfast;
+    sed -i 's/utf8mb4_0900_ai_ci/utf8_general_ci/g' mysql.20230421.sql -- to remove unsupported characterset
+    sed -i 's/CHARSET=utf8mb4/CHARSET=utf8/g' mysql.20230421.sql
+    mysql -u root -p risingfast < mysql.20230421.sql

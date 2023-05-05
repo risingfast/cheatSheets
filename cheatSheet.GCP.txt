@@ -1,6 +1,7 @@
 GCP Cheatsheet (Google Cloud Platform)
 
 References
+    http://cloud.Google.com -- starting point
     https://www.youtube.com/watch?v=fmh94mNQHQc -- log onto GCP instance via Putty
         edit /etc/ssh/sshd_config and set PasswordAuthentication yes
     http://www.havetheknowhow.com/Configure-the-server/Install-VNC.html port 5901
@@ -34,6 +35,38 @@ References
     https://cloud.google.com/community/tutorials/setting-up-mysql
     https://phoenixnap.com/kb/mysql-show-users
     https://www.youtube.com/watch?v=fmh94mNQHQc -- configure SSH connnection to Google Compute Engine
+    StorageFreak on Youtube
+        https://www.youtube.com/watch?v=W5mPX1-015o -- Setup a Google Cloud Platform
+        https://www.youtube.com/watch?v=zqVcbEdUj-o -- Projects in Google Cloud Platform explained
+        https://www.youtube.com/watch?v=OKvOvHuOnrw -- Cloud DNS: Build webserver with custom doman and GCP
+        https://www.youtube.com/watch?v=ibd96SQ6odM -- Google Cloud - Introduction to Cloud Shell
+        https://www.youtube.com/watch?v=3GAEXdLAwEs -- Serverles App with Google Cloud Functions: ASCII Art Example
+        https://www.youtube.com/watch?v=kXIKJBHfesg -- Kubernetes quickstart on Google Cloud
+        https://www.youtube.com/watch?v=pTMn7M8OJQ8 -- Windows on Google Cloud - Create a VM and Connect to it - Instant Tutorial
+
+GCP Supplied Resources
+    Documentation → http://goo.gle/3oEBV1f 
+    In-depth tutorials → http://goo.gle/3r6nhBw 
+    Support → http://goo.gle/3pxvGxo 
+    Training → http://goo.gle/3iZxZ9M 
+    Free Codelabs →https://g.co/codelabs/cloud 
+    Qwiklabs → https://goo.gle/2XhRrqL
+    Essentials Playlist → https://bit.ly/GCP-essentials
+        https://www.youtube.com/watch?v=jtPtSVSTb9Y -- How to run code on Google cloud
+        https://www.youtube.com/watch?v=27Pb5g7bEAA -- How to use the Google Cloud Console
+        https://www.youtube.com/watch?v=GKEk1FzAN1A -- Getting started with Google Cloud (Stephanie Wong)a
+        https://www.youtube.com/watch?v=QR_LQQ-vvko -- Platform Overview - Machine Learning
+        https://www.youtube.com/watch?v=3v9XWdFyh2E -- Developer and Management Tools (GCloud and CloudShell)
+
+
+Instances
+    NAME: instance-1
+    ZONE: us-west1-b
+    MACHINE_TYPE: e2-micro
+    PREEMPTIBLE:
+    INTERNAL_IP: 10.138.0.2
+    EXTERNAL_IP: 35.212.209.127
+S   TATUS: RUNNING
 
 Persistant Storage
     5 gig (check with df -h)
@@ -103,6 +136,9 @@ DNS Name Resolution Troubleshooting
     https://www.youtube.com/watch?v=OKvOvHuOnrw -- Cloud DNS: Build webserver with custom domain in GCP
     https://domains.google/ -- verify domain is assigned the correct IP address (this fixed it)
 
+Identity and Access Management Roles (IAM Roles)
+    references -- https://www.youtube.com/watch?v=Sdt-i-Q7tyA -- Resource Access Control IAM Roles and Permissions
+
 Compute Engine Profile
     Name: risingfast-01
     Created: Apr 10, 2022, 11:03:43 AM UTC-05:00
@@ -110,16 +146,52 @@ Compute Engine Profile
     Machine Type: e2-micro
     CPU Platform: Intel Broadwell
 
-SSH Keys
-    GCP > Console > Compute Engine > Settings < Metadata > SSH Keys -- to store a public key and propagate to all machines on a project
+Connect to Google Cloud VM Instance Compute Engine via PuTTY
+    Username and Password
+        change line in /etc/ssh/sshd_config showing 'PasswordAuthentication' from 'no' to 'yes' -- using VIM via the SSH link on the Compute Engine page
+        restart the sshd service -- service sshd restart
+        change or confirm user and password -- sudo password gjarman2020
+        check the firewall rule on GCP allows TCP port 22 Ingress from all IP ranges and apply to all targets
+        use putty and the IP address but with no attached private key and log into the host
+    SSH Key
+        create a private key using puttygen for a named user and save it on the local host (e.g. at C:\Users\gjarm\OneDrive\Computing\GCP\SSH Keys\gjarman2020_privatekey.ppk
+        connect the private key to a new SSH login profile under > Connection > SSH > Auth
+        Configure the IP and username (matching the private and public keys) on PuTTY connecton dialog
+        check the firewall rule on GCP allows TCP port 22 Ingress from all IP ranges and apply to all targets
+        add the public SSH key to the GCP Compute Engine profile under SSH Keys
+            GCP > Console > Compute Engine > Settings < Metadata > SSH Keys -- to store a public key and propagate to all machines on a project
+
+Connect to Google Cloud VM Instance Compute Engine via WinSCP
+    Username and Password
+        change line in /etc/ssh/sshd_config showing 'PasswordAuthentication' from 'no' to 'yes' -- using VIM via the SSH link on the Compute Engine page
+        restart the sshd service -- service sshd restart
+        change or confirm user and password on the server -- sudo password gjarman2020
+        check the firewall rule on GCP allows TCP port 22 Ingress from all IP ranges and apply to all targets
+        configure a winSCP connection dialog with the IP address, port 22 and username/password and save with a meaningful name
+    SSH Key
+        check the firewall rule on GCP allows TCP port 22 Ingress from all IP ranges and apply to all targets
+        Choose 'New Site' to allow Advanced settings dropdown on winSCP connnection dialog
+        configure a winSCP connection dialog with the IP address, port 22 and username
+        add the private SSH key file generated with PuttyGen under 'Advanced > SSH > Authentication
+        add the public SSH key to the GCP Compute Engine profile under SSH Keys
+            GCP > Console > Compute Engine > Settings < Metadata > SSH Keys -- to store a public key and propagate to all machines on a project
 
 Cloud Shell (Debian based)
+    GCloud is a scriptable CLI with access to all console functions (includes the Google Cloud SDK)
+    GCloud console is a small VM running GCloud commands with persistant storage
+    A set of utilities for managing cloud instances in Google and interacting with Google Cloud API's
     Preinstalled applications: gcc (C), git, go, java, node (javascript), PHP, python, ruby, vim
+    cloudshell help
+    builtin help
     gcloud tool
+        gcloud init -- initialize the GCloud environment
         gcloud config set project risingfast001 -- set the project in cloud shell
-        gcloud config list -- list configuration for gcloud CLI
+        gcloud compute instances list -- show the list of instances in the cloud
+        gcloud components list -- list all installed components 
+        gcloud config list -- list current configuration for gcloud CLI
         gcloud config list project -- list the current project
         gcloud config set project <PROJECT_ID> -- change the current project
+        gcloud help -- list help
         gcloud -h -- list gcloud invocations
         gcloud compute --help -- drill down to help on compute engine
         gcloud app logs --help -- drill down to help on logs within app engine
@@ -180,6 +252,10 @@ mySQL Commands Common
 
 Big Query
     SELECT * FROM EXTERNAL_QUERY("projects/risingfast001/locations/us-central1/connections/risingfast-connection", "SELECT * FROM INFORMATION_SCHEMA.TABLES;");
+
+Serverless and Cloud Functions
+    References: https://www.youtube.com/watch?v=3GAEXdLAwEs
+    Supported environments: Javascript & NodeJS, Java, Go, PHP, Ruby, .Net Core, Python 
 
 19-Apr-2023
     IP Address: 35.212.209.127 (static external)
@@ -266,7 +342,7 @@ Big Query
 25-Apr-2023
     Connect to Compute Engine via SSH -- see: https://www.youtube.com/watch?v=fmh94mNQHQc for the setup of SSH using a key
 27-Apr-2023
-Retry installing mySQL on Google Compute Engine -- https://cloud.google.com/community/tutorials/setting-up-mysql
+    Retry installing mySQL on Google Compute Engine -- https://cloud.google.com/community/tutorials/setting-up-mysql
     Install the Google Cloud SDK -- https://cloud.google.com/sdk/docs/install-sdk
     GCSKD installed at C:\Program Files (x86)\Google\Cloud SDK
     Choose Core Libraries only  and uncheck all other packages (Python and Powershell options) -- installation failed and requires Python installed
@@ -291,6 +367,25 @@ Retry installing mySQL on Google Compute Engine -- https://cloud.google.com/comm
     grant privileges -- GRANT ALL ON risingfast.* TO 'remote'@'108.200.158.218' IDENTIFIED BY 'Mpa4egu$';
     enforce the change -- FLUSH PRIVILEGES;
     check if 3306 is open -- https://portchecker.co/checking 35.212.209.127 3306
+28-Apr-2023
+    reference -- https://winscp.net/eng/docs/guide_public_key
+    setup SSH key on WinSCP -- in connection dialog for a new connection: Advanced > SSH > Authentication > Private Key File (load)
+    Connect via WinSCP to remote host with gjarman2020 user account
+28-Apr-2023 Dump SQL database from Google Cloud and restore to Google Compute Instance
+    run SQL dump of SQL Cloud db from the compute engine -- mysqldump -h 34.127.93.88 -P 3306 -u root -p risingfast > mysqldump.bak
+    clean up the character set -- sed -i 's/utf8mb4_0900_ai_ci/utf8_general_ci/g' mysqldump.bak
+    clean up the other character set -- sed -i 's/CHARSET=utf8mb4/CHARSET=utf8/g' mysqldump.bak
+    log onto the local database on the compute engine -- mysql -u gjarman2020 -p (use password Mpa4egu$)
+    drop the existing database on the compute instance -- > DROP DATABASE risingfast;
+    show the database is dropped -- > SHOW DATABASES;
+    create the database name -- > CREATE DATABASE risingfast;
+    show the database is dropped -- > SHOW DATABASES;
+    restore the data locally on the compute instande -- mysql -u gjarman2020 -p risingfast < mysqldump.bak
+    open the database remotely from mysql client and inspect for the latest data changes present
+30-Apr-2023
+    Delete the SQL instance to reduce billings after migrating everything to the compute engine
+
+
 
 
 

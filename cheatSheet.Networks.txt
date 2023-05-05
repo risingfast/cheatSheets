@@ -6,6 +6,19 @@ References
     https://www.youtube.com/watch?v=9J1nJOivdyw -- Web Server Concepts and Examples
     https://www.youtube.com/watch?v=earzZpX-PiY -- SSL Certificates: Serving secure web content over HTTPS
     http://ipv4.whatismyv6.com/ -- IP identifier
+    https://www.youtube.com/watch?v=7FeNCmrRmdQ -- Free CCNA 2000-301 course // Complete unlimited 2023 course, David Bombal and Jeremy McDowell
+    https://www.udemy.com/course/complete-cisco-ccna-200-301-course/?referralCode=71BC7373F399347E1E12 -- Jeremy McDowal CCNA Course on Udemy
+    https://www.youtube.com/c/JeremysITLab -- Jeremy McDowell's IT Lab -- CCNA Course (Free)
+    https://www.youtube.com/watch?v=S7MNX_UD7vY -- Free CCNA Course, Network Chuck
+        https://www.youtube.com/watch?v=9eH16Fxeb9o -- What is a SWITCH? // FREE CCNA // Day 1 23:21
+        https://www.youtube.com/watch?v=p9ScLm9S3B4 -- Waht is a ROUTER // FREE CCNA ?? EP 2 21:30
+    https://www.netacad.com/ -- CISCO Networking Acadamy
+    https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ -- Jeremy McDowell CCNA Course List
+        https://www.youtube.com/watch?v=H8W9oMNSuwo -- Free CCNA | Network Devices | Day 1 | CCNA 200-301 Complete Course
+        https://www.youtube.com/watch?v=6Atw8oMtVTA -- Free CCNA | Anki Flashcards | Day 1 Extra | CCNA 200-301 Complete Course
+
+Downloads
+    https://www.computernetworkingnotes.com/ccna-study-guide/download-packet-tracer-for-windows-and-linux.html -- Cisco Packet Tracer
 
 Network Configuration at Home
    Permanent IP Address 76.184.87.205 -- Risingfast on Spectrum
@@ -17,6 +30,8 @@ Network Configuration at Home
 
 Abbreviations
     BGP Border Gateway Protocol
+    CCNA Cisco Certified Network Associate
+    CCNP Cisco Certified Network Professional
     CIDI Continuous Integration/Continuous Delivery
     DNS Domain Name System
     FTP File Transfer Protocol
@@ -119,3 +134,16 @@ HTTPS Protocol
     Certificates can be self-signed and these encrypt tranmission but throw a warning in the browser "This connection is untrusted"
     SSL uses the TLS protocol for encryption with a public (encrypt) and private (decrypt) key
 
+CCNA Cisco Certfied Network Associate - Network Chuck
+    Day 1
+        Hub - a broadcast point for local devices with MAC addresses connected to its ports - forwards packets to all mac addresses except the source MAC address
+        Switch - a switching point to any local device MAC address connected to its ports - forwards packets to a single MAC address
+        Hubs and Switches are layer 2 devices
+        Layer 1 -- Ethernet port - the physical level
+        Layer 2 -- MAC address - data link layer address
+        Layer 3 -- IP Address and Protocol
+        CAM Table -- Content Addressable Memory table, maps port numbers to destination MAC addresses connected to those ports
+        CLI Commands -- enable
+                        show mac-address-table
+        Layer 2 content - frame
+        Layer 3 content - packet
