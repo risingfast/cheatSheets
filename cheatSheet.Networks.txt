@@ -9,7 +9,7 @@ References
     https://www.youtube.com/watch?v=7FeNCmrRmdQ -- Free CCNA 2000-301 course // Complete unlimited 2023 course, David Bombal and Jeremy McDowell
     https://www.udemy.com/course/complete-cisco-ccna-200-301-course/?referralCode=71BC7373F399347E1E12 -- Jeremy McDowal CCNA Course on Udemy
     https://www.youtube.com/c/JeremysITLab -- Jeremy McDowell's IT Lab -- CCNA Course (Free)
-    https://www.youtube.com/watch?v=S7MNX_UD7vY -- Free CCNA Course, Network Chuck
+    https://www.youtube.com/playlist?list=PLIhvC56v63IJVXv0GJcl9vO5Z6znCVb1P -- Free CCNA Course, Network Chuck
         https://www.youtube.com/watch?v=9eH16Fxeb9o -- What is a SWITCH? // FREE CCNA // Day 1 23:21
         https://www.youtube.com/watch?v=p9ScLm9S3B4 -- Waht is a ROUTER // FREE CCNA ?? EP 2 21:30
     https://www.netacad.com/ -- CISCO Networking Acadamy
@@ -29,22 +29,53 @@ Network Configuration at Home
    Ubuntu Reservation: 192.168.0.11
 
 Abbreviations
-    BGP Border Gateway Protocol
-    CCNA Cisco Certified Network Associate
-    CCNP Cisco Certified Network Professional
-    CIDI Continuous Integration/Continuous Delivery
-    DNS Domain Name System
-    FTP File Transfer Protocol
-    HTTP Hyper Text Tansfer Protocol
+    ACI -- Application-Centric Infrastructure (Cisco)
+    ARP -- Address Resolution Protocol -- finds MAC address corresponding to an IP address
+    ATM -- Asynchronous Transfer Mode (WAN Topology)
+    BGP -- Border Gateway Protocol
+    BRI -- Basic Rate Interface
+    CCNA -- Cisco Certified Network Associate
+    CCNP -- Cisco Certified Network Professional
+    CIDI -- Continuous Integration/Continuous Delivery
+    DNS -- Domain Name System
+    FTP -- File Transfer Protocol
+    HTTP -- Hyper Text Tansfer Protocol
+    ISDN -- Integrated Serviced Digital Network, ciruit switched dial up connection
+    MPLS -- Multip Protocol Label Switching (WAN topology)
     MAC Address -- Media Access Control Address -- unique address assigned to a NIC
     NIC -- Network Interface Controller
-    TCP -- Transmission Control Protocol, transport layer protocol, packets data and guarantees receipt in the correct order
+    OSI -- Open Systems Interconnect (Model) - 7 layer network model
+    OSS -- Open Source Software
+    PoE -- Power over Ethernet
+    QoS -- Quality of Service, prioritize voice traffic ahead of data traffic, etc
+    RARP -- Reverse ARP
+    TCP -- Transport  Control Protocol, transport layer protocol, packets data and guarantees receipt in the correct order, slower than UDP
+    TFTP -- Trivial File Transfer Protocol
     TLD -- Top Level Domain
+    TLS -- Transport Layer Security (successor to SSL)
     TTL -- Time To Live -- cached lifetime on a local host and resolver before refresh from DNS server is forced
-    OSS Open Source Software
-    UDP User Datagram Protocol
-    VPC Virtual Private Cloud (software defined network)
-    VPS virtual Private Server (e.g. Linode, DigitalOcean, Vultr)
+    SD-WAN -- Software-Defined WAN
+    SSL -- Secure Sockets Layer (Netscape 1995)
+    UDP -- User Datagram Protocol, not as reliable as TCP but faster
+    VPC -- Virtual Private Cloud (software defined network)
+    VPS -- virtual Private Server (e.g. Linode, DigitalOcean, Vultr)
+    WAN -- Wide Area Network
+    WAP -- Wireless Access Point
+
+OSI Model (7 Layer)
+    Layer 7: Application: HTTP
+    Layer 6: Presenetation: HTTPS Encryption
+    Layer 5: Session: TCP
+    Layer 4: Transport: UDP and TCP, encapsulated Port No into a segment
+    Layer 3: Network: IP, IPsec, ICMP, IGMP, GREm encapsulated IP address into a packet
+    Layer 2: Data Link: Ethernet, encaptulates MAC address into a frame
+    Layer 1: Physical: cable, optical, wireless
+
+TCP/IP Mode (4 Layer)
+    Layer 4: Applicaton (OSI 7)
+    Layer 3: Transport (OSI 4)
+    Layer 2: Internet (OSI 3)
+    Layer 1: Network Access (OSI 1, 2)
 
 IP Addresses
     IP4 -- 4 groups of octal digits separated by dots
@@ -99,7 +130,6 @@ HTTP Protocol (Application Layer Protocol)
         User-Agent: Manual-Http-Request -- type of browser sending the request (header line 2)
         <empty line> -- indicates end of http request header
         <body lines> -- request body can be empty for a GET request
-
         POST/orders HTTP/1.1 -- start line
         Host: 127.0.0.1:80 -- destination IP and port (header line 1)
         User-Agent: Manual-Http-Request -- type of browser sending the request (header line 2)
@@ -135,7 +165,13 @@ HTTPS Protocol
     SSL uses the TLS protocol for encryption with a public (encrypt) and private (decrypt) key
 
 CCNA Cisco Certfied Network Associate - Network Chuck
-    Day 1
+    Playlist: FREE CCNA
+        https://www.youtube.com/playlist?list=PLIhvC56v63IJVXv0GJcl9vO5Z6znCVb1P
+        Ehternet Crossover Cable -- connect two computers together
+    Episode 0 (Day 0) What is a Network? 10:29
+        Reference: https://www.youtube.com/watch?v=S7MNX_UD7vY
+    Episode 1 (Day 1) --What is a Switch
+        Hubs and switches are Levels 1 & 2 in OSI
         Hub - a broadcast point for local devices with MAC addresses connected to its ports - forwards packets to all mac addresses except the source MAC address
         Switch - a switching point to any local device MAC address connected to its ports - forwards packets to a single MAC address
         Hubs and Switches are layer 2 devices
@@ -143,7 +179,95 @@ CCNA Cisco Certfied Network Associate - Network Chuck
         Layer 2 -- MAC address - data link layer address
         Layer 3 -- IP Address and Protocol
         CAM Table -- Content Addressable Memory table, maps port numbers to destination MAC addresses connected to those ports
-        CLI Commands -- enable
-                        show mac-address-table
+        Switch CLI Commands -- enable
+                            --   show mac-address-table
         Layer 2 content - frame
         Layer 3 content - packet
+    Episode 2 -- What is a router
+        Router is level 3 in OSI
+        Reference: https://www.youtube.com/watch?v=p9ScLm9S3B4
+        On a switch, each end-point nows the MAC and IP address mapping of other endpoint via ARP
+        FFFF.FFFF.FFFF is the breadcase MAC address used by ARP to collect IP/MAC mappings from each client
+        Router -- connects different networks together
+        Networks are groups of IP addresses in a single range
+        Routers resolve IP addresses (Layer 3)
+        Router CLI Commands -- enable
+                            -- show ip route
+    Episode 3 -- what is TCP/IP and OSI
+        Reference: https://www.youtube.com/watch?v=CRdL1PcherM 12:03
+        1969 ARPANET and packet switching
+        TCP/IP Model: Application, Transport, Network and Physical (Datalink and physical)
+        ISO Model: Application, Presentation, Session (all in Application TCP/IP layer) Transport, Network and Physical (Datalink and Physical)a
+        ISO Mnemonic: All People Seem To Need Data Processing:
+        Bridges are similar to switches and operate a the datalink layer (MAC address) to subdivide large networks into subnetworks and connect then together
+    Episode 4 -- REAL LIFE example!! (TCP/IP and OSI layers)
+        Reference: https://www.youtube.com/watch?v=3kfO61Mensg
+        Layer 4 content - segment
+    Episode 5 -- https://www.youtube.com/watch?v=oIRkXulqJA4 -- how the OSI model works on YouTube (Application and Transport Layers)
+        De-encapsulation - the process of opening and interpreting network data
+        Layer 6 - Presentation Layer -- does data format (eg. HTML and PNG) and encryption (SSL)
+        Layer 5 - Session Layer -- maintains a connection (eg. L2TP, RTCP, H.245, SOCKS)
+        Layer 4 - Transport Layer -- TCP (reliable) or UDP (fast) includes protocol and port number
+            TCP expects confirmation of message received and will resend and reconfirm if not
+            Starts with a SYN, SYN ACK and ACK message to confirm a connection (the 3-Way handshake)
+            Ports identify the type of transmission: http 80, https 663 ftp 21 ssh 22 Telnet 23, smptp 25RDP 3389
+            Ephemeral ports are response ports assigned temporarily
+    Episode 6 -- https://www.youtube.com/watch?v=wwwAXlE4OtU -- DO NOT design your network like this
+        Eliminate single points of failure by eliminating daisy-chains
+        Add a Multilayer Switch -- a fast Layer 3 switch that can interpret IP addresses and MAC addresses
+        2 Tier Network Architecture -- includes a multilayer switch in a distribution layer
+            Tier 0 -- Core Layer (not implemented for 2 Layer)
+            Tier 1 -- Collapsed Core Layer (Distribution Layer and Core Layer combined)
+            Tier 2 -- Access Layer
+        3 Tier Network Architecture -- includes a multilayer switch in a distribution layer
+            Tier 0 -- Core Layer
+            Tier 1 -- Distribution Layer (aka Aggregation layer)
+            Tier 2 -- Access Layer
+    Episode 7 -- https://www.youtube.com/watch?v=6-66D9J5PkY -- Data Center NETWORKS
+        Datacenters require high network throughput between servers (VM's) in the same datacenter
+        Datacenters use spine/leaf designs to connect hosts to maximize east-west traffic throughtput
+        Spine/Leaf is a 2 hop design
+        Leaf switches are assigned to each rack tower
+        Spine switches are connected to all leaf switches
+        Both Spine and Leaf switches are Layer 3 switches
+    Episode 8 -- https://www.youtube.com/watch?v=xPi4uZu4uF0 -- WAN .... it's not the internet (sometimes)
+        WAN -- connects local hosts to servers
+            Leased Line == T1 or other dedicated connection not used b others
+            Ti -- leased line wiht 1.54 mbps throughput (US)
+            T3 -- leased line with 43.736 mbps (US)
+            E1 -- leased line with 2.04 mbps (EU)
+            E3 -- leased line with 34.368 mbps (EU)
+            Fram Relay
+            ATM -- Asynchronous Transfer Mode
+            MPLS -- Multi Protocol Label Switching, private carrier network of virtual circuits (layer 2.5 in OSI)
+            Metro-Ethernet -- 1 gps dedicated ethernet cabling or optical fiber, typically between high-volume sites, layer 2
+                 e-Line, point-to-point
+                 e-Tree, hub and spoke
+                 e-WAM, multipoint or meshed
+            Public Internet, shared traffic with load contention
+                 VPN encrypted
+                 SD-WAN -- Software-Defined WAN popularized by distributed and cloud connections
+    Episode 9 -- https://www.youtube.com/watch?v=80vIin4xGp8 -- let's hack your home network
+        Vulnerabilities
+            Internet access
+            Connected devices
+            Wireless
+            VPN connection to employer
+        Find public IP address at www.whatismyipaddress.com
+        Port scanners
+            www.pentest-tools.com and scan 108.200.158.218
+            nmap -sT -Pn 108.200.158.218 from a remote serve (scan Tcp, Ping ignore)
+            nmap -Pn  --script vuln 108.200.158.21 from a remote server rns a vulnerability script
+        Router Security
+            Enable router firewall
+            Disable port forwarding 
+            Disable remote management
+            Update router firmware
+            Use WPA2 or WPA3 on wireless router
+            IoT devices which allow response traffic with client isolation and a separate virtual network
+                 DD-WRT firmware
+                 Cisco eqipment
+                 Ubiquity (Unifi)
+    Episode 10 -- https://www.youtube.com/watch?v=37tyxaQbtN4 -- you need to learn Hybrid-Cloud RIGHT NOW!!
+    https://www.youtube.com/watch?v=y8h5qY3zwic -- forcing my kids to make Ethernet cables
+    https://www.youtube.com/watch?v=MLxgmkRzgIQ -- why Power over Ethernet (PoE) is amazing !!
