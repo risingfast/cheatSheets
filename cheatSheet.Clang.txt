@@ -59,6 +59,11 @@ CS50 Harvard Youtube Doug Lloyd Classes (Done)
 Acronms
     ELF - Executable and Linkable Format
 
+AVL Trees
+    https://www.javatpoint.com/avl-tree -- Overview of AVL tree logic
+    https://www.geeksforgeeks.org/insertion-in-an-avl-tree/ -- code in C
+    https://www.cs.usfca.edu/~galles/visualization/AVLtree.html -- AVL Tree Visualizer
+
 C Programming -- Virtual Training Company (VTC)
     https://www.youtube.com/playlist?list=PLJYx5cxExeL3lpyNDMxMmhyavzL9m5ONu -- VTC Playlist (Done)
     https://www.youtube.com/watch?v=OtBLikJ2bCk&list=PLJYx5cxExeL3lpyNDMxMmhyavzL9m5ONu&index=3 -- C Programming - Using C on the Web (Done)
@@ -146,8 +151,8 @@ Mycodeschool (MCS) C and C++ -- Data Structures
     https://www.youtube.com/watch?v=gXgEDyodOJU -- Data structures: Introduction to graphs (Done)
     https://www.youtube.com/watch?v=AfYqN3fGapc -- Data structures: Properties and Graphs (Done)
     https://www.youtube.com/watch?v=ZdY1Fp9dKzs -- Graph Representation part 01 - Edge List (Done)
-    https://www.youtube.com/watch?v=9C2cpQZVRBA -- Graph Representation part 02 - Adjacency Matrix
-    https://www.youtube.com/watch?v=k1wraWzqtvQ -- Graph Representation part 03 - Adjacency List (Next) 16:08
+    https://www.youtube.com/watch?v=9C2cpQZVRBA -- Graph Representation part 02 - Adjacency Matrix (Done)
+    https://www.youtube.com/watch?v=k1wraWzqtvQ -- Graph Representation part 03 - Adjacency List (Done) 16:08
 
 Mycodeschool (MCS) C ad C++ -- Programming Interview Questions
     https://www.youtube.com/playlist?list=PL2_aWCzGMAwLPEZrZIcNEq9ukGWPfLT4A -- Playlist
@@ -331,6 +336,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=nvRkFi8rbOM -- How To Implement a Graph in C. (adjacency matrix version)
     https://www.youtube.com/watch?v=YO6K5K1TUj4 -- Your Variables are Not Real
     https://www.youtube.com/watch?v=il4N6KjVQ-s -- Sockets and Pipes Look Like Files (Unix/fdopen)
+    https://www.youtube.com/watch?v=tEbV21aPSKw -- find memory errors quickly. (-fsanitize, addresssanitizer), Jacob Sorber
 
 CodeVault
     https://www.youtube.com/@CodeVault -- main index
@@ -473,6 +479,7 @@ C Other Site References
     https://github.com/oz123/awesome-c -- links to various C resources
     https://breue.com/free_programming_books -- programming books including C
     https://www.sanfoundry.com/ -- C tests, algorithms and tutorials
+    https://www.youtube.com/watch?v=-CpG3oATGIs -- C Programming Tutorial | Learn C Programming | C Language, ProgrammingKnwoledge
 
 C and CGI
     https://www.eskimo.com/~scs/cclass/handouts/cgi.html -- C and C/CGI tutorials
@@ -767,6 +774,7 @@ Compilation Options
     -l<libname> -- specific library to link in (e.g. -lm -lc -lpthread)
     -no-pie -- no position independent executable (changes ELF from shared object to executable
     - ansi -- comppile with compliance to ANSI stadard
+    -fsanitize=address -- check addresses but creates a large binary using address sanitizer
 
 Compiliation of Multiple Files
     Create object (.o) files from source files
@@ -1033,15 +1041,6 @@ Data Types
         double real double precision
     Unions are 
     Composite Types (defined by a program)
-
-Abstract Data Types
-    Lists
-    Linked Lists
-    Doubly Linked List
-    Stack
-    Queue
-    Trees
-    Graphs
 
 Arrays
     A systematic arrangement of variables of the same datatype
@@ -1352,14 +1351,34 @@ Structure Arrays
 
 Abstract Data Structures or Types
     Linear Structures
-        Array 
-        Linked List
+        Arrays and Lists 
+        Singly Linked List
+        Doubly Linked List
         Stack
         Queue
     Hierarchical Structures
-        Binary Tree -- each node has no more than two children
-        Binary Search Tree - sorted binary tree
         Tree
+            components: sub-trees, nodes, parent nodes, child nodes, sibling nodes, leaf nodes, ancestor nodes, descendent nodes, node data and edges/links to other nodes
+            A tree with N nodes has n-1 edges
+            Depth is a count of edges
+            Height of a node is the longest descendent depth to a leaf
+         Tree Traversal
+            Preorder
+            Inorder
+            Postorder
+        Balanced Tree -- height of any left subtree is no more than the height of any right subtree plus/minus one
+        Binary Tree -- each node has no more than two children
+            -- most common type of a tree
+        Binary Search Tree - sorted binary tree
+            Values in any left subtree is less than the value in its root
+            Values in any right subtree is greater than the value in its root
+        Generic Tree -- can have any number of child nodes under each parent node
+        AVL Trees -- trees that are balanced through rotations
+    Applications of Trees
+        file systems
+        search trees
+        dictionaries
+        network routing
     Network Structues
         Graph
 

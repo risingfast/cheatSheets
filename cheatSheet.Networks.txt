@@ -16,6 +16,7 @@ References
     https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ -- Jeremy McDowell CCNA Course List
         https://www.youtube.com/watch?v=H8W9oMNSuwo -- Free CCNA | Network Devices | Day 1 | CCNA 200-301 Complete Course
         https://www.youtube.com/watch?v=6Atw8oMtVTA -- Free CCNA | Anki Flashcards | Day 1 Extra | CCNA 200-301 Complete Course
+    https://www.flackbox.com/cisco-ccna-gold-bootcamp-course -- $99 course for CCNA
 
 Downloads
     https://www.computernetworkingnotes.com/ccna-study-guide/download-packet-tracer-for-windows-and-linux.html -- Cisco Packet Tracer
@@ -37,15 +38,22 @@ Abbreviations
     CCNA -- Cisco Certified Network Associate
     CCNP -- Cisco Certified Network Professional
     CIDI -- Continuous Integration/Continuous Delivery
+    DARPA -- Defence Advanced Research Projects Agency
+    DHCP -- Dynamic Host Configuration Protocol
     DNS -- Domain Name System
     FTP -- File Transfer Protocol
+    GDPR -- General Data Protection Regulation
     HTTP -- Hyper Text Tansfer Protocol
+    IANA -- Internet Assigned Numbers Authority
     ISDN -- Integrated Serviced Digital Network, ciruit switched dial up connection
+    ISP -- Internet Service Provider (e.g. AT&T, Spectrum, etc)
     MPLS -- Multip Protocol Label Switching (WAN topology)
     MAC Address -- Media Access Control Address -- unique address assigned to a NIC
-    NIC -- Network Interface Controller
-    OSI -- Open Systems Interconnect (Model) - 7 layer network model
+    NIC -- Network Interface Controller or Card
+    OSI -- Open Systems Interconnection (Model) - 7 layer network model
+    OSPF -- Open Shortest Path First (Layer 3 protocol)
     OSS -- Open Source Software
+    PDU -- Protocol Data Unit (Data, Segment, Packet, Frame, Bit)
     PoE -- Power over Ethernet
     QoS -- Quality of Service, prioritize voice traffic ahead of data traffic, etc
     RARP -- Reverse ARP
@@ -55,8 +63,14 @@ Abbreviations
     TLS -- Transport Layer Security (successor to SSL)
     TTL -- Time To Live -- cached lifetime on a local host and resolver before refresh from DNS server is forced
     SD-WAN -- Software-Defined WAN
+    SFP -- Small Formfactor Pluggable (for optical cable)
+    SNMP -- Simple Network Management Protocol
     SSL -- Secure Sockets Layer (Netscape 1995)
+    STP -- Shielded Twisted Pair (ethernet cable)
+    STP -- Spanning Tree Protocol (layer 2 protocol)
     UDP -- User Datagram Protocol, not as reliable as TCP but faster
+    UTP -- Unshielded Twisted Pair (ethernet cable)
+    VLAN -- Virtual Local Area Netowrk
     VPC -- Virtual Private Cloud (software defined network)
     VPS -- virtual Private Server (e.g. Linode, DigitalOcean, Vultr)
     WAN -- Wide Area Network
@@ -269,5 +283,261 @@ CCNA Cisco Certfied Network Associate - Network Chuck
                  Cisco eqipment
                  Ubiquity (Unifi)
     Episode 10 -- https://www.youtube.com/watch?v=37tyxaQbtN4 -- you need to learn Hybrid-Cloud RIGHT NOW!!
-    https://www.youtube.com/watch?v=y8h5qY3zwic -- forcing my kids to make Ethernet cables
-    https://www.youtube.com/watch?v=MLxgmkRzgIQ -- why Power over Ethernet (PoE) is amazing !!
+        On Prem -- equipment on premise
+        Cloud -- expandible (elastic), feature support or cloud-native tools (e.g. microservices using docker and kubernetes)
+    Episode 11 -- https://www.youtube.com/watch?v=y8h5qY3zwic -- forcing my kids to make Ethernet cables
+        Cat 5E ethernet cable
+        Ethernet heads: RJ45
+        Ethernet cable tester
+        Crimper -- Ubigear Ethernet Crimper tools
+        UTP Cable - Unshielded Twisted Pair
+            4 pairs of copper wires
+        STP Cable - Shielded Twisted Pair
+        10BASE-T -- Cat 3 wires Twisted Pair
+        100BASE-TX -- 2 Twisted Pairs
+        1000BASE-T -- Cat 5 with 4 twisted pairs
+        Fast Ethernet -- 100 Meg or faster
+        100 meters -- longest reliable Cat5, otherwise late collisions can occur
+        Cat6A -- 10GBASE-T 10 Gigabits per second
+        Cat8 -- 40GBASE-T 40 Gigabits per second
+        568B pinout -- standard pin connections to heads
+        568A pinout -- crossover pin connection to head
+        Crossover Cable -- crosses the send and receive pins on a single cable
+    Episode 12 -- https://www.youtube.com/watch?v=MLxgmkRzgIQ -- why Power over Ethernet (PoE) is amazing !!
+        Cisco 2000 -- invented Cisco Inline Power
+        802.af IEEE 2003 -- standard 15.4 watts (Type 1)
+        802.at PoE+ -- 30 watts
+        802.bt UPOE -- Cisco 60 watts in 2011
+        802.bt Type 4 -- 90 watts in 2018
+        Active or passive PoE
+            Active  uses LLDP (Link Layer Discovery Protocol) or CDP (Cisco Discovery Protocol) to negotiate the amount of power delivered
+            Passive is 'always on' power (aka 24 volt POE) used by Ubiquity switches
+    Episode 13 -- https://www.youtube.com/watch?v=E3DEJ7odWq0 -- fiber optic cables (what you NEED to know)
+        Light has no EMI and low attenuation
+        Types -- Multimode and single mode cables
+        Multimode (aqua or orange) - 50 microns, 500 m range, higher attenuation than single mode, lower bandwidth, less expensive, glass or plastic, used locally in buildings and between switches
+        Single mode (yellow) - 5-9 microns, 100 km range, lower attenuation, higher bandwidth, more expensive, glass
+        Connectors: ST, SC, LC, MT-RJ
+        Duplex cables: for Rx and Tx
+    Episode 14 -- https://www.youtube.com/watch?v=0W4JZIWtjLQ -- you NEED to learn Port Security .... RIGHT NOW!!
+        nmap -- port scanning software
+        shutdown unused ports
+        Cisco CLI -- show ip int brief | inc down
+                  -- interface fa0/1
+                  -- shutdown
+        Isolate physical switch ports from the network by assigning them to a separate VLAN (Black Hole VLAN)
+        Port Security -- prevents unauthorized devices from working on active ports
+            Assignes device MAC Addresses to physical ports to lock the port to a single MAC
+    Episode 15 -- https://www.youtube.com/watch?v=5WfiTHiU4x8 -- what is an IP address? // You SUCk at subnetting
+        IP addresses are assigned to all devices
+        Default Gateway = Router IP Address
+        IP address is assigned by the router
+        Every IP address has a network portion (first three octets) and a host portion (last octet)
+        The subnet mask applied to any local IP address gives the network portion of the local IP address
+        255.255.255.0 is the subnet mask
+        192.168.1 is the normal network portion and 0 = 255 can be the host portion
+        192.168.1.1 is reserved as the network address
+        192.168.1.255 is reserved as the broadcast address
+        192.168.1.254 is reserved as the router address (aka default gateway)
+    Episode 16 -- https://www.youtube.com/watch?v=tcae4TSSMo8 -- we ran OUT of IP Addresses!!
+        The internet's birthday is 01 Jan 1983
+        There are 4,294,967,296 possible IP addresses (2raised32) or 4.3 billion
+        IP addresses are organized into classes: A, B, C, D, E
+        IP addresses are controlled by IANA (Internet Assigned Numbers Authority)
+        Class A: 1.0.0.0 - 126.255.255.255 subnet 255.0.0.0 assigned to companies
+        Loopback: 127.0.0.0 - 127.255.255.255 loopback test addresses and 127.0.0.1 is the current host loopback
+        Class B: 128.0.0.0 - 191.255.0.0 subnet 255.255.0.0 (65,534 possible addresses)
+        Class C: 192.0.0.0 - 233.255.255.0 subnet 255.255.255.0 (same has home networks)
+        Class D: 224.0.0.0 - 239.255.255.255 no subnet mask, reserved for multicast
+        Class E: 240.0.0.0 - 255.255.255.255 reserved for special use
+        Classless network: 
+        Classfull network: abides by network class ranges
+    Eposode 17 -- https://www.youtube.com/watch?v=8bhvn9tQk8o -- we're out of IP Addresses ... but this saved us (Private IP Addresses)
+        RFC 1918 in 1996 ... Private IP addresses and NAT ... reserved ranges of the public IP addresses for private use
+        Class A: 10.0.0.0 - 10.255.255.255 mask 2555.0.0.0
+        Class B: 172.16.0.0 - 172.31.255.255 mask 255.255.0.0
+        Class C: 192.168.0.0 - 192.168.255.255 mask 255.255.255 -- common for home uses
+        Private IP addresses are not unique and are not publicly routable on the internet
+        Local devices get private IP addresses assigned by the router and traffic through the router gets the router IP address
+        Inbound traffic is mapped back to the private IP addres by the router
+        IPv4: 4 segments with three numbers per segment or 2exp32 addresses
+        IPv6: 8 segments with four characters per segment alphanumeric or 2exp128 addresses
+    Episode 18 -- https://www.youtube.com/watch?v=2-i5x8KCfII -- i bet you can't do this (because you still suck at subnetting)
+        IP addresses are 4 octets (in binary)
+    Episode 19 -- https://www.youtube.com/watch?v=oZGZRtaGyG8 -- What is a Subnet Mask??? (you NEED to know it!!)
+        Subnet mask -- gives and controls the size of the network
+                    -- the 1's show the network bits
+                    -- the 0's show the subnetwork or host bits
+    Episode 20 -- https://www.youtube.com/watch?v=mJ_5qeqGOaI -- let's subnet your home network // You SUCK at subnetting
+        Subnets can be created by extending the subnet mask into the host bits from left to right
+        255.255.255.127 is the first subnet mask -- 2 subnets with 128 hosts in each subnet
+    Jeremy's IT Lab Playlist -- https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ -- for CCNA 200-301 Exam Feb 2020
+    Day 1 Network Devices -- https://www.youtube.com/watch?v=H8W9oMNSuwo (30:20)
+        Network Definition: a digital telecommunications network which allows nodes to share resources
+        Network Nodes
+            Switches
+                Switches forward traffic within the same LAN from one device to another
+                Switches cannot connect to the internet
+                Examples: Cisco Catalyst 9200, Catalyst 3650
+                Enterprise switches have many interfaces/ports (usually 24+)
+            Routers
+                Routers communicate with other routers across the internet
+                Examples: Cisco ISR 1000, ISR 4000, ISR 900
+                Routers have far fewer ports than switches
+            Firewalls
+                Definition: security features that control network traffic entering and existing a network
+                Can be placed in fron of or behind a router
+                Configured with security rules
+                Examples: Cisco ASA5500-X and Firewpower 2100
+                Next Generation Firewalls include more modern and advanced filtering capabilities
+                Network firewalls filter traffic between networks
+                Host-based firewalls filter traffic entering and existing a host machine like a PC
+            Hosts
+                Machines that can host clients or servers
+            Servers
+                definition: a device that provides functions or services for clients
+            Clients
+                definition: a device that accesses a service made available by a server
+                examples: smartphone, laptop, desktop, pad, IoT device, etc aka end-points and end-hosts
+    Day 1 Anki Flashcards -- https://www.youtube.com/watch?v=6Atw8oMtVTA (14:55)
+        https://apps.ankiweb.net/ -- Anki download site
+    Day 1 Packet Tracer Intro -- https://www.youtube.com/watch?v=a1Im6GYaSno (15:18)
+        http://jitl.jp/packet-tracer -- to download packet tracer software
+    Day 2 Interfaces and Cables -- https://www.youtube.com/watch?v=ieTH5lVhNaY (35:51)
+        Ports are also known as Interfaces
+        RJ45 (Registered Jack) ports/interfaces used on the end of copper ethernet cables
+        Ethernet -- collection of network protocols and standards including physcial standards
+        IEEE 803.3 1983 is the Ethernet standard
+        Bit and bytes: a bit is a single value and can be one or zero. A byte is eight bits
+        Speed is measured in bits per second
+            10 Mbps is 100 m, 10BASE-T where BASE referest to Base band signalling, 4 wire
+            100 m is 100 m, 100BASE-T, 4 wire
+            1 Gbps is Gigabit Ethernet, 100 m, 1000BASE-T, 8 wire
+            10 Gps is 10 Gig Ethernet, 100 m, 10GBASE-T, 8 wire
+        Copper used in ethernet cables is UTP or Unshielded Twisted Pair
+        Twisted pair mitigages EMI or Electromagnetic Radiation Interference
+        Pins on 10BASE-T are full duplex allowing simultaneous transmission and receiving
+            Between a Switch and a PC:
+                1 Transmit on a switch and Receive on a PC
+                2 Transmit on a switch and Receive on a PC
+                3 Receive on a switch and Transmit on a PC
+                6 Receive on a switch and Transmit on a PC
+            Between a Router and a Switch:
+                1 Transmit on a router and Receive on a switch
+                2 Transmit on a router and Receive on a switch
+                3 Receive on a router and Transmit on a switch
+                6 Receive on a router and Transmit on a switch
+            Both these cables are 'straight through' cables connecting the same pin numbers at each end
+            A crossover cable reverses the PIN connections at either end
+                Pin 1 ... Pin 3
+                Pin 2 ... Pin 6
+                Pin 3 ... Pin 1
+                Pin 6 ... Pin 2
+            Equipment Pin Configurations
+                Router Tx 1, 2 and Rx 3, 6
+                Firewall Tx 1, 2 and Rx 3, 6
+                PC Tx 1, 2 and Rx 3, 6
+                Switch Tx 3, 6 and Rx 1, 2
+            Auto MDI-X is a new automatic logic to identify which Pins to Tx and Rx on
+            1000BASE-T and 10GBASE-T use 8 wires in pairs on Pins 3, 4 and 7, 8
+                Pins are also bi-directional
+        SFP (Small Form-Factor Pluggable) Transceiver connections are used by optical cables
+            Fiber Optic cables have one Tx and one Rx line and they are crossed-over
+            Single Mode
+                Narrow core
+                Laser-based transmitter
+                Up to 30 km range
+            Multi Mode
+                Wide core allows multiple modes or angles
+                Cheaper than single-mode
+                LED-based transmitter
+                Up to 550 m range
+        Fibre-Optic Standards
+            1000BASE-LX 802.3z, 1 Gbps, Multi or Single Mode, 550 m (MM), 5 km (SM
+            10GBASE-SR, 802.qe, 10 Gbps,  Multimode, 400 m
+            10GBASE-LR, 802.ae, 10 Gbps, Single mode, 10 km
+            10GBASE-ER, 802.ae, 10 Gbps, Sinle mode, 30 km
+        Comparison of UTP vs Fibre-Optic
+            UTP
+                low cost
+                Shorter distance (100 m)
+                Vulnerable to EMI
+                RJ45 ports are cheaper than SFP ports
+                Emit or leak EMI (security risk)
+            Fibre-Optic
+                High cost
+                Longer distance
+                No EMI interference
+                SFP ports are expensive (SM > MM)
+                No EMI leakage
+    Day 2 Connecting Devices (Lab) -- https://www.youtube.com/watch?v=K6Qt23sY68Y
+    Day 3 OSI Model & TCP/IP Suite -- https://www.youtube.com/watch?v=t-ai8JzhHuY (32:51)
+        Networking Protocol -- a set of logical rules defining how network devices and software should work together
+        TCP/IP Suite or TCP/IP
+        OSI Model -- Open Systems Interconnection Model, created by the 'Intrernational Organization for Standardization' in the late 1970's and early 80's
+        For transmission, each layer down from the application encapsulates additional information to the application data
+        For receiving, each layer up from the physical layer de-encapsulates the additional information from the application data
+        OSI Model Layers:
+            7 Application Layer (Unencapsulated)
+                 Closest to the end-user
+                 Interacts with user software applications
+                 Examples -- HTTP and HTTPS, DHCP
+                 Functions
+                     Identifying communication partners
+                     Synchronizing communication
+            6 Presentation (Unencapsulated)
+                Examples
+                    Encryption
+                Functions
+                    Translates data between application and network formats
+                    Translates between different application Layer formats
+            5 Session (Unencapsulated)
+                Functions
+                    Controls dialogs (sessions) between communicating hosts
+                    Establishes, manages and terminated connections between the local and remote applications
+            4 Transport ('Segment' Layer, adds L4 header)
+                Functions
+                    Adds a header to the data from the Session Layer (L4 header)
+                    Segments and reassembles data for communications between hosts
+                        ie. breaks large pieces of data into smaller segments for reliable transmission
+                    Provides host-to-host or end-to-end communication
+                    Creates a series of smaller 'Segments' of L4 Headers and data from the Session Layer
+                    Protocols: UDP
+            3 Network ('Packet' Layer, adds L3 header)
+                Functions
+                    Adds a header to each segment from the transport Layer (L3 header) to create a 'Packet'
+                    Provides connectivity between hosts on different networks (ie. outside of a LAN)
+                    Provides logical addressing (IP addresses)
+                    Provides path selection between source and destination
+                Routers operate at Layer 3
+            2 Data Link ('Frame' Layer, adds L2 Header and L2 Trailer)
+                Functions
+                    Adds a header and trailer to the packet (L2 Header and L2 Trailer)
+                    Provides node-to-node connectivity and data transfer (e.g. direct connection between PC to switch, switch to router, router to router)
+                    Defines how data is formatted for transmission over a physical medium (e.g. copper UTP cables)
+                    Detexts and (possibly) corrects Physical Layer errors
+                    Uses a separate Layer 2 addressing system from Layer 3 addressing
+                Switches operate at Layer 2
+            1 Physical
+                Functions
+                    Defines physical characteristics of the medium used to transfer data
+                    Includes: voltage levels, maximum transmission distances, physical connectors, cable specifications, etc
+                    Converts bits into digital signals or encoded radio waves
+            PDU's are Protocol Data Units: Data (L5, 6, 7), Segment (L4), Packet (L3), Frame (L2) and Bit (L1)
+            Same-layer interaction: interaction between the same layers on different hosts
+            Adjacent-layer interaction: interaction between adjacent layers on the same host
+        OSI Acronyms
+            All People Seem To Need Data Processing (APSTNDP)
+            Pleae Do Not Teach Students Pointless Acronyms (PDNTSPA)
+        OSI Layer Groups
+            5, 6, 7 -- Application developers use these layers, which creates the data to be sent over the network
+            1, 2, 3, 4 -- Network engineers manage these layers, which do the work of sending data over the network
+        TCP/IP Model
+            Developed by DARPA 'Defence Advanced Research Projects Agency'
+            Similar to OSI but with fewer layers
+            In use in modern networks
+            Layer 4 Application (OSI Layers 5, 6, 7)
+            Layer 3 Transport (OSI Layer 4)
+            Layer 2 Internet (OSI Layer 3)
+            Layer 1 Link (OSI Layers , 2)
+    Day 3 OSI Model (Lab) -- https://www.youtube.com/watch?v=7nmYoL0t2tU

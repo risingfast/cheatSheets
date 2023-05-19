@@ -1,0 +1,76 @@
+Docker Cheatsheet Notes
+
+References
+    https://www.youtube.com/watch?v=pg19Z8LL06w -- Docker Crash Course for Absolute Beginners [NEW], TechWorld with Nana
+    https://www.youtube.com/watch?v=3c-iBn73dDE -- Docker Tutorial for Beginners [FULL COURSE in 3 Hours]
+    https://docs.docker.com/desktop/install/windows-install/ -- Docker installation on Windows
+    https:/docs.docker.com
+    https://www.youtube.com/playlist?list=PLS1QulWo1RIatQmigBRBEY4HQaOXxj7G6 -- Docker Introduction Playlist, ProgrammingKnowledge
+    https://hub.docker.com/ -- docker hub container image library
+    https://docs.docker.com/desktop/install/windows-install/ -- Windows installation site
+
+Docker
+    Virtualization software
+    Creates an application image (corresponding runtime is the container)
+        applicaton code
+        libraries
+        dependencies
+        run-time configuration
+        environment variables
+        working directories
+    One image can run multple times in different containers
+    Platform for building, running and sharing container images ... e.g Wordpress, code, PHP, database, webserver containerized in a dockerfile
+    Docker runtime is the only requirement
+    Docker uses the underlying host kernal and not a copy of the operating system
+    Docker Build creates a container
+        FROM alpine:3.7
+        RUN apk add --o-cache pdftk
+        WORKDIR /home
+        ENTRYPOINT ["pdftk"]
+    Installation
+        Docker Desktop for Linux
+            sudo apt install docker.io
+            docker --version (e.g. 19.03.8)
+            sudo systemctl status docker -- get the current status of docker
+            sudo systemctl enable docker -- start an inactive docker service
+            sudo systemctl status docker -- check the new status of docker
+            sudo docker run hello-world -- to run the hello-world container
+            sudo docker images -- get a list of currently loaded images
+        Windows
+            https://docs.docker.com/desktop/install/windows-install/ -- to install the client and enable command line
+    Docker Commands
+        docker images -- lists currently available images
+        docker pull nginx:1.23 or nginx:latest or nginx -- optional since docker run will automatically pull the image if it is not local
+        docker run --volume ~/invoice:/home pdftk-container template.pdf fill_form data.fdf output invoice.pdf
+        docker run nginx:1.23 -- run is session mode (will lock up the terminal with active logging)
+        docker run -d nginx:1.23 -- run in detached or background mode
+        docker run -d -p 9000:80 nginx:1.23 --publish docker port 80 to localhost port 9000
+        docker run --name myapp -d -p 9000:80 nginx:1.23 --publish docker port 80 to localhost port 9000 and specify a name for the container
+        docker ps
+        docker start -- starts a local container using the container id from >docker ps
+        docker stop 11bd533639be -- stop a container using the container id >from docker ps
+        docker logs 11bd533639be -- container id obtained from >docker ps command
+        docker build ./ --tag pdftk-container
+    Docker Registry
+        Public registries
+            maintain a list of docker images including official images
+            docker hub -- the official docker registry (https://hub.docker.com)
+            tags -- image versions
+                 -- 'latest' is the tag for the most recent image (the default)
+            docker hub is the default public respository for any pulls
+        Private registries
+            maintained by many cloud services
+            available on docker hub with an account
+    Docker Repositories are containers within a docker registry that store different versions of the same software
+    Creating a Docker Image
+        First write a docker file called 'Dockerfile'
+        Start referencing a base image and layer additional images on top of the base
+        Dockerfile:
+            FROM node:19-alpine
+            COPY package.json /app/
+            COPY src /app/
+            WORKDIR /app
+            RUN npm install
+            CMF ["node", "server.js"]
+        Build the image
+            docker build -t myapp:1.0 . -- where . refers to the folder where Dockerfile is placed
