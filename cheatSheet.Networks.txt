@@ -33,18 +33,27 @@ Abbreviations
     ACI -- Application-Centric Infrastructure (Cisco)
     ARP -- Address Resolution Protocol -- finds MAC address corresponding to an IP address
     ATM -- Asynchronous Transfer Mode (WAN Topology)
+    BIA -- Burned In Address
     BGP -- Border Gateway Protocol
     BRI -- Basic Rate Interface
     CCNA -- Cisco Certified Network Associate
     CCNP -- Cisco Certified Network Professional
     CIDI -- Continuous Integration/Continuous Delivery
+    CIDR -- Classless Inter-Domain Routing
+    CSMA/CD -- Carrier Sense Multiple Access with Collision Detection
     DARPA -- Defence Advanced Research Projects Agency
     DHCP -- Dynamic Host Configuration Protocol
     DNS -- Domain Name System
+    DSCP -- Differentiated Services Code Point
+    ECN -- Explicit Congestion Notification
+    FCS -- Frame Check Sequence
     FTP -- File Transfer Protocol
     GDPR -- General Data Protection Regulation
     HTTP -- Hyper Text Tansfer Protocol
     IANA -- Internet Assigned Numbers Authority
+    ICMP -- Internet Control Message Protocol
+    IHL -- Internet Header Length
+    IETF -- Internet Engineering Task Force
     ISDN -- Integrated Serviced Digital Network, ciruit switched dial up connection
     ISP -- Internet Service Provider (e.g. AT&T, Spectrum, etc)
     MPLS -- Multip Protocol Label Switching (WAN topology)
@@ -53,6 +62,7 @@ Abbreviations
     OSI -- Open Systems Interconnection (Model) - 7 layer network model
     OSPF -- Open Shortest Path First (Layer 3 protocol)
     OSS -- Open Source Software
+    OUI -- Organizationally Unique Identifier
     PDU -- Protocol Data Unit (Data, Segment, Packet, Frame, Bit)
     PoE -- Power over Ethernet
     QoS -- Quality of Service, prioritize voice traffic ahead of data traffic, etc
@@ -63,6 +73,7 @@ Abbreviations
     TLS -- Transport Layer Security (successor to SSL)
     TTL -- Time To Live -- cached lifetime on a local host and resolver before refresh from DNS server is forced
     SD-WAN -- Software-Defined WAN
+    SFD -- Start Frame Delimiter
     SFP -- Small Formfactor Pluggable (for optical cable)
     SNMP -- Simple Network Management Protocol
     SSL -- Secure Sockets Layer (Netscape 1995)
@@ -372,7 +383,7 @@ CCNA Cisco Certfied Network Associate - Network Chuck
         Subnets can be created by extending the subnet mask into the host bits from left to right
         255.255.255.127 is the first subnet mask -- 2 subnets with 128 hosts in each subnet
     Jeremy's IT Lab Playlist -- https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ -- for CCNA 200-301 Exam Feb 2020
-    Day 1 Network Devices -- https://www.youtube.com/watch?v=H8W9oMNSuwo (30:20)
+    Day 01 Network Devices -- https://www.youtube.com/watch?v=H8W9oMNSuwo (30:26)
         Network Definition: a digital telecommunications network which allows nodes to share resources
         Network Nodes
             Switches
@@ -399,11 +410,11 @@ CCNA Cisco Certfied Network Associate - Network Chuck
             Clients
                 definition: a device that accesses a service made available by a server
                 examples: smartphone, laptop, desktop, pad, IoT device, etc aka end-points and end-hosts
-    Day 1 Anki Flashcards -- https://www.youtube.com/watch?v=6Atw8oMtVTA (14:55)
+    Day 01 Anki Flashcards -- https://www.youtube.com/watch?v=6Atw8oMtVTA (14:55)
         https://apps.ankiweb.net/ -- Anki download site
-    Day 1 Packet Tracer Intro -- https://www.youtube.com/watch?v=a1Im6GYaSno (15:18)
+    Day 01 Packet Tracer Intro -- https://www.youtube.com/watch?v=a1Im6GYaSno (15:18)
         http://jitl.jp/packet-tracer -- to download packet tracer software
-    Day 2 Interfaces and Cables -- https://www.youtube.com/watch?v=ieTH5lVhNaY (35:51)
+    Day 02 Interfaces and Cables -- https://www.youtube.com/watch?v=ieTH5lVhNaY (35:51)
         Ports are also known as Interfaces
         RJ45 (Registered Jack) ports/interfaces used on the end of copper ethernet cables
         Ethernet -- collection of network protocols and standards including physcial standards
@@ -470,8 +481,8 @@ CCNA Cisco Certfied Network Associate - Network Chuck
                 No EMI interference
                 SFP ports are expensive (SM > MM)
                 No EMI leakage
-    Day 2 Connecting Devices (Lab) -- https://www.youtube.com/watch?v=K6Qt23sY68Y
-    Day 3 OSI Model & TCP/IP Suite -- https://www.youtube.com/watch?v=t-ai8JzhHuY (32:51)
+    Day 02 Connecting Devices (Lab) -- https://www.youtube.com/watch?v=K6Qt23sY68Y (5:33)
+    Day 03 OSI Model & TCP/IP Suite -- https://www.youtube.com/watch?v=t-ai8JzhHuY (32:51)
         Networking Protocol -- a set of logical rules defining how network devices and software should work together
         TCP/IP Suite or TCP/IP
         OSI Model -- Open Systems Interconnection Model, created by the 'Intrernational Organization for Standardization' in the late 1970's and early 80's
@@ -540,4 +551,225 @@ CCNA Cisco Certfied Network Associate - Network Chuck
             Layer 3 Transport (OSI Layer 4)
             Layer 2 Internet (OSI Layer 3)
             Layer 1 Link (OSI Layers , 2)
-    Day 3 OSI Model (Lab) -- https://www.youtube.com/watch?v=7nmYoL0t2tU
+    Day 03 OSI Model (Lab) -- https://www.youtube.com/watch?v=7nmYoL0t2tU (8:05)
+    Day 04 Into to the CLI https://www.youtube.com/watch?v=IYbtahttps://www.youtube.com/watch?v=SDocmq1c05si7Nu2g (31:06)
+        Cisco IOS -- Cisco Operating System
+        CLI vs GUI -- Cisco support both interfaces but CLI is most often used
+        A laptop can be connected to the console port on a Cisco device: RJ45 or USB Mini-B
+        RJ45 connector uses RJ45 Rollover cable: RJ45 to Serial connection
+        Putty can be used once the connection is made, by choosing the 'Serial' connection
+        User Exec Mode (aka user mode) -- the default mode indicated by the > prompt
+        Router> -- user mode prompt
+        Modes
+            Router> -- user EXEC mode
+            Router# -- privileged EXEC mode, use >enable
+            Router(config)# -- global configuration mode, use #configure terminal
+        >enable or en or en <tab> -- command to switch to privileged exec mode, allows viewing the router configuration and restarting the device. Cannot change configuration
+        Router# -- privileged exec mode pompt
+        ? -- command to list available commmands in the current mode
+        e? -- command to list available commands starting with 'e'
+        #configure terminal (conf t) -- command to enter configration mode
+        #enable password <pwd> -- encrypts password for privileged EXEC mode, but not secure
+        #enable secret <pwd> -- encrypts passord for privileged EXEC mode, securely using MD5 encryption
+        #exit -- leave privileged exec mode
+        #do <cmd> -- run secure commands in a non-secure mode
+        #no <command> disables command in future use (remove a configured command)
+        >exit -- leave user exec mode
+        Configuration Files
+            running-config -- active configuration
+            startup-conig -- initial configuration
+            #show Running-config -- to list the contents of running-config
+            #write -- save the current running-config
+            #write memory -- save the currenr running-config
+            #copy runnig-config startup-config -- save the current running config
+            #service password-encryption -- encrypts all passwords in the config file with type 7 encryption (publicly crackable and unsecure)
+    Day 04 Basic Device Security (Lab) https://www.youtube.com/watch?v=SDocmq1c05s (10:26)
+    Day 05 Ethernet LAN Switching (Part 1) https://www.youtube.com/watch?v=u2n762WG0Vo (38:13)
+        Switches operate at Layer 2 Data Link
+        A LAN is  network in a small area like a home or office
+        Routers connect different LANs
+        One LAN can have multiple switches
+        The PDU for a LAN is a 'Frame'
+        Frame Header (5 fields, 22 bytes)
+            Preamble -- 7 bytes (56 bits) long 10101010 repeated 7 times, allows devices ot synchronize their receiver clocks
+            SFD -- Start Frame Delimiter, 1 byte, 10101011, indicates the end of the preamble and beginning of the rest of the frame
+            Destination -- Layer 2 frame destination device address, MAC address, 6 bytes (48 bits)
+            Source -- Layer 2 device that send the frame, MCA address, 6 buytes (48 bits)
+            Type (or length) -- the Layer 3 protocol of the encapsulated packet (almost always IPv4 or IPv6), 2 bytes (16 bits), length if < 1500, > 1536 indicates type
+                 0x0800 (hex) 2048 (dec) IPv4
+                 0x86DD (hex) 34525 (dec) IPv6
+        Frame Trailer (4 bytes)
+            FCS -- Frame Check Sequence, used by the receiving device to detect transmisson errors in the frame
+                4 bytes (32 bits) supports CRC algorithm
+        MAC Address (Media Access Control) -- 6 byte address (48 bits) assigned when a device is manufactured
+        BIA Burned In Address (aka MAC addess)
+        Globally unique
+        Comprises:
+            OUI -- Organizationally Unique Identifier, 3 bytes
+            Device identifier -- unique to the device, 3 bytes
+            Example: E8BA.7011.2874, DA80.832E.7E75
+        Unicast Frame: a frame destined for a single target with a single destination MAC address
+        Dynamic MAC Addess -- Dynamically learned MAC address, a MAC address assigned to a receiving port number on a switch and saved on a MAC address table
+        Unknown Unicast Frame -- a frame where the destination MAC address is not on the MAC address table
+        Flooding -- a broadcast by the switch to all ports/interfaces to learn a missing MAC address
+            The frame is sent to all interfaces except the interface it was received on
+            All devices with non-matching MAC addresses ignore the Flood
+            The correct MAC address port/interface is learned when the matching MAC device responds
+        Known Unicast Frame -- a frame where the destination MCA addres is on the MAC address table
+        MAC addresses are removed from the MAC address table after a pre-defined period (5 mins for Cisco) Aging
+    Day 06 Ethernet LAN Switching (Part 2) https://www.youtube.com/watch?v=5q1pqdmdPjo (33:41)
+        Ethernet Frame Header (segments considered part of the header) (14 bytes)
+            Destination (6 bytes)
+            Source (6 bytes)
+            Type (2 bytes)
+        Ethernet Frame Trailer
+            FCS (4 bytes(
+        Minimum Size of an Ethernet Frame is 64 bytes (excluding the preamble and SFD)
+        Minimu payload = 46 bytes (64 - 14 - 4)
+        Padding is added to reach the minimum using bit 0's
+        ARP -- Address Resolution Address, used to discover the Level 2 address for a known Level 3 address
+            ARP Request -- sent as a broadcast frame, includes FFFF.FFFF.FFFF destination MAC address
+            ARP Reply -- a unicast response to the requesting host
+        ARP Table -- stores MAC and IP address mappings
+        arp -a -- show the local ARP table (Windows, Mac, Linux)
+            Internet Address -- Internet Protocol Address
+            Physical Address -- MAC Address
+            Type
+                Static -- preloaded as a default entry
+                Dynamic -- learned via ARP request and reply
+        ping -- measures round trip time to a reachable host
+            ICMP Echo Request
+            ICMP Echo Reply
+        show mac address=table -- Cisco CLI command to show the MAC Address Table
+        clear mac address-table dynamic == clears dynamic entries in the MAC Address table
+        clear mac address-table dynamic address <mac-address> -- removes a single entry from the MAC Address table on a Cisco switch
+        clear mac address-table dynamic interface <Port Entry> -- removes a single entry from the MAC Address table on a Cisco switch using the port number e.g. GiO/2
+    Day 06 Analyzing Ethernet Switching (Lab) https://www.youtube.com/watch?v=Ig0dSaOQDI8 (10:29)
+    Day 07 IPv4 Addressing (Part 1) https://www.youtube.com/watch?v=3ROdsfEUuhs (40:11)
+        Switches expand LAN's but do not create new networks
+        All hosts within a LAN are 192.168.1.0/24
+        IP addresses are 4 segment addresses of 1 byte each, separated by periods or dots (aka dotted decimal)
+        Network Classes
+             A 0xxxxxxx    0-127  /8 -- 127 is reserved for loopback addresses
+             B 10xxxxxx  128-191  /16
+             C 110xxxxx  192-223  /24
+             D 1110xxxx  224-239 -- multicast addresses
+             E 1111xxxx  240-255 -- reserved for experimental uses
+        Network Address
+            192.168.1.0 -- network addess is the first address of the network and cannaot be assigned to a host (host portion is 000)
+            192.168.1.254 -- broadcast address corresponds to MAC address FFFF.FFFF.FFFF
+    Day 08 IPv4 Addressing (Part 2) https://www.youtube.com/watch?v=FiAatRd84XI (30:35)
+        Max no. of hosts on a network
+            Class A 2^8 - 2
+            Class B 2^16 - 2
+            Class C 2^24 - 2
+            #show ip interface brief -- command on CLI to show the layer 1 and layer 2 status of interfaces
+            #interface igigabitethernet 0/0 -- to enter interface configure mode in CLI for a single interface
+            #int g0/0 -- shorthand to enter interface configuration mode in CLI
+            #ip address 10.255.255.254 255.0.0.0 -- configure the current interface to this IP address
+            #no shutdown -- cancel adminisrative shutdown on the interface
+            show interfaces g0/0 -- CLI to show the status of a single interface
+            show interfaces descripttion -- CLI to show optional descriptions on interfaces
+            #desc ## to SW2 ## -- CLI to add a description to an interface
+    Day 08 Configuring IP Addresses (Lab) https://www.youtube.com/watch?v=e1jbvyMeS5I (10:03)
+    Day 09 Switch Interfaces https://www.youtube.com/watch?v=cCqluocfQe0 (32:17)
+        Speed -- bits per second
+            a-100 -- 100 mbps auto-negotiated
+            100 -- 100 mbps set manually
+            auto -- capable of negotiating with a device when connected to set speed
+        Duplex -- ability to receive and send simultaneously
+            full -- capable and set manualy
+            a-full -- capable and auto-negotiated
+            half - not capable
+            auto - capable of negotiating with a device when connected to set duplex
+        Half duplex is not broadly used anymore.
+        Switch interfaces are in the up/up state by default for level 1 and level 2 if they are connected to another device
+        Switch interfaces are in the down/down state by default for level 1 and level 2 if they are not physically connected to another device
+        #show interfaces status
+        #speed -- set the speed manually
+        #duplex -- set the duplex value manually
+        interface status can be set in ranges
+        #interface range f0/5 - 12 followed by the appliable command
+            #description ## not in use ##
+            #shutdown
+        #interface range f05 - 6, f0/9 - 12 -- to set the status on non-continuous ranges in one command
+        CSMA/CD -- Carrier Sense Multiple Access with Collision Detection
+            used by hubs which operate half duplex
+        Switches operate at full duplex
+        Speed/Duplex Autonegotiation
+            Interfaces 'advertise' their capabilities and negotiate a common speed and duplex setting with a connected device
+            E - 10
+            F - 10/100
+            G - 10/100/1000
+            Autonegotiation may be disabled on a device
+                A switch will use the lowest speed by default
+                A switch will use half duplex if the speed is set to 10/100
+                A switch will use full duplex if the speed is set to 1000 or greater
+        #show interfaces -- in the CLI to see error counts
+            runts -- frames smaller than 64 bytes (Ethernet min)
+            giants -- frames larger than 1518 bytes (Ethernet max)
+            CRC -- frames failing the CRC check in the FCS segment
+            frame -- counter of frames with invalid format
+    Day 10 IPv4 Header https://www.youtube.com/watch?v=aQB22y4liXA (30:10)
+        IPv4 -- Internet Protocol version 4 is a layer 3 protocol
+        It routes data between devices on separate networks (aka routing)
+        Layer 3 PDU is a packet containing an L4 and L3 header
+        Header Fields
+            Version -- 4 bits 4 (0100) or 6 (0110)
+            IHL -- Internet Header Length, 4 bits, in 4-byte increments, min 5 (or 20 bytes, so Options field is empty), max 15 (60 bytes)
+            DSCP -- Differentiated Services Code Point, 6 bits, used for QoS or Quality of Service
+            ECN -- Explicit Congestion Notification, 2 bits, identifies a congested line between two end-points
+            Total Length -- 16 bits, gives the length of the packet (L3 header and L4 segment) in bytes, min 20 bytes, max 65,535 bytes
+            Identification -- 16 bits, on fragments to identify the related packet
+            Flags -- 3 bits, Bit 0: reserved and 0, Bit 1: Don't Fragment (DF bit), used to indicate if a packet should not be fragmented, Bit 2: More Fragments bit (set to 1 if there are more fragments, otherwise 0)
+            Fragment Offset -- 13 bits, indicates the position of this fragment within the packet of fragments
+            Time to Live or TTL -- 8 bits, a router will drop a packet with TTL 0, used to prevent infinite loops, a hop count (default 64, max 255) and decremented by each router in the packet voyage
+            Protocol -- protocol of the encapsulated L4PDU: TCP is 6, UDP is 17, ICMP is 1, OSPF is 89
+            Header CheckSum -- a calculated checksum of the IPv4 header
+            Source IP Address -- 32 bits, the sender of the packet
+            Destination IP Address -- 32 bits, the intended receiver
+            Options -- 0 to 320 bits, frequently empty
+    Day 11 (Part 1) Routing Fundamentals https://www.youtube.com/watch?v=aHwAm8GYbn8 (30:59)
+            Routing is the identification of a path IP packets take over a network to reach a destination
+            Routers store routes to known destinations in a routing table
+            Routing methods: 
+                Dynamic Routing: using OSPF to share routing information and automatically build routing tables
+                Static Routing: done manually
+                A route identifies the next hop (router) address for a final address
+                A route identifies the destination if the node is connected directly to the router
+                A route may be the router IP itself, which is not forwarded
+            #show ip route -- show the routing table on a router
+                One connnected and one local route is configured when a port is assigned an IP address
+                A connected route is a route to the network the interface is connected to: eg. 192.168.1.1/24 and provides a route to all hosts in that network
+                A local route is a route to the exact IP address configured on the interface: eg. 192.168.1.1/32
+                A router will choose the most specific matching route which is the route with the longest prefix length (or netmask length)
+            Routers do not flood packets with no matchig route. The packet is dropped if a matching route cannot be found
+    Day 11 (Part 2) Static Routing https://www.youtube.com/watch?v=YCv4-_sMvYE (37:43)
+        Static routes are manually configured
+        Default Gateway (aka Router) is the address where packets are sent if they are destined outside the LAN
+        The Default Route is the address of the Default Gateway (aka Router) and is 0.0.0.0/0 and is the least specific route
+        #ip route 192.168.4.0 255.255.255.0 192.168.13.3 -- define a static route final destination and next hop
+        Static routes are configured with two-way reachability with forward and reverse routes configured
+        Exit interface routing specifies the port or interface name to foreward packets
+            #ip rout 192.168.1.0 255.255.255.0 g0/0 -- specify the next hop interface
+            #ip rout 192.168.4.0 255.255.255.0 g0/1 192.168.24.4 -- specify the next hop IP and interface
+        A default route is a route to 0.0.0.0/0 and includes every possible IP address
+        A default rout is often used to direct traffic to the internet
+        #show ip route -> "Gateway of last resort is not set" in the CLI means no default gateway route had been set
+        #ip route 0.0.0.0 0.0.0.0 203.0.113.2 -- configures the default route and the netmask must be specified as 0.0.0.0
+    Day 11 Configuring Static Routes (Lab) https://www.youtube.com/watch?v=XHxOtIav2k8 (12:28)
+    Day 12 Life of a Packet https://www.youtube.com/watch?v=4YrYV2io3as (20:12)
+        Each interface has a separate MAC address on a device -- MAC addresses are assigned to interfaces
+    Day 12 Life or a Packet (Lab) https://www.youtube.com/watch?v=bfsEqDeHbpI (15:36)
+    Day 13 Subnetting (Part 1) https://www.youtube.com/watch?v=bQ8sdpGQu8c (28:54)
+        Subnetting class C networks
+        CIFR -- Classless Inter-Domain Routing
+        IANA -- Internet Assigned Numbers Authority -- assignes networks to companies based on their size
+        the IETF -- Internet Engineering Task Force introduced CIDR in 1993 to replace 'classful' addressing (i.e. classes A - E)
+        The /8, /16 and /24 requirements of Classful networking were removed to allow for subnets
+        /31 masks allow 2 host addresses which can only be used for point to point routes
+        /32 masks only allow one address which is the network address
+        CIDR notation is /XX trailing the IP network address
+    Day 14 Subnetting (Part 2) https://www.youtube.com/watch?v=IGhd-0di0Qo (24:46)
+        subnetting class B networks
+    Day 15 Subnitting (Part 3) https://www.youtube.com/watch?v=z-JqCedc9EI (23:52)

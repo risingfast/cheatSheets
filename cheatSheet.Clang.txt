@@ -1362,16 +1362,20 @@ Abstract Data Structures or Types
             A tree with N nodes has n-1 edges
             Depth is a count of edges
             Height of a node is the longest descendent depth to a leaf
-         Tree Traversal
-            Preorder
-            Inorder
-            Postorder
+        Tree Traversal
+            Bread-First -- uses a queue to enque the children of each node then enque the children of each queued node, and continue until the queue is empty
+            Depth-First -- named according to order of reading the root node
+                Preorder: root, left rigth
+                Inorder: left, root, right -- gives a sorted list
+                Postorder: lest, right, root
         Balanced Tree -- height of any left subtree is no more than the height of any right subtree plus/minus one
         Binary Tree -- each node has no more than two children
             -- most common type of a tree
         Binary Search Tree - sorted binary tree
-            Values in any left subtree is less than the value in its root
+            Values in any left subtree is less than (or equal to) the value in its root
             Values in any right subtree is greater than the value in its root
+            Can be balanced or unbalanced
+            an empty tree has a root pointer of NULL
         Generic Tree -- can have any number of child nodes under each parent node
         AVL Trees -- trees that are balanced through rotations
     Applications of Trees
