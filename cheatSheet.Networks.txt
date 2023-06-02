@@ -17,17 +17,30 @@ References
         https://www.youtube.com/watch?v=H8W9oMNSuwo -- Free CCNA | Network Devices | Day 1 | CCNA 200-301 Complete Course
         https://www.youtube.com/watch?v=6Atw8oMtVTA -- Free CCNA | Anki Flashcards | Day 1 Extra | CCNA 200-301 Complete Course
     https://www.flackbox.com/cisco-ccna-gold-bootcamp-course -- $99 course for CCNA
+    https://subnettingpractice.com/
+    http://subnetting.org/
+    http://www.subnettingquestions.com/
+    https://www.youtube.com/playlist?list=PLF1hDMPPRqGxpYdo0ctaa7MxfOi9vjs1u -- CertBros CCNA 200-301 Course
 
 Downloads
     https://www.computernetworkingnotes.com/ccna-study-guide/download-packet-tracer-for-windows-and-linux.html -- Cisco Packet Tracer
 
 Network Configuration at Home
-   Permanent IP Address 76.184.87.205 -- Risingfast on Spectrum
-   Router: 192.168.0.1, use admin/Mpa4egu9
-   Reservations: Advanced > Setup > LAN Setup
-   Ubuntu Dell Latitude MAC 00:26:b9:c1:66 :83
-   Ubuntu Nav: Settings > Network > Settings icon
-   Ubuntu Reservation: 192.168.0.11
+    Permanent IP Address 76.184.87.205 -- Risingfast on Spectrum
+    Router: 192.168.0.1, use admin/Mpa4egu9
+    Reservations: Advanced > Setup > LAN Setup
+    Ubuntu Dell Latitude MAC 00:26:b9:c1:66 :83
+    Ubuntu Nav: Settings > Network > Settings icon
+    Ubuntu Reservation: 192.168.0.11
+
+Commands
+    ipconfig -- default command to see network IP address and gateway for each connection
+    ipconfig /all -- windows TCP/IP configuration -- shows MAC address
+    ipconfig /displaydns -- display the localhost DNS resolver cache
+    ipconfig /flushdns -- clears the local DNS resolver cache
+    netstat -n -- show network connections and port numbers
+    nslookup youtube.com -- find the IP address for a domain
+    ping <hostname> -n 1 -- ping a hostname one time only
 
 Abbreviations
     ACI -- Application-Centric Infrastructure (Cisco)
@@ -47,18 +60,21 @@ Abbreviations
     DSCP -- Differentiated Services Code Point
     ECN -- Explicit Congestion Notification
     FCS -- Frame Check Sequence
-    FTP -- File Transfer Protocol
+    FLSM -- Fixed Lengt Subnet Masks
+    FTP -- File Transfer Protocol (Layer 4 'Transport' Port 21)
     GDPR -- General Data Protection Regulation
-    HTTP -- Hyper Text Tansfer Protocol
-    IANA -- Internet Assigned Numbers Authority
+    HTTP -- Hyper Text Tansfer Protocol (Layer 4 'Transport' Port 80)
+    IANA -- Internet Assigned Numbers Authority (Assignes Level 4 'Transport' port numbers)
     ICMP -- Internet Control Message Protocol
-    IHL -- Internet Header Length
     IETF -- Internet Engineering Task Force
+    IHL -- Internet Header Length
+    IOS -- Internetwork Operating System (eg. Cisco IOS)
     ISDN -- Integrated Serviced Digital Network, ciruit switched dial up connection
     ISP -- Internet Service Provider (e.g. AT&T, Spectrum, etc)
     MPLS -- Multip Protocol Label Switching (WAN topology)
     MAC Address -- Media Access Control Address -- unique address assigned to a NIC
     NIC -- Network Interface Controller or Card
+    NSLookup -- Name Server Lookup
     OSI -- Open Systems Interconnection (Model) - 7 layer network model
     OSPF -- Open Shortest Path First (Layer 3 protocol)
     OSS -- Open Source Software
@@ -67,11 +83,7 @@ Abbreviations
     PoE -- Power over Ethernet
     QoS -- Quality of Service, prioritize voice traffic ahead of data traffic, etc
     RARP -- Reverse ARP
-    TCP -- Transport  Control Protocol, transport layer protocol, packets data and guarantees receipt in the correct order, slower than UDP
-    TFTP -- Trivial File Transfer Protocol
-    TLD -- Top Level Domain
-    TLS -- Transport Layer Security (successor to SSL)
-    TTL -- Time To Live -- cached lifetime on a local host and resolver before refresh from DNS server is forced
+    ROAS -- Router on a Stick
     SD-WAN -- Software-Defined WAN
     SFD -- Start Frame Delimiter
     SFP -- Small Formfactor Pluggable (for optical cable)
@@ -79,9 +91,12 @@ Abbreviations
     SSL -- Secure Sockets Layer (Netscape 1995)
     STP -- Shielded Twisted Pair (ethernet cable)
     STP -- Spanning Tree Protocol (layer 2 protocol)
+    SVI -- Switch Virtual Interfaces are virtual interfaces you can assign IP addresses to, in a multi-layer switch
+    TCP -- Transmisson Control Protocol
     UDP -- User Datagram Protocol, not as reliable as TCP but faster
     UTP -- Unshielded Twisted Pair (ethernet cable)
-    VLAN -- Virtual Local Area Netowrk
+    VLAN -- Virtual Local Area Network
+    VLSM Variable Length Subnet Masks
     VPC -- Virtual Private Cloud (software defined network)
     VPS -- virtual Private Server (e.g. Linode, DigitalOcean, Vultr)
     WAN -- Wide Area Network
@@ -553,7 +568,7 @@ CCNA Cisco Certfied Network Associate - Network Chuck
             Layer 1 Link (OSI Layers , 2)
     Day 03 OSI Model (Lab) -- https://www.youtube.com/watch?v=7nmYoL0t2tU (8:05)
     Day 04 Into to the CLI https://www.youtube.com/watch?v=IYbtahttps://www.youtube.com/watch?v=SDocmq1c05si7Nu2g (31:06)
-        Cisco IOS -- Cisco Operating System
+        Cisco IOS -- Cisco Internetwork Operating System
         CLI vs GUI -- Cisco support both interfaces but CLI is most often used
         A laptop can be connected to the console port on a Cisco device: RJ45 or USB Mini-B
         RJ45 connector uses RJ45 Rollover cable: RJ45 to Serial connection
@@ -773,3 +788,201 @@ CCNA Cisco Certfied Network Associate - Network Chuck
     Day 14 Subnetting (Part 2) https://www.youtube.com/watch?v=IGhd-0di0Qo (24:46)
         subnetting class B networks
     Day 15 Subnitting (Part 3) https://www.youtube.com/watch?v=z-JqCedc9EI (23:52)
+        FLSM -- Fixed Lengt Subnet Masks
+        VLSM Variable Length Subnet Masks
+        VLSM creates subnets of different sizes within a network
+        VLSM Steps
+            1. Assign the largest subnet at the start of the address space
+            2. Assign the second largest after that
+            3. Repeat until all subnets are assigned
+        Subnetting practice references
+            https://subnettingpractice.com/
+            http://subnetting.org/
+            http://www.subnettingquestions.com/
+    Day 15 Subnetting (Lab) https://www.youtube.com/watch?v=Rn_E1Qv8--I
+    Day 16 VLANs (Part 1) https://www.youtube.com/watch?v=cjFzOnm6u1g
+        VLAN -- Virtual Local Area Networks
+        A LAN is a single broadcast domain which receives a broadcast frame (MAC FFFF.FFFF.FFFF.FFFF) sent by any member
+        VLANs are configured on a switch to limit broadcast frames to specific ports and prevent flooding across subnetted LAN's
+        A switch will not forward traffic between VLANs, including broadcase/unknown unicast traffic
+        A switch will not route traffic between hosts in different VLANs. The traffic must go through a router
+        VLANs are configured on switches on a per-interface basis
+        VLANs logically separate end-hosts at Layer 2
+        #show vlan brief -- to show VLAN's on a switch CLI
+        VLANs 1 and 1002, 1003, 1004 and 1005 are configured by default and cannot be deleted
+        An access port is a switchport belonging to a single VLAN
+        A trunk port is a port assigned to more than one VLAN
+        #interface range g1/0 - 3 -- edit interfaces in a range
+        #switchport mode access -- set the curent range of interfaces as access ports
+        #switchport access vlan 10 -- assign the access ports to a vlan
+        #vlan 10 -- to edit the settings in vlan10
+        #name ENGINEERING -- rename the current vlan
+    Day 16 VLANs (Lab) https://www.youtube.com/watch?v=-tq7f3xtyLQ
+    Day 17 VLANs (Part 2) https://www.youtube.com/watch?v=Jl9OOzNaBDU (40:48)a
+        Trunk Ports -- use VLAN tagging to identify traffic for each VLAN sharing a trunk interface
+        Trunk ports are also known as tagged ports due to tagging
+        Access pprts are untagged ports
+        Trunking Protocols
+            ISL (Inter-Switch Link) -- an older CISCO protocol
+            IEEE 802.1Q. or dot1q -- a newer IEEE industry standard protocol
+        802.1Q Encapsulation -- inserts a 4 byte tag between the Source and Type/Length fields in a frame (ethernet header)
+            TPID Tag -- Protocol Identifier 16 bits 0x8100
+            TCI -- Tag Control Information: 3 subfields: PCP (3 bit), DEI (1 bit) and VID (12 bits)
+               PCP -- Priority Code POint indicate Cos (Class of Service) in congested networks
+               DEI -- Drop Eligible Indicator indicates if the frame can be dropped in a congested network
+               VID -- VLAN ID identifies the VLAN that the frame belongs to and allows 2^12 or 4096 VLANS, 1 - 1094 allowed
+        Normal VLAN's (VID range 1 - 1005)
+        Extended VLAN's (VID range 1--6 - 4094) -- not supported by older switches
+        The Native VLAN is 1 by default and an 802.1q tag is not added for native VLAN traffic
+        ROAS -- Router on a Stick -- is like a trunk port or a router
+        VNA Configuration via CLI
+        #nterface g0/0 -- to enter interface configuration
+        #switchport trunk encapsulation dot1q == set the trunk interface encapsulation protocol
+        #switchport mode trunk -- to set the interface as trunk
+        #show interfaces trunk -- to show the status of trunk interfaces
+        #switchport trunk allowed vlan 10, 30 -- set the allowed VLAN's on a new trunk port and exclude other VLANs
+        #switchport trunk allowed vlan add 20 -- add another vlan to an existing trunk
+        #switchport trunk allowed vlan remove 20 -- removes vlan20 from a trunk port
+        #switchport trunk allowed vlan all -- allow all vlans on the trunk port
+        #switchport trunk allowed vlan except 1-5,20 -- allow all except the listed VLANs on a trunk port
+        #switchport trunk allowed vlan none -- blocks all VLAN traffic on a trunk port
+        #switchport trunk native vlan 1001 -- assign the native vlan to an unused VLAN number
+    Day 17 VLANs (Lab) https://www.youtube.com/watch?v=iRkFE_lpYgc
+    Day 18 VLANs (Part 3) https://www.youtube.com/watch?v=OkPB028l2eE (32:31)
+        Layer 3 Switch or Multi-Layer Switch
+            Capable of switching and routing
+            Layer 3 aware
+            You can create virtual interfaces for each VLAN and assign IP addresses to those interfaces
+            You can configure routes on the switch, just like a router
+            It can be used for inter-VLAN routing
+        SVI - Switch Virtual Interfaces are virtual interfaces you can assign IP addresses to, in a multi-layer switch
+        Configure each PC to use the SVI (and not the router) as their gateway address
+    Day 18 VLANs (Lab) https://www.youtube.com/watch?v=MQcCr3QW1vE (25:18)
+    Day 19 DTP and VTP https://www.youtube.com/watch?v=JtQV_0Sjszg (37:34)
+        DTP -- Dynamic Trunking Protocol, Cisco proprietary protocol which allows switches to negotiate the status of their switchports to be access or trunk, without manual configurationa
+        #switchport mode dynamic ? -- auto or desirable
+        VTP -- Virtual Trunking Protocol, Cisco proprietary protocol which allows VLAN configuration on a central switch to act as a server for other switches to synchronize toa
+    Day 19 DTP and VTP (Lab) https://www.youtube.com/watch?v=ngTns2vF_44
+    Day 20 STP https://www.youtube.com/watch?v=j-bK-EFt9cY (38:39)
+        STP -- Spanning Tree Protocol
+        RST -- Rapid Spanning Tree is an updated version of STP
+        Redundancy in Networks is an essential part of network design, to avoid downtime
+        Most PC's have only one interface and can only be plugged into a single switch
+        Important servers have multiple NIC's so thay can be plugged into multiple switches for redundance
+        Spanning Tree enables network redundancy
+        Broadcast Storms -- are caused by redundant switch ports rebroadcasting frames indefinitely with no TTL limit at Layer 2
+        MAC Address Flapping -- continuous updating of the MAC address table on a switch due to a frame with the same MAC address arriving on a different switch interface
+        Spanning Tree is a Layer 2 protocol that resolves broadcast storms and MAC address Flapping on redundant networks
+        Classic STP is IEEE 802.1D
+        Switches from all vendors run STP by default and it does not need to be enabled explicitly
+        STP places redundant ports in blocking state, essentially disabling the interface
+        These blocked interfaces act as backup which can enter a forwarding state if an active intterface fails
+    Day 20 STP (Lab) https://www.youtube.com/watch?v=Ev9gy7B5hx0
+    Day 30 TCP & UDP https://www.youtube.com/watch?v=LIEACBqlntY
+        Layer 4 Protocols -- Transport Layer, provides transparent transfer of data between hosts
+            Provides transparent transer of data 'segments' between hosts
+            Provides services to applications (TCP only, not used by UDP)
+               reliable data transfer (i.e. all data received)
+               error recovery (resend corrupted data)
+               data sequencing to reorder data received out of sequence
+               flow control to make sure the data source does not overrun the destination with too much data at once
+            Provides ports (Layer 4 addressing)
+            Identify Application Layer protocol
+            Provides session multiplexing
+        The destination port identifies the Application Layer Protocol (e.g. Port 80 is HTTP)
+        The source port identifies the sessio on the client machine for routing responses from the server
+        A client will use multple different source ports for sessions with one or more servers
+        Port numbers are managed by IANA (Internet Assigned Numbers Agency)
+            0 - 1023 system or 'Well-known' port numbers
+            1024 - 49151 User or Registered port numbers
+            49152 - 65535 Ephemeral ports (aka private or dynamic ports) -- used as source port numbers to identify sessions with servers
+        TCP -- Transmission Control Protocol
+        UDP -- User Datagram Protocol -- a simpler protocol than TCP
+        TCP is a connection-oriented protocol -- before sending data, a connection is established between the hosts
+        TCP provides reliable communication -- the TCP host must acknowledge that it received each TCP segment -- if no acknowledgement is received the packet is resent
+        TCP provides sequencing -- the sequence number in the TCP header allows the destination host to order packets received out of order
+        TCP provides flow control -- the destination host can tell the source to increase or decrease the rate that data is sent
+        TCP header -- 24 bytes
+            Source Port -- 2 bytes, 2^16 or 65,536 bits
+            Destination Port -- 2 bytes or 65,536 bits
+            Sequence No -- 2 bytes or 4,294,967,296 bits
+            Acknowledgement No -- 4 bytes or  2,294,967,296 bits
+            ACK flag -- 1 bit -- Acknowledgement
+            SYN flag -- 1 bit -- Synchronization
+            FIN flag -- 1 bit -- Finish ore terminate connection
+            Window Size -- 2 bytes (65,536 bits) -- used for flow control and adjusting the rate of transmission
+        TCP Handshake to connect: 3-Way Handshake' -- SYN, SYN-ACK, ACK
+        TCP Handshake to terminate: 4-Way Handshake -- FIN, ACK, FIN, ACK
+        UDP is not connection oriented
+        UDP does not provide reliable communication -- acknowledgements are not sent
+        UDP does not provide sequencing
+        UDP does not provide flow control
+        UDP Header -- 8 bytes
+            Source Port -- 2 bytes
+            Destination Port -- 2 bytes
+            Length - 2 bytes
+            checksum -- 2 bytes
+        TCP vs UDP
+            TCP provides more features and entails greater overhead
+            TCP is preferred for reliable communications
+            UDP is preferred for real-time voice and video
+            TFTP is an application that uses UDP but has reliability built into the application
+            Some applications use both protocols: DNS is an example
+        Protocols and Ports
+            TCP: FTP data (20), FTP control (21), SSH (22), Telnet (23), SMTP (25), HTTP (80), POP3 (110), HTTPS (443)
+            UDP: DHCP server (67), DHCP client (68), TFTP (69), SNMP agent (161), SNMP manager (162), Syslog (514)
+            TCP & UDP: DNS (53)
+    Day 30 TCP & UDP Wireshark (Lab) https://www.youtube.com/watch?v=pJKFahkqMU8 (11:14)
+    Day 31 IPv6 Part 1 https://www.youtube.com/watch?v=ZNuXyOXae5U (39:26)
+        IPv5 is version 5 taken by the Internet Stream Protocol from the late 1970's
+        The successor to IPv4 was named IPv6 to avoid confusion with the never-implemented IPv5
+        Version = 4 in the Layer 3 packet header indicates IPv4 and Verson = 6 indicates IPv6
+        0b -- binary prefix
+        0d -- decimal prefix
+        0x -- hexadecimal prefix
+        IPv6 is needed to address running out if IP addresses with IPv4 which as 2^32 addresses
+        IPv4 addresses are controlled by IANA (Internet Assigned Numbers Authority)
+        IANA distribute IPv4 address space to various RIR's (Regional Internet Registries) which assign them to companies as needed
+        RIR's are 
+            ARFINIC -- Africa
+            APNIC -- Asia Pacific and Australia
+            ARIN -- US and Canada
+            LACNIC -- Latin America and Mexico
+            RIPE NCC -- Europe, Russia and the Middle East
+            IPv6 is 128 bits which is 4 times the length of IPv4 which is 32 bits
+            IPv6 are written in hexadecimal and not dotted decimal like IPv4
+            IPv6 are written /64 dividing the address into equal parts for network and host portions
+            IPv6 address shortening includes:
+                remove leading zeroes from each quartet
+                relace consecutive quartets of all zeros with '::' but only once in any address
+                remove leading zeroes in all zero quartets
+        #ipv6 unicast-routing -- allows the router to perform IPv6 routing
+        #int g0/0 -- select the g0/0 interface/port for configuration
+        #ipv5 address 2001:db8:0:0::1/64 -- assign an IPv6 addess to the interface/port
+        #no shutdown -- to enable the interface/port
+        #show ipv6 interface brief
+    Day 32 IPv6 Part 2 https://www.youtube.com/watch?v=BrTMMOXFhDU (39:33)
+    Day 38 DNS https://www.youtube.com/watch?v=4C6eeQes4cs (30:11)
+        DNS -- Domain Name System
+        Converts domain names to IP addresses
+        Hosts do not use domain names ... they use IP addresses
+        DNS servers are queried for mappings and DNS servers can be manually configured or learned via DHCP
+        USe nslookup <domain name> to get an IP address manually
+        DNS 'A' records are IPv4
+        DNS 'AAAA' records are IPv6
+        DNS queries use UDP, except for messages over 512 bytes which use TCP
+        Port 53 is the destination port for nsLookup
+        A local DNS cache stores DNS maps as they are learned. Display using ipconfig /displaynds
+        DNS CNAME records are Canonical Names -- a DNS record type that maps a name to another name
+        ipconfig /all -- windows to display network settings
+        ipconfig /displaydns -- display the localhost DNS cache
+        ipconfig /flushdns -- clears the local DNS cache
+        c:/Windows/System32/drivers/etc/hosts -- local file of host names and IP addresses -- an alternative to DNS which preceded DNS
+        A router can be configured as a DNS client
+        #ip dns server -- configures a router as a DNS server
+        #ip host <hostname> <ip address> -- to add a DNS entry
+        #ip name-server 8.8.8.8 -- configures an external DNS server to handle all hostnames not in the local list
+        #ip domain lookup -- enabled by default but enables an external name server
+        #show hosts -- lists all the learned and configured DNS entries
+        #ip domain name <domain name> -- configures the default doman name on a Cisco router acting as a DNS server
+    Day 54 oracle VirtualBox (Lab) https://www.youtube.com/watch?v=swqADfQk2jM (8:4)

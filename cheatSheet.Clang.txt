@@ -86,7 +86,7 @@ Mycodeschool (MCS) C and C++ -- Introduction and Basic
     https://www.youtube.com/watch?v=4LbarXsdEbM -- Working with IDE's (Done)
     https://www.youtube.com/watch?v=OSyjOvFbAGI -- Data Types, Constants and Variables (Done)
     https://www.youtube.com/watch?v=xOIVXR35aI4 -- Input and Output: printf and scanf (Done)
-    https://codesignal.com/ -- recursion basics - using factorial.youtube.com/watch?v=vvpDbhqPrww -- Arithmetic Operators (Done)
+    https://codesignal.com/ -- recursion basics -- using factorial.youtube.com/watch?v=vvpDbhqPrww -- Arithmetic Operators (Done)
     https://www.youtube.com/watch?v=zxb8DvLUqcM -- Know your data type: int in C (Done)
     https://www.youtube.com/watch?v=5tPLyHCZdU0 -- Arrays in programming (Done)
 
@@ -337,6 +337,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=YO6K5K1TUj4 -- Your Variables are Not Real
     https://www.youtube.com/watch?v=il4N6KjVQ-s -- Sockets and Pipes Look Like Files (Unix/fdopen)
     https://www.youtube.com/watch?v=tEbV21aPSKw -- find memory errors quickly. (-fsanitize, addresssanitizer), Jacob Sorber
+    https://www.youtube.com/watch?v=R_YPO5JwuXo -- Binary data exercise: how to tell if a file is a jpeg
 
 CodeVault
     https://www.youtube.com/@CodeVault -- main index
