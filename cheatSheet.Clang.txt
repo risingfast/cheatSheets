@@ -79,15 +79,15 @@ C Exercises
 
 Mycodeschool (MCS) C and C++ -- Introduction and Basic
     https://www.youtube.com/playlist?list=PL2_aWCzGMAwLSqGsERZGXGkA5AfMhcknE -- playlist
-    https://www.youtube.com/watch?v=h-HBipu_1P0    Introduction to Programming and Programming Languages (Done)
-    https://www.youtube.com/watch?v=xyBbocLXbNY -- Basics of Computer Memory and Getting Started (Done)
-    https://www.youtube.com/watch?v=aMpsKnf6DrQ -- Writing and Executing First Program (Done)
-    https://www.youtube.com/watch?v=lqzuR2USKRM -- Installing and configuring gcc/g++ on Windows (Done)
-    https://www.youtube.com/watch?v=4LbarXsdEbM -- Working with IDE's (Done)
-    https://www.youtube.com/watch?v=OSyjOvFbAGI -- Data Types, Constants and Variables (Done)
-    https://www.youtube.com/watch?v=xOIVXR35aI4 -- Input and Output: printf and scanf (Done)
-    https://codesignal.com/ -- recursion basics -- using factorial.youtube.com/watch?v=vvpDbhqPrww -- Arithmetic Operators (Done)
-    https://www.youtube.com/watch?v=zxb8DvLUqcM -- Know your data type: int in C (Done)
+    https://www.youtube.com/watch?v=h-HBipu_1P0    Introduction to Programming and Programming Languages (17:22) (Done)
+    https://www.youtube.com/watch?v=xyBbocLXbNY -- Basics of Computer Memory and Getting Started (9:37) (Done)
+    https://www.youtube.com/watch?v=aMpsKnf6DrQ -- Writing and Executing First Program (9:26) (Done)
+    https://www.youtube.com/watch?v=lqzuR2USKRM -- Installing and configuring gcc/g++ on Windows (3:09) (Done)
+    https://www.youtube.com/watch?v=4LbarXsdEbM -- Working with IDE's (10:58) (Done)
+    https://www.youtube.com/watch?v=OSyjOvFbAGI -- Data Types, Constants and Variables (16:08) (Done)
+    https://www.youtube.com/watch?v=xOIVXR35aI4 -- Input and Output: printf and scanf (17:19) (Done)
+    https://codesignal.com/ -- recursion basics -- using factorial.youtube.com/watch?v=vvpDbhqPrww -- Usng Arithmetic Operators (16:12) (Done)
+    https://www.youtube.com/watch?v=zxb8DvLUqcM -- Know your data type: int in C (23:03) (Done)
     https://www.youtube.com/watch?v=5tPLyHCZdU0 -- Arrays in programming (Done)
 
 Mycodeschool (MCS) C and C++ -- Pointers in C/C++ Playlist (Done)
@@ -103,7 +103,8 @@ Mycodeschool (MCS) C and C++ -- Pointers in C/C++ Playlist (Done)
     https://www.youtube.com/watch?v=vFZTxvUoZSU -- Character arrays and pointers - part 2 (Done)
     https://www.youtube.com/watch?v=sHcnvZA2u88 -- Pointers and 2-Dimensional arrays (Done)
     https://www.youtube.com/watch?v=_j5lhHWkbnQ -- Pointers and multidimensional arrays (Done)
-    https://www.youtube.com/watch?v=_8-ht2AKyH4 -- Pointers and Dynamic Memory (Done)
+    https://www.youtube.com/watch?v=_8-ht2AKyH4 -- Pointers and Dynamic Memory - Stack and Heap (17:36) (Done)
+    https://www.youtube.com/watch?v=xDVC3wKjS64 -- Dynamic Memory Allocation in C - malloc calloc realloc free
     https://www.youtube.com/watch?v=E8Yh4dw6Diw -- Pointers as Function Returns in C/C++ (Done)
     https://www.youtube.com/watch?v=ynYtgGUNelE -- Function pointers (Done)
     https://www.youtube.com/watch?v=sxTFSDAZM8s -- Function pointers and callbacks (includes qsort demo) (Done)
@@ -162,6 +163,7 @@ Mycodeschool (MCS) C and C++ -- Sorting Algorithms
 
 Mycodeschool (MCS) C and C++ -- Binary Search
     https://www.youtube.com/playlist?list=PL2_aWCzGMAwL3ldWlrii6YeLszojgH77j -- Playlist
+    https://www.youtube.com/watch?v=j5uXyPJ0Pew&t=54s -- What is Binary Search
 
 Mycodeschool (MCS) C and C++ -- Mathematics for Programmers
     https://www.youtube.com/playlist?list=PL2_aWCzGMAwLL-mEB4ef20f3iqWMGWa25 -- Playlist
@@ -338,6 +340,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=il4N6KjVQ-s -- Sockets and Pipes Look Like Files (Unix/fdopen)
     https://www.youtube.com/watch?v=tEbV21aPSKw -- find memory errors quickly. (-fsanitize, addresssanitizer), Jacob Sorber
     https://www.youtube.com/watch?v=R_YPO5JwuXo -- Binary data exercise: how to tell if a file is a jpeg
+    https://www.youtube.com/watch?v=r2__Rw8vu1M -- Is it concurrent or parallel?
 
 CodeVault
     https://www.youtube.com/@CodeVault -- main index

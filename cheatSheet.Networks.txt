@@ -60,7 +60,8 @@ Abbreviations
     DSCP -- Differentiated Services Code Point
     ECN -- Explicit Congestion Notification
     FCS -- Frame Check Sequence
-    FLSM -- Fixed Lengt Subnet Masks
+    FLSM -- Fixed Length Subnet Masks
+    FQDN -- Fully Qualified Domain Name, or Host Name plus '.' plus Domain Name (eg. Instance-1.gjarman2020.com)
     FTP -- File Transfer Protocol (Layer 4 'Transport' Port 21)
     GDPR -- General Data Protection Regulation
     HTTP -- Hyper Text Tansfer Protocol (Layer 4 'Transport' Port 80)
@@ -985,4 +986,22 @@ CCNA Cisco Certfied Network Associate - Network Chuck
         #ip domain lookup -- enabled by default but enables an external name server
         #show hosts -- lists all the learned and configured DNS entries
         #ip domain name <domain name> -- configures the default doman name on a Cisco router acting as a DNS server
+    Day 42 SSH https://www.youtube.com/watch?v=AvgYqI2qSD4 (31:06)
+        SSH Secure Shell allows configuring remote devices
+        Console Port Security allows setting a password on the console port line of a Cisco device
+        #line console 0 -- there is only a single console line so the number is always 0
+        #password <pwd> -- set a password for the console port
+        #login -- enable the password
+        #end -- to terminate command mode
+        #exit -- to log off the CLI on the Cisco device
+        #exec-timeout 3 30 -- sets timeout at 3 mins 30 seconds of inactivity
+        You can assign an IP address to a Layer 2 switch to allow a remote connection to the CLI
+        Telnet -- Teletype Network is used to connect to a remote device. Developed in 1969 and replaced by SSH in 1995
+        Telnet sends plain text with no encryption
+        Telnet server listens on Port 23
+        SSHv1 was released in 1995
+        SSHv2 was released in 2006 and is more secure
+        A device is said to run v1.99 if it supports both SSHv1 and SSHv2
+        SSH listens on TCP Port 22
+
     Day 54 oracle VirtualBox (Lab) https://www.youtube.com/watch?v=swqADfQk2jM (8:4)

@@ -8,6 +8,15 @@ Tips and Tricks and Troublshooting
         reference: https://askubuntu.com/questions/167847/how-to-run-bash-script-as-root-with-no-password
         export PATH=<newpath>:$PATH to prefix the existing path with another value
 
+Distributions
+    Debian
+        Ubuntu
+    Red Hat
+        Fedora
+        Red Hat
+        Arch Linux
+        SUSE
+
 References
     https://www.youtube.com/watch?v=rxOTDG1peLw&list=PL_vyuxE-AO-A92UblMm33ENQZPzvAPpGl -- 10 Basic Ways to Secure Ubuntu from Hackers
     Review Engineer Man Linux videos
@@ -72,6 +81,8 @@ Learn LinuxTV with Jay LaCroix
     https://www.youtube.com/watch?v=tU9cO9FwDx0 -- Linux Essentials - htop
     https://www.youtube.com/watch?v=2Z6ouBYfZr8 -- Linux Essentials - Formatting & Mounting Storage Volumes
     https://www.youtube.com/watch?v=bA8GVdGFT30 -- Demystifying Hostnames and Domain Names in Linux, and How Server Naming Benefits You
+    https://www.youtube.com/watch?v=GUpZELktYKQ -- Essential First Steps for Every New Linux Server Build
+    https://www.youtube.com/watch?v=Jnxx_IAC0G4 -- 10 Tips for Hardening your Linux Servers
 
 Learn LinuxTV Bash Scripting Course with Ja LaCroix
     https://www.youtube.com/watch?v=2733cRPudvI -- Bash Scripting on Linux (The Complete Guide) Class 01 - Course Introduction
@@ -209,7 +220,7 @@ Linux Commands
     apt search <searchstring> -- get a list of package names matching the searchstring
     apt show <packageName> -- shows package information
     apt update -- update list of available packages on the local package repository (i.e repositories index)
-    apt upgrade -- upgrades all installed upgradeable packages (run apt update first) excluding those requiringdependencies
+    apt upgrade -- upgrades all installed upgradeable packages (run apt update first) excluding those requiring dependencies
     aptitude -- an installable package and superset of apt applications including: apt-get, apt-mark, and apt-cache
     as -- assembler
     ascii -- print the ASCII table (apt install ascii first)
@@ -424,6 +435,11 @@ Linux Commands
     ncdu / -x -- disk usage defaulting to the root file system and excluding temporary mounts
     netstat -ie -- network configuration located in /etc/xinet, netstat -ntlp
     nohup -- run a process without interruption if the submitter logs off
+    nmap -- Netowrk MAPper utility
+    nmap <ip address> -- list open ports at an IP address (eg nmap 192.168.1.1-255 scans a range of IP addesses for open ports)
+    nmap <domain name> -- list open ports at a domain server
+    nmap -v -- verbose option
+    nmap 192.168.1.0/24 -- scan all home network IP addresses using CIDR notation
     nslookup -- look up an ip address for a dns name nslookup google.com
     ntpdate time.windows.com -- to synchronize the clock date and time on Linux subsystem for Windows (as sudo)
     passwd -- change the password of the current user
