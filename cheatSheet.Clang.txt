@@ -341,6 +341,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=tEbV21aPSKw -- find memory errors quickly. (-fsanitize, addresssanitizer), Jacob Sorber
     https://www.youtube.com/watch?v=R_YPO5JwuXo -- Binary data exercise: how to tell if a file is a jpeg
     https://www.youtube.com/watch?v=r2__Rw8vu1M -- Is it concurrent or parallel?
+    https://www.youtube.com/watch?v=yN6EGfv5Dew -- How to get an IP address from a host name? (Example in C)
 
 CodeVault
     https://www.youtube.com/@CodeVault -- main index
