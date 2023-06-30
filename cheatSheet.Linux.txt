@@ -8,10 +8,12 @@ Tips and Tricks and Troublshooting
         reference: https://askubuntu.com/questions/167847/how-to-run-bash-script-as-root-with-no-password
         export PATH=<newpath>:$PATH to prefix the existing path with another value
 
-Distributions
+Distributions (Distros)
+    Differentiated based on the repository and package manager employed
     Debian
         Ubuntu
-    Red Hat
+        Mint
+    Red Hat (RPM based)
         Fedora
         Red Hat
         Arch Linux
@@ -197,6 +199,7 @@ Linux Commands
     /usr/log -- log files
     /var -- variable files expected to grow e.g. spools, mail, databases, logs
     /var/log -- system logs and logfiles and error logs
+    /var/log/syslog -- the linux system logfile
     /var/run -- info on system since it was booted
     /var/spool -- data waiting on printing or processing
     >/dev/null -- redirect console standard output to /dev/null
@@ -240,6 +243,7 @@ Linux Commands
     cat -Ans <filename> -- writes a file to stdout, reads from <stdin> if no file specified, -Ans show all chars, number lines and suppress repeating blank lines
     cat /etc/passwd
     cat -n /etc/passwd -- cat a file and show line numbers
+    cd -- without arguments. changes to the home directory of the current user (same as cd ~)
     cd <path> -- change directory
     cd - ,change to previous/prior working directory
     cd ~</path> change to home directory path
@@ -402,6 +406,7 @@ Linux Commands
     ls <path> -- list files in a non-local directory
     ls -laS * -- list files by filesize large to small in the current directory
     ls -lia -- list inode numbers
+    ls -lat -- list in descending update date order
     ls -la | wc -l -- count the number of entries in a directory
     lsb_release -a -- 'Linux Standard Base' 'all info' shows release or version of Operating System (Ubuntu linx (or cat /etc/os-release to see release profile
     lsblk -- list all block devices (physical devices) attached to the computer (sda = SCSI drive, sda1 = SCSI Partion, hda = IDE drive, hda1 = IDE partition)
@@ -503,13 +508,14 @@ Linux Commands
     systemctl list-unit-files --type=service -- list service files and show their state
     systemctl status apache2 -- get the status of apache on Ubuntus
     systemctl enable apache2 -- enable apache on Ubuntu (as root)
-    systemctl enable --now apache2 -- enable apache on Ubuntu and start the service (as root)
+    systemctl enable --now apache2 -- enable apache on Ubuntu and start the service new (as root)
     systemctl disable apache2 -- disable apache on Ubuntu so it does not start on reboot (as root)
     systemctl start apache2 -- start apache on Ubuntu (as root)
     systemctl stop apache2 -- stop apache on Ubuntu (as root)
-    systemctl restart apache2 -- stop and cold start apache on Ubuntu (as root)
+    systemctl restart apache2 -- stop and cold start apache on Ubuntu to apply config changes (as root)
     systemctl restart sshd -- restart the ssh listener daemon
-    systemctl reload apache2 -- stop and warm start apache on Ubuntu (as root)
+    systemctl reload apache2 -- stop and warm start apache on Ubuntu to take new config settings (as root)
+    systemd - program to manage services or units on a linux server: start, monitor, log, and control
     tac -- writes a file to stdout in reverse order
     tail -- show last 10 lines in a text file, e.g. tail -n 3 <filename> shows last three lines in <filename>, -f follow new entries
     tail -f <filename> -- follow additons to <filename> in real time

@@ -556,7 +556,7 @@ HTML Tags and Attributes (tags always lower case and attributes always s/d-quote
     <input> -- data input field, optionally associated with a label element using the for= attribute on the label
     <i> -- italic
     <ins> -- inserted text (underlined)
-    <label> -- text optionally tied to an input element
+    <label> -- text optionally tied to an input element (use <span> for non-input related text
     <link rel="stylesheet" type="text/css" href="theme.css"> -- CSS link in the <head> tag region
     <main> -- main document content
     <mark> -- highlighted (background highlighting)
@@ -571,7 +571,7 @@ HTML Tags and Attributes (tags always lower case and attributes always s/d-quote
     <ul><li></li></ul> -- unordered list (bulletted) list items
     <section> -- thematic grouping of content typically with a heading
     <small> -- smaller size font
-    <span></span> -- iinline container version of <div> primariy used for styling blocks of text that appear on the same line as other spans (divs appear on separate lines> and have style attributes, meaningless otherwise
+    <span></span> -- iinline container version of <div> primariy used for inline identification and styling blocks of text that appear on the same line as other spans (divs appear on separate lines> and have style attributes, meaningless otherwise
        <span></span> -- formatted region referenced in CSS
     <strong> -- important text emphasized or bolded
     <sub> -- subscripted text

@@ -174,12 +174,12 @@ Set Default Options Notes (in _vimrc or Directly)
     Color Schemes                                       :colo murphy, torte, pablo, ron, blue, evening, koehler, etc ...
     Set line length (i.e. textwidth)                    :set tw=100 (use :verbose set tw? wm? to find who is setting it)
 
-
 References Notes
     gvim homepage                                       http://www.vim.org/
     Tutor                                               vimtutor (run from the command line)
     Vim Adventures Game                                 http://vim-adventures.com/
     Vim Casts                                           http://vimcasts.org/
+    cursor shape in tmux                                https://stackoverflow.com/questions/57099868/putty-tmux-vim-change-cursor-shape
 
 Help Notes
     Use :help to show the help menu in a new window

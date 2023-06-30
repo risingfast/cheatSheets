@@ -343,6 +343,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=r2__Rw8vu1M -- Is it concurrent or parallel?
     https://www.youtube.com/watch?v=yN6EGfv5Dew -- How to get an IP address from a host name? (Example in C)
     https://www.youtube.com/watch?v=_xX25ThomIo -- Making variables atomic in C
+    https://www.youtube.com/watch?v=jxW7iwCtBZk -- What is a function prototype in C
 
 CodeVault
     https://www.youtube.com/@CodeVault -- main index

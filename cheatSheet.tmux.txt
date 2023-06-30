@@ -1,0 +1,63 @@
+tmux Cheatsheet
+
+Tips and Tricks
+    When the last pane in a window is closed, it closes the window
+    Opening a new session opens one window containing one pane within it
+
+References -- Learn Linux TV
+    https://www.youtube.com/watch?v=gmjyMxezIWU -- Getting Started with tmux Part 1 - Overview and Features
+    https://www.youtube.com/watch?v=H6RBPHow_q4 -- Getting Started with tmux Part 2 - Horizontal and Vertical Panes
+    https://www.youtube.com/watch?v=JMGGrM9KmFw -- Getting Started with tmux Part 3 - Creating and Managing Windows
+    https://www.youtube.com/watch?v=FAU8rmS5NSE -- Getting Started with tmux Part 4 - Creating and Switching Between Sessions
+    https://www.youtube.com/watch?v=bjBjZvZsgks -- Getting Started with tmux Part 5 - Customization and Tweaks
+
+Installation
+    /usr/bin/tmux -- location of executable
+    which tmux -- find executable if installed
+    apt install tmux -- Ubuntu/Debian installation for tmux (as root)a
+
+Configuration
+    ~/.tmux.conf -- local configuration file
+
+Ctrl-b commands (with the tmux prefix)
+    $ -- rename a session/window
+    % -- split pane vertically
+    & -- kill a window (all panes)
+    " -- split pane horizontally
+    ? -- list commands
+    { -- shift pane left
+    } -- shift pane right
+    , -- rename window
+    -> -- change pane rigth
+    <- -- change pane left
+    c -- create a window
+    d -- disconnect a session
+    <dn arrow> -- change pane down
+    <esc> -- cancel ctrl-b
+    <up arrow> -- change pane up
+    <nbr> -- move to window <nbr>
+    l -- toggle last open window
+    n -- next window
+    o -- change pane clockwise
+    p -- previous window
+    q -- show pane numbers
+    <spacebar> -- toggle pane layout
+    s -- sessions view with previews
+    w -- show window tree
+    x -- end/kill a pane
+    z -- zoom or unzoom
+
+tmux commands
+    a -- restore previous session
+    attach -- restore most recent session
+    attach -t 0 -- attach to target session zero
+    kill-session -t <name> -- kill a tmux session
+    ls -- list tmux running sessions
+    list-sessions -- list tmux running sessions
+    new -s "name: -- create a new session with name
+    rename-session -t 0 vim -- rename session target 0 to vim
+    tmux -- start tmux
+
+Reszie Panes
+    Ctrl-b : -- command mode
+    resize-pane -LRUD <number>
