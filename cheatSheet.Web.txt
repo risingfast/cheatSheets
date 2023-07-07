@@ -77,12 +77,17 @@ References
     https://www.youtube.com/watch?v=j0PpT96EFeg -- Understanding Browser Cookies, Steve Griffith
     https://www.youtube.com/playlist?list=PLyuRouwmQCjkWu63mHksI9EA4fN-vwGs7 -- Fetch playlist, Steve Griffith
     https://www.npmjs.com/ -- npm repository of all node packages
+    https://www.youtube.com/watch?v=P3aKRdUyr0s -- What is NPM, and why do we need it? | Tutorial for beginners, Coder Coder
     https://alvinalexander.com/perl/edu/articles/pl010012/ -- cookies and CGI
     https://www.easy400.net/cgidev2o/exhibiu8.htm -- cookies in CGI
     developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie -- cookies and CGI
     https://www.oreilly.com/library/view/cgi-programming-on/9781565921689/06_chapter-03.html -- cookies and CGI
     https://techexpert.tips/apache/perl-cgi-apache/ -- cookies and CGI
     https://www.javascripttutorial.net/ -- extensive set of javascript lessons
+    https://www.youtube.com/watch?v=s6dMWzZKjTs -- Stop wasting time when you're learning to code!, Coder Coder
+    https://www.frontendmentor.io/ -- Front End Mentor
+    https://javascript30.com/ -- JavaScript 30, Wes Bos
+    https://www.youtube.com/watch?v=ec8vSKJuZTk -- Learn JavaScript by Building 7 Games - Full Course, freeCodeCamp.org
 
 Lambda School Web Development Deandra Ryan-Mas
     https://lambdaschool.com -- Lambda school mini bootcamp -- post-paid for classes
@@ -235,6 +240,8 @@ Document Object Model (DOM)
     https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction -- DOM introduction
     https://www.youtube.com/watch?v=1WQy2Jdk-ik -- Web Development Mini-Bootcamp Lesson 12 DOM
     https://www.youtube.com/watch?v=O6BNfJz3rgs&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=2 -- Steve Griffin Intro to the DOM (Done)
+    https://www.youtube.com/watch?v=KShnPYN-voI -- The DOM in 4 minutes
+    https://www.youtube.com/watch?v=v7rSSy8CaYE&t=11s -- Learn JavaScript DOM Traversal In 15 Minutes, Web Dev Simplified
 
 Definitions
     asynchronous - non-blocking task run in a separate parallel thread
@@ -844,7 +851,8 @@ JS Node Program Stucture
 JS Output
     document.write(); -- html text
     alert(); -- pop up window (all lower case)
-    console.log() -- write to the console log
+    c
+    document.getElementById("choice").innerHTML = userChoice; -- document.getElementById("choice").innerHTML = userChoice;, freeCodeCamp.orgonsole.log() -- write to the console log
     console.clear() -- clears the console
     console.error() -- write an error to the console log
     console.warning() -- write a warning to the console log
@@ -1431,7 +1439,8 @@ JS DOM (Document Object Model)
     View the DOM methods in the console by typing 'document. and scrolling through the list
 
 JS DOM (Document Object Model) Manipulation
-    The DOM is created by the Browser when an webpage is loaded
+    The DOM is a javascript object created by the Browser when an webpage is loaded
+    The DOM contains methods, sub-objects, elements and properites
     Type 'document' <enter> in the console to drill down into the DOM
     Type 'document.' <enter> to see all elements and methods defined for the DOM
     The DOM hierarchy comprises an html root, and a head and body subsection (element nodes) and subsidiary element nodes
@@ -1445,6 +1454,13 @@ JS DOM (Document Object Model) Manipulation
                     p
                     [
                 div
+    Common DOM Methods
+        document.querySelector("<css selector>")
+        document.querySelectorAll("<css selector>") -- returns an array processed with forEach()
+        document.getElementById("element_id">)
+        document.getElementByClassName("<class_name>") -- returns a collection which is converted into an array with Array.from()
+        document.getElementByTagName()
+        document.addEventListener("click", function() {alert("Thank you for clicking"})
     Query the DOM with querySelector() to get an element reference
         let elementRef = document.querySelector('<cssSelecctor>'); -- identifies the first occurance of <cssSelector> on the document
             e.g. document.querySelector('p'); -- identifies the first paragraph on the document
