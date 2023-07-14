@@ -18,7 +18,11 @@ Tips and Tricks and Troubleshooting Issues
     Don't use float in an elemet style because the element floats outside it's container <div>
     Cross Origin Resource Sharing (CORS) - set http response header Access-Control-Allow-Origin: * on server side in Ajax response or CGI
     https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
-        
+       
+Newletters
+        https://frontendfoc.us/ -- Frontend Focus
+        https://tldr.tech/ -- TLDR 
+
 References
     https://developer.mozilla.org/en-US/ for tutorials on CSS and HTML and Javascript
     https://developer.mozilla.org/en-US/docs/web/javascript -- tutorials and feature lookups for Javascript
@@ -77,17 +81,28 @@ References
     https://www.youtube.com/watch?v=j0PpT96EFeg -- Understanding Browser Cookies, Steve Griffith
     https://www.youtube.com/playlist?list=PLyuRouwmQCjkWu63mHksI9EA4fN-vwGs7 -- Fetch playlist, Steve Griffith
     https://www.npmjs.com/ -- npm repository of all node packages
-    https://www.youtube.com/watch?v=P3aKRdUyr0s -- What is NPM, and why do we need it? | Tutorial for beginners, Coder Coder
+    https://www.youtube.com/watch?v=P3aKRdUyr0s -- What is NPM, and why do we need it? | Tutorial for beginners, Coder Coder, Jessica Chan
     https://alvinalexander.com/perl/edu/articles/pl010012/ -- cookies and CGI
     https://www.easy400.net/cgidev2o/exhibiu8.htm -- cookies in CGI
-    developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie -- cookies and CGI
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie -- cookies and CGI
     https://www.oreilly.com/library/view/cgi-programming-on/9781565921689/06_chapter-03.html -- cookies and CGI
     https://techexpert.tips/apache/perl-cgi-apache/ -- cookies and CGI
     https://www.javascripttutorial.net/ -- extensive set of javascript lessons
-    https://www.youtube.com/watch?v=s6dMWzZKjTs -- Stop wasting time when you're learning to code!, Coder Coder
+    https://www.youtube.com/watch?v=s6dMWzZKjTs -- Stop wasting time when you're learning to code!, Coder Coder (Jessica Chan)
     https://www.frontendmentor.io/ -- Front End Mentor
     https://javascript30.com/ -- JavaScript 30, Wes Bos
     https://www.youtube.com/watch?v=ec8vSKJuZTk -- Learn JavaScript by Building 7 Games - Full Course, freeCodeCamp.org
+    https://wesbos.com/javascript -- Wes Bos' javascript and web development notes
+    https://www.youtube.com/c/programmingwithmosh -- Programming courses including HTML and JavaScript with Mosh
+    https://www.youtube.com/watch?v=Xm4BObh4MhI -- Ania Kubow 12hr Youtube coding bootcamp
+    https://insights.stackoverflow.com/survey -- annual developer survey in May 2023
+    https://syntax.fm/ -- podcasts with Wes Mos
+    https://www.compressed.fm/ -- podcasts on web by James Q Quick
+    https://www.youtube.com/c/jamesqquick -- James Q Quick videos
+    https://www.youtube.com/kevinpowell -- Kevin Powell css courses
+    https://zerotomastery.io/courses/coding-bootcamp/ -- paid course
+    https://www.youtube.com/playlist?list=PLBf-QcbaigsJysJ-KFZvLGJvvW-3sfk1S -- Leon Noel Bootcamp for WebDev
+    https://www.youtube.com/watch?v=kUMe1FH4CHE&list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88 -- Dave Gray teaches HTML and CSS using VSCode
 
 Lambda School Web Development Deandra Ryan-Mas
     https://lambdaschool.com -- Lambda school mini bootcamp -- post-paid for classes
@@ -236,12 +251,39 @@ Adam Koury
     https://www.youtube.com/playlist?list=PL00952AC35D0A4701 -- JavaScript Tutorial Videos
     https://www.youtube.com/watch?v=UJAwNkhbYWM -- Partial Print Document JavaScript Tutorial HTML div Content
 
+Sam Meech-Ward
+    https://www.youtube.com/watch?v=CVeSF7-gjWM -- Stop Using else Statements in Javascript
+    https://www.youtube.com/watch?v=PkeTH1rB7HY == Getters and Setters in JavaScript
+    https://www.youtube.com/watch?v=A9SaTI7-sM4 -- THIS in JavaScript
+    https://www.youtube.com/watch?v=Pk3AoFgSiU0 -- JavaScript Callback Functions
+
+Coder coder (Jessica Chan)
+    https://www.youtube.com/watch?v=s6dMWzZKjTs -- Stop wasting time when you're learning to code!
+    https://www.youtube.com/watch?v=P3aKRdUyr0s -- What is NPM, and why do we need it? | Tutorial for beginners
+    https://www.youtube.com/watch?v=iXbvS1CrqdA -- My office/setup tour, video gamified
+    https://www.youtube.com/watch?v=SsF8sP7MOLE -- How to keep up with trends in web development
+    https://www.youtube.com/watch?v=4AzsPnH488Q -- How to debug your code faster
+    https://www.youtube.com/watch?v=OdkzB13xjL0 -- Life/channel update
+
 Document Object Model (DOM)
     https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction -- DOM introduction
     https://www.youtube.com/watch?v=1WQy2Jdk-ik -- Web Development Mini-Bootcamp Lesson 12 DOM
     https://www.youtube.com/watch?v=O6BNfJz3rgs&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=2 -- Steve Griffin Intro to the DOM (Done)
     https://www.youtube.com/watch?v=KShnPYN-voI -- The DOM in 4 minutes
     https://www.youtube.com/watch?v=v7rSSy8CaYE&t=11s -- Learn JavaScript DOM Traversal In 15 Minutes, Web Dev Simplified
+
+CSS Games
+    https://javascript.info/
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript
+    https://web.dev/learn/
+    https://flukeout.github.io/ -- css diner
+    https://flukeout.github.io/
+    https://flexboxfroggy.com/
+    https://mastery.games/flexboxzombies/ -- flexbox zombies
+    https://cssgridgarden.com/
+    https://codingfantasy.com/games/css-grid-attack
+    https://codingfantasy.com/games/css-grid-attack
+    https://cssbattle.dev/
 
 Definitions
     asynchronous - non-blocking task run in a separate parallel thread
@@ -306,6 +348,11 @@ Books
     JavaScript: The Good Parts by Douglas Crawford
     jQuery in Action 3rd Edition Bear Bibeault
     front-end-handbook-2017.pdf
+    to-ninja/ -- Udemy Course $15.99
+    https://eloquentjavascript.net/ -- Eloquent JavaScript, Third Edition Narign Haverbeke
+        https://eloquentjavascript.net/code/#6.1 -- sandbox for first edition
+        https://eloquentjavascript.net/2nd_edition/code/ -- sandbox for second edition
+    https://github.com/getify/You-Dont-Know-JS -- You Don't Know JavaScript, Kyle Simpson
 
 Tools
     https://haveibeenpwned.com/ -- email address checker for email exposed to hacks
@@ -409,6 +456,7 @@ Online Coding Sanboxes and IDE's
     https://jsbin.com/
     https://webmakerapp.com/app/
     https://plnkr.co/ -- Plunker
+    https://playcode.io/
     http://quirktools.com/ -- drag and drop wireframes and mobile testers
     https://replit.com/ -- Javascript and other languages
     https://stackblitz.com/ -- VSCode in a browser
@@ -525,8 +573,10 @@ HTML Tag and Element Structure
     Attributes are within the opening HTML tag and define characteristics of the tag (metadata)
     Empty elements have no content or ending tag. They have attributes (eg <img>).
     Meaningless elements <DIV> and <SPAN> are used to assign CSS but are otherwise meaningless
-    Block elements appear around their content (e.g. <DIV>
-    Inline elements appear infront of and after their content (e.g. <SPAN>)
+
+Inline vs Block Elements
+    Block elements appear around their content that start and end on a new line(e.g. <DIV>
+    Inline elements do not start on a new line and only take up as much width as necessary ... they appear immediately infront of and after their content (e.g. <SPAN>)
 
 HTML Rules
     Extra spaces are removed by rendering (space, tab, newline) unless protected by <pre> preformat tag which preserves whitespace
@@ -544,15 +594,17 @@ HTML Tags and Attributes (tags always lower case and attributes always s/d-quote
     <b> -- bold
     <br> -- line break
     <button> -- clickable button
-    <div></div> -- a block element or container, defined as a boundary for CSS, meaningless otherwise, a CSS container
+    <div></div> -- content division element, a block element or container, defined as a boundary for CSS, meaningless otherwise, a CSS container
     <details><summary></summary</details> -- drop down details below summary heading and drop down arrow
     <del> -- deleted text (lined through)
-    <em> -- emphasized text (italicized)
+    <em> -- emphasized or stressed text (italicized)
     <footer> -- footer section of document
     <h1></h1> Heading 1 important - matches a search engine priority (size is driven by CSS)
     <h1 style ="font-size: 32px;">Heading 1</h1> -- inline CSS to change fontsize
     <h2></h2> Heading 2 less important
     <h3></h3> Heading 3 even less important
+    <h4></h4> Heading 3 even less important
+    <h5></h5> Heading 3 even less important
     <h6></h6> Heading 6 least important
     <head> container for metadata not displayed
     <header> -- specifies the heading of a document containing introductory headings and content
@@ -680,7 +732,7 @@ CSS Reference
 CSS Rules
     CSS Can control the appearance of multiple web pages
     CSS applies the last defined style if styles are overlapping
-    CSS applies the most specific style: ID, Class, Element
+    CSS applies the most specific style: Identifer (#), Class (.), Element Tag (<>)
     CSS Inline styles override all others
 
 CSS Tricks
@@ -826,8 +878,11 @@ CSS Media Query (responsive layout)
     Layout types: table, float, flex and grid
     Responsiveness attributes handle scaling (viewports) on different screen and browser window sized
      
-JS Versions
-    ES6 - ECMA6 - Major Release of Javascript in 2016
+JS Versions (introduced in 1995)
+    ES# -- ECMA3 -- 2000 first widely supported version
+    ES4 -- ECMA4 -- Abandoned
+    ES5 -- ESMA5 -- 2009
+    ES6 -- ECMA6 -- Major Release of Javascript in 2015 (including some enhancements originally planned in ES4)
 
 JS Where Placed in HTML
     Javascript can be placed in the <head> or <body> of html between <script> tags
@@ -984,12 +1039,14 @@ JS Operators and Order of Operation
         + also concatenates strings
         ++ increment by 1
         -- decrement by 1
-        += add to a variable (e.g a += 2; adds 2; to a)
-        -= subtract from a variable (e.g. a -= 2; subtracts 2 from a)
-        *= multiply and equate to self (e.g. a *=2; multiples a by 2)
-        /= divide and equate to self (e.g. a /=2; divides a by 2)
         % modulus or remainder (e.g. 11 % 3 = 2)
         ** multiply
+
+JS Compound Operators (read from right to left)
+            += add to a variable (e.g a += 2; adds 2; to a)
+            -= subtract from a variable (e.g. a -= 2; subtracts 2 from a)
+            *= multiply and equate to self (e.g. a *=2; multiples a by 2)
+            /= divide and equate to self (e.g. a /=2; divides a by 2)
     Order (BIDMAS)
         Brackest
         Indices
@@ -1004,6 +1061,8 @@ JS Scope
     Block Scope (local scope) applies to variables declared inside a block
     You cannot redefine a variable in the same scope but you can redefine a variable in a different scope or block
     Block or local scope variables are not accessible outside its code block
+    Variables defined without using let or var or const are automatically defined in the global scope
+    Local variables take precedenc over global variables with the same name
 
 JS Logical Operators
     && and
@@ -1011,10 +1070,10 @@ JS Logical Operators
     ! not
 
 JS Comparison Operators
-    == equal in value only (loose comparison) e.g. 25 == '25' is true
-    === equal in value and type (strict equality)
-    != - not equal to (inequality operator) (loose inequality)
-    !== - strictly not equal to (strict inequality operator)
+    == equality, in value only (loose comparison, using type coercion if needed) e.g. 25 == '25' is true
+    === strict equality. in value and type (strict equality, not allowing type coercion)
+    != inequality, not equal to (inequality operator) (loose inequality, using type coercion)
+    !== - strictly not equal to (strict inequality operator, not using type coercion)
     > greater than
     < less than
     >= greater than or equal to
@@ -1034,19 +1093,20 @@ JS Data Types (7 different types)
     Data types are stored on the stack and not in the heap
     Javascript is dynamically typed and variables can contain any data type when they are assigned a value
     Types are: 
-        boolean: true or false (not enclosed in quotes)
-        number: integers, floats, decimals etc (includes NaN and infinity), 
-        char: doesn't exist. implemented as a string of length '1'
-        string: 'some words'
+        -bigint
+        -boolean: true or false (lower case, not enclosed in quotes)
+        -number: integers, floats, decimals etc (includes NaN and infinity), 
+        -string: 'some words'
             strings use '' or "" interchangeably, and backticks `` to embed variables which are evaluated
             escape embedded quotes in strings with \" or \'
             Strings have built-in's (or native functions)
+        -object: the only non-primative datatype and holds multiple key-value pairs: arrays, dates, literals etc
+        -symbols: unique immutable object identifiers
+        -null: separate datatype and means nothing (intentionally) or no value e.g. var name = null;
+        -undefined: separate datatype and means 'no value assigned' (unintentionally) and automatically assigned by the browser if not initialized
+        NaN: is the result of an numerica expression with an undefined variable
+        char: doesn't exist. implemented as a string of length '1'
         array: 
-        object: the only non-primative datatype and holds multiple key-value pairs: arrays, dates, literals etc
-        symbols: unique immutable object identifiers
-        null: separate datatype and means nothing (intentionally) or no value e.g. var name = null;
-        NaN: not a number
-        undefined: separate datatype and means 'no value assigned' (unintentionally) and automatically assigned by the browser if not initialized
     typeof() returns the type of a variable. typeof x; is the same as typeof(x);
 
 JS Type Conversion (explicit type conversion)
@@ -1069,7 +1129,7 @@ JS Strings
     string.replace('<char'>, '<char>'); -- replaces the first occurance of a character
     string.includes('<char>') -- returns true if char exists in a string, otherwise returns false
 
-JS Escaped Characters in Strings
+JS Escaped Characters in Strings (escape sequences)
     \' single quote
     \" double quote
     \\ backslash
@@ -1117,11 +1177,11 @@ JS Functions including ES6 Arrow Functions
         Invoke by fMyFun();
         Function synonyms can be created as const fMyFuncSyn = fMyFun (a previously declared function)
         The first line of this syntax must include 'function()'
-    Syntax 3 Arrow functions (ES6) for Anonymous Functions (myFunc = (vars) => {<body>};
+    Syntax 3 Arrow (Inline) functions (ES6) for Anonymous Functions (myFunc = (vars) => {<body>};
         Arrow functions redefine 'this' to be within the scope of the calling context
     () is the function invocation operator
     The () are only required if there is more than one parameter or no parameters
-    The {} are not needed if the function only returns a value
+    The {} are not needed if the function only returns a value eg () => "return value";
     functions take parameters and return a result (i.e. a function call)
     functions without return statements return undefined
     function expressions can be immediately invoked (IEFE's)
@@ -1132,6 +1192,10 @@ JS Functions including ES6 Arrow Functions
        e.g. document.addEventListener("click", clickFunction)
     Default Parameters
         function myFunc(arg1 = "Yes", arg2 = "Thanks") -- will be used if no arguments are passed in the parameters
+    Rest Parameter allows any variable number of arguments to be passed by using ...args as the parameter and accessing the arg number with args.length and values with args[i]
+
+JS Functions (pre-defined)
+    parseInt(<string>, <radix>) converts a string to a number, returns NaN if the first character of <str> in non-numeric and <radix> is the source radix (optional)
 
 JS Anonymous Functons
     Anonymous functions are not named - they are function expressions
@@ -1142,7 +1206,7 @@ JS Anonymous Functons
             e.g. document.addEventListener("click", () => alert("Thank you for clicking"))
 
 JS Callback Functions
-    Callbacks are functions passed by name as paramenters in other functions and executed before the other function ends
+    Callbacks are functions passed by name as paramenters in other functions and executed by the other function
         // callback example where seeded forEach only takes a callback function referencing the item and index in the array
         const cars = ['Ford', 'Honda', 'Chevrolet', 'Buick'];
         function myCallBack(item, index) {
@@ -1189,7 +1253,7 @@ JS Array Methods
     myArray.forEach(<function>) performs <function> on each element in the array returning a new array
     amyArray.map(<function>) performs the <function> passed to map to transform each element of the array returning a new array
     myArray.filter(<function>) returns elements of the array if the filter <function> returns boolean true
-    myArray.reduce(<function>) returns a sigle value. The <function> takes two arguments: previous returned value plus current value
+    myArray.reduce(<function>) returns a single value. The <function> takes two arguments: previous returned value plus current value
 
 JS Arrays (Two Dimensional)
     Two dimensional arrays are defined as arrays of arrays
@@ -1253,6 +1317,11 @@ JS Conditionals and Compound Conditionals and Decisions (Control Flow)
     Switch (value) {case val1: action; break; case val2: action; break; default: action;}
         break is not needed on the default case
         case uses strict equality
+        repeat case clause for multiple conditions:
+            case 1:
+            case 2:
+            case 3:
+                expression ...
     ! not operator
     ? -- ternary operator for true of false
 
@@ -1295,6 +1364,8 @@ JS Objects
 
 JS Object Properties and Methods (Object functions)
     Objects are reference types stored on the heap with a pointer on the stack
+    const <objName> declares an object that cannot be reassigned but is immutable
+    object.freeze(<objName> makes an object immutable - none of its components can change
     Objects comprise key: value pairs where the keys are unique
     Built-in objects: Date, Math, etc
     Object Literal notation: one way of creating a new object
@@ -1339,6 +1410,8 @@ JS Object Properties and Methods (Object functions)
         for (let iterator in dog) {
             console.log(iterator, ': ', dog[iterator]);
         }
+    Check if a property exists
+        myObj.hasOwnProperty(<propery>); returns true or false
     Define a method in an object
         myObject {
             <key1>: <value1>
@@ -1417,8 +1490,15 @@ JS Closures
 JS This Keyword
     This determines the way a function is called
 
-JS Destructuring
-    Unpacking arrays into variables or other arrays
+JS Destructuring Objects
+    Unpack object values into variables with the same name as their object keys
+        eg const {first, last} = myName; assignes myName.first into a first varable and myName.last into a last variable where const myName = { first: "Geoff", last: "Jarman") };
+    Unpack object values into variables with different names as their object keys
+        eg const {fst: first, lst: last } = myName; assignes myName.first into a fst varable and myName.last into a lst variable where const myName = { first: "Geoff", last: "Jarman") };
+
+JS Destructuring Arrays
+    const [a, b] = [1, 2, 3, 4, 5, 6]; assignes a and b to the first two elements of the array
+    const [a, b,,, c] = [1, 2, 3, 4, 5, 6]; assignes a, b and c to the first, second and 5th elements of the array
 
 JS DOM (Document Object Model)
     The DOM root element or node is <HTML>
@@ -1554,6 +1634,18 @@ JS AJAX Requests (using XMLHttpRequests or fetch)
             start().catch(error => {                                                  -- or call the async function with a .catch if it returns an error response
                 console.log(error);
             });
+JS Promises
+    A promise is an object created by a constructor that takes an anonymous function with two parameters as it's parameter
+        The two parameters are functions that determine the outome of the promise
+    const myPromise = new Promise((resolve, reject) => { });
+    A promise has three states: pending, fulfilled and rejected. It will remain pending until resolve or reject are handled
+    const myPromise = new Promise((resolve, reject) => {
+      if(condition here) {
+          resolve("Promise was fulfilled");
+      } else {
+          reject("Promise was rejected");
+      }
+    })
 
 MongoDB Notes
     MDB References
