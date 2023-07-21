@@ -10,10 +10,11 @@ Tips and Tricks and Troublshooting
 
 Distributions (Distros)
     Differentiated based on the repository and package manager employed
-    Debian
+    Debian (use .deb packages)
         Ubuntu
         Mint
-    Red Hat (RPM based)
+        Debian
+    Red Hat (use .rpm packages)
         Fedora
         Red Hat
         Arch Linux

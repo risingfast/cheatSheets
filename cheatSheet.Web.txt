@@ -81,27 +81,23 @@ References
     https://www.youtube.com/watch?v=j0PpT96EFeg -- Understanding Browser Cookies, Steve Griffith
     https://www.youtube.com/playlist?list=PLyuRouwmQCjkWu63mHksI9EA4fN-vwGs7 -- Fetch playlist, Steve Griffith
     https://www.npmjs.com/ -- npm repository of all node packages
-    https://www.youtube.com/watch?v=P3aKRdUyr0s -- What is NPM, and why do we need it? | Tutorial for beginners, Coder Coder, Jessica Chan
     https://alvinalexander.com/perl/edu/articles/pl010012/ -- cookies and CGI
     https://www.easy400.net/cgidev2o/exhibiu8.htm -- cookies in CGI
     https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie -- cookies and CGI
     https://www.oreilly.com/library/view/cgi-programming-on/9781565921689/06_chapter-03.html -- cookies and CGI
     https://techexpert.tips/apache/perl-cgi-apache/ -- cookies and CGI
     https://www.javascripttutorial.net/ -- extensive set of javascript lessons
-    https://www.youtube.com/watch?v=s6dMWzZKjTs -- Stop wasting time when you're learning to code!, Coder Coder (Jessica Chan)
     https://www.frontendmentor.io/ -- Front End Mentor
     https://javascript30.com/ -- JavaScript 30, Wes Bos
     https://www.youtube.com/watch?v=ec8vSKJuZTk -- Learn JavaScript by Building 7 Games - Full Course, freeCodeCamp.org
     https://wesbos.com/javascript -- Wes Bos' javascript and web development notes
     https://www.youtube.com/c/programmingwithmosh -- Programming courses including HTML and JavaScript with Mosh
-    https://www.youtube.com/watch?v=Xm4BObh4MhI -- Ania Kubow 12hr Youtube coding bootcamp
     https://insights.stackoverflow.com/survey -- annual developer survey in May 2023
     https://syntax.fm/ -- podcasts with Wes Mos
-    https://www.compressed.fm/ -- podcasts on web by James Q Quick
-    https://www.youtube.com/c/jamesqquick -- James Q Quick videos
     https://www.youtube.com/kevinpowell -- Kevin Powell css courses
     https://zerotomastery.io/courses/coding-bootcamp/ -- paid course
     https://www.youtube.com/playlist?list=PLBf-QcbaigsJysJ-KFZvLGJvvW-3sfk1S -- Leon Noel Bootcamp for WebDev
+    https://www.youtube.com/watch?v=Xm4BObh4MhI -- Ania Kubow 12hr Youtube coding bootcamp
     https://www.youtube.com/watch?v=kUMe1FH4CHE&list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88 -- Dave Gray teaches HTML and CSS using VSCode
 
 Lambda School Web Development Deandra Ryan-Mas
@@ -264,6 +260,18 @@ Coder coder (Jessica Chan)
     https://www.youtube.com/watch?v=SsF8sP7MOLE -- How to keep up with trends in web development
     https://www.youtube.com/watch?v=4AzsPnH488Q -- How to debug your code faster
     https://www.youtube.com/watch?v=OdkzB13xjL0 -- Life/channel update
+    https://www.youtube.com/watch?v=aydFCQiUW44 -- How I setup VS Code for a beginners front-end workflow
+    https://coder-coder.com/best-web-development-books/ -- book recommendations
+    https://coder-coder.com/best-web-development-courses/ -- web development training courses
+    https://www.youtube.com/watch?v=cnt_rMA1pe0 -- How to Make a Super Simple HTML Website [Tutorial]
+    https://www.youtube.com/watch?v=P3aKRdUyr0s -- What is NPM, and why do we need it? | Tutorial for beginners
+    https://www.youtube.com/watch?v=UQGoVB_zMYQ -- How to stay motivated when learning to code?
+    https://www.youtube.com/watch?v=jfMHA8SqUL4 -- Sass and BEM for beginners
+
+James Q Quick
+    https://www.compressed.fm/ -- podcasts on web by James Q Quick
+    https://www.youtube.com/c/jamesqquick -- James Q Quick videos
+    https://www.youtube.com/watch?v=WPqXP_kLzpo -- Visual Studio Code Crash Course
 
 Document Object Model (DOM)
     https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction -- DOM introduction
@@ -271,19 +279,6 @@ Document Object Model (DOM)
     https://www.youtube.com/watch?v=O6BNfJz3rgs&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=2 -- Steve Griffin Intro to the DOM (Done)
     https://www.youtube.com/watch?v=KShnPYN-voI -- The DOM in 4 minutes
     https://www.youtube.com/watch?v=v7rSSy8CaYE&t=11s -- Learn JavaScript DOM Traversal In 15 Minutes, Web Dev Simplified
-
-CSS Games
-    https://javascript.info/
-    https://developer.mozilla.org/en-US/docs/Web/JavaScript
-    https://web.dev/learn/
-    https://flukeout.github.io/ -- css diner
-    https://flukeout.github.io/
-    https://flexboxfroggy.com/
-    https://mastery.games/flexboxzombies/ -- flexbox zombies
-    https://cssgridgarden.com/
-    https://codingfantasy.com/games/css-grid-attack
-    https://codingfantasy.com/games/css-grid-attack
-    https://cssbattle.dev/
 
 Definitions
     asynchronous - non-blocking task run in a separate parallel thread
@@ -330,6 +325,14 @@ Image Tools and Libraries
     https://tinypng.com/ -- photo compression site
     https://tinyjpg.com/ -- photo compression site
     https://compresspng.com/ -- compress different file types w/no size limit
+    https://placeholder.com -- placeholder images of any size
+    https://unsplash.com -- free images
+    https://pexels.com -- free images
+    https://gratisography.com -- free images
+    https://pixabay.com
+    https://emojipedia.org/ -- emoji libraries
+    irfanview -- image resizing software (free)
+
 
 Chart and Graph Libraries
     https://d3js.org/  d3.js
@@ -405,6 +408,7 @@ Coding Challenges
 
 Web and Text Editor Tools 
     https://atom.io/ -- Atom editor and IDE download site
+    https://brackets.io/ -- Brackets open source editor
     https://code.visualstudio.com/ -- Visual Studio - installs as Microsoft Visual Studio Code
     Visual Studio Code (vscode) and LiveServer extension
     https://emmet.io/ -- Emmet CSS helper plugin for HTML shortcut keys
@@ -421,21 +425,39 @@ Web Authoring Software
     https://sourceforge.net/projects/kompozer/ -- Kompozer web Authoring software (freeware)
 
 Visual Studio Code (VS Code)
+    General
+        Based on electronjs technology for building desktop applications in JS for multiple operating systems
     Visual Studio Code Training
         https://www.youtube.com/watch?v=VqCgcpAypFQ -- Visual Studio Code for Beginners 0:30 (Done)
         https://www.youtube.com/watch?v=WPqXP_kLzpo -- Visual Studio Code Crash Course 1:30
     Visual Studio Code Extensions
         Live Server -- local webserver updated in real time
-        Emmet -- javascript code completion shortcuts
-        Molokai++ -- text colourizing theme matching submlime text theme
+        Emmet -- javascript code completion shortcuts (built in to vs code) docs.emmet.io/cheat-sheet
+        Monokai++ -- text colourizing theme matching submlime text theme
+        Prettier -- text formatter
         Vim -- vim emulation
     VisualStudio Code Shortcuts
-        <Ctrl>` - open console and close console (i.e. console toggle)
+        ! <tab> -- create HTML boiierplate
+        <Ctrl>` -- open console and close console (i.e. console toggle)
+        <Ctrl> , -- user options and settings
         Source Directory C:\Users\gjarman\Documents\Computing\Web\Git\VSCode1
         <Ctrl> / -- comment a line
+        <Alt>-z -- wrap a line
+        <Ctrl>-b -- toggle left side bar
+        <Ctrl><Shft> p -- command pallett
+        <Ctrl> <tab> -- switch files
+        <Ctrl> z -- undo
+    Features
+        Editor: Font Ligatures -- special characters replacing groups of characters like arrows
+        Editor: Word Wrap
+        Editor: Word Wrap Column 80
+        View: toggle zen mode -- hides decorator areas such as line number, menus etc
+        View: toggle minimap
 
 Emmet Shortcuts
+    ! -- new HTML document outline
     doc <tab> -- start an HTM document
+    a -- anchor
 
 JSON (Java Script Object Notation)
     http://www.json.org/
@@ -559,15 +581,25 @@ Dani Krossing
     https://www.youtube.com/watch?v=HgwCeNVPlo0 -- How to Create Website Layouts Using CSS Grid | Learn HTML and CSS | HTML Tutorial
 
 HTML Tag and Element Structure
+    Two main areas: head and body
+        head contains only metadata
+        body contains viewable data elements
     <!DOCTYPE html> -- the only DOCTYPE declaration for HTML5. Declaration to the browser identifying the html version to render
     <html lang="en-US"> -- html tag with embedded lang attribute (for search engines)
         <head> -- metadata region (notrendered). Metadata typically define the document title, character set, styles, scripts, and other meta information)
-            <title>This is the page title</title> -- appears in the page tab of the browser
-            <meta name="description" content="This is the description"> -- picked up by the search engine
             <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="author" content="Geoffrey Jarman">
+            <meta name="description" content="This is the description"> -- picked up by the search engine
+            <title>This is the page title</title> -- appears in the page tab of the browser
+             <link rel=""icon" href=""html5.png" type=""image/x-icon"> -- add an icon to the page tab
         </head>
-        <body>
-            defines the body area of HTML containing non-metadata (rendered data)
+        <body> -- defines the body area of HTML containing non-metadata (rendered data)
+            <h1>Main page title</h1>
+            <h2>Subtitle</h2>
+            <h3>Section Title</h3>
+
+            
         </body>
     </html>
     Attributes are within the opening HTML tag and define characteristics of the tag (metadata)
@@ -575,11 +607,11 @@ HTML Tag and Element Structure
     Meaningless elements <DIV> and <SPAN> are used to assign CSS but are otherwise meaningless
 
 Inline vs Block Elements
-    Block elements appear around their content that start and end on a new line(e.g. <DIV>
+    Block elements appear (e.g. <h1> <p> <div>
     Inline elements do not start on a new line and only take up as much width as necessary ... they appear immediately infront of and after their content (e.g. <SPAN>)
 
 HTML Rules
-    Extra spaces are removed by rendering (space, tab, newline) unless protected by <pre> preformat tag which preserves whitespace
+    Extra spaces are removed (aka whitespace collapsing) by rendering (space, tab, newline) unless protected by <pre> preformat tag which preserves whitespace
     Case doesn't matter in tags but lower case is the standard
     Quotes can be single our double on attributes and nesting is allowed on opposite types
 
@@ -587,17 +619,24 @@ HTML Tags and Attributes (tags always lower case and attributes always s/d-quote
     <!--      --> comments
     <!DOCTYPE html> first element on an HTML page
     <a href="http://google.com"  target="_blank">I am a link</a> -- anchor self-closing element with attributes, target="_blank" opens in new page, target="_self" opens in the current page (the default), HREF is Hyptertext REFerence
-    <a href="http://google.com">I am a link</a> -- anchor self-closing element with attributes, _blank opens in new page
+    <a href="http://gmogle.com">I am a link</a> -- anchor self-closing element with attributes, _blank opens in new page
+    <a href="mailto:gjarman2020@gmail.com">Email</a> -- email anchor tag to open an email client
+    <a href="tel:+19724677302">Phone</a> -- phone anchor tag to open a dialer
+    <a href=:/"><Home>></a> -- links to the home page in the directory i.e. index.html
+    <abbr title="abbreviation tip></abbr> -- adds a dotted underlining to the text and mouse-over hint text
+    <address></address> -- italicizes addresses and assigns them as addresses for semantic parsing
     <article> -- HTML5 grouping of text that has meaning on its own
     <aside> -- content with a topic that is aside from the content it is near
     <body> -- body (rendered) region of an html document
     <b> -- bold
     <br> -- line break
     <button> -- clickable button
-    <div></div> -- content division element, a block element or container, defined as a boundary for CSS, meaningless otherwise, a CSS container
+    <div></div> -- content division or divider element, a block element or container, defined as a boundary for CSS, meaningless otherwise, a CSS container
     <details><summary></summary</details> -- drop down details below summary heading and drop down arrow
     <del> -- deleted text (lined through)
-    <em> -- emphasized or stressed text (italicized)
+    <dl><dt><dd>>/dd></dt></dl> -- description list with description items and explanations
+    <em> -- emphasized or stressed text (italicized) inline element
+    <fieldset></fieldset> within <form></form> to group elements on a firl
     <footer> -- footer section of document
     <h1></h1> Heading 1 important - matches a search engine priority (size is driven by CSS)
     <h1 style ="font-size: 32px;">Heading 1</h1> -- inline CSS to change fontsize
@@ -607,20 +646,25 @@ HTML Tags and Attributes (tags always lower case and attributes always s/d-quote
     <h5></h5> Heading 3 even less important
     <h6></h6> Heading 6 least important
     <head> container for metadata not displayed
-    <header> -- specifies the heading of a document containing introductory headings and content
+    <header> -- specifies the heading of a document within the <body> containing introductory headings and content
     <hr> -- horizontal rule or line
     <html> -- whole document element
     <img src="https://lorempixel.com/420/320/abstract/1/Sample"/> -- image self-closing element with src attribute
-    <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"> -- with src and size attributes - alt is text if image can't be displayed
-    <input> -- data input field, optionally associated with a label element using the for= attribute on the label
+    <img src="w3schools.jpg" alt="W3Schools.com" width="104" title="Mouseover text for an image" height="142"> -- with src and size attributes - alt is text if image can't be displayed
+    <img src="img/football.png" alt="The football image is missing" title="Mouseover football" width="180"> -- width without height will scale the image with a consistent aspect ratio
+    <img src="img/football.png" loading="lazy"> -- lazy or eager loading delays or moves up the loading of an image which is below the 'fold' or bottom of the displayed page
+    <input type="text" name="inputName" id="inputName" placeholder="Type something" autocomplete="on" required="true" autofocus> -- data input field, optionally associated with a label element using the for= attribute on the label
+    <input type="password" name="inputName" id="inputName" placeholder="Type your pwd"> -- data input field for a password
+    <input type="tell" name="inputName" id="inputName" placeholder="Type your phone pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" -- data input for a telephone
     <i> -- italic
     <ins> -- inserted text (underlined)
     <label> -- text optionally tied to an input element (use <span> for non-input related text
+    <legend> -- heading for a fieldset
     <link rel="stylesheet" type="text/css" href="theme.css"> -- CSS link in the <head> tag region
-    <main> -- main document content
+    <main> -- main document content, only one <main> per page is allowed, within the <body> tag and does not include elements repeating across pages such as navigation links
     <mark> -- highlighted (background highlighting)
-    <nav> -- horizontally grouped navigation anchors or navigation area
-    <ol><li></li></ol> -- ordered list (numbered) of <li> list items
+    <nav aria-label="primary-navigation"> -- horizontally grouped navigation anchors or navigation area containing anchors referencing section id's, multipls <nav>'s allowed
+    <ol start="50"><li></li></ol> -- ordered list (numbered) of <li> list items with optional starting number
     <p> paragraph tag, for contiguous block of text. Each paragraph starts a new line
     <p style="color:red">Red words.</p> -- paragraph with embedded CSS style attributes
     <p style="font-size: 10px;"> -- paragraph with embedded CSS for font size
@@ -632,10 +676,15 @@ HTML Tags and Attributes (tags always lower case and attributes always s/d-quote
     <small> -- smaller size font
     <span></span> -- iinline container version of <div> primariy used for inline identification and styling blocks of text that appear on the same line as other spans (divs appear on separate lines> and have style attributes, meaningless otherwise
        <span></span> -- formatted region referenced in CSS
-    <strong> -- important text emphasized or bolded
+    <strong> -- important text emphasized or bolded but as an inline element
     <sub> -- subscripted text
     <sup> -- superscripted text
+    <table border="10" cellpadding="10"cellspacing="0"> -- table
+    <tr> -- table row
+    <th colspan="2"> -- table column header repeated within the first <tr>
+    <td> -- table data -- repeated within in each <tr>
     <textarea></textarea> -- multiline text area
+    <u></u> -- underline
     <ul><li></li></ul> -- unordered list (bullets) of <li> list items
 
 HTML Math Symbols
@@ -652,25 +701,25 @@ HTML Math Symbols
     &not
     &int -- integral
 
-HTML Semantic Tags introduced in HTML5
-
-HTML Elements with meaningful names: <p>, <h1>, <header>, <body> etc have meaning
+HTML Elements with meaningful names: <p>, <h1>, <header>, <body> etc have obvious meaning to the programmer and the browser
     Semantic elements introduced in HTML5: 
-        <article> text with a heading
-        <aside> right side text aka sidebar content
+        <address>
+        <article> text with a heading or topic, otherwise use <section>
+        <aside> right side text aka sidebar content or non-primary text
         <details> heading with a drop down arrow for additional text
         <figcaption> caption for an image
-        <figure> surrounding elements for an image and figcaptoin
+        <figure> surrounding elements for an <img> tag and <figcaption> tag
         <footer> defines a footer in a document
-        <header> header content ... cannot be within a footer
+        <header> header content ... within the body, cannot be within a footer
+        <hr> horizontal rule for topic changes
         <main> main page content distinct to a single page (excludes asides, navbars footers etc)
-        <mark> to highlight text with background marker color
-        <nav> area for navigation links
-        <section> 
-        <summary> visible heading for a <details> element
+        <mark> to highlight text with background marker color -- inline element
+        <nav> area for navigation links containing anchors referencing section id's
+        <section> but use <article> if a heading is needed
+        <summary> visible heading within a <details> element
         <time> mapping text to a date and time
 
-HTML Non-semantic elements: <div> and <span> are used to reference CSS treatments
+HTML Non-semantic elements: <div> and <span> are used to reference CSS treatments but have no explicit meaning
 
 HTML Tag Hierarchy and Structure
     <!DOCTYPE html>
@@ -721,13 +770,29 @@ HTML Entities
     &#entity_number
     &#38 -- & (or &amp)
     &#34 -- #
-    &#60 -- < (or &lt;)
-    &#62 -- > (or &gt;) 
-    &copy; -> copyright symbol
+    &#60 -- (or &lt;)
+    &#62 -- (or &gt;) 
+    &copy -- copyright symbol
+    &gt -- greater than symbol
+    &lt -- less than symbol
+    &nbsp -- non-breaking blank space
 
 CSS Reference
      https://www.w3.org/TR/CSS21/propidx.html -- elements and inheritance
      https://css-tricks.com/
+
+CSS Games
+    https://javascript.info/
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript
+    https://web.dev/learn/
+    https://flukeout.github.io/ -- css diner
+    https://flukeout.github.io/
+    https://flexboxfroggy.com/
+    https://mastery.games/flexboxzombies/ -- flexbox zombies
+    https://cssgridgarden.com/
+    https://codingfantasy.com/games/css-grid-attack
+    https://codingfantasy.com/games/css-grid-attack
+    https://cssbattle.dev/
 
 CSS Rules
     CSS Can control the appearance of multiple web pages
@@ -739,14 +804,23 @@ CSS Tricks
     Use the body tag to reference the entire document in the stylesheet
     fonts.google.com has 1000 free fonts
     Use getComputedStyle to fetch style values from a separate CSS file
-    Use attribute autofocus (HTML5) to set focus on an item at page load
+    Use attribute autofocus (HTML5) to set focus on an item at page load such as the <input> element
     Use style font-weight:bold to bold text from css
     Set inline elements to inline-block or block to set their width
     Use STYLE="postion:relative" on a surround <DIV> element to position elements within the <DIV>
     Set the background color on a DIV element to show it's position and contents on a page
     Don't use margin:auto on inline elements: change to block first
 
-CSS Color Tools
+CSS Comments
+    /* .... */ 
+
+CSS Colors and Color Tools
+    HEX Color Model
+        HEX colors are represented in hexadecimal: #RRGGBB with each in the range 00-FF to set the intensity of each color
+        #000000 black, #ffffff white, #ff0000 red, #00ff00 green, #0000FF blue
+    RGB Color Model
+        rgb(171, 69, 26)
+        rgb(171, 69, 26, 0.5) -- includes opacity of 0.5
     Google "Color Picker" to get Google's color picking tool on the search results page
     https://material.io/design/color/the-color-system.html
     https://material.io/design/color/the-color-system.html#tools-for-picking-colors
@@ -760,7 +834,7 @@ CSS Property and Value Pairs
     align-items: center -- aligns items along a center line
     background-color:<value>
     background-image:url<value> e.g. background-image: url("/imgfolder/paper.gif");
-    border: 5px solid green
+    border: 5px solid green -- three separate properties
     border-width: 5px
     border-style: solid
     border-color: green
@@ -813,14 +887,29 @@ CSS Property and Value Pairs
     margin-right:
     z-index: -1; set precedence of an overlapping element
 
+CSS Common Settings
+    html {
+        font-size: 100%;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.3
+        margin: 0px;
+        padding: 0px;
+        background-color: #202020;
+        color: #ffffff;
+    }
+
 CSS Flexbox
+    Enables dynamic sizing and resizing of elements within a container
     display:flex -- assign to outer div for flexbox layout of inner components (i.e assign on a parent element)
-    flex: 1 (flex values of 1 or 2 or 3 etc) assign on the inner element to give proportional size within the box
     flex-direction:<value>, column or row. column to stack flex elements or row to line them out, left to right. 
+    justify-content:<value> start, end, flex-start, flex-end, center, left, right, normal, space-between, space-around, space-evenly -- to space within a flexbox
+    flex: 1 (flex values of 1 or 2 or 3 etc) assign on the inner element to give proportional size within the box
     order 1 or 2 or 3, on each element to specify the order of appearance in the outer flexbox
     align-items: start (or end or center or stretch (default), to change the size of each element in the flex box and align them
-    flex-wrap: wrap: -- allow wrapping to a second line of elements within a flexbox
-    justify-content:<value> start, end, flex-start, flex-end, center, left, right, normal, space-between, space-around, space-evenly -- to space within a flexbox
+    flex-wrap: wrap: -- allow wrapping to a second row or column of elements within a flexbox
     align-items:<value> top, center, bottom (inside a flexible container)
 
 CSS Units
@@ -845,10 +934,13 @@ CSS can be inserted three ways: inline, internal using <style> in the header, an
 
 CSS Precedence cascades: inline (highest), internal then external
 
-CSS Selector -- selects the tag e.g. h1 {} or class attribute or ID attribute
+CSS Selector -- selects the tag e.g. h1 {} or class attribute or ID attribute or global attribute
      tags are referenced in CSS by name
      classes are referenced in CSS by . prefix
+     multiples classes can be assigned to the same element
      ID's are referenced in CSS by # prefix
+     * is the global selector as in * { ... }
+     data-<string> -- custom tags. eg. data-name, data-id, data-format etc
      descendent selectors .class <tag> -- selects all descendent tags within a class (e.g. .CLS p selects all <p> tags within the CLS class)
 
 CSS Property Value pairs -- a set list of properties and values predefined
@@ -859,7 +951,7 @@ CSS Position property:
      absolute - relative to top corner of parent element
      relative - relative to each other element in HTML
 
-CSS Box Model
+CSS Box Model (inner to outer elements)
      Content - actual text or graphic with a container box
      Padding - spacing between content and border with background color
      Border - boundary of a box or container
@@ -885,8 +977,9 @@ JS Versions (introduced in 1995)
     ES6 -- ECMA6 -- Major Release of Javascript in 2015 (including some enhancements originally planned in ES4)
 
 JS Where Placed in HTML
-    Javascript can be placed in the <head> or <body> of html between <script> tags
-    Javascript is normally placed before </body> or ina separate file and referenced by <script src="common.js"></script> tags in the body
+    Javascript can be placed in the <head> and/or <body> of html between <script> tags
+    Javascript is normally placed in the <head> or before the ending </body> tag and can be inline or in a separate file referenced by <script src="common.js"></script>
+    Javascript can be inline between <script> and </script> tags and placed multiple times in the <head> and <body> regions. Each script is executed in order
     Javascript code is run when the page is loaded
 
 JS Rules and Gotchas
@@ -899,6 +992,7 @@ JS Rules and Gotchas
     ASI means the coder can omit semicolons on code lines and Javascript will insert them during the interpreter run
 
 JS Node Program Stucture
+    {...} delimits a 'block' of code
     require('<package'> -- imports a package into an object from the local file system directory 'node_modules'
         e.g. const express = require('express');
              const Datastore = require('nedb');
@@ -975,13 +1069,17 @@ JS Node NVM Node Version Manager
     Installs any version of node js
 
 JS Node NPM (Node Package Manager) Packages Installation
+    NPM is the main package manager for Node
+    Javascript and CSS frameworks require several NPM packages to be installed
+    Download at nodejs.org -- installs Node and NPM at the same time
+    Check for an installed version with node -v and npm -v to show the version number
     Update to latest NPM
         npm install -g npm@latest -- to get instructions, or ...
         npm install -g npm@8.13.2
     npm -- node package manager
     npm install -g <packagename> installs a node package globally (e.g npm install -g express)
-    npm install -- from within the repo or subdirectory you are using
-    npm uninstall -- to uninstall a package from the subidirectory you are using
+    npm install <packagename> -- from within the repo or subdirectory you are using for local installation
+    npm uninstall -- to uninstall a local package from the subidirectory you are using
     npm test <filename> -- to run the code in a test sling
     npm root -g -- find where global packages are installed
     npm list -- list node packages installed in the current directory (in subdirectory node_modules
@@ -992,9 +1090,16 @@ JS Node NPM (Node Package Manager) Packages Installation
     npm list -- list node packages installed under the local directory
          /mnt/c/Users/gjarm -- linux
          c:\Users\gjarm -- Windows
+    npm view chalk versions -- view all the versions of the 'chalk' package
     npm config get prefix -- find the path node uses to find global modules
     npm init -y -- create package.json file in the local directory -- project configuration file. -y suppresses project questions
     npm install express -- after creating package.json in the local working directory to install the express package
+    package.json global in windows is at C:\Program Files\nodejs\node_modules\npm
+    npm semantic versioning NN.NN.NN (Major, Minor, Patch) number
+        Major versions are not backwards compatible
+        Minor versions are for new features backward compatible
+        Patch versions are minor bug fixes
+    npm update <package> -- update to the latest version of a package
 
 JS Node NPM Packages
     mLab -- cloud hosted mongdb service (now mongodb Atlas)
@@ -1080,14 +1185,22 @@ JS Comparison Operators
     <= less than or equal to
     ? ternary operator (i.e. console.log((a==b) ? 'equal':'not equal'); -- concise test of true or false expression
 
-JS Statements and Comments
-    Comprise Values, Operators, Expressions, Keywords and Comments
+JS Expressions, Statements and Comments
+    Expressions are code fragments that produce a value
+    Statements comprise Values, Operators, Expressions, Keywords and Comments
     // identifies single inline or partial line comment 
     /* ... */ identifies multiline comments
     Statements or lines end in a semicolon ';'
     Multiple lines are allowed in a single statement
     Multiple statements are allowed on a single line with semicolon delimiters
     Multi-line statements do not require a special line continuation character
+
+JS Keywords
+    break case catch class const continue debugger default
+    delete do else enum export extends false finally for
+    function if implements import interface in instanceof let
+    new package private protected public return static super
+    switch this throw true try typeof var void while with yield
 
 JS Data Types (7 different types)
     Data types are stored on the stack and not in the heap
@@ -1097,7 +1210,7 @@ JS Data Types (7 different types)
         -boolean: true or false (lower case, not enclosed in quotes)
         -number: integers, floats, decimals etc (includes NaN and infinity), 
         -string: 'some words'
-            strings use '' or "" interchangeably, and backticks `` to embed variables which are evaluated
+            strings use '' or "" interchangeably, and backticks `` to embed variables which are evaluated or to embed newlines and other special characters without escaping them
             escape embedded quotes in strings with \" or \'
             Strings have built-in's (or native functions)
         -object: the only non-primative datatype and holds multiple key-value pairs: arrays, dates, literals etc
@@ -1117,17 +1230,24 @@ JS Type Conversion (explicit type conversion)
         truthy values - positive and negative numbers and all non-empty strings
         falsy values  - zero and any empty string
 
-JS Strings
+JS Stringsa
+    String(<chars>) -- returns <chars> as a string (same as toString() object method)
+    const myString = "Miscellaneous text";
     string.toUpperCase() -- converts to uppercase
     string.toLowerCase() -- converts to lowercase
     string.trim() -- removes whitespace leading or trailing
     string.length -- length property
-    string.indexOf('<char>'); -- find the position of a character in a string
+    string.includes('<char>') -- returns true if char exists in a string, otherwise returns false
+    string.indexOf('<chars>'); -- find the position of a characters in a string
     string.lastIndexOf('<char>'); -- find the position of the last occurance of a character in a string
-    string.slice(<start>, <end + 1>); -- returns a substring from start index to end index
+    string.padStart(<desired length>, <padchar>) -- left pads a string to a desired lenght with a padding character
+    string.slice(<start incl>, <end excl>); -- returns a substring from start index inclusive  up to end index exclusive
+    string.split(<string with whitespace>); -- splits a string into words as an array
+    string.includes('<char>') -- returns true if char exists in a string, otherwise returns false
+    string.repeat(<number>) -- returns a string repeated <number> times
     string.substr(<start>, <length>); -- returns a substring from start counting length characters
     string.replace('<char'>, '<char>'); -- replaces the first occurance of a character
-    string.includes('<char>') -- returns true if char exists in a string, otherwise returns false
+    string.trim() -- removes leading and trailing whitespaces
 
 JS Escaped Characters in Strings (escape sequences)
     \' single quote
@@ -1139,7 +1259,7 @@ JS Escaped Characters in Strings (escape sequences)
     \b backspace
     \f form feed
 
-JS Variables (let and const, or var prior to ES6)
+JS Variables or Bindings (let and const, or var prior to ES6)
     Use these 3 keywords or by omitting a keyword:
         const = (for constants) cannot be changed once declared (ES6). Use capital letters for const values e.g. const PI = 3.12159
             arrays declared as const can have their memeber values changed
@@ -1148,6 +1268,7 @@ JS Variables (let and const, or var prior to ES6)
         let = (for variables, introduced with ES6, block-scoped), cannot be redeclared, only reassigned
             let variable declarations are not hoisted
         var =  (old term, pre ES6, function-scoped) (predates ES6), can be redeclared and reassigned
+            var variable declarations have global of functional scope and not block scope
             var variable declarations are hoisted
         <none> = global variable
     Variable names must use numbers, letters, '_' or '$', cannot start with a number and cannot contain spaces
@@ -1173,7 +1294,7 @@ JS Functions including ES6 Arrow Functions
         function fMyFun(vars) {<body>}
         These function declarations are hoisted (they can be invoked before declared)
     Syntax 2 Function Expression (not preferred, not hoisted, requires a trailing semi-colon):
-        const fMyFun = function(vars) {<body>}
+        const fMyFun = function(vars) {<body>}a; -- trailing semicolon required
         Invoke by fMyFun();
         Function synonyms can be created as const fMyFuncSyn = fMyFun (a previously declared function)
         The first line of this syntax must include 'function()'
@@ -1184,7 +1305,11 @@ JS Functions including ES6 Arrow Functions
     The {} are not needed if the function only returns a value eg () => "return value";
     functions take parameters and return a result (i.e. a function call)
     functions without return statements return undefined
+    functions with return and no value return undefined
     function expressions can be immediately invoked (IEFE's)
+    All arguments passed in a function have scope within the function only
+    Additional arguments are ignored if specified in a call to a function with fewer parameters
+    Missing parameters are assigned 'undefined'
     All arguments passed in a function are stored in an array 'arguments'
        Access arguments inside a function from the 'arguments' array
        This array can be used in variadic functions with variable numbers of arguments
@@ -1195,6 +1320,7 @@ JS Functions including ES6 Arrow Functions
     Rest Parameter allows any variable number of arguments to be passed by using ...args as the parameter and accessing the arg number with args.length and values with args[i]
 
 JS Functions (pre-defined)
+    Number.isNan(<var>) - tests if a value is a number
     parseInt(<string>, <radix>) converts a string to a number, returns NaN if the first character of <str> in non-numeric and <radix> is the source radix (optional)
 
 JS Anonymous Functons
@@ -1235,7 +1361,8 @@ JS Arrays (One Dimensional)
     
 JS Array Methods
     myArray.join('<char>'); -- joins the elements of an array into a single string with a character delimiter
-    myArray.indexOf('<element>'; -- returns the index of an element in an array
+    myArray.indexOf('<element>'; -- returns the index of the first element occurance in an array
+    myArray.lastIndexOf('<element>'; -- returns the index of the last element occuranc in an array
     myArray.concat(array2) -- creates one combined array from two separate arrays
     myArray.push(value) method appends data to the end of an array and returns the new count of array elements
     myArray.pop() method removes data from the end of an array and returns the popped value
@@ -1244,6 +1371,7 @@ JS Array Methods
     myAarray.every(<function>) returns true if every item in the array returns true on <function>
     myArray.length property returns the array length
     myArray.find(<function> returns the first item in an array where <function> returns true
+    myArray.slice(<start offset inclusive>, <end offset exclusive>) -- returns a slice of an array where end offset is optional
     myArray.sort() method sorts the array temporarily
     myArray.some(<function>) returns true if an array has any items where <function> returns true
     myArray.tostring() method creates a string from an array
@@ -1330,8 +1458,8 @@ JS Iterations and Loops and Conditionals (Control Flow)
     while ... (e.g. while (i < 10) {console.log(i)}); and i must be declared prior to the loop
     do while ... (e.g. do {...} while (i < 10) so the code runs at least once
     for each -- used for arrays (e.g array1.forEach(function(array1){console.log(array1)}) steps through array1 executing a function for each value
-    break -- break out of a loop
-    continue == advance to next iteration of a loop without executing more statements in the current loop
+    break -- break out of an enclosing loop
+    continue == advance to next iteration of an enclosing loop without executing more statements in the current loop
 
 JS Modal Interaction
     prompt(question[, default]) -- Ask a question, and return either what the visitor entered or null if they pressed “cancel”.
@@ -1352,7 +1480,8 @@ JS Best Practices
 
 JS Javascript in HTML
     Embed with the <script> tag
-    <script language=javascript but for HTML5 only <script></script> is needed
+    <script type="text/javascript" src="scripts.js" > -- the type flag is not requires in HTML5 because it is defaulted
+    <script language=javascript> is deprecated and for HTML5 only <script type="text/javascript"></script> is not needed but defaulted
         ..
     </script>
 
@@ -1390,7 +1519,7 @@ JS Object Properties and Methods (Object functions)
             newObj = new myObjConstr(attrib1, attrib2 etc);
     Object.Create() Method
         Clone an existing literal object to create a new object
-    Access object values in an object as properties using dot notation
+    Access object values in an object as properties using dot notation and property names
         myObject.key1;
         myObject.key2;
     Access object values using bracket notation and quoted keys (or variables)
@@ -1400,7 +1529,7 @@ JS Object Properties and Methods (Object functions)
     Assign values to object keys using standard assignments
         myObject.key1 = 'newValue';
         myObject['key1'] = 'newValue;
-    Delete values in objects using the delete keyword
+    Delete properties in objects using the delete keyword
         delete myObject.key1;
         delete myObject['key1'];
     Add keys and values to an existing object
@@ -1428,7 +1557,7 @@ JS Object Properties and Methods (Object functions)
 
 JS Classes
     Use the Class syntax with embedded constructor function to define a class
-    Define a class the same way as defining a function but use initcaps (psueod-classical)
+    Define a class the same way as defining a function but use initcaps (psuedo-classical)
         function User(name, github) {
             this.name = name;
             this.github = github;
@@ -1451,9 +1580,6 @@ JS Math Methods
     Math.floor(<number>); -- rounds down to nearest integer
     Math.ciel(<number>); -- rounds up to nearest integer
 
-JS String Methods
-    const myString = "Miscellaneous text";
-    myStrengt.length; -- length of the string
 
 JS Template Literals
     Template literals or template strings are like strings but with embedded variables
