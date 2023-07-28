@@ -97,8 +97,8 @@ References
     https://www.youtube.com/kevinpowell -- Kevin Powell css courses
     https://zerotomastery.io/courses/coding-bootcamp/ -- paid course
     https://www.youtube.com/playlist?list=PLBf-QcbaigsJysJ-KFZvLGJvvW-3sfk1S -- Leon Noel Bootcamp for WebDev
-    https://www.youtube.com/watch?v=Xm4BObh4MhI -- Ania Kubow 12hr Youtube coding bootcamp
     https://www.youtube.com/watch?v=kUMe1FH4CHE&list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88 -- Dave Gray teaches HTML and CSS using VSCode
+    https://httpstatusdogs.com/ -- http status codes with dog pictures
 
 Lambda School Web Development Deandra Ryan-Mas
     https://lambdaschool.com -- Lambda school mini bootcamp -- post-paid for classes
@@ -209,6 +209,9 @@ Web Dev Simplied
     https://www.youtube.com/watch?v=v7rSSy8CaYE -- Learn JavaScript DOM Traversal In 15 Minutes
     https://www.youtube.com/watch?v=h33Srr5J9nY -- JavaScript ES6 Arrow Functions Tutorial
     https://www.youtube.com/watch?v=R8rmfD9Y5-c -- 8 Must Know JavaScript Array Methods
+    https://www.youtube.com/watch?v=iiADhChRriM -- Learn JSON in 10 Minutes
+    https://www.youtube.com/watch?v=DHvZLI7Db8E -- JavaScript Promises In 10 Minutes
+    https://www.youtube.com/watch?v=V_Kr9OSfDeU -- JavaScript Async Await
 
 Net Ninja Modern Javascript Course
     https://github.com/iamshaunjp/modern-javascript -- Github
@@ -239,6 +242,16 @@ The Coding Train
     https://www.youtube.com/watch?v=2iLVFyYwyRA -- 16.2: const - Topics of JavaScript/ES6
     https://www.youtube.com/watch?v=mrYMzpbFz18 -- 16.3: ES6 Arrow Function - Topics of JavaScript/ES6
 
+Ania Kubow
+    https://www.youtube.com/watch?v=Xm4BObh4MhI -- Ania Kubow 12hr Youtube coding bootcamp
+    https://www.youtube.com/watch?v=6Hb0qZ3PVWI -- ForEach() Explained - A 5 minute Method-Masterclass
+    https://www.youtube.com/watch?v=wdvruTuWvW8 -- Async JavaScript Part 1: What is AJAX?
+    https://www.youtube.com/watch?v=wYRw8f-wrco -- Async JavaScript Part 2: Async vs Sync Explained!
+    https://www.youtube.com/watch?v=3SxxbyWUmVE -- Async JavaScript Part 3: Async Callbacks
+    https://www.youtube.com/watch?v=slIJj-zbs_M -- Async JavaScript Part 4: Promises
+    https://www.youtube.com/watch?v=2MJnTmoAdwI -- Part 5: Async and Await
+
+
 JuniorDeveloper and Codebubb
     https://www.juniordevelopercentral.com/
     https://www.youtube.com/watch?v=SbsfX88o9gA -- How To Print With JavaScript
@@ -254,6 +267,8 @@ Sam Meech-Ward
     https://www.youtube.com/watch?v=Pk3AoFgSiU0 -- JavaScript Callback Functions
 
 Coder coder (Jessica Chan)
+    https://coder-coder.com/best-web-development-books/ -- book recommendations
+    https://coder-coder.com/best-web-development-courses/ -- web development training courses
     https://www.youtube.com/watch?v=s6dMWzZKjTs -- Stop wasting time when you're learning to code!
     https://www.youtube.com/watch?v=P3aKRdUyr0s -- What is NPM, and why do we need it? | Tutorial for beginners
     https://www.youtube.com/watch?v=iXbvS1CrqdA -- My office/setup tour, video gamified
@@ -261,12 +276,11 @@ Coder coder (Jessica Chan)
     https://www.youtube.com/watch?v=4AzsPnH488Q -- How to debug your code faster
     https://www.youtube.com/watch?v=OdkzB13xjL0 -- Life/channel update
     https://www.youtube.com/watch?v=aydFCQiUW44 -- How I setup VS Code for a beginners front-end workflow
-    https://coder-coder.com/best-web-development-books/ -- book recommendations
-    https://coder-coder.com/best-web-development-courses/ -- web development training courses
     https://www.youtube.com/watch?v=cnt_rMA1pe0 -- How to Make a Super Simple HTML Website [Tutorial]
     https://www.youtube.com/watch?v=P3aKRdUyr0s -- What is NPM, and why do we need it? | Tutorial for beginners
     https://www.youtube.com/watch?v=UQGoVB_zMYQ -- How to stay motivated when learning to code?
     https://www.youtube.com/watch?v=jfMHA8SqUL4 -- Sass and BEM for beginners
+    https://www.youtube.com/watch?v=45eWEO0gRHI -- Write code faster in VS Code with Emmet shortcuts
 
 James Q Quick
     https://www.compressed.fm/ -- podcasts on web by James Q Quick
@@ -402,6 +416,8 @@ API Tools
     https://www.getpostman.com/ -- API testing tool
     https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/
     https://developer.mozilla.org/en-US/docs/Web/API -- JS API's
+    http://countrylayer.com/ -- countries API
+    http://api.citybik.es/v2/networks -- bike sharing networks
 
 Coding Challenges
     https://projecteuler.net/ -- math puzzles to solve with programming
@@ -437,7 +453,7 @@ Visual Studio Code (VS Code)
         Prettier -- text formatter
         Vim -- vim emulation
     VisualStudio Code Shortcuts
-        ! <tab> -- create HTML boiierplate
+        ! <tab> -- create HTML boiierplate including <!DOCTYPE>
         <Ctrl>` -- open console and close console (i.e. console toggle)
         <Ctrl> , -- user options and settings
         Source Directory C:\Users\gjarman\Documents\Computing\Web\Git\VSCode1
@@ -455,13 +471,61 @@ Visual Studio Code (VS Code)
         View: toggle minimap
 
 Emmet Shortcuts
-    ! -- new HTML document outline
-    doc <tab> -- start an HTM document
+    ! <tab> -- create HTML boiierplate including <!DOCTYPE>
+    doc <tab> -- start an HTML document between <html></html?
     a -- anchor
+    link -- start a link tag in the head region (eg. for css)
+    h1 -- heading level 1 tag
+    section -- section tags
+    div -- div tags
+    p -- paragraph tag
+    a: -- anchor tag (choose link for an href image)
+    section,content -- a <section class="content"> tag
+    section#content -- a <section id="content"> tag
+    .title -- <div class="title">
+    @title -- <div id="title">
+    section>div -- <section><div></div></section>
+    .flex-parent>.flex-child -- <div class="flex-parent"><div class="flex-child"></div></div>
+    .flex-parent>.flex-child+.flexchild -- <div class="flex-parent><div class="flex-child></div><div class=flex-child></div></div>a
+    div*4 -- 4 sibling <div<>/div> elements
+    lorem20 -- 20 words of lorem ipsum text
+
 
 JSON (Java Script Object Notation)
-    http://www.json.org/
-    http://www.filltext.com/ -- JSON data generator
+    References
+        http://www.json.org/
+        http://www.filltext.com/ -- JSON data generator
+        https://www.youtube.com/watch?v=iiADhChRriM -- Learn JSON in 10 Minutes, Web Dev Simplified
+        https://jsoncrack.com/editor -- JSON visualizer
+    Browser Plugins
+        https://chrome.google.com/webstore/detail/jsonview/ -- JSONView Chrome Plugin
+    Supported Data Types
+        Strings: "Hello World"
+        Numbers: 10 1.5.-30 1.2e4
+        Booleans: true false
+        null: empty or nothing value for a key value pair
+        Arrays []
+        Objects { :key": "value"}
+    File Extensio: .json
+    JSON Files; Top level is an object or array
+    JSON is a serialized data notation for transferring data between systems
+    JSON.stringify() -- convert a JS object data to JSON string data for file storage of transmission to a server
+    JSON.parse() -- converts/extracts a string of data from JSON to a JSON object or variable based on a selector label
+    Syntax is the same as a javascript object literal
+    Used to represent data, in API's, for configuration files
+    Supported datatypes: strings, numbers, booleans, null, arrays and objects
+    {} enclose objects
+    [] enclose arrays
+    JSON.stringify(myArray) - sets array elements in printable or transmittale of savable string format but with properties and string property values quoted
+    let jsondata = {"lat": <latvalue>,
+                    "lng": >lngvalue>,
+                    };
+    const {lat, long} = jsonData -- json destructuring to assign the data to variable within js
+    let jsonarraydata = {"names"" ["Evan", "Geoffrey", "Susan"]
+                        };
+    https://jsonlint.com/ -- JSON validator and formatter
+    https://www.browserling.com/tools/json-prettify -- JSON minifier and prettifier
+
 
 Cookies
     Uses: Session management, customization and tracking 
@@ -616,7 +680,7 @@ HTML Rules
     Quotes can be single our double on attributes and nesting is allowed on opposite types
 
 HTML Tags and Attributes (tags always lower case and attributes always s/d-quoted, but not required unless in xhtml)
-    <!--      --> comments
+    <!--      --> comments (or <ctrl>/ for highlighted HTML in VS Code
     <!DOCTYPE html> first element on an HTML page
     <a href="http://google.com"  target="_blank">I am a link</a> -- anchor self-closing element with attributes, target="_blank" opens in new page, target="_self" opens in the current page (the default), HREF is Hyptertext REFerence
     <a href="http://gmogle.com">I am a link</a> -- anchor self-closing element with attributes, _blank opens in new page
@@ -630,7 +694,7 @@ HTML Tags and Attributes (tags always lower case and attributes always s/d-quote
     <body> -- body (rendered) region of an html document
     <b> -- bold
     <br> -- line break
-    <button> -- clickable button
+    <button></button> -- clickable button
     <div></div> -- content division or divider element, a block element or container, defined as a boundary for CSS, meaningless otherwise, a CSS container
     <details><summary></summary</details> -- drop down details below summary heading and drop down arrow
     <del> -- deleted text (lined through)
@@ -813,6 +877,7 @@ CSS Tricks
 
 CSS Comments
     /* .... */ 
+    <Ctrl>/ on a highlighted region in VS Code
 
 CSS Colors and Color Tools
     HEX Color Model
@@ -834,11 +899,13 @@ CSS Property and Value Pairs
     align-items: center -- aligns items along a center line
     background-color:<value>
     background-image:url<value> e.g. background-image: url("/imgfolder/paper.gif");
+    background-image: linear-gradient(red, yellow); -- changing color gradient background
     border: 5px solid green -- three separate properties
     border-width: 5px
     border-style: solid
     border-color: green
     border-radius: 8px -- round the corners on a box
+    box-shadow: 10px, 10px, grey; -- on a div to create a grey shadow
     color:<value>; seagreen, blue, ivory etc
     color:#FFFFFF (FF red, FF green, FF blue) Hex value
     color:rgb(255, 255, 255)
@@ -977,10 +1044,12 @@ JS Versions (introduced in 1995)
     ES6 -- ECMA6 -- Major Release of Javascript in 2015 (including some enhancements originally planned in ES4)
 
 JS Where Placed in HTML
-    Javascript can be placed in the <head> and/or <body> of html between <script> tags
-    Javascript is normally placed in the <head> or before the ending </body> tag and can be inline or in a separate file referenced by <script src="common.js"></script>
+    Javascript can be placed inline within the <head> and/or <body> of html between <script> tags
+    <script src="src/index.js"></script> should be the last line in the <body> region so it loads after all html is loaded
+    <script src="src/index.js" defer></script> can be in the <head> region and it loads first but runds after all html is loaded
+    Javascript is normally placed in the <head> or before the ending </body> tag and can be inline or in a separate file referenced by <script src="index.js"></script>
     Javascript can be inline between <script> and </script> tags and placed multiple times in the <head> and <body> regions. Each script is executed in order
-    Javascript code is run when the page is loaded
+    Javascript code is run as the page is loaded
 
 JS Rules and Gotchas
     Functions must be defined in code before they are called
@@ -1190,6 +1259,7 @@ JS Expressions, Statements and Comments
     Statements comprise Values, Operators, Expressions, Keywords and Comments
     // identifies single inline or partial line comment 
     /* ... */ identifies multiline comments
+    <ctrl>/ for higlighted rows
     Statements or lines end in a semicolon ';'
     Multiple lines are allowed in a single statement
     Multiple statements are allowed on a single line with semicolon delimiters
@@ -1317,7 +1387,8 @@ JS Functions including ES6 Arrow Functions
        e.g. document.addEventListener("click", clickFunction)
     Default Parameters
         function myFunc(arg1 = "Yes", arg2 = "Thanks") -- will be used if no arguments are passed in the parameters
-    Rest Parameter allows any variable number of arguments to be passed by using ...args as the parameter and accessing the arg number with args.length and values with args[i]
+    Rest Parameters are variable parameter lists using ...args where args is an array
+        allows any variable number of arguments to be passed by using ...args as the parameter and accessing the arg number with args.length and values with args[i]
 
 JS Functions (pre-defined)
     Number.isNan(<var>) - tests if a value is a number
@@ -1379,6 +1450,7 @@ JS Array Methods
     myArray.includes('<element>') -- returns true if element exists in array, othewise returns false
     myArray.from(list) converst a list to an array
     myArray.forEach(<function>) performs <function> on each element in the array returning a new array
+        myArray.forEach((each) => console.log(each + " on the console")); -- prints each array member on the console with a trailing string
     amyArray.map(<function>) performs the <function> passed to map to transform each element of the array returning a new array
     myArray.filter(<function>) returns elements of the array if the filter <function> returns boolean true
     myArray.reduce(<function>) returns a single value. The <function> takes two arguments: previous returned value plus current value
@@ -1496,7 +1568,7 @@ JS Object Properties and Methods (Object functions)
     const <objName> declares an object that cannot be reassigned but is immutable
     object.freeze(<objName> makes an object immutable - none of its components can change
     Objects comprise key: value pairs where the keys are unique
-    Built-in objects: Date, Math, etc
+    Built-in objects: Date, Math,  String, Array, Object, etc have properties and methods
     Object Literal notation: one way of creating a new object
     The context of object is referenced by this and defined as the object of the calling function
     Create an object with an Object Definition using Object-literal notation
@@ -1591,23 +1663,6 @@ JS Template Literals
 
 JS Document Methods
     Document.write(<FONT COLOR=RED>This is Red</FONT><BR>)
-
-JS JSON
-    Javascript Object Notation (.json filenames)
-    Syntax is the same as a javascript object literal
-    Used to represent data, in API's, for configuration files
-    Supported datatypes: strings, numbers, booleans, null, arrays and objects
-    {} enclose objects
-    [] enclose arrays
-    JSON.stringify(myArray) - sets array elements in printable format but with properties and string property values quoted
-    let jsondata = {"lat": <latvalue>,
-                    "lng": >lngvalue>,
-                    };
-    const {lat, long} = jsonData -- json destructuring to assign the data to variable within js
-    let jsonarraydata = {"names"" ["Evan", "Geoffrey", "Susan"]
-                        };
-    https://jsonlint.com/ -- JSON validator and formatter
-    https://www.browserling.com/tools/json-prettify -- JSON minifier and prettifier
 
 JS Closures
     Functions that return functions bound to data
@@ -1728,7 +1783,7 @@ JS Events and Event Handlers
 JS Locator Functions
     document.getElementById(id) - returns one element node
     document.querySelector(css) - returns one element node (first matching)
-    document.querySelectorAll(css) - returns node list
+    document.querySelectorAll(css) - returns a node list
 
 JS Locator Update Functions
     document.createElement(tagname) - returns 1 element node
