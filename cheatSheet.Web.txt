@@ -18,6 +18,7 @@ Tips and Tricks and Troubleshooting Issues
     Don't use float in an elemet style because the element floats outside it's container <div>
     Cross Origin Resource Sharing (CORS) - set http response header Access-Control-Allow-Origin: * on server side in Ajax response or CGI
     https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+    Dont add () to callbacks because they will cause immediate execution
        
 Newletters
         https://frontendfoc.us/ -- Frontend Focus
@@ -250,6 +251,7 @@ Ania Kubow
     https://www.youtube.com/watch?v=3SxxbyWUmVE -- Async JavaScript Part 3: Async Callbacks
     https://www.youtube.com/watch?v=slIJj-zbs_M -- Async JavaScript Part 4: Promises
     https://www.youtube.com/watch?v=2MJnTmoAdwI -- Part 5: Async and Await
+    https://www.youtube.com/watch?v=r4RQ38EoLds -- Send emails from an HTML Contact Form
 
 
 JuniorDeveloper and Codebubb
@@ -374,6 +376,7 @@ Books
 Tools
     https://haveibeenpwned.com/ -- email address checker for email exposed to hacks
     https://10minutemail.com/10MinuteMail/index.html?dswid=4694 -- temporary emails
+    https://formsubmit.co/ -- email and form forwarding service
     https://downforeveryoneorjustme.com/ -- check if website is down
     https://ads.google.com/ -- adword research and ad purchases with Google
     http://www.domainsbot.com -- domain name search
@@ -418,6 +421,8 @@ API Tools
     https://developer.mozilla.org/en-US/docs/Web/API -- JS API's
     http://countrylayer.com/ -- countries API
     http://api.citybik.es/v2/networks -- bike sharing networks
+    https://api.punkapi.com/v2/beers
+    https://my-burger-api.herokuapp.com/burgers
 
 Coding Challenges
     https://projecteuler.net/ -- math puzzles to solve with programming
@@ -440,7 +445,7 @@ Web Authoring Software
     Nvu http://www.nvu.com/ New View Web Authoring software (freeware)
     https://sourceforge.net/projects/kompozer/ -- Kompozer web Authoring software (freeware)
 
-Visual Studio Code (VS Code)
+Visual Studio Code (VS Code or vscode)
     General
         Based on electronjs technology for building desktop applications in JS for multiple operating systems
     Visual Studio Code Training
@@ -458,11 +463,16 @@ Visual Studio Code (VS Code)
         <Ctrl> , -- user options and settings
         Source Directory C:\Users\gjarman\Documents\Computing\Web\Git\VSCode1
         <Ctrl> / -- comment a line
+        <Ctrl> ~ -- toggle the terminal
         <Alt>-z -- wrap a line
         <Ctrl>-b -- toggle left side bar
+        <Ctrl> p -- filename search
+        <Ctrl><Shft> o -- list tags, variables and functions
         <Ctrl><Shft> p -- command pallett
         <Ctrl> <tab> -- switch files
         <Ctrl> z -- undo
+        <Alt> <num> -- tab number
+        >Alt> <click> -- multi-cursor mode for editing
     Features
         Editor: Font Ligatures -- special characters replacing groups of characters like arrows
         Editor: Word Wrap
@@ -1004,8 +1014,10 @@ CSS Precedence cascades: inline (highest), internal then external
 CSS Selector -- selects the tag e.g. h1 {} or class attribute or ID attribute or global attribute
      tags are referenced in CSS by name
      classes are referenced in CSS by . prefix
-     multiples classes can be assigned to the same element
+     multiples classes can be assigned to the same element eg. <span class = "classOne classTwo"></span>
+     Multiple classes can be selected by chaining together eg. document.querySelectorAll(".classOne.classTwo");
      ID's are referenced in CSS by # prefix
+     ID's can be selected with document.getElementById("<id>") or document.querySelector("#<id>");
      * is the global selector as in * { ... }
      data-<string> -- custom tags. eg. data-name, data-id, data-format etc
      descendent selectors .class <tag> -- selects all descendent tags within a class (e.g. .CLS p selects all <p> tags within the CLS class)
@@ -1431,29 +1443,31 @@ JS Arrays (One Dimensional)
     Avoid sparse arrays
     
 JS Array Methods
-    myArray.join('<char>'); -- joins the elements of an array into a single string with a character delimiter
+    myArray.join('<char>'); -- joins the elements of an array into a single string with a character delimiter and returns the joined string
     myArray.indexOf('<element>'; -- returns the index of the first element occurance in an array
     myArray.lastIndexOf('<element>'; -- returns the index of the last element occuranc in an array
-    myArray.concat(array2) -- creates one combined array from two separate arrays
+    myArray.concat(array2, array3, array4) -- creates one combined array from two or more separate arrays
     myArray.push(value) method appends data to the end of an array and returns the new count of array elements
     myArray.pop() method removes data from the end of an array and returns the popped value
     myArray.shift() removes the first element from an array
-    myArray.unshift() adds an element to the start of the array
+    myArray.unshift(<value>) adds an element value to the start of the array
     myAarray.every(<function>) returns true if every item in the array returns true on <function>
     myArray.length property returns the array length
     myArray.find(<function> returns the first item in an array where <function> returns true
     myArray.slice(<start offset inclusive>, <end offset exclusive>) -- returns a slice of an array where end offset is optional
+    myArray.splicE(offset, count, substitute) -- removes 'count' elements starting at 'offset' an optionally replaces with 'substitute'
+    myArray.splice(offset, 0, new) -- add a new value to myArray at 'offset'
     myArray.sort() method sorts the array temporarily
     myArray.some(<function>) returns true if an array has any items where <function> returns true
     myArray.tostring() method creates a string from an array
     myArray.reverse() method reverses the original order of the array
     myArray.includes('<element>') -- returns true if element exists in array, othewise returns false
-    myArray.from(list) converst a list to an array
+    myArray.from(nodelist) converst a nodelist to an array
     myArray.forEach(<function>) performs <function> on each element in the array returning a new array
         myArray.forEach((each) => console.log(each + " on the console")); -- prints each array member on the console with a trailing string
     amyArray.map(<function>) performs the <function> passed to map to transform each element of the array returning a new array
     myArray.filter(<function>) returns elements of the array if the filter <function> returns boolean true
-    myArray.reduce(<function>) returns a single value. The <function> takes two arguments: previous returned value plus current value
+    myArray.reduce((accum, current, num) => accum + current) --  returns a single value. The <function> takes two arguments: previous returned value 'accum' plus 'current' value. 'num' optional as starting value
 
 JS Arrays (Two Dimensional)
     Two dimensional arrays are defined as arrays of arrays
@@ -1652,6 +1666,8 @@ JS Math Methods
     Math.floor(<number>); -- rounds down to nearest integer
     Math.ciel(<number>); -- rounds up to nearest integer
 
+JS Number Methods
+    num.toFixed(n) formats a number to n decimals
 
 JS Template Literals
     Template literals or template strings are like strings but with embedded variables
@@ -1722,6 +1738,7 @@ JS DOM (Document Object Model) Manipulation
         document.getElementByClassName("<class_name>") -- returns a collection which is converted into an array with Array.from()
         document.getElementByTagName()
         document.addEventListener("click", function() {alert("Thank you for clicking"})
+        document.addEventListener("DOMContentLoaded", init); -- add an event to the final loading of a DOM, such as javascript code
     Query the DOM with querySelector() to get an element reference
         let elementRef = document.querySelector('<cssSelecctor>'); -- identifies the first occurance of <cssSelector> on the document
             e.g. document.querySelector('p'); -- identifies the first paragraph on the document
@@ -1731,7 +1748,8 @@ JS DOM (Document Object Model) Manipulation
         let elementRef = parentNode.querySelector("<cssselector>") where selector is a vald CSS selector expression: element, .class, #id
             <cssselectors> must include selector prefix: #, . etc
     Query the DOM with querySelectorAll() to get multiple element references as a nodelist (not an array but supports forEach and array referencing)
-        const elementRefs = document.querySelectorAll('p') -- fetch all paras in a nodelist (use paras.forEach(arrowfn) to step through a node list)a
+        const elementRefs = document.querySelectorAll('p') -- fetch all paras in a nodelist (use paras.forEach(arrowfn) to step through a node list)
+        A nodelist does not have the methods map, filer and reduce that an array has
     Get a Unique Selector from the Browser
         Inspect the element > riight click on the element in Elements page > Copy > Copy Selector
     Query the DOM with getElementBy('idValue') - no # prefix in 'idValue
@@ -1783,7 +1801,7 @@ JS Events and Event Handlers
 JS Locator Functions
     document.getElementById(id) - returns one element node
     document.querySelector(css) - returns one element node (first matching)
-    document.querySelectorAll(css) - returns a node list
+    document.querySelectorAll(css) - returns a node list with a length property
 
 JS Locator Update Functions
     document.createElement(tagname) - returns 1 element node
