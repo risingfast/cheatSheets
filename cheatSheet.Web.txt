@@ -226,6 +226,7 @@ Net Ninja Modern Javascript Course
     https://www.youtube.com/watch?v=wKBu_dEaF9E&list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc&index=6 -- Modern JavaScript Tutorial #6 - The Document Object Model
 
 The Coding Train
+    https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YgpA3Oht-7B4NBQwFVe3pr -- 16: Topics of JavaScript/ES6-ES8 - p5.js Tutorials (Table of Contents)
     https://www.youtube.com/watch?v=tc8DU14qX6I&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=3 -- 1.1: fetch() - Working With Data & APIs in JavaScript (Done)
     https://www.youtube.com/watch?v=RfMkdvN-23o&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=4 -- 1.2: fetch() - working with tabular data and CSV (Done)
     https://www.youtube.com/watch?v=5-ptp9tRApM&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=5 -- 1.3: fetch() - graphing tabular data and csv (Done)
@@ -252,6 +253,7 @@ Ania Kubow
     https://www.youtube.com/watch?v=slIJj-zbs_M -- Async JavaScript Part 4: Promises
     https://www.youtube.com/watch?v=2MJnTmoAdwI -- Part 5: Async and Await
     https://www.youtube.com/watch?v=r4RQ38EoLds -- Send emails from an HTML Contact Form
+    https://www.youtube.com/watch?v=dfaj4vI8QxE -- How to use APIs
 
 
 JuniorDeveloper and Codebubb
@@ -295,6 +297,9 @@ Document Object Model (DOM)
     https://www.youtube.com/watch?v=O6BNfJz3rgs&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=2 -- Steve Griffin Intro to the DOM (Done)
     https://www.youtube.com/watch?v=KShnPYN-voI -- The DOM in 4 minutes
     https://www.youtube.com/watch?v=v7rSSy8CaYE&t=11s -- Learn JavaScript DOM Traversal In 15 Minutes, Web Dev Simplified
+
+UIdotdev
+    https://www.youtube.com/watch?v=gB-OmN1egV8 - The Evolution of Async JavaScript: From Callbacks, to Promises, to Async/Await
 
 Definitions
     asynchronous - non-blocking task run in a separate parallel thread
@@ -415,6 +420,7 @@ Web Compatability Tools
     caniuse.com -- browser support and compatibility tables
 
 API Tools
+    Check Access-Control-Allow-Header is '*' on Network headers before using
     https://github.com/public-apis/public-apis -- sources of public API's
     https://www.getpostman.com/ -- API testing tool
     https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/
@@ -423,6 +429,13 @@ API Tools
     http://api.citybik.es/v2/networks -- bike sharing networks
     https://api.punkapi.com/v2/beers
     https://my-burger-api.herokuapp.com/burgers
+    https://pokeapi.co/api/v2/pokemon/ditto
+    https://hoppscotch.io/
+    https://api.wordnik.com/v4/words.json/randomWord?<API key> -- fetch a random word
+    https://api.exchangerate.host/convert?from=USD&to=AUD -- single exchange rate
+    https://deckofcardsapi.com/ -- deck of cards, draw and shuffle
+    https://www.freetogame.com/api/games -- computer games
+    https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/ -- API list
 
 Coding Challenges
     https://projecteuler.net/ -- math puzzles to solve with programming
@@ -524,7 +537,7 @@ JSON (Java Script Object Notation)
     Syntax is the same as a javascript object literal
     Used to represent data, in API's, for configuration files
     Supported datatypes: strings, numbers, booleans, null, arrays and objects
-    {} enclose objects
+    {} enclose objects aka 'Object Literal'
     [] enclose arrays
     JSON.stringify(myArray) - sets array elements in printable or transmittale of savable string format but with properties and string property values quoted
     let jsondata = {"lat": <latvalue>,
@@ -747,6 +760,7 @@ HTML Tags and Attributes (tags always lower case and attributes always s/d-quote
     <pre> -- preformatted text (to preserve spacing)
     <ul><li></li></ul> -- unordered list (bulletted) list items
     <section> -- thematic grouping of content typically with a heading
+    <select><opton value="value1">value1</option></select> -- selection from a drop-down list of options
     <small> -- smaller size font
     <span></span> -- iinline container version of <div> primariy used for inline identification and styling blocks of text that appear on the same line as other spans (divs appear on separate lines> and have style attributes, meaningless otherwise
        <span></span> -- formatted region referenced in CSS
@@ -1382,6 +1396,7 @@ JS Functions including ES6 Arrow Functions
         The first line of this syntax must include 'function()'
     Syntax 3 Arrow (Inline) functions (ES6) for Anonymous Functions (myFunc = (vars) => {<body>};
         Arrow functions redefine 'this' to be within the scope of the calling context
+        You cannot have a named arrow function but you can assign an arrow function to a variable
     () is the function invocation operator
     The () are only required if there is more than one parameter or no parameters
     The {} are not needed if the function only returns a value eg () => "return value";
@@ -1397,6 +1412,7 @@ JS Functions including ES6 Arrow Functions
        This array can be used in variadic functions with variable numbers of arguments
     Higher Order Functions are functions that take callbacks as arguments or return functions as a result (i.e. closures)
        e.g. document.addEventListener("click", clickFunction)
+       e.g. map(), filter(), redce() array functions
     Default Parameters
         function myFunc(arg1 = "Yes", arg2 = "Thanks") -- will be used if no arguments are passed in the parameters
     Rest Parameters are variable parameter lists using ...args where args is an array
@@ -1586,7 +1602,7 @@ JS Object Properties and Methods (Object functions)
     Object Literal notation: one way of creating a new object
     The context of object is referenced by this and defined as the object of the calling function
     Create an object with an Object Definition using Object-literal notation
-        const myObj = {}; -- instantiates a new empty object
+        const myObj = {}; -- instantiates a new empty object using the object literal {}
         const myObj = {
             <key1>: <value1>,   -- key value pairs
             <key2>: <value2>,
@@ -1814,6 +1830,10 @@ JS GET Requests
     The format is <URL>?param1=<value1>&param2=<value2>&param3=<value3> ...
     The parameter string is saved as the QUERY_STRING environment variable in the server, starting after the ? separator
 
+JS Async vs Sync functions
+    Async functions are non-blocking functins
+    Sync functions are blocking functions -- the next steps must wait until the sync function is finished
+
 JS AJAX Requests (using XMLHttpRequests or fetch)
     AJAX is implemented by XMLHttpRequests (aka XHR) or by Fetch which is a simplified syntax uses promises
     XMLHttpRequest
@@ -1835,9 +1855,9 @@ JS AJAX Requests (using XMLHttpRequests or fetch)
             });
 JS Promises
     A promise is an object created by a constructor that takes an anonymous function with two parameters as it's parameter
-        The two parameters are functions that determine the outome of the promise
+        The two parameters are functions (resolve and reject) that determine the outome of the promise
     const myPromise = new Promise((resolve, reject) => { });
-    A promise has three states: pending, fulfilled and rejected. It will remain pending until resolve or reject are handled
+    A promise has three states: pending, then fulfilled or rejected. It will remain pending until resolve or reject are handled
     const myPromise = new Promise((resolve, reject) => {
       if(condition here) {
           resolve("Promise was fulfilled");
@@ -1845,6 +1865,10 @@ JS Promises
           reject("Promise was rejected");
       }
     })
+    let p = fetch(hamburgerAPI);
+    p.then(Response => Response.json()).then((json) => console.log(json));
+    p.then(Response => Response.text()).then((text) => console.log(text));
+
 
 MongoDB Notes
     MDB References
