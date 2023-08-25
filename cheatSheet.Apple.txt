@@ -1,0 +1,68 @@
+Apple General Keyboard Shortcuts
+    <cmd> c -- copy
+    <cmd> <opt> <shft> v -- paste without source formatting (paste text only)
+    <cmd> v -- paste
+    <cmd> x -- cut
+    <cmd> z -- undo
+    <cmd> <space> or <Fn> F4 -- open spotlight search to find a file or application
+    <cmd> <tab> -- switch active applications or reopen a hidden application (hold down <cmd> and tap <tab>)
+    <opt> <cmd> h -- hide all active windows other than current window
+    <cmd> m -- minimize the current application to the dock (right side in preview)
+    <cmd> <opt> d -- hide or show the apple dock
+    <cmd> h -- hide the current window
+    <cmd> <opt> <esc> -- open the 'force quit' applications list
+    <cmd> q -- quit and shutdown the current application
+    <cmd> <ctrl> q -- lock the computer and show the lock screen
+    <cmd> <opt> q -- force quit and shutdown the current application
+    <cmd> , -- open current application settings
+    <cmd> <shft> 3 -- full screenshot, automatically saves to the desktop
+    <cmd> <shft> 4 -- screenshot a region
+    <cmd< <shft> 4 | <space> -- and click on any window to screenshot that window
+    <cmd> <shft> 5 -- record screen as video and show all screenshot tools
+    <cmd> f -- find
+    <shft> <cmd> <space> -- show character and emoji viewer 
+    <cmd> F3 -- toggle show clean desktop
+    <opt> <shift> F1/F2 -- adjust screen brightness in small increments
+    <opt> <shoft> F10/f11 -- adjust speaker volume in small increments
+    <Fn> F1 -- dim display
+    <Fn> F2 -- brighten display
+    <Fn> F3 -- mission control (show all open applications as separate windows at once)
+    <Fn> F4 -- spotlight (search)
+    <Fn> F10 -- mute the speaker
+    <Fn> F11 -- volume down
+    <Fn> F12 -- volume up
+
+Safari Keyboard Shortcuts
+    <cmd> t -- open a new tab
+    <shft> <cmd> t -- reopen prior closed tab
+    <cmd> l -- open the address bar
+    <cmd> <backarrow> -- go back
+    <cmd> <fwdarrow> -- go forward
+    <cmd> <click> -- open a link in a new page
+    <cmd> f -- search or find text
+    <cmd> z -- reopen a tab accidentally closed
+
+Finder Shortcuts
+    <cmd> f -- open a search page
+    <cmd> c -- copy a file
+    <cmd> v -- paste a file
+    <cmd> <opt> v -- cut a file (to paste elsewhere, or to delete)
+    <cmd> d -- duplicate a file
+    <space>-- open a quicklook or preview to a file currently selected
+    <cmd> i -- open file info
+    <cmd> <del> -- delete a file
+    <cmd> k -- open 'connect to server'
+    <shft> <cmd> k -- open the network window to see visible network devices
+    <shft> <cmd> r -- open airdrop
+    <shft> <cmd> c -- open the computer window to see hardware and connected devices
+    <shft> <cmd> d -- open the desktop
+    <shft> <cmd> u -- open the utilities folder
+
+Apple Pages
+    <cmd> ~ -- switch between documents
+
+Adobe Acrobat
+    <cmd> f -- or Edit > Find -- find text (use arrow keys to navigate through the results
+
+Miscellaneous
+    Safari > Preferences > General>Open 'Safe' files after downloading -- uncheck to disable automatic preview mode

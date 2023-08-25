@@ -436,6 +436,7 @@ API Tools
     https://deckofcardsapi.com/ -- deck of cards, draw and shuffle
     https://www.freetogame.com/api/games -- computer games
     https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/ -- API list
+    https://api.publicapis.org/entries -- API list
 
 Coding Challenges
     https://projecteuler.net/ -- math puzzles to solve with programming
@@ -449,6 +450,9 @@ Web and Text Editor Tools
     https://www.sublimetext.com/ -- sublime text -- has multiple plugins
     https://notepad-plus-plgg/us.org/ -- customizable editor download page
     https://www.gnu.org/software/emacs/ -- emacs download page
+
+CORS (Cross Origin Resource Scripting) Topics
+    https://byby.dev/js-fetch-cors-credentials#:~:text=To%20use%20fetch()%20with%20CORS%20and%20credentials%2C%20you%20need,response%20headers%20for%20CORS%20compliance.
 
 Web Authoring Software
     Adobe Dreamweaver (paid)
