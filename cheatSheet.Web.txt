@@ -41,6 +41,7 @@ References
     https://www.youtube.com/watch?v=PkZNo7MFNFg -- freecodecamp Javascript tutorial with Beau Carnes
     http ://codingphase.com/
     https://javascript30.com/ -- 30 day JS coding challenges
+    https://edabit.com/challenges/javascript -- Mozilla coding challenges
     https://www.w3schools.com -- courses on everything
     http://www.htmldog.com
     https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw -- Web Dev Simplified Kyle Cook courses on a variety of web topics
@@ -309,8 +310,9 @@ Acronyms
     AJAX - Asynchronous Javascript and XML
     CDN - Content Delivery Network - geographically disbursed servers delivering web contenta
     ECMA - European Computer Manufacturers Association
-    UUID - Universally Unique Identifier
     GUID - Globally Unique Identifier
+    UUID - Universally Unique Identifier
+    TLS - Transport Layer Security (aka SSL)
 
 URL Taxonomy
     https://www.example.site.com/services/summary?arg1=value&arg2=value2
@@ -408,6 +410,8 @@ Chrome Developer Tools
     https://developers.google.com/web/tools/chrome-devtools -- Chrome Devtools guides and reference
     https://develor.chrome.com/devtools/docs/tips-and-tricks
     https://developers.google.com/web/tools/chrome-devtools/ -- new
+    https://www.youtube.com/watch?v=gTVpBbFWry8 -- Chrome DevTools - Crash Course, Free Code Camp
+    https://www.youtube.com/watch?v=y0ue4ZZlZwg -- A Beginner's Guide to Chrome Developer Tools | Elements | Console | Network | Performance
     Chrome debugging tools for JavaScript
     document.designMode="on" to enable design mode
     https://www.youtube.com/watch?v=-q1z8BPFItw&t=519s -- debugging using Chrome Dev Tools
@@ -553,6 +557,13 @@ JSON (Java Script Object Notation)
     https://jsonlint.com/ -- JSON validator and formatter
     https://www.browserling.com/tools/json-prettify -- JSON minifier and prettifier
 
+Graphics
+    Two types on webpages: bitmap (jpeg, png and gif) and SVG (Scalable Vector Graphics)
+    SVG is a text format written with tags
+    SVG can be styled wih CSS
+    SVG can be scripted with javascript
+    SVG can be created by drawing using: Inkscape, Illustrator or Sketch
+    SVG libraries for javascript include: snap.svg, Bonsai and D3.js
 
 Cookies
     Uses: Session management, customization and tracking 
@@ -769,6 +780,7 @@ HTML Tags and Attributes (tags always lower case and attributes always s/d-quote
     <span></span> -- iinline container version of <div> primariy used for inline identification and styling blocks of text that appear on the same line as other spans (divs appear on separate lines> and have style attributes, meaningless otherwise
        <span></span> -- formatted region referenced in CSS
     <strong> -- important text emphasized or bolded but as an inline element
+    <style></style> -- to add css to an html document
     <sub> -- subscripted text
     <sup> -- superscripted text
     <table border="10" cellpadding="10"cellspacing="0"> -- table
@@ -1205,7 +1217,7 @@ JS Node NPM Packages
     mongodb -- mongodb database connector
     http -- http simple server
     express -- webServer
-    mysql2 -- mySQL database connector
+    mysql2 -- mySQL database connector (see https://github.com/mysqljs/mysql#install)
     nedb -- database service
 
 JS nodemon
@@ -1463,6 +1475,8 @@ JS Arrays (One Dimensional)
     Avoid sparse arrays
     
 JS Array Methods
+    myArray.fill(value, start, end) -- fills an array over a range of offsets with a value
+    myArray.fill(value) -- changes or fills all elements in an array with a new value
     myArray.join('<char>'); -- joins the elements of an array into a single string with a character delimiter and returns the joined string
     myArray.indexOf('<element>'; -- returns the index of the first element occurance in an array
     myArray.lastIndexOf('<element>'; -- returns the index of the last element occuranc in an array
