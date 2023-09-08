@@ -407,11 +407,13 @@ Hosting Services
     Netlify
 
 Chrome Developer Tools
+    https://developer.chrome.com/docs/devtools/ -- Google Developer Tools documentation page
     https://developers.google.com/web/tools/chrome-devtools -- Chrome Devtools guides and reference
     https://develor.chrome.com/devtools/docs/tips-and-tricks
     https://developers.google.com/web/tools/chrome-devtools/ -- new
     https://www.youtube.com/watch?v=gTVpBbFWry8 -- Chrome DevTools - Crash Course, Free Code Camp
-    https://www.youtube.com/watch?v=y0ue4ZZlZwg -- A Beginner's Guide to Chrome Developer Tools | Elements | Console | Network | Performance
+    https://www.youtube.com/watch?v=y0ue4ZZlZwg -- A Beginner's Guide to Chrome Developer Tools | Elements | Console | Network | Performance, Bella Capilla
+    https://www.youtube.com/watch?v=lhNIXaIv5vc -- Chrome Developer Tools - Network Panel, Bella Capilla
     Chrome debugging tools for JavaScript
     document.designMode="on" to enable design mode
     https://www.youtube.com/watch?v=-q1z8BPFItw&t=519s -- debugging using Chrome Dev Tools
@@ -558,6 +560,11 @@ JSON (Java Script Object Notation)
     https://www.browserling.com/tools/json-prettify -- JSON minifier and prettifier
 
 Graphics
+    References
+        https://inkscape.org/about/ -- free software for creating SVG's
+        https://cutecutter.com/dashboard -- web page to convert a phot to SVG
+        https://www.youtube.com/watch?v=ZJSCl6XEdP8 -- A beginners guide to SVG | Part One: The Why, What, and How, Kevin Powell
+        https://www.youtube.com/watch?v=3bSKvYUrRGo -- How To Convert A Photo Into An SVG (The Easy Way) So You Can Make A Vinyl Decal // No Software , Cute Cutter demo
     Two types on webpages: bitmap (jpeg, png and gif) and SVG (Scalable Vector Graphics)
     SVG is a text format written with tags
     SVG can be styled wih CSS
@@ -675,6 +682,9 @@ Kevin Powell CSS Course
     https://www.youtube.com/watch?v=R7gqJkdc5dM&t=536s --Floats, Flexbox, Grid? The progression of CSS layouts
     https://www.youtube.com/watch?v=_lEkD8IGkwo -- The EASIEST way to get started with CSS GRID
     https://www.youtube.com/playlist?list=PL4-IK0AVhVjPv5tfS82UF_iQgFp4Bl998 -- CSS Grid videos
+
+Kevin Powell SVG Course
+    https://www.youtube.com/watch?v=ZJSCl6XEdP8 -- A beginners guide to SVG | Part One: The Why, What, and How, Kevin Powell
 
 Gary Simon coursetro
     https://www.youtube.com/watch?v=qTGbWfEEnKI -- Easily Structure your Layout with CSS Grid's 'grid-template-areas'
