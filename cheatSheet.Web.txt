@@ -459,6 +459,8 @@ Web and Text Editor Tools
 
 CORS (Cross Origin Resource Scripting) Topics
     https://byby.dev/js-fetch-cors-credentials#:~:text=To%20use%20fetch()%20with%20CORS%20and%20credentials%2C%20you%20need,response%20headers%20for%20CORS%20compliance.
+    Disable CORS in Chrome with command line switches
+        > start chrome --user-data-dir="C://chrome-dev-disabled-security" --disable-web-security --disable-site-isolation-trials -- in a command dialig in Windows disables CORS
 
 Web Authoring Software
     Adobe Dreamweaver (paid)
@@ -559,7 +561,12 @@ JSON (Java Script Object Notation)
     https://jsonlint.com/ -- JSON validator and formatter
     https://www.browserling.com/tools/json-prettify -- JSON minifier and prettifier
 
-Graphics
+SVG Summary
+    SVG = Scalable Vector Graphics (for graphical artwork such as banners and logos)
+    Software
+        Inkscape -- freeware
+        Affinity Designer -- one time fee
+        Adobe Illustrator -- monthly subscription
     References
         https://inkscape.org/about/ -- free software for creating SVG's
         https://cutecutter.com/dashboard -- web page to convert a phot to SVG
@@ -571,6 +578,17 @@ Graphics
     SVG can be scripted with javascript
     SVG can be created by drawing using: Inkscape, Illustrator or Sketch
     SVG libraries for javascript include: snap.svg, Bonsai and D3.js
+
+SVG Inkscape Navigations
+    Menu > File > Document Properties > Display > Format > US Letter
+    Menu > File > Document Properties > Display > Orientation
+    Tools > Pages Tool > Use mouse to grab page corners
+    Menu > View > Page Grid -- to hide or show page grid
+    Menu > Path > Trace Bitmap -- to convert a bitmap image to an SVG
+    Menu > File > Export -- to export an SVG as a PNG
+    Menu > Path > Object to Path -- to link text to an object
+    Menu > Path > Put on Path -- to wrap text to an object
+    Keyboard > <Ctrl> -- locks the aspect ration of an object when changing the shape
 
 Cookies
     Uses: Session management, customization and tracking 
@@ -727,6 +745,9 @@ HTML Rules
     Case doesn't matter in tags but lower case is the standard
     Quotes can be single our double on attributes and nesting is allowed on opposite types
 
+HTML Boilerplate and Template Tags
+    https://www.sitepoint.com/a-basic-html5-template/#thecompletehtml5boilerplate
+
 HTML Tags and Attributes (tags always lower case and attributes always s/d-quoted, but not required unless in xhtml)
     <!--      --> comments (or <ctrl>/ for highlighted HTML in VS Code
     <!DOCTYPE html> first element on an HTML page
@@ -800,6 +821,33 @@ HTML Tags and Attributes (tags always lower case and attributes always s/d-quote
     <textarea></textarea> -- multiline text area
     <u></u> -- underline
     <ul><li></li></ul> -- unordered list (bullets) of <li> list items
+
+HTML Sectioning Elements (used by Screen Readers and other assistive technologies)a
+    Background
+        Introduced with HTML5 to mark up webpages and add semantic meaning for screen readers
+        Adds the features of ARIA markup to HTML standard tags
+        Used by screen readers and web page outliners such as the Google Chrome HTML5 Outliner plugin
+    Sectionin Elements
+        <main>
+        <article>
+        <section>
+        <aside>
+        <header>
+        <footer>
+        <address>
+    References
+        https://alistapart.com/article/aria-and-progressive-enhancement/ -- Aria
+        https://blog.teamtreehouse.com/use-html5-sectioning-elements
+        
+
+HTML Video Tags
+    References
+        https://www.w3schools.com/tags/tag_video.asp
+    HTML Code Snippet
+        <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>    
 
 HTML Math Symbols
     text inserted directly into HTML to render mathematical symbols
@@ -1126,11 +1174,12 @@ JS Output
     console.clear() -- clears the console
     console.error() -- write an error to the console log
     console.warning() -- write a warning to the console log
+    console.warn() -- write a warning to the console log
     console.dir(document) -- write the components of the current document to the log
     console.log('text to show on the console') -- prints to the command shell in node
     console.log('text1', 'text2') -- prints each string with a space separator
     console.assert()
-    console.table() -- to show JSON data in the console
+    console.table() -- to show JSON data in the console in table format
 
 JS Separate Script File
     <script src="jsprogram.js"> where jsprogram.js is in the same directory as the html

@@ -1,0 +1,20 @@
+Chrome Cheatsheet
+
+Installation Path Windows 11
+    C:\Program Files\Google\Chrome\Application\chrome.exe
+
+Disable CORS in Chrome with command line switches
+    > start chrome --user-data-dir="C://chrome-dev-disabled-security" --disable-web-security --disable-site-isolation-trials -- in a command dialig in Windows disables CORS
+
+Security Settings
+    chrome://settings/adPrivacy -- in the browser bar and disable all options
+
+All Settings 
+    chrome://settings/system -- in the browser bar
+
+Google Developer Tools
+    F12 to toggle the dev tools window
+    <Ctrl><Shft>-I for dev tools windwo
+
+Devices and Sizing
+    <Ctrl><Shft>-M - enable the device toolbar
