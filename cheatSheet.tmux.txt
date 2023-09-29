@@ -20,6 +20,7 @@ Configuration
     ~/.tmux.conf -- local configuration file
 
 Ctrl-b commands (with the tmux prefix)
+    <Alt>-1 -- size vertical panes equally
     $ -- rename a session/window
     % -- split pane vertically
     & -- kill a window (all panes)

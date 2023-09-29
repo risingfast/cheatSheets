@@ -526,6 +526,7 @@ Integrated Development Environments
     https://www.eclipse.org/cdt/ -- Eclipse C Development Tooling
     https://netbeans.org/features/cpp/ -- Netbeans C Development
     https://ide.cs50.io -- Harvard CS50 Teaching IDE (available via https://ide.cs50.io using git credentials)
+    https://www.qt.io/product/development-tools -- Qt Creator IDE
     http://www.smorgasbordet.com/pellesc/ -- Pelles C IDE and Tookit for Windows Dev
     http://www.bloodshed.net/dev/devcpp.html - Dev-Cpp installable IDE for C/C++
     http://www.codeblocks.org/downloads/26 -- Code Blocks installable IDE for C/C++
@@ -726,11 +727,12 @@ GCC Command Options
     -v -- version information (e.g. gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) and include search paths
 
 GCC Include Directories
+    /usr/include -- includes stdio.h, stdlib.h and many other
     /usr/lib/gcc/x86_64-linux-gnu/9/include
     /usr/local/include
     /usr/include/x86_64-linux-gnu
-    /usr/include -- includes stdio.h, stdlib.h and many other
-    /usr/include/mysql -- for added mysql header files
+    /usr/include/mysql -- mysql header files
+    /usr/include/x86_64-linux-gnu/curl -- curl header files
 
 Compilation Process
     C programs are built from one or more compilation or translation units
@@ -1420,6 +1422,7 @@ Functions in the lib.c library and Other Libraries
     gets() -- get a string from stdin (use fgets() which requires a number of characters to avoid buffer overflow)
     index(<string>, <char>) -- returns a pointer to the first occurance of <char> in <string> or returns NULL
     main() -- where a C program starts
+    mainvoid() -- where a C program starts and enforces a restriction that no parameters were passed
     malloc() - e.g int *x = malloc(sizeof(int)), int *arr = (int *)malloc(sizeof(int)*100) etc or NULL, specifies memory required in bytes, memory is not initialized, #include <stdlib.h>
     malloc() returns a void pointer which must be cast to a specific , an unsigned long long integerpointer type
     memcpy( &a, &b, sizeof(<type>)); -- copies memory from b to a #include string.h
