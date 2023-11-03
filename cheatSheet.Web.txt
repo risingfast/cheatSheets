@@ -102,6 +102,8 @@ References
     https://www.youtube.com/watch?v=kUMe1FH4CHE&list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88 -- Dave Gray teaches HTML and CSS using VSCode
     https://httpstatusdogs.com/ -- http status codes with dog pictures
     https://free-for.dev/#/?id=apis-data-and-ml -- free web resources, API's, IDE's, authentication, email and other things
+    https://pixabay.com/sound-effects/ -- free music and sound effects downloads with search
+    https://audiotrimmer.com/# -- online audio file trimmer
 
 Lambda School Web Development Deandra Ryan-Mas
     https://lambdaschool.com -- Lambda school mini bootcamp -- post-paid for classes
@@ -368,14 +370,24 @@ p5.js Graphing References
     https://editor.p5js.org/
     <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script> -- Content Delivery Network (CDN) address for the p5 library
     https://p5js.org/get-started/ -- p5 getting started includuding CDN and running locally or on a server
-    Coding with Pat
+    Coding with Patt
         https://www.youtube.com/playlist?list=PL0beHPVMklwgMz4Z-mNp4_udo9mjBk7pn -- Playlist for intro course
         https://www.youtube.com/watch?v=x1NxkEjfNtI 5.js Tutorial | Getting Started with Creative Coding, Code with Patt
         https://www.youtube.com/watch?v=c8TGtbGAhjQ -- Building Blocks - Creative Coding with p5.js
         https://www.youtube.com/watch?v=-1FKScCEEv0 -- Pixel & Coordinate System - Creative Coding with p5.js
         https://www.youtube.com/watch?v=HNNxQKF8yXA -- Color - Creative Coding with p5.js
         https://www.youtube.com/watch?v=xhdIJo8lxWA -- Variable - Creative Coding with p5.js
-        https://www.youtube.com/watch?v=Ly5XiMxOcv8 -- Changing Size of Array - Creative Coding with p5.js
+        https://www.youtube.com/watch?v=4NBzUZL_TwY -- Array - Creative Coding with p5.js, Coding with Patt
+        https://www.youtube.com/watch?v=W9CcEDxdnmg -- Changing Size of Array - Creative Coding with p5.js
+        https://www.youtube.com/watch?v=3j_cr44OZTc -- p5.js Coding Tutorial | Color Grid (Nested Loop / 2D Array)
+        https://www.youtube.com/watch?v=qL7-i9lF88U -- What is Object-Oriented Programming (OOP) - Creative Coding with p5.js 
+        https://www.youtube.com/watch?v=zdi2ZOSpBuM -- Array of Objects - Creative Coding with p5.js
+        https://www.youtube.com/watch?v=bxL6QOKvw3A -- Pass by Value vs Pass by Reference - Creative Coding with p5.js
+        https://www.youtube.com/watch?v=fTKUPehFF2A -- How to Code a Game of Snake in Javascript... SUPER EASY (p5.js Tutorial)
+
+        https://www.youtube.com/watch?v=zdi2ZOSpBuM -- Array of Objects - Creative Coding with p5.js
+2D Array - Creative Coding with p5.js
+
     The Coding Train
         https://www.youtube.com/watch?v=yPWkPOfnGsw -- 1.1: Code! Programming for Beginners with p5.js, The Coding Train
         https://www.youtube.com/watch?v=MXs1cOlidWs -- 1.2: p5.js Web Editor - p5.js Tutorial
@@ -987,6 +999,14 @@ HTML Entities
     &lt -- less than symbol
     &nbsp -- non-breaking blank space
 
+HTML Sound and Music
+    In HTM:
+        <audio id="success-audio" src="funny.mp3" type="audio/mp3" loop></audio>
+    In JS:
+        let successAudio = document.querySelector("#success-audio");
+        successAudio.play();
+        successAudio.pause();
+
 CSS Reference
      https://www.w3.org/TR/CSS21/propidx.html -- elements and inheritance
      https://css-tricks.com/
@@ -1207,6 +1227,10 @@ JS Rules and Gotchas
     Uss camelCaseLettering for variable names
     JS lines end with a semicolon - JS uses Automatic Semicolon Insertion (ASI) to insert them where they are missing
     ASI means the coder can omit semicolons on code lines and Javascript will insert them during the interpreter run
+
+JS Pass by Value or Pass by Reference
+    Primitives are passed by value
+    Arrays and objects are passed by reference
 
 JS Node Program Stucture
     {...} delimits a 'block' of code
