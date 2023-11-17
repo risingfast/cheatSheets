@@ -24,7 +24,7 @@ Newletters
         https://frontendfoc.us/ -- Frontend Focus
         https://tldr.tech/ -- TLDR 
 
-References
+eeferences
     https://developer.mozilla.org/en-US/ for tutorials on CSS and HTML and Javascript
     https://developer.mozilla.org/en-US/docs/web/javascript -- tutorials and feature lookups for Javascript
     https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
@@ -61,7 +61,7 @@ References
     http://htmldog.com/ -- Javascript tutorials
     https://www.w3schools.com/js/default.asp
     https://www.w3schools.com/html/html_scripts.asp -- W3 schools JS intro course within HTML course
-    https://www.w3schools.com/jsref/default.asp -- Javascript reference
+    https://www.w3schools.com/jsref/default.asp -- Javascript 
     http://web.stanford.edu/class/cs98si/ -- Stanford JS course Introduction to Javascript
     http://www.gbengasesan.com/fyp/23/ -- Using Javascript Mark Reynolds (book)
     http://www.gbengasesan.com/fyp/13/ -- JavaScript (Laura Lemay book)
@@ -104,6 +104,11 @@ References
     https://free-for.dev/#/?id=apis-data-and-ml -- free web resources, API's, IDE's, authentication, email and other things
     https://pixabay.com/sound-effects/ -- free music and sound effects downloads with search
     https://audiotrimmer.com/# -- online audio file trimmer
+    https://www.freeconvert.com/wav-to-mp3 -- convert .wav audio to .mp3 audio
+    https://mixkit.co/free-sound-effects/ -- many free downloadable sound effects
+    https://stackoverflow.com/questions/8454510/open-url-in-same-window-and-in-same-tab -- open a new html page in the current browser window in javascript
+    https://www.sitepoint.com/get-url-parameters-with-javascript/ -- fetch URL GET parameters in Javascript
+    https://www.geeksforgeeks.org/how-to-insert-a-javascript-variable-inside-href-attribute/ -- insert GET parameters in href link
 
 Lambda School Web Development Deandra Ryan-Mas
     https://lambdaschool.com -- Lambda school mini bootcamp -- post-paid for classes
@@ -229,6 +234,18 @@ Net Ninja Modern Javascript Course
     https://www.youtube.com/watch?v=X0ipw1k7ygU&list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc&index=5 -- Modern JavaScript Tutorial #5 - Objects
     https://www.youtube.com/watch?v=wKBu_dEaF9E&list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc&index=6 -- Modern JavaScript Tutorial #6 - The Document Object Model
 
+Net Ninja Object Oriented Javascript
+    https://www.youtube.com/playlist?list=PL4cUxeGkcC9i5yvDkJgt60vNVWffpblB7 -- Playlist
+    https://www.youtube.com/watch?v=7d9H34ZVRPg -- Object Literals
+    https://www.youtube.com/watch?v=ni9e-lOEw3Q -- Updating Properties
+    https://www.youtube.com/watch?v=Ug4ChzopcE4 -- Classes
+    https://www.youtube.com/watch?v=HboT8g_QSGc -- Class Constructors
+    https://www.youtube.com/watch?v=hy-C4NY7A_8 -- Class Methods
+    https://www.youtube.com/watch?v=8x1fygdWabY -- Method Chaining
+    https://www.youtube.com/watch?v=_cgBvtYT3fQ -- Class Inheritance
+    https://www.youtube.com/watch?v=4jb4AYEyhRc -- Prototype
+   
+
 The Coding Train
     https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YgpA3Oht-7B4NBQwFVe3pr -- 16: Topics of JavaScript/ES6-ES8 Tutorials (Table of Contents)
     https://www.youtube.com/watch?v=tc8DU14qX6I&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=3 -- 1.1: fetch() - Working With Data & APIs in JavaScript (Done)
@@ -258,7 +275,6 @@ Ania Kubow
     https://www.youtube.com/watch?v=2MJnTmoAdwI -- Part 5: Async and Await
     https://www.youtube.com/watch?v=r4RQ38EoLds -- Send emails from an HTML Contact Form
     https://www.youtube.com/watch?v=dfaj4vI8QxE -- How to use APIs
-
 
 JuniorDeveloper and Codebubb
     https://www.juniordevelopercentral.com/
@@ -301,9 +317,38 @@ Document Object Model (DOM)
     https://www.youtube.com/watch?v=O6BNfJz3rgs&list=PLyuRouwmQCjmQTKvgqIgah03HF1wrYkA9&index=2 -- Steve Griffin Intro to the DOM (Done)
     https://www.youtube.com/watch?v=KShnPYN-voI -- The DOM in 4 minutes
     https://www.youtube.com/watch?v=v7rSSy8CaYE&t=11s -- Learn JavaScript DOM Traversal In 15 Minutes, Web Dev Simplified
+    https://www.youtube.com/watch?v=wKBu_dEaF9E -- Modern JavaScript Tutorial #6 - The Document Object Model, Net Ninja
 
 UIdotdev
     https://www.youtube.com/watch?v=gB-OmN1egV8 - The Evolution of Async JavaScript: From Callbacks, to Promises, to Async/Await
+
+Chris Course on Canvas
+    https://www.youtube.com/playlist?list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL -- Course list for Chris Courses on Canvases
+    https://www.youtube.com/watch?v=EO6OkltgudE -- HTML5 Canvas Tutorial for Complete Beginners
+    https://www.youtube.com/watch?v=83L6B13ixQ0 -- Drawing On HTML5 Canvas for Complete Beginners
+    https://www.youtube.com/watch?v=yq2au9EfeRQ -- Animating HTML5 Canvas for Complete Beginners
+    https://www.youtube.com/watch?v=vxljFhP2krI -- Interacting with HTML5 Canvas for Complete Beginners
+    https://opengameart.org/ -- open game art
+
+Coding with Radu - HTML Canvas Course
+    https://www.youtube.com/watch?v=iap31n1nJ0s -- HTML Canvas Course (Lecture 1)
+    https://www.youtube.com/watch?v=PbY7lRpSZ00 -- Drawing Shapes using Javascript
+    https://www.youtube.com/watch?v=Hbdb0KIlj0Q -- Color and Style - HTML Canvas
+    https://htmlcolorcodes.com/ -- color coding page
+    https://www.youtube.com/watch?v=yU6-3bO8CcE -- Good coding practices in JavaScript
+    https://www.youtube.com/watch?v=noGeYw5F2_4 -- JavaScript beginner project (Snowman)
+    https://www.youtube.com/watch?v=M2E65swxbIs -- JavaScript Animation Basics
+    https://www.youtube.com/watch?v=_KqjrGHSUew -- HTML Canvas Mouse interaction
+    https://www.youtube.com/watch?v=u923wu6Oa2A -- Text and Images on HTML Canvas
+    https://www.youtube.com/watch?v=ZhaE8Jleq_I -- Javascript Piano (Keyboard input and Audio playback)
+    https://www.youtube.com/watch?v=c7d54inurac -- Beginner JavaScript project (Advanced snowman)
+
+MDN Webdocs
+    https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API --Canvas API and tutorial
+
+Jenkov.com
+    https://jenkov.com/tutorials/html5-canvas/index.html -- HTML5 Canvas
+
 
 Definitions
     asynchronous - non-blocking task run in a separate parallel thread
@@ -368,8 +413,12 @@ Chart and Graphics Libraries
 
 p5.js Graphing References
     https://editor.p5js.org/
+    Built on the <canvas> methods in vanilla html and javascript
     <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script> -- Content Delivery Network (CDN) address for the p5 library
-    https://p5js.org/get-started/ -- p5 getting started includuding CDN and running locally or on a server
+    https://p5js.org/get-started/ -- p5 getting started includuding CDN and running locally or on a serve
+    https://www.youtube.com/watch?v=EO6OkltgudE -- HTML5 Canvas Tutorial for Complete Beginners
+    https://www.youtube.com/watch?v=83L6B13ixQ0 -- Drawing elements on a canvas
+    https://davidmatthew.ie/p5js-vs-html-canvas/ -- comparison of p5.js and vanilla >canvas>
     Coding with Patt
         https://www.youtube.com/playlist?list=PL0beHPVMklwgMz4Z-mNp4_udo9mjBk7pn -- Playlist for intro course
         https://www.youtube.com/watch?v=x1NxkEjfNtI 5.js Tutorial | Getting Started with Creative Coding, Code with Patt
@@ -384,10 +433,7 @@ p5.js Graphing References
         https://www.youtube.com/watch?v=zdi2ZOSpBuM -- Array of Objects - Creative Coding with p5.js
         https://www.youtube.com/watch?v=bxL6QOKvw3A -- Pass by Value vs Pass by Reference - Creative Coding with p5.js
         https://www.youtube.com/watch?v=fTKUPehFF2A -- How to Code a Game of Snake in Javascript... SUPER EASY (p5.js Tutorial)
-
         https://www.youtube.com/watch?v=zdi2ZOSpBuM -- Array of Objects - Creative Coding with p5.js
-2D Array - Creative Coding with p5.js
-
     The Coding Train
         https://www.youtube.com/watch?v=yPWkPOfnGsw -- 1.1: Code! Programming for Beginners with p5.js, The Coding Train
         https://www.youtube.com/watch?v=MXs1cOlidWs -- 1.2: p5.js Web Editor - p5.js Tutorial
@@ -581,42 +627,6 @@ Emmet Shortcuts
     div*4 -- 4 sibling <div<>/div> elements
     lorem20 -- 20 words of lorem ipsum text
 
-
-JSON (Java Script Object Notation)
-    References
-        http://www.json.org/
-        http://www.filltext.com/ -- JSON data generator
-        https://www.youtube.com/watch?v=iiADhChRriM -- Learn JSON in 10 Minutes, Web Dev Simplified
-        https://jsoncrack.com/editor -- JSON visualizer
-    Browser Plugins
-        https://chrome.google.com/webstore/detail/jsonview/ -- JSONView Chrome Plugin
-    Supported Data Types
-        Strings: "Hello World"
-        Numbers: 10 1.5.-30 1.2e4
-        Booleans: true false
-        null: empty or nothing value for a key value pair
-        Arrays []
-        Objects { :key": "value"}
-    File Extensio: .json
-    JSON Files; Top level is an object or array
-    JSON is a serialized data notation for transferring data between systems
-    JSON.stringify() -- convert a JS object data to JSON string data for file storage of transmission to a server
-    JSON.parse() -- converts/extracts a string of data from JSON to a JSON object or variable based on a selector label
-    Syntax is the same as a javascript object literal
-    Used to represent data, in API's, for configuration files
-    Supported datatypes: strings, numbers, booleans, null, arrays and objects
-    {} enclose objects aka 'Object Literal'
-    [] enclose arrays
-    JSON.stringify(myArray) - sets array elements in printable or transmittale of savable string format but with properties and string property values quoted
-    let jsondata = {"lat": <latvalue>,
-                    "lng": >lngvalue>,
-                    };
-    const {lat, long} = jsonData -- json destructuring to assign the data to variable within js
-    let jsonarraydata = {"names"" ["Evan", "Geoffrey", "Susan"]
-                        };
-    https://jsonlint.com/ -- JSON validator and formatter
-    https://www.browserling.com/tools/json-prettify -- JSON minifier and prettifier
-
 SVG Summary
     SVG = Scalable Vector Graphics (for graphical artwork such as banners and logos)
     Software
@@ -681,7 +691,41 @@ Groupware
         https://discordapp.com/ -- messaging for gamers
         https://trello.com/ -- group project task management tools
 
-JS Frameworks
+Java Script Object Notation (JSON)
+    References
+        http://www.json.org/
+        http://www.filltext.com/ -- JSON data generator
+        https://www.youtube.com/watch?v=iiADhChRriM -- Learn JSON in 10 Minutes, Web Dev Simplified
+        https://jsoncrack.com/editor -- JSON visualizer
+    Browser Plugins
+        https://chrome.google.com/webstore/detail/jsonview/ -- JSONView Chrome Plugin
+    Supported Data Types
+        Strings: "Hello World"
+        Numbers: 10 1.5.-30 1.2e4
+        Booleans: true false (unquoted)
+        null: empty or nothing value for a key value pair
+        Objects { :key": "value"}
+    File Extensio: .json
+    JSON Files; Top level is an object or array
+    JSON is a serialized data notation for transferring data between systems
+    JSON.stringify() -- convert a JS object data to JSON string data for file storage of transmission to a server
+    JSON.parse() -- converts/extracts a string of data from JSON to a JSON object or variable based on a selector label
+    Syntax is the same as a javascript object literal
+    Used to represent data, in API's, for configuration files
+    Supported datatypes: numbers, strings, booleans, null, undefined, symbol and objects
+    {} enclose objects aka 'Object Literal'
+    [] enclose arrays
+    JSON.stringify(myArray) - sets array elements in printable or transmittale of savable string format but with properties and string property values quoted
+    let jsondata = {"lat": <latvalue>,
+                    "lng": >lngvalue>,
+                    };
+    const {lat, long} = jsonData -- json destructuring to assign the data to variable within js
+    let jsonarraydata = {"names"" ["Evan", "Geoffrey", "Susan"]
+                        };
+    https://jsonlint.com/ -- JSON validator and formatter
+    https://www.browserling.com/tools/json-prettify -- JSON minifier and prettifier
+
+Java Script Frameworks
     https://angular.io/ -- Angular
     http://learn.jquery.com/
     https://jquery.com/ -- home page javscript libraries and functions
@@ -714,7 +758,7 @@ Youtubes
 
 Acronyms
     XHR -- XML HTTP Request
-    HREF -- Hypertext REFerence
+    HREF --n Hypertext REFerence
     SASS -- Syntacticall Awewome Style Sheets
 
 Chrome Debugging Tool for JavaScript
@@ -822,7 +866,8 @@ HTML Tags and Attributes (tags always lower case and attributes always s/d-quote
     <body> -- body (rendered) region of an html document
     <b> -- bold
     <br> -- line break
-    <button></button> -- clickable button
+    <button title"This is a button"></button> -- clickable button with a mouseover description/title
+    <canvas></canvas> -- area for graphics and animation
     <div></div> -- content division or divider element, a block element or container, defined as a boundary for CSS, meaningless otherwise, a CSS container
     <details><summary></summary</details> -- drop down details below summary heading and drop down arrow
     <del> -- deleted text (lined through)
@@ -908,6 +953,34 @@ HTML Video Tags
             <source src="movie.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>    
+
+HTML Canvas Animation
+    <canvas id="myCanvas width="600" height="300"></canvas>
+    ctx = mycanvas.getContext("2d");
+    ctx.beginPath();
+    ctx.lineTo(x, y);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(x, y, radius, startRaidans, 2*Math.PI);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.rect(x, y, width, depth); -- draw a rectangle
+    ctx.lineWidth=70;
+    ctx.fillstyle="red" -- change the color inside the rectangle
+    ctx.strokestyle="yellow"; -- change the color of the rectangle lines
+    ctx.fill(); -- fill the rectangle
+    ctx.stroke(); -- write the rectangle to the canvas
+    ctx.clearRect(x, y, width, height)
+    animate() {
+        <draw a shape>
+        requestAnimationFrame(animate)a
+    }
+    ctx.font="30px Arial" -- set the size and font of text before writing
+    ctx.textBaseline = "center";
+    ctx.textAlign="center";
+    ctx.fillStyle="red"; -- color the text
+    ctx.fillText("<sample text">, x, y) -- write text to the canvas
+    
 
 HTML Math Symbols
     text inserted directly into HTML to render mathematical symbols
@@ -1055,6 +1128,7 @@ CSS Colors and Color Tools
     Google "Color Picker" to get Google's color picking tool on the search results page
     https://material.io/design/color/the-color-system.html
     https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+    https://htmlcolorcodes.com/ -- visual color picker
 
 CSS Three Ways of load CSS
     Embed directly in HTML tag attributes (<h1 style="color: blue">Title</h1
@@ -1228,6 +1302,11 @@ JS Rules and Gotchas
     JS lines end with a semicolon - JS uses Automatic Semicolon Insertion (ASI) to insert them where they are missing
     ASI means the coder can omit semicolons on code lines and Javascript will insert them during the interpreter run
 
+JS Terminology
+    template strings -- use the `` delimiter and embed variables like ${vari
+    template literals -- same as template strings
+    factory function -- a method of defining objects using object literal notation (vs constructors)
+
 JS Pass by Value or Pass by Reference
     Primitives are passed by value
     Arrays and objects are passed by reference
@@ -1387,7 +1466,8 @@ JS Operators and Order of Operation
         ++ increment by 1
         -- decrement by 1
         % modulus or remainder (e.g. 11 % 3 = 2)
-        ** multiply
+        * multiply
+        ** exponent
 
 JS Compound Operators (read from right to left)
             += add to a variable (e.g a += 2; adds 2; to a)
@@ -1409,7 +1489,7 @@ JS Scope
     You cannot redefine a variable in the same scope but you can redefine a variable in a different scope or block
     Block or local scope variables are not accessible outside its code block
     Variables defined without using let or var or const are automatically defined in the global scope
-    Local variables take precedenc over global variables with the same name
+    Local variables take precedence over global variables with the same name
 
 JS Logical Operators
     && and
@@ -1417,8 +1497,8 @@ JS Logical Operators
     ! not
 
 JS Comparison Operators
-    == equality, in value only (loose comparison, using type coercion if needed) e.g. 25 == '25' is true
-    === strict equality. in value and type (strict equality, not allowing type coercion)
+    == loose equality or loose comparison, in value only (loose comparison, using type coercion if needed) e.g. 25 == '25' is true
+    === strict equality or strict comparison. in value and type (strict equality, not allowing type coercion)
     != inequality, not equal to (inequality operator) (loose inequality, using type coercion)
     !== - strictly not equal to (strict inequality operator, not using type coercion)
     > greater than
@@ -1445,24 +1525,30 @@ JS Keywords
     new package private protected public return static super
     switch this throw true try typeof var void while with yield
 
-JS Data Types (7 different types)
-    Data types are stored on the stack and not in the heap
-    Javascript is dynamically typed and variables can contain any data type when they are assigned a value
-    Types are: 
-        -bigint
-        -boolean: true or false (lower case, not enclosed in quotes)
-        -number: integers, floats, decimals etc (includes NaN and infinity), 
-        -string: 'some words'
-            strings use '' or "" interchangeably, and backticks `` to embed variables which are evaluated or to embed newlines and other special characters without escaping them
+JS Datatypes (7 different datatypes)
+    Datatypes can be primitive (or value) or reference
+        Primitive or value types are stored on the stack and not in the heap
+        Reference types are stored on the heap and their pointers stored on the stack
+    Javascript is dynamically (loosely) typed and variables can contain any data type when they are assigned a value
+    Types are primitive (stack) or reference (heap) types: 
+        - number (primitive): integers, floats, decimals etc (includes NaN and infinity), 
+            integers are 15 characters or less (otherwise use bigint)
+        - string (primitive): 'some words'
+            strings use '' or "" interchangeably, and backticks `` (aka template delimiters) to embed variables which are evaluated or to embed newlines and other special characters without escaping them
             escape embedded quotes in strings with \" or \'
             Strings have built-in's (or native functions)
-        -object: the only non-primative datatype and holds multiple key-value pairs: arrays, dates, literals etc
-        -symbols: unique immutable object identifiers
-        -null: separate datatype and means nothing (intentionally) or no value e.g. var name = null;
-        -undefined: separate datatype and means 'no value assigned' (unintentionally) and automatically assigned by the browser if not initialized
-        NaN: is the result of an numerica expression with an undefined variable
+        - null (primitive): separate datatype explicitly assigned to a variable and means nothing (intentionally) or no value e.g. var name = null;
+            has a value of zero in numeric expessions
+        - undefined (primitive): separate datatype and means 'no value assigned' (unintentionally) and automatically assigned by the browser if not initialized
+        - bigint (primitive)
+        - boolean (primitive): true or false (lower case, not enclosed in quotes)
+        - object (reference): the only non-primative datatype and holds multiple key-value pairs: arrays, dates, literals etc as well as functions
+            built in objects include arrays, dates, literals
+        - symbols (primitive): unique immutable object identifiers, used with objects
+        - functions (reference):
+        NaN: is the result of an numerical expression with an undefined variable
         char: doesn't exist. implemented as a string of length '1'
-        array: 
+        array: is an object 
     typeof() returns the type of a variable. typeof x; is the same as typeof(x);
 
 JS Type Conversion (explicit type conversion)
@@ -1473,7 +1559,8 @@ JS Type Conversion (explicit type conversion)
         truthy values - positive and negative numbers and all non-empty strings
         falsy values  - zero and any empty string
 
-JS Stringsa
+JS Strings
+    Use "" or '' to define a string, or `` to define a string with embedded variables using ${<var>}
     String(<chars>) -- returns <chars> as a string (same as toString() object method)
     const myString = "Miscellaneous text";
     string.toUpperCase() -- converts to uppercase
@@ -1489,7 +1576,7 @@ JS Stringsa
     string.includes('<char>') -- returns true if char exists in a string, otherwise returns false
     string.repeat(<number>) -- returns a string repeated <number> times
     string.substr(<start>, <length>); -- returns a substring from start counting length characters
-    string.replace('<char'>, '<char>'); -- replaces the first occurance of a character
+    string.replace('<char'>, '<char>'); -- replaces the first occurance of a character, and supports regular expressions
     string.trim() -- removes leading and trailing whitespaces
 
 JS Escaped Characters in Strings (escape sequences)
@@ -1533,7 +1620,7 @@ JS Properties (e.g. of Strings)
 
 JS Functions including ES6 Arrow Functions
     Function are objects defined with the 'function' keyword and () and {};
-    Syntax 1 Function Declaration (preferred):
+    Syntax 1 Function Declaration (preferred and hoisted):
         function fMyFun(vars) {<body>}
         These function declarations are hoisted (they can be invoked before declared)
     Syntax 2 Function Expression (not preferred, not hoisted, requires a trailing semi-colon):
@@ -1541,9 +1628,15 @@ JS Functions including ES6 Arrow Functions
         Invoke by fMyFun();
         Function synonyms can be created as const fMyFuncSyn = fMyFun (a previously declared function)
         The first line of this syntax must include 'function()'
-    Syntax 3 Arrow (Inline) functions (ES6) for Anonymous Functions (myFunc = (vars) => {<body>};
+    Syntax 3 Arrow functions or Inline Functions (ES6) for Anonymous Functions (myFunc = (vars) => {<body>};
         Arrow functions redefine 'this' to be within the scope of the calling context
         You cannot have a named arrow function but you can assign an arrow function to a variable
+        To convert a function expression to an arrow function:
+            remove the function keyword
+            remove the parens around parameters if there is exactly one parameter, otherwise leave parens if no parameter or more than one parameter
+            add an arrow => after the single parameter or parens
+            remove the block parenthesis if there is only a return statement
+            remove the return keyword if there is only a return statement
     () is the function invocation operator
     The () are only required if there is more than one parameter or no parameters
     The {} are not needed if the function only returns a value eg () => "return value";
@@ -1591,6 +1684,7 @@ JS Constructor Functions
     The function name will have initial uppercase if the function is intended as a constructor
 
 JS Arrays (One Dimensional)
+    Arrays are JS objects
     Declare an empty array with colors = [];
     Declare as an array object, let colors = new Array('red', 'green', 'blue');
     Arrays can have unspecified length and can be added onto, or subtracted from, without limit
@@ -1605,6 +1699,9 @@ JS Arrays (One Dimensional)
     Sparse arrays have empty elements
     Avoid sparse arrays
     
+JS Array Properties
+    myArray.length -- the number of elements in an array
+
 JS Array Methods
     myArray.fill(value, start, end) -- fills an array over a range of offsets with a value
     myArray.fill(value) -- changes or fills all elements in an array with a new value
@@ -1695,7 +1792,7 @@ JS Conditionals and Compound Conditionals and Decisions (Control Flow)
     Expression can include && (logical and) and || (logical or) operators
     Switch (value) {case val1: action; break; case val2: action; break; default: action;}
         break is not needed on the default case
-        case uses strict equality
+        case uses strict equality (ie. ===)
         repeat case clause for multiple conditions:
             case 1:
             case 2:
@@ -1709,8 +1806,8 @@ JS Iterations and Loops and Conditionals (Control Flow)
     while ... (e.g. while (i < 10) {console.log(i)}); and i must be declared prior to the loop
     do while ... (e.g. do {...} while (i < 10) so the code runs at least once
     for each -- used for arrays (e.g array1.forEach(function(array1){console.log(array1)}) steps through array1 executing a function for each value
-    break -- break out of an enclosing loop
-    continue == advance to next iteration of an enclosing loop without executing more statements in the current loop
+    break -- break out of the current enclosing loop
+    continue == advance to next iteration of the currentt enclosing loop without executing more statements in the current loop
 
 JS Modal Interaction
     prompt(question[, default]) -- Ask a question, and return either what the visitor entered or null if they pressed “cancel”.
@@ -1736,7 +1833,9 @@ JS Javascript in HTML
         ..
     </script>
 
-JS Objects
+JS Objects Examples
+    Window
+    document
     navigator
     Date
         Date.now() -- returns the number of milliseconds since 01/01/1970 and used as a timestamp
@@ -1748,36 +1847,66 @@ JS Object Properties and Methods (Object functions)
     object.freeze(<objName> makes an object immutable - none of its components can change
     Objects comprise key: value pairs where the keys are unique
     Built-in objects: Date, Math,  String, Array, Object, etc have properties and methods
-    Object Literal notation: one way of creating a new object
-    The context of object is referenced by this and defined as the object of the calling function
-    Create an object with an Object Definition using Object-literal notation
+
+JS Objects Methods of Creating Objects
+    Object Literals (aka Object Initializers) - duplicative if an object has methods -- each object requires re-entering the methods
+    Factories
+    Constructors
+    Either Factory or Constructor methods of creating an object are OK to use and they are interchangeable
+
+JS Object Literal Syntax for Creating Objects
+    Object Literal notation: one way of creating a new object with key-value pair members inside {} brackets, comma separated
+    Object members are properties and methods
+    Create an object with an Object Literal Definition using Object-literal notation or {} braces
         const myObj = {}; -- instantiates a new empty object using the object literal {}
         const myObj = {
             <key1>: <value1>,   -- key value pairs
             <key2>: <value2>,
             <key2>: <value2>,
-            function() {                // only the function name is stated and not the 'Function' prefix
+            <fn1>: function() {                // the function name and 'Function' prefix are stated
                 <functionBody>
             }
+            <fn2>() {                          // ED6 function definition drops the 'function' prefix
+            }
     };
-    Create an object using an Object Constructor Function
-        Define an Object Constructor function: 
-            function myObjConstr(property1, property2) { 
-                this.prop1 = property1;
-                this.prop2 = property2;
-                };
-        Create new objects using the constructor function
-            newObj = new myObjConstr(attrib1, attrib2 etc);
+    The context of object is referenced by this and defined as the object of the calling function
+
+JS Object Factories
+    Use a factory function to create an object
+        function factoryFunction(param1, param2, ...) {
+            return {
+                param1, 
+                param2,
+                method: function {
+                    ...
+                }
+            };
+        }
+    Call the function to create the object
+        const newObj = factoryFunction(...);
+
+JS Object Constructor Functions for Creating Objects
+    Uses the 'this' keyword to assign properties to the calling object
+    Uses the 'new' operator to create an empty object
+    Define an Object Constructor function where the first letter is uppercase:
+        function MyObjConstr(property1, property2) { 
+            this.prop1 = property1;
+            this.prop2 = property2;
+            };
+    Create new objects using the constructor function
+        newObj = new MyObjConstr(attrib1, attrib2 etc);
+    Every object has a constructor propoerty which names the function used to create the object
+
+JS Object Manipulation
     Object.Create() Method
         Clone an existing literal object to create a new object
-    Access object values in an object as properties using dot notation and property names
+    Access and update object values in an object as properties using dot notation and property names
         myObject.key1;
-        myObject.key2;
-    Access object values using bracket notation and quoted keys (or variables)
+        myObject.key2 = <newValue>;
+    Access and update object values using [] bracket notation and quoted keys (used when keys are variables)
         myObject['key1'];
-        myObject['key2'];
-        myobject['key3'];
-    Assign values to object keys using standard assignments
+        myObject['key1'] = <newValue>;;
+    Assign and update values to object keys using standard assignments
         myObject.key1 = 'newValue';
         myObject['key1'] = 'newValue;
     Delete properties in objects using the delete keyword
@@ -1807,14 +1936,58 @@ JS Object Properties and Methods (Object functions)
         Date
 
 JS Classes
+    Classes are an alternative syntax for prototypes in JS
     Use the Class syntax with embedded constructor function to define a class
-    Define a class the same way as defining a function but use initcaps (psuedo-classical)
+        class <newClass> {
+            constructor(<attrib2>, <attrib2>) {
+                this.attrib1 = <attrib1>;
+                this.attrib2 = <attrib2>;
+            }
+        }
+    Create an object from a class with the 'new' keyword and the constructor
+        myObj = new.User('Geoff','Repo');
+        The new keyword:
+            1. Creaes a new empty object
+            2. Sets the value of 'this' to the new empty object
+            3. Calls the constructor method to add properties to 'this'
+    Define a class with a constructor function, the same way as defining a function but use initcaps (psuedo-classical)
         function User(name, github) {
             this.name = name;
             this.github = github;
+            this.<method> = function() {
+                ....
+            }
         }
-    Create an object from a class with the 'new' keyword
-        myObj = new.User('Geoff','Repo');
+
+JS Prototypes
+    Prototypes contain the methods of a class (excluding methods defined within a constructor or constructor function)
+    Prototype functions are listed under the __proto__ property of an object
+    Prototypes can add methods to constructor functions (synonymed as classes in Version 6)
+    Prototype functions are defined on the constructor function name
+        constructorFunctionName.prototype.<newFunction = function () {
+            ...
+        }
+
+JS Class Inheritance
+    class <secondClass> extends <firstClass> {
+        ...
+    }
+
+JS Prototype Inheritance
+    
+
+JS Methods
+    Define methods within a class and outside the constructor definition
+        class <newClass> {
+            constructor() {
+               ...
+            }
+            <fnName>() {
+                ...
+            }
+
+JS Method Chaining
+    A methods can be chained if the previous method return the object 'this'
 
 JS Date Methods
     Date.getFullYear() gets the current year in 4 digit format
@@ -1898,10 +2071,10 @@ JS DOM (Document Object Model) Manipulation
                 div
     Common DOM Methods
         document.querySelector("<css selector>")
-        document.querySelectorAll("<css selector>") -- returns an array processed with forEach()
+        document.querySelectorAll("<css selector>") -- returns a nodelist processed with forEach()
         document.getElementById("element_id">)
-        document.getElementByClassName("<class_name>") -- returns a collection which is converted into an array with Array.from()
-        document.getElementByTagName()
+        document.getElementsByClassName("<class_name>") -- returns a collection which is converted into an array with Array.from()
+        document.getElementsByTagName() -- returns a collection
         document.addEventListener("click", function() {alert("Thank you for clicking"})
         document.addEventListener("DOMContentLoaded", init); -- add an event to the final loading of a DOM, such as javascript code
     Query the DOM with querySelector() to get an element reference

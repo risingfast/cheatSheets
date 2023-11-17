@@ -345,6 +345,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=_xX25ThomIo -- Making variables atomic in C
     https://www.youtube.com/watch?v=jxW7iwCtBZk -- What is a function prototype in C
     https://www.youtube.com/watch?v=VsRs0H4hXEE -- The right way to define a C function with no arguments
+    https://www.youtube.com/watch?v=SThwp5ijh6o -- How does fork work with open files?
 
 CodeVault
     https://www.youtube.com/@CodeVault -- main index
@@ -501,6 +502,9 @@ C and CGI
     http://www.webthing.com/tutorials/cgifaq.html -- CGI FAQ's
     http://web.mit.edu/wwwdev/www/cgic.html -- CGIC library for C and CGI with example
     https://www.oreilly.com/openbook/linuxdrive3/book/
+    https://www.youtube.com/watch?v=rFaRFCyewpA -- Web programming (CGI) in C, Gregg Ink
+    https://www.youtube.com/watch?v=cP1fN6xf3nI -- Lecture -19 CGI Scripts
+    https://www.youtube.com/watch?v=NwRVJX0Ieno -- The Magic of cgi-bin
 
 Algorithms and Code Challenges
     https://www.javatpoint.com/c-programming-language-tutorial -- left side menu bar
@@ -1026,7 +1030,7 @@ Data Types
             char 1 byte 8 bit max value 255
             short 2 bytes 16 bit max value 65535
             int 4 bytes 32 bit max value 4294967295
-            long 4 bytes 32 bit max value 4294967295
+            long 4 bytes 32 bit max value 4,294,967,295
             long long 8 bytes 64 bit 2**64-1
             size_t typedef of unsigned long in 32 bit compiler -- returned by sizeof(), malloc, memcopy, strlen, etc
             size_t typedef of unsigned long long in 64 bit compiler -- returned by sizeof(), malloc, memcopy, strlen etc
@@ -1240,7 +1244,7 @@ File Manipulation using LibC Functions
     fgetc()
     fputc()
     fread() -- binary mode size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
-        returns total number of elements of size read
+        returns total number of elements of size read in size_t
         ptr -- a pointer to a block of memory of minimum size  size * rMemb bytes
         size -- the size in bytes of each element read from the file
         nmemb -- the number of elements read from the file
@@ -1270,10 +1274,11 @@ File Manipulation using LibC Functions
         returns a pointer to the array or NULL
     fputs() -- writes a full string to a file
     fprintf() -- writes a formatted string to a file
-    fseek(FILE (stream, long nt offset, int whence) -- rewind or forward the curent file position
+    fseek(FILE (stream, long int offset, int whence) -- rewind or forward the curent file position
         whence values: SEEK_SET (start of file), SEEK_CUR (current file position) , SEEK_END (end of file)
         returns zero if successful, otherwise non-zero
     ftell() -- get the current file position
+        returns a long int 
     feof(FILE *) -- tells if EOF is reached if a file (defined as -1 in /usr/include/stdio.h)
     ferror() -- tells if file error is set
     fprintf(<stream>, <format>, <variables>) -- print formatted output to a file or stream

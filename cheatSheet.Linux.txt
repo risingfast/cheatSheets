@@ -162,7 +162,7 @@ Linux Commands
     /etc/hosts -- file mapping DNS to IP addresses
     /etc/init.d -- boot scripts for daemons (see service command)
     /etc/group -- group accounts and members
-    /etc/os-release -- operating system release profile
+    /etc/os-release -- operating system release or version profile
     /etc/passwd -- user accounts: login name, uid, login gid, account name, home directory, login shell
     /etc/profile -- systemwide environment variables for all users all upper case
     /etc/shadow -- the shadow file for the n/etc/passwd file

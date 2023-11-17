@@ -106,6 +106,12 @@ Move and Scroll Notes (Motions)
     Move to matching parentheses                        % (place cursor on one parenthesis first)
     Move to previous location, next location            <Ctrl>-o, <Ctrl>-i
 
+Move between Buffers
+    Open another file in a new buffer                   :e <filename>
+    Open a new buffer with no file                      :enew
+    Next buffer                                         :bn
+    Previous buffer                                     :bp
+
 Mark and Return
     Mark text anywhere on a line                        mx, my, mz
     Return to line with marked text                     'x, 'y, 'z
