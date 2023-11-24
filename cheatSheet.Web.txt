@@ -24,7 +24,7 @@ Newletters
         https://frontendfoc.us/ -- Frontend Focus
         https://tldr.tech/ -- TLDR 
 
-eeferences
+References
     https://developer.mozilla.org/en-US/ for tutorials on CSS and HTML and Javascript
     https://developer.mozilla.org/en-US/docs/web/javascript -- tutorials and feature lookups for Javascript
     https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
@@ -82,6 +82,7 @@ eeferences
     https://www.youtube.com/watch?v=-RCnNyD0L-s -- Node.js Passport Login System Tutorial
     https://www.youtube.com/watch?v=j0PpT96EFeg -- Understanding Browser Cookies, Steve Griffith
     https://www.youtube.com/playlist?list=PLyuRouwmQCjkWu63mHksI9EA4fN-vwGs7 -- Fetch playlist, Steve Griffith
+    https://www.youtube.com/watch?v=_D6ilsRB9tw -- Intro to JavaScript Classes, Steve Griffith
     https://www.npmjs.com/ -- npm repository of all node packages
     https://alvinalexander.com/perl/edu/articles/pl010012/ -- cookies and CGI
     https://www.easy400.net/cgidev2o/exhibiu8.htm -- cookies in CGI
@@ -244,7 +245,6 @@ Net Ninja Object Oriented Javascript
     https://www.youtube.com/watch?v=8x1fygdWabY -- Method Chaining
     https://www.youtube.com/watch?v=_cgBvtYT3fQ -- Class Inheritance
     https://www.youtube.com/watch?v=4jb4AYEyhRc -- Prototype
-   
 
 The Coding Train
     https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YgpA3Oht-7B4NBQwFVe3pr -- 16: Topics of JavaScript/ES6-ES8 Tutorials (Table of Contents)
@@ -260,6 +260,9 @@ The Coding Train
     https://www.youtube.com/watch?v=xVYa20DCUv0 -- 2.4 Saving to a Database - Working with Data and APIs in JavaScript (Done)
     https://www.youtube.com/watch?v=q-lUgFxwjEM -- 2.5 Database Query - Working with Data and APIs in JavaScript
     https://www.youtube.com/watch?v=9Rhsb3GU2Iw -- 2.6 Saving Images and Base64 Encoding - Working with Data and APIs in JavaSc
+    https://www.youtube.com/watch?v=T-HGdc8L-7w -- 6.2: Classes in JavaScript with ES6 - p5.js Tutorial
+    https://www.youtube.com/watch?v=rHiSsgFRgx4 -- 6.3: Constructor Arguments with Classes in JavaScript - p5.js Tutorial
+    àhttps://www.youtube.com/watch?v=5nf41qLeagU -- 6.4: p5.js Web Editor: Adding JavaScript Files
     https://www.youtube.com/watch?v=4Sw6OUXjHsk -- 9.17: Arguments Array in JavaScript
     https://www.youtube.com/watch?v=q8SHaDQdul0 -- 16.1: let vs var - Topics of JavaScript/ES6
     https://www.youtube.com/watch?v=2iLVFyYwyRA -- 16.2: const - Topics of JavaScript/ES6
@@ -343,6 +346,13 @@ Coding with Radu - HTML Canvas Course
     https://www.youtube.com/watch?v=ZhaE8Jleq_I -- Javascript Piano (Keyboard input and Audio playback)
     https://www.youtube.com/watch?v=c7d54inurac -- Beginner JavaScript project (Advanced snowman)
 
+https://www.youtube.com/playlist?list=PLIJrr73KDmRwNZAYsAmWV8HXrPju73emb - JavaScript Fundamentals Course, Tapas Adhikary
+    https://www.youtube.com/watch?v=PDtlYNfo5zE -- How to learn JavaScript effectively? JavaScript learning model for developers
+    https://www.youtube.com/watch?v=5wxT8ZsiG3c -- Uncover the Secret to Mastering JavaScript Lexical Environment!
+    https://www.youtube.com/watch?v=4vl-2qtKgc4 -- The Secrets of JavaScript Variables
+    https://www.youtube.com/watch?v=4sBfx3ISBdM -- What's the best way to load a JavaScript file in HTML? HTML async vs defer
+    https://www.youtube.com/watch?v=UPeFK1uFJCE -- JavaScript Function Crash Course With Closures and More
+
 MDN Webdocs
     https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API --Canvas API and tutorial
 
@@ -410,6 +420,7 @@ Chart and Graphics Libraries
     https://p5js.org/ -- p5.js
     https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API -- html5 canvas
     https://threejs.org/ -- 3d graphics on the web
+    https://webglfundamentals.org/ -- Web Graphics Library -- 2D and 3D Graphics
 
 p5.js Graphing References
     https://editor.p5js.org/
@@ -1288,7 +1299,8 @@ JS Versions (introduced in 1995)
 JS Where Placed in HTML
     Javascript can be placed inline within the <head> and/or <body> of html between <script> tags
     <script src="src/index.js"></script> should be the last line in the <body> region so it loads after all html is loaded
-    <script src="src/index.js" defer></script> can be in the <head> region and it loads first but runds after all html is loaded
+    <script src="src/index.js" async></script> loads the script in parallel with loading the HTML and DOM
+    <script src="src/index.js" defer></script> can be in the <head> region and it loads the script asynchronously but runs after all html is loaded
     Javascript is normally placed in the <head> or before the ending </body> tag and can be inline or in a separate file referenced by <script src="index.js"></script>
     Javascript can be inline between <script> and </script> tags and placed multiple times in the <head> and <body> regions. Each script is executed in order
     Javascript code is run as the page is loaded
@@ -1355,6 +1367,30 @@ JS Hot Keys
     /* ... */ multiline comment block
     // line comment in .js fie
     /* */ block comment in .js file
+
+JS Modules
+    Modules are reusable code blocks that can be used in multiple different scripts
+    Modules were introduced in ES6
+    HTML File reference to javascript with modules
+    <script type="module" src="script.js"></script> -- use type="module" for any js containing module references or imports
+    Exports can include: variables, classes, objects, functions
+        export <function> ... ahead of each entity to name an export
+        export {function1, function2, ...}; on a separate line to name all exports
+        exports can be default or named exports
+            named exports are imported with the same name and cannot be aliased
+            default exports can be imported and aliased
+    Combined Exports
+        export {defauult as <alias>} from './<path>/<file.js> -- in another file of exports combines the exports from this file
+    Imports are made in another js file where they are used -- static imports should be placed at the top of the file
+        import {function1, function2} from './<pach>/<file.js>';
+        import (function1 as alias1, function2 as alias2 ...)
+        import (default as <alias> } from './<path>/<file.js>'; -- import a default and alias (syntax 1)
+        import <alias> from './<path>/<file.js>; -- import a default and alias (syntax 2)
+    Dynamic Imports
+        const {function1, function2} = await import('./<path>/file.js'); -- imports functions when they are called and not always
+    Namespaces
+        Namespaces are used in large imports
+        import * as <namespace> from './<path>/<file.js>'; -- adds a namespace prefix to each import
 
 JS Node Installion on Ubuntu Linux
     Steps
@@ -1512,7 +1548,7 @@ JS Expressions, Statements and Comments
     Statements comprise Values, Operators, Expressions, Keywords and Comments
     // identifies single inline or partial line comment 
     /* ... */ identifies multiline comments
-    <ctrl>/ for higlighted rows
+    <ctrl>/  on higlighted rows
     Statements or lines end in a semicolon ';'
     Multiple lines are allowed in a single statement
     Multiple statements are allowed on a single line with semicolon delimiters
@@ -1620,27 +1656,20 @@ JS Properties (e.g. of Strings)
 
 JS Functions including ES6 Arrow Functions
     Function are objects defined with the 'function' keyword and () and {};
+    Functions can be named or anonymous
+    Functions can be declared and defined separately
+    Functions within a class are methods
     Syntax 1 Function Declaration (preferred and hoisted):
-        function fMyFun(vars) {<body>}
+        function fMyFunName(vars) {<body>}
         These function declarations are hoisted (they can be invoked before declared)
     Syntax 2 Function Expression (not preferred, not hoisted, requires a trailing semi-colon):
         const fMyFun = function(vars) {<body>}a; -- trailing semicolon required
         Invoke by fMyFun();
         Function synonyms can be created as const fMyFuncSyn = fMyFun (a previously declared function)
         The first line of this syntax must include 'function()'
-    Syntax 3 Arrow functions or Inline Functions (ES6) for Anonymous Functions (myFunc = (vars) => {<body>};
-        Arrow functions redefine 'this' to be within the scope of the calling context
-        You cannot have a named arrow function but you can assign an arrow function to a variable
-        To convert a function expression to an arrow function:
-            remove the function keyword
-            remove the parens around parameters if there is exactly one parameter, otherwise leave parens if no parameter or more than one parameter
-            add an arrow => after the single parameter or parens
-            remove the block parenthesis if there is only a return statement
-            remove the return keyword if there is only a return statement
-    () is the function invocation operator
-    The () are only required if there is more than one parameter or no parameters
-    The {} are not needed if the function only returns a value eg () => "return value";
-    functions take parameters and return a result (i.e. a function call)
+    Functions take arguments and return a result (i.e. a function call)
+    Functions are defined with parameters which are placeholders for arguments when the function is called
+    Parameters are replaced with arguments when a function is called
     functions without return statements return undefined
     functions with return and no value return undefined
     function expressions can be immediately invoked (IEFE's)
@@ -1653,10 +1682,41 @@ JS Functions including ES6 Arrow Functions
     Higher Order Functions are functions that take callbacks as arguments or return functions as a result (i.e. closures)
        e.g. document.addEventListener("click", clickFunction)
        e.g. map(), filter(), redce() array functions
-    Default Parameters
-        function myFunc(arg1 = "Yes", arg2 = "Thanks") -- will be used if no arguments are passed in the parameters
-    Rest Parameters are variable parameter lists using ...args where args is an array
-        allows any variable number of arguments to be passed by using ...args as the parameter and accessing the arg number with args.length and values with args[i]
+    Function Scope
+        Variables defined within a function cannot be accessed outside the function
+        A function can access all the variables within the scope where it is defined
+    Closures
+        Closures are inner functions or nested functions that are returned from the outer function
+
+JS Nested Functions
+    Nested functions are defined and called within other functions
+
+JS Arrow Functions (aka Fat Arrow syntax)
+    Arrow functions or Inline Functions (ES6) do not have the reserved word 'function' in the definition
+        myFunc = (a, b) => {return a + b}; named arrow function
+        (a, b) => { return a + b }; -- anonymous
+        (a, b) => a + b; -- function body is a single return line
+        Arrow functions redefine 'this' to be within the scope of the calling context
+        You cannot have a named arrow function but you can assign an arrow function to a variable
+        To convert a function expression to an arrow function:
+            remove the function keyword
+            remove the parens around parameters if there is exactly one parameter, otherwise leave parens if no parameter or more than one parameter
+            add an arrow => after the single parameter or parens
+            remove the block parenthesis if there is only a return statement
+            remove the return keyword if there is only a return statement
+    () is the function invocation operator
+    The () are only required if there is more than one parameter or no parameters
+    The {} are not needed if the function only returns a value eg () => "return value";
+
+JS Default Parameters
+    Any parameters not replaced by arguments are undefined -- this can be defended using default parameters
+    Function myFunc(arg1 = "Yes", arg2 = "Thanks") -- will be used if no arguments are passed in the parameters
+
+JS Rest Parameters are variable parameter lists using ...args where args is an array
+    allows any variable number of arguments to be passed by using ...args as the parameter and accessing the arg number with args.length and values with args[i]
+    a function can only have one Rest parameter and it must be the last parameter
+    e.g. function myFunc(a, ...b) {
+             }
 
 JS Functions (pre-defined)
     Number.isNan(<var>) - tests if a value is a number
@@ -1671,6 +1731,7 @@ JS Anonymous Functons
             e.g. document.addEventListener("click", () => alert("Thank you for clicking"))
 
 JS Callback Functions
+    Functions in javascript are first class -- they are treated like any other variable so can be passed as arguments to another function
     Callbacks are functions passed by name as paramenters in other functions and executed by the other function
         // callback example where seeded forEach only takes a callback function referencing the item and index in the array
         const cars = ['Ford', 'Honda', 'Chevrolet', 'Buick'];
@@ -1937,11 +1998,22 @@ JS Object Manipulation
 
 JS Classes
     Classes are an alternative syntax for prototypes in JS
+    Class names start with a capital letter (naming convention)
+    Javascript is a prototype-based language
     Use the Class syntax with embedded constructor function to define a class
+    Underscores "_" as prefixes on constructor parameters is a common naming convention
         class <newClass> {
-            constructor(<attrib2>, <attrib2>) {
-                this.attrib1 = <attrib1>;
-                this.attrib2 = <attrib2>;
+            constructor(<_attrib2>, <_attrib2>) {
+                this.attrib1 = <_attrib1>;
+                this.attrib2 = <_attrib2>;
+            }
+
+            method1() {
+                ...
+            }
+
+            method2() {
+                ...
             }
         }
     Create an object from a class with the 'new' keyword and the constructor
@@ -1958,6 +2030,9 @@ JS Classes
                 ....
             }
         }
+    Getters and Setters
+        Getters and setters control how class values are set and retrieved and enforce consistency in class updates and queries
+        They are optional
 
 JS Prototypes
     Prototypes contain the methods of a class (excluding methods defined within a constructor or constructor function)
