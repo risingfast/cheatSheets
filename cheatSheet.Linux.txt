@@ -58,7 +58,7 @@ Engineer Man Linux on Youtube
     https://www.youtube.com/watch?v=TJzltwv7jJs -- processes
     https://www.youtube.com/watch?v=Zuwa8zlfXSY -- eight linux commands
 
-Learn LinuxTV with Jay LaCroix
+Learn Linux TV with Jay LaCroix
     https://www.learnlinux.tv/ -- homepage
     https://www.youtube.com/watch?v=wYwGNgsfN3I -- Linux Essentials - The ps Command (Done)
     https://www.youtube.com/watch?v=zMKacHGuIHI -- Linux Essentials - Data Streams (stdin, stdout & stderr) (Done)
@@ -86,8 +86,9 @@ Learn LinuxTV with Jay LaCroix
     https://www.youtube.com/watch?v=bA8GVdGFT30 -- Demystifying Hostnames and Domain Names in Linux, and How Server Naming Benefits You
     https://www.youtube.com/watch?v=GUpZELktYKQ -- Essential First Steps for Every New Linux Server Build
     https://www.youtube.com/watch?v=Jnxx_IAC0G4 -- 10 Tips for Hardening your Linux Servers
+    https://www.youtube.com/watch?v=Kzpm-rGAXos -- Systemd Deep-Dive: A Complete, Easy to Understand Guide for Everyone
 
-Learn LinuxTV Bash Scripting Course with Ja LaCroix
+Learn Linux TV Bash Scripting Course with Ja LaCroix
     https://www.youtube.com/watch?v=2733cRPudvI -- Bash Scripting on Linux (The Complete Guide) Class 01 - Course Introduction
     https://www.youtube.com/watch?v=boqC9QenshY -- Bash Scripting on Linux (The Complete Guide) Class 02 - Hello World
     https://www.youtube.com/watch?v=uQE_4Q-HZZw -- Bash Scripting on Linux (The Complete Guide) Class 03 - Variables
@@ -516,7 +517,7 @@ Linux Commands
     systemctl restart apache2 -- stop and cold start apache on Ubuntu to apply config changes (as root)
     systemctl restart sshd -- restart the ssh listener daemon
     systemctl reload apache2 -- stop and warm start apache on Ubuntu to take new config settings (as root)
-    systemd - program to manage services or units on a linux server: start, monitor, log, and control
+    systemd - commonly used init program to manage services or units on a linux server: start, monitor, log, and control
     tac -- writes a file to stdout in reverse order
     tail -- show last 10 lines in a text file, e.g. tail -n 3 <filename> shows last three lines in <filename>, -f follow new entries
     tail -f <filename> -- follow additons to <filename> in real time

@@ -346,12 +346,27 @@ Coding with Radu - HTML Canvas Course
     https://www.youtube.com/watch?v=ZhaE8Jleq_I -- Javascript Piano (Keyboard input and Audio playback)
     https://www.youtube.com/watch?v=c7d54inurac -- Beginner JavaScript project (Advanced snowman)
 
-https://www.youtube.com/playlist?list=PLIJrr73KDmRwNZAYsAmWV8HXrPju73emb - JavaScript Fundamentals Course, Tapas Adhikary
+Javascript with Tapas Adhikary
+    https://www.youtube.com/playlist?list=PLIJrr73KDmRwNZAYsAmWV8HXrPju73emb - JavaScript Fundamentals Course, Tapas Adhikary
     https://www.youtube.com/watch?v=PDtlYNfo5zE -- How to learn JavaScript effectively? JavaScript learning model for developers
     https://www.youtube.com/watch?v=5wxT8ZsiG3c -- Uncover the Secret to Mastering JavaScript Lexical Environment!
     https://www.youtube.com/watch?v=4vl-2qtKgc4 -- The Secrets of JavaScript Variables
     https://www.youtube.com/watch?v=4sBfx3ISBdM -- What's the best way to load a JavaScript file in HTML? HTML async vs defer
     https://www.youtube.com/watch?v=UPeFK1uFJCE -- JavaScript Function Crash Course With Closures and More
+    https://www.youtube.com/watch?v=I0Lw9eNuUJI -- What are Higher-Order Functions in Javascript
+    https://www.youtube.com/watch?v=vxfVNXJyeHk -- What are Pure Functions and Side Effects in Javascript
+    https://www.youtube.com/watch?v=l50gnBWHmdA -- From Beginner to Pro: JavaScript Module Crash Course With Dynamic Imports and More
+    https://www.youtube.com/playlist?list=PLIJrr73KDmRyCanrlIS8PEOF0kPKgI8jN -- Asynchronous programming in JavaScript playlist
+    https://www.youtube.com/watch?v=pIjfzjsoVw4 -- JavaScript Synchronous vs. Asynchronous | Promises | Asynchronous Programming | Task and Job Queue
+    https://www.youtube.com/watch?v=rdVG85LGsVE -- Introduction to JavaScript Promises | How to Resolve and Reject Promises | A beginner-friendly Intro
+    https://www.youtube.com/watch?v=54dnv1ha3sw -- Learn JavaScript Promise Chain | .then() .catch() .finally() handler methods | JavaScript Promises
+    https://www.youtube.com/watch?v=CP0CqAkY-Zs -- JavaScript async/await Keywords | Asynchronous Programming | JavaScript Promises | Error Handling
+
+Codevolution with Vishwas
+    https://www.youtube.com/watch?v=YiYtwbnPfkY -- JavaScript Promises for Complete Beginners, a good breakdown starting at 07:10
+    https://www.youtube.com/watch?v=XIOLqoPHCJ4 -- JavaScript Crash Course - Tutorial for Complete Beginners, with Vishwas
+    https://www.youtube.com/watch?v=R9I85RhI7Cg -- Advanced JavaScript Crash Course
+    https://www.youtube.com/watch?v=exBgWAIeIeg -- Asynchronous JavaScript Crash Course
 
 MDN Webdocs
     https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API --Canvas API and tutorial
@@ -716,7 +731,7 @@ Java Script Object Notation (JSON)
         Booleans: true false (unquoted)
         null: empty or nothing value for a key value pair
         Objects { :key": "value"}
-    File Extensio: .json
+    File Extension: .json
     JSON Files; Top level is an object or array
     JSON is a serialized data notation for transferring data between systems
     JSON.stringify() -- convert a JS object data to JSON string data for file storage of transmission to a server
@@ -1372,15 +1387,16 @@ JS Modules
     Modules are reusable code blocks that can be used in multiple different scripts
     Modules were introduced in ES6
     HTML File reference to javascript with modules
-    <script type="module" src="script.js"></script> -- use type="module" for any js containing module references or imports
-    Exports can include: variables, classes, objects, functions
+        <script type="module" src="script.js"></script> -- use type="module" for any js containing module references or imports
+    Exports can include: variables, classes, objects, functions, arrays, etc
         export <function> ... ahead of each entity to name an export
         export {function1, function2, ...}; on a separate line to name all exports
-        exports can be default or named exports
+        exports can be default (for one component) or named exports (for multiple components)
             named exports are imported with the same name and cannot be aliased
             default exports can be imported and aliased
+                export default <object>
     Combined Exports
-        export {defauult as <alias>} from './<path>/<file.js> -- in another file of exports combines the exports from this file
+        export {default as <alias>} from './<path>/<file.js> -- in another file of exports combines the exports from this file
     Imports are made in another js file where they are used -- static imports should be placed at the top of the file
         import {function1, function2} from './<pach>/<file.js>';
         import (function1 as alias1, function2 as alias2 ...)
@@ -1519,8 +1535,9 @@ JS Compound Operators (read from right to left)
         Subtractions
 
 JS Scope
-    Block scope applies to let and const but not var (which is always function scope)
-    Global Scope apply everywhere if defined outside any code block
+    Block scope applies to let and const but not var (which is always function scope) and scope is within the block {}
+    Function scope applies to values within the function so variables defined within a function cannot be accessed outside the function
+    Global Scope apply everywhere if defined outside any code block or functions
     Block Scope (local scope) applies to variables declared inside a block
     You cannot redefine a variable in the same scope but you can redefine a variable in a different scope or block
     Block or local scope variables are not accessible outside its code block
@@ -1533,7 +1550,7 @@ JS Logical Operators
     ! not
 
 JS Comparison Operators
-    == loose equality or loose comparison, in value only (loose comparison, using type coercion if needed) e.g. 25 == '25' is true
+    == loose equality or loose comparison, in value only (loose comparison allows coercion, using type coercion if needed) e.g. 25 == '25' is true
     === strict equality or strict comparison. in value and type (strict equality, not allowing type coercion)
     != inequality, not equal to (inequality operator) (loose inequality, using type coercion)
     !== - strictly not equal to (strict inequality operator, not using type coercion)
@@ -1575,7 +1592,7 @@ JS Datatypes (7 different datatypes)
             Strings have built-in's (or native functions)
         - null (primitive): separate datatype explicitly assigned to a variable and means nothing (intentionally) or no value e.g. var name = null;
             has a value of zero in numeric expessions
-        - undefined (primitive): separate datatype and means 'no value assigned' (unintentionally) and automatically assigned by the browser if not initialized
+        - undefined (primitive): separate datatype and means 'no value assigned' (unintentionally) and automatically assigned by the browser if not initialized, can be assigned explicitly e.g. x = undefined;
         - bigint (primitive)
         - boolean (primitive): true or false (lower case, not enclosed in quotes)
         - object (reference): the only non-primative datatype and holds multiple key-value pairs: arrays, dates, literals etc as well as functions
@@ -1591,7 +1608,13 @@ JS Type Conversion (explicit type conversion)
     typeof -- show the type of a variable (e.g. typeof varname)
     value1 = Number(value2) -- convert value2 to a number and save in value1
     value1 = String(value2) -- convert value2 into a number and save in value1
-    value1 = Boolean(value2) -- converts value2 into a boolean
+    value1 = String(null) -- returns 'null'
+    value1 = String(undefined) -- returns 'undefined'
+    value1 = String(NaN) -- returns 'NaN'
+    value1 = 500.toString() -- returns ''500'
+    value1 = Boolean(value2) -- converts value2 into a boolean and null, undefined, 0, '' and NaN return false
+    value1 = parseInt('5') -- converts to an integer
+    value1 = parseFloat('3.14') -- converts to a float
         truthy values - positive and negative numbers and all non-empty strings
         falsy values  - zero and any empty string
 
@@ -1654,7 +1677,7 @@ JS Properties (e.g. of Strings)
     strings are immutable .. existing individual characters cannot be changed
     declare an empty string: var mystring = "";
 
-JS Functions including ES6 Arrow Functions
+JS Functions
     Function are objects defined with the 'function' keyword and () and {};
     Functions can be named or anonymous
     Functions can be declared and defined separately
@@ -1679,14 +1702,22 @@ JS Functions including ES6 Arrow Functions
     All arguments passed in a function are stored in an array 'arguments'
        Access arguments inside a function from the 'arguments' array
        This array can be used in variadic functions with variable numbers of arguments
-    Higher Order Functions are functions that take callbacks as arguments or return functions as a result (i.e. closures)
-       e.g. document.addEventListener("click", clickFunction)
-       e.g. map(), filter(), redce() array functions
     Function Scope
         Variables defined within a function cannot be accessed outside the function
         A function can access all the variables within the scope where it is defined
     Closures
         Closures are inner functions or nested functions that are returned from the outer function
+
+JS Asynchronous Functions
+    const timeoutId = setTimeout(<callback>, <milliseconds>, optional parameters passed to the callback) -- executes a callback after an interval of time in milliseconds
+        timeoutId can be passed to clearTimeout() to cancel the timeout call
+        clearTimeout(timeoutId) 
+    const intervalId = setInterval(<callback>, <milliseconds>, optional parameters passed to the callback) -- repeatedly runs a callback after a set interval
+        interval can be cleared wiht clearnterval()
+        clearInterval(intervalId);
+        setInterval time includes the time taken to run the call back so the actua interval delay is <milliseconds> less function execution time
+    The interval is the minimum interval or delay and not the exact interval or delay
+    setTimeout() and setInterval() are implemented by the browser and node, and not by native javascript
 
 JS Nested Functions
     Nested functions are defined and called within other functions
@@ -1731,7 +1762,8 @@ JS Anonymous Functons
             e.g. document.addEventListener("click", () => alert("Thank you for clicking"))
 
 JS Callback Functions
-    Functions in javascript are first class -- they are treated like any other variable so can be passed as arguments to another function
+    Callbacks can be synchronous (executed immediately) or asyncrhonously (after an async operation)
+    Functions in javascript are first class -- they are treated like any other variable so can be passed as arguments to another function and returned by other functions
     Callbacks are functions passed by name as paramenters in other functions and executed by the other function
         // callback example where seeded forEach only takes a callback function referencing the item and index in the array
         const cars = ['Ford', 'Honda', 'Chevrolet', 'Buick'];
@@ -1739,6 +1771,26 @@ JS Callback Functions
           console.log(index, item);
         }
         cars.forEach(myCallBack);
+    Many standard array manipluation functions are higher order functions (map, filter, reduce etc)
+
+JS Higher Order Functions (HOF's)
+    Higher order functions take callbacks as arguments or return functions as a result (i.e. closures)
+       e.g. document.addEventListener("click", clickFunction)
+       e.g. map(), filter(), reduce() array functions
+    Functions returned from other functions can be assigned to a variable and the variable subsequently executed as a function
+
+JS Pure Functions
+    Pure functions are functions that produce the same output for the same input
+    Pure functions do not modify the values of their input parameters
+    Impure functions produce different output for the same input due to side-effects of changes elsewhere
+        For example, a function that uses variables outside it's own scope which it does not control
+
+JS Immediately Invoked Function Expressions (IIFE's
+    Functions that are immediately executed after they are defined
+    They are used to avoid creating a named function in the global scope and avoiding name collisions
+    IIFE's are anonymous functions
+    Eg:
+        (function() {console.log("Hello World");})() --executes immediately
 
 JS Constructor Functions
     The new keyword in front of any function creates an object
@@ -1778,7 +1830,7 @@ JS Array Methods
     myArray.length property returns the array length
     myArray.find(<function> returns the first item in an array where <function> returns true
     myArray.slice(<start offset inclusive>, <end offset exclusive>) -- returns a slice of an array where end offset is optional
-    myArray.splicE(offset, count, substitute) -- removes 'count' elements starting at 'offset' an optionally replaces with 'substitute'
+    myArray.splice(offset, count, substitute) -- removes 'count' elements starting at 'offset' an optionally replaces with 'substitute'
     myArray.splice(offset, 0, new) -- add a new value to myArray at 'offset'
     myArray.sort() method sorts the array temporarily
     myArray.some(<function>) returns true if an array has any items where <function> returns true
@@ -1847,7 +1899,7 @@ JS Array Code Samples
     // print an array element using the name reference
     console.log(myArray[0].name); // prints 'Jim'
 
-JS Conditionals and Compound Conditionals and Decisions (Control Flow)
+JS Conditional Statements and Compound Conditionals and Decisions (Control Flow)
     If (boolean expression) {true action} else {false action}. 
     if (boolean expression) {true action) else if (true action};
     Expression can include && (logical and) and || (logical or) operators
@@ -1867,6 +1919,7 @@ JS Iterations and Loops and Conditionals (Control Flow)
     while ... (e.g. while (i < 10) {console.log(i)}); and i must be declared prior to the loop
     do while ... (e.g. do {...} while (i < 10) so the code runs at least once
     for each -- used for arrays (e.g array1.forEach(function(array1){console.log(array1)}) steps through array1 executing a function for each value
+    for (const item of array) {}... of loop
     break -- break out of the current enclosing loop
     continue == advance to next iteration of the currentt enclosing loop without executing more statements in the current loop
 
@@ -1878,6 +1931,10 @@ JS Modal Interaction
 JS Console Commands
     console.log('text to show on the console') -- prints to the command shell in node
     console.log('text1', 'text2') -- prints each string with a space separator
+    console.info()
+    console.warn()
+    console.error()
+    console.debug()
     console.clear()
     console.assert()
     console.table() -- to show JSON data in the console
@@ -1976,7 +2033,7 @@ JS Object Manipulation
     Add keys and values to an existing object
         myObject.newKey = <newValue>;
         myObject['newKey'] = <newValue>;
-    Iterate throuh an obect with a for ... in  loop
+    Iterate throuh an object with a for ... in  loop
         for (let iterator in dog) {
             console.log(iterator, ': ', dog[iterator]);
         }
@@ -2001,11 +2058,17 @@ JS Classes
     Class names start with a capital letter (naming convention)
     Javascript is a prototype-based language
     Use the Class syntax with embedded constructor function to define a class
+    Instancs vs Class Variables
+        Variables defined by the constructor are instance variables and each instance of the class has its own copies
+        Variables defined outside the constructor are class properties and apply to all objects in the class.
+            class variables are defined without the var or let qualifiers
+            Each new object inherits the class property value at the time it is created
+            Class properties are referenced by <classname><propertyname>
     Underscores "_" as prefixes on constructor parameters is a common naming convention
         class <newClass> {
             constructor(<_attrib2>, <_attrib2>) {
-                this.attrib1 = <_attrib1>;
-                this.attrib2 = <_attrib2>;
+                this.attrib1 = <_attrib1>;                         // instance variable1
+                this.attrib2 = <_attrib2>;                         // instance variable2
             }
 
             method1() {
@@ -2015,8 +2078,11 @@ JS Classes
             method2() {
                 ...
             }
+
+            variable1 = <value>;              // class variable1 not in the constructor
+            variable2 = <value2>;             // class variable2 not in the constructor
         }
-    Create an object from a class with the 'new' keyword and the constructor
+    Create an object from a class with the 'new' keyword which executes the constructor function within the class definition
         myObj = new.User('Geoff','Repo');
         The new keyword:
             1. Creaes a new empty object
@@ -2030,6 +2096,10 @@ JS Classes
                 ....
             }
         }
+    Referencing object values
+        Use dot or bracket notatio
+            object.attribute -- dot notation
+            object[attribute] -- bracket notation, useful if attribute is a variable
     Getters and Setters
         Getters and setters control how class values are set and retrieved and enforce consistency in class updates and queries
         They are optional
@@ -2045,6 +2115,9 @@ JS Prototypes
 
 JS Class Inheritance
     class <secondClass> extends <firstClass> {
+        constructor() {
+            super(); -- inherits the constructor of the <firstclass>
+        }
         ...
     }
 
@@ -2250,8 +2323,9 @@ JS AJAX Requests (using XMLHttpRequests or fetch)
             start().catch(error => {                                                  -- or call the async function with a .catch if it returns an error response
                 console.log(error);
             });
+
 JS Promises
-    A promise is an object created by a constructor that takes an anonymous function with two parameters as it's parameter
+    A promise is an object created by a constructor that takes an anonymous execution function with two parameters as it's argument
         The two parameters are functions (resolve and reject) that determine the outome of the promise
     const myPromise = new Promise((resolve, reject) => { });
     A promise has three states: pending, then fulfilled or rejected. It will remain pending until resolve or reject are handled
@@ -2265,7 +2339,23 @@ JS Promises
     let p = fetch(hamburgerAPI);
     p.then(Response => Response.json()).then((json) => console.log(json));
     p.then(Response => Response.text()).then((text) => console.log(text));
+    Static Methods
+        promise.all() -- to perform actions after all promises complete, if no rejections
+        prolmise.allSettled() -- to perform actions after promises complete, and ignores rejections
+        promise.race() -- resolves the first promise to complete and ignores the rest
 
+JS Asynch Await
+    allows writing synchronouse-looking code for async operations
+    async -- declares functions that are asynchronous so the function returns a promise
+    await -- put ahead of a promise forces waiting until the promise is resolved
+
+JS Event Loop
+    Components of Javascript
+        JS Engine: Memory heap and call stack
+        Web API's: asynchronouse browser components
+        Callback queue/Task queue
+        Microtask queue
+        Event Loop
 
 MongoDB Notes
     MDB References

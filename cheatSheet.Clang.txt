@@ -371,7 +371,6 @@ CodeVault
     https://www.youtube.com/watch?v=8A3Zycio0W4 -- How to find a word inside a sentence in C
     https://www.youtube.com/watch?v=0qSU0nxIZiE -- Replace substrings in C
     https://www.youtube.com/watch?v=ZJl41yjl2bI -- Post-increment vs pre-increment in C (a++ vs ++a)
-    https://www.youtube.com/watch?v=IKG1P4rgm54 -- Difference between processes and threads
     https://www.youtube.com/watch?v=rUA3IkQNe5I -- Format strings in C
     https://www.youtube.com/watch?v=dDjfaA9Q3n8 -- Reading from binary files in C
     https://www.youtube.com/watch?v=P-fWNCF7Wx8 -- Writing to binary files in C
@@ -392,6 +391,8 @@ CodeVault
     https://www.youtube.com/watch?v=NBwvtoJghz4 -- Format and parse datetime in C
     https://www.youtube.com/watch?v=9guJVmDyFmE -- What is typedef?
     https://www.youtube.com/watch?v=fXOOCpZyvwM -- Intro to recursive functions in C
+    https://www.youtube.com/watch?v=d9s_d28yJq0 -- Short introduction to threads (pthreads)
+    https://www.youtube.com/watch?v=IKG1P4rgm54 -- Difference between processes and threads
 
 Barry Brown C programming
     https://www.youtube.com/playlist?list=PLnpfWqvEvRCchcCM-373x2630drhtdWEw -- Playlist
