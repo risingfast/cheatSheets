@@ -59,6 +59,8 @@ Active Server Pages Table of Contents (ASPTOC)
         Replace any single quotes with two single quotes prior to buidling SQL strings
             Strings must have single quotes around variables so single quotes in text need protection
             Two adjacent single quotes is equivalent to one single quote
+    Windows Drivers
+        https://www.youtube.com/watch?v=9h1FsOISwX0&t=28s -- How to make a Kernel Driver - Setup & Hello World - Kernel1
 
 Windows Utilities
     msinfo32 shows the host profile information including hardware, software and features e.g. msinfo32 /report C:\Users\gjarman\Documents\Computing\Microsoft\Cmd\msinfo.txt (same as SYSTEMINFO)

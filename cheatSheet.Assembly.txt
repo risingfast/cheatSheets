@@ -1,8 +1,8 @@
 Assembly Cheatsheet x86 Architecture
 
 References
-    https://www.youtube.com/watch?v=VQAKkuLL31g ; youtube video to create and compile and link an NASM program in Linux #1
-    https://www.youtube.com/watch?v=BWRR3Hecjao ; youtube video to create and compile and link an NASM program in Linux #2
+    https://www.youtube.com/watch?v=VQAKkuLL31g ; youtube video to create and compile and link an NASM program in Linux #1, kupala
+    https://www.youtube.com/watch?v=BWRR3Hecjao ; youtube video to create and compile and link an NASM program in Linux #2, kupala
     http://www.tutorialspoint.com/assembly_programming - step by step intro for NASM multiple tutorials
     https://www.youtube.com/playlist?list=PLPedo-T7QiNsIji329HyTzbKBuCAHwNFC ; series of videos on Assembly programming in MASM
     http://masm32.com/ ; Microsoft MacroAssembler 32 bit download
@@ -15,6 +15,14 @@ References
     https://www.youtube.com/watch?v=L1ung0wil9Y&t=137s -- MIT Assembly Language and Compiler Architecture
     https://github.com/hackclub/some-assembly-required?utm_source=tldrnewsletter -- Assembly course
     https://www.youtube.com/watch?v=6S5KRJv-7RU&t=52s -- you can become a BIG BRAIN assembly programmer in only 10 minutes. (yes, YOU!), Low Level Learning
+    https://www.youtube.com/watch?v=juGNPLdjLH4 -- How Do Linux Kernel Drivers Work? - Learning Resource, LiveOverflow
+    https://sockpuppet.org/issue-79-file-0xb-foxport-hht-hacking.txt.html, LiveOverflow  -- AVR Assembly overview at "4. AVR Assembly"
+    https://www.youtube.com/watch?v=cNN_tTXABUA -- How a CPU works, In One Lesson
+    https://www.buthowdoitknow.com/services.html -- The Basic Principles of Computers for Everyone
+    https://cpu.land/ -- Putting the "You" in CPU, Lexi Mattick
+
+Tools
+    https://defuse.ca/online-x86-assembler.htm -- assembler and disassember for x86 and x64
 
 Look at MASM and Assembly programming (Done)
     https://www.youtube.com/watch?v=vtWKlgEi9js -- ALP Tutorial 00 -- Introduction to ASL (Done)
@@ -37,7 +45,7 @@ Hello World in Assembly (Done)
     https://www.youtube.com/watch?v=015dEE3NnZg -- Hello World in Assembly in 5 Minutes (Ubuntu 20.04) (Done)
     https://www.youtube.com/watch?v=skRyVBM8yX0 -- Hello World Code Explanation Assembly in 15 Minutes (Ubuntu 20.04) (Done)
 
-x86_64 Linux Assembly (with NASM) (Done)
+x86_64 Linux Assembly (with NASM), Kupala
     https://www.youtube.com/playlist?list=PLetF-YjXm-sCH6FrTz4AQhfH6INDQvQSn -- playlist (Done)
     https://www.youtube.com/watch?v=VQAKkuLL31g -- x86_64 Linux Assembly #1 - "Hello, World!" (Done)
     https://www.youtube.com/watch?v=BWRR3Hecjao -- x86_64 Linux Assembly #2 - "Hello, World!" Breakdown (Done)
@@ -51,7 +59,7 @@ x86_64 Linux Assembly (with NASM) (Done)
     https://www.youtube.com/watch?v=AwmhZUATGYM -- x86_64 Linux Assembly #10 - Introduction to Files and File Permissions (Done)
     https://www.youtube.com/watch?v=vXsUIX_Ozgc -- x86_64 Linux Assembly #11 - Writing Files (Done)
     https://www.youtube.com/watch?v=BljOGzRP_Ws -- x86_64 Linux Assembly #12 - Reading Files (Done)
-    https://www.youtube.com/watch?v=bV0NJ7zvap8 -- x86_64 Linux Assembly #13 - Pausing With Nanoi sleep (Done)
+    https://www.youtube.com/watch?v=bV0NJ7zvap8 -- x86_64 Linux Assembly #13 - Pausing With Nanosleep (Done)
 
 Introductory Intel x86: Architecture, Assembly, Applications
     https://www.youtube.com/watch?v=H4Z0S9ZbC0g&t=409s -- Day 1 Part 1: Introductory Intel x86: Architecture, Assembly, Applications
@@ -83,9 +91,13 @@ Stack - push or pop, grows towards lower memory addresses
     stack frame ; stack segment with all local variables of a function
     Stack frame ; grows downwards
 
-Registers - addresses or values
+Endianness
+    Big Endian -- the largest (most significant) byte of a word is stored in the lowest memory location
+    Little Endian -- the smallest (least signficant) byte of a word is stored in the lowest memory location
+
+Registers (64 bit) - addresses or values
     General purpose registers: 
-        rax ; return values from syscalls and functions, 
+        rax ; return values from syscalls and functions
         rbx ; base pointer to the data section
         rcx ; scratch register and general counter
         rdx ; scratch register
@@ -136,7 +148,7 @@ Compile and Run Assembly on Linux (using NASM)
     ld first.o -o first ; link with the gnu linker
     ./a.out ; run
 
-Sections
+Sections (3 sections)
     .data data ; section for data defined prior to compilation
     .text code ; section for executable code
         db     ; define bytes (8 bits)
@@ -149,7 +161,7 @@ Labels
     labels are addresses in memory calculated by the compiler
     a call to a label loads the next instruction from the label's address
     _start: ; starting address used by the linker to mark execution of first instruction
-    global ; a qualifier (linker instruction) for the _start label
+    global ; a qualifier (linker instruction) for the _start label (first instruction in the text section)
 
 Flags
     RFLAGS register 
@@ -158,22 +170,22 @@ Flags
     The RFLAGS register is updated after each instruction
     CF ; Carry
     PF ; Parity
-    ZF ; set to 1 if the result of the last instruction was 0
-    SF ; set to msb of the result of the last instruction (1 for negative, 0 for positive)
+    ZF ; Zero -- set to 1 if the result of the last instruction was 0
+    SF ; Sign -- set to msb of the result of the last instruction (1 for negative, 0 for positive)
     OF ; Overflow
     AF ; Adjust
     IF ; Interrupt Enabled
 
 Pointers
     Pointers are registers that hold memory addresses
-    rip ; next execution address
-    rsp ; top of the stack
-    rbp - bottom of the stack
+    rip ; indexp pointer -- next execution address
+    rsp ; stack pointer -- top of the stack
+    rbp : base pointer -- bottom of the stack
 
 Comments
     ; prefix a comment with ; in nasm anywhere on the line
 
-System Calls
+System Calls (Syscalls)
     syscall ; with registers populated is a service request to the kernel
     arguments:
         RAX ; System call ID 
@@ -216,9 +228,13 @@ Include Files
     Include files contain macros and 'equ' values
     Include files are typically references at the beginning of an .asm file
 
+Control Flow
+    Control Flow is top to bottom
+    the rip pointer is incremented as each instruction is executed
+
 Jumps
     jumps change the control flow by jumping to a specific instruction and not incrementing to the next instruction
-    loads an address represented by a jump label into the rip registuer
+    loads an address represented by a jump label into the rip register
     jmp <label> jumps control flow to a label location (loads <label> into rip register
 
 Comparisons
@@ -227,7 +243,7 @@ Comparisons
     cmp rax, 23 ; compare a register to a value
     ZF flag is set to 1 if comparison is true, 0 if comparison is false
 
-Conditional Jump
+Conditional Jumps
     Can be done after a comparison is made
     jmp is replaced by the conditional jump symbol
         je - jump if equal
@@ -238,6 +254,7 @@ Conditional Jump
     There are unsigned jump codes too
 
 Registers as Pointers using {}
+    If a register is square bracketed in code e.g. [rbx] the value is treated as an address pointing  to a value in memory
     mov rax, rbx  ; move the value in rbx to rax
     mov rax, [rbx] ; used the value at the address in rbx to rax
 

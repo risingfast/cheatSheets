@@ -1,5 +1,12 @@
 Arduino Cheatsheet
 
+
+Installation
+    C:\Users\gjarm\AppData\Roaming\arduino-ide -- installation directory
+
+Arduino References
+    http://www.arduino.cc/en/Guide/Libraries -- installing libraries
+
 Paul McWhorter New Arduino Programming
     https://www.youtube.com/watch?v=fJWR7dBuc18 -- Tutorial 1 Setup (Done)
     https://www.youtube.com/watch?v=9uHZB7-T_XA -- Tutorial 2 LED's (Done)
@@ -56,6 +63,10 @@ Derek Banas - Arduino Programming
 Brainy Bits Arduino
         https://www.youtube.com/channel/UCH2m9XX8jSyVMkZUXwETPTw/videos -- All videos
         https://www.arduino.cc/reference/en/ -- Language Reference
+
+Board Setup
+    Menu > Tools > Port > COM3
+    Menu > Board > Atmega 2560 (Mega 2560)
 
 Variable Declarations
     float f = 10.4;

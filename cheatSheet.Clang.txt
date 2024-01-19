@@ -346,6 +346,7 @@ C Videos Jacob Sorber (code prefix js)
     https://www.youtube.com/watch?v=jxW7iwCtBZk -- What is a function prototype in C
     https://www.youtube.com/watch?v=VsRs0H4hXEE -- The right way to define a C function with no arguments
     https://www.youtube.com/watch?v=SThwp5ijh6o -- How does fork work with open files?
+    https://www.youtube.com/watch?v=TsUOhPsZk6k -- Make your Data Type more Abstract with Opaque Types in C
 
 CodeVault
     https://www.youtube.com/@CodeVault -- main index
@@ -445,6 +446,10 @@ C on Linux (code prefix cc)
     https://www.youtube.com/watch?v=Rwtsx0BfLxk -- C with Caleb - C Tutorial 09 - C Basics Part 1 - Variables, Expressions, Statements (Done)
     https://www.youtube.com/watch?v=tPlT9mg7bkw -- C with Caleb - C Tutorial 10 - C Basics Part 2 - Print Variables Using Printf (Done)
     https://www.youtube.com/watch?v=EA8K2d3USDc -- C with Caleb - C Tutorial 11 - C Basics Part 3 - Taking Input from User (Done)
+
+Device Drivers
+    How Do Linux Kernel Drivers Work? - Learning Resource -- How Do Linux Kernel Drivers Work? - Learning Resource, LiveOverflow
+    https://lwn.net/Kernel/LDD3/ -- Linux Device Drivers, Third Edition
 
 Bluefever Software
     https://www.youtube.com/playlist?list=PLZ1QII7yudbdFfKY1eKV3x_bag04AMPJq -- Beginning C Programming Index

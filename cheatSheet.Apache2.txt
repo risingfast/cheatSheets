@@ -24,6 +24,7 @@ References
     https://www.youtube.com/watch?v=KRfhdWxyenI&list=PLyuRouwmQCjnqkUsuXHT4WOPzeWXvuA4W&index=1 -- Prevent Directory Browsing on Apache, Steve Griffith
     https://www.youtube.com/watch?v=SBw92maYVCY&list=PLyuRouwmQCjnqkUsuXHT4WOPzeWXvuA4W&index=2 -- Password Protecting Apache Directories, Steve Griffith
     https://www.youtube.com/watch?v=zswi0cPMxsU&list=PLyuRouwmQCjnqkUsuXHT4WOPzeWXvuA4W&index=3 -- Understanding CORS AJAX fetch problems, Steve Griffith
+    https://www.youtube.com/watch?v=1CDxpAzvLKY -- Apache Basics Tutorial | How To Install and Configure Apache2
 
 Installation Steps
     sudo apt update -- collect latest packages
@@ -31,11 +32,12 @@ Installation Steps
     sudo apt install apache2 -- install apache2
     sudo apt install apache2-doc -- install apache2 documentation package
     sudo apt install apache2-utils -- install apache2 utilities package
+    sudo apt install apache2 apache2-doc apache2-utils -- install all three packages with one command
     systemctl start apache2 -- start apache2
     systemctl enable apache2  -- enable apache2 start on machine boot
-    systemctl status apache2 -- check status of apache2
+    systemctl status apache2 -- check status of apache2 and if it is enabled to start on server boot/reboot
     systemctl restart apache2 -- to bounce the server already running
-    sudo service apache2 status -- check status alternative command
+    sudo service apache2 status -- check status alternative command (use reload to avoid bouncing connections)
     apache2 -v -- show version
     sudo /etc/init.d/apache2 stop -- stop apache2
     sudo /etc/init.d/apache2 start -- start apache2
@@ -83,14 +85,18 @@ Configuration Directories
     /etc/httpd/conf/httpd.conf -- configuration file
 
 Configuration
+    Apache is configured with modules
+    apt search libapache2-mod -- list all available modules that can be installed for Apache 2
     Configuration uses directives in files in /etc/apache2/sites-enabled, or in .htaccess files on the file system
-    .htaccess files should only be used on hosted installactions where /etc/apache2 access is blocked
+    .htaccess files should only be used on hosted installations where /etc/apache2 access is blocked
 
 Comments
     comments in configuration and .htaccess must start the line with "#" always and cannot start mid-line
 
 Virtual Host Configuration
+    Name-based virtual hosts allow running multiple sites on the same server
     Make a new directory under /var/www
+    List current sites with ls /etc/apache2/sites-available
     Copy /etc/apache2/sites-available/000-default.conf to a new file and name it as the new hostname (eg. rf.com.conf)
     Update the new conf file: add ServerName rf.com or the new server name and set document root to new directory
     Enable the  new virtual config ... sudo a2ensite rf.com
@@ -104,7 +110,9 @@ Modules
     /etc/apache2/mods-enabled -- subdirectory of enabled modules
     apt search libapache2-mod -- list available modules for apache2
     apt install libapache2-mod-python -- install python scripting support
+    run 'sudo a2enmod' to see a list of all installable modules
     run 'sudo a2enmod <modulename> to enable installed  modules in Apache the 'systemctl restart apache2' to apply
+    run 'a2dismod for a list of all active installed modules that can be disabled
     mod_session
         as sudo: a2enmod session
         as sudo: systemctl restart apatch2 -- to restart apache after enabling the mod

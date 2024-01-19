@@ -36,7 +36,7 @@ References
     Look at Linux Administration on Youtube https://www.youtube.com/watch?v=qAMWG86sEm8 -- overview of areas, not a tutorial
     https://www.linuxtrainingacademy.com/vim-cheat-sheet/
     https://www.youtube.com/watch?v=ZtqBQ68cfJc --  The 50 Most Popular Linux & Terminal GCommands - Full Course for Beginners
-    https://www.youtube.com/watch?v=NsK7OPlK94U&t=431s -- Linux Command-Line Tips & Tricks: Over 15 Examples! (Done)
+    https://www.youtube.com/watch?v=NsK7OPlK94U& -- Linux Command-Line Tips & Tricks: Over 15 Examples! (Done)
     https://0xax.gitbooks.io/linux-insides/content/ -- Linux Insides book
     https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-ubuntu-1804 -- Ubuntu Cron job how-to
     https://www.youtube.com/watch?v=mXw9ruZaxzQ&list=TLPQMTgxMTIwMjKpq-VJdRmp9w&index=1 2:45:43 Operating System Full Course
@@ -52,6 +52,7 @@ References
     http://freeos.com/guides/lsst/ -- shell scripting training book
     https://www.youtube.com/watch?v=2733cRPudvI -- Learn Linux TV Bash Shell scripting
     https://wiki.linuxfoundation.org/lsb/fhs -- Linux Foundation Filesystem Hierarchy Standard
+    https://cpu.land/the-translator-in-your-computer -- Putting the "You" in CPU, How Linux runs programs
 
 Engineer Man Linux on Youtube
     https://www.youtube.com/watch?v=UFIoRLqhFpo -- Linux File System
@@ -60,6 +61,7 @@ Engineer Man Linux on Youtube
 
 Learn Linux TV with Jay LaCroix
     https://www.learnlinux.tv/ -- homepage
+    https://www.youtube.com/playlist?list=PLT98CRl2KxKHdOpQ-uI2QuNcQ0aEAe5bN -- All Tutorials playlist
     https://www.youtube.com/watch?v=wYwGNgsfN3I -- Linux Essentials - The ps Command (Done)
     https://www.youtube.com/watch?v=zMKacHGuIHI -- Linux Essentials - Data Streams (stdin, stdout & stderr) (Done)
     https://www.youtube.com/watch?v=NsK7OPlK94U -- Linux Command-Line Tips & Tricks: Over 15 Examples! (Done)
@@ -67,7 +69,7 @@ Learn Linux TV with Jay LaCroix
     https://www.youtube.com/watch?v=19WOD84JFxA -- Linux Essentials - Managing Users
     https://www.youtube.com/watch?v=dbVj-xQIJ0I -- Ubuntu 21.10 - Full Review
     https://www.youtube.com/watch?v=4e669hSjaX8 -- Linux Essentials - Understanding File & Directory Permissions
-    https://www.youtube.com/watch?v=BNL3qBN9pP0 -- Linux Essentials: Navigating the Linux Filesystem
+    htps://www.youtube.com/watch?v=BNL3qBN9pP0 -- Linux Essentials: Navigating the Linux Filesystem
     https://www.youtube.com/watch?v=skTiK_6DdqU == Linux Essentials - The find command
     https://www.youtube.com/watch?v=dloByPvLLXU -- How to Homelab Episode 1 - Tips on Getting Started
     https://www.youtube.com/watch?v=E8lyIO4TVtw -- How to Homelab Episode 2 - Software Considerations
@@ -87,6 +89,9 @@ Learn Linux TV with Jay LaCroix
     https://www.youtube.com/watch?v=GUpZELktYKQ -- Essential First Steps for Every New Linux Server Build
     https://www.youtube.com/watch?v=Jnxx_IAC0G4 -- 10 Tips for Hardening your Linux Servers
     https://www.youtube.com/watch?v=Kzpm-rGAXos -- Systemd Deep-Dive: A Complete, Easy to Understand Guide for Everyone
+    https://www.youtube.com/watch?v=43hcVCt_GMc -- How to Use The ls Command on the Linux Command Line
+    https://www.youtube.com/watch?v=XTMyJ5l0GLg -- Linux Crash Course - Understanding Memory and Swap Usage
+    https://www.youtube.com/watch?v=OVsMaXQkktQ -- 5 Easy Tweaks to increase your Linux Server's Security
 
 Learn Linux TV Bash Scripting Course with Ja LaCroix
     https://www.youtube.com/watch?v=2733cRPudvI -- Bash Scripting on Linux (The Complete Guide) Class 01 - Course Introduction
@@ -159,8 +164,8 @@ Linux Commands
     /etc/bin -- boot scripts for system configuration
     /etc/crontab -- scheduled jobs
     /etc/fstab -- 'File System Table' devices and mountpoints mounted automatically at boot
-    /etc/hostname -- hostname for the system
-    /etc/hosts -- file mapping DNS to IP addresses
+    /etc/hostname -- hostname for the system (e.g. localhost)
+    /etc/hosts -- file mapping DNS name to IP addresses
     /etc/init.d -- boot scripts for daemons (see service command)
     /etc/group -- group accounts and members
     /etc/os-release -- operating system release or version profile
@@ -168,6 +173,7 @@ Linux Commands
     /etc/profile -- systemwide environment variables for all users all upper case
     /etc/shadow -- the shadow file for the n/etc/passwd file
     /etc/shells -- list of shells
+    /etc/skel -- skeleton files nw users including .bashrc
     /etc/sudoers -- sudo privileges
     /etc/sudoers.tmp -- sudo privileges updated by 'sudo visudo'
     /home -- user files
@@ -175,7 +181,7 @@ Linux Commands
     /home/<username>/.bashrc -- run commands for the bash shell
     /lib -- shared system libaries
     /lost+found -- empty unless file system crash is partially recovered with fsck
-    /media -- automatic mount points for external media hardware such as usb drives
+    /media -- automatic mount points for external media hardware such as usb drives, CD drives
     /mnt -- mount point for removable devices and other devices mounted manually
     /opt -- optional software and related configuration files - no specific rules on usage (e.g. games)
     /proc -- virtual system directory and process psuedo files, directories for processes by PID
@@ -201,6 +207,7 @@ Linux Commands
     /usr/log -- log files
     /var -- variable files expected to grow e.g. spools, mail, databases, logs
     /var/log -- system logs and logfiles and error logs
+    /var/log/apt -- apt package manager logs
     /var/log/syslog -- the linux system logfile
     /var/run -- info on system since it was booted
     /var/spool -- data waiting on printing or processing
@@ -284,7 +291,7 @@ Linux Commands
     date +%Y-%m-%d -- system date in format YYYY-MM-DD
     dc -- RPN calculater (see also bc)
     dd -- data duplicator to copy files and disks (e.g. convert a file to upper or lower case ... dd if=input.txt of=output.txt conv=lcase)
-    diff -- compare two files and find differences
+    diff <file1> <file2> -- compare two files and find differences
     dig -- alternative to nslookup (apt install nsutils to install)
     dig -v -- version of dig
     dig gjarman2020.com -- show the A record of the DNS name (same as 'dig gjarman2020.com A') uses default DNS server in /etc/resolve.conf
@@ -295,7 +302,8 @@ Linux Commands
     dirs -- list the directory stack (see also pushd)
     disown -a -- disown processes running in the console before shutting down
     df -- 'disk free' space and used space on mounted file systems, df -h for human readable
-    df - h -- 'disk free' hunab readable space and used space on mounted file systems, df -h for human readable
+    df -h -- 'disk free' human readable space and used space on mounted file systems, df -h for human readable
+    df -i -- 'disk free' inodes (file handles)
     dict <word> -- search online dictionaries for references to <word>
     dictionary file -- see /usr/share/dict/words file
     dmesg -- read the kernel messages including messages created by drivers using printk() function in C
@@ -338,6 +346,7 @@ Linux Commands
     findmnt -- show mounted file systems in a readable format (see also mount)
     fold -w nn -- fold text into multiple lines of length nn, e.g. fold -w 12
     free -- free RAM and swap space
+    free -m -- free RAM and swap space, megabytes display option
     fsck -- file system check
     gdb -- GNU debug (use info gdb for documentation)
     gdisk -- disk partition manager similar to fdisk
@@ -372,7 +381,7 @@ Linux Commands
     hostname -- show or set a computer's hostname and domain name (stored in /etc/hostname)
     hostnamectl -- show the hostname and additional information: operating system, chassis, architecture, kernel
     hostnamectl set-hostname <newHostName> -- change the hostname (note: update /etc/hosts with any changes)
-    htop -- improved top command
+    htop -- improved top command to see all background processes controlled by systemd
     id -- current user and associated groups. -un show only user name (see also whoami)
     ifconfig -- show the internet configuration
     ifconfig | grep ether -- show the MAC address
@@ -396,15 +405,20 @@ Linux Commands
     ld -- gnu linker
     ldd <path/executable> -- list libraries used by a binary execcutable
     less <filename> -- scroll through any text file's contents, e.g. ldd <program binary name>
-    ll -- list directory contents in detail (see also ls -la)
+    ll -- list directory contents in detail (see also ls -laF)
     ln -s <filepath> [linkhome] -- create symbolic (soft) link (symlink), -s symbolic
     ln <filepath> [linkhome] -- create hard link (see unlink to remove)
     locate <filename> -- find files or directories from a database maintained by updatedb
     logrotate -- rotates, compresses and mails system logs
     ls -- list storage (files and subdirectories) in the current directory, -a show hidden , -l long format, -h human readable, -i show inode number, --color=never to disable color
+    ls -l -- list storage, long listing option
+    ls -h -- list storage, human readable optiona
+    ls -a -- list storage, all files which includes hidden files with th '.' dot prefix
+    ls -t -- list storage, descending order of date modified
+    ls -F -- list storage, show directories with trailing '/'
     ls -R -- lists all files and folders recursively from the current directory
     ls -lR | grep "filename" to list all files matching a regex filename in the current directory and subdirectories
-    ls -- does not support -i case insensitive switch so pipe to grep for this filter (e.g. ls -la | grep -i "<filtertext>"
+    ls -- 'List Storage'  does not support -i case insensitive switch so pipe to grep for this filter (e.g. ls -la | grep -i "<filtertext>"
     ls <path> -- list files in a non-local directory
     ls -laS * -- list files by filesize large to small in the current directory
     ls -lia -- list inode numbers
@@ -464,7 +478,7 @@ Linux Commands
     ps -He -- list processes in a hierarchy across all terminals
     ps -axjf --
     pstree -- show processes in parent/child tree
-    pwd -- print working directory
+    pwd -- 'print working directory'
     readelf -a <filename> -- display the contents of an elf file (comppiled object file), -a option = read all
     reboot -- reboot the operating system (requires sudo) reboot --force to force immediate reboot (see shutdown)
     reset -- restore the linux terminal to it's original state (see cleart
@@ -490,6 +504,7 @@ Linux Commands
     sort <filename> -- sorts lines in a textfile to std output
     source <filename> -- executes filename as a script, e.g. source ~/.bashrc to load new shell vars into startup config for the current user
     spell <filename> -- checks spelling in a file and prints misspellings one word per line
+    ss -tupln -- socket statistics dump, lists open ports, similar to netstat
     ssh uses port 22
     ssh gjarman@192.168.1.64 -- connect to a host via SSH using the host IP address, use <Ctrl>-d to disconnect
     ssh -v gjarman@192.168.1.64 -- connect verbose
@@ -508,15 +523,16 @@ Linux Commands
     symbolic link -- prefixed 'l' in directory listing, file entry pointing to another file (file synonmym)
     systemctl -- control script for systemd units (services) -- components started after the kernal
     systemctl list-unit-files --type=service -- list service files and show their state
-    systemctl status apache2 -- get the status of apache on Ubuntus
-    systemctl enable apache2 -- enable apache on Ubuntu (as root)
-    systemctl enable --now apache2 -- enable apache on Ubuntu and start the service new (as root)
-    systemctl disable apache2 -- disable apache on Ubuntu so it does not start on reboot (as root)
-    systemctl start apache2 -- start apache on Ubuntu (as root)
-    systemctl stop apache2 -- stop apache on Ubuntu (as root)
-    systemctl restart apache2 -- stop and cold start apache on Ubuntu to apply config changes (as root)
-    systemctl restart sshd -- restart the ssh listener daemon
-    systemctl reload apache2 -- stop and warm start apache on Ubuntu to take new config settings (as root)
+    systemctl status apache2 -- get the status of apache on Ubuntus via systemd
+    systemctl enable apache2 -- enable apache on Ubuntu (as root) to start on reboot via systemd
+    systemctl enable --now apache2 -- enable apache on Ubuntu and start the service new (as root) via systemd
+    systemctl disable apache2 -- disable apache on Ubuntu so it does not start on reboot (as root) via systemd
+    systemctl start apache2 -- start apache on Ubuntu (as root) via systemd
+    systemctl stop apache2 -- stop apache on Ubuntu (as root) via systemd
+    systemctl restart apache2 -- stop and cold start apache on Ubuntu to apply config changes (as root) via systemd
+    systemctl restart sshd -- restart the ssh listener daemon via systemd
+    systemctl reload apache2 -- stop and warm start apache on Ubuntu to take new config settings (as root) via systemd
+    systemctl --help -- help for systemd
     systemd - commonly used init program to manage services or units on a linux server: start, monitor, log, and control
     tac -- writes a file to stdout in reverse order
     tail -- show last 10 lines in a text file, e.g. tail -n 3 <filename> shows last three lines in <filename>, -f follow new entries
@@ -542,6 +558,8 @@ Linux Commands
     unalias <aliasname> -- remove an alias created by the alias command
     uname -a -- 'unix name' 'all',  prints basic system information like operating system version
     uname -o -- 'unix name' 'operating system' prints the operating system only
+    uname -r -- 'unix name' release or version
+    uname -v -- 'unix name' version of the operating system
     uniq -- show unique lines or duplicate lines in a sorted file
     unix2dos -- convert unix file format to dos (see also dos2unix)
     unlink -- remove a symbolic link (see ln to create a symbolic link)
@@ -571,6 +589,29 @@ Linux Commands
     xdg-open <filename> -- opens a file or URL in a user's default application
     xxd -- hex dump utility e.g. xxd myfile.txt
     yes -- outputs a stream of 'y' characters or other (e.g. yes charString)
+
+File System
+    bin  -> usr/bin -- single user binaries and core OS commands (eg. ls, mdkir, cp, cp ...)
+    boot -- boot files, OS kernal, ramfile system, bootloader files
+    dev  -- device files, 
+    etc -- system-wide configuration files, startup scripts, admin scripts
+    home -- user files and user-specific configuration files, private to each user
+    lib -> usr/lib -- shared libraries or .so shared object files (32 bit)
+    lib64 -> usr/lib64 -- shared libraries or .so shared object files (64 bit)
+    lost+found -- broken files after a system crash
+    media -- temporary storage system mounts (flash drives, CD'a, external devices)
+    mnt -- persistant storage system mounts (hard drives, network shares)
+    opt -- additional storage for games, optional software packages
+    proc -- pseudo file system (created at startu), subdirectory for each running process
+    root -- the home directory for root
+    run -- information since boot time
+    sbin -> usr/sbin -- system binary files
+    snap -> canonical package manager
+    srv -- served files such as ftp files, html files, no longer used
+    sys -- devices, drivers and kernal features running
+    tmp -- temporary files lost on reboot
+    usr -- home for most programs, linked from /bin, /lib and /sbin, system fonts
+    var-- variable files, logs, apache files at /var/www
 
 Shell Scripting
     References
@@ -667,3 +708,32 @@ Shell Scripting
         esac
     Arguments
         $1, $2 etc
+
+Systemd
+    systemd is an init system and the first system process that runs on linux (PID 1)
+    systemd starts and manages all other processes on linux that run in the background
+    Units in systemd are resources systemd manages: services, timers, mounts, etc
+    sysemctl is the main command for systemd, control script for systemd units (services) -- components started after the kernal
+        systemctl list-unit-files --type=service -- list service files and show their state
+        systemctl status apache2 -- get the status of apache on Ubuntus via systemd
+        systemctl edit httpd.service -- edit a service file -- creates an override file
+        systemctl edit --full httpd.service -- edit a service file and create a full overriding copy in /etc/systemd/system directory
+        systemctl enable apache2 -- enable apache on Ubuntu (as root) to start on reboot via systemd
+        systemctl enable --now apache2 -- enable apache on Ubuntu and start the service new (as root) via systemd
+        systemctl disable apache2 -- disable apache on Ubuntu so it does not start on reboot (as root) via systemd
+        systemctl start apache2 -- start apache on Ubuntu (as root) via systemd
+        systemctl stop apache2 -- stop apache on Ubuntu (as root) via systemd
+        systemctl restart apache2 -- stop and cold start apache on Ubuntu to apply config changes (as root) via systemd
+        systemctl restart sshd -- restart the ssh listener daemon via systemd
+        systemctl reload apache2 -- stop and warm start apache on Ubuntu to take new config settings (as root) via systemd
+        systemctl daemon-reload -- reloads systemd with changes made in service and unit files
+        systemctl --help -- help for systemda
+   Use 'q' to quit from a systemctl command
+   Common directores with systemd unit files (.system extension) prioritized
+       /etc/systemd/system -- highest priority directory used to override installed unit files in /lib/systemd/system
+       /run/systemd/system -- typically empty, contains run-time unit files
+       /lib/systemd/system -- includes installed application service files with lowest priority
+   Unit File Contents
+       service files contain 3 sections: Unit, Service and Install
+       Unit section -- general information about a service including pre-requisits, post-requisits and documentation.
+       Service section -- 

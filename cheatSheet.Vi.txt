@@ -1,7 +1,7 @@
 Vi (and Vim) Cheatsheet
 
 Mode Notes
-    Normal (Command) Mode (use <Esc>), Insert Mode (use 'i'), Visual Mode (use <Esc>)
+    Normal (Command) Mode (use <Esc>), Insert Mode (use 'i'), Visual Mode (use 'v')
     Components: Commands, Motions and Operators
   
 VI Command Summary Notes
@@ -179,6 +179,20 @@ Set Default Options Notes (in _vimrc or Directly)
     Set the cursorline                                  :set cursorline
     Color Schemes                                       :colo murphy, torte, pablo, ron, blue, evening, koehler, etc ...
     Set line length (i.e. textwidth)                    :set tw=100 (use :verbose set tw? wm? to find who is setting it)
+
+Folds
+    set the folder method                               :set foldmethod=manual or syntax or indent (to highlight rows in visual mode)
+    set the folder indicator columns                    :set foldcolumn=2
+    define fold rows and fold                           zf
+    open a fold, all child folds                        zo, zO
+    close a fold, all parent folds                      zc, zC
+    toggle a fold, all fold levels                      za, zA
+    open all fold levels everywhere                     zR
+    close all fold levels everywhere                    zM
+    delete a fold, all folds                            zd, zD
+    save a folder view (make view)                      :mkview
+    load a folder view                                  :load
+
 
 References Notes
     gvim homepage                                       http://www.vim.org/
