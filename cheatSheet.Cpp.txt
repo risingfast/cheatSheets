@@ -15,10 +15,11 @@ Conferences
     https://cppcon.org/
 
 Resources and References
+    https://www.cplusplus.com/doc/tutorial/ -- Tutorial and resources
+    https://www.learncpp.com/ -- C++ tutorial site
+    https://en.cppreference.com/w/ -- C++ Reference
     https://www.youtube.com/watch?v=8jLOx1hD3_o -- + Programming Course - Beginner to Advanced
     https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1132/ -- Stanford Class CS106B Pogramming Abstractions
-    https://en.cppreference.com/w/ -- C++ Reference
-    https://www.learncpp.com/ -- C++ tutorial site
     http://lib.daemon.am/Books/C++/ - Sams Teach Yourself C++ in 21 Days
     https://www.doc.ic.ac.uk/~wjk/c++intro/CourseStructure.html#S5
     https://www.cs.purdue.edu/homes/bxd/CandC++/ -- Purdue exercises
@@ -27,7 +28,6 @@ Resources and References
     https://www.codesdope.com/cpp-introduction/ -- c++ Course and exercises
     http://www.csit.parkland.edu/~dbock/Class/csc125/Lecture/ -- Parkland College C++ lectures
     http://www.csit.parkland.edu/~dbock/Class/csc125/ -- Parkland College C++ class schedule
-    https://www.cplusplus.com/doc/tutorial/ -- Tutorial and resources
     https://www.tutorialspoint.com/cplusplus/ -- Tutorialspoint C++ tutorial set
     https://google.github.io/styleguide/cppguide.html#C++_Version -- Google C++ Coding Standards
     https://www.engineer4free.com/cplusplus.html -- Engineer4Free C++ Full Course
@@ -186,6 +186,15 @@ C++ Algorithm Exercises
 C++ Code Palace 18 Part Series
     https://www.youtube.com/playlist?list=PL4KX3oEgJcff8LV7P78Z7zdwMPBVDZixL -- Full C++ Tutorial
 
+C++ Game Programming (COMP4300)
+    https://www.youtube.com/playlist?list=PL_xRyXins848nDj2v-TJYahzvs-XW9sVV -- Playlist
+    https://www.youtube.com/watch?v=S7lXSihz0ac -- COMP4300 - C++ Game Programming - Lecture 01 - Course Introduction 01:25
+    https://www.youtube.com/watch?v=P_mgIDWpbms -- COMP4300 - C++ Game Programming - Lecture 02 - Intro to C++ (1/2) 02:15
+
+Acronyms
+    RAII -- Resource Acquisition Is Initialization
+    SMFL -- Simle and Fast Multimedia Library
+
 Integrated Development Environments
     Visual Studio Code
     Visual Studio 2022
@@ -202,6 +211,16 @@ Integrated Development Environments
     Dev C++
     Ajunta on Linux
     http://www.bloodshed.net/dev/devcpp.html
+
+Background
+    Compiled language
+    Emphasizes speed and functionality
+    Mid-level programming language
+    Widely used in gaming
+    Multiple Libraries
+    Code is fast
+    Common syntax
+    Not garbage collected
 
 Exercises
     Codewars
@@ -247,6 +266,7 @@ Third Party Libraries
     https://www.wxwidgets.org -- GUI
     Open GL -- graphics specification API (implemented by GPU manufacturers)
     Qt -- GUI
+    SMFL -- Simle and Fast Multimedia Library, a graphics library written in C++
     Vulcan -- graphics library
 
 Compilers (installed on /usr/bin)

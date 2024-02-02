@@ -1,0 +1,235 @@
+Blender Notes
+
+References
+    https://www.youtube.com/watch?v=bx953Hl6Eu8 -- Blender Character Modeling Tutorial - For Absolute Beginners - Part 1, Blender Art
+    https://www.youtube.com/watch?v=nIoXOplUvAw&t=0s -- Blender 3.0 Beginner Tutorial - Part 1, Blender Guru (Donut)
+    https://www.youtube.com/watch?v=imdYIdv8F4w&t=0s --     Blender 3.0 Beginner Tutorial Part 2: Editing, Blender Guru (Donut)
+    https://www.youtube.com/watch?v=B0J27sf9N1Y&list=PLjEaoINr3zgEPv5y--4MKpciLaoQYZB1Z&index=1&t=0s -- Blender Tutorial for Complete Beginners - Part 1, Blender Guru (2023 Course)
+    https://www.youtube.com/watch?v=sbCW0Cs7aI8 -- Tutorial: Blender MODELLING For Absolute Beginners | Low Poly Girl
+    https://www.youtube.com/watch?v=m6U09BKETHY -- What I Wish I Knew Before I Started Learning Blender 3D, Brad Colbow
+    https://www.youtube.com/watch?v=tBpnKTAc5Eo&t=217s -- Beginner Blender 4.0 Tutorial - Part 2: Basic Modelling, Blender Guru
+    https://www.youtube.com/watch?v=AqJx5TJyhes -- Beginner Blender 4.0 Tutorial - Part 3: Modelling the Icing, Blender Guru
+    https://www.youtube.com/watch?v=AqJx5TJyhes -- Beginner Blender 4.0 Tutorial - Part 3: Modelling the Icing
+
+CG Cookie
+    https://www.youtube.com/watch?v=H3BcVxaRgVY -- BLENDER BASICS 1 - Introduction to Blender and Welcome to CG Cookie
+    https://www.youtube.com/watch?v=A6XVDqnZYCY -- BLENDER BASICS 2 - 3D Navigation
+    https://www.youtube.com/watch?v=SoyHTX0ZTCM -- BLENDER BASICS 3 - Selecting Objects
+    https://www.youtube.com/watch?v=qa22WtLufDU -- BLENDER BASICS 4 - Transforming Objects
+    https://www.youtube.com/watch?v=G4FIxBXzDns -- BLENDER BASICS 5 - Adding, Deleting, and the 3D Cursor
+    https://www.youtube.com/watch?v=tQvr8rds1FE -- BLENDER BASICS 6 - Orientations and Parenting
+    https://www.youtube.com/watch?v=I8a4piy6HyU -- BLENDER BASICS 7 - Object Data and Edit Mode
+    https://www.youtube.com/watch?v=HOcQK0eAGeg -- BLENDER BASICS 8 - Mesh Components and Object Origins
+    https://www.youtube.com/watch?v=JlVwzbUFr_k -- BLENDER BASICS 9 - Duplicating, Joining, and Instancing
+    https://www.youtube.com/watch?v=7aN1LYkxhYk -- BLENDER BASICS 10 - Pivots, Snapping, and Proportional Editing
+    https://www.youtube.com/watch?v=TQKUwZqezGs -- BLENDER BASICS 11 - Visibility and Collections
+    https://www.youtube.com/watch?v=mTmZ2ewsdSM -- BLENDER BASICS 12 - Mesh Normals and Smoothing
+    https://www.youtube.com/watch?v=9A5R0c2OawM -- BLENDER BASICS 13 - Extrude, Inset, and Knife
+    https://www.youtube.com/watch?v=yf6oLS6UT24 -- BLENDER BASICS 14 - Bevel and Edge Loops
+    https://www.youtube.com/watch?v=-2515HLrbso -- BLENDER BASICS 15 - Subdivide, Fill, and Merge
+    https://www.youtube.com/watch?v=dN-r43DB-fA -- BLENDER BASICS 16 - Object Modifiers
+    https://www.youtube.com/watch?v=Zg81tGrpyao -- BLENDER BASICS 17 - Editors and Windows
+    https://www.youtube.com/watch?v=yuv1krVslS0 -- BLENDER BASICS 24 - What You'll Need for Learning Blender and Next Steps
+    https://www.youtube.com/watch?v=QlErCEe9A8o -- Make Your First 3D Models with Blender
+    https://www.youtube.com/watch?v=kejQ8nX5YZA -- The ONLY 5 Modeling Tools You Need To Make ANYTHING in Blender
+
+BornCG
+     https://www.youtube.com/playlist?list=PLda3VoSoc_TQrLrt-voecHs0Mb5qzk2S3 -- Let's Learn Blender! playlist, BornCG
+     https://www.youtube.com/watch?v=HH7InXu7ZdU -- Let's Learn Blender! #4: 3D Modelling in Edit Mode!: Part 1
+     https://www.youtube.com/watch?v=1kwOV2Y5iPQ -- Let's Learn Blender! #2: A Guided Tour: The User Interface & Key Preferences!
+     https://www.youtube.com/watch?v=5lN4-EPT7mw -- Let's Learn Blender! #3: Materials, Textures, Nodes, & HDRI's!
+     https://www.youtube.com/watch?v=HH7InXu7ZdU -- Let's Learn Blender! #4: 3D Modelling in Edit Mode!: Part 1
+
+Competitors
+    Houdini -- freeware
+    3ds Max (Autodesk) subscriptiona
+    Substance Painter
+    Maya
+    Unreal
+    Unity
+    ZBrush
+    Marvelous Designer
+
+Additional Resources
+    www.artstation.com -- graphic art and game art showcase
+
+Definitions
+    bevel -- split an edge into 2 or move spaced edges
+    edge loop -- connected edges around a 3D object
+    edge ring -- a set of edges around a 3D object
+    edge slide -- move an edge ring along a surface without deforming the shape
+    gizmos -- on-screen tools
+    inset face -- small face inside an bigger face
+    loop cut -- add a set of edges around the surface of a 3D object
+    non-manifold objects -- objects with intersecting faces that are unprintable or unbuildable
+    n-gon -- a face with more than 4 sides, which cause problems blocking edge loops and smoothing
+    Orthographic -- without perspective in 3D
+    vertex slide -- move a vertex along the surface of a 3D object
+
+Acronyms
+    HDRI -- High Dynamic Range Imaging -- adds luminosity to rendered images
+
+Editors, Side Panels and Menu Bar
+    Main Menu Bar -- Top left
+    Workspace Tabs Bar -- top center next to the menu bar
+    Mode Menu Bar -- below main menu bar (use <tab> to toggle between Object mode and Edit mode)
+    3D Viewport Editor - Main View - center area
+        Top right navigation 'gizmo'
+        Top right tools 'gizmo'
+    Outliner Editor -- List of objects (Scene Collection) top right
+    Properties Editor -- bottom right
+        Side Tabs show global property sets (white) and object property sets (colored)
+        Object property sets are context sensitive to the selected object
+    Timeline Editor
+    Status Bar -- bottom of screen, shows allowed mouse button actions
+        show status bar options -- right-click
+    Adjust Last Operation popover panel -- Toolbar > View > Adjust Last Operation 
+        Appears immediately after an operation
+    Restore Adjust Last Operation panel -- <f9>
+    Transform Toolsbar Side-panel -- left side (show or hide with 't')
+        Tweak or select
+        Cursor -- set cursor location
+        Move -- along axis or plane
+        Rotate -- around axis
+        Scale -- along axis or plane or cage
+        Transform -- all-in-one move, scale, rotate
+        Annotate
+        Measure
+        Add Cube
+    Toolsbar Popup Menu -- <Shft> <Spacebar> -- same as toolsbar sidepanel selections
+    Tool Settings Bar -- top left corner, above Toolsbar side-panel
+        These settings are also on the ITV Properties Side-panel, Tool tab
+    ITV Properties Side-panel -- right side, left of Outliner (show or hide with 'n')
+        Item Options
+        Tool Options
+        View Options
+    Object Context Menu -- right-click on 3D Viewport Editor (based on current mode and object selected)
+    Viewport Overlays and Gizmos -- top right
+        Selectability and Visibility
+        Show Gizmos
+        Show Overlays -- hide or show overlays in the 3D Viewport such as grids, paths etc
+        Mesh Edit Mode Overlays
+    Viewport Shading Modes -- top right next to gizmos
+        X-ray
+        Wireframe
+        Solid
+        Material Preview
+        Rendered
+    Show or hide editors Toolbar > View > 
+
+Orientations
+    Right Side -- X
+    Left Side -- -X
+    Front Side -- -Y
+    Back Side -- Y
+    Top Side -- Z
+    Bottom Side -- -Z
+
+3D Modelling Tools
+    Extrude -- for selected faces, use <ctrl> to extrude in increments, shortcut e to extrude. <alt> e for extrude menu
+    Subdivide -- select a face or edge and right click > Subdivide
+    Loop Cut
+    Selecting: Edge Loops and Rings
+    Edge Slide and Vertex Slide
+    Bevel and Offset Edge Loop cut
+    Inset Faces
+
+Commands
+    F12 -- render mode (lighting and shadows) Menu > Render > Render Image, click away to cancel
+    right-click -- cancel
+    e, ex, ey, ez and move mouse -- extrude
+    e, ex, ey, ez <ctrl> and move mouse -- extrude in increments
+    g, gx, gy, gz -- grab and move (click the shape then type g)
+    s, sx, sy, sz -- scale, or scale along an axis
+    r, rx, ry, rz -- rotate, or rotate around an axis
+    zoom in increments -- scroll mouse wheel
+    zoom smooth -- <ctrl> click middle mouse button and move
+    orbit -- click middle mouse button and move
+    move -- <shft> click middle mouse button and move
+    center object -- Toolbar > View > Frame Selected
+    Center all objects -- Toolbar > View > Frame All or <Home>
+    Show Right Side -- X or Toolbar > View > Viewpoint > Right
+    Show Left Side -- -X or Toolbar > View > Viewpoint > Left
+    Show Front Side -- -Y or Toolbar > View > Viewpoint > Front
+    Sho Back Side -- Y or Toolbar > View > Viewpoint > Back
+    Show Top Side -- Z or Toolbar > View > Viewpoint > Top
+    Show Bottom Side -- -Z or Toolbar > View > Viewpoint > Bottom
+    Camera -- Camera or Toolbar > View > Viewpoint > Camera
+    Front side -- numpad 1    numpad 2 -- move down
+    Left Side -- numpad 3
+    Move Left -- numpad 4
+    Toggle Orothogonal/perspective view -- numpad 5
+    Move Right -- numpad 6
+    Top Side -- numpad 7
+    Move Up -- numpad 8p
+    Bottom Side -- numpad 9
+    Camera View -- numpad 0
+    Center Object -- numpad .
+    ` -- show view menu
+    numpad 0 -- camera view on, off
+    <shft> a -- add object (menu->Layout->Add_
+    Preferences -- Main Menu > Edit > Preferences (all changes are autosaved)
+    Resolution -- Menu > Edit > Preferences > Interface > Resolution Scale
+    Cancel -- <Esc> or right click
+    Confirm -- left click
+    n -- toggle properties
+    t -- toggle toolbar
+    F9 -- show current options
+    right-click > shade smooth -- apply smooth shading
+    <ctrl> 1 -- subdivision surfacing or Properties > Modifiers > Add Modifier > Generate > Subdivision Surface
+    disable GPU Subdivision -- Menu > Edit > Preferences > Viewport > Subdivision > GPU Subdivision (disable)
+    toggle edit and object mode -- <tab> or toolbar > mode selector > edit mode -- toggle between object and edit modes to show mesh and vertices
+    switch between vertex, edge and face select in edit mode -- 1, 2, 3
+    <alt> left-click single edge -- edge select
+    rigth-click > Shade Flat -- to show poly faces
+    proportional editing -- toolbar > proportional editing icon (bullseye)
+    duplicate and move an object -- <shft> d or Toolbar > Ovject > Duplicate Objects
+    Toggle xray -- Toobar > Toggle x-ray icon
+    rename an object -- F2 or Object Collection > Object Name > F2 and rename
+    solidify or thicken -- Properties > Modifiers >gg add modifier > generate > solidify
+    splash screen -- Menu > Edit > Preferences > Interface > Splash Screen > check or uncheck
+    resolution and font size -- Menu > Edit > Preferences > Interface > Resolution Scale > 1.25 or other
+    toggle select multiple objects -- shift left-click
+    select all -- a or Toolbar > Select > All
+    select connected edgies -- <alt> click edge
+    deselect all -- <alt> a or Toolbar > Select > None
+    undo -- <ctrl> z
+    redo -- <shft> <ctrl> z
+    clear location, rotation, scale -- <alt> g, r, s or Toolbar > Object > Clear > 
+    delete an object -- left click to select, then x or <del> or toolbar > Object > Delete
+    Place the 3D cursor -- <shft> right -click
+    Center the 3D cursor -- toolbar > object > snap > center to world origin
+    Center the 3D cursor to an object -- select object, then toolbar > object > snap > cursor to active
+    Show the snap menu in the 3D view -- <shft> s
+    Change orientation -- toolbar > Global or Local in dropdown, or , on the keyboard,
+    Deselect everything in an object - <alt> a
+    Show views menu -- z
+    Focus on selection '.' on numpad
+    Fill -- 'f'
+    choose vertex selection (in edit mode)-- 1 
+    choose edge selection (in edit mode) -- 2
+    choose face selection (in edit mode) -- 3
+    choose multiple items (vertices, edges, faces) -- <shft> left-click
+    subdivide a face or edge -- right-click > subdivide
+    loop cut -- edit mode > loop cut tool > click
+    loop cut -- <ctrl> r
+    loop cut and place in center -- <ctrl> r and right click
+    loop cut multiple -- <ctrl> r and scroll mouse wheel
+    loop cut and move -- edit mode > look cut tool > click and drag
+    select an edge loop -- <alt> click edge
+    select an edge ring -- <ctrl> <alt> click edge
+    edge slide -- choose an edge loop, then choose the edge slide tool
+    edge slide shortcut -- choose an edge loop, the 'g' 'g'
+    vertex slide -- choose a vertex, then choose the vertex slide tool
+    vertex slide shortcut -- choose a vertex, then 'g' 'g'
+    bevel an edge -- choose an edge, set the affect to edge, then choose bevel tool
+    bevel an edge shorcut -- <ctrl> b
+    bevel an vertex -- choose a vertex, set the affect to vertices, then choose bevel tool
+    bevel a vertex shorcut -- <ctrl> <shft> b
+    copy loop cuts -- choose a loop cut, then click the loop cut > offset edge loop cut tool > click the original loop cut and drag the mouse
+    inset face -- choose inset faces tool
+    inset face shortcut -- i (after selecting a face)
+    normalize scale of a stretched object -- choose object mode > object > apply > scale then check the n-menu and scale values
+    change viewport clipping -- ITV Properties Side-panel > View > Clip Start and Clip End
+    search -- <f3>
+

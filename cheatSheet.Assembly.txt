@@ -32,7 +32,7 @@ Look at MASM and Assembly programming (Done)
     https://www.youtube.com/watch?v=bIYWGX-s1sw -- ALP Tutorial 04 -- Real Number Constants (Done)
     https://www.youtube.com/watch?v=1FsQHX4eHoA -- ALP Tutorial 05 -- Character Constants (Done)
     https://www.youtube.com/watch?v=7fs-opP5iws -- ALP Tutorial 06 -- String Constants (Done)
-    https://www.youtube.com/watch?v=MOmkQyLEP1E -- ALP Tutorial 07 -- Reserved Words (Done)
+    https://www.youtube.com/watch?v=MOmkQyLEP1E -- ALP Tutorial 07 -- Reserved Words (Dones)
     https://www.youtube.com/watch?v=A5S27ZTItPU -- ALP Tutorial 08 -- Identifiers (Done)
     https://www.youtube.com/watch?v=qj34jjuxGxc -- ALP Tutorial 09 -- Directives Pt1 (Pragmas) (Done)
     https://www.youtube.com/watch?v=7HF3Lee9WS8 -- ALP Tutorial 10 -- Directives Pt2 Defining Segments (Done)
@@ -67,12 +67,15 @@ Introductory Intel x86: Architecture, Assembly, Applications
 x64 Assembly Language for Intel and AMD
     https://www.youtube.com/watch?v=rxsBghsrvpI -- Lesson 1
 
+acronymns
+    NASM Netwide Assembler
+
 Assembling and Linking
     create a file with .asm extension
-    nasm -f elf64 -o file_name.o file_name.asm ; Network assember to create an object file
-    ld file_name.o -o file_name ; GNU linker to link the object file into an executable
+    nasm -f elf64 -o <file_name.o> <filename.asm> ; Netwide assember to create a '.o' object file
+    ld <filename.o> -o <filename> ; GNU linker to link the object file <filename.o> into an executable
 
-Asembling and Linking per Low Level Learning
+Assembling and Linking per Low Level Learning
     as source.s -o objectfile.o
     gcc -o execfile -o objectfile.o -nostdlib -static
 
@@ -101,9 +104,9 @@ Registers (64 bit) - addresses or values
         rbx ; base pointer to the data section
         rcx ; scratch register and general counter
         rdx ; scratch register
-        Index registers:
-            rsi ; source pointer for string operations
-            rdi ; destination pointer for string operations
+    Index registers:
+        rsi ; source pointer for string operations
+        rdi ; destination pointer for string operations
     Stack Pointer registers:
         rip - instruction pointer to the next executable instruction (incremented by 1 with each execution)
         rbp - stack base pointer has address of base of the current stack frame
@@ -122,9 +125,10 @@ Architectures
     32 Bit
     64 Bit
 
-Instructions
+Instructions and Commands
     Operation and one or two arguments (arguments separated by a comma)
     Types: AT&T and Intel
+    text db "Hello", 5 -- define bytes and assign to lable "text" 5 bytes long
     mov arg1, arg2 - moves arg2 to arg1 (Intel)
         e.g. mov eax, [ebp-0x8] ; moves contents of address ebp-0x8 to eax
         you cannot mov from memory to memory
@@ -135,10 +139,20 @@ Instructions
     pop reg - pops the top value of the stack to reg and increments the stack pointer
         pop increments the stack pointer by the size of the data popped off the stack
     lea reg, addr - load effective address copies an address into a register
-    cmp arg1, arg2 - compare by subtracting arg2 from arg1. Sets a flag with result (<0, 0 or >0)
-    jmp addr - jump (calls cmp and jumps if ==, if <= o if =>). Jumps to address if condition is met
+    cmp arg1, arg2 - compare by subtracting arg2 from arg1. Sets the ZF (zero_ flag with result (<0, 0 or >0)
+    jmp addr - unconditional jump (calls cmp and jumps if ==, if <= o if =>). Jumps to address if condition is met
+    conditional jumps (in conjuction with cmp instruction)
+        je _addrLbl -- jump if values are equal, after cmp a, b sets the ZF flag
+        jne _addrLbl -- jump if not equal
+        jg _addrLbl -- jump if greater
+        jge _addrLbl -- jump if greater or equal
+        jl _addrLbl -- jume if less than
+        jle _addrLbl -- jump if less than or equal
+        jz _addrLbl -- jump if zero
+        jnz _addrLbl -- jump if not zero
     call <func> - same as push eip onto stack, then jmp to <func>
     ret - sets esp to eip in stack frame and pops return from stack to eip
+    label resb 16 -- reserve bytes and store in label
 
 Install NASM on Linux
     sudo apt install nasm
@@ -160,12 +174,11 @@ Sections (3 sections)
 Labels
     labels are addresses in memory calculated by the compiler
     a call to a label loads the next instruction from the label's address
-    _start: ; starting address used by the linker to mark execution of first instruction
-    global ; a qualifier (linker instruction) for the _start label (first instruction in the text section)
+    _start: ; starting address used by the linker to mark the  first instruction
+    global ; a label qualifier (linker directive) to create an index to the location in the object file
 
 Flags
-    RFLAGS register 
-    Flags are part of a larger register - each flag is a single bit
+    Flags are part of a larger 'flags' register - each flag is a single bit
     The RFLAGS registers contain multiple flags
     The RFLAGS register is updated after each instruction
     CF ; Carry
@@ -253,7 +266,7 @@ Conditional Jumps
         etc
     There are unsigned jump codes too
 
-Registers as Pointers using {}
+Registers as Pointers using []
     If a register is square bracketed in code e.g. [rbx] the value is treated as an address pointing  to a value in memory
     mov rax, rbx  ; move the value in rbx to rax
     mov rax, [rbx] ; used the value at the address in rbx to rax

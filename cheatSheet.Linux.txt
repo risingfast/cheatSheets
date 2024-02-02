@@ -92,6 +92,7 @@ Learn Linux TV with Jay LaCroix
     https://www.youtube.com/watch?v=43hcVCt_GMc -- How to Use The ls Command on the Linux Command Line
     https://www.youtube.com/watch?v=XTMyJ5l0GLg -- Linux Crash Course - Understanding Memory and Swap Usage
     https://www.youtube.com/watch?v=OVsMaXQkktQ -- 5 Easy Tweaks to increase your Linux Server's Security
+    https://www.youtube.com/watch?v=Tc_jntovCM0 -- Linux Crash Course - The grep Command
 
 Learn Linux TV Bash Scripting Course with Ja LaCroix
     https://www.youtube.com/watch?v=2733cRPudvI -- Bash Scripting on Linux (The Complete Guide) Class 01 - Course Introduction
@@ -356,6 +357,8 @@ Linux Commands
     grep '<pattern>' <files> -- global/regular expression/print -- search for text in <files> where files are in the current <dir>
     grep "<pattern>" <files> -- use "" instead of '' on the pattern
     grep "<pattern>" ./* -- use "" instead of '' on the pattern
+    grep -n "<pattern>" ./* -- show line numbers in results
+    grep -c "<pattern>" <file> -- show the count of occurences
     grep -A n, -B n, -C n "<pattern>" <files> -- -a n lines after, -b  lines before, -c lones before and after (context)
     grep -wic <pattern> <files> -i ignore case, only -w whole word, count matches
     grep '<pattern>' <files> -- use '<pattern>' or "<pattern>" for regular expressions
@@ -366,6 +369,7 @@ Linux Commands
     grep -ir "<SECTION>" ./* > search.txt -- recursively and case-insensitive grep the text '<SECTION>' in current and sub-directories and save to a file
     grep -s "color?r" ./* -- suppress errr messages about non-existant or unreadable files
     grep -q i'<pattern>' <files> -- quiet mode (for shell scripts)
+    grep -v '<pattern>' <files> -- list lines not containing <pattern>
     groups -- list all groups where the current user is a member
     groups <username> -- list all groups where the named member is a member
     glibc -- the GNU C libaries
