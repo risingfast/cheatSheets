@@ -1,0 +1,21 @@
+Fortran Notes
+
+Fortran Compilers
+    OpenWatcom - a free open source compiler and IDE available at www.openwatcom.com
+        OpenWatcom also includes an assembler with a subset of Microsoft Assembler functionality
+    g77 is a line oriented compiler under Linux
+        http://gcc.gnu.org/onlinedocs/g77
+    Photran is an Eclipse implementation of Fortran but requires a separately installed compiler target
+
+g77 Fortran Cumulative Notes
+    Getting Started
+        In linux, create a fortran source file (soure.f) and compile it from the linux shell with with "g77 -ffree-form source.f" and it will create an executable called a.out
+        Run a.out from the command line with "./a.out" or modify the path to include the current directory with PATH=$PATH:. and then simply type a.out to run it
+    References
+        http://gcc.gnu.org/onlinedocs/g77/
+    Sample or test program (source.f)
+        PROGRAM SOURCE.F
+        DO 10 i = 1, 10
+        PRINT *, 'Hello World #', i
+    10  CONTINUE
+        END	

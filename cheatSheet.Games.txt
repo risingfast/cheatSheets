@@ -1,0 +1,56 @@
+Games Cheatsheet
+
+References
+    https://www.computerenhance.com/p/game-development-post-unity?utm_source=tldrnewsletter -- list of game engines
+    Awesome Tuts - Anyone Can Learn To Make Games
+        https://www.youtube.com/@awesometuts
+        https://www.youtube.com/watch?v=ZG9MF5agh7A -- Unity vs Unreal: Which Engine Should You Choose As A Beginner
+    Gamefromscratch
+        https://www.youtube.com/watch?v=Du--cH01ZWI -- Dear ImGui -- C++ GUI Framework For AAA Games and Game Engines, Gamefromscratch (Done)
+        https://www.youtube.com/watch?v=l7BrpcboJno -- Why Godot Over Unity or Unreal Engine?, Gamefromscratch (Done)
+        https://www.youtube.com/watch?v=TQyAZiX8oC0 -- Game Engines By Language Series Introduction, GamefromScratch (Done)
+        https://www.youtube.com/watch?v=FaINy9iA5Kw == C++ Game Engines, Gaefromscratch (Done)
+    Blender
+        https://www.youtube.com/watch?v=bx953Hl6Eu8
+    Game Programming Tutorial for Beginners In C++, Dan Zaidan
+        https://www.youtube.com/playlist?list=PL7Ej6SUky135IAAR3PFCFyiVwanauRqj3 -- Playlist
+        https://www.youtube.com/watch?v=luuyjjOxnUI -- How to program a game in C++: #0 - Introduction and Setup 7:06
+        https://www.youtube.com/watch?v=yD0WzbKJcOg -- How to program a game in C++: #1 - Window and Pointers 12:45
+        https://www.youtube.com/watch?v=PJmpOhk9GXw -- How to program a game in C++: #2 - Drawing Graphics 22:07
+    Twine
+        https://twinery.org/
+    Pictures
+        https://pixabay.com/
+
+The Cherno
+    https://www.youtube.com/watch?v=_HPCeO6MWvk -- How to start MAKING GAMES! 15:10
+    https://www.youtube.com/watch?v=vWXrFetSH8w&t=689s -- BEST WAY to make Desktop Applications in C++ (Im GUI) 25:59
+Games with Katie
+    https://www.youtube.com/@MakeGamesWithKatie -- Unreal Engine 4 Playlist
+Virtus Unreal Engine Series
+    https://www.youtube.com/playlist?list=PLL0cLF8gjBpqDdMoeid6Vl5roMl6xJQGC -- Unreal Engine 4 Tutorial Playlist
+
+Acronyms
+    RPG -- Role Player Game
+    WPF -- Windows Presentation Foundation
+
+Definitins
+    Immediate Mode vs Retained Mode (in Graphics APIs)
+
+Game Development Environments
+    Bevy (Rust)
+    Blender for 3D modelling
+    Cocos (JavaScript)
+    Defold (Lua)
+    Flax (visual scripting)
+    GameMaker( GML, visual scripting)
+    Godot (C#, C++, GDScript (like Python), visual scripting) -- Royalty Free, small codebase, open source
+    ImGui -- Open Source GUI Frameword for Game an Interface Development
+    Monogame (C#)
+    Open 3D (Lua, visual scripting)
+    Raylib
+    SFML -- Simple and Fast Multimedia Engine (C++ API)
+    Stride (C#)
+    Twine -- www.twinery.com for text based games (rpg's)
+    Unity c# -- not for triple A game development, not free, C++ requires Pro version
+    Unreal Engine C++, scripting, Blueprints visual scripting), not free

@@ -3,11 +3,14 @@ C++ CheatSheet
 History of Versions
     Each release is a language standard or language specification
     1979 Original compiler at Bell Labs (Bjarne Stroustrup)
+    1975 C with Classes
+    1983 C++ created
+    1985 C++98 First standardized version
     1998 ISO standard C++
     2003 C++03 Minor update to ISO standard C++
     2011 C++11 (C++1x) Major updates and new features
     2014 C++14 (C++1y)
-    2017 C++17 (C++1z)
+    2017 C++17 (C++1z) use compiler flag --std=C++17 to force usage
     2020 C++20 (C++2a)
     2023 C++23 (C++2b) Future release as of 2022
 
@@ -26,25 +29,28 @@ Resources and References
     https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-096-introduction-to-c-january-iap-2011/lecture-notes/ -- MIT C++ Lecture Notes
     https://erlerobotics.gitbooks.io/erle-robotics-cpp-gitbook/content/index.html -- Exercies and book
     https://www.codesdope.com/cpp-introduction/ -- c++ Course and exercises
-    http://www.csit.parkland.edu/~dbock/Class/csc125/Lecture/ -- Parkland College C++ lectures
-    http://www.csit.parkland.edu/~dbock/Class/csc125/ -- Parkland College C++ class schedule
+    http://csit.parkland.edu/~dbock/Class/csc125/Lecture/ -- Parkland College C++ lectures
+    http://csit.parkland.edu/~dbock/Class/csc125/ -- Parkland College C++ class schedule
     https://www.tutorialspoint.com/cplusplus/ -- Tutorialspoint C++ tutorial set
     https://google.github.io/styleguide/cppguide.html#C++_Version -- Google C++ Coding Standards
     https://www.engineer4free.com/cplusplus.html -- Engineer4Free C++ Full Course
+
+Microsoft
+    https://learn.microsoft.com/en-us/visualstudio/get-started/visual-studio-ide?view=vs-2022 -- What is Visual Studio?
 
 C++ Code Beauty (code prefix cb)
     https://www.youtube.com/watch?v=GQp1zzTwrIg -- C++ FULL COURSE For Beginners (Learn C++ in 10 hours)
 
 C++ Programming Course 30 Hours freeCodeCamp Daniel Gakwaya (code prefix dg)
-    https://www.youtube.com/watch?v=8jLOx1hD3_o -- + Programming Course - Beginner to Advanced 30 hour single video 4:35
+    https://www.youtube.com/watch?v=8jLOx1hD3_o -- + Programming Course - Beginner to Advanced 30 hour single video 31:07:29
 
 C++ Text Course LEARN C++ (code prefix ap)
     https://www.learncpp.com/ -- C++ language tutorials by chapter and topic (code reference 
 
 C++ Cplusplus.com Tutorials (code prefix cp)
     https://www.cplusplus.com/doc/tutorial/ -- C++ language tutorials
-    https://www.cplusplus.com/doc/tutorial/functions2/ -- overloads and templates (Done)
-    https://www.cplusplus.com/doc/tutorial/namespaces/ -- namespaces (Done)
+    https://www.cplusplus.com/doc/tutorial/functions2/ -- overloads and templates
+    https://www.cplusplus.com/doc/tutorial/namespaces/ -- namespaces
 
 C++ Debbie (Deborah) Sorrentino NCCC Classes (code prefix ds)
     https://www.youtube.com/playlist?list=PL2W5ji2ambpd28htZ7PTkOuwvQ5s7NKV2 -- Playlist for C++ Programming Tutorials
@@ -106,44 +112,44 @@ C++ Debbie (Deborah) Sorrentino NCCC Classes (code prefix ds)
 
 C++ The Cherno (code prefix tc)
     https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb -- Playlist for C++ Programming Tutorials
-    01 https://www.youtube.com/watch?v=18c3MTX0PK0 -- Welcome to C++ (Done)
-    02 https://www.youtube.com/watch?v=1OsGXuNA5cc -- How to Setup C++ on Windows
-    03 https://www.youtube.com/watch?v=1E_kBSka_ec/ -- How to Setup C++ on Mac
-    04 https://www.youtube.com/watch?v=LKLuvoY6U0I -- Hot to Setup C++ on Linux (Done)
-    05 https://www.youtube.com/watch?v=SfGuIVzE_Os -- How C++ Works (Done)
-    06 https://www.youtube.com/watch?v=3tIqpEmWMLI -- How the C++ Compiler Works (Done)
-    07 https://www.youtube.com/watch?v=H4s55GgAg0I -- How the C++ Linker Works (Done)
-    08 https://www.youtube.com/watch?v=zB9RI8_wExo -- Variables in C++  (Done)
-    09 https://www.youtube.com/watch?v=V9zuox47zr0 -- Functions in C++ (Done)
-    10 https://www.youtube.com/watch?v=9RJTQmK0YPI -- C++ Header Files (Done)
-    11 https://www.youtube.com/watch?v=0ebzPwixrJA -- How to DEBUG C++ in Visual Studio (Done)
-    12 https://www.youtube.com/watch?v=qEgCT87KOfc -- Conditions and Branches in C++
-    13 https://www.youtube.com/watch?v=qeH9Xv_90KM -- Best Visual Studio Setup for C++ Projects
-    14 https://www.youtube.com/watch?v=_1AwR-un4Hk -- Loops in C++ (for loops, while loops)
-    15 https://www.youtube.com/watch?v=a3IZ8WaIFAA -- Control Flow in C++ (continue, break, return)
-    16 https://www.youtube.com/watch?v=DTxHyVn0ODg -- Pointers in C++ (Done)
-    17 https://www.youtube.com/watch?v=IzoFn3dfsPA -- References in C++ (Done)
-    18 https://www.youtube.com/watch?v=2BP8NhxjrO0 -- Classes in C++ (Done)
-    19 https://www.youtube.com/watch?v=fLgTtaqqJp0 -- Classes vs Structs in C++ (Done)
-    20 https://www.youtube.com/watch?v=3dHBFBw13E0 -- How to Write a C++ Class (Done)
-    21 https://www.youtube.com/watch?v=f3FVU-iwNuA -- Static in C++ (Done)
-    22 https://www.youtube.com/watch?v=V-BFlMrBtqQ -- Static for Classes and Structs in C++ (Done)
-    23 https://www.youtube.com/watch?v=x55jfOd5PEE -- ENUMS in C++ (Done)
-    24 https://www.youtube.com/watch?v=FXhALMsHwEY -- Constructors in C++ (Done)
-    25 https://www.youtube.com/watch?v=D8cWquReFqw -- Destructors in C++
-    26 https://www.youtube.com/watch?v=X8nYM8wdNRE -- Inheritance in C++
-    27 https://www.youtube.com/watch?v=oIV2KchSyGQ -- Virtual Functions in C++
-    28 https://www.youtube.com/watch?v=UWAdd13EfM8 -- Interfaces in C++ (Pure Virtual Functions)
-    29 https://www.youtube.com/watch?v=6OVQ8nh3KP0 -- Visibility in C++
-    30 https://www.youtube.com/watch?v=ENDaJi08jCU -- Arrays in C++ (Done)
-    31 https://www.youtube.com/watch?v=ijIxcB9qjaU -- How Strings Work in C++ (and how to use them) (Done)
-    32 https://www.youtube.com/watch?v=FeHZHF0f2dw -- String Literals in C++
-    33 https://www.youtube.com/watch?v=4fJBrditnJU -- CONST in C++ (Done)
-    34 https://www.youtube.com/watch?v=bP9z3H3cVMY -- The Mutable Keyword in C++
-    35 https://www.youtube.com/watch?v=1nfuYMXjZsA -- Member Initializer Lists in C++ (Constructor Initializer List)
-    36 https://www.youtube.com/watch?v=ezqsL-st8qg -- Ternary Operators in C++ (Conditional Assignment)
-    37 https://www.youtube.com/watch?v=Ks97R1knQDY -- How to CREATE/INSTANTIATE OBJECTS in C++ (Done)
-    38 https://www.youtube.com/watch?v=NUZdUSqsCs4 -- The NEW Keyword in C++ (Done)
+    01 https://www.youtube.com/watch?v=18c3MTX0PK0 -- Welcome to C++ 7:04
+    02 https://www.youtube.com/watch?v=1OsGXuNA5cc -- How to Setup C++ on Windows 8:35
+    03 https://www.youtube.com/watch?v=1E_kBSka_ec -- How to Setup C++ on Mac
+    04 https://www.youtube.com/watch?v=LKLuvoY6U0I -- Hot to Setup C++ on Linux 8:11
+    05 https://www.youtube.com/watch?v=SfGuIVzE_Os -- How C++ Works 20:20
+    06 https://www.youtube.com/watch?v=3tIqpEmWMLI -- How the C++ Compiler Works 17:54
+    07 https://www.youtube.com/watch?v=H4s55GgAg0I -- How the C++ Linker Works 15:51
+    08 https://www.youtube.com/watch?v=zB9RI8_wExo -- Variables in C++  13:45
+    09 https://www.youtube.com/watch?v=V9zuox47zr0 -- Functions in C++ 9:49
+    10 https://www.youtube.com/watch?v=9RJTQmK0YPI -- C++ Header Files 15:09
+    11 https://www.youtube.com/watch?v=0ebzPwixrJA -- How to DEBUG C++ in Visual Studio 19:19
+    12 https://www.youtube.com/watch?v=qEgCT87KOfc -- Conditions and Branches in C++ 24:32
+    13 https://www.youtube.com/watch?v=qeH9Xv_90KM -- Best Visual Studio Setup for C++ Projects 12:07
+    14 https://www.youtube.com/watch?v=_1AwR-un4Hk -- Loops in C++ (for loops, while loops) 12:19
+    15 https://www.youtube.com/watch?v=a3IZ8WaIFAA -- Control Flow in C++ (continue, break, return) 8:19
+    16 https://www.youtube.com/watch?v=DTxHyVn0ODg -- Pointers in C++ 16:58
+    17 https://www.youtube.com/watch?v=IzoFn3dfsPA -- References in C++ 16:58
+    18 https://www.youtube.com/watch?v=2BP8NhxjrO0 -- Classes in C++ 8:41
+    19 https://www.youtube.com/watch?v=fLgTtaqqJp0 -- Classes vs Structs in C++ 8:31
+    20 https://www.youtube.com/watch?v=3dHBFBw13E0 -- How to Write a C++ Class 11:31
+    21 https://www.youtube.com/watch?v=f3FVU-iwNuA -- Static in C++ 6:28
+    22 https://www.youtube.com/watch?v=V-BFlMrBtqQ -- Static for Classes and Structs in C++ 9:11
+    23 https://www.youtube.com/watch?v=x55jfOd5PEE -- ENUMS in C++ 7:44
+    24 https://www.youtube.com/watch?v=FXhALMsHwEY -- Constructors in C++ 6:57
+    25 https://www.youtube.com/watch?v=D8cWquReFqw -- Destructors in C++ 4:46
+    26 https://www.youtube.com/watch?v=X8nYM8wdNRE -- Inheritance in C++ 7:59
+    27 https://www.youtube.com/watch?v=oIV2KchSyGQ -- Virtual Functions in C++ 6:45
+    28 https://www.youtube.com/watch?v=UWAdd13EfM8 -- Interfaces in C++ (Pure Virtual Functions) 6:54
+    29 https://www.youtube.com/watch?v=6OVQ8nh3KP0 -- Visibility in C++ 8:48
+    30 https://www.youtube.com/watch?v=ENDaJi08jCU -- Arrays in C++ 18:30
+    31 https://www.youtube.com/watch?v=ijIxcB9qjaU -- How Strings Work in C++ (and how to use them) 19:25
+    32 https://www.youtube.com/watch?v=FeHZHF0f2dw -- String Literals in C++ 14:06
+    33 https://www.youtube.com/watch?v=4fJBrditnJU -- CONST in C++ 12:53
+    34 https://www.youtube.com/watch?v=bP9z3H3cVMY -- The Mutable Keyword in C++ 6:55
+    35 https://www.youtube.com/watch?v=1nfuYMXjZsA -- Member Initializer Lists in C++ (Constructor Initializer List) 8:36
+    36 https://www.youtube.com/watch?v=ezqsL-st8qg -- Ternary Operators in C++ (Conditional Assignment) 8:01
+    37 https://www.youtube.com/watch?v=Ks97R1knQDY -- How to CREATE/INSTANTIATE OBJECTS in C++ 13:02
+    38 https://www.youtube.com/watch?v=NUZdUSqsCs4 -- The NEW Keyword in C++
     39 https://www.youtube.com/watch?v=Rr1NX1lH3oE -- Implicit Conversion and the Explicit Keyword in C++
     40 https://www.youtube.com/watch?v=mS9755gF66w -- OPERATORS and OPERATOR OVERLOADING in C++
     41 https://www.youtube.com/watch?v=Z_hPJ_EhceI -- The "this" keyword in C++
@@ -151,22 +157,54 @@ C++ The Cherno (code prefix tc)
     43 https://www.youtube.com/watch?v=UOB7-B2MfwA -- SMART POINTERS in C++ (std::unique_ptr, std::shared_ptr, std::weak_ptr)
     44 https://www.youtube.com/watch?v=BvR1Pgzzr38 -- Copying and Copy Constructors in C++
     45 https://www.youtube.com/watch?v=4p3grlSpWYA -- https://www.youtube.com/watch?v=4p3grlSpWYA
-    46 https://www.youtube.com/watch?v=PocJ5jXv8No -- Dynamic Arrays in C++ (std::vector) (Done)
+    46 https://www.youtube.com/watch?v=PocJ5jXv8No -- Dynamic Arrays in C++ (std::vector)
     47 https://www.youtube.com/watch?v=HcESuwmlHEY -- Optimizing the usage of std::vector in C++
     48 https://www.youtube.com/watch?v=f7mtWD9GdJ4 -- Local Static in C++
     49 https://www.youtube.com/watch?v=or1dAmUO8k0 -- Using Libraries in C++ (Static Linking)
     50 https://www.youtube.com/watch?v=pLy69V2F_8M -- Using Dynamic Libraries in C++
-    53 https://www.youtube.com/watch?v=I-hZkUa9mIs -- Templates in C++ (Done)
+    53 https://www.youtube.com/watch?v=I-hZkUa9mIs -- Templates in C++ 17:57
     54 https://www.youtube.com/watch?v=wJ1L2nSIV1s -- Stack vs Heap Memory in C++
-    55 https://www.youtube.com/watch?v=j3mYki1SrKE -- Macros in C++ (Done)
-    56 https://www.youtube.com/watch?v=2vOPEuiGXVo -- The "auto" keyword in C++ (Done)
-    60 https://www.youtube.com/watch?v=4NYC-VU-svE -- Why I don't "using namespace std" (Done)
+    55 https://www.youtube.com/watch?v=j3mYki1SrKE -- Macros in C++
+    56 https://www.youtube.com/watch?v=2vOPEuiGXVo -- The "auto" keyword in C++
+    60 https://www.youtube.com/watch?v=4NYC-VU-svE -- Why I don't "using namespace std" 14:34
     82 https://www.youtube.com/watch?v=PPup1yeU45I -- Singletons in C++
     92 https://www.youtube.com/watch?v=ryRf4Jh_YC0 -- VECTOR/DYNAMIC ARRAY - Making DATA STRUCTURES in C++
-    93 https://www.youtube.com/watch?v=SgcHcbQ0RCQ -- Iterators in C++ (Done)
-    95 https://www.youtube.com/watch?v=_zQqN5OYCCM -- How to REALLY learn C++
-    99 https://www.youtube.com/watch?v=vWXrFetSH8w -- Best Way to make Desktop Applications in C++ (Done)
-    https://www.youtube.com/watch?v=W3gAzLwfIP0 -- Welcome to OpenGL  (Done)
+    93 https://www.youtube.com/watch?v=SgcHcbQ0RCQ -- Iterators in C++
+    95 https://www.youtube.com/watch?v=_zQqN5OYCCM -- How to REALLY learn C++ 8:12
+    99 https://www.youtube.com/watch?v=vWXrFetSH8w -- Best Way to make Desktop Applications in C++
+    100 https://www.youtube.com/watch?v=ceakpNctcZs -- Do REAL PROGRAMMERS use Stack Overflow or Google? (VLOG) 7:40
+
+OpenGL, Cherno (code prefix dc)
+    https://www.youtube.com/playlist?list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2 -- playlist
+    https://www.youtube.com/watch?v=W3gAzLwfIP0 -- Welcome to OpenGL
+    https://www.youtube.com/watch?v=OR4fNpBjmq8 -- Setting up OpenGL and Creating a Window in C++
+
+Portfolio Courses -- C++ Tutorials
+    https://www.youtube.com/playlist?list=PLA1FTfKBAEX6BdpNaWp2uw-YspHwY7qwW -- Playlist
+    https://www.youtube.com/watch?v=qWPlRubVQ38 -- How To Setup A C++ Programming Environment On Windows With Visual Studio | C++ Tutorial
+    https://www.youtube.com/watch?v=DRCfF4j-rGg --Hello World Program | C++ Programming Tutorial 
+    https://www.youtube.com/watch?v=JJC1Ws0GXAs -- Console Output With cout Basics | C++ Tutorial
+    https://www.youtube.com/watch?v=hKqNb3Wo6z0 -- User Input With cin Basics | C++ Tutorial
+    https://www.youtube.com/watch?v=dKErkyRxPyE -- Comments | C++ Tutorial
+    https://www.youtube.com/watch?v=zS651dNfa6c -- If Statements | C++ Tutorial
+    https://www.youtube.com/watch?v=DVEo4jZsKe4 -- While Loops | C++ Tutorial
+    https://www.youtube.com/watch?v=-5xVrsBguHg -- Basics Of Using The string Type | C++ Tutorial 13:59
+    https://www.youtube.com/watch?v=W1CjYKmTB-c -- Introduction To Classes And Objects | C++ Tutorial 11:48
+    https://www.youtube.com/watch?v=pnhGOznp0UM -- Public And Private Access Specifiers | C++ Tutorial
+    https://www.youtube.com/watch?v=1oOWq4rpXIg -- Class Member Functions (aka Methods) | C++ Tutorial 7:17
+    https://www.youtube.com/watch?v=bnyveJ17lao -- Constructor Basics | C++ Tutorial 7:07
+    https://www.youtube.com/watch?v=abOMO8GY6io -- Destructor Basics | C++ Tutorial 9:12
+    https://www.youtube.com/watch?v=Rfe2Jb2JP-Y -- Using ofstream To Write To Files | C++ Tutorial
+    https://www.youtube.com/watch?v=wVhCnzFwxt4 -- How To Use ifstream To Read Files | C++ Tutorial
+    https://www.youtube.com/watch?v=SgxadsKvk_A -- Class Variables (i.e. "Static Member Variables") | C++ Tutorial
+    https://www.youtube.com/watch?v=1xY0rF399j0 -- Static Member Functions | C++ Tutorial
+    https://www.youtube.com/watch?v=ENnnAjZcuo0 -- Declare And Initialize An Array Of Objects | C++ Tutorial
+    https://www.youtube.com/watch?v=rHXPFxaOIfo -- Constructor Delegation | C++ Tutorial
+    https://www.youtube.com/watch?v=cxysUPZH65Y -- Pass By Reference | C++ Tutorial
+    https://www.youtube.com/watch?v=SJy4_Ci80No -- Object Assignment | C++ Tutorial
+    https://www.youtube.com/watch?v=Ldv5i14UhTA -- Define A Copy Constructor To Create A Deep Copy Of An Object | C++ Tutorial
+    https://www.youtube.com/watch?v=A9COxBajDng -- Function Overloading | C++ Tutorial
+
 
 Colorado State CS253: Software Development with C++
     https://www.cs.colostate.edu/~cs253/Spring19/
@@ -186,14 +224,43 @@ C++ Algorithm Exercises
 C++ Code Palace 18 Part Series
     https://www.youtube.com/playlist?list=PL4KX3oEgJcff8LV7P78Z7zdwMPBVDZixL -- Full C++ Tutorial
 
-C++ Game Programming (COMP4300)
+C++ Game Programming (COMP4300), Dave Churchill (code prefix dc)
     https://www.youtube.com/playlist?list=PL_xRyXins848nDj2v-TJYahzvs-XW9sVV -- Playlist
-    https://www.youtube.com/watch?v=S7lXSihz0ac -- COMP4300 - C++ Game Programming - Lecture 01 - Course Introduction 01:25
-    https://www.youtube.com/watch?v=P_mgIDWpbms -- COMP4300 - C++ Game Programming - Lecture 02 - Intro to C++ (1/2) 02:15
+    https://www.youtube.com/watch?v=S7lXSihz0ac -- COMP4300 - C++ Game Programming - Lecture 01 - Course Introduction 01:24:45
+    https://www.youtube.com/watch?v=P_mgIDWpbms -- COMP4300 - C++ Game Programming - Lecture 02 - Intro to C++ (1/2) 2:17:05
+    https://www.youtube.com/watch?v=aZFXWVqgGBI -- COMP4300 - C++ Game Programming - Lecture 03 - Intro to C++ (2/2) 1:53:30
+    https://www.youtube.com/watch?v=UARdwTLUH5U -- COMP4300 - Game Programming - Lecture 04 - Assignment 1 + SFML 2:00:40
+    https://www.youtube.com/watch?v=9LNgSDP1zrw -- COMP4300 - Game Programming - Lecture 05 - Intro to ECS
+    https://www.youtube.com/watch?v=pTWss1lY6rg -- COMP4300 - Game Programming - Lecture 06 - EntityManager + 2D Game Math
+
+Game Programming Tutorial for Beginners in C++ (Windows), Dan Zaidan (code prefix dz)
+    https://www.youtube.com/playlist?list=PL7Ej6SUky135IAAR3PFCFyiVwanauRqj3 -- Playlist
+    https://www.youtube.com/watch?v=luuyjjOxnUI -- How to program a game in C++: #0 - Introduction and Setup
+    https://www.youtube.com/watch?v=yD0WzbKJcOg -- How to program a game in C++: #1 - Window and Pointers
+    https://www.youtube.com/watch?v=PJmpOhk9GXw -- How to program a game in C++: #2 - Drawing Graphics
+    https://www.youtube.com/watch?v=gFBToWRjDZ4 -- How to program a game in C++: #3 - Input, Movement and Time
+    https://www.youtube.com/watch?v=qjhbRzmBvFk -- How to program a game in C++: #4 - Gameplay, Collision, Better Movement
+    https://www.youtube.com/watch?v=dDiJpGIDR_U -- How to program a game in C++: #5 - Enemy AI, Score System, Finishing the Gameplay
+    https://www.youtube.com/watch?v=NiuFhNYSYyw -- How to program a game in C++: #6 - FINISHING the GAME! (Menu, Final Polish)
+
+Making a Retro Video Game in C, Ryan Ries
+    https://www.youtube.com/playlist?list=PLlaINRtydtNWuRfd4Ra3KeD6L9FP_tDE7 -- Playlist
 
 Acronyms
+    ECS -- Entities, Components and Systems
     RAII -- Resource Acquisition Is Initialization
-    SMFL -- Simle and Fast Multimedia Library
+    SFML -- Simle and Fast Multimedia Library (uses OpenGL)
+    STL  -- Standard Template Library
+
+Definitinos
+    Abstract Classes: classes with virtual functions
+    Access Specifiers: public:, private:, protected: -- privacy specifiers in class definitions
+    Class -- user-defined type
+    Member Variables -- variables defined within a class (aka attributes)
+    Methods -- member functions defined within a class
+    Object -- instance of a class
+    String Literal -- a quoted series of characters
+    Virtual Functions: functions declared in classes and prefixed virtual. Overridden in derived classes for polymorphism
 
 Integrated Development Environments
     Visual Studio Code
@@ -221,6 +288,7 @@ Background
     Code is fast
     Common syntax
     Not garbage collected
+    Statically typed
 
 Exercises
     Codewars
@@ -234,17 +302,46 @@ Exercises
     https://edabit.com/challenges/cpp#!
     https://www.cs.purdue.edu/homes/bxd/CandC++/
 
-Warnings and Tips and Tricks
+Warnings and Tips and Tricks and Practices
+    Mark variable and function definitions static to avoid global scope
+    Put #pragma once in header files to avoid duplication of headers and #IFDEF statement
     Use std::cin.get() to pause execution of a program which is the same as system("pause") in windows but works for all operating systems
     Always prefix the std:: namespace on standard library functions
-    Never put using namespace <> in header files
+    Never put "using namespace <>" in header files or code files
     Use std::cin.ignore() then std::getline(cin, strInput) to get a string of console input with embedded spaces
     use std::to_string(<int>) to convert an integer to a string 
 
 Compilers (installed on /usr/bin)
     CLang llvm
     Msvc -- Microsoft compiler included in Microsoft Visual Studio
-    GCC and G++
+    gcc and G++
+
+Compilers installed on Windows
+    Visual studio
+    mingw
+
+Visual Studio Shortcuts
+    Set Visual Studio configuration options -- Tools Get Tools and reatures
+    Open a project -- File > Open > Project and open the .sln file
+    Dark Mode -- Menu > Tools > Options > Environment > General > Color Theme > Dark
+    Compilation Options -- Solution Explorer
+    Solution Explorer -- Menu > View > Solution Explorer (or <ctrl><alt> l
+    compile current source without linking -- <ctrl><f7>
+    compile and link and execute with debugging -- <f5>, or Debug > Start debugging
+    compile and link and execute without debugging -- <ctrl><f5>, or Debug > Start without debugging
+    Properties -- <alt><enter>
+    Generate translation unit (.i) -- <alt><enter> > C/C++ > Preprocessor > Preprocess to a file
+    Generate assembly file (.asm> --  <alt><enter> > C/C++ > Output Files > Assembler Output > Assembly Only Listing (/FA)
+    Set breakpoint on cursorline -- <f9>
+    Step into (debug) -- <f11>
+    Step over (debug) -- <f10>
+    Step out (debug) -- <shft><f11>
+    Run to current line -- <Ctrl><F10>
+    Continue -- <f5>
+    Stack Memory -- Debug > Window > Memory > or <ctrl><alt>m ...
+    New Project -- File > New > Project > 
+    Change startup entry point to a different project -- Project > Set as Startup Project
+    Watch Window (in debug) -- Debug > Windows > Watch or <Ctrl><Alt>W then a number
 
 Compilers (online)
     Wandbox https://wandbox.org
@@ -269,28 +366,21 @@ Third Party Libraries
     SMFL -- Simle and Fast Multimedia Library, a graphics library written in C++
     Vulcan -- graphics library
 
-Compilers (installed on /usr/bin)
-    CLang llvm
-    Msvc -- Microsoft compiler included in Microsoft Visual Studio
-    GCC and G++
-
-Compilers (online)
-    Wandbox https://wandbox.org
-    Compiler Explorer https://www.godbolt.org/
-    Coliru http://coliru.stacked-crooked.com/
-    http://cpp.sh/ -- C++ compilation environment for http:://cplusplus.com/
-
-Compilation Steps
+Compilation and Linking Steps
     Preprocess each source file (replaces include lines) and creates translation units
     Compile each translation unit to create object files (one for each translation unit)
         Abstact syntax tree
         Code generation into object files (one for each cpp file)
-    Link all object files together
+    Link all object files together --> a.out (default) and define the entry point from main()
+    Since one c source file can include another c source file, the result is called a translation unit
+    The compiler takes translation units as input and not files
+    If there are no c files included in other c files, each c file becomes a translation unit after .h includes are processed
 
 Compilation Options
      g++ -g -o <progName> <progName>.cpp
          -o name of output file
          -g enable debug symbols
+         -E view preprocessor results
      g++-11 -g -o <progName> <progName>.cpp -- latest version of gcc/g++ on linux
          -Wall all warnings
          -Weffc++
@@ -299,15 +389,19 @@ Compilation Options
          -Wsign-conversion
          -I/source/includes -- alternate path for local header files
 
+compilation Examples
+    g++ -std=c++17 lecture2.cpp -o lecture2
+
 Compiler Optimizations and Optimization Levels
 
-Preprocessor Directives
-    includes are substitution files
+Preprocessor Directives and Preprocessor Statements
+    # -- identifies a preprocessor statement
+		# include <iostream> substitutes everything in the iostream file into the source (header files)
     macros are substitution text
     Macros can be multiline if the '\' line continuation is used
     #pragma once -- only includes the contents of an include file once in single translation unit
-    #ifndef ... #endif
-    #define
+    #ifndef _SYMBL ... #define SYMBL ... #endif will only include function prototypes once (interchangeable with #pragma once)
+    #define -- defines a translation for fixed text that is substituted in the source
 
 Preprocessor Macro Symbols for Debugging
     __LINE__  line number integer
@@ -316,10 +410,18 @@ Preprocessor Macro Symbols for Debugging
     __DATE__  date string
     __TIME__  time string
 
+Naming Standards
+    .cpp -- source code extension -- function and class definitions
+    .h -- header files -- function and class declarations
+
 Header Files (Include Files)
-    Common place to store declarations (not definitions)
-    Included into sourc cpp files
-    <iostream>
+    Commonplace to store class and function declarations (not definitions) in header files
+    C++ header files do not have a file extension
+    Declarations must be made before classes and functions are used
+    However, any file can be an include file (including other .cpp files). Including is a mechanical process
+    Common Includes into source cpp files
+    <> means the include file is in one of the standard include directories (/usr/include/c++/9)
+    <iostream> -- iostreams library
     <limits> uses std::numeric_limits<std::streamsize>::max()
     <cctype.h>
     <sstream> -- string streams
@@ -339,8 +441,9 @@ Namespaces
     std -- the standard namespace for the standard library: clib
     using namespace std; -- is a compiler instruction to import all names from STD into the current scope
     using namespace std; -- can be placed inside a code block to limit its scope
-    Limit using namespace <namespace> within code and avoid putting in the global area
-    use namespace qualifiers insteaf of using namespace <namespace> to avoid collisions
+    Limit using namespace <namespace> within code and avoid putting in the global area or header files
+    use namespace qualifiers instead of using namespace <namespace> to avoid collisions
+    limit 'using' to actual names: using std::string, using std::cout etc
     Identifiers declared outside a namespace are global
     All identifier names in the C++ standard library are within the std namespace
     Define a namespace with the namespace keyword e.g. namespace foo { .. } at the beginning of a block
@@ -376,7 +479,7 @@ Stream Output (COUT)
     std::cout << u8"\033[2J\033[1;1H"; -- clear the console in linux using #include <iomanip> (or system("clear");
     std::cerr -- stderr file identifer or stream object (character error) , print character errors to the console and unbuffered
     std::clog -- stdlog file identifier or stream object (character log), print character log messages to the console, buffered
-    std::endl -- endline or newline '\n'. endl flushes the output buffer.
+    std::endl -- endline or newline '\n'. endl flushes the output buffer. Do << '\n' to avoid the cost of a buffer flush (for example, in a for loop printing multiple lines
     std::setprecision(20) -- sets the maximum precision (include <iomanip>)
     std::width(10) -- sets the field width to 10 (include <iomanip>)
     std::boolalpha -- prints boolean values as words
@@ -397,9 +500,9 @@ Stream Output (COUTFormatting
     std::hex -- print hex value
 
 File Streams
-    #include <fstream>
-    ofstream outFile
-    ifstream in File
+    #include <fstream> -- covers ofstream and ifstream
+    ofstream outFile -- output to files or write
+    ifstream in File -- input from files or read
     outFile.open("myfile.txt", mode) -- default mode is overwrite/truncate existing
     inFile.open("myfile.txt", mode) -- default mode is overwrite/truncate existing
     File modes:
@@ -424,6 +527,19 @@ Linker and Assembler
 GCC Command Options
 
 Compilation Process
+    C++ programs are compiled into binaries
+    There is no virtual machine or interpreter
+    Steps
+        Write Source Code
+        Preprocessing -- runs preprocess directives to combine header files -> Expanded Source Code
+            includes libraries
+            includes headers
+            resovles macros
+            g++ -E myprogr.cpp > myprog.s (expanded preprocessed source file)
+        Compiling -- check syntax and create object file -> Object file (.o)
+            g++ -c myprog.c generates an object file
+        Linking -- creates executable file
+            g++ -o myprog myprog1.c myprog2.o
 
 Compilation Toolchain (Process)
 
@@ -431,8 +547,23 @@ Compilation of Multiple Files
 
 Make
     Make works in C++
+    configures the compilation process
 
 Memory Model
+    Stack Memory (aka static memory)
+        allocated when variables are declared (without the new keyword)
+        automatically deallocated when out of scope
+        stack allocation is fast for new variable creation
+        stack memory grows downwards
+        an example: 0x7ffc62544cc0 0x 7ffc 6254 4cc0 which is 48 bits long (not 64 bits)
+            the most significant 16 bits are not needed or used but are stored in a 64 bit register
+    Heap Memory (aka dynamic memory)
+        allocated with the new keyword
+        has a predefined size (several megabytes)
+        pointers are used to access heap variables
+        pointers must be deleted to deallocate their heap memory
+        heap allocation is slow for new variables
+        heap memory grows upwards
 
 Format Specifiers
 
@@ -455,28 +586,36 @@ IDE Tools
     http://www.codeblocks.org/downloads/26 -- Code Blocks installable IDE for C/C++
     https://www.eclipse.org/cdt/ -- Eclipse C/C++ Development Tooling
     https://netbeans.org/features/cpp/ -- Netbeans C/C++ Development
+    https://codelite.org/ -- Codelite IDE for C++, C, Rust, Node and php
+
+Tools
+    HxD -- binary editor at https://mh-nexus.de/en/hxd/
 
 C++ Language Rules
 
-Fundamental Data Types
+Fundamental Data Types (aka Primitives)
+    Different primitives required different memory sizes
+    sizeof(<type>) returns the size in size_t of a datatype
     Integral Types (stored as integers)
         character
             char -- characters (1 byte, 256 values)
             char16_t -- 2 bytes, 65,536 values
             char32_t -- 4 bytes, 4,294,967,296 values)
-            wchar_t -- (1 byte)
+            wchar_t -- 2 byte -- a wide character
         integer (signed or unsiged)
             short -- short integer (2 bytes)
-            int -- Integers (4 bytes)
-            unsigned int -- Positive Integers (4 bytes)
+            int -- Integers (4 bytes), signed, -2bill - 2bill
+            unsigned int -- Positive Integers (4 bytes) 0 - 4bill
             long -- long integer (4 bytes)
+            unsigned long -- (4 bytes)
             long long -- long long integer (8 bytes)
+            unsigned long long (8 bytes)
         float
-            float -- floating point numbers (4 bytes)
+            float -- floating point numbers (4 bytes) -- append f to the numbber otherwise it will default to a double
             double -- double precsion floating point numbers (8 bytes)
             long double -- long double precision floating point numbers (16 bytes)
         boolean
-            bool -- booleans (1 byte)
+            bool -- booleans (1 byte) (false = 0, true != 0)
     Non-integral Types
         void
             void -- no type
@@ -489,6 +628,7 @@ Static and Extern Keyword
     Inside a class or struct, static declares a variable or function as shared across all instances of a class
     Static methods cannot access non-static variables in a class
     Static methods which are class level cannot reference non-static variables which are object level
+    Variables and functions should be static to avoid global scope (unless global scope is needed)
 
 Compound Data Types
     std::string -- variable-length string #include <string>
@@ -508,7 +648,8 @@ Other Type Declarations
     void --
     auto -- let the compiler determine the data type based on the context of the declaration
 
-Enumerations
+Enumerations or Enums
+    Enumerations are nameed sets of named integers
     Enumerator types represent integers as pseudonym words
     enum <myEnum> {<word1>, <word2>, <word3>, ...<wordn>};
     Variables can be typed as enums: <myEnum> Var1 = <wordn>;
@@ -589,24 +730,28 @@ Numeric Systems
     hex prefix    0x eg. 0x0f or 0x0F is 15 decimal
 
 Arrays (Raw)
-    An array is a collection of variables manipulated as a single variable
-    int scores[10]; -- declare an array of 10 integers
+    An array is a collection of variables or elements manipulated as a single variable
+    Array names are pointer types
+    int scores[10]; -- declare an array of 10 integers on the stack
     int *scores = new int[10]; -- create an array on the heap for 10 integers
-    delete {} scores; -- delete an array from the heap
+    delete [] scores; -- delete an array from the heap
     int moreInts[] {1, 2, 3, 4, 5} -- creates a 5 element array of integers using a braced init-list
     int theseVals[10] {1, 2, 3} -- zero fills the uninitialized elements
     char chrVals[10] {1, 2, 3} -- the compiler fills NULL  to the remaining uninitialized elements
     char myArray[] {"Hello World!"} -- uses brace-intitalized string which will be '\0' terminated automatically
     int thisArray[]; -- compiler error, size cannot be determined
     std::size(myArray) -- gives the number of elements in a stack array (C++17) but not on a pointer
-    sizeof(myArray)/sizeof(myArray[0]) -- gives the number of elements in the array
+    sizeof(myArray)/sizeof(myArray[0]) -- gives the number of elements in the array on the stack
     Iterate through an array with a range-based for loop: for (auto iterator : myArray) {std::cout << iterator << std:endl;}
     Range-based for loops or 'range for loops' work on arrays but not on pointers
     Static arrays live in the stack
     Dynamic arrays live on the heap
 
 Arrays (Standard Template Library)
-    Standard arrays are defined in the standard template library
+    Standard arrays are defined in the standard template library starting in C++ 11
+    Requires #include <array> header file
+    std::array<int, 5> array1;
+    array1.size -- size of the standard array
 
 Character Functions(include <cctype>)
     std::isalnum() returns non-zero if a character is alphanumeric (a letter or a number)
@@ -619,21 +764,41 @@ Character Functions(include <cctype>)
     std::isblank() returns non-zero if a character is a blank space
 
 Strings <string>
-    const char *myString = "This is a string";
+    const char *myString = "This is a string"; -- cannot be changed because it is 'const'
+    std::string myString1 = "This is another string";
+    myString.size() -- gives the string size including the teminating NULL value
+    myString.at(1) gives 'h' -- same as myString[1]
     strings are null-terminated ('\0') character arrays (aka c-strings);
     String literals are expressed as: "This is a string"
-    String initialization: const char *p_message {"Hello World!"};
+    Const string literals are stored in the CONST section of the compiled binary and cannot be changed (changing is undefineed behaviour)
+    String initialization: const char *p_message {"Hello World!"}; -- cannot be changed
+    string initialization: const char message[] = "Hello World" -- can be changed
     Initialized strings are const or immutable -- they cannot be grown in size (but their individual characters can change)
     Use char [] arrays for strings that need to be changed
     Use std::cin >> strMyString to fetch a single word from the console
     Use getline(std::cin >> std::ws, strMyString) to get a sentence from the console and ignore leading whitespace
+    Concatenate using a + operator e.g. str1 = str1 + "more chars"; -- is str1 is defined as std::string str1 = "some chars";
+    Concatenate using string2.append("More chars");
+    Check if a string is empty -- if (str3.empty()) {}
+    Clear a string with str3.clear();
+    Convert a numeric value to a string -- string str4 = to_string(100.45);
+    Convert a string to a number -- double number = stod(str5); where str5 = "34.23"; see also stoi, stol, stoll
+    Substring with str string sub = testStr3.substr(2, 4) -- returns a substring
 
-Strings (Standard Template Library)
+STL Strings (Standard Template Library or STL)
+    Requires #include <string>
+    A collection of classes and functions
+    Examples
+        Strings/IO/Streams/Files
+        Generic Containers (vectgor, set, map)
+        Container functionality (fill, copy, erase)
+        Algorithms (sort, max/min)
     Strings are defined in the standard template library
     basic_string is the underlying template class
     #include <string> to use the std::string object
     string is a template specialization of basic_string for the char data type
-    wide strings have type wchar_t handles unicode characters
+    wide strings comprise 2-byte characters and they have type wchar_t -- handles unicode characters
+    Strings from the STD library implement RAII
 
 String Declarations (include <string>)
     std::string objects can change size dynamically at run time
@@ -647,7 +812,7 @@ String Declarations (include <string>)
 
 String Member Functions
     str.append("newstring") appends "newstring" to str
-    str.length() gives
+    str.length() gives the length of a string
 
 String Functions <cstring> for functions and <string> for std::string classes
     std::strlen() -- calculate the length of a string (excluding the terminating null)
@@ -666,8 +831,66 @@ Whitespace
     Line continuations on strings require ending " on the starting line and opening " on the following line
     Spaces within double-quoted text are honored
 
+Indentation
+    K&R Variant e.g. while (x == y) { ...
+    Allman style e.g. while (x == y) 
+                      { ..
+
+Branching and Conditional Statements
+    if(a == b)
+    {
+        std::cout << a << "equals" << b < std::endl;
+    }
+
+Loops
+    The increment variable in a for loop is incremented after the loop body is executed and not before
+    for (int i = 0; i < 10; i++)
+    {
+        <loop body code>
+    }
+    while (a < b) 
+    {
+        <loop body code>;
+    }
+    do
+    {
+        <lpop body code>;
+    } while (a < b);
+
+Control Flow
+    Continue -- skips to the next iteration of a loop, used inside loops
+    Break -- break out of a loop, used inside loops
+    Return -- exit a function, can be placed anywhere
+
+Logical Operators
+    ~ -- not
+    a & b -- and
+    a | b -- or
+    a ^ b -- exclusive or
+    a << b -- left shift
+    a >> b -- right shift
+
+Arithmetic Operators
+    a + b -- addition
+    a - b -- subtraction
+    +a    -- unary plus
+    -b    -- unary minus
+    a * b -- multiplication
+    a / b -- division
+    a % b -- modulo (i.e. remainder)
+    ++a   -- preincremetn
+    a++   -- post increment
+    --b   -- predecrement
+    b--   -- postdecrement
+    =     -- assignment
+    ==    -- equality
+    ===   -- full equality (value and type)
+
+Class Operators
+    Class operators are functions (eg. << in cout)
+
 Pointers
-    A pointer is an integer which stores a memory address
+    A pointer is a a memory address and an associated type
     int *p_number1{nullptr} initializes p_number1 to NULL explicitly -- nullptr was introduced in C++11
     int *p_number1{} initializes p_number1 to NULL implicitly
     int *p_number1 = nullptr initialized p_number1 to NULL explicitly
@@ -682,11 +905,20 @@ Pointers
 Pointer Arithmetic
 
 References
-    References are aliases to variables
-    References must be initialized ... they cannot be declared without an assignment
-    int& ref1 {<value> | <variable>} declares a reference 'ref1' to a previously defined 'value' or 'variable'
     A reference is an implicitly dereferenced pointer
+    References are 'safe' pointers and use '&' instead of '*'
+    References are aliases to variables
+    References are defined as part of the variable (eg. int& var or int &var)
+    References must point to existing data - the data must exist
+    References must be initialized ... they cannot be declared without an assignment
+    int& ref1 = 22 -- declares a reference 'ref1' to a value
+    int& ref1 = a -- declares a reference 'ref1' to a varialble 'a'
     A const reference cannot be modified but the original non-const variable it refers to can be changed
+    References vs Pointers
+        References cannot be NULL
+        You cannot change a variable that is referenced by a reference
+        You cannot do math on references
+        You cannot have a reference to a reference
 
 Reference Parameters
     Pass reference parameters in functions to return additional results
@@ -721,6 +953,7 @@ Templates or Function Templates (Generics) or Parameterized Types
     Template specializations are templates that override standard templates with specific types (e.g. char* values)
     The compiler replaces the T placeholder with the actual type when the function is called
     Initialize data members in the base reference initialization section for efficiency
+    Templates must be defined outside of block scope (ie. not within any function)
 
 Concepts (C++20) #include <concepts>
     A mechanism to constrain template type parameters
@@ -729,9 +962,11 @@ Concepts (C++20) #include <concepts>
     Implement with 'requires std::<concept <T>'
 
 Classes and Structures and Objects
-    Classes encapsulate data and functions in a container. Data and functions can be public or private
-    wheras structures are public. All members are public in a struct
+    Classes encapsulate data (members) and functions (methods) in a container. data and functions can be public or private
+        wheras structures are public. All members are public in a struct
     Structs are normally used to define complex data collections but not methods
+    Strucst exist in C++ for backward compatibility with C but they do more than C structs
+    Structs in C++ can contain data and methods but they are public by default
     Declare a class e.g. class MyClass;
     Define a class e.g. class MyClass{ ... };
     Member access specifiers in classes are public:, protected: and private:
@@ -741,21 +976,63 @@ Classes and Structures and Objects
     Inline functions are typically one line such as getter functions with a single return statment
     Class functions (mehods can be defined outside of their class using the class name and scope resolution operator ... <classname>::
     Constructors initialize data in an object and are run automatically when an object is instantiated
-    Constant functions do not change any data members in a class and are denoted by <functionname><parameterlist> const {<body}
+    Constant functions do not change any data members in a class and are denoted by <functionname><parameterlist> const {<body} -- this is const correctness
     Getters are constant functions
     static members in objects are shared across all objects of a class and onl exist in one place
     Memberwise assignment assigns members of one object to members of another object
 
 Constructors
-    Constructors initialize instances of an object
-    Constructors are public methods with the method name matching the class name (e.g. <classname>();
+    Constructors initialize instances of an object wheb they are created
+    Constructors are public methods with the method name exactly matching the class name (e.g. <classname>();
     Constructors can be written to take parameters to set data members in their class
     Constructors initialize data in an object and are run automatically when an object is instantiated
     A default constructor is created by the compiler if no constructor is defined in the code but it does not initialize variable
     The default constructor is not generated if any other constructor is defined in the code
     A default constructor can be forced in the code with the public classmethod <ClassName>() = default;
-    The default constructor can be suppressed using the 'delete' keyword e.g. myCLass() = delete;
-    
+    The default constructor can be suppressed using the 'delete' keyword e.g. myCLass() = delete
+    Member initializer lists in constructors are the most efficient way to initialize values
+        Entity()                                                         -- constructor function
+            :m_name(name), m_age(age)                                    -- initializer list
+
+Destructors
+    Destructors clean up objects after their use
+    Destructors are called autmatically when class objects pass out of scope
+    Destructors begin with a ~ tilde and have the same name as the class
+
+Inheritance
+    Use the ':' character to sublcass in a class definition
+        class Player : public Entity -- creates a Player class from an Entity class
+    Any derived class must override all pure virtual functions of the parent or it will also be an abstract class
+
+Virtual Functions (aka Methods)
+    Virtual methods override methods in subclasses
+    Methods tagged as virtual in a class can be overridden in the subclass
+    Prefix the method in the base class with 'virutal'
+    Suffix the over-riding function in the inherited class with 'override' to enforce syntax checking (optional)
+
+Pure Virtual Functions
+    Pure Virtual Functions are template functions in the base class that are implemented in the subclasses (same as an interface in other languages: Java, C#)
+    Abstact classes are classes containing pure virtual functions
+
+Visibility
+    Private, Protected and Public are visibility modifiers for class members and methods
+    Class members and methods are private by default
+    Private means the methods and members can only be accessed from methods within the class
+    Friends of a class can access private members
+    Subclasses cannot access members or methods of their parent class
+    Protected means a class and all subclassses can access protected members
+    Public methods and members can be accessed by subclasses and anywhere in a program
+
+RAII (Resource Acquisition Is Initialization)
+    RAII is a programming method that wraps dynamic variables inside corresponding classes
+    The destructor in the class deallocates the memory when the class object passes out of scope 
+
+Smart Pointers and Shared Pointers
+    A smart pointer is a pointer to a class that encapsulates data
+    A smart pointer implements RAII
+    A shared ponteris a smart pointer in the STD library that can be created more than once
+    The object ponted to by the shared pointer is deleted when the its last shared pointer falls out of scope
+
 Functions
     Functions are groups of statements executed in order
     Functions must be declared before they are used in main() via a declaration or prototype
@@ -792,6 +1069,10 @@ Function Forward Declarations
     A function prototype includes a name, return type and parameter types. Parameter names are optional but add to readability
     Function prototypes without function definitions will fail linking if the function is called
     Functions with the same name but different parameters are distinct and different functions
+
+Function Return Values
+    The default return of main() is zero
+    Functions other than main() have no default return value
 
 Function Overloading
     Overloading functions have different parameters (order, number and type) but the same function name
@@ -869,4 +1150,5 @@ MySQL Connector for C++
     https://dev.mysql.com/doc/connector-cpp/1.1/en/connector-cpp-getting-started-examples.html -- C++ and mySQL code examples
 
 
+<S-Insert><S-Insert><S-Insert><S-Insert>
 

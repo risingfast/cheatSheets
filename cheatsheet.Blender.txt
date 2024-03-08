@@ -35,10 +35,15 @@ CG Cookie
 
 BornCG
      https://www.youtube.com/playlist?list=PLda3VoSoc_TQrLrt-voecHs0Mb5qzk2S3 -- Let's Learn Blender! playlist, BornCG
+     https://www.youtube.com/watch?v=ccOk5JWg1Qg -- Let's Learn Blender! #1: Getting Started for Beginners! 22:09
+     https://www.youtube.com/watch?v=1kwOV2Y5iPQ -- Let's Learn Blender! #2: A Guided Tour: The User Interface & Key Preferences! 28:52
+     https://www.youtube.com/watch?v=5lN4-EPT7mw -- Let's Learn Blender! #3: Materials, Textures, Nodes, & HDRI's! 48:05
      https://www.youtube.com/watch?v=HH7InXu7ZdU -- Let's Learn Blender! #4: 3D Modelling in Edit Mode!: Part 1
-     https://www.youtube.com/watch?v=1kwOV2Y5iPQ -- Let's Learn Blender! #2: A Guided Tour: The User Interface & Key Preferences!
-     https://www.youtube.com/watch?v=5lN4-EPT7mw -- Let's Learn Blender! #3: Materials, Textures, Nodes, & HDRI's!
-     https://www.youtube.com/watch?v=HH7InXu7ZdU -- Let's Learn Blender! #4: 3D Modelling in Edit Mode!: Part 1
+     https://www.youtube.com/watch?v=CdHXpHPWKYo -- Let's Learn Blender! #5: Smoothing & Hard Edges 36:12
+     https://www.youtube.com/watch?v=Wxh1sDmoFrI -- Let's Learn Blender! #6: 3D Modelling in Edit Mode!: Part 2 34:59
+
+Jens
+     https://www.youtube.com/watch?v=2Kzo68liq78 -- How to make Game Models (For Beginners) from Start to Finish (blender), Jens
 
 Competitors
     Houdini -- freeware
@@ -52,6 +57,7 @@ Competitors
 
 Additional Resources
     www.artstation.com -- graphic art and game art showcase
+    www.polyhaven.com -- background images and HDRI's
 
 Definitions
     bevel -- split an edge into 2 or move spaced edges
@@ -59,15 +65,17 @@ Definitions
     edge ring -- a set of edges around a 3D object
     edge slide -- move an edge ring along a surface without deforming the shape
     gizmos -- on-screen tools
+    icosphere -- sphere containing only polygon surfaces
     inset face -- small face inside an bigger face
     loop cut -- add a set of edges around the surface of a 3D object
     non-manifold objects -- objects with intersecting faces that are unprintable or unbuildable
     n-gon -- a face with more than 4 sides, which cause problems blocking edge loops and smoothing
     Orthographic -- without perspective in 3D
+    uv sphere -- sphere with longitude and latitude lines and containing triangular faces
     vertex slide -- move a vertex along the surface of a 3D object
 
 Acronyms
-    HDRI -- High Dynamic Range Imaging -- adds luminosity to rendered images
+    HDRI -- High Dynamic Range Image -- adds luminosity to rendered images
 
 Editors, Side Panels and Menu Bar
     Main Menu Bar -- Top left
@@ -128,17 +136,22 @@ Orientations
 3D Modelling Tools
     Extrude -- for selected faces, use <ctrl> to extrude in increments, shortcut e to extrude. <alt> e for extrude menu
     Subdivide -- select a face or edge and right click > Subdivide
-    Loop Cut
-    Selecting: Edge Loops and Rings
-    Edge Slide and Vertex Slide
-    Bevel and Offset Edge Loop cut
-    Inset Faces
+    Loop Cut -- create a set of edges surrounding a 3D object, or <ctrl> r, and click and drag to move the loop cut
+    Offset Edge Loop Cut -- select an edge loop, choose loop cut tool, subselect offset edge loop cut, click and drag the edge loop
+    Selecting: Edge Loops -- choose tweak selector and <alt> click
+    Selecting edge rings -- choose tweak selector and <ctrl> <alt> click
+    Edge Slide -- choose the edge slide tool, or select edge loop and type 'gg'
+    Vertex Slide -- choose the edge slike tool, sub-select vertex slide, or select vertex and type 'gg'
+    Bevel -- choose face or edge, then select bevel tool and drag, or <ctrl> b
+    Bevel vertex -- choose vertex, choose bevel tool, drag bevel widget then change affect setting to vertices, or <ctrl> <shft> b
+    Inset Faces  -- make a small face inside a face, choose Inset Faces tool
+    Normalize scale for beveling and insetting -- Object mode > Object > Apply > Scale (or Rotation and Scale)
 
 Commands
     F12 -- render mode (lighting and shadows) Menu > Render > Render Image, click away to cancel
     right-click -- cancel
-    e, ex, ey, ez and move mouse -- extrude
-    e, ex, ey, ez <ctrl> and move mouse -- extrude in increments
+    extrude -- e, ex, ey, ez and move mouse
+    extrude in incrementse, ex, ey, ez <ctrl> and move mouse
     g, gx, gy, gz -- grab and move (click the shape then type g)
     s, sx, sy, sz -- scale, or scale along an axis
     r, rx, ry, rz -- rotate, or rotate around an axis
@@ -146,7 +159,7 @@ Commands
     zoom smooth -- <ctrl> click middle mouse button and move
     orbit -- click middle mouse button and move
     move -- <shft> click middle mouse button and move
-    center object -- Toolbar > View > Frame Selected
+    center object -- Toolbar > View > Frame Selected or <numpad> .
     Center all objects -- Toolbar > View > Frame All or <Home>
     Show Right Side -- X or Toolbar > View > Viewpoint > Right
     Show Left Side -- -X or Toolbar > View > Viewpoint > Left
@@ -167,7 +180,7 @@ Commands
     Center Object -- numpad .
     ` -- show view menu
     numpad 0 -- camera view on, off
-    <shft> a -- add object (menu->Layout->Add_
+    add an object -- <shft> a or main menu->Layout > Add (always placed on the 3D cursor)
     Preferences -- Main Menu > Edit > Preferences (all changes are autosaved)
     Resolution -- Menu > Edit > Preferences > Interface > Resolution Scale
     Cancel -- <Esc> or right click
@@ -198,8 +211,9 @@ Commands
     clear location, rotation, scale -- <alt> g, r, s or Toolbar > Object > Clear > 
     delete an object -- left click to select, then x or <del> or toolbar > Object > Delete
     Place the 3D cursor -- <shft> right -click
-    Center the 3D cursor -- toolbar > object > snap > center to world origin
+    Center the 3D cursor --show the snap menu > center to world origin
     Center the 3D cursor to an object -- select object, then toolbar > object > snap > cursor to active
+    Move the 3D cursor -- <shft> right-click
     Show the snap menu in the 3D view -- <shft> s
     Change orientation -- toolbar > Global or Local in dropdown, or , on the keyboard,
     Deselect everything in an object - <alt> a
@@ -227,9 +241,17 @@ Commands
     bevel an vertex -- choose a vertex, set the affect to vertices, then choose bevel tool
     bevel a vertex shorcut -- <ctrl> <shft> b
     copy loop cuts -- choose a loop cut, then click the loop cut > offset edge loop cut tool > click the original loop cut and drag the mouse
-    inset face -- choose inset faces tool
+    inset face -- choose inset faces tool or select face > i
     inset face shortcut -- i (after selecting a face)
     normalize scale of a stretched object -- choose object mode > object > apply > scale then check the n-menu and scale values
     change viewport clipping -- ITV Properties Side-panel > View > Clip Start and Clip End
     search -- <f3>
-
+    autosmooth -- select object > right-click > shade smooth > properties > data icon > auto smooth
+    define hard or sharp edge -- choose 
+    add subdivision surface modifier -- select object > edit mode > properties > modifiers > generate > subdivision surface
+    join two objects -- selec one object, <shft> click the second object, <ctrl> j
+    set origin -- object mode > select object > Object > set origin
+    remove double vertices (aka dboules) -- edit mode > mesh > clean up > merge by distance
+    fill a missing face -- <alt> click to select a loop cut, then f
+    enable the select box -- object mode > b
+    enable the select circle -- object mode > c
