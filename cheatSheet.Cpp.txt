@@ -42,7 +42,7 @@ C++ Code Beauty (code prefix cb)
     https://www.youtube.com/watch?v=GQp1zzTwrIg -- C++ FULL COURSE For Beginners (Learn C++ in 10 hours)
 
 C++ Programming Course 30 Hours freeCodeCamp Daniel Gakwaya (code prefix dg)
-    https://www.youtube.com/watch?v=8jLOx1hD3_o -- + Programming Course - Beginner to Advanced 30 hour single video 31:07:29
+    https://www.youtube.com/watch?v=8jLOx1hD3_o -- + Programming Course - Beginner to Advanced, freeCodeCamp.org, Daniel Gakwaya 31 hour single video 31:07:29
 
 C++ Text Course LEARN C++ (code prefix ap)
     https://www.learncpp.com/ -- C++ language tutorials by chapter and topic (code reference 
@@ -466,14 +466,16 @@ Stream Input (CIN)
     std::cin.clear() -- clear the error state of the buffer after invalid input (reset value of std::cin.fail())
     std::cin.eof() -- returns true if reading from cin is end-of-file (i.e no input)
     std::cin.ignore() -- ignore the next character (whitespace) in CIN after getline() or cin
+    std::cin.ignore(1000,'\n')  -- clear the input buffer
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); #include <limits> -- flushes the cin buffer up to '\n'
     std::cin >> std:ws -- output manipulator to ignore whitespace (e.g. std:getline(std:cin >> std::ws, myString) clears leading whitespace)
+    std::cin.sync(); -- clear the input buffer
     std::getline(std::cin, <variableName>); - get a line of text with embedded whitespace but leaves trailing whitespace and newline
     std::getline(std::cin, <variableName> <delim>); - get a line of text with embedded whitespace and newlines up to the delimiter
     std::cin.getline(char myArray[count], int <count>) reads input up to int characters into an array of char myArray[int]\n' and stops
     std::cin.get() reads input up to '\n' and keeps '\n' in the stream
 
-Stream Output (COUT)
+Stream Output (cout)
     std::cout -- stdout file identifier or stream object (character output) - print character data to the console
     std::cout << insertion operator
     std::cout << u8"\033[2J\033[1;1H"; -- clear the console in linux using #include <iomanip> (or system("clear");
@@ -593,27 +595,31 @@ Tools
 
 C++ Language Rules
 
-Fundamental Data Types (aka Primitives)
+Comments
+    Single line or partial line comments start with //
+    Multiline or block comments are bounded by /* and */
+
+Datatypes (aka Primitives)
     Different primitives required different memory sizes
     sizeof(<type>) returns the size in size_t of a datatype
-    Integral Types (stored as integers)
+    Integral Types (stored as integers)g
         character
-            char -- characters (1 byte, 256 values)
+            char -- characters (1 byte, 256 values)a -- characters are just numbers
             char16_t -- 2 bytes, 65,536 values
             char32_t -- 4 bytes, 4,294,967,296 values)
             wchar_t -- 2 byte -- a wide character
         integer (signed or unsiged)
             short -- short integer (2 bytes)
-            int -- Integers (4 bytes), signed, -2bill - 2bill
-            unsigned int -- Positive Integers (4 bytes) 0 - 4bill
+            int -- signed integers (4 bytes), signed, -2bill - 2bill
+            unsigned int -- positive Integers (4 bytes) 0 - 4bill
             long -- long integer (4 bytes)
             unsigned long -- (4 bytes)
             long long -- long long integer (8 bytes)
             unsigned long long (8 bytes)
         float
-            float -- floating point numbers (4 bytes) -- append f to the numbber otherwise it will default to a double
-            double -- double precsion floating point numbers (8 bytes)
-            long double -- long double precision floating point numbers (16 bytes)
+            float -- floating point numbers (4 bytes) and precision 7-- append f ir F to the number otherwise it will default to a double
+            double -- double precsion floating point numbers (8 byte) and precision 15
+            long double -- long double precision floating point numbers (8 bytes)
         boolean
             bool -- booleans (1 byte) (false = 0, true != 0)
     Non-integral Types
@@ -621,6 +627,11 @@ Fundamental Data Types (aka Primitives)
             void -- no type
         null pointer
             decltype(nullptr)
+    auto -- a compile keyword diecting the compiler to derive the type
+
+Datatype Initialization
+    int val{3}; sets val to 3
+    int val = 3 sets val to 3 also
 
 Static and Extern Keyword
     Outside of a class or struct, static declares a variable or function as local to a translation unit
@@ -631,7 +642,7 @@ Static and Extern Keyword
     Variables and functions should be static to avoid global scope (unless global scope is needed)
 
 Compound Data Types
-    std::string -- variable-length string #include <string>
+    std::string -- variable-length string operators #include <string>
 
 Literal Suffixes
     If the default type of a literal constant is not wanted, you can change it with a literal suffix
@@ -663,11 +674,11 @@ Type Conversion
         static_cast<new type>(expression) e.g. static_cast<int>(expression)
         static_cast behaviour is undefined if the value converted is not in the range of the new type
 
-Identifiers
+Identifiers, Variables and Naming Conventions
     Identifiers name variables, functions and other items
     Identifiers cannot be keywords (see list below)
     Identifiers can comprise letters (upper or lower case), numbers or underscore
-    Identifiers starting with "_" are compiler-specific or external (as a practice)
+    Identifiers starting with "_" are compiler-specific or external (by convention)
     Identifiers are case-sensitive
 
 Keywords
@@ -689,8 +700,11 @@ Boolean Initialization
     bool b7 = false;
 
 Integer Initialization
-    Braced int a{9}; -- dirct brace initialization or constructor initialization
+    Assignment initialization -- int x = 3, assigns 3 to x
+    Braced int a{9}; -- direct brace initialization or constructor initialization
+    int b{}; -- defaults the initialization to 0
     Braced int a = {9}; copy brace (or list or uniform) initialization
+    Functional variable initialization: int val1(2) sets val2 to 2
     Default int a{}; sets a to zero;
     Functional int a(9) -- direct initialization
     Assignment int a = 9; -- copy initialization or c-like initialization
@@ -701,13 +715,20 @@ Integer Initialization
     int *ptrInt3(new int(33)} -- allocates and initializes an integer 33 on the heap
 
 Integer Modifiers
+    signed
+    unsigned
+    short
+    long
+    long long
+
+Integer Modifiers
     signed, range -2**(n-1) .. 2**(n-1) - 1
     unsigned, range  2**n - 1
     short 2 bytes
     long 4 or 8 bytes
     long long 8 bytes
     mutable -- makes a variable changeable within a const function
-    const -- variable value that cannot be changed 
+    const -- variable value that cannot be changed
         const int* myPtr= new int; makes the contents of myPtr constant and not the address myPtr
         int * const myPtr = new int; makes the address myPtr constant and not the contents
 
@@ -728,6 +749,11 @@ Numeric Systems
     binary prefix 0b eg. 0b00001111 is 15 decimal
     octal prefix  0  eg. 017 is 15 decimal
     hex prefix    0x eg. 0x0f or 0x0F is 15 decimal
+
+Standard Template Library (STL)
+    Collections of container types e.g. arrays, lists, queues, stacks, trees
+    Algorithms that work on containers
+    Iterators for containers
 
 Arrays (Raw)
     An array is a collection of variables or elements manipulated as a single variable
@@ -829,12 +855,17 @@ Whitespace
     Comprises: newlines, spaces and tabs
     C++ compiler ignores repeated whitespaces
     Line continuations on strings require ending " on the starting line and opening " on the following line
+    Lint continuation on an expession does not requred any special characters ... just break the line into two lines
     Spaces within double-quoted text are honored
 
 Indentation
     K&R Variant e.g. while (x == y) { ...
     Allman style e.g. while (x == y) 
                       { ..
+
+Statements
+    Statements terminate with a semicolon
+    Statements are executed in order and follow branches
 
 Branching and Conditional Statements
     if(a == b)
@@ -1063,7 +1094,9 @@ Functions
     Default parameters can be specified to eliminate the need to specify them in a call (e.g. myFunc(int A, int B = 3))
 
 Function Forward Declarations
-    Forward declarations declare a function before it is defined
+    Functions must be defined before they are used
+    Functions must be declared before they are referenced
+    Forward declarations declare a function before it is referenced or defined
     Define a function before main() or include a forward declaration before main() or include via a header file
     Use a function prototype for a forward declaration
     A function prototype includes a name, return type and parameter types. Parameter names are optional but add to readability
