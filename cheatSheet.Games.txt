@@ -12,6 +12,7 @@ References
         https://www.youtube.com/watch?v=FaINy9iA5Kw == C++ Game Engines, Gaefromscratch (Done)
     Blender
         https://www.youtube.com/watch?v=bx953Hl6Eu8
+        https://www.youtube.com/watch?v=lLqep5Q4MiI -- Blender 4 for Absolute Beginners : A Comprehensive Guide from Scratch, Grant Abbitt, 00:27:50
     Game Programming Tutorial for Beginners In C++, Dan Zaidan
         https://www.youtube.com/playlist?list=PL7Ej6SUky135IAAR3PFCFyiVwanauRqj3 -- Playlist
         https://www.youtube.com/watch?v=luuyjjOxnUI -- How to program a game in C++: #0 - Introduction and Setup 7:06
@@ -21,6 +22,11 @@ References
         https://twinery.org/
     Pictures
         https://pixabay.com/
+    Unreal Engine
+        https://www.youtube.com/watch?v=gQmiqmxJMtA&t=0s -- Unreal Engine 5 Beginner Tutorial - UE5 Starter Course, Unreal Sensei 4:56:17
+        https://www.youtube.com/watch?v=XRmn-EYt8wI -- Unreal Engine 5 Beginner Tutorial, Smart Poly 2:26:32
+    SFML
+        https://www.youtube.com/watch?v=axIgxBQVBg0 -- SFML 2.4 For Beginners - 0: Getting Started, Hilze Vonck
 
 The Cherno
     https://www.youtube.com/watch?v=_HPCeO6MWvk -- How to start MAKING GAMES! 15:10
@@ -46,6 +52,7 @@ Game Development Environments
     GameMaker( GML, visual scripting)
     Godot (C#, C++, GDScript (like Python), visual scripting) -- Royalty Free, small codebase, open source
     ImGui -- Open Source GUI Frameword for Game an Interface Development
+    Maya -- for 3D Modelling
     Monogame (C#)
     Open 3D (Lua, visual scripting)
     Raylib
@@ -54,3 +61,26 @@ Game Development Environments
     Twine -- www.twinery.com for text based games (rpg's)
     Unity c# -- not for triple A game development, not free, C++ requires Pro version
     Unreal Engine C++, scripting, Blueprints visual scripting), not free
+
+Unreal Engine
+    Navigations
+        Focus on object -- <f>
+        Game View - >g>
+        Toggle docking windows -- <F10>
+        Move In or Out -- LMB Drag Up or Down
+        Walk up -- RMB E
+        Walk down -- R<B Q
+        Rotate Up or Down-- RMB Drag Up or Down
+        Walk left -- RMB A
+        Walk right -- RMB D
+        Walk in -- RMB W
+        Walk out -- RMB S
+        Open a new C++ Class -- Menu > Tools > New C++ Class
+        Open a new level -- Menu > File > New Level
+        Open a new Project -- Menu > File > New Project
+        Restore editor layout -- Menu > Window > Load Layout > Default Editor Layout
+        Show Details panel -- Menu > Window > Details
+        Show Full Screen -- <F11>
+        Toggle the Content Drawer -- <Ctrl><Space>
+        Toggle World Settings -- Menu > Window > World Settings
+        Zoom In or Out -- LMB Drag Up or Down

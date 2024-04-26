@@ -35,6 +35,13 @@ Electronics Notes
             https://en.wikipedia.org/wiki/List_of_free_electronics_circuit_simulators -- list of free simulators
             https://ecstudiosystems.com/ -- EC Studio
             https://www.altium.com/altium-designer/licensing -- expensive
+            https://everycircuit.com/ -- animated circuit simulations
+            https://www.designworkssolutions.com/
+            https://github.com/logisim-evolution/logisim-evolution -- downloadable software fork of logisim
+            https://www.tinkercad.com/ -- circuit exploration
+            https://www.kicad.org/ -- circuit board designer
+            https://librepcb.org/ -- circuit board designer
+            https://github.com/hneemann/Digital -- digital logic simulator download
         Supplies
             https://www.adafruit.com/
             http://www.allelectronics.com/

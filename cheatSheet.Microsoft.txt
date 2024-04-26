@@ -1,21 +1,29 @@
-Table of Contents
-    Active Server Pages (ASP)
-    Utilities
-    DOS Commands
-    Excel
-    Group Policy
-    PowerShell
-    Processes and Services
-    Script Host
-    SQL Server
-    Visual Basic
-    Windows XP
-    Windows 7
-    Windows 8
-    Windows 10
-    Windows Registry
-
-Active Server Pages Table of Contents (ASPTOC)
+Directories
+    C:\Users\gjarm\AppData\Local\Temp (aka %temp%) -- user temp files
+    C:\Windows (aka %windir%) -- Windows system directory: system files, system drivers, system configurations
+    C:\Windows\System32 -- OS DLL's and system programs
+    C:\Windows\System32\config -- Registry files
+    C:\Windows\Prefetch -- prefetch cache index of application file locations
+    C:\Windows\Temp -- system temp files
+    C:\Users\gjarm\AppData\Roaming (aka %AppData%) -- data stored by applications not part of original installation files (configs, caches, temp files)
+    C:\Users\gjarm\AppData\Local (aka %localappdata%) -- data specific to a user and machine
+    C:\Users\gjarm\AppData\Locallow -- data specific to a user and machine with low access restrictions
+    C:\Users\gjarm\AppData\Roaming -- data specific to user and network
+    C:\Users\gjarm\OneDrive\Desktop -- Desktop
+    C:\Users\gjarm\Documents -- personal documents
+    C:\Users\gjarm\Downloads -- Downloads
+    C:\Program Files (x86) -- 32 bit program files
+    C:\Program Files -- 64 bit program files
+Utilities
+    assoc -- lists file extensions and program associations
+    cmd -- command shell
+    driverquery -- list installed drivers
+    dxdiag -- directX diagnotic tool
+    regedit -- registry editor
+    sfc /scannow -- system file checker, to repair corrupt system files
+    systeminfo -- shows computer system information
+    tree -- shows tree under current directory
+Active Server Pages
     References
         http://www.w3schools.com/asp/default.asp
         http://localhost/iishelp/iis/misc/default.asp
@@ -61,19 +69,16 @@ Active Server Pages Table of Contents (ASPTOC)
             Two adjacent single quotes is equivalent to one single quote
     Windows Drivers
         https://www.youtube.com/watch?v=9h1FsOISwX0&t=28s -- How to make a Kernel Driver - Setup & Hello World - Kernel1
-
-Windows Utilities
+Utilities
     msinfo32 shows the host profile information including hardware, software and features e.g. msinfo32 /report C:\Users\gjarman\Documents\Computing\Microsoft\Cmd\msinfo.txt (same as SYSTEMINFO)
     https://support.microsoft.com/en-us/help/300887/how-to-use-system-information-msinfo32-command-line-tool-switches
-
-Windows Scripting Languages
+Scripting Languages
     perl
     Kixstart
     Powershell
     Visual Basic
     Javascript and JScript
     REXX
-
 Script Applications
     Logon Script to map network drives
     Backup files
@@ -82,8 +87,7 @@ Script Applications
     Clean disks
     Defrag disks
     Delete old archive files
-
-DOS Commands Table of Contents (DCTOC)
+DOS Commands
     References
         http://steve-jansen.github.io/guides/windows-batch-scripting
         http://w3schools.org.in/Batch%20Files.html
@@ -452,7 +456,7 @@ DOS Commands Table of Contents (DCTOC)
             IF ERRORLEVEL 1 <COMMAND> -- executes <command> when errorlevel is set to 1 by last executed command
             IF %var1% EQU %var2% echo var1 and var2 match
             FOR /F "DELIMS=*" %i IN (commands.txt) DO %i -- run each line in a file as a command
-Windows Subsystem for Linux
+Subsystem for Linux
     References
         https://www.youtube.com/watch?v=_fntjriRe48 -- WSL 2 Playlist, David Bombal
         https://www.youtube.com/watch?v=_fntjriRe48 -- WSL 2: Getting started, David Bombal
@@ -476,28 +480,11 @@ Excel
         ExcelVbaIsFun
         ExcelIsFun - non VBA videos
         https://msdn.microsoft.com/en-us/library/office/ee814737(v=office.14).aspx
-
-Group Policy Table of Contents (GPTOC)
+Group Policy
     Tools
         Local Group Policy Editor 
             Windows > Run > Edit Group Policy
-
- Powershell
-    Powershell Table of Contents (PSTOC)
-        Overview
-        References
-        Downloads
-        Registry Entries
-        Windows Management Framework
-        Command-Lets (Cmdlets)
-        Comments
-        Environment Commands
-        Pipelines
-        Printing
-        Profiles
-        Providers and File System Drives
-        Scripts and Execution Policy
-        Variables
+Powershell
     Overview
         Powershell is a task-based command line shell and scripting language for Windows
         It is intended for System Administation and built on the .NET framework
@@ -720,12 +707,11 @@ Group Policy Table of Contents (GPTOC)
                      $var9[20].name.toupper() -- gives the name of service21 in uppercase
                      $var9 | format-list -- shows everything
 
-Processes and Services Table of Contents (PSTOC)
+Processes and Services
     Processes are instances of an application or service
     Services run in the background (as a process)
     Applicatons run in the foreground (as a process)
- 
-Script Host Table of Contents (SHTOC)
+Script Host
     Script Editor
         Use the Script Editor in Office Macros for debugging VB Scripts
     Websites and Resources
@@ -850,8 +836,7 @@ Script Host Table of Contents (SHTOC)
         WScript.echo() - simple text boxes
         MsgBox - boxes with buttons
         PopUp - customizable titles
-
-SQL Server Table of Contents (SQLSTOC)
+SQL Server
     Tips and Tricks
         You need Microsoft SQL Server Management Studio intalled to communicate with the local (or remote) database and run scripts
     Web Books and Papers and Tutorials
@@ -988,8 +973,7 @@ SQL Server Table of Contents (SQLSTOC)
         You can define a sequence by setting Identity to 'Yes' in the field properties
             this allows you to choose the increment and seed values
             only numeric data 
-           
-Visual Basic 2005 Table of Contents (VBTOC)
+Visual Basic 2005
     Sites
         VB Training Videos (intro level) -  http://msdn.microsoft.com/vstudio/express/vb/learning/
         VB Developers - http://msdn.microsoft.com/vbasic/
@@ -1063,19 +1047,16 @@ Visual Basic 2005 Table of Contents (VBTOC)
         Arrays can be dimensioned and initialized in one step
             e.g. dim myInts as Integer() = New Integer(3) {1, 2, 3, 4}
         The index to an array is always a zero-based offset 
-
-Windows Troubleshooting Table of Contents (WTTOC)
+Troubleshooting
     References
         Remove Programs which fail Uninstall
             http://support.microsoft.com/mats/program_install_and_uninstall
         General Fixit Site
             http://support.microsoft.com/fixit/
-
-Windows Update Table of Contents (WUTOC)
+Windows Update
     Manual Deinstallation
         Windows > Run > wusa (Windows Update Stand Alone Installer)
-
-Windows XP Table of Contents (WXPTOC)
+Windows XP
     Windows Predefined Shortcut Keys
         Surround a URL with www://....com in MS Internet Explorer ..... Ctrl-Enter
         <Win>-A Show Browser Favorites
@@ -1256,8 +1237,7 @@ Windows XP Table of Contents (WXPTOC)
                 Set to above 1.5 gig (set to 4 gig)
                 At starting point on Task Manager, Commit Charge Total Peak is 630 Meg, Handles 19200, Threads 750, Processes 70
                 At breaking point on Task Manager, Commit Charge Total Peak is 1286 Meg, Handles 18386, Threads 692, Processes 72
-
-Windows 7 Table of Contents (W7TOC)
+Windows 7
     References
         https://technet.microsoft.com/en-us/magazine/ff628330.aspx?sdmr=win7&sdmi=topics -- Technet Windows 7 topics
     XP Mode and Windows VM
@@ -1299,8 +1279,7 @@ Windows 7 Table of Contents (W7TOC)
                 Open Host Controller Interface - USB 1 and 1.1
                 Enhanced Host Controller Interface - USB 2
                 Extensible Host Controller Interface - USB 3
-
-Windows 8 Table of Contents (WTOC)
+Windows 8
     Lock Screen
         Click to remove or swipe from bottom
     Keyboard Shortcuts
@@ -1321,13 +1300,11 @@ Windows 8 Table of Contents (WTOC)
         Charms Bar (Windows-C) and turn off
     Defrag
         Charms > Search > Settings > Type 'Defrag'
-
-Windows 8.1 Table of Contents (W81TOC)
+Windows 8.1
     Training
         References
             http://windows.microsoft.com/en-us/windows/tutorial
-
-Windows 10 (W10TOC)
+Windows 10
     Introduction
         References
             Introducing Windows 10 for IT Professionals, Preview Edition
@@ -1479,8 +1456,7 @@ Windows 10 (W10TOC)
         Performance
             References
                 https://mva.microsoft.com/en-US/training-courses/windows-performance-jump-start-8830?l=o7U3qtx2_7304984382 -- Microsoft Virtual Academy 'Windows Performance Jumpstart'
-
-Windows Registry Table of Contents (WRTOC)
+Registry
     Important Precautions
         Always create a backup of the Registry before opening it with RegEdit
             Inadvertant changes to the Registry can corrupt the machine or interfer with its operation
@@ -1539,81 +1515,72 @@ Windows Registry Table of Contents (WRTOC)
         Per-user information (similar to HKEY_CURRENT_USER) is stored in hidden directories and files
             These files a period/full stop within the user's home directory
 
-IIS – Internet Information Server and FTP
-
-Documentation
-    http://<host ip>/iishelp/ which routes you to ...
-        http://localhost/iishelp/iis/misc/default.asp
-
-IIS Default Web Setup and Activation
-    IIS includes http listener, ftp, smtp servers
-    IIS documentation is physically at %systemroot%\help\iishelp (or go there through URL link)
-    Install IIS using ‘Add/Delete Programs’ – Windows Components and choose IIS
-    IIS runs by default on port 80 of the machine – the default port for the machine
-    Systemroot Directory is \inetpub\wwwroot\ and the file default.htm will execute
-    Ping gjarmant-lap to get the ip address if http://gjarmant-lap does not work
-
-Changing the Default Listener Port in IIS
-    1.Open IIS Manager via Control Panel (Administrative Tools,  Internet Services Manager)
-    2.Open the list of  sites under the host icon
-    3.Right click the Default Web Site entry and choose Properties
-    4.Choose the website tab (this is the default)
-    5.Modify the TCP Port value and click OK
-
-Starting and Stopping IIS
-    At the command line, "iisreset" will stop and start the server (bounce)
-        Alternatively, just start with "net start w3svc" to start IIS or check it is running
-
-Troubleshooting IIS
-    Get better error messages in the browser by turning off "friendly messages" in IExplorer
-        In IE navigate "/tools/internet options/advanced/Show Friendly Http Messages" and check off
-    Try stopping and starting (see above)
-    The IIS runs as "inetinfo" in the task manager process list
-        The executable is C:\WINDOWS\system32\inetsrv\inetinfo.exe
-        It is registered as the service "World Wide Web Publishing" under Admin Tools/Services
-    Check msdtc is running with "net start msdtc" - required by IIS
-        If it is not installed, then do "msdtc -install"
-    If .asp pages don't display there is a problem with COM object registration - try this
-        cd %windir%\system32\inetsrv
-        rundll32 wamreg.dll, CreateIISPackage
-        regsvr32 asptxn.dll
-        iisreset
-
-FTP
+IIS (Internet Information Service)
+    Documentation
+        http://<host ip>/iishelp/ which routes you to ...
+            http://localhost/iishelp/iis/misc/default.asp
+    Default Web Setup and Activation
+        IIS includes http listener, ftp, smtp servers
+        IIS documentation is physically at %systemroot%\help\iishelp (or go there through URL link)
+        Install IIS using ‘Add/Delete Programs’ – Windows Components and choose IIS
+        IIS runs by default on port 80 of the machine – the default port for the machine
+        Systemroot Directory is \inetpub\wwwroot\ and the file default.htm will execute
+        Ping gjarmant-lap to get the ip address if http://gjarmant-lap does not work
+    Changing the Default Listener Port in IIS
+        1.Open IIS Manager via Control Panel (Administrative Tools,  Internet Services Manager)
+        2.Open the list of  sites under the host icon
+        3.Right click the Default Web Site entry and choose Properties
+        4.Choose the website tab (this is the default)
+        5.Modify the TCP Port value and click OK
+    Starting and Stopping IIS
+        At the command line, "iisreset" will stop and start the server (bounce)
+            Alternatively, just start with "net start w3svc" to start IIS or check it is running
+    Troubleshooting IIS
+        Get better error messages in the browser by turning off "friendly messages" in IExplorer
+            In IE navigate "/tools/internet options/advanced/Show Friendly Http Messages" and check off
+        Try stopping and starting (see above)
+        The IIS runs as "inetinfo" in the task manager process list
+            The executable is C:\WINDOWS\system32\inetsrv\inetinfo.exe
+            It is registered as the service "World Wide Web Publishing" under Admin Tools/Services
+        Check msdtc is running with "net start msdtc" - required by IIS
+            If it is not installed, then do "msdtc -install"
+        If .asp pages don't display there is a problem with COM object registration - try this
+            cd %windir%\system32\inetsrv
+            rundll32 wamreg.dll, CreateIISPackage
+            regsvr32 asptxn.dll
+            iisreset
+    IIS7 on Dell
+        Default File Address
+            C:\Windows\winsxs\amd64_microsoft-windows-iis-corewebengine_31bf3856ad364e35_6.1.7601.17514_none_2dd00d963fe4475e
+        Control Panel Navigation
+            Control Panel > Administrative Tools > Internet Information Services (IIS) Manager
+        Default Browser Address
+            http://127.0.0.1/ (the loopback address)
+FTP (Part of IIS)
     Both port 20 and port 21 must be open through the router for ftp to work
     Use ftp:// and the IP address to reach the FTP site
         Or, use ftp gjarmant-lap from the command line to connect to the server
     FTP’s root directory is c:\inetpub\ftproot
     Any directories under c:\inetpub\ftproot appear as subdirectories in the browser
     Use a short name for subdirectories without spaces.
-
-FTP Commands from the Console
-    ftp (hostname) from the console to connect (have a username,password ready)
-    help – ftp online help
-    bin – binary mode (off by default)
-    get – pull files from the remote ftp host
-    put – push files to the remote host
-    mget – pull multiple files from the remote ftp host
-    mput – push multiple files to the remote host
-    quit – quit ftp
-    pwd – to show current remote directory
-    dir or ls – to list files in remote directory
-    ldir or lls – to list files in the local directory
-    cd or lcd – change directory in the remote or local machine
-
+    Commands from the Console
+        ftp (hostname) from the console to connect (have a username,password ready)
+        help – ftp online help
+        bin – binary mode (off by default)
+        get – pull files from the remote ftp host
+        put – push files to the remote host
+        mget – pull multiple files from the remote ftp host
+        mput – push multiple files to the remote host
+        quit – quit ftp
+        pwd – to show current remote directory
+        dir or ls – to list files in remote directory
+        ldir or lls – to list files in the local directory
+        cd or lcd – change directory in the remote or local machine
 SMTP
     Simple Mail Transfer Protocol
     -> %Systemroot%\;mail.chm
-
-CGI’s
+CGIs
     Common Gateway Interface
     Place executables in c:\inetpub\cgi-bin 
     Turn executable permissions on for the folder (folder properties, websharing tab, edit)
 
-IIS7 on Dell
-    Default File Address
-        C:\Windows\winsxs\amd64_microsoft-windows-iis-corewebengine_31bf3856ad364e35_6.1.7601.17514_none_2dd00d963fe4475e
-    Control Panel Navigation
-        Control Panel > Administrative Tools > Internet Information Services (IIS) Manager
-    Default Browser Address
-        http://127.0.0.1/ (the loopback address)
